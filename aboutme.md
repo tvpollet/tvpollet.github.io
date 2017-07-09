@@ -2,14 +2,12 @@
 layout: page
 title: About me
 subtitle: Why you'd want to go on a date with me
+published: true
 ---
 
 I am Dr. Thomas Pollet. I have the following qualities:
 
-- I rock a great beard.
-
-
-What else do you need?
+I rock a great beard. What else do you **really** need?
 
 ### my shortbio
 
