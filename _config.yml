@@ -25,7 +25,7 @@ description: This is my personal website.
 navbar-links:
   About Me: "aboutme"
   Academic work:
-    - Papers: "https://sites.google.com/site/thomasvpollet/home/papers"
+    - Papers: "https://sites.google.com/site/thomasvpollet/papers"
     - Presentations: "http://prezi.com/user/tvpollet/"
   Author's home: "https://sites.google.com/site/thomasvpollet/"
   Disclaimer: "https://sites.google.com/site/thomasvpollet/disclaimer"
@@ -45,8 +45,21 @@ avatar: "/img/Thomas_ehbea.jpg"
 author:
   name: Thomas Pollet
   email: "thomas.pollet@northumbria.ac.uk"
+  facebook: yourname  # eg. daattali
+  github: yourname    # eg. daattali
   twitter: tvpollet   #tvpollet
+  reddit: yourname    # eg. daattali
+  google-plus: +yourname   # eg. +DeanAttali or 109424658772469020925
+  linkedin: yourname  # eg. daattali
+  xing: yourname      # eg. daattali
+  stackoverflow: yourlink  # eg. "3943160/daattali"
+  snapchat: yourname  # eg. daattali
+  instagram: yourname # eg. daattali
+  youtube: yourlink   # eg. user/daattali or channel/daattali
+  spotify: yourname   # eg. daattali
+  telephone: yourphone   # eg. +14159998888
   googlescholar: "https://scholar.google.com/citations?user=T2fYknYAAAAJ&hl=en"
+
 
 # Select which links to show in the footer
 footer-links-active:
