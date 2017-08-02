@@ -58,6 +58,8 @@ author:
   youtube: yourlink   # eg. user/daattali or channel/daattali
   spotify: yourname   # eg. daattali
   telephone: yourphone   # eg. +14159998888
+  googlescholar: "https://scholar.google.com/citations?user=T2fYknYAAAAJ&hl=en"
+
 
 # Select which links to show in the footer
 footer-links-active:
