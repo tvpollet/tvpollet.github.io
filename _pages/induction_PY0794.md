@@ -30,11 +30,11 @@ I will still review some basic concepts of statistics and tests  but I am counti
 
 ## Installing RStudio and R
 
-* Rstudio is available on the PCs but you will benefit if you have it on your on machine!  I would encourage you to install this **before** the first class.
+* Rstudio is available on the PCs where I will teach you but you will benefit if you have it on your own machine!  So, I would encourage you to install this **before** the first class.
 
 * Install R and RStudio. Both are freely available software tools. Find R for your operating system (Windows, Mac (OSX),Linux): [here](https://cran.r-project.org/){:target="_blank"}. More detailed [how to guide](https://rstudio-education.github.io/hopr/starting.html){:target="_blank"} and/or step 1 and 2 from [here](https://swirlstats.com/students.html){:target="_blank"}. This contains youtube videos. Or check the [not-so-scary-guide to R](https://the-not-so-scary-guide-to-r.com/guides.html){:target="_blank"}.
 
-* A [screencast](https://youtu.be/rlhUid3REFE) with a first look at the working environment in RStudio.
+* A [screencast](https://youtu.be/rlhUid3REFE){:target="_blank"} with a first look at the working environment in RStudio.
 
 ## Course Manual
 
@@ -56,8 +56,8 @@ Here are some other resources to already get you going.
 
 * The [not-so-scary-guide to R](https://the-not-so-scary-guide-to-r.com/guides.html){:target="_blank"}.
 
-* Give [swirl](https://swirlstats.com/) a go!
+* Give [swirl](https://swirlstats.com/){:target="_blank"} a go!
 
 * Danielle Navarro's [learning statistics with R](https://learningstatisticswithr.com/book/){:target="_blank"}
 
-* A compendium of [awesome  r learning resources](https://github.com/iamericfletcher/awesome-r-learning-resources)
+* A compendium of [awesome  r learning resources](https://github.com/iamericfletcher/awesome-r-learning-resources){:target="_blank"}

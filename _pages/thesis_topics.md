@@ -161,9 +161,12 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Personal Sense of Power Scale](https://doi.org/10.1111/j.1467-6494.2011.00734.x){:target="_blank"}
 * [Pain attitudes and Stoicism/Cautiousness](https://academic.oup.com/psychsocgerontology/article/56/5/P279/634269){:target="_blank"}
 * [The Short Anxiety Screening test](https://doi.org/10.1002/(SICI)1099-1166(199912)14:12<1062::AID-GPS67>3.0.CO;2-Q){:target="_blank"}
+* [Attitudes towards donation of oocytes](https://doi.org/10.1093/humrep/deg222){:target="_blank"}
+* [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
 * [The Covid19 phobia scale](https://doi.org/10.1016/j.paid.2020.110108){:target="_blank"}
 * [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
 * [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
+* [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
 
