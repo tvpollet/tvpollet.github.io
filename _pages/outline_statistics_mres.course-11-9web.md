@@ -57,17 +57,17 @@ You can find materials relating to induction [here](/induction_PY0794).
 ## Lectures.
 The academic calendar is in your programme handbook. For the Quant. Part of the module in semester 1, we will work through 11 lectures in 12 weeks, notice that there will be an academic development week with no lecture after week 5. Depending on timing the content of this schedule might shift a bit.
 
-1. 29/9. Introduction. R Studio and R environment. Basics of Markdown. 
-2. 6/10. Data visualisation. (+ basic tests)
-3. 13/10. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
-4. 20/10. Correlation and multiple regression. Logistic Regression.
-5. 27/10. Moderation analyses. 
-6. 10/11. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
-7. 17/11. Exploratory Factor Analysis.
-8. 24/11. Confirmatory Factor Analysis CFA I
-9. 1/12. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
-10. 8/12. Multilevel models I
-11. 15/12. Multilevel models II
+1. 28/9. Introduction. R Studio and R environment. Basics of Markdown. 
+2. 5/10. Data visualisation. (+ basic tests)
+3. 12/10. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
+4. 19/10. Correlation and multiple regression. Logistic Regression.
+5. 26/10. Moderation analyses. 
+6. 9/11. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
+7. 16/11. Exploratory Factor Analysis.
+8. 23/11. Confirmatory Factor Analysis CFA I
+9. 30/11. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
+10. 7/12. Multilevel models I
+11. 14/12. Multilevel models II
 
 The handouts for every course lecture will be available via the electronic learning portal. There is no need to take extensive notes, as all the key information will be on the sheets.
 
@@ -95,15 +95,15 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 * I expect you to turn off email, messaging, etc. and **only** be engaged with classroom materials. (#no9gag)
 
 ## Contact.
-* Discussion board. This is the preferred method, as several of your colleagues will have either the same or very similar queries!
-* Ask me during class breaks, if you want a meeting or send me an email. 
-* By appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165).
-* [thomas.pollet@northumbria.ac.uk](mailto:thomas.pollet@northumbria.ac.uk.)
+* Discussion board. This is the preferred method, as several of your colleagues will have either the same or very similar queries! 
+* Ask me any comprehension questions during class breaks, if you want a meeting or send me an email. 
+* Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual
+* email: [thomas.pollet@northumbria.ac.uk](mailto:thomas.pollet@northumbria.ac.uk.)
 * twitter: @tvpollet. 
 * Phone details are on the learning platform.
 
 
-I typically reply within max. 2 business days (unless you receive an out of office).
+I typically reply within max. 3 business days (unless you receive an out of office). Note that I will have limited availability during the christmas break. So please post questions early
 
 ## Resources.
 Check the [RStudio website](https://www.rstudio.com/). 
@@ -142,6 +142,11 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 ### Changes made in response to student feedback.
 
 I take on board relevant study feedback. Below I only list the most meaningful changes.
+
+#### 2021-2022
+* Positive reception of worksheets and 'flipped classroom', so implemented for this year.
+* Positive feedback on assistants who will continue to be available.
+* Revised and updated some course content.
 
 #### 2020-2021
 * Supply of additional materials
