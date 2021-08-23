@@ -145,7 +145,7 @@ I take on board relevant study feedback. Below I only list the most meaningful c
 
 #### 2021-2022
 * Positive reception of worksheets and 'flipped classroom', so implemented for this year.
-* Positive feedback on assistants who will continue to be available.
+* Positive feedback on assistants who will continue to be available. They also wrote 'cheat sheets' which will be available.
 * Revised and updated some course content.
 
 #### 2020-2021
