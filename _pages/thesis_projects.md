@@ -105,7 +105,7 @@ Some of you will use experimental designs for your thesis, I would highly recomm
 
 # Some tips for SPSS.
 
-There are a lot of useful SPSS tutorials. For example, look at the one from [Kent State University](https://libguides.library.kent.edu/SPSS){:target="_blank"} or this [one](https://www.spss-tutorials.com/basics/){:target="_blank"}. If you get stuck, do not forget that google is your friend. If you run into problems, I expect that you have *at minimum* googled the problem. In the future, I'll post common issues listed here.
+There are a lot of useful SPSS tutorials. For example, look at the one from [Kent State University](https://libguides.library.kent.edu/SPSS){:target="_blank"} or this [one](https://www.spss-tutorials.com/basics/){:target="_blank"}. If you get stuck, do not forget that google is your friend. If you run into problems, I expect that you have *at minimum* googled the problem. When you ask me for help, clearly state what you have already done. In the future, I'll post common issues listed here.
 
 And if you want a free alternative to SPSS, why not use [JASP](www.jasp-stats.org){:target="_blank"}. A bonus is that the tables are formatted appropriately for your report! 
 
@@ -118,7 +118,7 @@ As discussed in my [post](https://tvpollet.github.io/2018-02-19-SPSS/){:target="
 Have a look [here](https://libguides.library.kent.edu/SPSS/RecodeVariables){:target="_blank"}.
 
 ## Recoding missing with value.
-If you did not manage to put a 'force' choice in Qualtrics, you will end up with the rare missings. Often you'll want to replace a few missing cases with the means. Have a look [here](http://www.unige.ch/ses/sococ/cl/spss/trans/recodem.html){:target="_blank"}.
+If you did not manage to put a 'forced' choice in Qualtrics, you will end up with the rare missings. Often you will want to replace a few missing cases with the means. Have a look [here](http://www.unige.ch/ses/sococ/cl/spss/trans/recodem.html){:target="_blank"}.
 
 ## Missings.
 Have a look [here](https://www.spss-tutorials.com/spss-missing-values-tutorial/). Note that summing across missings will create problems, look at [this](https://www.spss-tutorials.com/spss-sum-cautionary-note/).
@@ -140,7 +140,7 @@ If you are unlucky enough to have to run a logistic regression, then we often wa
 
 ### Mediation.
 
-I have strong reservations against some of these procedures, that's for a separate rant. It's possible that you have to do a mediation, however, as for example, the paper you tried to replicate did one.
+I have **strong** reservations against some of these procedures, that's for a separate rant. It's possible that you have to do a mediation, however, as for example, the paper you tried to replicate did one.
 
 There are multiple resources available online on how to do a mediation analyses. For example check out [this video](https://www.youtube.com/watch?v=-S8HCg4WX9c){:target="_blank"} and also [this video](https://www.youtube.com/watch?v=ByuUyLtoTt8){:target="_blank"}. Here is another [example in .pdf](http://www.socialchangelab.net/uploads/9/8/7/7/98771854/nloxton_mediationbootstrapping.pdf){:target="_blank"} using the 'Sobel Macro' in SPSS.
 
