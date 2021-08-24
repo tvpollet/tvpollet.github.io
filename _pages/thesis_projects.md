@@ -84,7 +84,8 @@ Before starting check out these [writing mistakes](https://www.qualtrics.com/blo
 * **Avoid open questions** for questions like age, nationality, etc. You would end up having to do a lot of post-hoc recoding otherwise. For example, some participants will put in '30', while others will put in '30 years'. Have a long think, does that question really have to be open and how will you deal with the variety of responses which you will inevitably get? In most cases, you do not want an open question but sensible categories and perhaps a single free text option which captures any remaining option.
 * **Use page breaks.** Make sure participants do not have to scroll endlessly. Use [page breaks](https://www.qualtrics.com/support/survey-platform/survey-module/editing-questions/add-page-break/){:target="_blank"}. Check [this video](https://www.youtube.com/watch?v=PibtvW9mFP8){:target="_blank"}
 * **Randomization**. [Randomize your questions](https://www.qualtrics.com/support/survey-platform/survey-module/block-options/question-randomization/). [Check this video](https://www.youtube.com/watch?v=45F3pliI8HY){:target="_blank"}. Note that it might disrupt your page breaks. When in doubt make separate blocks.
-* **Access**. When you are making your survey, I will require full access to it. [Here](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/){:target="_blank"} you find explained how to share it. Make sure I have full rights!
+* **Templates**. Rather than starting a survey from scratch, I might have some templates already for complex designs (e.g., social network surveys). Contact me before you start designing your survey.
+* **Access**. If you are making your own survey, I will require full access to it. [Here](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/){:target="_blank"} you find explained how to share it. Make sure I have full rights!
 
 # How many participants should I get? - Power Analysis.
 
@@ -98,7 +99,7 @@ There is a detailed guide on power analysis for various designs [here](https://o
 
 If you are running a replication project, we follow the recommendation by [Simonsohn (2015)](https://doi.org/10.1177/0956797614567341){:target="_blank"} and we will take 2.5 times the original study's sample size. You can cite this paper in your ethics application to justify your sample size.
 
-# Experimental Design.
+# Experimental Design: checklist.
 
 Some of you will use experimental designs for your thesis, I would highly recommend using [this checklist](https://tomstafford.github.io/psy-checklist/){:target="_blank"}.
 
