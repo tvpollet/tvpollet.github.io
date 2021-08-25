@@ -61,3 +61,5 @@ Here are some other resources to already get you going.
 * Danielle Navarro's [learning statistics with R](https://learningstatisticswithr.com/book/){:target="_blank"}
 
 * A compendium of [awesome  r learning resources](https://github.com/iamericfletcher/awesome-r-learning-resources){:target="_blank"}
+
+* The [introverse](https://spielmanlab.github.io/introverse/index.html){:target="_blank"} which provides some beginner-oriented help for most introductory topics within R and the tidyverse.

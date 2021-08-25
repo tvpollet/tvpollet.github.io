@@ -103,6 +103,10 @@ If you are running a replication project, we follow the recommendation by [Simon
 
 Some of you will use experimental designs for your thesis, I would highly recommend using [this checklist](https://tomstafford.github.io/psy-checklist/){:target="_blank"}.
 
+# Are you measuring the right things: a checklist.
+
+One of the challenges for most studies is defining how a construct will be measured. I would highly recommend using [this checklist](https://psyarxiv.com/hs7wm/){:target="_blank"}.
+
 # Some tips for SPSS.
 
 There are a lot of useful SPSS tutorials. For example, look at the one from [Kent State University](https://libguides.library.kent.edu/SPSS){:target="_blank"} or this [one](https://www.spss-tutorials.com/basics/){:target="_blank"}. If you get stuck, do not forget that google is your friend. If you run into problems, I expect that you have *at minimum* googled the problem. When you ask me for help, clearly state what you have already done. In the future, I'll post common issues listed here.
@@ -154,6 +158,7 @@ I will list some resources on how to become a better writer. To be honest, I am 
 Some further tips:
 
 * Steven Pinker's [book](https://www.amazon.com/Sense-Style-Thinking-Persons-Writing/dp/0143127799){:target="_blank"} on style.
+* Article by DeScioli & Pinker on [writing style](http://pdescioli.com/papers/descioli.pinker.writing.ps.inpress.pdf){:target="_blank"}
 * [Seven tips on how to write better](https://www.psychologytoday.com/us/blog/insight-therapy/201105/seven-tips-writing-good-paper){:target="_blank"}.
 * [Essay writing for psychology](https://www.simplypsychology.org/psychology-essay.html){:target="_blank"}
 * Harvard's [writing for psychology](https://writingproject.fas.harvard.edu/files/hwp/files/writing_for_psych_final_from_printer.pdf){:target="_blank"}
