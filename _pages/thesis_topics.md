@@ -189,9 +189,13 @@ You will examine the degree to which your fellow students understand basic conce
 
 In previous work, we have observed gender differences in every day risk taking in traffic. For example, all else being equal, male cyclists, for example, were less likely to use lights at night than female cyclists. In a student project, we found that male pedestrians were less likely to use a safe route when exiting the metro than female pedestrians.
 
-I would welcome further work in this area. This work tends to be observational. In order to have a great thesis, you will require large samples and/or multiple studies, due to the simplicity of its design.
+I would welcome further work in this area. This work tends to be observational. In order to have a great thesis, you will require large samples and/or multiple studies, due to the simplicity of its design. It is however, really straightforward to do and deals with real life behaviour.
 
-Here is a similar example project.
+One example:
+
+* Observing gender differences in helmet use on e-scooters. There are now [e-scooters](https://www.rideneuron.com/) all over Newcastle upon Tyne. In this project, you would test if men are less likely to wear a helmet than women. There are additional avenues to explore. For example, does helmet use vary based on group size.
+
+Here is an example project.
 
 * Eryn O'Dowd's [Bachelor thesis project](https://osf.io/vn4fu/){:target="_blank"} on gender differences in everyday risk taking. This was published in [Letters on Evolutionary Behavioral Science](https://lebs.hbesj.org/index.php/lebs/article/view/lebs.2018.65){:target="_blank"}
 
