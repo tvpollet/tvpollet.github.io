@@ -131,6 +131,12 @@ Intelligence is thought to be an individual level construct. Yet, some researche
 
 In this project, you will code the sample sizes used in theses in psychology, as well as the method used. It is important as this will allow us to examine whether student projects have sufficient [statistical power](https://en.wikipedia.org/wiki/Power_of_a_test){:target="_blank"}
 
+### Body Mass Index (BMI): A continuous measure that often gets 'binned'.
+
+Some metrics are continuous but we end up turning them into categories. This is typically [a bad idea](https://pubmed.ncbi.nlm.nih.gov/16217841/){:target="_blank"}. With the Body Mass Index (BMI), rather than analysing a continuous variable, researchers might rely on categories such as overweight, underweight, healthy and obese. This comes at an information cost. In this project, you will systematically review papers from the journal 'Body Image' and assess how often researchers apply binning to BMI when testing hypotheses.
+
+
+
 ## Meta-analysis of validated scales: Are we measuring things consistently across different groups?
 <a href="#thesis-introduction">back to top</a>
 

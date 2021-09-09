@@ -87,6 +87,10 @@ Before starting check out these [writing mistakes](https://www.qualtrics.com/blo
 * **Templates**. Rather than starting a survey from scratch, I might have some templates already for complex designs (e.g., social network surveys). Contact me before you start designing your survey.
 * **Access**. If you are making your own survey, I will require full access to it. [Here](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/){:target="_blank"} you find explained how to share it. Make sure I have full rights!
 
+## Attention checks.
+
+You might want to include some measures to check data quality, such as attention checks, [example here](https://doi.org/10.1016/j.paid.2018.03.022){:target="_blank"}.
+
 # How many participants should I get? - Power Analysis.
 
 ## How many participants? Original study
