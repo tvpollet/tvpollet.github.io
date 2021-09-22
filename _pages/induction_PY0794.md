@@ -44,7 +44,7 @@ The course manual can be found [here](/outline_statistics_mres.course-11-9web){:
 
 RMarkdown combines R and Markdown. Markdown is a very basic language which is commonly used in programming, you can use it for websites but also for your code on Github.
 
-Have a go with markdown at [www.markdowntutorial.com](www.markdowntutorial.com){:target="_blank"}
+Have a go with markdown at [www.markdowntutorial.com](http://www.markdowntutorial.com){:target="_blank"}
 
 Here is a [video of me completing a markdown tutorial](https://youtu.be/xuk8yGJJO40){:target="_blank"}. Check out the links in the video comments as well. 
 

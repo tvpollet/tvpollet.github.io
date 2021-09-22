@@ -39,6 +39,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2021/Accepted/in Press**
 
+[120.](https://doi.org/10.31234/osf.io/swzm6) Lloyd, A., Brown, G., & **Pollet, T.V.** (accepted). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.31234/osf.io/swzm6](https://doi.org/10.31234/osf.io/swzm6)
+
 [119.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
 
 [118.](https://doi.org/10.31234/osf.io/dv93s) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (accepted). Isn't it eyeronic? Little evidence for consistent eye colour choices across relationships. _Archives of Sexual Behavior_ 
@@ -125,7 +127,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 [81.](https://link.springer.com/article/10.1007/s40750-016-0050-z?wt_mc=Internal.Event.1.SEM.ArticleAuthorOnlineFirst) **Pollet, T.V.** & van der Meij L. (2017). To remove or not to remove: the impact of outlier handling on significance testing in testosterone data. _Adaptive Human Behavior and Physiology, 3,_ 43-60.
 
 ## **2016**
-
 
 [80.]( http://journals.sagepub.com/doi/full/10.1177/1474704916673841) Peperkoorn, L.S., Roberts, S.C. & **Pollet, T.V.** (2016), Revisiting the Red Effect on Attractiveness and Sexual Receptivity: No Effect of the Color Red on Human Mate Preferences. _Evolutionary Psychology, 14,_  [doi:10.1177/1474704916673841](https://doi.org/10.1177/1474704916673841)
 
