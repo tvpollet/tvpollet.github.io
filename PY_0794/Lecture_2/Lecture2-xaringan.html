@@ -4,6 +4,7 @@
     <title>Lecture 2: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -13,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Lecture 2: PY 0794 - Advanced Quantitative Research Methods
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2020-09-10 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2021-09-02 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -182,7 +183,7 @@ head(flights_red)
 ```
 
 ```
-## # A tibble: 6 x 16
+## # A tibble: 6 × 16
 ##    Year Month   Day arr_time sched_arr_time arr_delay carrier flight tailnum
 ##   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt; &lt;chr&gt;    &lt;int&gt; &lt;chr&gt;  
 ## 1   517   515     2      830            819        11 UA        1545 N14228 
@@ -256,7 +257,7 @@ summarise(flights, mean_speed = mean(speed, na.rm = TRUE))
 ```
 
 ```
-## # A tibble: 1 x 1
+## # A tibble: 1 × 1
 ##   mean_speed
 ##        &lt;dbl&gt;
 ## 1      0.110
@@ -273,11 +274,7 @@ summarise(by_carrier, delay = mean(dep_delay, na.rm = TRUE))
 ```
 
 ```
-## `summarise()` ungrouping output (override with `.groups` argument)
-```
-
-```
-## # A tibble: 16 x 2
+## # A tibble: 16 × 2
 ##    carrier delay
 ##    &lt;chr&gt;   &lt;dbl&gt;
 ##  1 9E      16.7 
@@ -655,11 +652,7 @@ plot_dl+theme_gdocs(base_size = 14)
 
 
 ```r
-plot_dl &lt;- plot_dl + geom_histogram(binwidth = 5, colour = "black", 
-    fill = "white") + ylab("Count") + xlab("Departure Delay - Delta") + 
-    scale_y_continuous(limits = c(0, 50), breaks = pretty_breaks(6)) + 
-    scale_x_continuous(limits = c(-15, 250), breaks = pretty_breaks(6)) + 
-    theme_gdocs(base_size = 14)
+plot_dl&lt;-plot_dl+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Delta") + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
 plot_dl
 ```
 
@@ -676,14 +669,7 @@ plot_dl
 
 
 ```r
-plot_jetblue &lt;- plot_jetblue + geom_histogram(binwidth = 5, 
-    colour = "black", fill = "white") + 
-    ylab("Count") + xlab("Departure Delay - Jet Blue") + 
-    scale_y_continuous(limits = c(0, 
-        50), breaks = pretty_breaks(6)) + 
-    scale_x_continuous(limits = c(-15, 
-        250), breaks = pretty_breaks(6)) + 
-    theme_gdocs(base_size = 14)
+plot_jetblue&lt;-plot_jetblue+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Jet Blue")+ scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
 plot_jetblue
 ```
 
@@ -694,7 +680,7 @@ plot_jetblue
 
 
 ```r
-ggsave("plot_jetblue.pdf", width = 250, height = 250, units = "mm")
+ggsave("plot_jetblue.pdf", width= 250, height=250, units="mm")
 ```
 
 --
@@ -725,14 +711,13 @@ It will be saved in your working directory. (change that with path = ).
 
 ```r
 library(cowplot)
-plot_grid(plot_dl, plot_jetblue, labels = c("A", "B"), label_size = 10, 
-    align = "h")
+plot_grid(plot_dl,plot_jetblue, labels=c('A', 'B'), label_size= 10, align="h")
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-36-1.png" width="576" /&gt;
 
 ```r
-ggsave("plot_panelled.pdf", width = 250, height = 250, units = "mm")
+ggsave("plot_panelled.pdf", width= 250, height=250, units="mm")
 ```
 
 ---
@@ -780,13 +765,11 @@ ggsave("plot_panelled.pdf", width = 250, height = 250, units = "mm")
 
 ```r
 ### combine them into a single dataframe.
-violinplot_data &lt;- rbind.data.frame(jfk_delta, jfk_jetblue)
+violinplot_data&lt;-rbind.data.frame(jfk_delta,jfk_jetblue)
 library(dplyr)
-violinplot_data &lt;- violinplot_data %&gt;% mutate(carrier = recode(carrier, 
-    B6 = "Jet Blue", DL = "Delta Airlines"))
+violinplot_data&lt;- violinplot_data %&gt;% mutate(carrier= recode(carrier, B6= "Jet Blue", DL="Delta Airlines"))
 ### make plot
-violinplot &lt;- ggplot(violinplot_data, aes(x = carrier, 
-    y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2)
+violinplot&lt;-ggplot(violinplot_data, aes(x = carrier, y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2) 
 violinplot
 ```
 
@@ -797,8 +780,7 @@ violinplot
 
 
 ```r
-violinplot + xlab("Carrier") + ylab("Delay Departure (mins.)") + 
-    theme_stata(14)
+violinplot + xlab("Carrier")+ylab("Delay Departure (mins.)") + theme_stata(14)
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-40-1.png" width="576" /&gt;
@@ -818,16 +800,12 @@ violinplot + xlab("Carrier") + ylab("Delay Departure (mins.)") +
 
 ```r
 ### recode.
-library(haven)  # needed for as_factor
-violinplot_data$carrier_rec &lt;- as_factor(violinplot_data$carrier)
-ordered_levels &lt;- c("Jet Blue", "Delta Airlines")
-violinplot_data &lt;- mutate(violinplot_data, carrier_rec = factor(carrier_rec, 
-    levels = ordered_levels))
+library(haven) # needed for as_factor
+violinplot_data$carrier_rec&lt;-as_factor(violinplot_data$carrier)
+ordered_levels&lt;-c("Jet Blue", "Delta Airlines")
+violinplot_data&lt;- mutate(violinplot_data, carrier_rec = factor(carrier_rec, levels = ordered_levels))
 ### violinplot_2
-violinplot_2 &lt;- ggplot(violinplot_data, aes(x = carrier_rec, 
-    y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2) + 
-    xlab("Carrier") + ylab("Delay Departure (mins.)") + 
-    theme_stata(14)
+violinplot_2&lt;-ggplot(violinplot_data, aes(x = carrier_rec, y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2)  + xlab("Carrier")+ylab("Delay Departure (mins.)") + theme_stata(14)
 violinplot_2
 ```
 
@@ -848,7 +826,7 @@ t.test(dep_delay~carrier, data=violinplot_data)
 ## 
 ## data:  dep_delay by carrier
 ## t = 1.4522, df = 52.832, p-value = 0.1524
-## alternative hypothesis: true difference in means is not equal to 0
+## alternative hypothesis: true difference in means between group Delta Airlines and group Jet Blue is not equal to 0
 ## 95 percent confidence interval:
 ##  -4.351906 27.177268
 ## sample estimates:
@@ -997,14 +975,12 @@ We make a function with two arguments (data and indices). We will then feed our 
 ```r
 ### Bootstrap 95% CI for t-test
 library(boot)
-### function to obtain p.values from t.test from
-### the data
+### function to obtain p.values from t.test from the data 
 p_value &lt;- function(data, indices) {
-    data_boot &lt;- data[indices, ]  # allows boot to select sample 
-    T_test_boot &lt;- t.test(dep_delay ~ carrier, 
-        data = data_boot)
-    return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
-}
+  data_boot &lt;- data[indices,] # allows boot to select sample 
+  T_test_boot &lt;- t.test(dep_delay~carrier, data=data_boot)
+  return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
+} 
 ```
 
 ---
@@ -1012,13 +988,12 @@ p_value &lt;- function(data, indices) {
 
 
 ```r
-### Bootstrapping is truly random.  We need a 'seed' to
-### make it replicable.
+### Bootstrapping is truly random.
+### We need a 'seed' to make it replicable.
 set.seed(2019)
-### R is number of samples we want to draw?  we store it
-### in results.
-results &lt;- boot(data = violinplot_data, statistic = p_value, 
-    R = 10000)
+### R is number of samples we want to draw?
+### we store it in results.
+results &lt;- boot(data=violinplot_data, statistic=p_value,R=10000)
 ```
 
 ---
@@ -11041,7 +11016,7 @@ head(results)
 ## [1] 10000
 ## 
 ## $data
-## # A tibble: 166 x 26
+## # A tibble: 166 × 26
 ##     year month   day dep_time sched_dep_time dep_delay arr_time sched_arr_time
 ##    &lt;int&gt; &lt;int&gt; &lt;int&gt;    &lt;int&gt;          &lt;int&gt;     &lt;dbl&gt;    &lt;int&gt;          &lt;int&gt;
 ##  1  2013    12    25      612            615        -3      859            852
@@ -11057,7 +11032,7 @@ head(results)
 ## # … with 156 more rows, and 18 more variables: arr_delay &lt;dbl&gt;, carrier &lt;chr&gt;,
 ## #   flight &lt;int&gt;, tailnum &lt;chr&gt;, origin &lt;chr&gt;, dest &lt;chr&gt;, air_time &lt;dbl&gt;,
 ## #   distance &lt;dbl&gt;, hour &lt;dbl&gt;, minute &lt;dbl&gt;, time_hour &lt;dttm&gt;, speed &lt;dbl&gt;,
-## #   log_speed &lt;dbl&gt;, speed_cent &lt;dbl&gt;, speed_stand[,1] &lt;dbl&gt;,
+## #   log_speed &lt;dbl&gt;, speed_cent &lt;dbl&gt;, speed_stand &lt;dbl[,1]&gt;,
 ## #   dep_delay_no_miss &lt;dbl&gt;, arr_delay_no_miss &lt;dbl&gt;, carrier_rec &lt;fct&gt;
 ## 
 ## $seed
@@ -11169,12 +11144,11 @@ head(results)
 ## 
 ## $statistic
 ## function(data, indices) {
-##     data_boot &lt;- data[indices, ]  # allows boot to select sample 
-##     T_test_boot &lt;- t.test(dep_delay ~ carrier, 
-##         data = data_boot)
-##     return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
+##   data_boot &lt;- data[indices,] # allows boot to select sample 
+##   T_test_boot &lt;- t.test(dep_delay~carrier, data=data_boot)
+##   return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
 ## }
-## &lt;bytecode: 0x7fc52eda57a8&gt;
+## &lt;bytecode: 0x7fa383cfb448&gt;
 ```
 
 ---
@@ -11267,6 +11241,13 @@ boot.ci(results, type="bca")
 [Gert Stulp](http://gertstulp.github.io) provided code for the ggplot2 section of this lecture.
 
 These slides were built with [xaringan](https://github.com/yihui/xaringan).
+
+
+
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
