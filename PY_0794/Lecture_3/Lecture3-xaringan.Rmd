@@ -1,5 +1,6 @@
 ---
 title: 'Lecture 3: PY 0794 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
 date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
 output:
   xaringan::moon_reader:
