@@ -9,7 +9,7 @@ output:
 
 ## PY0794: Advanced Quantitative research methods
 
-![](https://www.rstudio.com/wp-content/uploads/2015/06/Rlogonew.png)
+![Logo](https://www.rstudio.com/wp-content/uploads/2015/06/Rlogonew.png)
 
 ## Goals (today)
 
@@ -187,7 +187,7 @@ knitr::include_graphics("https://media.giphy.com/media/QbumCX9HFFDQA/giphy-downs
 
 ## First coding ever. 
 ```{r, out.width = "200px", echo=FALSE}
-knitr::include_graphics("http://i0.kym-cdn.com/entries/icons/original/000/021/807/4d7.png")
+knitr::include_graphics("https://i.kym-cdn.com/entries/icons/original/000/021/807/ig9OoyenpxqdCQyABmOQBZDI0duHk2QZZmWg2Hxd4ro.jpg")
 ```
 
 Delete what's between the ticks.
