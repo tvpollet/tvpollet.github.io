@@ -198,9 +198,13 @@ In previous work, we have observed gender differences in every day risk taking i
 
 I would welcome further work in this area. This work tends to be observational. In order to have a great thesis, you will require large samples and/or multiple studies, due to the simplicity of its design. It is however, really straightforward to do and deals with real life behaviour.
 
-One example:
+Some examples:
 
 * Observing gender differences in helmet use on e-scooters. There are now [e-scooters](https://www.rideneuron.com/) all over Newcastle upon Tyne. In this project, you would test if men are less likely to wear a helmet than women. There are additional avenues to explore. For example, does helmet use vary based on group size.
+
+* Observing gender differences in mobile phone use while crossing the road.
+
+* Observing gender differences in crossing the road while the light is still red or 'jaywalking'.
 
 Here is an example project.
 
