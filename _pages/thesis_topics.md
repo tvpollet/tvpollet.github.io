@@ -209,6 +209,15 @@ Here is an example project.
 Here is a paper we wrote:
 * Cobey, K.D.\*, Stulp, G.\*, Laan, F., Buunk, A.P. & **Pollet, T.V.** (2013). Sex differences in risk taking behavior among Dutch cyclists. _Evolutionary Psychology, 11,_ 350-364. (*Authors contributed equally), [access .pdf here](http://journals.sagepub.com/doi/pdf/10.1177/147470491301100206)
 
+## Gender differences in everyday risk taking during Covid19 times.
+<a href="#thesis-introduction">back to top</a>
+
+This builds on the above framework. All else being equal, men take more risks in daily life than women. Can we observe this in everyday behaviour?
+
+* Observing gender differences in use of hand sanitiser when entering a building.
+* Observing gender differences in mask wearing on campus.
+* Observing gender differences in mask wearing on public transport.
+
 ## Measuring student satisfaction.
 <a href="#thesis-introduction">back to top</a>
 
