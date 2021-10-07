@@ -286,7 +286,7 @@ Recommendation check normality visually! (histogram / violin plot / ...)
 Think back to the 'Datasaurus'.
 
 ```{r, fig.align="center", out.width = "400px", echo=FALSE}
-knitr::include_graphics("http://s2.quickmeme.com/img/58/58ea069b7478a55496bd8f49e655de28d712f82df4bae25a933b77a7aff9d0bc.jpg")
+knitr::include_graphics("INSTA.jpg")
 ```
 
 ---
