@@ -4,6 +4,7 @@
     <title>Lecture 4: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -13,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Lecture 4: PY 0794 - Advanced Quantitative Research Methods
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2020-09-30 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2021-10-07 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -170,19 +171,17 @@ The Pearson correlation between sepal length and sepal width was not statistical
 
 
 ```r
-require(ggplot2)  # note geom_jitter
+require(ggplot2) # note geom_jitter
 require(ggthemes)
 require(RColorBrewer)
-gg &lt;- ggplot(data = iris, aes(Sepal.Width, Sepal.Length, color = Species)) + 
-    geom_jitter()
-gg &lt;- gg + facet_grid(. ~ Species) + geom_smooth(method = "lm")
-gg &lt;- gg + scale_colour_brewer(palette = "Dark2")
-gg &lt;- gg + labs(x = "Sepal Width", y = "Sepal Length", title = "Sepals") + 
-    theme_tufte(12)
+gg&lt;-ggplot(data = iris,aes(Sepal.Width, Sepal.Length, color=Species)) + geom_jitter()
+gg&lt;- gg + facet_grid(. ~ Species) + geom_smooth(method='lm') 
+gg&lt;- gg + scale_colour_brewer(palette = "Dark2")
+gg &lt;- gg + labs(x="Sepal Width", y="Sepal Length", title="Sepals") + theme_tufte(12) 
 gg
 ```
 
-&lt;img src="Lecture4-xaringan_files/figure-html/unnamed-chunk-7-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-7-1.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Correlation matrix
@@ -218,7 +217,7 @@ apa.cor.table(cor_table, filename = "correlations-iris.doc")
 ## Values in square brackets indicate the 95% confidence interval.
 ## The confidence interval is a plausible range of population correlations 
 ## that could have caused the sample correlation (Cumming, 2014).
-## * indicates p &lt; .05. ** indicates p &lt; .01.
+##  * indicates p &lt; .05. ** indicates p &lt; .01.
 ## 
 ```
 
@@ -227,18 +226,13 @@ apa.cor.table(cor_table, filename = "correlations-iris.doc")
 
 
 ```r
-# ggcorrplot, you can
-# then further tweak
-# this, as it is a
-# ggplot.
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
 require(ggcorrplot)
-cormatrix &lt;- cor(cor_table)
-ggcorrplot(cormatrix, 
-    hc.order = TRUE, 
-    type = "lower", lab = TRUE)
+cormatrix&lt;-cor(cor_table)
+ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", lab = TRUE) 
 ```
 
-&lt;img src="Lecture4-xaringan_files/figure-html/unnamed-chunk-9-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-9-1.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Other packages exist.
@@ -344,7 +338,7 @@ summary(model_education)
 
 **Normality**: All errors normally distributed around 0.
 
-**Homoscedasticity**: The variance of the errors should be constant for the (combination of) predictor(s) (as with ANOVA)
+**Homoscedasticity**: The variance of the errors should be constant for the (combination) (as with ANOVA)
 
 **Independence**: Errors should be independent.
 
@@ -370,11 +364,9 @@ Good idea to plot before you start.
 ```r
 require(ggplot2)
 require(scales)
-require(ggthemes)
-plot_edu &lt;- ggplot(prestige, aes(education, prestige)) + geom_jitter()
-plot_edu &lt;- plot_edu + scale_y_continuous(limits = c(0, 100), breaks = pretty_breaks(6)) + 
-    scale_x_continuous(limits = c(6, 18), breaks = pretty_breaks(6)) + ylab("Prestige") + 
-    xlab("Education") + geom_smooth(method = "loess") + theme_tufte(12)
+require(ggthemes) 
+plot_edu&lt;-ggplot(prestige, aes(education,prestige)) + geom_jitter() 
+plot_edu&lt;- plot_edu + scale_y_continuous(limits=c(0,100),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(6,18), breaks = pretty_breaks(6)) + ylab("Prestige") + xlab("Education") + geom_smooth(method='loess') + theme_tufte(12)
 ```
 
 ---
@@ -389,7 +381,7 @@ plot_edu
 ## `geom_smooth()` using formula 'y ~ x'
 ```
 
-&lt;img src="Lecture4-xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
 
 ---
 ## plot() 
@@ -405,7 +397,7 @@ More [here](http://data.library.virginia.edu/diagnostic-plots/).
 plot(model_education, which = 1)
 ```
 
-![](Lecture4-xaringan_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-16-1.png)&lt;!-- --&gt;
 
 ---
 ## Q-Q plot.
@@ -414,7 +406,7 @@ plot(model_education, which = 1)
 plot(model_education, which = 2)
 ```
 
-![](Lecture4-xaringan_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
 
 ---
 ## Scale location plot.
@@ -424,7 +416,7 @@ plot(model_education, which = 2)
 plot(model_education, which = 3)
 ```
 
-![](Lecture4-xaringan_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
 
 ---
 ## Outliers
@@ -434,7 +426,7 @@ plot(model_education, which = 3)
 plot(model_education, which = 4)
 ```
 
-![](Lecture4-xaringan_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
 
 ---
 ## Can't we just use scatter plots?
@@ -554,9 +546,7 @@ summary(lm_education_women)
 
 ```r
 require(stargazer)
-stargazer(model_education, lm_education_women, dep.var.labels = c("Prestige"), 
-    covariate.labels = c("Education (years)", "Women (%)"), style = "demography", 
-    out = "hierarchical.htm", header = F)
+stargazer(model_education,lm_education_women,  dep.var.labels=c("Prestige"),covariate.labels=c("Education (years)","Women (%)"), style="demography", out="hierarchical.htm", header=F)
 ```
 
 ```
@@ -599,14 +589,9 @@ Centering (week 2). We can use our model to make predictions... .
 
 ```r
 require(dplyr)
-# use :: just in
-# case of
-# conflicts.
-prestige &lt;- dplyr::mutate(prestige, women_cent = women - mean(women), 
-    education_cent = education - mean(education), prestige_cent = prestige - 
-        mean(prestige))
-centered_model &lt;- lm(prestige_cent ~ education_cent + women_cent, 
-    data = prestige)
+# use :: just in case of conflicts.
+prestige&lt;-dplyr::mutate(prestige, women_cent= women-mean(women), education_cent= education-mean(education), prestige_cent= prestige-mean(prestige))
+centered_model&lt;-lm(prestige_cent~education_cent+women_cent, data=prestige)
 ```
 
 ---
@@ -769,8 +754,7 @@ results_coeff_B
 
 
 ```r
-# get 95% confidence interval
-set.seed(1234)
+# get 95% confidence interval 
 boot.ci(results_coeff_B, type="bca")
 ```
 
@@ -787,7 +771,7 @@ boot.ci(results_coeff_B, type="bca")
 ## Calculations and Intervals on Original Scale
 ```
 
-The 95% BCA confidence interval (with 10,000 bootstraps) for the (centered) coefficient of education is [4.86, 5.99].
+The 95% BCA confidence interval (with 10,000 bootstraps) for the (centered) coefficient of education is [4.85, 5.97].
 
 ---
 ## Logistic Regression.
@@ -1174,9 +1158,7 @@ We can get a nice table with Odds Ratios and summaries. Or look into broom() and
 
 ```r
 require(stargazer)
-stargazer(log1, log2, covariate.labels = c("BMI", "Age"), omit = c("Constant"), apply.coef = exp, 
-    t.auto = F, p.auto = F, report = "vc*", style = "asr", out = "logistic.htm", 
-    header = FALSE)
+stargazer(log1,log2, covariate.labels=c("BMI","Age"), omit=c("Constant"), apply.coef=exp, t.auto=F, p.auto=F, report = "vc*", style="asr", out="logistic.htm", header=FALSE)
 ```
 
 ---
@@ -1206,11 +1188,9 @@ First make some categorical variables.
 
 
 ```r
-require(dplyr)  # make some categorical variables
-pima_data &lt;- pima_data %&gt;% mutate(obese = cut(mass, breaks = c(-Inf, 30, Inf), labels = c("No", 
-    "Yes")))
-pima_data &lt;- pima_data %&gt;% mutate(nulligravada = cut(pregnant, breaks = c(-Inf, 0.99, 
-    Inf), labels = c("never pregnant", "ever pregnant")))
+require(dplyr) # make some categorical variables
+pima_data&lt;- pima_data %&gt;% mutate(obese=cut(mass, breaks=c(-Inf, 30, Inf), labels=c("No","Yes")))
+pima_data&lt;- pima_data %&gt;% mutate(nulligravada=cut(pregnant, breaks=c(-Inf, 0.99, Inf), labels=c("never pregnant","ever pregnant")))
 ```
 
 ---
@@ -1220,14 +1200,13 @@ pima_data &lt;- pima_data %&gt;% mutate(nulligravada = cut(pregnant, breaks = c(
 ```r
 require(RColorBrewer)
 # pick some colours.
-colours &lt;- c(color = brewer.pal(2, "Set3"))
-fill_colours &lt;- rep(colours, each = 4)  # 4 quadrants to fill
+colours&lt;-c(color = brewer.pal(2, "Set3"))
+fill_colours&lt;-rep(colours, each=4) # 4 quadrants to fill
 require(vcd)
-mosaicplot1 &lt;- mosaic(~diabetes + nulligravada + obese, zero_size = 0, data = pima_data, 
-    gp = gpar(fill = fill_colours, col = 0), legend = F, labeling = labeling_values)
+mosaicplot1&lt;-mosaic(~ diabetes + nulligravada + obese, zero_size = 0, data=pima_data, gp = gpar(fill = fill_colours, col = 0), legend=F, labeling = labeling_values)
 ```
 
-&lt;img src="Lecture4-xaringan_files/figure-html/opts_chunk$set(out.width=12)-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/opts_chunk$set(out.width=12)-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Exercise. 
@@ -1243,11 +1222,11 @@ mosaicplot1 &lt;- mosaic(~diabetes + nulligravada + obese, zero_size = 0, data =
 ---
 ## Exercise. (cont'd)
 
-- Calculate the standardized coefficients for model 1 ( `\(\beta\)` ). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
+- Calculate the standardized coefficients for model 1 ($\beta$). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
 
 - What does the final model predict in terms of monthly salary shift, when there is a shift of being 3 years post-Ph.D.
 
-- Install and load the 'caret' package. load the GermanCredit dataset. ??GermanCredit to find out more also &lt;a href="https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)"&gt;here&lt;/a&gt;. It contains data on credit scores for a 1,000 cases and has 62 variables.  As done before, you might want to explore the descriptive statistics.
+- Install and load the 'caret' package. load the GermanCredit dataset. ??GermanCredit to find out more also [here](&lt;https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)&gt;). It contains data on credit scores for a 1,000 cases and has 62 variables.  As done before, you might want to explore the descriptive statistics.
 
 - Make a corrplot() for up to 10 continuous variables in the GermanCredit dataset. Export a correlation matrix (up to 10 variables). 
 
@@ -1274,7 +1253,16 @@ Also check the reading list! (many more than listed here)
 * Torres-Reyna, O. (2010). [Regression 101.](https://www.princeton.edu/~otorres/Regression101R.pdf)
 * Wickham, H., &amp; Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
 * Willems, K. (2017). [R correlation tutorial](https://www.datacamp.com/community/blog/r-correlation-tutorial#gs.I6sFjp8)
-* Zuur, A., Ieno, E.N., Walker, N., Saveliev, A.A., &amp; Smith, G.M. (2009). _Mixed effects models and extensions in ecology with R_. New York, NY: Springer.
+* Zuur, A., Ieno, E.N., Walker, N., Saveliev, A.A., &amp; Smith, G.M. (2009). _Mixed effects models and extensions in ecology with R_. New York, NY: Springer. 
+
+
+
+
+
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
