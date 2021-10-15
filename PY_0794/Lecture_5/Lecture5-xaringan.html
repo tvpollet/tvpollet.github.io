@@ -4,6 +4,7 @@
     <title>Lecture 5: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
   </head>
@@ -13,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Lecture 5: PY 0794 - Advanced Quantitative Research Methods
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2020-10-02 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2021-10-15 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -307,11 +308,9 @@ return_aov will return an ANOVA list from which we can then call objects
 
 ```r
 # make an ID variable
-ToothGrowth2$id &lt;- seq(1:60)
-require(ez)  # even better bet to get SPSS like results.
-ez &lt;- ezANOVA(data = ToothGrowth2, dv = .(len), wid = .(id), 
-    between = .(supp, dose), return_aov = T, detailed = TRUE, 
-    type = 3)
+ToothGrowth2$id&lt;- seq(1:60)
+require(ez) # even better bet to get SPSS like results.
+ez&lt;-ezANOVA(data=ToothGrowth2, dv=.(len), wid=.(id), between = .(supp, dose), return_aov=T, detailed=TRUE, type=3)
 ```
 
 ---
@@ -427,12 +426,10 @@ ggpubr makes ggplot2 even easier, and churns out some beautiful graphs.
 
 ```r
 require(ggpubr)
-plot_moderation &lt;- ggviolin(ToothGrowth2, x = "dose", 
-    y = "len", color = "dose", palette = c("black", 
-        "darkblue", "darkred"), add = c("jitter", "boxplot"), 
-    shape = "dose") + labs(x = "Condition", y = "Length", 
-    color = "Dose", shape = "Dose")
-plot_moderation + facet_wrap(~supp)
+plot_moderation &lt;- ggviolin(ToothGrowth2, x = "dose", y = "len",
+                color = "dose", palette =c("black", "darkblue", "darkred"),
+                add = c("jitter","boxplot"), shape = "dose") + labs(x="Condition", y= "Length", color="Dose", shape= "Dose")
+plot_moderation  + facet_wrap(~supp)
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
@@ -447,9 +444,7 @@ plot_moderation + facet_wrap(~supp)
 
 ```r
 require(apaTables)
-apa.2way.table(supp, dose, len, ToothGrowth2, filename = "toothgrowth ANOVA", 
-    table.number = 1, show.conf.interval = T, show.marginal.means = T, 
-    landscape = TRUE)
+apa.2way.table(supp, dose,  len, ToothGrowth2, filename = 'toothgrowth ANOVA', table.number = 1,show.conf.interval = T, show.marginal.means = T, landscape = TRUE)
 ```
 
 ```
@@ -489,21 +484,17 @@ Note the singular.ok = T statement.
 
 
 ```r
-# Bootstrap CI for ANOVA
+# Bootstrap CI for ANOVA 
 library(boot)
-# function to obtain p.values from F-test from the
-# data
+# function to obtain p.values from F-test from the data 
 p_value_twowayaov &lt;- function(data, indices) {
-    data_boot &lt;- data[indices, ]  # allows boot to select sample 
-    ANOVAtwobytwo_boot &lt;- Anova(lm(len ~ supp * dose, 
-        data = data_boot), contrasts = c("contr.sum", 
-        "contr.poly"), type = 3, singular.ok = TRUE)
-    return(ANOVAtwobytwo_boot$`Pr(&gt;F)`[4])
-}
-# bootstrapping with 1000 replications
+  data_boot &lt;- data[indices,] # allows boot to select sample 
+  ANOVAtwobytwo_boot&lt;-Anova(lm(len~supp*dose, data=data_boot), contrasts = c("contr.sum", "contr.poly"), type = 3, singular.ok = TRUE)
+  return(ANOVAtwobytwo_boot$`Pr(&gt;F)`[4])
+} 
+# bootstrapping with 1000 replications 
 set.seed(1234)
-results_twowayaov &lt;- boot(data = ToothGrowth2, statistic = p_value_twowayaov, 
-    R = 1000)
+results_twowayaov &lt;- boot(data=ToothGrowth2,statistic=p_value_twowayaov,R=1000)
 ```
 
 ---
@@ -570,7 +561,7 @@ There are ways to "automate" this search for interaction, and there are 'tree' b
 
 ```r
 require(tree)
-tree &lt;- tree(len ~ ., ToothGrowth)
+tree&lt;-tree(len~., ToothGrowth)
 plot(tree)
 text(tree)
 ```
@@ -585,7 +576,7 @@ Read about ??party. Amazing package to find patterns in your data. (It does so i
 
 ```r
 require(party)
-ctree &lt;- ctree(len ~ ., ToothGrowth)  # opted for original dataframe
+ctree&lt;-ctree(len~., ToothGrowth) # opted for original dataframe
 ```
 
 Party= Recursive Partitioning of Variance. (underpinning it is permutation testing...)
@@ -789,8 +780,8 @@ Usually we are interested in shifts of one SD.
 
 ```r
 library(rockchalk)
-plotCurves(interaction2, plotx = "epiNeur", modx = "stateanx", 
-    modxVals = "std.dev.", interval = "confidence")
+plotCurves(interaction2, plotx="epiNeur",
+modx="stateanx", modxVals="std.dev.", interval='confidence')
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-38-1.png" style="display: block; margin: auto;" /&gt;
@@ -801,26 +792,25 @@ plotCurves(interaction2, plotx = "epiNeur", modx = "stateanx",
 
 ```r
 require(interactions)
-sim_slopes(interaction2, pred = epiNeur, modx = stateanx, 
-    johnson_neyman = FALSE)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx, johnson_neyman = FALSE)
 ```
 
 ```
 ## SIMPLE SLOPES ANALYSIS 
 ## 
-## Slope of epiNeur when stateanx = 28.36 (- 1 SD): 
+## Slope of epiNeur when stateanx = 28.36434 (- 1 SD): 
 ## 
 ##   Est.   S.E.   t val.      p
 ## ------ ------ -------- ------
 ##   0.29   0.08     3.66   0.00
 ## 
-## Slope of epiNeur when stateanx = 39.85 (Mean): 
+## Slope of epiNeur when stateanx = 39.84848 (Mean): 
 ## 
 ##   Est.   S.E.   t val.      p
 ## ------ ------ -------- ------
 ##   0.46   0.06     7.20   0.00
 ## 
-## Slope of epiNeur when stateanx = 51.33 (+ 1 SD): 
+## Slope of epiNeur when stateanx = 51.33263 (+ 1 SD): 
 ## 
 ##   Est.   S.E.   t val.      p
 ## ------ ------ -------- ------
@@ -858,10 +848,9 @@ johnson_neyman(interaction2, pred = epiNeur, modx = stateanx)
 
 
 ```r
-require(sandwich)  # Robust estimation.
+require(sandwich) # Robust estimation.
 require(lmtest)
-sim_slopes(interaction2, pred = epiNeur, modx = stateanx, 
-    robust = T)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx, robust=T)
 ```
 
 ```
@@ -874,19 +863,19 @@ sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
 ## 
 ## SIMPLE SLOPES ANALYSIS 
 ## 
-## Slope of epiNeur when stateanx = 28.36 (- 1 SD): 
+## Slope of epiNeur when stateanx = 28.36434 (- 1 SD): 
 ## 
 ##   Est.   S.E.   t val.      p
 ## ------ ------ -------- ------
 ##   0.29   0.08     3.79   0.00
 ## 
-## Slope of epiNeur when stateanx = 39.85 (Mean): 
+## Slope of epiNeur when stateanx = 39.84848 (Mean): 
 ## 
 ##   Est.   S.E.   t val.      p
 ## ------ ------ -------- ------
 ##   0.46   0.07     6.35   0.00
 ## 
-## Slope of epiNeur when stateanx = 51.33 (+ 1 SD): 
+## Slope of epiNeur when stateanx = 51.33263 (+ 1 SD): 
 ## 
 ##   Est.   S.E.   t val.      p
 ## ------ ------ -------- ------
@@ -900,8 +889,7 @@ sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
 
 
 ```r
-interact_plot(interaction2, pred = "epiNeur", modx = "stateanx", 
-    interval = TRUE, int.width = 0.9)
+interact_plot(interaction2, pred = "epiNeur", modx = "stateanx", interval = TRUE, int.width = 0.9)
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-43-1.png" style="display: block; margin: auto;" /&gt;
@@ -922,10 +910,9 @@ If you haven't conducted one, what would be a scenario where you would test one?
 
 
 ```r
-library(ez)
-bilingual &lt;- read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
-rm_anov &lt;- ezANOVA(data = bilingual, dv = mlu, wid = .(subj), 
-    within = .(language, age), between = gender, type = 3)
+library(ez) 
+bilingual&lt;-read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
+rm_anov&lt;-ezANOVA(data=bilingual, dv=mlu, wid=.(subj), within=.(language, age), between=gender, type = 3) 
 ```
 
 ```
@@ -1049,6 +1036,8 @@ Also check the reading list! (many more than listed here)
 * Dept. of Statistics, Cambridge University (n.d.). _[R: Analysis of variance (ANOVA)](https://egret.psychol.cam.ac.uk/statistics/R/anova.html#references)_
 * Kassambara, A. (2017). _[STHDA: Two way Anova](http://www.sthda.com/english/wiki/two-way-anova-test-in-r)_
 * Wickham, H., &amp; Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
