@@ -44,6 +44,8 @@ These could be good candidates:
 * Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
 * Attachment Style and Jealousy in the Digital Age. [https://doi.org/10.3389/fpsyg.2021.678542]( https://doi.org/10.3389/fpsyg.2021.678542)
+* The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
+* Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
 
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
@@ -168,13 +170,14 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Personal Sense of Power Scale](https://doi.org/10.1111/j.1467-6494.2011.00734.x){:target="_blank"}
 * [Pain attitudes and Stoicism/Cautiousness](https://academic.oup.com/psychsocgerontology/article/56/5/P279/634269){:target="_blank"}
 * [The Short Anxiety Screening test](https://doi.org/10.1002/(SICI)1099-1166(199912)14:12<1062::AID-GPS67>3.0.CO;2-Q){:target="_blank"}
-* [Attitudes towards donation of oocytes](https://doi.org/10.1093/humrep/deg222){:target="_blank"}
+* [Attitudes towards donation of oocytes](https://doi.org/10.1093/humrep/deg222){:target="_blank"} - (oocytes are immature eggs donated, for example, in fertility treatment).
 * [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
 * [The Covid19 phobia scale](https://doi.org/10.1016/j.paid.2020.110108){:target="_blank"}
 * [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
 * [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
 * [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
 * [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
+* [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
 
