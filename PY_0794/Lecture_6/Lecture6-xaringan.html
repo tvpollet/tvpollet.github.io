@@ -4,7 +4,6 @@
     <title>Lecture 6: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-1.5.3/htmlwidgets.js"></script>
@@ -24,7 +23,7 @@ class: center, middle, inverse, title-slide
 
 # Lecture 6: PY 0794 - Advanced Quantitative Research Methods
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2021-10-21 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2021-10-27 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -130,8 +129,8 @@ mermaid(" graph LR
 ---
 ## Plot
 
-<div id="htmlwidget-28e66a48fa5f951b30f6" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-28e66a48fa5f951b30f6">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-400b34c33b61a815ee48" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-400b34c33b61a815ee48">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## More beautiful...
@@ -164,8 +163,8 @@ grViz("
 ---
 ## Look at the shiny-shiny.
 
-<div id="htmlwidget-ddd81b7161f1645ed572" style="width:504px;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ddd81b7161f1645ed572">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a1485214340974980e81" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a1485214340974980e81">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Check Diagrammer tutorial
@@ -196,9 +195,12 @@ Proposed mediator (M): self-esteem.
 
 
 ```r
-# Data can be loaded from here http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv
-D&lt;- read.csv("mediationData.csv")
-Data_med&lt;-D
+# Data can
+# be loaded
+# from here
+# http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv
+D &lt;- read.csv("mediationData.csv")
+Data_med &lt;- D
 ```
 
 ---
@@ -375,9 +377,14 @@ Recommendation is bootstrapping methods. One method is Preacher &amp; Hayes (200
 
 ```r
 require(bda)
-#reload (note that Rmarkdown is forgetful, so you might want to reload the data)
-Data_med&lt;- read.csv("mediationData.csv")
-mediation.test(Data_med$M,Data_med$X, Data_med$Y)
+# reload (note that
+# Rmarkdown is
+# forgetful, so you
+# might want to
+# reload the data)
+Data_med &lt;- read.csv("mediationData.csv")
+mediation.test(Data_med$M, 
+    Data_med$X, Data_med$Y)
 ```
 
 ```
@@ -410,7 +417,8 @@ Here we use 10,000 bootstraps. The std=T command ensures standardization.
 
 ```r
 require(psych)
-mediationmodel1&lt;-mediate(Y~X+(M), std=TRUE, data=Data_med, n.iter=10000, plot=F)
+mediationmodel1 &lt;- mediate(Y ~ X + (M), std = TRUE, 
+    data = Data_med, n.iter = 10000, plot = F)
 ```
 
 ---
@@ -488,11 +496,13 @@ Long story short, this is a newer and perhaps better method.
 
 ```r
 require(mediation)
-med.fit&lt;-lm(M~X, data=Data_med)
-out.fit&lt;-lm(Y~X+M, data=Data_med)
-# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+med.fit &lt;- lm(M ~ X, data = Data_med)
+out.fit &lt;- lm(Y ~ X + M, data = Data_med)
+# Robust SE is ignored for Bootstrap. Otherwise
+# omit boot=TRUE.
 set.seed(1984)
-med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
+med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", 
+    boot = TRUE, sims = 10000)
 ```
 
 ---
@@ -536,7 +546,7 @@ The mediation analysis showed a significant average causal mediation effect (ACM
 plot(med.out) 
 ```
 
-![](Lecture6-xaringan_files/figure-html/unnamed-chunk-28-1.png)&lt;!-- --&gt;
+&lt;img src="Lecture6-xaringan_files/figure-html/plot-1.png" width="450" height="450" /&gt;
 
 ---
 ## Sensitivity analysis
@@ -640,8 +650,6 @@ Also check the reading list! (many more than listed here)
 * Imai, K., Keele, L., &amp; Tingley, D. (2011). A general approach to causal mediation analysis. _Psychological Methods, 15(4)_, 309–334. https://doi.org/10.1037/a0020761
 * Pearl, J. (2009). _Causality_. Cambridge university press.
 * Sobel, M. E. (1982). Asymptotic Confidence Intervals for Indirect Effects in Structural Equation Models. _Sociological Methodology, 13_, 290. https://doi.org/10.2307/270723
-
-
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

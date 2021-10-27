@@ -463,7 +463,7 @@ The mediation analysis showed a significant average causal mediation effect (ACM
 ---
 ## Plot
 
-```{r}
+```{r plot, out.height=450, out.width= 450}
 plot(med.out) 
 ```
 
