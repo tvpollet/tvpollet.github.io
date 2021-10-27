@@ -318,7 +318,7 @@ Typically researchers would make a diagram as shown and then add the B or $\beta
 For example: 
 
 ```{r, out.width = "500px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("http://my.ilstu.edu/~jhkahn/mediation.gif")
+knitr::include_graphics("mediation_example.gif")
 ```
 
 ---
@@ -432,6 +432,10 @@ Based on [this paper](https://pdfs.semanticscholar.org/2d61/1458f70a315dec999cd0
 
 Long story short, this is a newer and perhaps better method.
 
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/dZFSFnniLOXZQvkkd5/giphy.gif")
+```
+
 ---
 ## Mediate
 
@@ -544,8 +548,9 @@ BONUS: perform the sensitivity analysis via Imai et al.'s method.
 Also check the reading list! (many more than listed here)
 
 * Kim, B. (2016). Introduction to Mediation Analysis http://data.library.virginia.edu/introduction-to-mediation-analysis/
-* Hayes, A. F. (2013). _Introduction to Mediation, Moderation and Conditional Process Analysis._ New York, New York: Guilford Press.
+* Hayes, A. F. (2013). _Introduction to Mediation, Moderation and Conditional Process Analysis._ Guilford Press.
 * Imai, K., Keele, L., & Tingley, D. (2011). A general approach to causal mediation analysis. _Psychological Methods, 15(4)_, 309–334. https://doi.org/10.1037/a0020761
+* Pearl, J. (2009). _Causality_. Cambridge university press.
 * Sobel, M. E. (1982). Asymptotic Confidence Intervals for Indirect Effects in Structural Equation Models. _Sociological Methodology, 13_, 290. https://doi.org/10.2307/270723
 
 
