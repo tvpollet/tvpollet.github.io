@@ -19,9 +19,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, & Shepherd, L. (2021, July 22nd). Subscales in the National Student Survey (NSS): Some considerations on their structure. _PsyArxiv_ [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
+* Brown, G., Curtis, V., & **Pollet, T.V.** (2021, October 28th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
-* Brown, G., Curtis, V., & **Pollet, T.V.** (2021, July 14th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
+* **Pollet, T.V.**, & Shepherd, L. (2021, July 22nd). Subscales in the National Student Survey (NSS): Some considerations on their structure. _PsyArxiv_ [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
 
 * **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2021, June 17). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
 
