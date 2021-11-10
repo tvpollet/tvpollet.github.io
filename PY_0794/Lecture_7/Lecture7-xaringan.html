@@ -4,10 +4,9 @@
     <title>Lecture 7: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-    <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -15,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Lecture 7: PY 0794 - Advanced Quantitative Research Methods
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2020-11-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2021-10-28 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -142,45 +141,43 @@ mvn(f_data)
 
 ```
 ## $multivariateNormality
-##              Test        Statistic              p value Result
-## 1 Mardia Skewness 8120.19888493781 1.26964854513512e-69     NO
-## 2 Mardia Kurtosis 15.3220135668768                    0     NO
-## 3             MVN             &lt;NA&gt;                 &lt;NA&gt;     NO
+##            Test       HZ p value MVN
+## 1 Henze-Zirkler 1.000172       0  NO
 ## 
 ## $univariateNormality
-##            Test  Variable Statistic   p value Normality
-## 1  Shapiro-Wilk  distant     0.9259  &lt;0.001      NO    
-## 2  Shapiro-Wilk  talkatv     0.9530  &lt;0.001      NO    
-## 3  Shapiro-Wilk  carelss     0.9193  &lt;0.001      NO    
-## 4  Shapiro-Wilk  hardwrk     0.9102  &lt;0.001      NO    
-## 5  Shapiro-Wilk  anxious     0.9571  &lt;0.001      NO    
-## 6  Shapiro-Wilk  agreebl     0.9200  &lt;0.001      NO    
-## 7  Shapiro-Wilk   tense      0.9521  &lt;0.001      NO    
-## 8  Shapiro-Wilk   kind       0.9157  &lt;0.001      NO    
-## 9  Shapiro-Wilk  opposng     0.9435  &lt;0.001      NO    
-## 10 Shapiro-Wilk  relaxed     0.9644  &lt;0.001      NO    
-## 11 Shapiro-Wilk  disorgn     0.9360  &lt;0.001      NO    
-## 12 Shapiro-Wilk  outgoin     0.9441  &lt;0.001      NO    
-## 13 Shapiro-Wilk  approvn     0.9481  &lt;0.001      NO    
-## 14 Shapiro-Wilk    shy       0.9566  &lt;0.001      NO    
-## 15 Shapiro-Wilk  discipl     0.9411  &lt;0.001      NO    
-## 16 Shapiro-Wilk   harsh      0.9276  &lt;0.001      NO    
-## 17 Shapiro-Wilk  persevr     0.9255  &lt;0.001      NO    
-## 18 Shapiro-Wilk  friendl     0.9039  &lt;0.001      NO    
-## 19 Shapiro-Wilk  worryin     0.9406  &lt;0.001      NO    
-## 20 Shapiro-Wilk  respnsi     0.8741  &lt;0.001      NO    
-## 21 Shapiro-Wilk  contrar     0.9523  &lt;0.001      NO    
-## 22 Shapiro-Wilk  sociabl     0.9300  &lt;0.001      NO    
-## 23 Shapiro-Wilk   lazy       0.9582  &lt;0.001      NO    
-## 24 Shapiro-Wilk  coopera     0.9277  &lt;0.001      NO    
-## 25 Shapiro-Wilk   quiet      0.9602  &lt;0.001      NO    
-## 26 Shapiro-Wilk  organiz     0.9457  &lt;0.001      NO    
-## 27 Shapiro-Wilk  criticl     0.9571  &lt;0.001      NO    
-## 28 Shapiro-Wilk    lax       0.9498  &lt;0.001      NO    
-## 29 Shapiro-Wilk  laidbck     0.9640  &lt;0.001      NO    
-## 30 Shapiro-Wilk  withdrw     0.9266  &lt;0.001      NO    
-## 31 Shapiro-Wilk  givinup     0.8737  &lt;0.001      NO    
-## 32 Shapiro-Wilk  easygon     0.9473  &lt;0.001      NO    
+##                Test  Variable Statistic   p value Normality
+## 1  Anderson-Darling  distant     6.9751  &lt;0.001      NO    
+## 2  Anderson-Darling  talkatv     4.2917  &lt;0.001      NO    
+## 3  Anderson-Darling  carelss     6.8577  &lt;0.001      NO    
+## 4  Anderson-Darling  hardwrk     8.0398  &lt;0.001      NO    
+## 5  Anderson-Darling  anxious     4.0905  &lt;0.001      NO    
+## 6  Anderson-Darling  agreebl     7.0108  &lt;0.001      NO    
+## 7  Anderson-Darling   tense      4.3169  &lt;0.001      NO    
+## 8  Anderson-Darling   kind       7.7714  &lt;0.001      NO    
+## 9  Anderson-Darling  opposng     5.2942  &lt;0.001      NO    
+## 10 Anderson-Darling  relaxed     3.5136  &lt;0.001      NO    
+## 11 Anderson-Darling  disorgn     5.1948  &lt;0.001      NO    
+## 12 Anderson-Darling  outgoin     4.8684  &lt;0.001      NO    
+## 13 Anderson-Darling  approvn     5.6728  &lt;0.001      NO    
+## 14 Anderson-Darling    shy       3.7198  &lt;0.001      NO    
+## 15 Anderson-Darling  discipl     4.8654  &lt;0.001      NO    
+## 16 Anderson-Darling   harsh      6.7987  &lt;0.001      NO    
+## 17 Anderson-Darling  persevr     6.2778  &lt;0.001      NO    
+## 18 Anderson-Darling  friendl     8.4708  &lt;0.001      NO    
+## 19 Anderson-Darling  worryin     5.1901  &lt;0.001      NO    
+## 20 Anderson-Darling  respnsi     9.0694  &lt;0.001      NO    
+## 21 Anderson-Darling  contrar     4.7126  &lt;0.001      NO    
+## 22 Anderson-Darling  sociabl     6.3069  &lt;0.001      NO    
+## 23 Anderson-Darling   lazy       3.3986  &lt;0.001      NO    
+## 24 Anderson-Darling  coopera     7.6556  &lt;0.001      NO    
+## 25 Anderson-Darling   quiet      3.4238  &lt;0.001      NO    
+## 26 Anderson-Darling  organiz     3.9451  &lt;0.001      NO    
+## 27 Anderson-Darling  criticl     4.3845  &lt;0.001      NO    
+## 28 Anderson-Darling    lax       4.7180  &lt;0.001      NO    
+## 29 Anderson-Darling  laidbck     3.5410  &lt;0.001      NO    
+## 30 Anderson-Darling  withdrw     6.2122  &lt;0.001      NO    
+## 31 Anderson-Darling  givinup    10.0194  &lt;0.001      NO    
+## 32 Anderson-Darling  easygon     4.8535  &lt;0.001      NO    
 ## 
 ## $Descriptives
 ##           n     Mean  Std.Dev Median Min Max 25th 75th        Skew     Kurtosis
@@ -225,45 +222,43 @@ mvn(f_data)
 
 ```
 ## $multivariateNormality
-##              Test        Statistic              p value Result
-## 1 Mardia Skewness 8120.19888493781 1.26964854513512e-69     NO
-## 2 Mardia Kurtosis 15.3220135668768                    0     NO
-## 3             MVN             &lt;NA&gt;                 &lt;NA&gt;     NO
+##            Test       HZ p value MVN
+## 1 Henze-Zirkler 1.000172       0  NO
 ## 
 ## $univariateNormality
-##            Test  Variable Statistic   p value Normality
-## 1  Shapiro-Wilk  distant     0.9259  &lt;0.001      NO    
-## 2  Shapiro-Wilk  talkatv     0.9530  &lt;0.001      NO    
-## 3  Shapiro-Wilk  carelss     0.9193  &lt;0.001      NO    
-## 4  Shapiro-Wilk  hardwrk     0.9102  &lt;0.001      NO    
-## 5  Shapiro-Wilk  anxious     0.9571  &lt;0.001      NO    
-## 6  Shapiro-Wilk  agreebl     0.9200  &lt;0.001      NO    
-## 7  Shapiro-Wilk   tense      0.9521  &lt;0.001      NO    
-## 8  Shapiro-Wilk   kind       0.9157  &lt;0.001      NO    
-## 9  Shapiro-Wilk  opposng     0.9435  &lt;0.001      NO    
-## 10 Shapiro-Wilk  relaxed     0.9644  &lt;0.001      NO    
-## 11 Shapiro-Wilk  disorgn     0.9360  &lt;0.001      NO    
-## 12 Shapiro-Wilk  outgoin     0.9441  &lt;0.001      NO    
-## 13 Shapiro-Wilk  approvn     0.9481  &lt;0.001      NO    
-## 14 Shapiro-Wilk    shy       0.9566  &lt;0.001      NO    
-## 15 Shapiro-Wilk  discipl     0.9411  &lt;0.001      NO    
-## 16 Shapiro-Wilk   harsh      0.9276  &lt;0.001      NO    
-## 17 Shapiro-Wilk  persevr     0.9255  &lt;0.001      NO    
-## 18 Shapiro-Wilk  friendl     0.9039  &lt;0.001      NO    
-## 19 Shapiro-Wilk  worryin     0.9406  &lt;0.001      NO    
-## 20 Shapiro-Wilk  respnsi     0.8741  &lt;0.001      NO    
-## 21 Shapiro-Wilk  contrar     0.9523  &lt;0.001      NO    
-## 22 Shapiro-Wilk  sociabl     0.9300  &lt;0.001      NO    
-## 23 Shapiro-Wilk   lazy       0.9582  &lt;0.001      NO    
-## 24 Shapiro-Wilk  coopera     0.9277  &lt;0.001      NO    
-## 25 Shapiro-Wilk   quiet      0.9602  &lt;0.001      NO    
-## 26 Shapiro-Wilk  organiz     0.9457  &lt;0.001      NO    
-## 27 Shapiro-Wilk  criticl     0.9571  &lt;0.001      NO    
-## 28 Shapiro-Wilk    lax       0.9498  &lt;0.001      NO    
-## 29 Shapiro-Wilk  laidbck     0.9640  &lt;0.001      NO    
-## 30 Shapiro-Wilk  withdrw     0.9266  &lt;0.001      NO    
-## 31 Shapiro-Wilk  givinup     0.8737  &lt;0.001      NO    
-## 32 Shapiro-Wilk  easygon     0.9473  &lt;0.001      NO    
+##                Test  Variable Statistic   p value Normality
+## 1  Anderson-Darling  distant     6.9751  &lt;0.001      NO    
+## 2  Anderson-Darling  talkatv     4.2917  &lt;0.001      NO    
+## 3  Anderson-Darling  carelss     6.8577  &lt;0.001      NO    
+## 4  Anderson-Darling  hardwrk     8.0398  &lt;0.001      NO    
+## 5  Anderson-Darling  anxious     4.0905  &lt;0.001      NO    
+## 6  Anderson-Darling  agreebl     7.0108  &lt;0.001      NO    
+## 7  Anderson-Darling   tense      4.3169  &lt;0.001      NO    
+## 8  Anderson-Darling   kind       7.7714  &lt;0.001      NO    
+## 9  Anderson-Darling  opposng     5.2942  &lt;0.001      NO    
+## 10 Anderson-Darling  relaxed     3.5136  &lt;0.001      NO    
+## 11 Anderson-Darling  disorgn     5.1948  &lt;0.001      NO    
+## 12 Anderson-Darling  outgoin     4.8684  &lt;0.001      NO    
+## 13 Anderson-Darling  approvn     5.6728  &lt;0.001      NO    
+## 14 Anderson-Darling    shy       3.7198  &lt;0.001      NO    
+## 15 Anderson-Darling  discipl     4.8654  &lt;0.001      NO    
+## 16 Anderson-Darling   harsh      6.7987  &lt;0.001      NO    
+## 17 Anderson-Darling  persevr     6.2778  &lt;0.001      NO    
+## 18 Anderson-Darling  friendl     8.4708  &lt;0.001      NO    
+## 19 Anderson-Darling  worryin     5.1901  &lt;0.001      NO    
+## 20 Anderson-Darling  respnsi     9.0694  &lt;0.001      NO    
+## 21 Anderson-Darling  contrar     4.7126  &lt;0.001      NO    
+## 22 Anderson-Darling  sociabl     6.3069  &lt;0.001      NO    
+## 23 Anderson-Darling   lazy       3.3986  &lt;0.001      NO    
+## 24 Anderson-Darling  coopera     7.6556  &lt;0.001      NO    
+## 25 Anderson-Darling   quiet      3.4238  &lt;0.001      NO    
+## 26 Anderson-Darling  organiz     3.9451  &lt;0.001      NO    
+## 27 Anderson-Darling  criticl     4.3845  &lt;0.001      NO    
+## 28 Anderson-Darling    lax       4.7180  &lt;0.001      NO    
+## 29 Anderson-Darling  laidbck     3.5410  &lt;0.001      NO    
+## 30 Anderson-Darling  withdrw     6.2122  &lt;0.001      NO    
+## 31 Anderson-Darling  givinup    10.0194  &lt;0.001      NO    
+## 32 Anderson-Darling  easygon     4.8535  &lt;0.001      NO    
 ## 
 ## $Descriptives
 ##           n     Mean  Std.Dev Median Min Max 25th 75th        Skew     Kurtosis
@@ -396,14 +391,12 @@ Read in the data, make a subset with items 13:24 (Hint: use the select function 
 
 
 ```r
-# ggcorrplot, you can then further tweak this, as
-# it is a ggplot.
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
 require(ggcorrplot)
 require(dplyr)
 # take the absolute, interested in strength.
-cormatrix &lt;- abs(cor(f_data[, 1:20]))
-corplot &lt;- ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", 
-    method = "circle")
+cormatrix&lt;-abs(cor(f_data[,1:20])) 
+corplot&lt;-ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", method = "circle") 
 ```
 
 ---
@@ -598,9 +591,9 @@ parallel
 ## [25] -0.49 -0.52 -0.55 -0.58 -0.60 -0.62 -0.67 -0.70
 ## 
 ##  eigen values of simulated factors
-##  [1]  0.83  0.67  0.60  0.53  0.47  0.42  0.36  0.31  0.26  0.23  0.19  0.15
-## [13]  0.12  0.08  0.04  0.00 -0.03 -0.07 -0.09 -0.13 -0.16 -0.19 -0.22 -0.26
-## [25] -0.30 -0.33 -0.36 -0.39 -0.42 -0.46 -0.49 -0.54
+##  [1]  0.83  0.66  0.59  0.52  0.47  0.41  0.37  0.32  0.27  0.23  0.19  0.15
+## [13]  0.11  0.08  0.04  0.00 -0.03 -0.07 -0.11 -0.14 -0.16 -0.20 -0.23 -0.26
+## [25] -0.29 -0.32 -0.35 -0.38 -0.41 -0.45 -0.48 -0.53
 ## 
 ##  eigen values of components 
 ##  [1] 7.24 4.53 3.12 2.33 1.88 1.19 0.93 0.86 0.80 0.71 0.69 0.64 0.63 0.54 0.51
@@ -938,11 +931,9 @@ You can further beautify this by generating labels for those 32 items.
 ```r
 require(stargazer)
 require(plyr)
-factor_loadings &lt;- as.data.frame(as.matrix.data.frame(fa_5$loadings))
-factor_loadings &lt;- plyr::rename(factor_loadings, c(V1 = "Factor 1", V2 = "Factor 2", 
-    V3 = "Factor 3", V4 = "Factor 4", V5 = "Factor 5"))
-stargazer(factor_loadings, summary = FALSE, out = "results_loadings.html", header = FALSE, 
-    type = "html")
+factor_loadings&lt;-as.data.frame(as.matrix.data.frame(fa_5$loadings))
+factor_loadings&lt;-plyr::rename(factor_loadings, c("V1"="Factor 1","V2"="Factor 2", "V3"="Factor 3", "V4"="Factor 4", "V5"="Factor 5"))
+stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=FALSE, type="html")
 ```
 
 
@@ -1046,6 +1037,9 @@ Also check the reading list! (many more than listed here)
 * Kline, P. (1993). _An Easy Guide to Factor Analysis_.London: Routledge.
 * Tabachnick, B.G. &amp; Fidell, L.S. (2007). _Using Multivariate Statistics._ Boston, MA.: Pearson Education.
 * Thomas, E. (2016). _Factor analysis_. http://langcog.stanford.edu/expts/MLL/Coursework/Psych.%20253/powerpoints%20and%20handouts/Factor%20Analysis/ho3-factoranal%20(1).pdf (SPSS based, data used here)
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
