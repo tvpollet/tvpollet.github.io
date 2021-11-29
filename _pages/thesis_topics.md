@@ -160,7 +160,6 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
 * [The Interpersonal Sexual Objectification Scale](https://doi.org/10.1111/j.1471-6402.2007.00351.x){:target="_blank"}
 * [The Psychological Need Satisfaction in Exercise Scale](https://www.researchgate.net/profile/Philip-Wilson-9/publication/253738018_The_Psychological_Need_Satisfaction_in_Exercise_Scale/links/54943c6e0cf2456f1c9d8651/The-Psychological-Need-Satisfaction-in-Exercise-Scale.pdf){:target="_blank"}
-* [Body and Appearance Self-Conscious Emotions Scale (BASES)](https://doi.org/10.1016/j.bodyim.2013.12.006){:target="_blank"}
 * [Weight- and Body-Related Shame and Guilt Scale (WEB–SG)](https://doi.org/10.1080/00223890701331856){:target="_blank"}
 * [The Body Checking Questionnaire](https://doi.org/10.1002/eat.10012){:target="_blank"}
 * [The Intrasexual Competition Scale](https://www.researchgate.net/profile/Maryanne_Fisher/publication/247850197_Individual_differences_in_intrasexual_competition/links/55083bdf0cf27e990e09676a/Individual-differences-in-intrasexual-competition.pdf){:target="_blank"}
@@ -250,12 +249,12 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects in Sport Psychology (unless they are dealing with social network analysis)
 * Projects in Organisational Psychology (unless they are dealing with social network analysis)
 * Projects in Parapsychology.
-* Projects in Forensic Psychology or on eye-witness testimony.
+* Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
 * Projects on COVID19 (but see the example of meta-analysing the reliability of one of these scales).
 * Projects on body image and the media.
 * Projects on nutrition, supplements, aromas.
 * Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy).
-* Projects on attachment theory.
+* Projects on attachment theory and psychological trauma.
 * Projects on sleep.
 * Projects on attractiveness, face perception, etc. 
 * Projects on birth order (unless they would be replication style projects, especially relating to family relationships).
