@@ -4,10 +4,9 @@
     <title>Lecture 10: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.10/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
-    <script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -15,7 +14,7 @@ class: center, middle, inverse, title-slide
 
 # Lecture 10: PY 0794 - Advanced Quantitative Research Methods
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2020-12-08 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2021-11-30 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 
 ---
 
@@ -745,9 +744,9 @@ require(lme4)
 require(mlmRev)
 Exam&lt;-mlmRev::Exam 
 set.seed(1981)
-b&lt;-bootstrap(model = schoolaverage, fn = fixef, type = "case", resample = c(TRUE, TRUE), B=100)
+b&lt;-bootstrap(model = schoolaverage, .f = fixef, type = "case", resample = c(TRUE, TRUE), B=100)
 # Only small number to save time normally &gt;1000
-boot_data&lt;-as.data.frame(b$t)
+boot_data&lt;-as.data.frame(b$replicates)
 ```
 
 ---
@@ -756,31 +755,32 @@ boot_data&lt;-as.data.frame(b$t)
 
 ```r
 require(skimr)
-skim(boot_data)
+print(skim(boot_data))
 ```
 
+```
+## ── Data Summary ────────────────────────
+##                            Values   
+## Name                       boot_data
+## Number of rows             100      
+## Number of columns          3        
+## _______________________             
+## Column type frequency:              
+##   numeric                  3        
+## ________________________            
+## Group variables            None     
+## 
+## ── Variable type: numeric ──────────────────────────────────────────────────────
+##   skim_variable n_missing complete_rate     mean     sd      p0     p25      p50
+## 1 (Intercept)           0             1 -0.00603 0.0342 -0.124  -0.0261 -0.00357
+## 2 standLRT              0             1  0.547   0.0193  0.492   0.536   0.547  
+## 3 schavg                0             1  0.329   0.129   0.0595  0.236   0.310  
+##      p75   p100 hist 
+## 1 0.0160 0.0774 ▁▂▇▇▂
+## 2 0.558  0.598  ▁▃▇▅▁
+## 3 0.415  0.663  ▃▇▇▅▂
+```
 
-Table: Data summary
-
-|                         |          |
-|:------------------------|:---------|
-|Name                     |boot_data |
-|Number of rows           |100       |
-|Number of columns        |3         |
-|_______________________  |          |
-|Column type frequency:   |          |
-|numeric                  |3         |
-|________________________ |          |
-|Group variables          |None      |
-
-
-**Variable type: numeric**
-
-|skim_variable | n_missing| complete_rate|  mean|   sd|    p0|   p25|  p50|  p75| p100|hist  |
-|:-------------|---------:|-------------:|-----:|----:|-----:|-----:|----:|----:|----:|:-----|
-|(Intercept)   |         0|             1| -0.01| 0.03| -0.12| -0.03| 0.00| 0.02| 0.08|▁▂▇▇▂ |
-|standLRT      |         0|             1|  0.55| 0.02|  0.49|  0.54| 0.55| 0.56| 0.60|▁▃▇▅▁ |
-|schavg        |         0|             1|  0.33| 0.13|  0.06|  0.24| 0.31| 0.41| 0.66|▃▇▇▅▂ |
 
 ---
 ## Results (cont'd).
@@ -814,7 +814,7 @@ We will also make some (nicer) graphs.
 ---
 ## Exercise
 
-Download the data from [here](http://www.bodowinter.com/uploads/1/2/9/3/129362560/politeness_data.csv)
+Download the data from [here](http://www.bodowinter.com/tutorial/politeness_data.csv)
 
 Build a model: model 1: pitch ~ politeness + sex + (1|subject) + ε . `\(\epsilon\)` does not have to be modelled explicitly, those are the residuals. politeness is called attitude in the dataset and pitch is called frequency. Sex is labelled gender.
 
