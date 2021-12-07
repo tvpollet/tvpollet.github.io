@@ -139,7 +139,7 @@ You'll need to be aware of these. We will not (always) check them here... . It's
 Do you remember the assumptions? Potential ways of checking them?
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("http://s2.quickmeme.com/img/1b/1b099957c24c80cd57d253c0053a658a7fe96d9a2799a62eb6ed792c3c1118b8.jpg")
+knitr::include_graphics("memory_loss.jpg")
 ```
 
 More [here](http://ademos.people.uic.edu/Chapter18.html)
@@ -471,18 +471,19 @@ require(lme4)
 require(mlmRev)
 Exam<-mlmRev::Exam 
 set.seed(1981)
-b<-bootstrap(model = schoolaverage, fn = fixef, type = "case", resample = c(TRUE, TRUE), B=100)
+b<-bootstrap(model = schoolaverage, .f = fixef, type = "case", resample = c(TRUE, TRUE), B=100)
 # Only small number to save time normally >1000
-boot_data<-as.data.frame(b$t)
+boot_data<-as.data.frame(b$replicates)
 ```
 
 ---
 ## Results.
 
-```{r, warning=F, message=F}
+```{r, warning=F, message=F, tidy.opts=list(width.cutoff=5, size = "footnotesize")}
 require(skimr)
-skim(boot_data)
+print(skim(boot_data))
 ```
+
 
 ---
 ## Results (cont'd).
@@ -510,7 +511,7 @@ We will also make some (nicer) graphs.
 ---
 ## Exercise
 
-Download the data from [here](http://www.bodowinter.com/uploads/1/2/9/3/129362560/politeness_data.csv)
+Download the data from [here](http://www.bodowinter.com/tutorial/politeness_data.csv)
 
 Build a model: model 1: pitch ~ politeness + sex + (1|subject) + ε . $\epsilon$ does not have to be modelled explicitly, those are the residuals. politeness is called attitude in the dataset and pitch is called frequency. Sex is labelled gender.
 
