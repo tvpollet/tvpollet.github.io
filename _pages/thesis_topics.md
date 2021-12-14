@@ -169,6 +169,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Tendency to Gossip Questionnaire](https://journals.sagepub.com/doi/abs/10.1177/0013164493053004010){:target="_blank"}
 * [The Personal Sense of Power Scale](https://doi.org/10.1111/j.1467-6494.2011.00734.x){:target="_blank"}
 * [Pain attitudes and Stoicism/Cautiousness](https://academic.oup.com/psychsocgerontology/article/56/5/P279/634269){:target="_blank"}
+* [The Fear of being scale](https://www.researchgate.net/publication/257837688_Settling_for_Less_Out_of_Fear_of_Being_Single){:target="_blank"}
 * [The Short Anxiety Screening test](https://doi.org/10.1002/(SICI)1099-1166(199912)14:12<1062::AID-GPS67>3.0.CO;2-Q){:target="_blank"}
 * [Attitudes towards donation of oocytes](https://doi.org/10.1093/humrep/deg222){:target="_blank"} - (oocytes are immature eggs donated, for example, in fertility treatment).
 * [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
