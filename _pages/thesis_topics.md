@@ -47,6 +47,7 @@ These could be good candidates:
 * Attachment Style and Jealousy in the Digital Age. [https://doi.org/10.3389/fpsyg.2021.678542]( https://doi.org/10.3389/fpsyg.2021.678542)
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
+* The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf)
 
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
