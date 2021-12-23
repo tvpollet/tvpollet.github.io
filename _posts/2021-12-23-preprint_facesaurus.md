@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New preprint on facesaurus: issues with face databases.
-image: /img/face_ateam.gif
+image: /img/work.gif
 tags:
   - Research
   - Faces
