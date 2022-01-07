@@ -13,7 +13,7 @@ published: true
 
 # **Research papers**
 
-Click the number for the corresponding paper to download a copy (it will open in a new window), if available. You will need adobe acrobat reader or something similar to read these papers (in .pdf). These papers are for reference only i.e. personal, educational, non-commercial use (also see the [disclaimer](https://tvpollet.github.io/disclaimer/).
+Click the number for the corresponding paper to download a copy (it will open in a new window), if available. You will need adobe acrobat reader or something similar to read these papers (in .pdf). These papers are for reference only i.e. personal, educational, non-commercial use (also see the [disclaimer](https://tvpollet.github.io/disclaimer/)).
 
 ## **Preprints.**
 
@@ -37,7 +37,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2018, August 28th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
 
-## **2021/Accepted/in Press**
+## **2022/Accepted/in Press**
+
+[121]() Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted) An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_
+
+## **2021**
 
 [120.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982). 
 
