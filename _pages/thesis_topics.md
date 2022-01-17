@@ -135,6 +135,10 @@ Intelligence is thought to be an individual level construct. Yet, some researche
 
 In this project, you will code the sample sizes used in theses in psychology, as well as the method used. It is important as this will allow us to examine whether student projects have sufficient [statistical power](https://en.wikipedia.org/wiki/Power_of_a_test){:target="_blank"}
 
+### What is the sort of sample used in undergraduate/masters psychology projects at our University?
+
+A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code theses from psychology and the samples they use. Are they predominantly students? Are some of them fairly diverse (international students) or are they mostly British? Are they mostly dominated by one gender? These are the types of questions you are able to address. 
+
 ### Body Mass Index (BMI): A continuous measure that often gets 'binned'.
 
 Some metrics are continuous but we end up turning them into categories. This is typically [a bad idea](https://pubmed.ncbi.nlm.nih.gov/16217841/){:target="_blank"}. With the Body Mass Index (BMI), rather than analysing a continuous variable, researchers might rely on categories such as overweight, underweight, healthy and obese. This comes at an information cost. In this project, you will systematically review papers from the journal 'Body Image' and assess how often researchers apply binning to BMI when testing hypotheses.
@@ -154,6 +158,7 @@ For this project you will need to use the free software [JASP](www.jasp.org){:ta
 
 Some candidate measures to explore (others to be added soon). You might need to be on campus and logged in with the library to access these.
 
+* [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
 * [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
 * [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
 * [The Liberal Feminist Attitude and Ideology Scale](https://link.springer.com/article/10.1007/BF01547807){:target="_blank"}
@@ -241,7 +246,7 @@ Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/cl
 # Projects which I prefer not to supervise.
 <a href="#thesis-introduction">back to top</a>
 
-There could be exceptions to the rule but below you'll find a list of topics which I will for various reasons (prefer to) not supervise. Exceptions exist, for example, if you have an extremely good idea for a replication project. I also list some topics here, not because of some dislike, but rather because there are others, much better placed, in our department to work with you on these topics. You can reach out to me if you want more information.
+There could be exceptions to the rule but below you'll find a list of topics which I will for various reasons (prefer to) not supervise. Exceptions exist, for example, if you have an extremely good idea for a replication project. I also list some topics here not because of some dislike, but rather because there are others, much better placed, in our department to work with you on these topics. You can reach out to me if you want more information.
 
 * Projects using a Qualitative methodology. I have no experience with Qualitative methods.
 * Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements. I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
