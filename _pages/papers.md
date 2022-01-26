@@ -19,9 +19,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
+* Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
-* Brown, G., Curtis, V., & **Pollet, T.V.** (2021, October 28th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
+* Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
 
 * **Pollet, T.V.**, & Shepherd, L. (2021, July 22nd). Subscales in the National Student Survey (NSS): Some considerations on their structure. _PsyArxiv_ [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
 
@@ -39,7 +39,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
-[121]() Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted) An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_
+[121.]() Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_
 
 ## **2021**
 

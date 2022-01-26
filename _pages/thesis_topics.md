@@ -78,13 +78,13 @@ Read more here:
 
 ### Network analysis of specific groups.
 
-The prerequisite is that you will need access to a specific interesting group (e.g., carers for adults with learning disabilities, refugees, army veterans, professional poker players, ... -- it can be _any_ interesting group...). For example, you are part of this community or have very strong links to people in this community. You will typically need around 200 participants, if you would want to make robust inferences. For example, you could map out the social support networks of people who are part of this group but also who these people are turning to for support (same gender, same interest, friends/colleagues/kin?).
+The prerequisite is that you will need access to a specific interesting group (e.g., carers for adults with learning disabilities, climbers, refugees, army veterans, professional poker players, Dungeon & Dragons enthusiasts,... -- it can be _any_ interesting group...). For example, you are part of this community or have very strong links to people in this community. You will typically need around 200 participants, if you would want to make robust inferences. For example, you could map out the social support networks of people who are part of this group but also who these people are turning to for support (same gender, same interest, friends/colleagues/kin?).
 
 Here is an example borne out of a student project. This project looked at well-being and social support networks of people with Type I diabetes.
 
 * Cheyne, T., Smith, M.A., & **Pollet, T.V.** (2020, July 30th). Egocentric network characteristics of persons with Type 1 Diabetes and their relationships to perceived social support and well-being. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fng7x](https://doi.org/10.31234/osf.io/fng7x){:target="_blank"}
 
-Crudely put there are two designs. In the example above, you focus on sampling individuals (e.g., Individuals with a certain diagnosis, army personnel, mothers who breastfeed, etc). This is likely the 'easier option'. Alternatively, you can pick a group of interest (e.g., a support group for parents with disabled children, a church,... .) and try to map everybody in that group. For this design, the sample can be smaller but we might need/want multiple measurements and we need to carefully consider ethical issues.
+Crudely put there are two designs. In the example above, you focus on sampling individuals (e.g., Individuals with a certain diagnosis, army personnel, mothers who breastfeed, etc). This is likely the 'easier option'. Alternatively, you can pick a group of interest (e.g., a support group for parents with disabled children, a church, a food bank, a charity, ... .) and try to map everybody in that group. For this design, the sample can be smaller but we might need/want multiple measurements and we need to carefully consider ethical issues.
 
 ## Meta-science: doing science on science... ?!
 <a href="#thesis-introduction">back to top</a>
@@ -105,9 +105,23 @@ Here is a paper relating to this project:
 
 **Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
 
+### How diverse are the samples used in journals covering psychopathology?
+
+A recurrent criticism of psychology is that samples largely are non-representative, and mostly consist of students (e.g., Arnett, 2008). In this project you will code articles from journals such as _Depression and Anxiety_ or _Schizophrenia Research_ to find out which samples they use. How many of these are clinical samples? How many are from non-Western societies?I am open to suggestions of other journals. 
+
+This project works best if there is more than one student.
+
+Here is a paper relating to this project, following a similar approach:
+
+**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
+
+### Are the samples in Body Image journals representative of the general population.
+
+Nearly all work in psychology suffers from selection bias: some people will not sign up to certain studies. In the case of body image, this could imply that there is range restriction: people exceeding a certain BMI might be unlikely to take part in advertised studies. Via coding samples of a leading journal and comparing those to the general population, we can find out if certain weight categories are over- or underrepresented.
+
 ### Visualisations in standard psychology text books.
 
-Bar charts can hide a lot of information. Yet, they are often the default (and while I am hopefully improving, they are also common in my papers). In this project, you will explore and examine the type of figures used in psychology text books.
+Bar charts can hide a lot of information. Yet, they are often the default (and while I am hopefully improving, they are also common in my papers). In this project, you will explore and examine the type of figures used in psychology text books. We will focus on a subdiscipline such as evolutionary psychology.
 
 ![Bar charts](https://pagepiccinini.files.wordpress.com/2016/02/barplot_psa1.jpg){: .center-image }
 
@@ -150,7 +164,7 @@ Some metrics are continuous but we end up turning them into categories. This is 
 
 Often in psychology we use a developed scale but then this scale gets applied to other populations. For example, we might develop a scale on condom use with a student sample, but then this measure gets used with, for example, sex workers. Measurement can be very problematic in such cases. The purpose of this project to examine how reliable measures are and whether the reliability varies across contexts.
 
-For this project you will need to use the free software [JASP](www.jasp.org){:target="_blank"} and you'll need to learn a bit about meta-analysis (but it is not that hard!).
+For this project you will need to use the free software [JASP](www.jasp.org){:target="_blank"} and you'll need to learn a bit about meta-analysis (but it is not that hard! + it will look great on your CV).
 
 * Alaric Lloyd's [Bachelor thesis project](https://osf.io/54q6w/){:target="_blank"} on sexual self-esteem. Check the [draft paper](https://psyarxiv.com/swzm6/){:target="_blank"} here.
 
@@ -185,6 +199,8 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
 * [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
+* [The conspiracy mentality questionnaire](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225/full){:target="_blank"} - large project
+* [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
 
@@ -220,10 +236,10 @@ Here is an example project.
 
 * Eryn O'Dowd's [Bachelor thesis project](https://osf.io/vn4fu/){:target="_blank"} on gender differences in everyday risk taking. This was published in [Letters on Evolutionary Behavioral Science](https://lebs.hbesj.org/index.php/lebs/article/view/lebs.2018.65){:target="_blank"}
 
-Here is a paper we wrote:
+Here is a paper we wrote on cyclists:
 * Cobey, K.D.\*, Stulp, G.\*, Laan, F., Buunk, A.P. & **Pollet, T.V.** (2013). Sex differences in risk taking behavior among Dutch cyclists. _Evolutionary Psychology, 11,_ 350-364. (*Authors contributed equally), [access .pdf here](http://journals.sagepub.com/doi/pdf/10.1177/147470491301100206)
 
-## Gender differences in everyday risk taking during Covid19 times.
+## Gender differences in everyday risk taking during 'Covid19 times'.
 <a href="#thesis-introduction">back to top</a>
 
 This builds on the above framework. All else being equal, men take more risks in daily life than women. Can we observe this in everyday behaviour?
@@ -232,7 +248,7 @@ This builds on the above framework. All else being equal, men take more risks in
 * Observing gender differences in mask wearing on campus.
 * Observing gender differences in mask wearing on public transport.
 
-## Measuring student satisfaction.
+## Measuring student satisfaction: Do we know if you are satisfied?.
 <a href="#thesis-introduction">back to top</a>
 
 The [National Student Survey](https://www.thestudentsurvey.com/){:target="_blank"} is a commonly used tool to measure student satisfaction. It is argued to consist of eight scales but it is unclear to which degree this measure has been rigorously validated. [Our research](https://psyarxiv.com/vb2k6/){:target="_blank"} suggests that these eight dimensions are not easily identified. Another aspect of reliability which has seemingly not been assessed is a test-retest correlation of the items. In this project, you will administer the survey twice and examine whether the NSS is temporally stable. Ideally, you would collect minimum 270+ responses in the first wave, in order to assess the factor structure. Therefore, this project might work well as a collaborative project involving more than one student (you are able to have separate research questions, e.g., differences between courses, or one project focussing on factor analysis and one on test-retest).
@@ -248,8 +264,8 @@ Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/cl
 
 There could be exceptions to the rule but below you'll find a list of topics which I will for various reasons (prefer to) not supervise. Exceptions exist, for example, if you have an extremely good idea for a replication project. I also list some topics here not because of some dislike, but rather because there are others, much better placed, in our department to work with you on these topics. You can reach out to me if you want more information.
 
-* Projects using a Qualitative methodology. I have no experience with Qualitative methods.
-* Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements. I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
+* Projects using a Qualitative methodology. I have very, very limited experience with Qualitative methods.
+* Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements (saliva). I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
 * Projects involving 'special populations'. I do not have access to 'special populations', so I cannot supervise projects involving children, vulnerable adults, service users, people with (mental) health diagnoses, or whichever special population you have in mind. However, if you have strong ties with these communities, then perhaps projects on social networks are still viable.
 * Projects in Cognitive Psychology.
 * Projects in Consumer Psychology / Marketing (unless they deal with colour and/or are well thought out replication projects).
@@ -273,7 +289,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects on Instagram/Facebook/TikTok (unless they are dealing with social network analysis).
 * Projects on addiction, smoking, alcohol, drug consumption (unless they are dealing with social network analysis).
 * Projects on social identity, ethnicity, and/or intergroup behaviour -- unless these are related to social network analysis.
-* Projects on sexual orientation, gender identity, masculinity/femininity, 2D:4D ratios (unless these are related to social network analysis).
+* Projects on sexual orientation, gender identity, masculinity/femininity, 2D:4D ratios (unless these are related to social network analysis or well thought out replication projects).
 
 
 # References
