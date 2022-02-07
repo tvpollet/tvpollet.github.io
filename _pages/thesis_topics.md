@@ -158,7 +158,6 @@ A recurrent criticism of psychology is that our samples are largely non-represen
 Some metrics are continuous but we end up turning them into categories. This is typically [a bad idea](https://pubmed.ncbi.nlm.nih.gov/16217841/){:target="_blank"}. With the Body Mass Index (BMI), rather than analysing a continuous variable, researchers might rely on categories such as overweight, underweight, healthy and obese. This comes at an information cost. In this project, you will systematically review papers from the journal 'Body Image' and assess how often researchers apply binning to BMI when testing hypotheses.
 
 
-
 ## Meta-analysis of validated scales: Are we measuring things consistently across different groups?
 <a href="#thesis-introduction">back to top</a>
 
@@ -200,6 +199,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 * [The conspiracy mentality questionnaire](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225/full){:target="_blank"} - large project
+* [The Newcomer Socialization questionnaire](https://doi.org/10.1016/S0001-8791(02)00017-9){:target="_blank"} - a measure measuring newcomers' socialization to organisations - large project
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
@@ -220,7 +220,7 @@ You will examine the degree to which your fellow students understand basic conce
 ## Traffic behaviour: Gender differences in risk taking.
 <a href="#thesis-introduction">back to top</a>
 
-In previous work, we have observed gender differences in every day risk taking in traffic. For example, all else being equal, male cyclists, for example, were less likely to use lights at night than female cyclists. In a student project, we found that male pedestrians were less likely to use a safe route when exiting the metro than female pedestrians.
+In previous work, we have observed gender differences in every day risk taking in traffic. For example, all else being equal, male cyclists were less likely to use lights at night than female cyclists. Another finding comes from a student project: we found that male pedestrians were less likely to use a safe route when exiting the metro than female pedestrians.
 
 I would welcome further work in this area. This work tends to be observational. In order to have a great thesis, you will require large samples and/or multiple studies, due to the simplicity of its design. It is however, really straightforward to do and deals with real life behaviour.
 
@@ -258,6 +258,11 @@ The [National Student Survey](https://www.thestudentsurvey.com/){:target="_blank
 
 Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/clare-cook/){:target="_blank"}, I am conducting research on gendered perceptions of stand-up comedians. In this project, we will explore if female standup comedians are perceived as less funny than male standup comedians. We are also interested in finding out other stereotypes (e.g., are attractive women in comedy seen as less funny). There is also a possibility to look at perceptions of mental health in standup comedy.
 
+## Individual differences in "Buy now, pay later"
+<a href="#thesis-introduction">back to top</a>
+
+There is an increase in services which allow you to buy now and pay later (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, do individuals who tend to hoard, rely more on these products?
+
 
 # Projects which I prefer not to supervise.
 <a href="#thesis-introduction">back to top</a>
@@ -274,11 +279,11 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects in Organisational Psychology (unless they are dealing with social network analysis)
 * Projects in Parapsychology.
 * Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
-* Projects on COVID19 (but see the example of meta-analysing the reliability of one of these scales).
+* Projects on COVID19 (but see exceptions above).
 * Projects on body image and the media.
 * Projects on nutrition, supplements, aromas.
 * Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy).
-* Projects on attachment theory and psychological trauma.
+* Projects on attachment theory and/or psychological trauma.
 * Projects on sleep.
 * Projects on attractiveness, face perception, etc. 
 * Projects on birth order (unless they would be replication style projects, especially relating to family relationships).

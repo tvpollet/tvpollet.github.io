@@ -19,13 +19,13 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022, Feb 7th). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
+
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
 * Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
 
 * **Pollet, T.V.**, & Shepherd, L. (2021, July 22nd). Subscales in the National Student Survey (NSS): Some considerations on their structure. _PsyArxiv_ [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
-
-* **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2021, June 17). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
 
 * Thompson, A., & **Pollet, T.V.** (2021, June 15). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fauc4](https://doi.org/10.31234/osf.io/fauc4)
 
