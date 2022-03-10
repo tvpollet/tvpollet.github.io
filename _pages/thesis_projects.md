@@ -48,11 +48,13 @@ In time, I will post more example projects, but here are already some examples t
 
 ## How to set up your account.
 
-You can sign up [here](http://osf.io){:target="_blank"}. Have a look [here](https://help.osf.io/hc/en-us/articles/360019929673-Create-an-OSF-Account){:target="_blank"} or [here](http://georgiasouthern.libguides.com/c.php?g=653428&p=4585485){:target="_blank"} if you get stuck.
+You can sign up [here](http://osf.io){:target="_blank"}. Have a look [here](https://help.osf.io/hc/en-us/articles/360019929673-Create-an-OSF-Account){:target="_blank"} or [here](http://georgiasouthern.libguides.com/c.php?g=653428&p=4585485){:target="_blank"} if you get stuck. 
+
+Important: **Do not choose institutional login.**. Please use **your personal email address** (you will no longer have access to IT when you leave our institution). 
 
 ## Creating a project.
 
-Have a look [here](http://help.osf.io/m/projects){:target="_blank"}. Ensure that the location it is hosted is **Europe** rather than U.S., if not we will have to amend the consent form, so that participants are aware.
+Have a look [here](http://help.osf.io/m/projects){:target="_blank"}. Ensure that the location it is hosted is **Europe** rather than U.S., if not we will have to amend the consent form, so that participants are aware where their data are stored.
 
 ## Setting up a registration.
 
@@ -86,6 +88,7 @@ Before starting check out these [writing mistakes](https://www.qualtrics.com/blo
 * **Randomization**. [Randomize your questions](https://www.qualtrics.com/support/survey-platform/survey-module/block-options/question-randomization/). [Check this video](https://www.youtube.com/watch?v=45F3pliI8HY){:target="_blank"}. Note that it might disrupt your page breaks. When in doubt make separate blocks.
 * **Templates**. Rather than starting a survey from scratch, I might have some templates already for complex designs (e.g., social network surveys). Contact me before you start designing your survey.
 * **Access**. If you are making your own survey, I will require full access to it. [Here](https://www.qualtrics.com/support/survey-platform/my-projects/sharing-a-project/){:target="_blank"} you find explained how to share it. Make sure I have full rights!
+* **Preview**.  Make sure that you have previewed your survey, does it look OK (also when on a phone? tablet? - if not instruct participants to only complete on a PC/Laptop). Make sure the survey flow works.
 
 ## Attention checks.
 
