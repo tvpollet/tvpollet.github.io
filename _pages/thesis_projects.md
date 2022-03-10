@@ -42,8 +42,8 @@ In time, I will post more example projects, but here are already some examples t
 
 * Lotte Groeneboom & Joanne Costello's [Masters Thesis Project](https://osf.io/sdjxm/){:target="_blank"} on 'Red laptops'. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} also. This was published in [Displays](https://doi.org/10.1016/j.displa.2018.10.008){:target="_blank"}.
 * Eryn O'Dowd's [Bachelor thesis project](https://osf.io/vn4fu/){:target="_blank"} on gender differences in everyday risk taking. This was published in [Letters on Evolutionary Behavioral Science](https://lebs.hbesj.org/index.php/lebs/article/view/lebs.2018.65){:target="_blank"}
-* Sarah Dawson's [Bachelor thesis project](https://osf.io/uyw9e/){:target="_blank"} on fat talk. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} here.
-* Alaric Lloyd's [Bachelor thesis project](https://osf.io/54q6w/){:target="_blank"} on sexual self-esteem. Check the [draft paper](https://psyarxiv.com/swzm6/){:target="_blank"} here.
+* Sarah Dawson's [Bachelor thesis project](https://osf.io/uyw9e/){:target="_blank"} on fat talk. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} here. This was published in [Body Image](https://www.sciencedirect.com/science/article/pii/S174014452100070X) {:target="_blank"}
+* Alaric Lloyd's [Bachelor thesis project](https://osf.io/54q6w/){:target="_blank"} on sexual self-esteem. Check the [draft paper](https://psyarxiv.com/swzm6/){:target="_blank"} here. This was published in [Psychology & Sexuality](https://www.tandfonline.com/doi/full/10.1080/19419899.2021.1984982){:target="_blank"}
 
 
 ## How to set up your account.
