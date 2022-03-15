@@ -25,8 +25,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
 
-* **Pollet, T.V.**, & Shepherd, L. (2021, July 22nd). Subscales in the National Student Survey (NSS): Some considerations on their structure. _PsyArxiv_ [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
-
 * Thompson, A., & **Pollet, T.V.** (2021, June 15). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fauc4](https://doi.org/10.31234/osf.io/fauc4)
 
 * Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2021, April 21st). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _PsyArxiv_ [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
@@ -39,7 +37,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
-[121.]() Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_
+[122](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (accepted). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ **preprint** : [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
+
+[121.](http://tvpollet.github.io/pdfs/Metcalfe_et_al_2022.pdf) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_ [https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
 ## **2021**
 
@@ -47,7 +47,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [119.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
 
-[118.](https://doi.org/10.31234/osf.io/dv93s) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (accepted). Isn't it eyeronic? Little evidence for consistent eye colour choices across relationships. _Archives of Sexual Behavior_ 
+[118.](https://doi.org/10.31234/osf.io/dv93s) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (accepted). Isn't it eyeronic? Little evidence for consistent eye colour choices across relationships. _Archives of Sexual Behavior_
 
 [117.](https://doi.org/10.1080/21642850.2021.1951272) Cheyne, T., Smith, M.A., & **Pollet, T.V.** (2021). Egocentric network characteristics of persons with Type 1 Diabetes and their relationships to perceived social support and well-being. _Health Psychology and Behavioral Medicine, 9(1),_ 662-680.
 
@@ -75,7 +75,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [105.](https://bmcpsychology.biomedcentral.com/articles/10.1186/s40359-020-0370-4) McCarrick, D.J., Brewer, G., Lyons, M., **Pollet, T.V.**, & Neave, N. (2020). Referee height influences decision making in British football leagues. _BMC Psychology, 8,_ 4. [open access](https://bmcpsychology.biomedcentral.com/articles/10.1186/s40359-020-0370-4)
 
-[104.](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf) Saxton, T.K., McCarty, K., Caizley, J., McCarrick, D., & **Pollet, T.V.** (2020). Hungry People Prefer Larger Bodies and Objects: The Importance of Testing Boundary Effects. _British Journal of Psychology, 111,_ 492-507. 
+[104.](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf) Saxton, T.K., McCarty, K., Caizley, J., McCarrick, D., & **Pollet, T.V.** (2020). Hungry People Prefer Larger Bodies and Objects: The Importance of Testing Boundary Effects. _British Journal of Psychology, 111,_ 492-507.
 
 [103.](http://tvpollet.github.io/pdfs/Irwing_et_al_2020_PSPB.pdf) Irwing, P., Cook, C., **Pollet, T.V.**, & Hughes, D. (2020). Comedians’ mean level and stage personalities: Evidence for goal-directed personality adaptation. _Personality and Social Psychology Bulletin, 46(4),_ 590-602.
 
@@ -93,7 +93,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [97.](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2) **Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
 
-[96.](https://doi.org/10.17605/OSF.IO/3BFWH) **Pollet, T.V.**, Costello, J., Groeneboom, L., Peperkoorn, L.S., & Wu, J. (2019). Do red objects enhance sexual attractiveness? No evidence from two large replications. *Displays, 56,* 23-29. 
+[96.](https://doi.org/10.17605/OSF.IO/3BFWH) **Pollet, T.V.**, Costello, J., Groeneboom, L., Peperkoorn, L.S., & Wu, J. (2019). Do red objects enhance sexual attractiveness? No evidence from two large replications. *Displays, 56,* 23-29.
 
 [95.](http://tvpollet.github.io/pdfs/Manesi_et_al_2018.pdf) Manesi, Z., Van Lange, P.A.M., Van Doesum, N.J., & **Pollet, T.V.** (2019). What are the most powerful predictors of charitable giving to victims of typhoon Haiyan: Prosocial traits, socio-demographic variables, or eye cues? *Personality and Individual Differences, 146,* 217-225.
 
