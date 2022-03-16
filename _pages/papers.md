@@ -19,8 +19,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022, Feb 7th). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
-
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
 * Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
@@ -37,7 +35,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
-[122](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (accepted). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ **preprint** : [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
+[123.](https://doi.org/10.31234/osf.io/vb2k6) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (accepted). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS One_ **preprint**: [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
+
+[122.](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (accepted). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ **preprint** : [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
 
 [121.](http://tvpollet.github.io/pdfs/Metcalfe_et_al_2022.pdf) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_ [https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
