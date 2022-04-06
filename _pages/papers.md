@@ -35,6 +35,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
+[124.]() Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (accepted). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_ .
+
 [123.](https://doi.org/10.31234/osf.io/vb2k6) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (accepted). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS One_ **preprint**: [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
 
 [122.](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (accepted). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ **preprint** : [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
