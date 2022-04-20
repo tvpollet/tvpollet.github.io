@@ -25,8 +25,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Thompson, A., & **Pollet, T.V.** (2021, June 15). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fauc4](https://doi.org/10.31234/osf.io/fauc4)
 
-* Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2021, April 21st). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _PsyArxiv_ [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
-
 * Szabelska, A., **Pollet, T.V.**, Dujols, O., Klein, R.A., & IJzerman, H. (2021, February 25). A Tutorial for Exploratory Research: An Eight-Step Approach. _PsyArxiv_ [https://doi.org/10.31234/osf.io/cy9mz](https://doi.org/10.31234/osf.io/cy9mz)
 
 * Boothroyd, L.G., **Pollet, T.V.**, Evans, E.H., Yi, Q., & Tovée, M.J. (2018, September 7th). Adaptation-like effects in body weight attractiveness are not simply norm based. _PsyArxiv_ [https://doi.org/10.31234/osf.io/gsnkf](https://doi.org/10.31234/osf.io/gsnkf)
@@ -34,6 +32,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 * Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2018, August 28th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
 
 ## **2022/Accepted/in Press**
+
+[125.](https://doi.org/10.31234/osf.io/9p8g7) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2021, April 21st). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ **preprint**: [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
 
 [124.]() Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (accepted). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_ .
 
