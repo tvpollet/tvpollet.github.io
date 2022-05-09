@@ -199,6 +199,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 * [The conspiracy mentality questionnaire](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225/full){:target="_blank"} - large project
+* +* [The Bullshit Receptivity (BSR) scale](https://scottbarrykaufman.com/wp-content/uploads/2016/01/On-the-reception-and-detection-of-pseudo-profound-bullshit.pdf){:target="_blank"} - large project
 * [The Newcomer Socialization questionnaire](https://doi.org/10.1016/S0001-8791(02)00017-9){:target="_blank"} - a measure measuring newcomers' socialization to organisations - large project
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
 
