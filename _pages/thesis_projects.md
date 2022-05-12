@@ -162,6 +162,7 @@ There are multiple resources available online on how to do a mediation analyses.
 ![Image Bojack](https://media.giphy.com/media/CQDF0q4pffDW0/giphy.gif){: .center-image }
 
 ## Scientific writing.
+
 I will list some resources on how to become a better writer. To be honest, I am a terrible writer and thus not the best placed to offer you advice. The best advice is to write often and rewrite. In the beginning do not waste a lot of time on formatting, save that for the end. Set yourself targets (e.g., 200-500 words for a day) and once you have a terrible first draft, flesh it out. Especially at the start of your project force yourself to write chunks often and then rewrite.
 
 Some further tips:
@@ -173,6 +174,7 @@ Some further tips:
 * Harvard's [writing for psychology](https://writingproject.fas.harvard.edu/files/hwp/files/writing_for_psych_final_from_printer.pdf){:target="_blank"}
 * [Writing in Psychology](https://writingcenter.uconn.edu/writing-in-psychology-4/){:target="_blank"}, University of Connecticut.
 * [Writing like a scientist](https://psyarxiv.com/r4sfz){:target="_blank"}, by Tom Carpenter from Seattle Pacific University.
+* [Writing tips for Qualitative research](https://edpsy.org.uk/blog/2021/tips-on-writing-a-qualitative-dissertation-or-thesis-from-braun-clarke-part-1/) suggested by Dr. Lisa Thomas
 
 If you are struggling with writing and starting your essay/thesis also consider [booking a session](https://cragside.northumbria.ac.uk/Everyone/skillsplus/database_uploads/55389339.pdf?){:target="_blank"} in the Northumbria University library.
 
