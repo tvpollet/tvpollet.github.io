@@ -36,9 +36,12 @@ Here are some examples of student projects which were based on replications.
 * Sarah Dawson's [Bachelor thesis project](https://osf.io/uyw9e/){:target="_blank"} on fat talk. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} here.
 * Lotte Groeneboom & Joanne Costello's [Masters Thesis Project](https://osf.io/sdjxm/){:target="_blank"} on 'Red laptops'. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} also. This was published in [Displays](https://doi.org/10.1016/j.displa.2018.10.008){:target="_blank"}.
 
+There is some variation, and you can also suggest your own, but I am particularly interested in replication projects dealing with **interpersonal relationships** (e.g., **jealousy**, **love**).
+
 These could be good candidates:
 
 * [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
+* [Predictors of How Often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
 * Does the receptacle influence the perceived flavour of a drink? [https://link.springer.com/article/10.1186/2044-7248-3-3](https://link.springer.com/article/10.1186/2044-7248-3-3). We would only aim to replicate the US sample in the UK. This study can be run online.
 * Does the colour of the mug influence the taste of the coffee? [https://link.springer.com/article/10.1186/2044-7248-3-10](https://link.springer.com/article/10.1186/2044-7248-3-10). Study 2 seems a good candidate.
 * Dressed for Sex: Red as a Female Sexual Signal in Humans. [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2) Experiment 1 seems a good candidate.
