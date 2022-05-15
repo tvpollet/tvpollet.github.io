@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A pocket of small research funding!
+title: A small pocket of research funding!
 image: /img/money.gif
 tags:
   - Research
