@@ -35,13 +35,13 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [125.](https://doi.org/10.31234/osf.io/9p8g7) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2021, April 21st). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ **preprint**: [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
 
-[124.]() Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (accepted). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_ .
+[124.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [https://doi.org/10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
 
 [123.](https://doi.org/10.31234/osf.io/vb2k6) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (accepted). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS One_ **preprint**: [https://doi.org/10.31234/osf.io/fpmur](https://doi.org/10.31234/osf.io/fpmur)
 
-[122.](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (accepted). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ **preprint** : [https://doi.org/10.31234/osf.io/vb2k6](https://doi.org/10.31234/osf.io/vb2k6)
+[122.](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (2022). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ [https://doi.org/10.1080/0309877X.2022.2060069](https://doi.org/10.1080/0309877X.2022.2060069)
 
-[121.](http://tvpollet.github.io/pdfs/Metcalfe_et_al_2022.pdf) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (accepted). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology_ [https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
+[121.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442.[https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
 ## **2021**
 
@@ -59,9 +59,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [114.](https://doi.org/10.5817/CP2021-2-6) Brown, R.M., Roberts, S.G.B., & **Pollet, T.V.** (2021). Loneliness is negatively related to Facebook network size, but not related to Facebook network structure. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 15(2)_, article 6. [https://doi.org/10.5817/CP2021-2-6](https://doi.org/10.5817/CP2021-2-6)
 
-[113.](http://tvpollet.github.io/pdfs/Finister_et_al_2021.pdf) Finister, C., **Pollet, T.V.**, & Neave, N. (2021). An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks.  _The Social Science Journal_ [preprint here](https://doi.org/10.31234/osf.io/xt8ey)
+[113.](http://tvpollet.github.io/pdfs/Finister_et_al_2021.pdf) Finister, C., **Pollet, T.V.**, & Neave, N. (2021). An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks.  _The Social Science Journal_ [https://doi.org/10.1080/03623319.2021.1884775](https://doi.org/10.1080/03623319.2021.1884775)
 
-[112.](http://tvpollet.github.io/pdfs/Malcolm_et_al_2021.pdf) Malcolm, C., Saxton, T.K., McCarty, K., Roberts, S.G.B., & **Pollet, T.V.** (2021). Extraversion is associated with advice network size, but not network density or emotional closeness to network members.  _Personality and Individual Differences, 168, 110311_ [preprint here](https://doi.org/10.31234/osf.io/gw8dh)
+[112.](http://tvpollet.github.io/pdfs/Malcolm_et_al_2021.pdf) Malcolm, C., Saxton, T.K., McCarty, K., Roberts, S.G.B., & **Pollet, T.V.** (2021). Extraversion is associated with advice network size, but not network density or emotional closeness to network members.  _Personality and Individual Differences, 168_ 110311 [https://doi.org/10.1016/j.paid.2020.110311](https://doi.org/10.1016/j.paid.2020.110311)
 
 ## **2020**
 
