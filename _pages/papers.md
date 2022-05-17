@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022, May 17). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _PsyArxiv_ https://doi.org/10.31234/osf.io/njv9a
+
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
 * Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
