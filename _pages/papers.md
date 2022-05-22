@@ -19,7 +19,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022, May 17). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _PsyArxiv_ https://doi.org/10.31234/osf.io/njv9a
+* Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022, May 17). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _PsyArxiv_ [https://doi.org/10.31234/osf.io/njv9a](https://doi.org/10.31234/osf.io/njv9a)
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
