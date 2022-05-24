@@ -35,7 +35,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
-[125.](https://doi.org/10.31234/osf.io/9p8g7) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2021, April 21st). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ **preprint**: [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
+[125.](https://doi.org/10.31234/osf.io/9p8g7) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (accepted). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ **preprint**: [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
 
 [124.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [https://doi.org/10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
 
@@ -43,11 +43,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [122.](https://doi.org/10.31234/osf.io/vb2k6]) **Pollet, T.V.**, & Shepherd, L. (2022). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education_ [https://doi.org/10.1080/0309877X.2022.2060069](https://doi.org/10.1080/0309877X.2022.2060069)
 
-[121.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442.[https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
+[121.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442. [https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
 ## **2021**
 
-[120.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982). 
+[120.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982).
 
 [119.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
 
