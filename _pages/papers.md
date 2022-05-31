@@ -23,8 +23,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
-* Bovet, J., Tognetti, A., & **Pollet, T.V.** (2021, November 26). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ubt2a](https://doi.org/10.31234/osf.io/ubt2a)
-
 * Thompson, A., & **Pollet, T.V.** (2021, June 15). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fauc4](https://doi.org/10.31234/osf.io/fauc4)
 
 * Szabelska, A., **Pollet, T.V.**, Dujols, O., Klein, R.A., & IJzerman, H. (2021, February 25). A Tutorial for Exploratory Research: An Eight-Step Approach. _PsyArxiv_ [https://doi.org/10.31234/osf.io/cy9mz](https://doi.org/10.31234/osf.io/cy9mz)
@@ -34,6 +32,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 * Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2018, August 28th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
 
 ## **2022/Accepted/in Press**
+
+[126.](https://doi.org/10.31234/osf.io/ubt2a) Bovet, J., Tognetti, A., & **Pollet, T.V.** (accepted). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _Evolutionary Human Sciences_ [Preprint](https://doi.org/10.31234/osf.io/ubt2a)
 
 [125.](https://doi.org/10.31234/osf.io/9p8g7) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (accepted). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ **preprint**: [https://doi.org/10.31234/osf.io/9p8g7](https://doi.org/10.31234/osf.io/9p8g7)
 
