@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, June 10). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
+
 * Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022, May 17). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _PsyArxiv_ [https://doi.org/10.31234/osf.io/njv9a](https://doi.org/10.31234/osf.io/njv9a)
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
@@ -32,6 +34,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 * Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2018, August 28th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
 
 ## **2022/Accepted/in Press**
+
+[127.]() Bilalić, M., Đokić, R., Koso-Drljević, M., Djapo, N. & **Pollet, T.V.** (accepted). When (deliberate) practice is not enough – the role of intelligence, practice, and knowledge in academic performance. _Current Psychology_
 
 [126.](https://doi.org/10.31234/osf.io/ubt2a) Bovet, J., Tognetti, A., & **Pollet, T.V.** (accepted). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _Evolutionary Human Sciences_ [Preprint](https://doi.org/10.31234/osf.io/ubt2a)
 
