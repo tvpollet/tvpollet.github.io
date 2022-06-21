@@ -130,7 +130,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [85.](http://lebs.hbesj.org/index.php/lebs/article/view/lebs.2017.56/176) Manesi, Z. & **Pollet, T.V.** (2017). No Support for the Watching Eyes Effect Across Three “Lost Letter” Field Experiments. _Letters on Evolutionary Behavioral Science, 8,_ 12-15.
 
-[84.]( http://ishe.org/wp-content/uploads/2017/03/HEB_2017_32_1_53-59-1.pdf) **Pollet, T.V.** & Little, A.C. (2017). Baseline probabilities for two-alternative forced choice tasks when judging stimuli in Evolutionary Psychology: a methodological note. _Human Ethology Bulletin, 32,_ 53-59.
+[84.](http://ishe.org/wp-content/uploads/2017/03/HEB_2017_32_1_53-59-1.pdf) **Pollet, T.V.** & Little, A.C. (2017). Baseline probabilities for two-alternative forced choice tasks when judging stimuli in Evolutionary Psychology: a methodological note. _Human Ethology Bulletin, 32,_ 53-59.
 
 [83.](http://www.sciencedirect.com/science/article/pii/S0003347217300362) McFarland, R., Murphy, D., Lusseau, D., Henzi, S.P., Parker, J.L., **Pollet, T.V.** & Barrett, L. (2017). The "strength of weak ties" among female baboons: fitness-related benefits of social bonds. _Animal Behaviour, 126,_ 101-106.
 
@@ -140,7 +140,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2016**
 
-[80.]( http://journals.sagepub.com/doi/full/10.1177/1474704916673841) Peperkoorn, L.S., Roberts, S.C. & **Pollet, T.V.** (2016), Revisiting the Red Effect on Attractiveness and Sexual Receptivity: No Effect of the Color Red on Human Mate Preferences. _Evolutionary Psychology, 14,_  [doi:10.1177/1474704916673841](https://doi.org/10.1177/1474704916673841)
+[80.](http://journals.sagepub.com/doi/full/10.1177/1474704916673841) Peperkoorn, L.S., Roberts, S.C. & **Pollet, T.V.** (2016), Revisiting the Red Effect on Attractiveness and Sexual Receptivity: No Effect of the Color Red on Human Mate Preferences. _Evolutionary Psychology, 14,_  [doi:10.1177/1474704916673841](https://doi.org/10.1177/1474704916673841)
 
 [79.](http://tvpollet.github.io/pdfs/Morina_et_al_2016.pdf) Morina, N., Koerssen, R. & **Pollet, T.V.** (2016). Interventions for children and adolescents with posttraumatic stress disorder: a meta-analysis of comparative outcome studies. _Clinical Psychology Review, 47,_ 41-54.
 
