@@ -43,8 +43,10 @@ These could be good candidates:
 * [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
 * [Predictors of How Often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
 * [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
+* [Sex Differences in Violent versus Non-Violent Life-Threatening Altruism](https://journals.sagepub.com/doi/full/10.1177/147470490900700309). You will require a sizable sample.
+* [Altruism between Romantic Partners: Biological Offspring as a Genetic Bridge between Altruist and Recipient](https://doi.org/10.1177/147470491000800312). You will require a sizable sample.
 * Does the receptacle influence the perceived flavour of a drink? [https://link.springer.com/article/10.1186/2044-7248-3-3](https://link.springer.com/article/10.1186/2044-7248-3-3). We would only aim to replicate the US sample in the UK. This study can be run online.
-* Does the colour of the mug influence the taste of the coffee? [https://link.springer.com/article/10.1186/2044-7248-3-10](https://link.springer.com/article/10.1186/2044-7248-3-10). Study 2 seems a good candidate.
+* Does the colour of the mug influence the taste of the coffee? [https://link.springer.com/article/10.1186/2044-7248-3-10](https://link.springer.com/article/10.1186/2044-7248-3-10). Study 2 seems a good candidate. You will require a sizable sample.
 * Dressed for Sex: Red as a Female Sexual Signal in Humans. [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2) Experiment 1 seems a good candidate.
 * Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
@@ -83,7 +85,7 @@ Read more here:
 
 ### Network analysis of specific groups.
 
-The prerequisite is that you will need access to a specific interesting group (e.g., carers for adults with learning disabilities, climbers, refugees, army veterans, professional poker players, Dungeon & Dragons enthusiasts,... -- it can be _any_ interesting group...). For example, you are part of this community or have very strong links to people in this community. You will typically need around 200 participants, if you would want to make robust inferences. For example, you could map out the social support networks of people who are part of this group but also who these people are turning to for support (same gender, same interest, friends/colleagues/kin?).
+The prerequisite is that you will need access to a specific interesting group (e.g., carers for adults with learning disabilities, climbers, refugees, army veterans, professional poker players, Dungeon & Dragons enthusiasts, CS go players, ... -- it can be _any_ interesting group...). For example, you are part of this community or have very strong links to people in this community. You will typically need around 200 participants, if you would want to make robust inferences. For example, you could map out the social support networks of people who are part of this group but also who these people are turning to for support (same gender, same interest, friends/colleagues/kin?).
 
 Here is an example borne out of a student project. This project looked at well-being and social support networks of people with Type I diabetes.
 
@@ -253,6 +255,8 @@ This builds on the above framework. All else being equal, men take more risks in
 * Observing gender differences in use of hand sanitiser when entering a building.
 * Observing gender differences in mask wearing on campus.
 * Observing gender differences in mask wearing on public transport.
+
+Here is [an example](https://psyarxiv.com/njv9a/)
 
 ## Measuring student satisfaction: Do we know if you are satisfied?.
 <a href="#thesis-introduction">back to top</a>
