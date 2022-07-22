@@ -174,6 +174,7 @@ Some further tips:
 * Harvard's [writing for psychology](https://writingproject.fas.harvard.edu/files/hwp/files/writing_for_psych_final_from_printer.pdf){:target="_blank"}
 * [Writing in Psychology](https://writingcenter.uconn.edu/writing-in-psychology-4/){:target="_blank"}, University of Connecticut.
 * [Writing like a scientist](https://psyarxiv.com/r4sfz){:target="_blank"}, by Tom Carpenter from Seattle Pacific University.
+* [Ten simple rules for structuring papers](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5619685/){:target="_blank"}. This focuses on experimental papers but some general useful tips.
 * [Writing tips for Qualitative research](https://edpsy.org.uk/blog/2021/tips-on-writing-a-qualitative-dissertation-or-thesis-from-braun-clarke-part-1/) suggested by Dr. Lisa Thomas
 
 If you are struggling with writing and starting your essay/thesis also consider [booking a session](https://cragside.northumbria.ac.uk/Everyone/skillsplus/database_uploads/55389339.pdf?){:target="_blank"} in the Northumbria University library.
@@ -196,7 +197,7 @@ Use referencing software! Do not waste your time on editing references manually.
 
 Northumbria university offers [Endnote](https://onsizzle.com/i/does-referencing-without-endnote-2107536){:target="_blank"}. But do spend some time looking into [Mendeley](www.mendeley.com){:target="_blank"} or [zotero](www.zotero.org){:target="_blank"}. [Papers](https://www.readcube.com/papers/){:target="_blank"}, although it comes at a cost after a 30 day trial, is also worth having a look at.
 
-* Mendeley has [great video resources](https://www.mendeley.com/guides/videos){:target="_blank"}, explaining how it works and how to use the MS word plugin.
+* Mendeley has [great video resources](https://www.mendeley.com/guides/videos){:target="_blank"}, explaining how it works and how to use the MS word plugin. It is however owned by [El$evier](https://www.theguardian.com/science/political-science/2018/jun/29/elsevier-are-corrupting-open-science-in-europe){:target="_blank"}.
 * Zotero also has [great documentation](https://www.zotero.org/support/quick_start_guide){:target="_blank"}. Plus it is open source and not owned by [Elsevier](https://www.theguardian.com/science/political-science/2018/jun/29/elsevier-are-corrupting-open-science-in-europe){:target="_blank"}.
 * For Endnote you can book a session in [the library](https://cragside.northumbria.ac.uk/Everyone/skillsplus/database_uploads/55389339.pdf?){:target="_blank"} and [here](https://libguides.ncl.ac.uk/endnote/help){:target="_blank"} are some resources from Newcastle University.
 
