@@ -56,6 +56,8 @@ These could be good candidates:
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
 * [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021). 
+* [Spirituality mediates the relationship between engagement with nature and psychological wellbeing](https://doi.org/10.1016/j.jenvp.2013.07.013) - this will require a large sample.
+* [Nature Connectedness and Eudaimonic Well-Being: Spirituality as a Potential Mediator](https://www.researchgate.net/profile/Andrew-Francis-8/publication/271079550_Nature_Connectedness_and_Eudaimonic_Well-Being_Spirituality_as_a_Potential_Mediator/links/54bdedc30cf218d4a16a4723/Nature-Connectedness-and-Eudaimonic-Well-Being-Spirituality-as-a-Potential-Mediator.pdf) This will require a large sample.
 * The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf)
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
@@ -181,6 +183,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 * [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
 * [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
+* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
 * [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
 * [The Liberal Feminist Attitude and Ideology Scale](https://link.springer.com/article/10.1007/BF01547807){:target="_blank"}
 * [The Internalized Homonegativity Inventory for gay men](https://doi.org/10.1300/J082v41n02_04){:target="_blank"}
