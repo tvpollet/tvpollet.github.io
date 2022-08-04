@@ -211,6 +211,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
 * [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
 * [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
+* [The Dating Anxiety Scale for Adolescents](https://local.psy.miami.edu/media/college-of-arts-and-sciences/psychology/documents/faculty/alagreca/glickman_lagreca_2004.pdf){:target="_blank"}
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 * [The conspiracy mentality questionnaire](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225/full){:target="_blank"} - large project
 * [The Bullshit Receptivity (BSR) scale](https://scottbarrykaufman.com/wp-content/uploads/2016/01/On-the-reception-and-detection-of-pseudo-profound-bullshit.pdf){:target="_blank"} - large project
