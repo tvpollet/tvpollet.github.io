@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2022, August 15). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2583s](https://doi.org/10.31234/osf.io/2583s)
+
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, June 10). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
 * Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022, May 17). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _PsyArxiv_ [https://doi.org/10.31234/osf.io/njv9a](https://doi.org/10.31234/osf.io/njv9a)
