@@ -125,9 +125,24 @@ Here is a paper relating to this project, following a similar approach:
 
 **Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
 
-### Are the samples in Body Image journals representative of the general population.
+### Are the samples in journals on Obesity representative of the general population.
 
-Nearly all work in psychology suffers from selection bias: some people will not sign up to certain studies. In the case of body image, this could imply that there is range restriction: people exceeding a certain BMI might be unlikely to take part in advertised studies. Via coding samples of a leading journal and comparing those to the general population, we can find out if certain weight categories are over- or underrepresented.
+Nearly all work in psychology suffers from selection bias: some people will not sign up to certain studies. In the case of obesity, this could imply that there is range restriction: people exceeding a certain BMI might be unlikely to take part in advertised studies. Via coding samples of a leading journal and comparing those to the general population, we can find out if certain weight categories are over- or underrepresented.
+
+### Which religions are covered in journals on the psychology of religion?
+
+Sampling is an issue for nearly all work in psychology. While christianity is the largest denomination across the world, other major religions such as Islam and Hinduism have over a billion followers. To which extent, do journals on the psychology religion also cover non-christian religious?
+
+### Intelligence - but whose?
+
+The journal _Intelligence_ is the leading journal on intelligence. In this project, you will find out which samples they use to base their conclusion on. Is there representation from developing countries, for example, or are the samples predominantly focusing on developed countries?
+
+### Which are the most dominant personality models being used?
+
+Psychologists have been studying personality for a very long time. The most dominant classification is a five factor model but researchers have more recently argued for a six factor model (HEXACO), as well as focussing on the 'Dark Triad' of personality. In this project you would survey leading personality journals and find out which models researchers are using for personality.
+
+Ashton, M. C., & Lee, K. (2009). The HEXACO–60: A Short Measure of the Major Dimensions of Personality. Journal of Personality Assessment, 91(4), 340–345. https://doi.org/10.1080/00223890902935878
+
 
 ### Visualisations in standard psychology text books.
 
