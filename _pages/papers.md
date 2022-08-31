@@ -41,7 +41,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [126.](https://doi.org/10.31234/osf.io/ubt2a) Bovet, J., Tognetti, A., & **Pollet, T.V.** (accepted). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _Evolutionary Human Sciences_ [Preprint](https://doi.org/10.31234/osf.io/ubt2a)
 
-[125.](https://doi.org/S0144686X22000666) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2022). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ 1-26. doi:10.1017/S0144686X22000666
+[125.](https://doi.org/10.1017/S0144686X22000666) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2022). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ 1-26. doi:10.1017/S0144686X22000666
 
 [124.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [https://doi.org/10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
 
