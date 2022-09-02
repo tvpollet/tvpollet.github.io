@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Two new preprints... 
-image: /img/exciting_new_stuff
+image: /img/exciting_new_stuff.gif
 tags:
   - Research
   - NSS
