@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2022, September 8th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
+
 * Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2022, August 15). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2583s](https://doi.org/10.31234/osf.io/2583s)
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, June 10). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
@@ -32,8 +34,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 * Szabelska, A., **Pollet, T.V.**, Dujols, O., Klein, R.A., & IJzerman, H. (2021, February 25). A Tutorial for Exploratory Research: An Eight-Step Approach. _PsyArxiv_ [https://doi.org/10.31234/osf.io/cy9mz](https://doi.org/10.31234/osf.io/cy9mz)
 
 * Boothroyd, L.G., **Pollet, T.V.**, Evans, E.H., Yi, Q., & Tovée, M.J. (2018, September 7th). Adaptation-like effects in body weight attractiveness are not simply norm based. _PsyArxiv_ [https://doi.org/10.31234/osf.io/gsnkf](https://doi.org/10.31234/osf.io/gsnkf)
-
-* Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2018, August 28th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
 
 ## **2022/Accepted/in Press**
 
