@@ -233,6 +233,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The left-wing authoritarianism scale](https://doi.org/10.1016/j.paid.2020.110251){:target="_blank"} - the LWA should be the counterpart to the Right-Wing Authoritarianism scale.
 * [The Newcomer Socialization questionnaire](https://doi.org/10.1016/S0001-8791(02)00017-9){:target="_blank"} - a measure measuring newcomers' socialization to organisations - large project
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
+* [Group-Based Medical Mistrust Scale](https://doi.org/10.1016/j.ypmed.2003.09.041){:target="_blank"}
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
 
@@ -301,7 +302,7 @@ There is an increase in services which allow you to buy now and pay later (e.g.,
 # Projects which I prefer not to supervise.
 <a href="#thesis-introduction">back to top</a>
 
-There could be exceptions to the rule but below you'll find a list of topics which I will for various reasons (prefer to) not supervise. Exceptions exist, for example, if you have an extremely good idea for a replication project. I also list some topics here not because of some dislike, but rather because there are others, much better placed, in our department to work with you on these topics. You can reach out to me if you want more information.
+There could be exceptions to the rule but below you'll find a list of topics which I will for various reasons (prefer to) not supervise. Exceptions exist, for example, if you have an **extremely good idea for a replication project**. I also list some topics here not because of some dislike, but rather because there are others, much better placed, in our department to work with you on these topics. You can reach out to me if you want more information.
 
 * Projects using a Qualitative methodology. I have very, very limited experience with Qualitative methods.
 * Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements (saliva). I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
