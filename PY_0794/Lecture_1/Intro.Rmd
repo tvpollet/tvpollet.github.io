@@ -12,9 +12,20 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r echo=F, message=F, warning = F}
+require(xaringanExtra) 
+require(stargazer)
+require(tidyverse)
+require(knitr)
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
 ## PY0794: Advanced Quantitative research methods.
 
-* Slightly different this year. --> More flexibility.
+* Slightly different compared to previous years.
 
 --
 
