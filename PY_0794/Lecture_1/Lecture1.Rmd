@@ -31,7 +31,7 @@ IPSA 2 - Use a variety of techniques, advanced research methods and technologica
 PVA 1 - Apply relevant ethical, legal and professional practice frameworks (e.g., BPS), and maintain appropriate professional boundaries.
 
 ```{r, out.width = "90px", echo=FALSE}
-knitr::include_graphics("http://s2.quickmeme.com/img/74/74e004eeea3edb4c231d09763dfacf85bb6bf56184b0dfc8c7aaaf5ed3e55a27.jpg")
+knitr::include_graphics("goal.jpeg")
 ```
 
 
@@ -496,7 +496,7 @@ coffee_data_the_return<-read_sav('coffee_data.sav')
  Even from (public) weblinks. Here in .dat format. head() shows you the first lines.
 ```{r message=F, warning=F}
 require(data.table)
-mydat <- fread('http://www.stats.ox.ac.uk/pub/datasets/csb/ch11b.dat')
+mydat <- fread('https://www.cdc.gov/healthyyouth/data/yrbs/sadc_2019/Middle_School/sadc_ms_2019_state_a_m.dat')
 head(mydat)
 ```
 
