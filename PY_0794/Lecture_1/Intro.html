@@ -4,6 +4,7 @@
     <title>Intro : PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <link href="libs/tile-view-0.2.6/tile-view.css" rel="stylesheet" />
@@ -13,9 +14,15 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
+.title[
 # Intro : PY 0794 - Advanced Quantitative Research Methods
+]
+.author[
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
-### 2022-09-16 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
+.date[
+### 2022-09-27 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
 
 ---
 
@@ -26,7 +33,7 @@ class: center, middle, inverse, title-slide
 
 ## PY0794: Advanced Quantitative research methods.
 
-* Slightly different compared to previous years.
+* Change introduced a couple of years ago.
 
 --
 
@@ -88,7 +95,7 @@ The bit you care about most: marks.
 ---
 ## Assignments (bis)
 
- Complete the exercises in class (+ any bonus), you can find them under 'study skills'.
+ Complete the exercises in class (+ any bonus), you can find them under 'Learning resources'.
  
  Questions via elearning environment, _but_ only if you attempted the corresponding exercise.
 
@@ -114,6 +121,13 @@ The bit you care about most: marks.
 ## Acknowledgments.
 
 These slides were built with [xaringan](https://github.com/yihui/xaringan).
+
+
+
+
+
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
@@ -161,6 +175,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable

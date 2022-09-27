@@ -25,7 +25,7 @@ xaringanExtra::use_tile_view()
 
 ## PY0794: Advanced Quantitative research methods.
 
-* Slightly different compared to previous years.
+* Change introduced a couple of years ago.
 
 --
 
@@ -93,7 +93,7 @@ The bit you care about most: marks.
 ---
 ## Assignments (bis)
 
- Complete the exercises in class (+ any bonus), you can find them under 'study skills'.
+ Complete the exercises in class (+ any bonus), you can find them under 'Learning resources'.
  
  Questions via elearning environment, _but_ only if you attempted the corresponding exercise.
 
