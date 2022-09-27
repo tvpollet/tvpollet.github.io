@@ -205,3 +205,8 @@ The end.
 ```{r, out.width = "300px", echo=FALSE}
 knitr::include_graphics("https://media.giphy.com/media/opmIBtljGbwZi/giphy.gif")
 ```
+
+```{r}
+sessionInfo()
+```
+
