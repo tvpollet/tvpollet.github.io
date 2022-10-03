@@ -300,4 +300,7 @@ The graph shows that setosa has smaller petals and smaller sepals than other spe
 knitr::include_graphics("https://media.giphy.com/media/nXxOjZrbnbRxS/giphy.gif")
 ```
 
+```{r}
+sessionInfo()
+```
 

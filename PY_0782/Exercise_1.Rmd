@@ -7,18 +7,17 @@ date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaim
 
 ## R Markdown for Lecture 1 exercise.
 
- Load the flights dataset.
+Load the flights dataset.
 
- Calculate the mean delay in arrival for Delta Airlines (DL) (use **filter()**)
+Calculate the mean delay in arrival for Delta Airlines (DL) (use **filter()**)
 
- Calculate the associated 95% confidence interval.
+Calculate the associated 95% confidence interval.
 
- Do the same for United Airlines (UA) and compare the two. Do their confidence intervals overlap?
+Do the same for United Airlines (UA) and compare the two. Do their confidence intervals overlap?
 
- Calculate the mode for the delay in arrival for at JFK airport.
+Calculate the mode for the delay in arrival for at JFK airport.
 
- save a dataset as .sav with only departing flights from JFK airport.
-
+save a dataset as .sav with only departing flights from JFK airport.
 
 ### Load the flights data.
 
@@ -35,7 +34,7 @@ require(dplyr)
 delta<-filter(flights, carrier=="DL")
 ```
 
-### Means 
+### Means
 
 ```{r}
 #remove the missings
@@ -49,6 +48,7 @@ mean_delta<-mean(delta$arr_delay)
 ### 95% CI
 
 First get the 'se'
+
 ```{r}
 se_delta<-sd(delta$arr_delay)/sqrt(length(delta$arr_delay))
 se_delta
@@ -104,7 +104,7 @@ library(modeest)
 mlv(jfk$arr_delay,  method='mfv')
 ```
 
-The mode is  -13. The most common value in the dataset is thus 13 minutes early!
+The mode is -13. The most common value in the dataset is thus 13 minutes early!
 
 #### Write away the data.
 
@@ -117,5 +117,9 @@ The end.
 
 ```{r, out.width = "400px", echo=FALSE}
 knitr::include_graphics("https://i.imgur.com/60CsJQf.gif")
+```
+
+```{r}
+sessionInfo()
 ```
 
