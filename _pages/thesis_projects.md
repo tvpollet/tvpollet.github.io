@@ -54,15 +54,15 @@ Important: **Do not choose institutional login.**. Please use **your personal em
 
 ## Creating a project.
 
-Have a look [here](http://help.osf.io/m/projects){:target="_blank"}. Ensure that the location it is hosted is **Europe** rather than U.S., if not we will have to amend the consent form, so that participants are aware where their data are stored.
+Have a look [here](https://help.osf.io/article/353-welcome-to-projects){:target="_blank"}. Ensure that the location it is hosted is **Europe** rather than U.S., if not we will have to amend the consent form, so that participants are aware where their data are stored.
 
 ## Setting up a registration.
 
-Have a look [here](http://help.osf.io/m/registrations){:target="_blank"}. You can see some examples by browsing the Open Science Framework. Multiple options for registrations exist. If your project is a replication project, then we would follow the 'replication recipe'. Follow the details in [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2283856){:target="_blank"}.
+Have a look [here](https://help.osf.io/article/330-welcome-to-registrations){:target="_blank"}. You can see some examples by browsing the Open Science Framework. Multiple options for registrations exist. If your project is a replication project, then we would follow the 'replication recipe'. Follow the details in [this paper](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2283856){:target="_blank"}.
 
 ## Sharing a project
 
-At the end of the project we might want to make it public. Information on how to do that [here](http://help.osf.io/m/sharing){:target="_blank"}.
+At the end of the project we might want to make it public. Information on how to do that [here](https://help.osf.io/article/388-sharing-linking-and-forking-projects){:target="_blank"}.
 
 # Some tips for Qualtrics.
 
