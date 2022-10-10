@@ -375,7 +375,7 @@ ggplot(data=data_credit) +
 
 ## BONUS: ROC Curve.
 
-ROC curves are supercool and they are a tool used across a broad range of sciences. You can read up on them in the Agresti reference from the reading list. You can also read more in the reading lists or [here](https://onlinecourses.science.psu.edu/stat504/node/163). Anyway, have a look what's out there and try to have a go at making one yourself.
+ROC curves are supercool and they are a tool used across a broad range of sciences. You can read up on them in the Agresti reference from the reading list. You can also read more in the reading lists or [here](https://online.stat.psu.edu/stat504/lesson/7/7.2/7.2.3). Anyway, have a look what's out there and try to have a go at making one yourself.
 
 ```{r}
 require(pROC)
@@ -388,3 +388,8 @@ auc(resRoc)
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/xT9IgKWQeoclWggTDO/giphy.gif")
 ```
+
+```{r}
+sessionInfo()
+```
+
