@@ -37,6 +37,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
+[128.]() Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (accepted). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_
+
 [127.](https://doi.org/10.1007/s12144-022-03336-z) Bilalić, M., Đokić, R., Koso-Drljević, M., Djapo, N. & **Pollet, T.V.** (2022). When (deliberate) practice is not enough – the role of intelligence, practice, and knowledge in academic performance. _Current Psychology_
 
 [126.](https://doi.org/10.31234/osf.io/ubt2a) Bovet, J., Tognetti, A., & **Pollet, T.V.** (accepted). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _Evolutionary Human Sciences_ [Preprint](https://doi.org/10.31234/osf.io/ubt2a)
