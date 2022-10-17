@@ -352,7 +352,7 @@ set.seed(345)
 adonis2(High~gender_contestant*Opponent, data = chase, by='margin', method='euclidean') 
 ```
 
-LMperm is also an option. (Check the vignette,'uniquely' corresponds to type III). There still is no evidence for an interaction.
+LmPerm is also an option. (Check the vignette,'uniquely' corresponds to type III). There still is no evidence for an interaction.
 
 
 ```{r}
