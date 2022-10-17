@@ -57,7 +57,7 @@ Initially ANOVA was designed for **balanced** designs: equal N for each factor.
 When unbalanced: different ways for calculating Sums of Squares.
 
 ```{r, fig.align="center", out.width = "400px", echo=FALSE}
-knitr::include_graphics("http://cdn.app.compendium.com/uploads/user/458939f4-fe08-4dbc-b271-efca0f5a2682/f6d0da32-ba1d-41d4-ace1-af34dcb51351/Image/11acae6b1240abc7bc47f09fd5d2470f/capture.PNG")
+knitr::include_graphics("balanced.png")
 ```
 
 ---
