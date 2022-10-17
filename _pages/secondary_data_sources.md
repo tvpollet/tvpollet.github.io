@@ -112,3 +112,4 @@ Lists with some other resources:
 - [Resources for community psychologists](https://www.scra27.org/resources/resources-community-psychologists/secondar-data-sources/)
 - [APA](https://www.apa.org/research/responsible/data-links)
 - [Registry for anthropological data](https://anthroregistry.fandom.com/wiki/Data_Set_isjning/)
+- [Data which sociologists use](https://docs.google.com/spreadsheets/d/1t7s6Hl2lnuxsZ-lNzl6bUJWAuD9NR2Uu1TTm9Ej-va4/edit?usp=sharing)
