@@ -60,6 +60,10 @@ These could be good candidates:
 * [Spirituality mediates the relationship between engagement with nature and psychological wellbeing](https://doi.org/10.1016/j.jenvp.2013.07.013) - this will require a large sample.
 * [Nature Connectedness and Eudaimonic Well-Being: Spirituality as a Potential Mediator](https://www.researchgate.net/profile/Andrew-Francis-8/publication/271079550_Nature_Connectedness_and_Eudaimonic_Well-Being_Spirituality_as_a_Potential_Mediator/links/54bdedc30cf218d4a16a4723/Nature-Connectedness-and-Eudaimonic-Well-Being-Spirituality-as-a-Potential-Mediator.pdf) This will require a large sample.
 * The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf)
+* 	[The HEXACO and five-factor models of personality in relation to RIASEC vocational interests](https://doi.org/10.1016/j.jvb.2012.05.006)
+*  [“The Darkest of all” The relationship between the Dark Triad traits and organizational citizenship behavior](https://doi.org/10.1016/j.paid.2018.04.026)
+*  [Are Dishonest Extraverts More Harmful than Dishonest Introverts? The Interaction Effects of Honesty-Humility and Extraversion in Predicting Workplace Deviance](https://doi.org/10.1111/j.1464-0597.2011.00445.x)
+
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
 
@@ -318,10 +322,11 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects on COVID19 (but see exceptions above).
 * Projects on body image and the media.
 * Projects on nutrition, supplements, aromas.
-* Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy).
+* Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy - unless they are dealing with well thought out replications).
 * Projects on attachment theory and/or psychological trauma.
 * Projects on sleep.
-* Projects on attractiveness, face perception, etc. 
+* Projects on autism.
+* Projects on body attractiveness, face perception, etc. 
 * Projects on birth order (unless they would be replication style projects, especially relating to family relationships).
 * Projects on social media addiction (but see the example of meta-analysing the reliability of one of these scales).
 * Projects on aggression, violence, rape, sexual violence.
@@ -329,7 +334,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects on stress and mental health (unless they are dealing with social network analysis).
 * Projects on Instagram/Facebook/TikTok (unless they are dealing with social network analysis).
 * Projects on addiction, smoking, alcohol, drug consumption (unless they are dealing with social network analysis).
-* Projects on social identity, ethnicity, and/or intergroup behaviour -- unless these are related to social network analysis.
+* Projects on social identity, ethnicity, and/or intergroup behaviour (unless these are related to social network analysis or well thought out replication projects).
 * Projects on sexual orientation, gender identity, masculinity/femininity, 2D:4D ratios (unless these are related to social network analysis or well thought out replication projects).
 
 
