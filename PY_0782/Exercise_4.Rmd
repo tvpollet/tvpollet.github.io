@@ -65,7 +65,7 @@ cor.test(salaries$yrs.since.phd, salaries$monthly_salary, conf.level = .99)
 cor.test(salaries$yrs.since.phd, salaries$monthly_salary, method = 'spearman', conf.level = .99)
 ```
 
-**Sample write up**: Years since Ph.D. and monthly salary were positively and moderately related ($r_s_$= .476, _p_<.0001).
+**Sample write up**: Years since Ph.D. and monthly salary were positively and moderately related ($r_s$= .476, _p_<.0001).
 
 ## hierarchical OLS regression.
 
