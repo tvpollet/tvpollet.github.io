@@ -250,7 +250,7 @@ MBESS_2
 
 ## Robust Mediation.
 
-Here is yet another way to do a mediation, this time via the 'robmed' package. This method relaxes assumptions about normality which commonly apply to regression methods of mediation ([Alfons, Ates, and Groenen, 2018](https://hdl.handle.net/1765/109594)). This package also allows controlling for a variable via specifying covariate = . Check the manual.
+Here is yet another way to do a mediation, this time via the 'robmed' package. This method relaxes assumptions about normality which commonly apply to regression methods of mediation ([Alfons, Ates, and Groenen, 2018](https://hdl.handle.net/1765/109594)). This package also allows controlling for a variable via specifying `covariate = `. Check the manual.
 
 Using a 10,000 bootstraps via Bias-Corrected Acceleration, the robust mediation method (2011) showed a significant indirect effect: 0.11, 95%CI [0.04, 0.22]. The output also reports the bootstrapped direct effect estimate (akin to c' or ADE) but not the 95% CI.
 
@@ -265,6 +265,10 @@ summary(robmed)
 ```
 
 Do check the manual for further information.
+
+# A word of caution: Causal ordering!
+
+This was a toy example. As you might have spotted the logical chain might not make sense at all: we are predicting participants' actual BMI as an _outcome_ measure. However, it might be more sensible that BMI is a **predictor** of people's perceptions of whether they pass through a gap (rather than the other way round!). Have a look at the [paper](https://doi.org/10.1016/j.neuropsychologia.2018.11.015). It just goes to show, that we can build all sorts of models with these mediation packages and get "significant" results, but that they might make no theoretical sense!
 
 **THE END!**
 
