@@ -53,13 +53,14 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [121.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442. [https://doi.org/10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
+[120.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (accepted). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior_ [https://doi.org/10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
+)
+
 ## **2021**
 
-[120.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982).
+[119.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982).
 
-[119.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
-
-[118.](https://doi.org/10.31234/osf.io/dv93s) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (accepted). Isn't it eyeronic? Little evidence for consistent eye colour choices across relationships. _Archives of Sexual Behavior_
+[118.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
 
 [117.](https://doi.org/10.1080/21642850.2021.1951272) Cheyne, T., Smith, M.A., & **Pollet, T.V.** (2021). Egocentric network characteristics of persons with Type 1 Diabetes and their relationships to perceived social support and well-being. _Health Psychology and Behavioral Medicine, 9(1),_ 662-680.
 
