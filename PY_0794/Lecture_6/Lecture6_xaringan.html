@@ -4,7 +4,7 @@
     <title>Lecture 6: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
+    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
     <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
@@ -29,7 +29,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-07-25 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2022-10-24 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -136,8 +136,8 @@ mermaid(" graph LR
 ---
 ## Plot
 
-<div id="htmlwidget-c78d6c06b86565ae1dff" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c78d6c06b86565ae1dff">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-d517240cdfed2b00db56" style="width:504px;height:504px;" class="DiagrammeR html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d517240cdfed2b00db56">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## More beautiful...
@@ -170,8 +170,8 @@ grViz("
 ---
 ## Look at the shiny-shiny.
 
-<div id="htmlwidget-60372dac1d19ddbb7bb0" style="width:504px;height:504px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-60372dac1d19ddbb7bb0">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-819b3e1a10a94ba04758" style="width:504px;height:504px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-819b3e1a10a94ba04758">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Check Diagrammer tutorial
@@ -542,7 +542,7 @@ The mediation analysis showed a significant average causal mediation effect (ACM
 plot(med.out) 
 ```
 
-&lt;img src="Lecture6-xaringan_files/figure-html/plot-1.png" width="450" height="450" /&gt;
+&lt;img src="Lecture6_xaringan_files/figure-html/plot-1.png" width="450" height="450" /&gt;
 
 ---
 ## Sensitivity analysis
