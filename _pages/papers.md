@@ -25,8 +25,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, June 10). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
-* Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022, May 17). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _PsyArxiv_ [https://doi.org/10.31234/osf.io/njv9a](https://doi.org/10.31234/osf.io/njv9a)
-
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
 * Thompson, A., & **Pollet, T.V.** (2021, June 15). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fauc4](https://doi.org/10.31234/osf.io/fauc4)
@@ -37,7 +35,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
-[128.]() Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (accepted). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_
+[129](https://doi.org/10.31234/osf.io/njv9a) Bainbridge, S., Allsop, S., & **Pollet, T.V.** (accepted). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology_ [https://doi.org/10.31234/osf.io/njv9a](https://doi.org/10.31234/osf.io/njv9a)
+
+[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (in press). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_
 
 [127.](https://doi.org/10.1007/s12144-022-03336-z) Bilalić, M., Đokić, R., Koso-Drljević, M., Djapo, N. & **Pollet, T.V.** (2022). When (deliberate) practice is not enough – the role of intelligence, practice, and knowledge in academic performance. _Current Psychology_
 
