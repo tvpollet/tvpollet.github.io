@@ -516,13 +516,13 @@ Make a table and discuss.
 ## References (and further reading.)
 Also check the reading list! (many more than listed here).
 
+* Beaujean, A. A. (2014). _Latent variable modeling using R: A step-by-step guide_. Routledge.
 * Hoyle, R. H. (ed.) (2014). _Handbook of Structural Equation Modelling._ London, UK: Guilford.
 * Loehlin, J. C., & Beaujean, A. A. (2017). _Latent variable models: An introduction to factor, path, and structural equation analysis_. London, UK: Taylor & Francis.
 * Rosseel, Y. (2012). lavaan: An R Package for Structural Equation Modeling. _Journal of Statistical Software, 48(2)_, 1-36. also [see this](http://lavaan.ugent.be).
-* Stochl, J. (2010). _Confirmatory factor analysis in MPlus._ https://www.psychometrics.cam.ac.uk/uploads/documents/ESRC_RDI_June10/rdicfastochljune2010.pdf
-* Templin, J. (2011). _Introduction to Confirmatory Factor Analysis and Structural Equation Modeling_ https://jonathantemplin.com/files/multivariate/mv11icpsr/mv11icpsr_lecture12.pdf
+* UCLA advanced research computing (2022). _Confirmatory factor analysis in R with lavaan._ https://stats.oarc.ucla.edu/r/seminars/rcfa/
 * Van de Schoot, R., Lugtig, P., & Hox, J. (2012). A checklist for testing measurement invariance. _European Journal of Developmental Psychology_, 9(4), 486–492.
-* van de Schoot, R. & Schalken, N. (2017). Lavaan: how to get started. https://www.rensvandeschoot.com/tutorials/lavaan-how-to-get-started/
+* Van de Schoot, R. & Schalken, N. (2017). Lavaan: how to get started. https://www.rensvandeschoot.com/tutorials/lavaan-how-to-get-started/
 * Tabachnick BG, Fidell LS. (2007) _Using Multivariate Statistics._ Boston, MA.: Pearson Education.
 
 
