@@ -40,30 +40,48 @@ There is some variation, and you can also suggest your own, but I am particularl
 
 These could be good candidates:
 
+### Relationships / Jealousy.
+
 * [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
-* [Predictors of How Often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
+* [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
 * [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
+* Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
+* Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
+* Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
+* Attachment Style and Jealousy in the Digital Age. [https://doi.org/10.3389/fpsyg.2021.678542]( https://doi.org/10.3389/fpsyg.2021.678542)
+* The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
+* Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
+
+### Prosocial behaviour / altruism
+
 * [Sex Differences in Violent versus Non-Violent Life-Threatening Altruism](https://journals.sagepub.com/doi/full/10.1177/147470490900700309). You will require a sizable sample.
 * [Altruism between Romantic Partners: Biological Offspring as a Genetic Bridge between Altruist and Recipient](https://doi.org/10.1177/147470491000800312). You will require a sizable sample.
+
+### Colour
+
 * Does the receptacle influence the perceived flavour of a drink? [https://link.springer.com/article/10.1186/2044-7248-3-3](https://link.springer.com/article/10.1186/2044-7248-3-3). We would only aim to replicate the US sample in the UK. This study can be run online.
 * Does the colour of the mug influence the taste of the coffee? [https://link.springer.com/article/10.1186/2044-7248-3-10](https://link.springer.com/article/10.1186/2044-7248-3-10). Study 2 seems a good candidate. You will require a sizable sample.
 * Dressed for Sex: Red as a Female Sexual Signal in Humans. [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2) Experiment 1 seems a good candidate.
 * Was she wearing red? The function of victim-blaming in women’s intrasexual competition. [https://doi.org/10.1111/sjop.12870](https://doi.org/10.1111/sjop.12870). You will require quite a sizable sample.
-* Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
-* Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
-* Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
+
+### Consumer Psychology
+
 * Scarcity, sex, and spending: Recession cues increase women's desire for men owning luxury products and men's desire to buy them. Studies 2-3 but requires large samples. [https://doi.org/10.1016/j.jbusres.2019.07.021](https://doi.org/10.1016/j.jbusres.2019.07.021) 	
-* Attachment Style and Jealousy in the Digital Age. [https://doi.org/10.3389/fpsyg.2021.678542]( https://doi.org/10.3389/fpsyg.2021.678542)
-* The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
-* Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
 * [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021). 
+
+### Nature / Spirituality
+
 * [Spirituality mediates the relationship between engagement with nature and psychological wellbeing](https://doi.org/10.1016/j.jenvp.2013.07.013) - this will require a large sample.
 * [Nature Connectedness and Eudaimonic Well-Being: Spirituality as a Potential Mediator](https://www.researchgate.net/profile/Andrew-Francis-8/publication/271079550_Nature_Connectedness_and_Eudaimonic_Well-Being_Spirituality_as_a_Potential_Mediator/links/54bdedc30cf218d4a16a4723/Nature-Connectedness-and-Eudaimonic-Well-Being-Spirituality-as-a-Potential-Mediator.pdf) This will require a large sample.
-* The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf)
+
+### Personality / Organisational Psychology
+
 * 	[The HEXACO and five-factor models of personality in relation to RIASEC vocational interests](https://doi.org/10.1016/j.jvb.2012.05.006)
 *  [“The Darkest of all” The relationship between the Dark Triad traits and organizational citizenship behavior](https://doi.org/10.1016/j.paid.2018.04.026)
 *  [Are Dishonest Extraverts More Harmful than Dishonest Introverts? The Interaction Effects of Honesty-Humility and Extraversion in Predicting Workplace Deviance](https://doi.org/10.1111/j.1464-0597.2011.00445.x)
 
+### Other
+* The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf)
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
 
@@ -286,9 +304,9 @@ This builds on the above framework. All else being equal, men take more risks in
 * Observing gender differences in mask wearing on campus.
 * Observing gender differences in mask wearing on public transport.
 
-Here is [an example](https://psyarxiv.com/njv9a/)
+Here is [an example](https://doi.org/10.22330/he/37/036-045){:target="_blank"}
 
-## Measuring student satisfaction: Do we know if you are satisfied?.
+## Measuring student satisfaction: Do we know if you are satisfied?
 <a href="#thesis-introduction">back to top</a>
 
 The [National Student Survey](https://www.thestudentsurvey.com/){:target="_blank"} is a commonly used tool to measure student satisfaction. It is argued to consist of eight scales but it is unclear to which degree this measure has been rigorously validated. [Our research](https://psyarxiv.com/vb2k6/){:target="_blank"} suggests that these eight dimensions are not easily identified. Another aspect of reliability which has seemingly not been assessed is a test-retest correlation of the items. In this project, you will administer the survey twice and examine whether the NSS is temporally stable. Ideally, you would collect minimum 270+ responses in the first wave, in order to assess the factor structure. Therefore, this project might work well as a collaborative project involving more than one student (you are able to have separate research questions, e.g., differences between courses, or one project focussing on factor analysis and one on test-retest).
@@ -312,14 +330,14 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects using a Qualitative methodology. I have very, very limited experience with Qualitative methods.
 * Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements (saliva). I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
 * Projects involving 'special populations'. I do not have access to 'special populations', so I cannot supervise projects involving children, vulnerable adults, service users, people with (mental) health diagnoses, or whichever special population you have in mind. However, if you have strong ties with these communities, then perhaps projects on social networks are still viable.
-* Projects in Cognitive Psychology.
+* Projects in Cognitive Psychology. (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Consumer Psychology / Marketing (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Positive Psychology / Happiness studies.
 * Projects in Sport Psychology (unless they are dealing with social network analysis)
 * Projects in Organisational Psychology (unless they are dealing with social network analysis)
 * Projects in Parapsychology.
 * Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
-* Projects on COVID19 (but see exceptions above).
+* Projects on COVID-19 (but see exceptions above).
 * Projects on body image and the media.
 * Projects on nutrition, supplements, aromas.
 * Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy - unless they are dealing with well thought out replications).
@@ -327,7 +345,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects on sleep.
 * Projects on autism.
 * Projects on body attractiveness, face perception, etc. 
-* Projects on birth order (unless they would be replication style projects, especially relating to family relationships).
+* Projects on birth order (unless they would be replication style projects, especially relating to family relationships or jealousy).
 * Projects on social media addiction (but see the example of meta-analysing the reliability of one of these scales).
 * Projects on aggression, violence, rape, sexual violence.
 * Projects on human-animal relationships.
