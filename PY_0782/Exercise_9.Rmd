@@ -73,6 +73,10 @@ direct_model1<-sem(direct_model,sample.cov=data,sample.nobs=131)
 summary(direct_model1,standardized=T,fit=T,rsquare=T)
 ```
 
+```{r}
+anova(path_model1,direct_model1)
+```
+
 
 ## Mediation tests.
 
@@ -124,7 +128,7 @@ summary(results_raw,standardized=T,fit=T,rsquare=T)
 
 ### References.
 
-Huang, F. (2016). Path analysis with R. [http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html](http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html)
+Huang, F. (2016). Path analysis with R. [http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html](http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html), archived here: [https://web.archive.org/web/20200716131821/http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html](https://web.archive.org/web/20200716131821/http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html)
 
 
 **THE END!**
