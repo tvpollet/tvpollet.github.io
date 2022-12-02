@@ -70,7 +70,7 @@ At the end of the project we might want to make it public. Information on how to
 
 Qualtrics has an extensive [help file](https://www.qualtrics.com/support/){:target="_blank"} for your projects. I list some tutorials, tips, and tricks here.  
 
-**IMPORTANT**: **Do not setup or use a Qualtrics trial account**, set up your own account as discussed [here](https://tvpollet.github.io/pdfs/Qualtrics_Self_Enrol_Procedure.pdf){:target="_blank"}
+**IMPORTANT**: **Do not setup or use a Qualtrics trial account**, set up your own account as discussed [here](https://cocolab.org/Qualtrics){:target="_blank"}
 
 ## Qualtrics: Tutorials
 If you have never worked with Qualtrics, set aside some time.
