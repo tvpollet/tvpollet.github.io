@@ -35,7 +35,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022/Accepted/in Press**
 
-[129](https://doi.org/10.22330/he/37/036-045) Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology 37,_ 36-45.
+[129.](https://doi.org/10.22330/he/37/036-045) Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology 37,_ 36-45.
 
 [128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (in press). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_
 
