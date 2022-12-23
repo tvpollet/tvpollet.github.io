@@ -175,7 +175,8 @@ Some further tips:
 * [Writing in Psychology](https://writingcenter.uconn.edu/writing-in-psychology-4/){:target="_blank"}, University of Connecticut.
 * [Writing like a scientist](https://psyarxiv.com/r4sfz){:target="_blank"}, by Tom Carpenter from Seattle Pacific University.
 * [Ten simple rules for structuring papers](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5619685/){:target="_blank"}. This focuses on experimental papers but some general useful tips.
-* [Writing tips for Qualitative research](https://edpsy.org.uk/blog/2021/tips-on-writing-a-qualitative-dissertation-or-thesis-from-braun-clarke-part-1/) suggested by Dr. Lisa Thomas
+* [Writing tips for Qualitative research](https://edpsy.org.uk/blog/2021/tips-on-writing-a-qualitative-dissertation-or-thesis-from-braun-clarke-part-1/){:target="_blank"} suggested by Dr. Lisa Thomas
+* [Some tips for writing science](https://drive.google.com/file/d/1zcmqa47vmpw81AW2q5EMeIxxJiVrqXCd/view){:target="_blank"} by Matteo Carandini.
 
 If you are struggling with writing and starting your essay/thesis also consider [booking a session](https://cragside.northumbria.ac.uk/Everyone/skillsplus/database_uploads/55389339.pdf?){:target="_blank"} in the Northumbria University library.
 
