@@ -42,13 +42,13 @@ These could be good candidates:
 
 ### Relationships / Jealousy.
 
-* [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
-* [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
-* [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
 * Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
 * Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
 * Attachment Style and Jealousy in the Digital Age. [https://doi.org/10.3389/fpsyg.2021.678542]( https://doi.org/10.3389/fpsyg.2021.678542)
+* [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
+* [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
+* [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
 
