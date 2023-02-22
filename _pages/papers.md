@@ -19,11 +19,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2022, September 8th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
+* Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2023, Feb 14th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
+
+* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, December 23rd). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
 * Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2022, August 15). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2583s](https://doi.org/10.31234/osf.io/2583s)
-
-* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, June 10). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
@@ -33,28 +33,30 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Boothroyd, L.G., **Pollet, T.V.**, Evans, E.H., Yi, Q., & Tovée, M.J. (2018, September 7th). Adaptation-like effects in body weight attractiveness are not simply norm based. _PsyArxiv_ [https://doi.org/10.31234/osf.io/gsnkf](https://doi.org/10.31234/osf.io/gsnkf)
 
-## **2022/Accepted/in Press**
+## **2023/Accepted/in Press**
 
-[129.](https://doi.org/10.22330/he/37/036-045) Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology 37,_ 36-45.
-
-[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (in press). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_
-
-[127.](https://doi.org/10.1007/s12144-022-03336-z) Bilalić, M., Đokić, R., Koso-Drljević, M., Djapo, N. & **Pollet, T.V.** (2022). When (deliberate) practice is not enough – the role of intelligence, practice, and knowledge in academic performance. _Current Psychology_ [doi:10.1007/s12144-022-03336-z](https://doi.org/10.1007/s12144-022-03336-z)
-
-[126.](https://doi.org/10.1017/ehs.2022.25) Bovet, J., Tognetti, A., & **Pollet, T.V.** (2022). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _Evolutionary Human Sciences, 4,_ E48. [doi:10.1017/ehs.2022.25](https://doi.org/10.1017/ehs.2022.25)
-
-[125.](https://doi.org/10.1017/S0144686X22000666) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2022). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ 1-26. [doi:10.1017/S0144686X22000666](https://doi.org/10.1017/S0144686X22000666) 
-
-[124.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [doi:10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
-
-[123.](https://doi.org/10.1371/journal.pone.0266167) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS ONE, 17(12)_, e0266167. [doi:10.1371/journal.pone.0266167](https://doi.org/10.1371/journal.pone.0266167)
-
-[122.](https://doi.org/10.1080/0309877X.2022.2060069) **Pollet, T.V.**, & Shepherd, L. (2022). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education, 46(9)_, 1195-1211 [doi:10.1080/0309877X.2022.2060069](https://doi.org/10.1080/0309877X.2022.2060069)
-
-[121.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442. [doi:10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
-
-[120.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2022). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior_ [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
+[129.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2022). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior_ [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
 )
+
+[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (2023). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_
+
+## **2022**
+
+[127.](https://doi.org/10.22330/he/37/036-045) Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology 37,_ 36-45.
+
+[126.](https://doi.org/10.1007/s12144-022-03336-z) Bilalić, M., Đokić, R., Koso-Drljević, M., Djapo, N. & **Pollet, T.V.** (2022). When (deliberate) practice is not enough – the role of intelligence, practice, and knowledge in academic performance. _Current Psychology_ [doi:10.1007/s12144-022-03336-z](https://doi.org/10.1007/s12144-022-03336-z)
+
+[125.](https://doi.org/10.1017/ehs.2022.25) Bovet, J., Tognetti, A., & **Pollet, T.V.** (2022). Methodological issues when using face prototypes: A case study on the Faceaurus dataset. _Evolutionary Human Sciences, 4,_ E48. [doi:10.1017/ehs.2022.25](https://doi.org/10.1017/ehs.2022.25)
+
+[124.](https://doi.org/10.1017/S0144686X22000666) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2022). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ 1-26. [doi:10.1017/S0144686X22000666](https://doi.org/10.1017/S0144686X22000666) 
+
+[123.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [doi:10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
+
+[122.](https://doi.org/10.1371/journal.pone.0266167) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS ONE, 17(12)_, e0266167. [doi:10.1371/journal.pone.0266167](https://doi.org/10.1371/journal.pone.0266167)
+
+[121.](https://doi.org/10.1080/0309877X.2022.2060069) **Pollet, T.V.**, & Shepherd, L. (2022). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education, 46(9)_, 1195-1211 [doi:10.1080/0309877X.2022.2060069](https://doi.org/10.1080/0309877X.2022.2060069)
+
+[120.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442. [doi:10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
 ## **2021**
 
