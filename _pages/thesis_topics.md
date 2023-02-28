@@ -126,7 +126,7 @@ There are a range of projects to be conducted which deal with the methods used i
 
 ### The 'Prometheus effect' in psychology: Are effect sizes exaggerated?
 
-The first time an effect is published, its effect size tends to be exaggerated (e.g., Jennions & Moller, 2002). This is known as the Prometheus effect or Winner's curse. In an already established database with 150 meta-analyses, you will examine whether an original effect is exaggerated when compared to its meta-analytic estimate and whether this exaggeration is larger for some fields than for others.
+The first time an effect is published, its effect size tends to be exaggerated (e.g., Jennions & Moller, 2002). This is known as the Prometheus effect or Winner's curse. Via collating data from meta-analyses, you will examine whether an original effect is exaggerated when compared to its meta-analytic estimate and whether this exaggeration is larger for some fields than for others.
 
 ### How diverse are the samples used in cross-cultural psychology?
 
@@ -197,7 +197,7 @@ Intelligence is thought to be an individual level construct. Yet, some researche
 
 In this project, you will code the sample sizes used in theses in psychology, as well as the method used. It is important as this will allow us to examine whether student projects have sufficient [statistical power](https://en.wikipedia.org/wiki/Power_of_a_test){:target="_blank"}
 
-### What is the sort of sample used in undergraduate/masters psychology projects at our University?
+### What is the 'type' of sample used in undergraduate/masters psychology projects at our University?
 
 A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code theses from psychology and the samples they use. Are they predominantly students? Are some of them fairly diverse (international students) or are they mostly British? Are they mostly dominated by one gender? These are the types of questions you are able to address. 
 
@@ -322,6 +322,19 @@ Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/cl
 
 There is an increase in services which allow you to buy now and pay later (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, do individuals who tend to hoard, rely more on these products?
 
+## Gender and leadership in Psychology courses
+
+In this project, you will find out whether gender influences programme leadership for accredited BPS courses. Women have been less likely to have been offered leadership positions? Is this also the case for acting as a programme leader in psychology?
+
+## E-sports
+
+E-sports are a rapidly emerging phenomenon and a million or even billion dollar industry. In this area there is room to explore some psychological phenomena, typically documented in regular sports. For example:
+
+* The 'too much talent effect' : If you continue to add excellent players, is there a point after which performance goes down?
+* Is there a 'home advantage'?
+* Does changing a coach work?
+* Are hierarchies in e-sports stable?
+* Do red teams win more than other colours?
 
 # Projects which I prefer not to supervise.
 <a href="#thesis-introduction">back to top</a>
