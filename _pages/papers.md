@@ -35,7 +35,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2023/Accepted/in Press**
 
-[130](https://doi.org/10.1177/00332941231164079
+[130.](https://doi.org/10.1177/00332941231164079
 ) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_, 0(0). [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
 )
 
