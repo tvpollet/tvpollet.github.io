@@ -245,6 +245,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [Difficulties in Emotion Regulation Scale (DERS-18)](https://www2.psych.ubc.ca/~klonsky/publications/DERS18.pdf){:target="_blank"}
 * [Attitudes towards donation of oocytes](https://doi.org/10.1093/humrep/deg222){:target="_blank"} - (oocytes are immature eggs donated, for example, in fertility treatment).
 * [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
+* [Neonatal intensive care parent satisfaction](https://doi.org/10.1097/PCC.0b013e318238b80a){:target="_blank"}
 * [The Covid19 phobia scale](https://doi.org/10.1016/j.paid.2020.110108){:target="_blank"}
 * [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
 * [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
