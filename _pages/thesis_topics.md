@@ -219,48 +219,82 @@ For this project you will need to use the free software [JASP](www.jasp.org){:ta
 
 Some candidate measures to explore (others to be added soon). You might need to be on campus and logged in with the library to access these.
 
-* [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
-* [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
-* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
-* [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
-* [The Liberal Feminist Attitude and Ideology Scale](https://link.springer.com/article/10.1007/BF01547807){:target="_blank"}
-* [The Internalized Homonegativity Inventory for gay men](https://doi.org/10.1300/J082v41n02_04){:target="_blank"}
-* [The Vaccine Hesitancy Scale](https://doi.org/10.1016/j.vaccine.2017.12.043){:target="_blank"}
-* [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
-* [The Interpersonal Sexual Objectification Scale](https://doi.org/10.1111/j.1471-6402.2007.00351.x){:target="_blank"}
+
+
+
+
+#### Body image
+
 * [The Psychological Need Satisfaction in Exercise Scale](https://www.researchgate.net/profile/Philip-Wilson-9/publication/253738018_The_Psychological_Need_Satisfaction_in_Exercise_Scale/links/54943c6e0cf2456f1c9d8651/The-Psychological-Need-Satisfaction-in-Exercise-Scale.pdf){:target="_blank"}
 * [Weight- and Body-Related Shame and Guilt Scale (WEB–SG)](https://doi.org/10.1080/00223890701331856){:target="_blank"}
 * [The Photo manipulation scale](https://doi.org/10.1002/eat.22449){:target="_blank"}
 * [The Perception of Teasing Scale (POTS): A Revision and Extension of the Physical Appearance Related Teasing Scale (PARTS)](https://doi.org/10.1207/s15327752jpa6501_11){:target="_blank"}. larger project.
 * [The Body Checking Questionnaire](https://doi.org/10.1002/eat.10012){:target="_blank"}
-* [The Intrasexual Competition Scale](https://www.researchgate.net/profile/Maryanne_Fisher/publication/247850197_Individual_differences_in_intrasexual_competition/links/55083bdf0cf27e990e09676a/Individual-differences-in-intrasexual-competition.pdf){:target="_blank"}
+* [The Interpersonal Sexual Objectification Scale](https://doi.org/10.1111/j.1471-6402.2007.00351.x){:target="_blank"}
+
+#### Cyberpsychology / Social media
+
+* [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
+* [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
+* [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
+
+#### Social Psychology
+
+* [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
+* [The Bullshit Receptivity (BSR) scale](https://scottbarrykaufman.com/wp-content/uploads/2016/01/On-the-reception-and-detection-of-pseudo-profound-bullshit.pdf){:target="_blank"} - large project
+* [The left-wing authoritarianism scale](https://doi.org/10.1016/j.paid.2020.110251){:target="_blank"} - the LWA should be the counterpart to the Right-Wing Authoritarianism scale.
+* [The Newcomer Socialization questionnaire](https://doi.org/10.1016/S0001-8791(02)00017-9){:target="_blank"} - a measure measuring newcomers' socialization to organisations - large project
+* [The conspiracy mentality questionnaire](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225/full){:target="_blank"} - large project
 * [The Short Internalized Homonegativity Scale](https://doi.org/10.1177/0013164404264845){:target="_blank"}
 * [The Self-Talk Scale](https://doi.org/10.1080/00223890802484498){:target="_blank"}
 * [The Tendency to Gossip Questionnaire](https://journals.sagepub.com/doi/abs/10.1177/0013164493053004010){:target="_blank"}
 * [The Personal Sense of Power Scale](https://doi.org/10.1111/j.1467-6494.2011.00734.x){:target="_blank"}
-* [Pain attitudes and Stoicism/Cautiousness](https://academic.oup.com/psychsocgerontology/article/56/5/P279/634269){:target="_blank"}
+* [The Vaccine Hesitancy Scale](https://doi.org/10.1016/j.vaccine.2017.12.043){:target="_blank"}
+* [The Liberal Feminist Attitude and Ideology Scale](https://link.springer.com/article/10.1007/BF01547807){:target="_blank"}
+
+
+
+#### Jealousy / rivalry
+
+* [The Intrasexual Competition Scale](https://www.researchgate.net/profile/Maryanne_Fisher/publication/247850197_Individual_differences_in_intrasexual_competition/links/55083bdf0cf27e990e09676a/Individual-differences-in-intrasexual-competition.pdf){:target="_blank"}
+* [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
+
+
+#### Health and clinical psychology
+
 * [The Fear of being scale](https://www.researchgate.net/publication/257837688_Settling_for_Less_Out_of_Fear_of_Being_Single){:target="_blank"}
 * [The Short Anxiety Screening test](https://doi.org/10.1002/(SICI)1099-1166(199912)14:12<1062::AID-GPS67>3.0.CO;2-Q){:target="_blank"}
 * Various Measures for fear of heights (acrophobia): [Abelson & Curtis, 1989](https://www.sciencedirect.com/science/article/abs/pii/0005796789900910), [Cohen, 1977](https://www.sciencedirect.com/science/article/abs/pii/S0005789477801160) , [Steinman & Teachman, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3152668/#:~:text=The%20Acrophobia%20Questionnaire%2DAnxiety%20Subscale,6%20(extremely%20anxious)%20scale.)
 * [Difficulties in Emotion Regulation Scale (DERS-18)](https://www2.psych.ubc.ca/~klonsky/publications/DERS18.pdf){:target="_blank"}
+* [Group-Based Medical Mistrust Scale](https://doi.org/10.1016/j.ypmed.2003.09.041){:target="_blank"}
 * [Attitudes towards donation of oocytes](https://doi.org/10.1093/humrep/deg222){:target="_blank"} - (oocytes are immature eggs donated, for example, in fertility treatment).
-* [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
 * [Neonatal intensive care parent satisfaction](https://doi.org/10.1097/PCC.0b013e318238b80a){:target="_blank"}
 * [The Covid19 phobia scale](https://doi.org/10.1016/j.paid.2020.110108){:target="_blank"}
-* [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
-* [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
-* [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
-* [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
+* [Diabetes Fear of Injecting and Self-Testing Questionnaire](https://diabetesjournals.org/care/article/23/6/765/22002/Diabetes-Fear-of-Injecting-and-Self-Testing){:target="_blank"}
+* [Pain attitudes and Stoicism/Cautiousness](https://academic.oup.com/psychsocgerontology/article/56/5/P279/634269){:target="_blank"}
+* [The Vaccine Hesitancy Scale](https://doi.org/10.1016/j.vaccine.2017.12.043){:target="_blank"}
+* [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
+
+
+#### Romantic relationships, LGBTQIA+ and sexual behaviour
+
+* [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
+* [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
 * [The Dating Anxiety Scale for Adolescents](https://local.psy.miami.edu/media/college-of-arts-and-sciences/psychology/documents/faculty/alagreca/glickman_lagreca_2004.pdf){:target="_blank"}
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
-* [The conspiracy mentality questionnaire](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00225/full){:target="_blank"} - large project
-* [The Bullshit Receptivity (BSR) scale](https://scottbarrykaufman.com/wp-content/uploads/2016/01/On-the-reception-and-detection-of-pseudo-profound-bullshit.pdf){:target="_blank"} - large project
-* [The left-wing authoritarianism scale](https://doi.org/10.1016/j.paid.2020.110251){:target="_blank"} - the LWA should be the counterpart to the Right-Wing Authoritarianism scale.
-* [The Newcomer Socialization questionnaire](https://doi.org/10.1016/S0001-8791(02)00017-9){:target="_blank"} - a measure measuring newcomers' socialization to organisations - large project
-* [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
-* [Group-Based Medical Mistrust Scale](https://doi.org/10.1016/j.ypmed.2003.09.041){:target="_blank"}
+* [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
+* [The Internalized Homonegativity Inventory for gay men](https://doi.org/10.1300/J082v41n02_04){:target="_blank"}
+
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
+
+#### Miscellaneous
+
+* [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
+* [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
+* [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
+* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
+
 
 
 ## Guardian 'blind dates' database.
