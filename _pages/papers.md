@@ -46,7 +46,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2022**
 
-[127.](https://doi.org/10.22330/he/37/036-045) Bainbridge, S., Allsop, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology, 37,_ 36-45.
+[127.](https://doi.org/10.22330/he/37/036-045) Bainbridge, S., Allsopp, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology, 37,_ 36-45.
 
 [126.](https://doi.org/10.1007/s12144-022-03336-z) Bilalić, M., Đokić, R., Koso-Drljević, M., Djapo, N. & **Pollet, T.V.** (2022). When (deliberate) practice is not enough – the role of intelligence, practice, and knowledge in academic performance. _Current Psychology_ [doi:10.1007/s12144-022-03336-z](https://doi.org/10.1007/s12144-022-03336-z)
 
