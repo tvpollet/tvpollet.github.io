@@ -19,7 +19,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2023, Feb 14th). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3zvhq](https://doi.org/10.31234/osf.io/3zvhq)
+* Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, April 28). Involuntary Celibates report greater levels of depression but not anxiety or stress than controls. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, December 23rd). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
@@ -33,6 +33,10 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2023/Accepted/in Press**
 
+[133.]() Cook, C., **Pollet, T.V.** & Callahan, J.L. (accepted). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_
+
+[132](https://doi.org/10.31234/osf.io/3zvhq) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (accepted). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ 
+
 [131.](https://doi.org/10.31234/osf.io/fauc4) Thompson, A., & **Pollet, T.V.** (accepted). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ 
 
 [130.](https://doi.org/10.1177/00332941231164079
@@ -42,7 +46,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 [129.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2023). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior, 52_, 291–300 [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
 )
 
-[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J. L., **Pollet, T.V.**, & Elliott, C. (2023). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_ [doi:10.1177/00187267221137996](https://doi.org/10.1177/00187267221137996)
+[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J.L., **Pollet, T.V.**, & Elliott, C. (2023). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_ [doi:10.1177/00187267221137996](https://doi.org/10.1177/00187267221137996)
 
 ## **2022**
 
