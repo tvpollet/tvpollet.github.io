@@ -33,9 +33,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2023/Accepted/in Press**
 
-[133.]() Cook, C., **Pollet, T.V.** & Callahan, J.L. (accepted). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_
+[133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (accepted). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_
 
-[132](https://doi.org/10.31234/osf.io/3zvhq) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (accepted). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ 
+[132.](https://doi.org/10.31234/osf.io/3zvhq) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (accepted). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ 
 
 [131.](https://doi.org/10.31234/osf.io/fauc4) Thompson, A., & **Pollet, T.V.** (accepted). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ 
 
