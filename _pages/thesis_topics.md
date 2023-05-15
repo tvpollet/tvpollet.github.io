@@ -324,7 +324,9 @@ Some examples:
 
 * Observing gender differences in crossing the road while the light is still red or 'jaywalking'.
 
-Here is an example project.
+* Observing gender differences in using a button and waiting to cross.
+
+Here is an example project conducted at Northumbria University.
 
 * Eryn O'Dowd's [Bachelor thesis project](https://osf.io/vn4fu/){:target="_blank"} on gender differences in everyday risk taking. This was published in [Letters on Evolutionary Behavioral Science](https://lebs.hbesj.org/index.php/lebs/article/view/lebs.2018.65){:target="_blank"}
 
@@ -340,7 +342,8 @@ This builds on the above framework. All else being equal, men take more risks in
 * Observing gender differences in mask wearing on campus.
 * Observing gender differences in mask wearing on public transport.
 
-Here is [an example](https://doi.org/10.22330/he/37/036-045){:target="_blank"}
+Here is a paper we wrote on these behaviours:
+* Bainbridge, S., Allsopp, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology, 37,_ 36-45. [access .pdf here](https://doi.org/10.22330/he/37/036-045){:target="_blank"}
 
 ## Measuring student satisfaction: Do we know if you are satisfied?
 <a href="#thesis-introduction">back to top</a>
