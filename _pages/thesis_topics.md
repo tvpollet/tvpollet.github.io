@@ -67,7 +67,9 @@ These could be good candidates:
 ### Consumer Psychology
 
 * Scarcity, sex, and spending: Recession cues increase women's desire for men owning luxury products and men's desire to buy them. Studies 2-3 but requires large samples. [https://doi.org/10.1016/j.jbusres.2019.07.021](https://doi.org/10.1016/j.jbusres.2019.07.021) 	
-* [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021). 
+* [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021).
+* [Zero is a special price](https://people.duke.edu/~dandan/webfiles/PapersPI/Zero%20as%20a%20Special%20Price.pdf) - Many experiments but experiment 1 is a candidate.
+* [The deadweight loss of christmas](https://www.amherst.edu/media/view/104699/original/christmas.pdf). a study on giving cash at christmas! 
 
 ### Nature / Spirituality
 
@@ -152,6 +154,13 @@ Here is a paper relating to this project, following a similar approach:
 
 Nearly all work in psychology suffers from selection bias: some people will not sign up to certain studies. In the case of obesity, this could imply that there is range restriction: people exceeding a certain BMI might be unlikely to take part in advertised studies. Via coding samples of a leading journal and comparing those to the general population, we can find out if certain weight categories are over- or underrepresented.
 
+
+This project works best if there is more than one student.
+
+Here is a paper relating to this project, following a similar approach:
+
+**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article
+
 ### Which religions are covered in journals on the psychology of religion?
 
 Sampling is an issue for nearly all work in psychology. While christianity is the largest denomination across the world, other major religions such as Islam and Hinduism have over a billion followers. To which extent, do journals on the psychology religion also cover non-christian religious?
@@ -218,9 +227,6 @@ For this project you will need to use the free software [JASP](www.jasp.org){:ta
 ### Candidate scales to explore
 
 Some candidate measures to explore (others to be added soon). You might need to be on campus and logged in with the library to access these.
-
-
-
 
 
 #### Body image
@@ -343,6 +349,7 @@ This builds on the above framework. All else being equal, men take more risks in
 * Observing gender differences in mask wearing on public transport.
 
 Here is a paper we wrote on these behaviours:
+
 * Bainbridge, S., Allsopp, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology, 37,_ 36-45. [access .pdf here](https://doi.org/10.22330/he/37/036-045){:target="_blank"}
 
 ## Measuring student satisfaction: Do we know if you are satisfied?
