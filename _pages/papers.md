@@ -35,12 +35,12 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (accepted). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_
 
-[132.](https://doi.org/10.31234/osf.io/3zvhq) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (accepted). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ 
+[132.](https://doi.org/10.1177/00332941231176403) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (published). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ [https://doi.org/10.1177/00332941231176403](https://doi.org/10.1177/00332941231176403)
 
 [131.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (accepted). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ [doi:10.1007/s12144-023-04697-9](https://doi.org/10.1007/s12144-023-04697-9)
 
 [130.](https://doi.org/10.1177/00332941231164079
-) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_, 0(0). [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
+) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_,  [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
 )
 
 [129.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2023). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior, 52_, 291–300 [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
