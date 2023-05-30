@@ -284,6 +284,8 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Romantic relationships, LGBTQIA+ and sexual behaviour
 
+* [Romantic Disengagement Scale (RDS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2564288/){:target="_blank")
+* [Relational distance](https://doi.org/10.1111/1475-6811.00046){:target="_blank")
 * [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
 * [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
 * [The Dating Anxiety Scale for Adolescents](https://local.psy.miami.edu/media/college-of-arts-and-sciences/psychology/documents/faculty/alagreca/glickman_lagreca_2004.pdf){:target="_blank"}
