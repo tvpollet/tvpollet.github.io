@@ -302,7 +302,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
 * [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
-
+* [Art Experience Questionnaire](http://www.neurohumanitiestudies.eu/archivio/Empirical_Studies_of_the_Arts_2010_Chatterjee.pdf)
 
 
 ## Guardian 'blind dates' database.
