@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P., & Tovée, M.J. (2023, June 9). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2qfdb](https://doi.org/10.31234/osf.io/2qfdb)
+
 * Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, April 28). Involuntary Celibates report greater levels of depression but not anxiety or stress than controls. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2022, December 23rd). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
