@@ -54,6 +54,7 @@ These could be good candidates:
 
 ### Prosocial behaviour / altruism
 
+* [Private wishes: Gender similarities and differences](https://link.springer.com/article/10.1007/BF00291551). Study 2 is a good candidate. You will require a sizable sample.
 * [Sex Differences in Violent versus Non-Violent Life-Threatening Altruism](https://journals.sagepub.com/doi/full/10.1177/147470490900700309). You will require a sizable sample.
 * [Altruism between Romantic Partners: Biological Offspring as a Genetic Bridge between Altruist and Recipient](https://doi.org/10.1177/147470491000800312). You will require a sizable sample.
 

@@ -79,6 +79,8 @@ If you click [here](https://drive.google.com/open?id=1j2Wf3qsCiZ_kUL158TmVt_hFd-
 
 If you have never made a Qualtrics survey, have a look at [this video](https://www.youtube.com/watch?v=xkSUKTdD1Hs){:target="_blank"}, [this one](http://csulb.libguides.com/c.php?g=39320&p=250415){:target="_blank"} or [this one](https://www.youtube.com/watch?v=_hSo-ldj19k){:target="_blank"}. Kent state also has an [excellent tutorial](https://libguides.library.kent.edu/qualtrics){:target="_blank"}, if you don't want to watch videos. This [tutorial](https://erc.barnard.edu/qualtrics){:target="_blank"} by Barnard College (Columbia) is also useful.
 
+Also make sure, you have seen [this video tutorial](https://northumbria.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=9c2fd0b9-f8c6-4fff-83a6-b020008f8556){:target="_blank"} : It walks through all the things you need for your thesis, except for randomisation.
+
 ## Qualtrics: Tips and tricks.
 Before starting check out these [writing mistakes](https://www.qualtrics.com/blog/writing-survey-questions/){:target="_blank"} when making your survey.
 
