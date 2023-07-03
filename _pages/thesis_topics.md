@@ -133,7 +133,7 @@ The first time an effect is published, its effect size tends to be exaggerated (
 
 ### How diverse are the samples used in cross-cultural psychology?
 
-A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code articles from journals in cross-cultural psychology to find out which samples they use. I am open to including other journals or disciplines. Alternatively, you can explore standard textbooks to find out which cultures are covered in textbooks.
+A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code articles from journals in cross-cultural psychology to find out which samples they use. I am open to including other journals or disciplines. Alternatively, you can explore standard textbooks on cross-cultural psychology to find out which cultures are covered in textbooks.
 
 This project works best if there is more than one student.
 
@@ -160,15 +160,41 @@ This project works best if there is more than one student.
 
 Here is a paper relating to this project, following a similar approach:
 
-**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article
+**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
 
 ### Which religions are covered in journals on the psychology of religion?
 
 Sampling is an issue for nearly all work in psychology. While christianity is the largest denomination across the world, other major religions such as Islam and Hinduism have over a billion followers. To which extent, do journals on the psychology religion also cover non-christian religious?
 
+This project works best if there is more than one student.
+
+Here is a paper relating to this project, following a similar approach:
+
+**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
+
+
+### Which sports are covered in journals on sport psychology?
+
+As with everything we study, bias rears its ugly head. There is reason to suspect that some sports will be overrepresented as more money is invested in them (e.g., Basketball, football) and therefore likely receive disproportionate attention in the literature. Some sports are also on the fringes and have only recently been added to the Olympics (or scientific study). There might also be class based biases which play into this (e.g., a focus on the study of fencing over boxing or MMA).
+
+There are also extensions possible to this research project, for example, to which degree is the focus on 'elites' versus amateurs? Are men overrepresented compared to women?
+
+If you are into e-sports, a project is also possible examining which sports (/games) are covered.
+
+This project works best if there is more than one student.
+
+Here is a paper relating to this project, following a similar approach:
+
+**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
+
+
 ### Intelligence - but whose?
 
 The journal _Intelligence_ is the leading journal on intelligence. In this project, you will find out which samples they use to base their conclusion on. Is there representation from developing countries, for example, or are the samples predominantly focusing on developed countries?
+
+Here is a paper relating to this project, following a similar approach:
+
+**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
 
 ### Which are the most dominant personality models being used?
 
@@ -395,13 +421,13 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects in Cognitive Psychology. (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Consumer Psychology / Marketing (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Positive Psychology / Happiness studies.
-* Projects in Sport Psychology (unless they are dealing with social network analysis)
-* Projects in Organisational Psychology (unless they are dealing with social network analysis)
+* Projects in Sport Psychology (unless they are dealing with social network analysis or listed above)
+* Projects in Organisational Psychology (unless they are dealing with social network analysis or listed above)
 * Projects in Parapsychology.
 * Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
 * Projects on COVID-19 (but see exceptions above).
 * Projects on body image and the media.
-* Projects on nutrition, supplements, aromas.
+* Projects on nutrition, supplements, or aromas.
 * Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy - unless they are dealing with well thought out replications).
 * Projects on attachment theory and/or psychological trauma.
 * Projects on sleep.
