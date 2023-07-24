@@ -265,11 +265,12 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Body Checking Questionnaire](https://doi.org/10.1002/eat.10012){:target="_blank"}
 * [The Interpersonal Sexual Objectification Scale](https://doi.org/10.1111/j.1471-6402.2007.00351.x){:target="_blank"}
 
-#### Cyberpsychology / Social media
+#### Cyberpsychology / Social media / Gaming
 
 * [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
 * [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
 * [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
+* [Player Experience of Need Satisfaction and Game Experience Questionnaire](https://www.sciencedirect.com/science/article/pii/S1071581918302337){:target="_blank"}
 
 #### Social Psychology
 
