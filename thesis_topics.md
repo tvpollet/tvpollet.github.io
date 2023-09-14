@@ -143,7 +143,7 @@ Here is a paper relating to this project:
 
 ### How diverse are the samples used in journals covering psychopathology?
 
-A recurrent criticism of psychology is that samples largely are non-representative, and mostly consist of students (e.g., Arnett, 2008). In this project you will code articles from journals such as _Depression and Anxiety_ or _Schizophrenia Research_ to find out which samples they use. How many of these are clinical samples? How many are from non-Western societies?I am open to suggestions of other journals. 
+A recurrent criticism of psychology is that samples largely are non-representative, and mostly consist of students (e.g., Arnett, 2008). In this project you will code articles from journals such as _Depression and Anxiety_ or _Schizophrenia Research_ to find out which samples they use. How many of these are clinical samples? How many are from non-Western societies? I am open to suggestions of other journals. 
 
 This project works best if there is more than one student.
 
@@ -267,6 +267,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Cyberpsychology / Social media / Gaming
 
+* [Smartphone Application-Based Addiction Scale (SABAS)](https://doi.org/10.1007/s11469-017-9787-2)
 * [The Instagram Addiction Scale](https://akjournals.com/view/journals/2006/7/1/article-p158.xml){:target="_blank"}
 * [The Global Assessment of Trolling scale (GAIT)](https://doi.org/10.1016/j.paid.2014.01.016){:target="_blank"}
 * [The Tinder Motives Scale](https://doi.org/10.1016/j.chb.2017.01.028){:target="_blank"}
