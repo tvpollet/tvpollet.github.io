@@ -297,6 +297,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Health and clinical psychology
 
+* [The Birth Satisfaction Scale Revised](https://www.sciencedirect.com/science/article/pii/S0266613813002982){:target="_blank"}
 * [The Fear of being scale](https://www.researchgate.net/publication/257837688_Settling_for_Less_Out_of_Fear_of_Being_Single){:target="_blank"}
 * [The Short Anxiety Screening test](https://doi.org/10.1002/(SICI)1099-1166(199912)14:12<1062::AID-GPS67>3.0.CO;2-Q){:target="_blank"}
 * Various Measures for fear of heights (acrophobia): [Abelson & Curtis, 1989](https://www.sciencedirect.com/science/article/abs/pii/0005796789900910), [Cohen, 1977](https://www.sciencedirect.com/science/article/abs/pii/S0005789477801160) , [Steinman & Teachman, 2020](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3152668/#:~:text=The%20Acrophobia%20Questionnaire%2DAnxiety%20Subscale,6%20(extremely%20anxious)%20scale.)
