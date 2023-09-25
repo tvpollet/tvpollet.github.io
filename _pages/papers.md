@@ -19,7 +19,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023, June 12th). Stuck in the middle: Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
+* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023, September 25th). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
 * **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P., & Tovée, M.J. (2023, June 9). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2qfdb](https://doi.org/10.31234/osf.io/2qfdb)
 
