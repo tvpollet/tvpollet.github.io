@@ -19,11 +19,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, October 17th).The mental well-being of Involuntary Celibates. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
+
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023, September 25th). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
 * **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P., & Tovée, M.J. (2023, June 9). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2qfdb](https://doi.org/10.31234/osf.io/2qfdb)
-
-* Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, April 28). Involuntary Celibates report greater levels of depression but not anxiety or stress than controls. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
 
 * Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2022, August 15). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2583s](https://doi.org/10.31234/osf.io/2583s)
 
