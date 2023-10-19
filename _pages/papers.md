@@ -19,7 +19,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, October 17th).The mental well-being of Involuntary Celibates. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
+* Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, October 17th). The mental well-being of Involuntary Celibates. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023, September 25th). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
