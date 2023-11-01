@@ -19,8 +19,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* Delaney, T., **Pollet, T.V.**, & Cook, C. (2023, October 17th). The mental well-being of Involuntary Celibates. _PsyArxiv_ [https://doi.org/10.31234/osf.io/makdw](https://doi.org/10.31234/osf.io/makdw)
-
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023, September 25th). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
 
 * **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P., & Tovée, M.J. (2023, June 9). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2qfdb](https://doi.org/10.31234/osf.io/2qfdb)
@@ -35,11 +33,13 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2023/Accepted/in Press**
 
-[133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (accepted). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_
+[134.](https://doi.org/10.31234/osf.io/makdw) Delaney, T., **Pollet, T.V.**, & Cook, C. (accepted). The mental well-being of Involuntary Celibates. _Personality and Individual Differences_ 
 
-[132.](https://doi.org/10.1177/00332941231176403) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (published). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ [https://doi.org/10.1177/00332941231176403](https://doi.org/10.1177/00332941231176403)
+[133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (in press). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_ [https://doi.org/10.1037/aca0000604](https://doi.org/10.1037/aca0000604)
 
-[131.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (accepted). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ [doi:10.1007/s12144-023-04697-9](https://doi.org/10.1007/s12144-023-04697-9)
+[132.](https://doi.org/10.1177/00332941231176403) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2023). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ [https://doi.org/10.1177/00332941231176403](https://doi.org/10.1177/00332941231176403)
+
+[131.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2023). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ [doi:10.1007/s12144-023-04697-9](https://doi.org/10.1007/s12144-023-04697-9)
 
 [130.](https://doi.org/10.1177/00332941231164079
 ) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_,  [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
