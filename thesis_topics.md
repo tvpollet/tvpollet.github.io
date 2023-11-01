@@ -67,24 +67,32 @@ These could be good candidates:
 
 ### Consumer Psychology
 
-* Scarcity, sex, and spending: Recession cues increase women's desire for men owning luxury products and men's desire to buy them. Studies 2-3 but requires large samples. [https://doi.org/10.1016/j.jbusres.2019.07.021](https://doi.org/10.1016/j.jbusres.2019.07.021) 	
+* Scarcity, sex, and spending: Recession cues increase women's desire for men owning luxury products and men's desire to buy them. Studies 2-3 but requires large samples. [https://doi.org/10.1016/j.jbusres.2019.07.021](https://doi.org/10.1016/j.jbusres.2019.07.021){:target="_blank"}
 * [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021).
 * [Zero is a special price](https://people.duke.edu/~dandan/webfiles/PapersPI/Zero%20as%20a%20Special%20Price.pdf) - Many experiments but experiment 1 is a candidate.
 * [The deadweight loss of christmas](https://www.amherst.edu/media/view/104699/original/christmas.pdf). a study on giving cash at christmas! 
 
 ### Nature / Spirituality
 
-* [Spirituality mediates the relationship between engagement with nature and psychological wellbeing](https://doi.org/10.1016/j.jenvp.2013.07.013) - this will require a large sample.
-* [Nature Connectedness and Eudaimonic Well-Being: Spirituality as a Potential Mediator](https://www.researchgate.net/profile/Andrew-Francis-8/publication/271079550_Nature_Connectedness_and_Eudaimonic_Well-Being_Spirituality_as_a_Potential_Mediator/links/54bdedc30cf218d4a16a4723/Nature-Connectedness-and-Eudaimonic-Well-Being-Spirituality-as-a-Potential-Mediator.pdf) This will require a large sample.
+* [Spirituality mediates the relationship between engagement with nature and psychological wellbeing](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} - this will require a large sample.
+* [Nature Connectedness and Eudaimonic Well-Being: Spirituality as a Potential Mediator](https://www.researchgate.net/profile/Andrew-Francis-8/publication/271079550_Nature_Connectedness_and_Eudaimonic_Well-Being_Spirituality_as_a_Potential_Mediator/links/54bdedc30cf218d4a16a4723/Nature-Connectedness-and-Eudaimonic-Well-Being-Spirituality-as-a-Potential-Mediator.pdf){:target="_blank"} This will require a large sample.
 
 ### Personality / Organisational Psychology
 
-* 	[The HEXACO and five-factor models of personality in relation to RIASEC vocational interests](https://doi.org/10.1016/j.jvb.2012.05.006)
-*  [“The Darkest of all” The relationship between the Dark Triad traits and organizational citizenship behavior](https://doi.org/10.1016/j.paid.2018.04.026)
-*  [Are Dishonest Extraverts More Harmful than Dishonest Introverts? The Interaction Effects of Honesty-Humility and Extraversion in Predicting Workplace Deviance](https://doi.org/10.1111/j.1464-0597.2011.00445.x)
+* 	[The HEXACO and five-factor models of personality in relation to RIASEC vocational interests](https://doi.org/10.1016/j.jvb.2012.05.006){:target="_blank"}
+*  [“The Darkest of all” The relationship between the Dark Triad traits and organizational citizenship behavior](https://doi.org/10.1016/j.paid.2018.04.026){:target="_blank"}
+*  [Are Dishonest Extraverts More Harmful than Dishonest Introverts? The Interaction Effects of Honesty-Humility and Extraversion in Predicting Workplace Deviance](https://doi.org/10.1111/j.1464-0597.2011.00445.x){:target="_blank"}
+
+### Person perception
+
+* [Larger than Life: Humans' Nonverbal Status Cues Alter Perceived Size](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0005707#s2). Study 2 is a good candidate.
+
+### Traffic Behaviour
+
+* [College students’ prevalence and perceptions of text messaging while driving](https://doi.org/10.1016/j.aap.2011.03.003){:target="_blank"}
 
 ### Other
-* The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf)
+* The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf){:target="_blank"}
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
 
