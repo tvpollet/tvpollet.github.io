@@ -19,8 +19,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023, September 25th). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _PsyArxiv_ [https://doi.org/10.31234/osf.io/mhdnc](https://doi.org/10.31234/osf.io/mhdnc)
-
 * **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P., & Tovée, M.J. (2023, June 9). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2qfdb](https://doi.org/10.31234/osf.io/2qfdb)
 
 * Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2022, August 15). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2583s](https://doi.org/10.31234/osf.io/2583s)
@@ -33,7 +31,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2023/Accepted/in Press**
 
-[134.](https://doi.org/10.31234/osf.io/makdw) Delaney, T., **Pollet, T.V.**, & Cook, C. (accepted). The mental well-being of Involuntary Celibates. _Personality and Individual Differences_ 
+[135.](https://doi.org/10.31234/osf.io/mhdnc) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (accepted). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education_ [preprint](https://doi.org/10.31234/osf.io/mhdnc)
+
+[134.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T., **Pollet, T.V.**, & Cook, C. (in press). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 
 
 [133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (in press). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_ [https://doi.org/10.1037/aca0000604](https://doi.org/10.1037/aca0000604)
 
@@ -41,8 +41,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [131.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2023). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ [doi:10.1007/s12144-023-04697-9](https://doi.org/10.1007/s12144-023-04697-9)
 
-[130.](https://doi.org/10.1177/00332941231164079
-) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_,  [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
+[130.](https://doi.org/10.1177/00332941231164079) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_,  [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
 )
 
 [129.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2023). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior, 52_, 291–300 [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
