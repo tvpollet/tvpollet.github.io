@@ -283,6 +283,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Social Psychology
 
+* [the 2-Way Social Support Scale](https://doi.org/10.1080/00223891.2011.594124){:target="_blank"}
 * [The 12 Item Social and Economic Conservatism Scale (SECS)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0082131){:target="_blank"}
 * [The Bullshit Receptivity (BSR) scale](https://scottbarrykaufman.com/wp-content/uploads/2016/01/On-the-reception-and-detection-of-pseudo-profound-bullshit.pdf){:target="_blank"} - large project
 * [The left-wing authoritarianism scale](https://doi.org/10.1016/j.paid.2020.110251){:target="_blank"} - the LWA should be the counterpart to the Right-Wing Authoritarianism scale.
