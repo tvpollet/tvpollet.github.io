@@ -29,6 +29,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2023/Accepted/in Press**
 
+[137.](https://doi.org/10.31234/osf.io/s4znd) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (accepted). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE_
+
 [136.](https://doi.org/10.31234/osf.io/2583s) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2022, August 15). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace_ [Preprint](https://doi.org/10.31234/osf.io/2583s)
 
 [135.](https://doi.org/10.31234/osf.io/mhdnc) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education_ [https://doi.org/10.1080/03075079.2023.2284808](https://doi.org/10.1080/03075079.2023.2284808)
@@ -37,7 +39,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (2023). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_ [https://doi.org/10.1037/aca0000604](https://doi.org/10.1037/aca0000604)
 
-[132.](https://doi.org/10.1177/00332941231176403) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2023). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_ [https://doi.org/10.1177/00332941231176403](https://doi.org/10.1177/00332941231176403)
+[132.](https://doi.org/10.1177/00332941231176403) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2023). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_, [https://doi.org/10.1177/00332941231176403](https://doi.org/10.1177/00332941231176403)
 
 [131.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2023). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology_ [doi:10.1007/s12144-023-04697-9](https://doi.org/10.1007/s12144-023-04697-9)
 
