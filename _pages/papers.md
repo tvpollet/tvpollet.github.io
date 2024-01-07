@@ -33,7 +33,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [136.](https://doi.org/10.31234/osf.io/2583s) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (accepted). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace_ [Preprint](https://doi.org/10.31234/osf.io/2583s)
 
-[134.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 112474. [https://doi.org/10.1016/j.paid.2023.112474](https://doi.org/10.1016/j.paid.2023.112474)
+[135.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 112474. [https://doi.org/10.1016/j.paid.2023.112474](https://doi.org/10.1016/j.paid.2023.112474)
 
 ## **2023**
 
