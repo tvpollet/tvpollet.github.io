@@ -35,7 +35,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [134.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 112474. [https://doi.org/10.1016/j.paid.2023.112474](https://doi.org/10.1016/j.paid.2023.112474)
 
-## 2023
+## **2023**
 
 [134.](https://doi.org/10.31234/osf.io/mhdnc) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education_ [https://doi.org/10.1080/03075079.2023.2284808](https://doi.org/10.1080/03075079.2023.2284808)
 
