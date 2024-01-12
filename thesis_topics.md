@@ -298,9 +298,10 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 
 
-#### Jealousy / rivalry
+#### Jealousy / Envy / rivalry
 
 * [The Intrasexual Competition Scale](https://www.researchgate.net/profile/Maryanne_Fisher/publication/247850197_Individual_differences_in_intrasexual_competition/links/55083bdf0cf27e990e09676a/Individual-differences-in-intrasexual-competition.pdf){:target="_blank"}
+* [Benign and malicious envy](https://doi.org/10.1177/0146167214564959){:target="_blank"} - large project.
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 
 
