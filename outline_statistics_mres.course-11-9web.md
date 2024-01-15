@@ -57,17 +57,17 @@ You can find materials relating to induction [here](/induction_PY0794).
 ## Lectures.
 The academic calendar is in your programme handbook. For the Quant. Part of the module in semester 1, we will work through 11 lectures in 12 weeks, notice that there will be an academic development week with no lecture after week 5. Depending on timing the content of this schedule might shift a bit.
 
-1. 27/9. Introduction. R Studio and R environment. Basics of Markdown. 
-2. 4/10. Data visualisation. (+ basic tests)
-3. 11/10. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
-4. 18/10. Correlation and multiple regression. Logistic Regression.
-5. 25/10. Moderation analyses. 
-6. 8/11. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
-7. 15/11. Exploratory Factor Analysis.
-8. 22/11. Confirmatory Factor Analysis CFA I
-9. 29/11. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
-10. 6/12. Multilevel models I
-11. 13/12. Multilevel models II
+1. 30/1. Introduction. R Studio and R environment. Basics of Markdown. 
+2. 6/2. Data visualisation. (+ basic tests)
+3. 13/2. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
+4. 20/2. Correlation and multiple regression. Logistic Regression.
+5. 27/2. Moderation analyses. 
+6. 12/3. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
+7. 19/3. Exploratory Factor Analysis.
+8. 16/4. Confirmatory Factor Analysis CFA I
+9. 23/4. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
+10. 30/4. Multilevel models I + II
+11. 7/5. Buffer / Revision week / queries.
 
 The handouts for every course lecture will be available via the electronic learning portal. There is no need to take extensive notes, as all the key information will be on the sheets.
 
@@ -97,7 +97,7 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 
 ## Contact.
 * Discussion board. This is the preferred method, as several of your colleagues will have either the same or very similar queries! 
-* Ask me any comprehension questions during class breaks, if you want a meeting or send me an email. 
+* Ask me any comprehension questions during class breaks or send me an email. Note that I might refer you to discussion board.
 * Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual. These meetings are by exception only as you should raise any queries in class or via the discussion board.
 * email: [thomas.pollet@northumbria.ac.uk](mailto:thomas.pollet@northumbria.ac.uk.)
 * twitter: @tvpollet. 
@@ -131,7 +131,7 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 * [Data Colada](www.datacolada.org)
 * [Dorothy Bishop](http://deevybee.blogspot.com/)
 
-### People to follow on Twitter.
+### People to follow on Twitter / Mastodon / Bluesky.
 * Nathan Yau
 * Hadley Wickham
 * Edward Tufte
@@ -143,6 +143,12 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 ### Changes made in response to student feedback.
 
 I take on board relevant study feedback. Below I only list the most meaningful changes.
+
+#### 2023-2024
+
+* Semester 2 module. Now preceded by programming course.
+* Short video(s) on theming
+* Revised and updated course content
 
 #### 2022-2023
 * Shorter videos on Rstudio and R to be released.

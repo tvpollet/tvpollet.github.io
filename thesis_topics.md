@@ -16,7 +16,12 @@ header_text: Thesis Topics
 
 Hurray! You are thinking about doing your thesis project with me (at any level). On this page I will provide some topics which I would (prefer to) supervise. It also has some further information on the projects. This is still in progress, all feedback welcome. Do also alert me to dead links, which I will fix. Information on the thesis supervision itself can be found [here](https://tvpollet.github.io/thesis_projects){:target="_blank"}.
 
-I **strongly** prefer that you pick a topic within the set below. My experience is that preset topics tend to lead to higher marks. If you want to go off the beaten path and suggest your own project: I am a behavioural scientist with an interest in methodology. I work broadly on social relationships, so topics akin to social psychology, relationship research, evolutionary psychology, and personality psychology fall within my interests. I'll consider projects which you have developed / proposed in those areas, but there is no 'unlimited' choice. Some projects also simply cannot be done as part of your degree, due to legal, practical, ethical, or scientific reasons. With 'scientific' reasons I mean that what you have in mind might be so complex that it cannot be unpacked in a single project. (For example, what you have in mind is a complex mediation model, but it is unlikely that you are able to collect the data to test such a model). My experience is that students also propose projects which tend to be unrealistic, so ask yourself whether your project is all that it is cracked up to be. If it is not, then why not opt for a replication study, for example. I do not weigh 'novelty' in my judgment of your thesis or whether your findings are 'significant' or not. I also provide a list of topics which I prefer not to supervise, to help guide you.
+I **strongly** prefer that you pick a topic within the set below. My experience is that preset topics tend to lead to higher marks. Students also face less agony in terms of decisions.
+
+If you want to go off the beaten path and suggest your own project: I am a behavioural scientist with an interest in methodology. 
+I work broadly on social relationships, so topics akin to **social psychology, relationship research, evolutionary psychology, and personality psychology** fall within my interests. I'll consider projects which you have developed / proposed in those areas, but there is **no 'unlimited' choice**. Some projects also simply cannot be done as part of your degree, due to legal, practical, ethical, or scientific reasons. With 'scientific' reasons I mean that what you have in mind might be so complex that it cannot be unpacked in a single project - it is a question for say a PhD project. (For example, what you have in mind is a complex mediation model, but it is unlikely that you are able to collect the data to test such a model). 
+
+My experience is that students also propose projects which tend to be unrealistic, so ask yourself whether your project is all that it is cracked up to be. If it is not, then why not opt for a replication study, for example. I do not weigh 'novelty' in my judgment of your thesis or whether your findings are 'significant' or not. I also provide a list of topics which I prefer not to supervise, to help guide you but I am always open to be convinced.
 
 # Embarras du choix (A wide range of topics to choose from)
 
@@ -27,7 +32,7 @@ I **strongly** prefer that you pick a topic within the set below. My experience 
 
 As you should by now know, psychology is facing a replication crisis (e.g., Ritchie, 2020). Therefore, we should aim to routinely replicate findings from the published literature (Zwaan et al., 2018).
 
-Beware that you will need to be able to as closely replicate the original study as possible and that I expect you to obtain a sample size which is 2.5x the original sample size. Therefore these types of projects work well if there is more than one student but you can also do one your own.
+Beware that you will need to be able to as closely replicate the original study as possible and that I expect you to obtain a sample size which is 2.5x the original sample size. Therefore, these types of projects work well if there is more than one student but you can also do one your own.
 
 Good candidate projects have straightforward designs, have the materials available or accurately enough described to allow for replication.
 
@@ -38,7 +43,7 @@ Here are some examples of student projects which were based on replications.
 
 There is some variation, and you can also suggest your own, but I am particularly interested in replication projects dealing with **interpersonal relationships** (e.g., **jealousy**, **love**).
 
-These could be good candidates:
+These could be good candidates or starting points:
 
 ### Relationships / Jealousy.
 
@@ -122,7 +127,7 @@ Read more here:
 
 ### Network analysis of specific groups.
 
-The prerequisite is that you will need access to a specific interesting group (e.g., carers for adults with learning disabilities, climbers, refugees, army veterans, professional poker players, Dungeon & Dragons enthusiasts, CS go players, ... -- it can be _any_ interesting group...). For example, you are part of this community or have very strong links to people in this community. You will typically need around 200 participants, if you would want to make robust inferences. For example, you could map out the social support networks of people who are part of this group but also who these people are turning to for support (same gender, same interest, friends/colleagues/kin?).
+The prerequisite is that you will need access to a specific interesting group (e.g., carers for adults with learning disabilities, climbers, teachers, refugees, army veterans, professional poker players, Dungeon & Dragons enthusiasts, farmers, knitters, CS Go players, ... -- it can be _any_ interesting group...). For example, you are part of this community or have very strong links to people in this community. You will typically need around 200 participants, if you would want to make robust inferences. For example, you could map out the social support networks of people who are part of this group but also who these people are turning to for support (same gender, same interest, friends/colleagues/kin?).
 
 Here is an example borne out of a student project. This project looked at well-being and social support networks of people with Type I diabetes.
 
@@ -296,8 +301,6 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Vaccine Hesitancy Scale](https://doi.org/10.1016/j.vaccine.2017.12.043){:target="_blank"}
 * [The Liberal Feminist Attitude and Ideology Scale](https://link.springer.com/article/10.1007/BF01547807){:target="_blank"}
 
-
-
 #### Jealousy / Envy / rivalry
 
 * [The Intrasexual Competition Scale](https://www.researchgate.net/profile/Maryanne_Fisher/publication/247850197_Individual_differences_in_intrasexual_competition/links/55083bdf0cf27e990e09676a/Individual-differences-in-intrasexual-competition.pdf){:target="_blank"}
@@ -338,6 +341,8 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Miscellaneous
 
+* [Boredom in free time](https://doi.org/10.1080/02614360122569){:target="_blank"}. Bored?
+* [Multidimensional State Boredom scale](https://doi.org/10.1177/1073191111421303). Continuously bored? large project.
 * [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
 * [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
