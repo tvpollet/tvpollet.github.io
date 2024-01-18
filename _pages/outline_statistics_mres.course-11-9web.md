@@ -37,7 +37,7 @@ In addition, you will learn:
 * Each assignment counts for 30% of your total mark (2x30% = 60%). The Qual. Part accounts for the remaining 40%. The guidelines are provided on the elearning portal. 
 * Style and presentation are important. Please closely follow the guidelines.
 * At the end of ***each*** session, you should apply what you have learnt in your assignment. Do not leave it to the last weeks!
-* For fairness and transparency, I will ***only answer questions on the assignments via the elearning portal***. When posting a question make sure it is clearly phrased. Ensure that the problem is not due to your machine, i.e. ensure that you have run your code on a different machine as well. Contrary to popular belief there are bad questions, rather bad ways in which to ask for [help](https://www.r-project.org/posting-guide.html). When asking a question on the forum, clearly indicate what you have already done to tackle the problem. For example,  include a link to a post with a similar problem to indicate that you have searched for a solution, but that your problem still remains. I also encourage you to find help out there in the real world (e.g., post a question on [www.stats.stackexchange.com](www.stats.stackexchange.com)). Also, make sure your problem is reproducible (indicate which packages are loaded, which system you are on, etc.). I expect you to have worked through the exercise corresponding to the lecture _before_ asking the question. If you have not attempted to complete the exercise, then my first response to your question will be, have you tried working through the exercise? Note that when I answer, I might not give you the direct answer as then you would just copy that, rather I will point to the resources which will likely allow you to resolve your issue. I hope you understand, that there is little value in me just giving you the code, rather than you working through the solution and finding out why your solution did not work. There might be some issues which you cannot resolve, even after help, you should then consider moving on to the next item in the assignment, after you have given it your all. There are plenty of items on the list and you can get a very good grade, even if you are unable to solve a particular question.
+* For fairness and transparency, I will ***only answer questions on the assignments via the elearning portal***. When posting a question make sure it is clearly phrased. Ensure that the problem is not due to your machine, i.e. ensure that you have run your code on a different machine as well. Contrary to popular belief there are bad questions, rather bad ways in which to ask for [help](https://www.r-project.org/posting-guide.html). When asking a question on the forum, clearly indicate what you have already done to tackle the problem. For example, include a link to a post with a similar problem to indicate that you have searched for a solution, but that your problem still remains. I also encourage you to find help out there in the real world (e.g., post a question on [www.stats.stackexchange.com](www.stats.stackexchange.com)). Also, make sure your problem is reproducible (indicate which packages are loaded, which system you are on, etc.). I expect you to have worked through the exercise corresponding to the lecture _before_ asking the question. If you have not attempted to complete the exercise, then my first response to your question will be, have you tried working through the exercise? Note that when I answer, I might not give you the direct answer as then you would just copy that, rather I will point to the resources which will likely allow you to resolve your issue. I hope you understand, that there is little value in me just giving you the code, rather than you working through the solution and finding out why your solution did not work. There might be some issues which you cannot resolve, even after help, you should then consider moving on to the next item in the assignment, after you have given it your all. There are plenty of items on the list and you can get a very good grade, even if you are unable to solve a particular question.
 * **If you run into issues please post them on the discussion board as ***early*** as you can, I might not be able to reply if you leave it right up to the deadline.** You should count on 2, max. 3 working days for an initial reply in the forum (if I am in office).
 
 ## Attendance.
@@ -57,17 +57,17 @@ You can find materials relating to induction [here](/induction_PY0794).
 ## Lectures.
 The academic calendar is in your programme handbook. For the Quant. Part of the module in semester 1, we will work through 11 lectures in 12 weeks, notice that there will be an academic development week with no lecture after week 5. Depending on timing the content of this schedule might shift a bit.
 
-1. 28/9. Introduction. R Studio and R environment. Basics of Markdown. 
-2. 5/10. Data visualisation. (+ basic tests)
-3. 12/10. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
-4. 19/10. Correlation and multiple regression. Logistic Regression.
-5. 26/10. Moderation analyses. 
-6. 9/11. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
-7. 16/11. Exploratory Factor Analysis.
-8. 23/11. Confirmatory Factor Analysis CFA I
-9. 30/11. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
-10. 7/12. Multilevel models I
-11. 14/12. Multilevel models II
+1. 30/1. Introduction. R Studio and R environment. Basics of Markdown. 
+2. 6/2. Data visualisation. (+ basic tests)
+3. 13/2. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
+4. 20/2. Correlation and multiple regression. Logistic Regression.
+5. 27/2. Moderation analyses. 
+6. 12/3. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
+7. 19/3. Exploratory Factor Analysis.
+8. 16/4. Confirmatory Factor Analysis CFA I
+9. 23/4. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
+10. 30/4. Multilevel models I + II
+11. 7/5. Buffer / Revision week / queries.
 
 The handouts for every course lecture will be available via the electronic learning portal. There is no need to take extensive notes, as all the key information will be on the sheets.
 
@@ -77,7 +77,7 @@ Inevitably, there are things which I cannot cover (but which are very interestin
 
 * Bayesian statistics / Equivalence testing.
 * Statistical simulation. Permutation testing.
-* Time series analysis. Growth curve modelling.
+* Time series analysis. Cox Regression / Growth curve modelling.
 * Text mining / emoji analysis
 * Non-linear modelling / Ordinal logistic models / Probit models  / curve fitting.
 * Power analysis.
@@ -85,6 +85,7 @@ Inevitably, there are things which I cannot cover (but which are very interestin
 * Item response theory.
 * Machine learning / Data mining.
 * Graph theory / Directed acyclic graphs / Social network analysis.
+* [Generate art](https://towardsdatascience.com/getting-started-with-generative-art-in-r-3bc50067d34b)
 * Meta-analysis but see [here](https://tvpollet.github.io/Meta-analysis_course).
 
 Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [JASP](https://jasp-stats.org/)) but again feel free to ask me about those.
@@ -96,21 +97,21 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 
 ## Contact.
 * Discussion board. This is the preferred method, as several of your colleagues will have either the same or very similar queries! 
-* Ask me any comprehension questions during class breaks, if you want a meeting or send me an email. 
-* Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual
+* Ask me any comprehension questions during class breaks or send me an email. Note that I might refer you to discussion board.
+* Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual. These meetings are by exception only as you should raise any queries in class or via the discussion board.
 * email: [thomas.pollet@northumbria.ac.uk](mailto:thomas.pollet@northumbria.ac.uk.)
 * twitter: @tvpollet. 
 * Phone details are on the learning platform.
 
 
-I typically reply within max. 3 business days (unless you receive an out of office). Note that I will have limited availability during the christmas break. So please post questions early
+I typically reply within max. 3 business days (unless you receive an out of office). Note that I will have limited availability during the christmas break. So please post questions early on the blackboard
 
 ## Resources.
 Check the [RStudio website](https://www.rstudio.com/). 
 
 Give [swirl](https://swirlstats.com/) a go!
 
-I have compiled a (non-definitive) [reading list](http://readinglists.northumbria.ac.uk/lists/02F41246-E258-26ED-8B9C-963FD7A06F7D.html)
+I have compiled a (non-definitive) [reading list](http://readinglists.northumbria.ac.uk/lists/02F41246-E258-26ED-8B9C-963FD7A06F7D.html). The information on my personal website is more useful.
 
 Books and other stuff:
 
@@ -130,7 +131,7 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 * [Data Colada](www.datacolada.org)
 * [Dorothy Bishop](http://deevybee.blogspot.com/)
 
-### People to follow on Twitter.
+### People to follow on Twitter / Mastodon / Bluesky.
 * Nathan Yau
 * Hadley Wickham
 * Edward Tufte
@@ -142,6 +143,17 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 ### Changes made in response to student feedback.
 
 I take on board relevant study feedback. Below I only list the most meaningful changes.
+
+#### 2023-2024
+
+* Semester 2 module. Now preceded by programming course.
+* Short video(s) on theming
+* Revised and updated course content
+
+#### 2022-2023
+* Shorter videos on Rstudio and R to be released.
+* Move in time table.
+* Revised and updated some course content.
 
 #### 2021-2022
 * Positive reception of worksheets and 'flipped classroom', so implemented for this year.
