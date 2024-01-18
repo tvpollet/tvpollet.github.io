@@ -556,7 +556,7 @@ flights<-(nycflights13::flights)
 View(flights)
 ```
 ```{r, out.width = "300px", echo=FALSE}
-knitr::include_graphics("https://pics.me.me/this-is-bran-bran-knows-everything-yet-he-does-not-27295932.png")
+knitr::include_graphics("https://qph.cf2.quoracdn.net/main-qimg-fc65a968e2e26ed910c21d77aee71846-pjlq")
 ```
 
 

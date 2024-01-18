@@ -1,8 +1,18 @@
 ---
 title: "Solution Lecture 1"
-output: html_document
-author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+author: "Prof. Thomas Pollet, Northumbria University, UK (thomas.pollet@northumbria.ac.uk)"
 date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer/)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
 ---
 
 ## R Markdown for Lecture 1 exercise.
