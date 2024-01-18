@@ -263,15 +263,15 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [34.](pdfs/Pollet_et_al_2012_JBS_grandparents.pdf) **Pollet, T.V.,** Nelissen, M. & Nettle, D. (2012). A ‘gendered need’ explanation does not fully explain lineage based differences in grandparental investment found in a large British Cohort study. _Journal of Biosocial Science, 44,_ 377-381.
 
-[33.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjEzZDFiMGMzMmJmNGRmNjM) Stirrat, M., Stulp, G. & **Pollet, T.V.** (2012). Bizygomatic width is associated with death by contact violence in a forensic sample: Narrow-faced males are more likely to die from contact violence. _Evolution and Human Behavior, 33,_ 551-556.
+[33.](pdfs/Stirrat_et_al_2012_EHB_Face.pdf) Stirrat, M., Stulp, G. & **Pollet, T.V.** (2012). Bizygomatic width is associated with death by contact violence in a forensic sample: Narrow-faced males are more likely to die from contact violence. _Evolution and Human Behavior, 33,_ 551-556.
 
-[32.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjY5NTU3ZTA5YzY1Y2QxMGI) Stulp, G., Verhulst, S., **Pollet, T.V.** & Buunk, A.P. (2012). The Effect of Female Height on Reproductive Success Is Negative in Western Populations, But More Variable in Non-Western Populations. _American Journal of Human Biology, 24,_ 486-494.
+[32.](pdfs/Stulp_et_al_2012_AJHB_Female_Height.pdf) Stulp, G., Verhulst, S., **Pollet, T.V.** & Buunk, A.P. (2012). The Effect of Female Height on Reproductive Success Is Negative in Western Populations, But More Variable in Non-Western Populations. _American Journal of Human Biology, 24,_ 486-494.
 
-[31.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjVmOGIwZTMzYTYxZThkM2Q) Cobey, K.D., Buunk, A.P., Roberts S.C., Klipping, C., Appels, N., Zimmerman, Y., Coelingh Bennink H. & **Pollet, T.V.** (2012). Reported jealousy differs as a function of menstrual cycle stage and contraceptive pill use: a within-subjects investigation. _Evolution and Human Behavior, 33,_ 395-401.
+[31.](pdfs/Cobey_et_al_2012_EHB.pdf) Cobey, K.D., Buunk, A.P., Roberts S.C., Klipping, C., Appels, N., Zimmerman, Y., Coelingh Bennink H. & **Pollet, T.V.** (2012). Reported jealousy differs as a function of menstrual cycle stage and contraceptive pill use: a within-subjects investigation. _Evolution and Human Behavior, 33,_ 395-401.
 
-[30.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjY2YzUzMWJmZGQ3ZjQ5M2Y) Kuppens, T., **Pollet, T.V.,** Teixeira, C.P., Demoulin, S., Roberts, S.C. & Little, A.C. (2012). Emotions in context: Anger causes ethnic bias but not gender bias in men but not women. _European Journal of Social Psychology, 42,_ 432-441.
+[30.](pdfs/Kuppens_et_al_2012_EJSP.pdf) Kuppens, T., **Pollet, T.V.,** Teixeira, C.P., Demoulin, S., Roberts, S.C. & Little, A.C. (2012). Emotions in context: Anger causes ethnic bias but not gender bias in men but not women. _European Journal of Social Psychology, 42,_ 432-441.
 
-[29.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjI3NDA2NTQ0YWZkZDhkN2I) Buunk, A.P., **Pollet, T.V.** & Dubbs, S.L. (2012). Parental Control over Mate Choice to Prevent Marriages with Out-group Members: A Study among Mestizos, Mixtecs, and Blacks in Mexico. _Human Nature, 23,_ 360-374.
+[29.](pdfs/Buunk_et_al_2012_Hum_Nat.pdf) Buunk, A.P., **Pollet, T.V.** & Dubbs, S.L. (2012). Parental Control over Mate Choice to Prevent Marriages with Out-group Members: A Study among Mestizos, Mixtecs, and Blacks in Mexico. _Human Nature, 23,_ 360-374.
 
 [28.](https://link.springer.com/article/10.1007%2Fs00265-011-1283-2) Stulp, G., **Pollet, T.V.,** Verhulst, S. & Buunk, A.P. (2012). A curvilinear effect of height on reproductive success in human males. _Behavioral Ecology and Sociobiology, 66,_ 375-384.
 
@@ -281,13 +281,13 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [26.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0020497) Stulp, G., Verhulst, S., **Pollet, T.V.,** Nettle, D. & Buunk, A.P. (2011). Parental height differences predict the need for an emergency caesarean section. _PLoS ONE, 6,_ e20497.
 
-[25.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjMyMzE0MGRjM2MxMjE4OTU) **Pollet, T.V.,** van der Meij, L., Cobey, K.D. & Buunk, A.P. (2011). Testosterone levels and their associations with lifetime number of opposite sex partners and remarriage in a large sample of American elderly men and women. _Hormones and Behavior, 60,_ 72-77.
+[25.](pdfs/Pollet_et_al_2011_H_B.pdf) **Pollet, T.V.,** van der Meij, L., Cobey, K.D. & Buunk, A.P. (2011). Testosterone levels and their associations with lifetime number of opposite sex partners and remarriage in a large sample of American elderly men and women. _Hormones and Behavior, 60,_ 72-77.
 
-[24.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjZiMDJiOWNiZWM4ZjU1MzY) **Pollet, T.V.,** Roberts, S.G.B. & Dunbar, R.I.M. (2011). Extraverts have larger social network layers but do not feel emotionally closer to individuals at any layer. _Journal of Individual Differences, 32,_ 161-169.
+[24.](pdfs/Pollet_et_al_2011_JID_paper.pdf) **Pollet, T.V.,** Roberts, S.G.B. & Dunbar, R.I.M. (2011). Extraverts have larger social network layers but do not feel emotionally closer to individuals at any layer. _Journal of Individual Differences, 32,_ 161-169.
 
-[23.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjVkMDBkMDAyYmE3ZTQ3YTQ) Jokela, M., Alvergne, A., **Pollet, T.V.** & Lummaa, V. (2011). Reproductive Behavior and Personality Traits of the Five Factor Model. _European Journal of Personality, 25,_ 487-500.
+[23.](pdfs/Jokela_et_al_2011_EJP.pdf) Jokela, M., Alvergne, A., **Pollet, T.V.** & Lummaa, V. (2011). Reproductive Behavior and Personality Traits of the Five Factor Model. _European Journal of Personality, 25,_ 487-500.
 
-[22.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjIyMjZkNGQyYzg0NDI0YmE) **Pollet, T.V.,** Roberts, S.G.B. & Dunbar, R.I.M. (2011). Use of social network sites and instant messaging does not lead to increased offline social network size, or to emotionally closer relationships with offline network members. _Cyberpsychology, Behavior and Social Networking, 14,_ 253-258.
+[22.](pdfs/Pollet_et_al_2011_cyberpsychology.pdf) **Pollet, T.V.,** Roberts, S.G.B. & Dunbar, R.I.M. (2011). Use of social network sites and instant messaging does not lead to increased offline social network size, or to emotionally closer relationships with offline network members. _Cyberpsychology, Behavior and Social Networking, 14,_ 253-258.
 
 [21.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4Ojg1M2Y2MjQ5OTA0NjE0ZQ) Cobey, K.D., **Pollet, T.V.,** Roberts, S.C. & Buunk, A.P. (2011). Hormonal birth control use and relationship jealousy: Evidence for estrogen dosage effects. _Personality and Individual Differences, 50,_ 315-317.
 
