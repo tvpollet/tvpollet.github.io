@@ -203,7 +203,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2014**
 
-[61.](https://www.degruyter.com/view/j/anre.2014.77.issue-3/anre-2014-0023/anre-2014-0023.xml?format=INT) Ludwig, Y.S. & **Pollet, T.V.** (2014). When men appear smaller or larger than they really are: preliminary evidence that women are fooled by size illusions in attractiveness judgment tasks. _Anthropological Review, 77,_ 299-329.
+[61.](http://tvpollet.github.io/pdfs/Ludwig_Pollet_2014_Anth_Review.pdf) Ludwig, Y.S. & **Pollet, T.V.** (2014). When men appear smaller or larger than they really are: preliminary evidence that women are fooled by size illusions in attractiveness judgment tasks. _Anthropological Review, 77,_ 299-329.
 
 [60.](http://journal.frontiersin.org/article/10.3389/fpsyg.2014.01110/full) Kuppens, T. & **Pollet, T.V.** (2014). Mind the level: Problems with two recent nation-level analyses in psychology. _Frontiers in Psychology, 5,_ 1110.
 
@@ -227,11 +227,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2013**
 
-[50.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjYzNjMxYTZkNWRlY2NlZmI) Cobey, K.D., Buunk, A.P., **Pollet, T.V.,** Klipping, C. & Roberts S.C. (2013). Men perceive their female partners, and themselves, as more attractive around ovulation. _Biological Psychology, 94,_ 513-516.
+[50.](http://tvpollet.github.io/pdfs/Cobey_et_al_2013_bio_psych.pdf) Cobey, K.D., Buunk, A.P., **Pollet, T.V.,** Klipping, C. & Roberts S.C. (2013). Men perceive their female partners, and themselves, as more attractive around ovulation. _Biological Psychology, 94,_ 513-516.
 
 [49.](http://journal.frontiersin.org/article/10.3389/fpsyg.2013.00734/full) **Pollet, T.V.** (2013). Much ado about p. What does a p value mean when testing hypotheses with aggregated cross-cultural data in the field of evolution and human behavior. _Frontiers in Psychology, 4,_ 734.
 
-[48.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjUwNzgyMjUwZTBiZmZkODM) **Pollet, T.V.,** Stulp, G. & Groothuis, A.G.G. (2013). Born to win? Testing the fighting hypothesis in realistic fights: left-handedness in the Ultimate Fighting Championship. _Animal Behaviour, 86,_ 839-843.
+[48.](http://tvpollet.github.io/pdfs/Pollet_et_al_2013_Anim Behav_Handedness.pdf) **Pollet, T.V.,** Stulp, G. & Groothuis, A.G.G. (2013). Born to win? Testing the fighting hypothesis in realistic fights: left-handedness in the Ultimate Fighting Championship. _Animal Behaviour, 86,_ 839-843.
 
 [47.](http://www.academia.edu/5383727/The_Golden_Years_Men_From_The_Forbes_400_Have_Much_Younger_Wives_When_Remarrying_Than_The_General_US_Population) **Pollet, T.V.,** Pratt, S.E., Edwards, G. & Stulp, G. (2013). The golden years: Men from the Forbes 400 have much younger wives when remarrying than the general US Population. _Letters on Evolutionary Behavioral Science, 4,_ 5-8.
 
