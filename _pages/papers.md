@@ -213,17 +213,17 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [57.](http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00638/full) **Pollet, T.V.** (2014). A re-analysis of the relationship between “parasite stress” and authoritarianism. _Frontiers in Psychology, 5,_ 638.
 
-[56.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjE5NTA1ZDdmMWJhZDMxNWE) Stulp, G., Mills, M., **Pollet, T.V.** & Barrett, L. (2014). Non-linear associations between stature and mate choice characteristics for American men and their spouses. _American Journal of Human Biology, 26,_ 530-537.
+[56.](http://tvpollet.github.io/pdfs/Stulp_et_al_2014_AHJB_Nonlinear.pdf) Stulp, G., Mills, M., **Pollet, T.V.** & Barrett, L. (2014). Non-linear associations between stature and mate choice characteristics for American men and their spouses. _American Journal of Human Biology, 26,_ 530-537.
 
 [55.](http://journal.frontiersin.org/article/10.3389/fpsyg.2014.00375/full) **Pollet, T.V.** & Riegman, B.R. (2014). Opponent left-handedness does not affect fight outcomes for Ultimate Fighting Championship hall of famers. _Frontiers in Psychology, 5,_ 375.
 
 [54.](https://peerj.com/articles/287/) Hill, J.M., **Pollet, T.V.** & Nettle, D. (2014). Disorder affects judgements about a neighbourhood: Police presence does not. _PeerJ, 2,_ e287.
 
-[53.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjMxNGRjNjllMDZjYTg5NWE) Hill, J.M., Jobling, R., **Pollet, T.V.** & Nettle, D. (2014). Social capital across urban neighborhoods: A comparison of self-report and observational data. _Evolutionary Behavioral Sciences, 8,_ 59-69.
+[53.](http://tvpollet.github.io/pdfs/Hill_et_al_2014_EBS.pdf) Hill, J.M., Jobling, R., **Pollet, T.V.** & Nettle, D. (2014). Social capital across urban neighborhoods: A comparison of self-report and observational data. _Evolutionary Behavioral Sciences, 8,_ 59-69.
 
-[52.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjE1N2Q2NjEwMTBmOTJmZg) **Pollet, T.V.,** Tybur, J.M., Frankenhuis, W.E. & Rickard I.J. (2014). What can cross-cultural correlations teach us about human nature?. _Human Nature, 25,_ 419-429.
+[52.](http://tvpollet.github.io/pdfs/Pollet_et_al_2014_Hum_Nat.pdf) **Pollet, T.V.,** Tybur, J.M., Frankenhuis, W.E. & Rickard I.J. (2014). What can cross-cultural correlations teach us about human nature?. _Human Nature, 25,_ 419-429.
 
-[51.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjZmZWZlZTVmMzUyMzU2Njg) Mo, J.J.Y., Cheung, K., Gledhill, L.J., **Pollet, T.V.,** Boothroyd, L.G. & Tovée, M.J. (2014). Perceptions of female body size and shape in China, Hong Kong and the UK. _Cross-Cultural Research, 48,_ 78-103.
+[51.](http://tvpollet.github.io/pdfs/Mo_et-al_2014_CCR.pdf) Mo, J.J.Y., Cheung, K., Gledhill, L.J., **Pollet, T.V.,** Boothroyd, L.G. & Tovée, M.J. (2014). Perceptions of female body size and shape in China, Hong Kong and the UK. _Cross-Cultural Research, 48,_ 78-103.
 
 ## **2013**
 
