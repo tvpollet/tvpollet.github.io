@@ -253,15 +253,15 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2012**
 
-[38.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjZjOTY4NTlkMjdhYjMxZDE) Stulp, G., Kuijper, B., Buunk, A.P., **Pollet, T.V.** & Verhulst, S. (2012). Intralocus Sexual Conflict over Human Height. _Biology Letters, 8,_ 976-978.
+[38.](pdfs/Stulp_et_al_2012_Biol_Lett_IASC.pdf) Stulp, G., Kuijper, B., Buunk, A.P., **Pollet, T.V.** & Verhulst, S. (2012). Intralocus Sexual Conflict over Human Height. _Biology Letters, 8,_ 976-978.
 
 [37.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0048691) Boothroyd, L.G., Tovée, M.J. & **Pollet, T.V.** (2012). Visual Diet versus Associative Learning as Mechanisms of Change in Body Size Preferences. _PLoS ONE, 7,_ e48691.
 
-[36.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjRlNDA2YTg4MzY2ZjJjMzI) Dalley, S.E., Toffanin, P. & **Pollet, T.V.** (2012). Dietary Restraint in College Women: Fear of an Imperfect Fat Self is Stronger than Hope of a Perfect Thin Self. _Body Image: An International Journal of Research, 9,_ 441-447.
+[36.](pdfs/Dalley_et_al_2012_BI.pdf) Dalley, S.E., Toffanin, P. & **Pollet, T.V.** (2012). Dietary Restraint in College Women: Fear of an Imperfect Fat Self is Stronger than Hope of a Perfect Thin Self. _Body Image: An International Journal of Research, 9,_ 441-447.
 
 [35.](http://journals.sagepub.com/doi/pdf/10.1177/147470491201000314) Stulp, G., Buunk, A.P., Verhulst, S. & **Pollet, T.V.** (2012). High and Mighty: height increases authority in professional refereeing. _Evolutionary Psychology, 10,_ 588-601.
 
-[34.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjdkY2I2MjRkNjE1NGZhZjg) **Pollet, T.V.,** Nelissen, M. & Nettle, D. (2012). A ‘gendered need’ explanation does not fully explain lineage based differences in grandparental investment found in a large British Cohort study. _Journal of Biosocial Science, 44,_ 377-381.
+[34.](pdfs/Pollet_et_al_2012_JBS_grandparents.pdf) **Pollet, T.V.,** Nelissen, M. & Nettle, D. (2012). A ‘gendered need’ explanation does not fully explain lineage based differences in grandparental investment found in a large British Cohort study. _Journal of Biosocial Science, 44,_ 377-381.
 
 [33.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjEzZDFiMGMzMmJmNGRmNjM) Stirrat, M., Stulp, G. & **Pollet, T.V.** (2012). Bizygomatic width is associated with death by contact violence in a forensic sample: Narrow-faced males are more likely to die from contact violence. _Evolution and Human Behavior, 33,_ 551-556.
 
