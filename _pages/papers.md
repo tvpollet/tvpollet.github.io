@@ -243,9 +243,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [43.](http://journals.sagepub.com/doi/pdf/10.1177/147470491301100206) Cobey, K.D.\*, Stulp, G.\*, Laan, F., Buunk, A.P. & **Pollet, T.V.** (2013). Sex differences in risk taking behavior among Dutch cyclists. _Evolutionary Psychology, 11,_ 350-364. (*Authors contributed equally)
 
-[42.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4Ojc5NWU4OWE0YzgxNmY5ZTg) Stulp, G., Buunk, A.P. & **Pollet, T.V.** (2013). Women want taller men more than men want shorter women. _Personality and Individual Differences, 54,_ 877-883.
+[42.](pdfs/Stulp_et_al_2013_PAID.pdf) Stulp, G., Buunk, A.P. & **Pollet, T.V.** (2013). Women want taller men more than men want shorter women. _Personality and Individual Differences, 54,_ 877-883.
 
-[41.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjZhNDJiMTAwYTliNjg2ZTY) Stulp, G., Buunk, A.P., Verhulst, S. & **Pollet, T.V.** (2013). Tall claims? Sense and nonsense about the importance of height of US presidents. _The Leadership Quarterly, 24,_ 159-171.
+[41.](pdfs/Stulp_et_al_2013_TLQ_Presidential_height.pdf) Stulp, G., Buunk, A.P., Verhulst, S. & **Pollet, T.V.** (2013). Tall claims? Sense and nonsense about the importance of height of US presidents. _The Leadership Quarterly, 24,_ 159-171.
 
 [40.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0053929) **Pollet, T.V.,** Roberts, S.G.B. & Dunbar, R.I.M. (2013). Going that extra mile: Individuals travel further to maintain face-to-face contact with highly related kin than with less related kin. _PLoS ONE, 8,_ e53929.
 
