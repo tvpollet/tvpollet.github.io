@@ -237,7 +237,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [46.](http://journal.frontiersin.org/article/10.3389/fpsyg.2013.00643/full) **Pollet, T.V.** & Peperkoorn, L.S. (2013). Fading Red? No Evidence that Colour of Trunks Influences Outcomes in the Ultimate Fighting Championship (UFC). _Frontiers in Psychology, 4,_  643
 
-[45.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OmU3NTdhYmFmZTI1OTc2NA) Dalley, S.E., **Pollet, T.V.** & Vidal, J. (2013). Body Size and Body Dissatisfaction in Women: The Mediating Role of Possible Self Expectancy. _Body Image: An International Journal of Research, 10,_ 411-414.
+[45.](http://tvpollet.github.io/pdfs/Dalley_et_al_2013_BI.pdf) Dalley, S.E., **Pollet, T.V.** & Vidal, J. (2013). Body Size and Body Dissatisfaction in Women: The Mediating Role of Possible Self Expectancy. _Body Image: An International Journal of Research, 10,_ 411-414.
 
 [44.](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0060018) **Pollet, T.V.,** Cobey, K.D. & van der Meij, L. (2013). Testosterone levels are negatively associated with fatherhood in males, but positively related to offspring count in fathers. _PLoS ONE, 8,_ e60018.
 
@@ -331,15 +331,15 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [5.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjRmYWYxZDljMjI4ZTg0ZWI) **Pollet, T.V.,** Nettle, D. & Nelissen, M. (2007). Maternal grandmothers do go the extra mile: factoring distance and lineage into differential investment in grandchildren. _Evolutionary Psychology, 5,_ 832-843.
 
-[4.](http://www.sciencedirect.com/science/article/pii/S0191886907001882)  **Pollet, T.V.** & Nettle, D. (2007). Birth order and face-to-face contact with a sibling: Firstborns have more contact than laterborns. _Personality and Individual Differences, 43,_ 1796-1806.
+[4.](http://tvpollet.github.io/pdfs/Pollet_Nettle_2007_PAID.pdf)  **Pollet, T.V.** & Nettle, D. (2007). Birth order and face-to-face contact with a sibling: Firstborns have more contact than laterborns. _Personality and Individual Differences, 43,_ 1796-1806.
 
-[3.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjFhMDVmN2E1NTRiYTRkYg) **Pollet, T.V.** (2007). Genetic relatedness and sibling relationship characteristics in a modern society. _Evolution and Human Behavior, 28,_ 176-185.
+[3.](http://tvpollet.github.io/pdfs/Pollet_2007_EHB.pdf) **Pollet, T.V.** (2007). Genetic relatedness and sibling relationship characteristics in a modern society. _Evolution and Human Behavior, 28,_ 176-185.
 
 ## **2006**
 
-[2.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjVkYmViNjcxMTZiMzA3NGI) **Pollet, T.V.,** Nettle, D. & Nelissen, M. (2006). Contact frequencies between grandparents and grandchildren in a modern society: Estimates of the impact of paternity uncertainty. _Journal of Cultural and Evolutionary Psychology, 4,_ 203-214.
+[2.](http://tvpollet.github.io/pdfs/Pollet_et_al_2006_JCEP_grandparents.pdf) **Pollet, T.V.,** Nettle, D. & Nelissen, M. (2006). Contact frequencies between grandparents and grandchildren in a modern society: Estimates of the impact of paternity uncertainty. _Journal of Cultural and Evolutionary Psychology, 4,_ 203-214.
 
-[1.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjU1YTA0MWQzYmFmYTg3NTM) **Pollet, T.V.,** Kuppens, T. & Dunbar, R.I.M. (2006). When nieces and nephews become important: Differences between childless women and mothers in relationships with nieces and nephews. _Journal of Cultural and Evolutionary Psychology, 4,_ 83-93.
+[1.](http://tvpollet.github.io/pdfs/Pollet_et_al_2006_JCEP_nieces.pdf) **Pollet, T.V.,** Kuppens, T. & Dunbar, R.I.M. (2006). When nieces and nephews become important: Differences between childless women and mothers in relationships with nieces and nephews. _Journal of Cultural and Evolutionary Psychology, 4,_ 83-93.
 
 # Book chapters
 
