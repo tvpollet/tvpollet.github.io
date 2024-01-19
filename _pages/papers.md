@@ -315,11 +315,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [11.](pdfs/Pollet_et_al_2009_JBS_lineage_based.pdf) **Pollet, T.V.,** Nelissen, M. & Nettle, D. (2009). Lineage based differences in grandparental investment: Evidence from a large British cohort study. _Journal of Biosocial Science, 41,_ 353-379.
 
-[10.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjFiMTkxOGU3ZWRmYmMyY2E) **Pollet, T.V.** & Nettle, D. (2009). Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women. _Evolution and Human Behavior, 30,_ 146-151.
+[10.](pdfs/Pollet_Nettle_2009_EHB.pdf) **Pollet, T.V.** & Nettle, D. (2009). Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women. _Evolution and Human Behavior, 30,_ 146-151. - also see [here](pdfs/Herberich_et_al_2010.pdf)) and [here](pdfs/correction_to_Pollet_and_Nettle_2009.pdf).
 
 ## **2008**
 
-[9.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjdkM2ZhZjY0MTU4YTIyZWM) Nettle, D. & **Pollet, T.V.** (2008). Natural selection for male wealth. _American Naturalist, 172,_ 658-666.
+[9.](pdfs/Nettle_and_Pollet_2009_amnat.pdf) Nettle, D. & **Pollet, T.V.** (2008). Natural selection for male wealth. _American Naturalist, 172,_ 658-666.
 
 [8.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjRkN2FkZGQ3MmMxZTJiZWE) **Pollet, T.V.** & Dunbar, R.I.M. (2008). Childlessness predicts helping of nieces and nephews in United States, 1910. _Journal of Biosocial Science, 40, 761-770._
 
