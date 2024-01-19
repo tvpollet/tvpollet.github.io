@@ -321,15 +321,15 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [9.](pdfs/Nettle_and_Pollet_2009_amnat.pdf) Nettle, D. & **Pollet, T.V.** (2008). Natural selection for male wealth. _American Naturalist, 172,_ 658-666.
 
-[8.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjRkN2FkZGQ3MmMxZTJiZWE) **Pollet, T.V.** & Dunbar, R.I.M. (2008). Childlessness predicts helping of nieces and nephews in United States, 1910. _Journal of Biosocial Science, 40, 761-770._
+[8.](pdfs/Pollet_Dunbar_2008_JBS.pdf) **Pollet, T.V.** & Dunbar, R.I.M. (2008). Childlessness predicts helping of nieces and nephews in United States, 1910. _Journal of Biosocial Science, 40, 761-770._
 
-[7.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjYzNzJiZWZiMTRkN2M3ZTQ) **Pollet, T.V.** & Nettle, D. (2008). Driving a hard bargain: Sex ratio and male marriage success in a historical U.S. population, 1910. _Biology Letters, 4,_ 31-33.
+[7.](pdfs/Pollet_and_Nettle_2008_biol_lett.pdf) **Pollet, T.V.** & Nettle, D. (2008). Driving a hard bargain: Sex ratio and male marriage success in a historical U.S. population, 1910. _Biology Letters, 4,_ 31-33.
 
-[6.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjUzMGRkY2VjOTYyZmZiMTc) **Pollet, T.V.** & Nettle, D. (2008). Taller women do better in a stressed environment: Height and reproductive success in rural Guatemalan women. _American Journal of Human Biology, 20,_ 264-269.
+[6.](pdfs/Pollet_Nettle_2008_AJHB.pdf) **Pollet, T.V.** & Nettle, D. (2008). Taller women do better in a stressed environment: Height and reproductive success in rural Guatemalan women. _American Journal of Human Biology, 20,_ 264-269.
 
 ## **2007**
 
-[5.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjRmYWYxZDljMjI4ZTg0ZWI) **Pollet, T.V.,** Nettle, D. & Nelissen, M. (2007). Maternal grandmothers do go the extra mile: factoring distance and lineage into differential investment in grandchildren. _Evolutionary Psychology, 5,_ 832-843.
+[5.](pdfs/Pollet_et_al_2007_EP.pdf) **Pollet, T.V.,** Nettle, D. & Nelissen, M. (2007). Maternal grandmothers do go the extra mile: factoring distance and lineage into differential investment in grandchildren. _Evolutionary Psychology, 5,_ 832-843.
 
 [4.](http://tvpollet.github.io/pdfs/Pollet_Nettle_2007_PAID.pdf)  **Pollet, T.V.** & Nettle, D. (2007). Birth order and face-to-face contact with a sibling: Firstborns have more contact than laterborns. _Personality and Individual Differences, 43,_ 1796-1806.
 
