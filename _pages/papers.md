@@ -289,31 +289,31 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [22.](pdfs/Pollet_et_al_2011_cyberpsychology.pdf) **Pollet, T.V.,** Roberts, S.G.B. & Dunbar, R.I.M. (2011). Use of social network sites and instant messaging does not lead to increased offline social network size, or to emotionally closer relationships with offline network members. _Cyberpsychology, Behavior and Social Networking, 14,_ 253-258.
 
-[21.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4Ojg1M2Y2MjQ5OTA0NjE0ZQ) Cobey, K.D., **Pollet, T.V.,** Roberts, S.C. & Buunk, A.P. (2011). Hormonal birth control use and relationship jealousy: Evidence for estrogen dosage effects. _Personality and Individual Differences, 50,_ 315-317.
+[21.](pdfs/Cobey_et_al_2011_PAID.pdf) Cobey, K.D., **Pollet, T.V.,** Roberts, S.C. & Buunk, A.P. (2011). Hormonal birth control use and relationship jealousy: Evidence for estrogen dosage effects. _Personality and Individual Differences, 50,_ 315-317.
 
 ## **2010**
 
-[20.]( https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjVkN2I0NGFiODNhMTY0NDU) **Pollet, T.V.,** Dijkstra, P. Barelds, D.P.H. & Buunk, A.P. (2010). Birth Order and the Dominance Aspect of Extraversion: Are Firstborns More Extraverted than Laterborns?. _Journal of Research in Personality, 44,_ 742-745.
+[20.](pdfs/Pollet_et_al_2010_birth_order_extraversion.pdf) **Pollet, T.V.,** Dijkstra, P. Barelds, D.P.H. & Buunk, A.P. (2010). Birth Order and the Dominance Aspect of Extraversion: Are Firstborns More Extraverted than Laterborns?. _Journal of Research in Personality, 44,_ 742-745.
 
-[19.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjM0NzgyOTFiNWU3MjBjOTY) **Pollet, T.V.** & Nettle, D. (2010). No evidence for the Generalized Trivers-Willard Hypothesis from rural Guatemalan and British data. _Journal of Evolutionary Psychology, 8,_ 74-97.
+[19.](pdfs/Pollet_Nettle_2010_no_evidence_JEP.pdf) **Pollet, T.V.** & Nettle, D. (2010). No evidence for the Generalized Trivers-Willard Hypothesis from rural Guatemalan and British data. _Journal of Evolutionary Psychology, 8,_ 74-97.
 
-[18.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjcwNTllNDMwZGNlMTM4NDk) Herberich, E., Hothorn, T., Nettle, D. & **Pollet, T.V.** (2010). A re-evaluation of the model selection procedure in Pollet & Nettle (2009). _Evolution and Human Behavior, 31,_ 150-151.
+[18.](pdfs/Herberich_et_al_2010.pdf) Herberich, E., Hothorn, T., Nettle, D. & **Pollet, T.V.** (2010). A re-evaluation of the model selection procedure in Pollet & Nettle (2009). _Evolution and Human Behavior, 31,_ 150-151.
 
 ## **2009**
 
-[17.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjI4OGFlYjZkMjJiMjk5OQ) Buunk, A.P., **Pollet, T.V.,** Klavina, L., Figueredo, A.J. & Dijkstra, P. (2009). Height is curvilinearly related to women’s life history strategies. _Evolutionary Psychology, 7,_ 545-559. open access
+[17.](pdfs/Buunk_et_al_2009_EP_height_curvilinearly.pdf) Buunk, A.P., **Pollet, T.V.,** Klavina, L., Figueredo, A.J. & Dijkstra, P. (2009). Height is curvilinearly related to women’s life history strategies. _Evolutionary Psychology, 7,_ 545-559. open access
 
-[16.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjcxZTcxYjRjYmFkZmIxNDM) **Pollet, T.V.,** Fawcett, T.W., Buunk, A.P. & Nettle, D. (2009). Sex ratio biasing towards daughters among lower-ranking co-wives in Rwanda. _Biology letters, 5,_ 765–768.
+[16.](pdfs/Pollet_et_al_2009_biol_let_sex_ratio_biasing.pdf) **Pollet, T.V.,** Fawcett, T.W., Buunk, A.P. & Nettle, D. (2009). Sex ratio biasing towards daughters among lower-ranking co-wives in Rwanda. _Biology letters, 5,_ 765–768.
 
-[15.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjMwOTg1ZTA4M2IzMzAwODA) **Pollet, T.V.** & Nettle, D. (2009). Dead or alive? Knowledge about a sibling’s death varies by genetic relatedness in a Modern society. _Evolutionary Psychology, 7,_ 57-65. open access
+[15.](pdfs/Pollet_Nettle_2009_EP_dead_or_alive.pdf) **Pollet, T.V.** & Nettle, D. (2009). Dead or alive? Knowledge about a sibling’s death varies by genetic relatedness in a Modern society. _Evolutionary Psychology, 7,_ 57-65. open access
 
-[14.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjYwMzIzODQxZGM2YTFlZjI) **Pollet, T.V.** & Nettle, D. (2009). Birth order and family relationships in adult life: Firstborns report better sibling relationships than laterborns. _Journal of Social and Personal Relationships, 26,_ 1029-1046.
+[14.](pdfs/Pollet_and_Nettle_2009_JSPR_birth_order.pdf) **Pollet, T.V.** & Nettle, D. (2009). Birth order and family relationships in adult life: Firstborns report better sibling relationships than laterborns. _Journal of Social and Personal Relationships, 26,_ 1029-1046.
 
-[13.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjcwMjU3NGVhMjZiMGI0Yzk) **Pollet, T.V.** & Nettle, D. (2009). Market forces affect patterns of polygyny in Uganda. _Proceedings of the National Academy of Sciences – USA, 106,_ 2114-2117.
+[13.](pdfs/Pollet_Nettle_2009_PNAS.pdf) **Pollet, T.V.** & Nettle, D. (2009). Market forces affect patterns of polygyny in Uganda. _Proceedings of the National Academy of Sciences – USA, 106,_ 2114-2117.
 
-[12.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjMyMTlmMDg2OTc4NWIxODQ) Roberts, S.G.B., Dunbar, R.I.M., **Pollet, T.V.** & Kuppens, T. (2009). Exploring variation in active network size. _Social Networks, 31,_ 138-146.
+[12.](pdfs/Roberts_et_al_2009_Soc_Net.pdf) Roberts, S.G.B., Dunbar, R.I.M., **Pollet, T.V.** & Kuppens, T. (2009). Exploring variation in active network size. _Social Networks, 31,_ 138-146.
 
-[11.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjdmZDc4MjU0MTU4OWIyODY) **Pollet, T.V.,** Nelissen, M. & Nettle, D. (2009). Lineage based differences in grandparental investment: Evidence from a large British cohort study. _Journal of Biosocial Science, 41,_ 353-379.
+[11.](pdfs/Pollet_et_al_2009_JBS_lineage_based.pdf) **Pollet, T.V.,** Nelissen, M. & Nettle, D. (2009). Lineage based differences in grandparental investment: Evidence from a large British cohort study. _Journal of Biosocial Science, 41,_ 353-379.
 
 [10.](https://docs.google.com/viewer?a=v&pid=sites&srcid=ZGVmYXVsdGRvbWFpbnx0aG9tYXN2cG9sbGV0fGd4OjFiMTkxOGU3ZWRmYmMyY2E) **Pollet, T.V.** & Nettle, D. (2009). Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women. _Evolution and Human Behavior, 30,_ 146-151.
 
