@@ -16,8 +16,6 @@ published: true
 
 This page has some resources for those who already want to get going with PY0794: Quantitative methods.
 
-**This page will be updated, so please revisit soon**
-
 ## Test your knowledge on undergraduate statistics.
 
 * A [quiz](https://nupsych.qualtrics.com/jfe/form/SV_9Ymy1PioUMKwnMp){:target="_blank"} to test your knowledge.
