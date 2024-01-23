@@ -50,7 +50,6 @@ These could be good candidates or starting points:
 * Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
 * Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
-* Attachment Style and Jealousy in the Digital Age. [https://doi.org/10.3389/fpsyg.2021.678542]( https://doi.org/10.3389/fpsyg.2021.678542)
 * [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
 * [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
 * [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
@@ -73,9 +72,9 @@ These could be good candidates or starting points:
 ### Consumer Psychology
 
 * Scarcity, sex, and spending: Recession cues increase women's desire for men owning luxury products and men's desire to buy them. Studies 2-3 but requires large samples. [https://doi.org/10.1016/j.jbusres.2019.07.021](https://doi.org/10.1016/j.jbusres.2019.07.021){:target="_blank"}
-* [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021).
+* [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021){:target="_blank"}.
 * [Zero is a special price](https://people.duke.edu/~dandan/webfiles/PapersPI/Zero%20as%20a%20Special%20Price.pdf) - Many experiments but experiment 1 is a candidate.
-* [The deadweight loss of christmas](https://www.amherst.edu/media/view/104699/original/christmas.pdf). a study on giving cash at christmas! 
+* [The deadweight loss of christmas](https://www.amherst.edu/media/view/104699/original/christmas.pdf). A study on giving cash at christmas! 
 
 ### Nature / Spirituality
 
@@ -218,7 +217,7 @@ Ashton, M. C., & Lee, K. (2009). The HEXACO–60: A Short Measure of the Major D
 
 ### Visualisations in standard psychology text books.
 
-Bar charts can hide a lot of information. Yet, they are often the default (and while I am hopefully improving, they are also common in my papers). In this project, you will explore and examine the type of figures used in psychology text books. We will focus on a subdiscipline such as evolutionary psychology.
+Bar charts can hide a lot of information. Yet, they are often the default (and while I am hopefully improving, they are also common in my papers). In this project, you will explore and examine the type of figures used in psychology text books. We will focus on a subdiscipline such as evolutionary psychology or consumer psychology, for example.
 
 ![Bar charts](https://pagepiccinini.files.wordpress.com/2016/02/barplot_psa1.jpg){: .center-image }
 
@@ -244,7 +243,7 @@ Intelligence is thought to be an individual level construct. Yet, some researche
 
 ### What is the typical sample size used in undergraduate/masters psychology projects at our University?
 
-In this project, you will code the sample sizes used in theses in psychology, as well as the method used. It is important as this will allow us to examine whether student projects have sufficient [statistical power](https://en.wikipedia.org/wiki/Power_of_a_test){:target="_blank"}
+In this project, you will code the sample sizes used in theses in psychology, as well as the method used. It is important as this will allow us to examine whether student projects have sufficient [statistical power](https://en.wikipedia.org/wiki/Power_of_a_test){:target="_blank"}. It will also help your future colleagues by tallying what is normative.
 
 ### What is the 'type' of sample used in undergraduate/masters psychology projects at our University?
 
@@ -414,7 +413,7 @@ Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/cl
 ## Individual differences in "Buy now, pay later"
 <a href="#thesis-introduction">back to top</a>
 
-There is an increase in services which allow you to buy now and pay later (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, do individuals who tend to hoard, rely more on these products?
+There is an increase in services which allow you to 'buy now and pay later' (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, do individuals who tend to hoard, rely more on these products?
 
 ## Gender and leadership in Psychology courses
 
