@@ -12,6 +12,17 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
 ## PY0794: Advanced Quantitative research methods.
 * Last week: Introduction.
 * Today all about visualization.
