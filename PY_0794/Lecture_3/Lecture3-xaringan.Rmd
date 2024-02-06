@@ -18,6 +18,17 @@ opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy
 
 ```
 
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
 ## PY0794: Advanced Quantitative research methods.
 Last week: All about visualization.
 
@@ -372,7 +383,7 @@ knitr::include_graphics("https://media.giphy.com/media/3o6MbgJH2fc63n6v4I/giphy.
 ---
 ## ANOVA.
 
-[Many ways to do an ANOVA.](http://talklab.psy.gla.ac.uk/r_training/anova/index.html#orgheadline5)
+[Many ways to do an ANOVA.](https://web.archive.org/web/20171212214358/http://talklab.psy.gla.ac.uk/r_training/anova/index.html)
 
 Why this matters will become clearer when we discuss Types of Sums of Squares.
 

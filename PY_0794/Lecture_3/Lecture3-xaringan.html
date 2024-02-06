@@ -4,9 +4,11 @@
     <title>Lecture 3: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.14/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -19,10 +21,15 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-06-30 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-02-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
+
+
+
+
 
 
 
@@ -176,7 +183,7 @@ Three groups (Asians (international), Asian Americans, European Americans), NEO 
 ```r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture3")
 require(haven)
-data&lt;-read_spss("Iwasaki_Personality_Data.sav", user_na=T)
+data &lt;- read_spss("Iwasaki_Personality_Data.sav", user_na = T)
 ```
 
 ---
@@ -223,10 +230,10 @@ Table: Data summary
 
 ```r
 require(dplyr)
-require(labelled) # use this to turn into a factor
-data$GRP&lt;-to_factor(data$GRP) #GRP is dbl+lbl
+require(labelled)  # use this to turn into a factor
+data$GRP &lt;- to_factor(data$GRP)  #GRP is dbl+lbl
 # missings are Not a number.
-data_no_miss&lt;-dplyr::filter(data, GRP!='NaN')
+data_no_miss &lt;- dplyr::filter(data, GRP != "NaN")
 levels(data_no_miss$GRP)
 ```
 
@@ -262,9 +269,9 @@ Mostly people would look at the _overall_ plot, but ideally one would check plot
 
 ```r
 require(ggplot2)
-plot_hist &lt;- ggplot(data_no_miss, aes(x=O)) 
-plot_hist &lt;- plot_hist+ geom_histogram(colour = "black", fill = "white")
-plot_hist 
+plot_hist &lt;- ggplot(data_no_miss, aes(x = O))
+plot_hist &lt;- plot_hist + geom_histogram(colour = "black", fill = "white")
+plot_hist
 ```
 
 &lt;img src="Lecture3-xaringan_files/figure-html/opts_chunk$set(out.width=50)-1.png" style="display: block; margin: auto;" /&gt;
@@ -274,8 +281,9 @@ plot_hist
 
 
 ```r
-plot_hist_facet &lt;- ggplot(data_no_miss, aes(x=O)) 
-plot_hist_facet &lt;- plot_hist_facet+geom_histogram(colour = "black", fill = "white") 
+plot_hist_facet &lt;- ggplot(data_no_miss, aes(x = O))
+plot_hist_facet &lt;- plot_hist_facet + geom_histogram(colour = "black",
+    fill = "white")
 plot_hist_facet + facet_wrap(~GRP)
 ```
 
@@ -302,9 +310,9 @@ Not significant --&gt; retain null hypothesis, not significantly different from 
 
 
 ```r
-data_eur&lt;-filter(data_no_miss, GRP=='European Americans')
-data_asian_i&lt;-filter(data_no_miss, GRP=='Asian Internationals')
-data_asian_a&lt;-filter(data_no_miss, GRP=='Asian Americans')
+data_eur &lt;- filter(data_no_miss, GRP == "European Americans")
+data_asian_i &lt;- filter(data_no_miss, GRP == "Asian Internationals")
+data_asian_a &lt;- filter(data_no_miss, GRP == "Asian Americans")
 # You would do this for all 3!
 shapiro.test(data_asian_a$O)
 ```
@@ -326,7 +334,7 @@ Beware K-S test: easily significant!
 
 
 ```r
-ks.test(data_asian_a$O, "pnorm") #pnorm --&gt; normal distribution
+ks.test(data_asian_a$O, "pnorm")  #pnorm --&gt; normal distribution
 ```
 
 ```
@@ -375,7 +383,7 @@ If significant could also point to deviation in normality as opposed to violatio
 
 
 ```r
-bartlett.test(O ~ GRP, data=data_no_miss)
+bartlett.test(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -393,10 +401,10 @@ bartlett.test(O ~ GRP, data=data_no_miss)
 
 
 ```r
-require(car) # package which does test
+require(car)  # package which does test
 require(dplyr)
 # It needs to be a factor but already is!
-leveneTest(O ~ GRP, data=data_no_miss)
+leveneTest(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -439,7 +447,7 @@ Test the assumptions for an ANOVA with Extraversion (E) and group as independent
 ---
 ## ANOVA.
 
-[Many ways to do an ANOVA.](http://talklab.psy.gla.ac.uk/r_training/anova/index.html#orgheadline5)
+[Many ways to do an ANOVA.](https://web.archive.org/web/20171212214358/http://talklab.psy.gla.ac.uk/r_training/anova/index.html)
 
 Why this matters will become clearer when we discuss Types of Sums of Squares.
 
@@ -450,7 +458,7 @@ Analysis of variance.
 
 
 ```r
-Anova1&lt;-aov(O ~ GRP, data=data_no_miss)
+Anova1 &lt;- aov(O ~ GRP, data = data_no_miss)
 summary(Anova1)
 ```
 
@@ -467,7 +475,7 @@ summary(Anova1)
 
 
 ```r
-Anova2&lt;-lm(O~ GRP, data=data_no_miss)
+Anova2 &lt;- lm(O ~ GRP, data = data_no_miss)
 summary(Anova2)
 ```
 
@@ -525,7 +533,7 @@ Don't worry about [AIC](https://en.wikipedia.org/wiki/Akaike_information_criteri
 
 
 ```r
-drop1(Anova2) # some additional info. ??drop1
+drop1(Anova2)  # some additional info. ??drop1
 ```
 
 ```
@@ -546,7 +554,8 @@ Best bet for replicating SPSS results!
 
 ```r
 require(ez)
-Ez_ANOVA1&lt;-ezANOVA(data_no_miss, dv=O, wid=ID, between=GRP, detailed=TRUE)
+Ez_ANOVA1 &lt;- ezANOVA(data_no_miss, dv = O, wid = ID, between = GRP,
+    detailed = TRUE)
 ```
 
 
@@ -595,7 +604,7 @@ A one-way ANOVA showed a significant effect of cultural group on openness to exp
 
 ```r
 require(apaTables)
-apa.aov.table(Anova1, filename="APA_Anova_Table.doc", table.number = 1)
+apa.aov.table(Anova1, filename = "APA_Anova_Table.doc", table.number = 1)
 ```
 
 ```
@@ -630,7 +639,7 @@ apa.aov.table(Anova1, filename="APA_Anova_Table.doc", table.number = 1)
 
 
 ```r
-resultTukey&lt;-TukeyHSD(Anova1)
+resultTukey &lt;- TukeyHSD(Anova1)
 resultTukey
 ```
 
@@ -674,10 +683,10 @@ Totally check out stargazer!
 ```r
 require(broom)
 require(stargazer)
-# Broom turns our result into a dataframe!
-# We can then 'tidy' it and make a report!
-tidy_resultTukey&lt;-tidy(resultTukey)
-stargazer(tidy_resultTukey, summary = F, type="html", out="Tukey.html")
+# Broom turns our result into a dataframe!  We can then
+# 'tidy' it and make a report!
+tidy_resultTukey &lt;- tidy(resultTukey)
+stargazer(tidy_resultTukey, summary = F, type = "html", out = "Tukey.html")
 ```
 
 ---
@@ -688,7 +697,9 @@ Alternative. This will also have Cohen's d effect size values.
 
 ```r
 require(apaTables)
-apa.d.table(iv=GRP, dv=O, data=data_no_miss, filename="Table_1_APA_tukey.doc", show.conf.interval=T, landscape=T, table.number = 1)
+apa.d.table(iv = GRP, dv = O, data = data_no_miss,
+    filename = "Table_1_APA_tukey.doc", show.conf.interval = T,
+    landscape = T, table.number = 1)
 ```
 
 ```
@@ -754,9 +765,9 @@ lincoln() for the posthoc tests.
 
 
 ```r
-#WRS.
+# WRS.
 require(WRS2)
-t1way(O ~ GRP, data=data_no_miss)
+t1way(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -768,8 +779,8 @@ t1way(O ~ GRP, data=data_no_miss)
 ## Degrees of freedom 2: 74.67 
 ## p-value: 6e-05 
 ## 
-## Explanatory measure of effect size: 0.46 
-## Bootstrap CI: [0.27; 0.6]
+## Explanatory measure of effect size: 0.43 
+## Bootstrap CI: [0.26; 0.59]
 ```
 
 ---
@@ -782,7 +793,7 @@ The t1waybt function computes a one-way ANOVA for the [_trimmed means_](http://d
 
 ```r
 # Specify Between.
-t1waybt(O ~ GRP, data=data_no_miss, nboot=10000)
+t1waybt(O ~ GRP, data = data_no_miss, nboot = 10000)
 ```
 
 ```
@@ -792,9 +803,9 @@ t1waybt(O ~ GRP, data=data_no_miss, nboot=10000)
 ## Effective number of bootstrap samples was 10000.
 ## 
 ## Test statistic: 11.067 
-## p-value: 3e-04 
-## Variance explained: 0.193 
-## Effect size: 0.439
+## p-value: 0 
+## Variance explained: 0.2 
+## Effect size: 0.448
 ```
 
 ---
@@ -807,7 +818,7 @@ Computes a one-way ANOVA for the medians. Homoscedasticity assumption not requir
 
 ```r
 # WRS, ANOVA for Medians. (note iter=)
-med1way(O ~ GRP, data=data_no_miss, iter=10000)
+med1way(O ~ GRP, data = data_no_miss, iter = 10000)
 ```
 
 ```
@@ -845,7 +856,7 @@ Read more [here](http://thomasleeper.com/Rcourse/Tutorials/permutationtests.html
 
 ```r
 require(coin)
-independence_test(O ~ GRP, data=data_no_miss)
+independence_test(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -888,7 +899,7 @@ The order in which you put in things matters!!
 
 ```r
 # Type I errors
-lm_ancova&lt;-lm(O~E+GRP, data=data_no_miss)
+lm_ancova &lt;- lm(O ~ E + GRP, data = data_no_miss)
 anova(lm_ancova)
 ```
 
@@ -910,7 +921,7 @@ anova(lm_ancova)
 
 ```r
 # note that the order matters for the F-tests.
-lm_ancova2&lt;-lm(O~GRP+E, data=data_no_miss)
+lm_ancova2 &lt;- lm(O ~ GRP + E, data = data_no_miss)
 anova(lm_ancova2)
 ```
 
@@ -947,8 +958,9 @@ SPSS uses type III. So let's aim to emulate (even though that might not always b
 # Type III errors
 require(car)
 require(compute.es)
-Ancova&lt;-lm(O~GRP+E, contrasts=list(GRP_fact=contr.sum), data=data_no_miss)
-Anova(Ancova, type="III")
+Ancova &lt;- lm(O ~ GRP + E, contrasts = list(GRP_fact = contr.sum),
+    data = data_no_miss)
+Anova(Ancova, type = "III")
 ```
 
 ```
@@ -970,7 +982,7 @@ Anova(Ancova, type="III")
 
 ```r
 require(multcomp)
-posth=glht(Ancova, linfct=mcp(GRP="Tukey"))  
+posth = glht(Ancova, linfct = mcp(GRP = "Tukey"))
 ```
 
 ---
@@ -978,7 +990,7 @@ posth=glht(Ancova, linfct=mcp(GRP="Tukey"))
 
 
 ```r
-summary(posth) ##shows the output in a nice format
+summary(posth)  ##shows the output in a nice format
 ```
 
 ```
@@ -1043,7 +1055,7 @@ Sensitive to sample size, if large small deviations will lead to significance.
 
 ```r
 require(RVAideMemoire)
-multivariatenorm&lt;-dplyr::select(data_no_miss, -GRP,-ID)
+multivariatenorm &lt;- dplyr::select(data_no_miss, -GRP, -ID)
 mshapiro.test(multivariatenorm)
 ```
 
@@ -1064,7 +1076,7 @@ A whole host of alternatives. More [here](http://dwoll.de/rexrepos/posts/normali
 
 
 ```r
-require(MVN) # Alternative method, one example
+require(MVN)  # Alternative method, one example
 mvn(multivariatenorm)
 ```
 
@@ -1159,7 +1171,7 @@ Very easily significant. Therefore, usually _p_=.001 as threshold. More [here](h
 
 
 ```r
-require(heplots) #alternative is 'biotools' package.
+require(heplots)  #alternative is 'biotools' package.
 boxM(multivariatenorm, data_no_miss$GRP)
 ```
 
@@ -1176,7 +1188,7 @@ boxM(multivariatenorm, data_no_miss$GRP)
 
 
 ```r
-Manovamodel &lt;- manova(cbind(N,E,A,O,C) ~ GRP, data = data_no_miss)
+Manovamodel &lt;- manova(cbind(N, E, A, O, C) ~ GRP, data = data_no_miss)
 summary(Manovamodel)
 ```
 
