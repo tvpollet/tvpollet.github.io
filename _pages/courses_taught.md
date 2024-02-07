@@ -11,7 +11,7 @@ Here I provide a list of courses I have taught and am teaching.
 
 - [Advanced Quantitative and Qualitative Research Methods](https://tvpollet.github.io/PY0794/) (lecturer/coordinator, Research Masters. in Psychology, 2019-...).
 
-- [Research on Human Nature](https://tvpollet.github.io/PY0552/) (lecturer, BSc. Psychology, 2018-...).
+- [Research on Human Nature](https://tvpollet.github.io/PY0552/) (lecturer, BSc. Psychology, 2017-2019).
 
 - [Advanced Quantitative Research Methods](https://tvpollet.github.io/PY0782/) (lecturer, Research Masters. in Psychology, 2017-2019).
 
