@@ -1,3 +1,10 @@
+---
+layout: page
+title: Research Interests
+subtitle: Ecce homo qui est faba
+published: true
+---
+
 # Research Interests
 
 I have perhaps an atypical profile. Due to my methodological interestes and background, a large part of my work consists of collaborating with others.
