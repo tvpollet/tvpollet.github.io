@@ -7,13 +7,13 @@ published: true
 
 # Research Interests
 
-I have perhaps an atypical profile. Due to my methodological interestes and background, a large part of my work consists of collaborating with others.
+I have perhaps an atypical profile. Due to my methodological interestes and background, a large part of my work consists of collaborating with others. Therefore it is hard to summarise what I research.
 
 This wordcloud gives you an idea. It was generated with a [shiny app](https://shiny.rcg.sfu.ca/u/rdmorin/scholar_googler/).
 
 ![word cloud titles](img/wordcloud_titles.png)
 
-And this is where I tend to publish
+And this is where I tend to publish, ... .
 
 ![word cloud publications](img/wordcloud_pubs.png)
 

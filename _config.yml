@@ -36,9 +36,10 @@ navbar-links:
     - Contact: "contact"
     - Twitter: "twitter"
   Research:
-    - Presentations: "https://prezi.com/user/bwe4makvgrl3/"
+    - Research interests:"Research_Interests"
     - Papers List: "papers"
     - Open Science Framework: "https://osf.io/v6cn3/"
+    - Presentations: "https://prezi.com/user/bwe4makvgrl3/"
   Teaching:
     - Courses taught: "courses_taught"
     - PY0794: "PY0794"
