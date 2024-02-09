@@ -34,7 +34,7 @@ navbar-links:
     - Short bio: "aboutme"
     - CV: "http://tvpollet.github.io/CV.pdf"
     - Contact: "contact"
-    - Twitter: "twitter"
+    - Twitter: "https://twitter.com/tvpollet"
   Research:
     - Research interests: "Research_Interests"
     - Papers List: "papers"
