@@ -11,6 +11,23 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
 ## PY0794: Advanced Quantitative research methods.
 * Last week: ANOVA and its associated nightmares.
 * Today all correlation and regression.
