@@ -187,7 +187,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [69.](http://journal.frontiersin.org/article/10.3389/fpsyg.2015.01047/full)  Barrett, L., Stulp, G. & **Pollet, T.V.** (2015). Evolved Biocultural Beings (who Invented Computers). _Frontiers in Psychology, 6,_ 1047.
 
-[68.](http://tvpollet.github.io/pdfs/Kuppens_Pollet_2015.pdf) Kuppens, T. & **Pollet, T.V.** (2015). Gender Equality Probably Does Not Affect Performance at the Olympic Games: A Comment on Berdahl, Uhlmann, and Bai (2015). _Journal of Experimental Social Psychology, 61,_ 144-147.  [additional comments](https://drive.google.com/file/d/0B0LnnuCPhsQwWkV4ZFdJd3lLd0U/view) and [additional analyses](https://drive.google.com/file/d/0Bw-5pwTzGZ7ZT2g0YWg0Z1dDVUE/view?usp=sharing) + [R script](http://tvpollet.github.io/scripts/script_RF_medals.R)
+[68.](http://tvpollet.github.io/pdfs/Kuppens_Pollet_2015.pdf) Kuppens, T. & **Pollet, T.V.** (2015). Gender Equality Probably Does Not Affect Performance at the Olympic Games: A Comment on Berdahl, Uhlmann, and Bai (2015). _Journal of Experimental Social Psychology, 61,_ 144-147.  [additional comments](/Files_for_sharing/KuppensPollet_Still_no_support_for_the_win-win_effect.pdf) and [additional analyses](Files_for_sharing/Additional_analyses_BUB.zip) + [R script](http://tvpollet.github.io/scripts/script_RF_medals.R)
 
 [67.](http://tvpollet.github.io/pdfs/Conway_et_al_2015.pdf) Conway, J.R.\*, Noë, N.\*, Stulp, G. & **Pollet, T.V.** (2015). Finding your Soulmate: Homosexual and heterosexual age preferences in online dating. _Personal Relationships, 22,_ 666-678. (*Authors contributed equally)
 
