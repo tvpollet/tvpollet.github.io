@@ -10,8 +10,22 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
 ```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
 ```
 
 ## PY0794: Advanced Quantitative research methods.
@@ -63,10 +77,10 @@ knitr::include_graphics("balanced.png")
 ---
 ## Type of errors
 
-If everything is uncorrelated as in A below then it does not matter at all. However, if the predictors correlate then there are several options. More info [here](https://egret.psychol.cam.ac.uk/statistics/R/anova.html) and [here](https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/).
+If everything is uncorrelated as in A below then it does not matter at all. However, if the predictors correlate then there are several options. More info [here](https://web.archive.org/web/20230405031457/https://egret.psychol.cam.ac.uk/statistics/R/anova.html) and [here](https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/).
 
 ```{r, fig.align="center", out.width = "275px", echo=FALSE}
-knitr::include_graphics("https://egret.psychol.cam.ac.uk/statistics/R/correlatedpredictors.png")
+knitr::include_graphics("correlatedpredictors.png")
 ```
 
 ---
@@ -79,7 +93,7 @@ knitr::include_graphics("https://egret.psychol.cam.ac.uk/statistics/R/correlated
 **Type III SS ("marginal", "orthogonal")**: SS[A] = t; SS[B] = x; SS[A*B] = z. This assesses the contribution of each predictor over and above all others. 
 
 ```{r, fig.align="center", out.width = "300px", echo=FALSE}
-knitr::include_graphics("https://egret.psychol.cam.ac.uk/statistics/R/correlatedpredictors.png")
+knitr::include_graphics("correlatedpredictors.png")
 ```
 
 ---
