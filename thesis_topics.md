@@ -85,6 +85,7 @@ These could be good candidates or starting points:
 
 * 	[The HEXACO and five-factor models of personality in relation to RIASEC vocational interests](https://doi.org/10.1016/j.jvb.2012.05.006){:target="_blank"}
 *  [“The Darkest of all” The relationship between the Dark Triad traits and organizational citizenship behavior](https://doi.org/10.1016/j.paid.2018.04.026){:target="_blank"}
+*  [Coworkers Behaving Badly: How the Dark Triad Influences Responses to Witnessing Workplace Misconduct](https://doi.org/10.1177/00332941241234594){:target="_blank"} This will require a large sample.
 *  [Are Dishonest Extraverts More Harmful than Dishonest Introverts? The Interaction Effects of Honesty-Humility and Extraversion in Predicting Workplace Deviance](https://doi.org/10.1111/j.1464-0597.2011.00445.x){:target="_blank"}
 
 ### Person perception
