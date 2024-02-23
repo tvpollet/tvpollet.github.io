@@ -47,6 +47,7 @@ These could be good candidates or starting points:
 
 ### Relationships / Jealousy.
 
+* Women's sexual strategies: the hidden dimension of extra-pair mating. [https://doi.org/10.1016/S0191-8869(99)00151-8](https://doi.org/10.1016/S0191-8869(99)00151-8)
 * Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
 * Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
