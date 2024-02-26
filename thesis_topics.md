@@ -308,7 +308,6 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [Benign and malicious envy](https://doi.org/10.1177/0146167214564959){:target="_blank"} - large project.
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 
-
 #### Health and clinical psychology
 
 * [The Birth Satisfaction Scale Revised](https://www.sciencedirect.com/science/article/pii/S0266613813002982){:target="_blank"}
@@ -339,6 +338,10 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
+
+#### Environmental psychology
+
+* [Environmental distress](https://doi.org/10.1007/s10393-006-0069-x){:target="_blank"}
 
 #### Miscellaneous
 
