@@ -29,15 +29,15 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2024/Accepted/in Press**
 
-[137.](https://doi.org/10.31234/osf.io/s4znd) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (accepted). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE_
+[137.](https://doi.org/10.1371/journal.pone.0297075) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (2024). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE, 19(2)_ e0297075.
 
-[136.](https://doi.org/10.31234/osf.io/2583s) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (accepted). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace_ [Preprint](https://doi.org/10.31234/osf.io/2583s)
+[136.](https://doi.org/10.5817/CP2024-1-3) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (accepted). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18(1)_ Article 3. [https://doi.org/10.5817/CP2024-1-3](https://doi.org/10.5817/CP2024-1-3)
 
 [135.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 112474. [https://doi.org/10.1016/j.paid.2023.112474](https://doi.org/10.1016/j.paid.2023.112474)
 
 ## **2023**
 
-[134.](https://doi.org/10.31234/osf.io/mhdnc) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education_ [https://doi.org/10.1080/03075079.2023.2284808](https://doi.org/10.1080/03075079.2023.2284808)
+[134.](https://doi.org/10.1080/03075079.2023.2284808) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2023). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education_ [https://doi.org/10.1080/03075079.2023.2284808](https://doi.org/10.1080/03075079.2023.2284808)
 
 [133.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (2023). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_ [https://doi.org/10.1037/aca0000604](https://doi.org/10.1037/aca0000604)
 
