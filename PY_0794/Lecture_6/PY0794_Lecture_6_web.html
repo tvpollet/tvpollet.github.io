@@ -11,7 +11,7 @@
 
 <meta name="author" content="Dr. Thomas Pollet, Northumbria University, UK" />
 
-<meta name="date" content="2024-01-15" />
+<meta name="date" content="2024-03-12" />
 
 <title>PY0794: Lecture 6 - Worksheet</title>
 
@@ -255,68 +255,25 @@ if (window.hljs) {
 
 
 <style type="text/css">:root {
---incorrect: #983E82;
---incorrect_alpha: #edaddd;
---correct: #59935B;
---correct_alpha: #c0edc2;
---highlight: #467AAC;
-}
-.webex-check {}
-.webex-box {
-border: 2px solid var(--highlight);
-padding: 0.5em 0.25em;
-margin: 1em 0;
-border-radius: .25em;
-background-color: rgba(127, 127, 127, 0.05);
-}
-.webex-total_correct {
-margin-left: 1em;
-}
-.unchecked .webex-total_correct {
-display: none;
-}
-.unchecked .webex-incorrect,
-.unchecked .webex-correct {
-border: 2px dotted grey !important;
-background-color: white !important;
+--pink: #983E82; 
+--orange: #E2A458; 
+--yellow: #F5DC70; 
+--green: #59935B; 
+--blue: #467AAC; 
+--purple: #61589C; 
 }
 
-.webex-select, input.webex-solveme,
-.unchecked .webex-radiogroup label.webex-incorrect,
-.unchecked .webex-radiogroup label.webex-correct{
-border: 2px dotted grey;
-background-color: white;
-border-radius: 0.25em;
-}
 .webex-incorrect,
-input.webex-solveme.webex-incorrect,
-.webex-radiogroup label.webex-incorrect {
-border: 2px dotted var(--incorrect);
-background-color: var(--incorrect_alpha);
-color: black;
+.webex-radiogroup label.webex-incorrect{
+border: 2px dotted var(--pink);
+background-color: #edaddd;
 border-radius: 0.25em;
 }
 .webex-correct,
-input.webex-solveme.webex-correct,
 .webex-radiogroup label.webex-correct {
-border: 2px solid var(--correct);
-background-color: var(--correct_alpha);
-color: black;
+border: 2px solid var(--green);
+background-color: #c0edc2;
 border-radius: 0.25em;
-}
-.unchecked .webex-incorrect span::before,
-.unchecked .webex-incorrect + .webex-icon::after,
-.unchecked .webex-correct span::before,
-.unchecked .webex-correct + .webex-icon::after {
-content: " ";
-}
-.webex-incorrect span::before,
-.webex-incorrect + .webex-icon::after {
-content: "\274C ";
-}
-.webex-correct span::before,
-.webex-correct + .webex-icon::after {
-content: "\2705 ";
 }
 
 .webex-solution {
@@ -327,19 +284,19 @@ margin-bottom: 10px;
 }
 .webex-solution.open {
 height: auto;
-border: 2px solid var(--highlight);
+border: 2px solid var(--blue);
 border-radius: 5px;
 }
-.webex-solution button, .webex-check-button {
+.webex-solution button {
 height: 2em;
 margin-bottom: 0.5em;
 border-radius: 0.5em;
-background-color: var(--highlight);
+background-color: var(--blue);
 color: white;
 padding: 0 0.5em;
 }
 .webex-solution pre.sourceCode {
-border-color: var(--correct);
+border-color: var(--green);
 }
 .webex-radiogroup label {
 margin-left: 2em;
@@ -347,16 +304,12 @@ text-indent: -1em;
 padding-left: 0.5em;
 font-weight: 400;
 display: block;
-border: 2px solid rgba(255, 255, 255, 0);
-background-color: inherit;
+border: 2px solid rgba(255, 255, 255, 1);
 border-radius: 0.25em;
 }
 .webex-radiogroup label input {
 position: relative;
 left: -1em;
-}
-.webex-radiogroup {
-margin: 1em 0;
 }
 </style>
 
@@ -457,7 +410,7 @@ display: none;
 
 <h1 class="title toc-ignore">PY0794: Lecture 6 - Worksheet</h1>
 <h4 class="author">Dr. Thomas Pollet, Northumbria University, UK</h4>
-<h4 class="date">2024-01-15</h4>
+<h4 class="date">2024-03-12</h4>
 
 </div>
 
@@ -605,6 +558,11 @@ I need a hint
 path and 0.59 corresponds to
 <input class="webex-solveme nospaces ignorecase" size="1" data-answer="[&quot;b&quot;]"></input>
 path.</p>
+<p>If you are MS Windows, then .eps you won&#39;t be able to open it
+straightaway. You can open it with Adobe products. Or you can rewrite
+the code with <code>win.metafile()</code>. Remember in earlier lectures
+we also write figures away as .jpg or .png.</p>
+<pre class="r"><code>??win.metafile()</code></pre>
 </div>
 <div id="try-it-yourself.-slide-36" class="section level2">
 <h2>Try it yourself. (Slide 36)</h2>
@@ -626,6 +584,9 @@ effect is mediated (.9).</p>
 <div id="exercise-slide-47-48" class="section level2">
 <h2>Exercise (Slide 47-48)</h2>
 <p>Complete the exercise and submit via Blackboard!</p>
+<p>When it comes Imai et al.&#39;s &#39;default&#39; method note that you cannot
+have more than one mediator. If you want multiple mediators, look into
+<code>??multimed</code>.</p>
 <p>(Note that this is a toy example!)</p>
 </div>
 </div>
@@ -642,32 +603,29 @@ effect is mediated (.9).</p>
 package. Some of the multiple choice questions are from <a href="https://www.discoveringstatistics.com/books/an-adventure-in-statistics/">Discovering
 Statistics by Andy Field</a>. Please see <a href="https://tvpollet.github.io/disclaimer">general disclaimer</a>.</p>
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>## R version 4.3.2 (2023-10-31)
-## Platform: aarch64-apple-darwin20 (64-bit)
-## Running under: macOS Ventura 13.4
+<pre><code>## R version 4.2.1 (2022-06-23)
+## Platform: x86_64-apple-darwin17.0 (64-bit)
+## Running under: macOS Big Sur ... 10.16
 ## 
 ## Matrix products: default
-## BLAS:   /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRblas.0.dylib 
-## LAPACK: /Library/Frameworks/R.framework/Versions/4.3-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.11.0
+## BLAS:   /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRblas.0.dylib
+## LAPACK: /Library/Frameworks/R.framework/Versions/4.2/Resources/lib/libRlapack.dylib
 ## 
 ## locale:
 ## [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
-## 
-## time zone: Europe/London
-## tzcode source: internal
 ## 
 ## attached base packages:
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] webexercises_1.1.0
+## [1] webexercises_1.0.0
 ## 
 ## loaded via a namespace (and not attached):
-##  [1] digest_0.6.33     R6_2.5.1          fastmap_1.1.1     xfun_0.41        
-##  [5] cachem_1.0.8      knitr_1.45        htmltools_0.5.7   rmarkdown_2.25   
-##  [9] cli_3.6.1         sass_0.4.7        jquerylib_0.1.4   compiler_4.3.2   
-## [13] highr_0.10        rstudioapi_0.15.0 tools_4.3.2       evaluate_0.23    
-## [17] bslib_0.5.1       yaml_2.3.7        jsonlite_1.8.7    rlang_1.1.1</code></pre>
+##  [1] digest_0.6.31   R6_2.5.1        jsonlite_1.8.4  evaluate_0.20  
+##  [5] highr_0.10      cachem_1.0.7    rlang_1.1.0     cli_3.6.1      
+##  [9] rstudioapi_0.14 jquerylib_0.1.4 bslib_0.4.2     rmarkdown_2.21 
+## [13] tools_4.2.1     xfun_0.38       yaml_2.3.7      fastmap_1.1.1  
+## [17] compiler_4.2.1  htmltools_0.5.5 knitr_1.42      sass_0.4.5</code></pre>
 </div>
 <div id="the-end..." class="section level1">
 <h1>The end...</h1>
@@ -680,41 +638,25 @@ Statistics by Andy Field</a>. Please see <a href="https://tvpollet.github.io/dis
 update_total_correct = function() {
   console.log("webex: update total_correct");
 
-  var t = document.getElementsByClassName("webex-total_correct");
-  for (var i = 0; i < t.length; i++) {
-    p = t[i].parentElement;
-    var correct = p.getElementsByClassName("webex-correct").length;
-    var solvemes = p.getElementsByClassName("webex-solveme").length;
-    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
-    var selects = p.getElementsByClassName("webex-select").length;
-
-    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  if (t = document.getElementById("webex-total_correct")) {
+    var correct = document.getElementsByClassName("webex-correct").length;
+    var solvemes = document.getElementsByClassName("webex-solveme").length;
+    var radiogroups = document.getElementsByClassName("webex-radiogroup").length;
+    var selects = document.getElementsByClassName("webex-select").length;
+    
+    t.innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
   }
 }
 
 /* webex-solution button toggling function */
 b_func = function() {
   console.log("webex: toggle hide");
-
+  
   var cl = this.parentElement.classList;
   if (cl.contains('open')) {
     cl.remove("open");
   } else {
     cl.add("open");
-  }
-}
-
-/* check answers */
-check_func = function() {
-  console.log("webex: check answers");
-
-  var cl = this.parentElement.classList;
-  if (cl.contains('unchecked')) {
-    cl.remove("unchecked");
-    this.innerHTML = "Hide Answers";
-  } else {
-    cl.add("unchecked");
-    this.innerHTML = "Show Answers";
   }
 }
 
@@ -768,9 +710,9 @@ solveme_func = function(e) {
 /* function for checking select answers */
 select_func = function(e) {
   console.log("webex: check select");
-
+  
   var cl = this.classList
-
+  
   /* add style */
   cl.remove("webex-incorrect");
   cl.remove("webex-correct");
@@ -779,7 +721,7 @@ select_func = function(e) {
   } else if (this.value != "blank") {
     cl.add("webex-incorrect");
   }
-
+  
   update_total_correct();
 }
 
@@ -790,25 +732,25 @@ radiogroups_func = function(e) {
   var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
   var cl = checked_button.parentElement.classList;
   var labels = checked_button.parentElement.parentElement.children;
-
+  
   /* get rid of styles */
   for (i = 0; i < labels.length; i++) {
     labels[i].classList.remove("webex-incorrect");
     labels[i].classList.remove("webex-correct");
   }
-
+  
   /* add style */
   if (checked_button.value == "answer") {
     cl.add("webex-correct");
   } else {
     cl.add("webex-incorrect");
   }
-
+  
   update_total_correct();
 }
 
 window.onload = function() {
-  console.log("webex onload");
+  console.log("onload");
   /* set up solution buttons */
   var buttons = document.getElementsByTagName("button");
 
@@ -816,22 +758,6 @@ window.onload = function() {
     if (buttons[i].parentElement.classList.contains('webex-solution')) {
       buttons[i].onclick = b_func;
     }
-  }
-
-  var check_sections = document.getElementsByClassName("webex-check");
-  console.log("check:", check_sections.length);
-  for (var i = 0; i < check_sections.length; i++) {
-    check_sections[i].classList.add("unchecked");
-
-    let btn = document.createElement("button");
-    btn.innerHTML = "Show Answers";
-    btn.classList.add("webex-check-button");
-    btn.onclick = check_func;
-    check_sections[i].appendChild(btn);
-
-    let spn = document.createElement("span");
-    spn.classList.add("webex-total_correct");
-    check_sections[i].appendChild(spn);
   }
 
   /* set up webex-solveme inputs */
@@ -859,21 +785,18 @@ window.onload = function() {
     /* attach checking function */
     solveme[i].onkeyup = solveme_func;
     solveme[i].onchange = solveme_func;
-
-    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
   }
-
+  
   /* set up radiogroups */
   var radiogroups = document.getElementsByClassName("webex-radiogroup");
   for (var i = 0; i < radiogroups.length; i++) {
     radiogroups[i].onchange = radiogroups_func;
   }
-
+  
   /* set up selects */
   var selects = document.getElementsByClassName("webex-select");
   for (var i = 0; i < selects.length; i++) {
     selects[i].onchange = select_func;
-    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
   }
 
   update_total_correct();
