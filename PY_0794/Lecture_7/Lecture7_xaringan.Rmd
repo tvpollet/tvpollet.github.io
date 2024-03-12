@@ -11,8 +11,21 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
 ```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
 ```
 
 ## PY0794: Advanced Quantitative research methods.
@@ -109,7 +122,7 @@ More on assumptions [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3290828/
 ---
 ## Data
 
-Data were from [here](https://quantdev.ssri.psu.edu/) but are now avalaible [here](https://tvpollet.github.io/PY_0794/Lecture_7/personality0.txt).  240 participants providing self-ratings (1-9) on 32 variables.
+Data were from [here](https://quantdev.ssri.psu.edu/) but are now available [here](https://tvpollet.github.io/PY_0794/Lecture_7/personality0.txt).  240 participants providing self-ratings (1-9) on 32 variables.
 
 ```{r, message=F, warning=F, results='hide'}
 # Downloaded the data into my work directory.
@@ -503,7 +516,7 @@ Also check the reading list! (many more than listed here)
 
 * Kline, P. (1993). _An Easy Guide to Factor Analysis_. London: Routledge.
 * Tabachnick, B.G. & Fidell, L.S. (2007). _Using Multivariate Statistics._ Boston, MA.: Pearson Education.
-* Thomas, E. (2016). _Factor analysis_. http://langcog.stanford.edu/expts/MLL/Coursework/Psych.%20253/powerpoints%20and%20handouts/Factor%20Analysis/ho3-factoranal%20(1).pdf (SPSS based, data used here)
+
 
 
 

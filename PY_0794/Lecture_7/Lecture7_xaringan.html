@@ -4,9 +4,11 @@
     <title>Lecture 7: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -19,10 +21,15 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-11-04 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-03-12 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
+
+
+
+
 
 
 
@@ -117,14 +124,14 @@ More on assumptions [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3290828/
 ---
 ## Data
 
-Data were from [here](https://quantdev.ssri.psu.edu/) but are now avalaible [here](https://tvpollet.github.io/PY_0794/Lecture_7/personality0.txt).  240 participants providing self-ratings (1-9) on 32 variables.
+Data were from [here](https://quantdev.ssri.psu.edu/) but are now available [here](https://tvpollet.github.io/PY_0794/Lecture_7/personality0.txt).  240 participants providing self-ratings (1-9) on 32 variables.
 
 
 ```r
 # Downloaded the data into my work directory.
 f_data &lt;- read.table("personality0.txt")
 require(stargazer)
-stargazer(f_data, type = "html", out= "factor_data.html")
+stargazer(f_data, type = "html", out = "factor_data.html")
 ```
 
 ---
@@ -224,7 +231,7 @@ mvn(f_data)
 ---
 ## Plot
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-6-1.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-7-1.png" width="400px" style="display: block; margin: auto;" /&gt;
 
 ```
 ## $multivariateNormality
@@ -311,10 +318,10 @@ You can do all pairwise scatterplots but with range 1-9 this is not wholly usefu
 ```r
 require(ggplot2)
 require(GGally)
-ggpairs(f_data[,1:4]) # example
+ggpairs(f_data[, 1:4])  # example
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-7-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-8-1.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Factorability.
@@ -397,18 +404,20 @@ Read in the data, make a subset with items 13:24 (Hint: use the select function 
 
 
 ```r
-# ggcorrplot, you can then further tweak this, as it is a ggplot.
+# ggcorrplot, you can then further tweak this, as
+# it is a ggplot.
 require(ggcorrplot)
 require(dplyr)
 # take the absolute, interested in strength.
-cormatrix&lt;-abs(cor(f_data[,1:20])) 
-corplot&lt;-ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", method = "circle") 
+cormatrix &lt;- abs(cor(f_data[, 1:20]))
+corplot &lt;- ggcorrplot(cormatrix, hc.order = TRUE, type = "lower",
+    method = "circle")
 ```
 
 ---
 ## Plot
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-11-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Some further terms.
@@ -434,7 +443,7 @@ Varimax rotation. Let's start by getting 8 factors. (Request large number and th
 
 ```r
 require(psych)
-fa &lt;- fa(f_data,8, fm = 'minres', rotate='varimax', fa = 'fa')
+fa &lt;- fa(f_data, 8, fm = "minres", rotate = "varimax", fa = "fa")
 ```
 
 ---
@@ -442,7 +451,7 @@ fa &lt;- fa(f_data,8, fm = 'minres', rotate='varimax', fa = 'fa')
 
 
 ```r
-sink('fa_output.text')
+sink("fa_output.text")
 fa
 ```
 
@@ -495,14 +504,14 @@ fa
 ## Mean item complexity =  1.8
 ## Test of the hypothesis that 8 factors are sufficient.
 ## 
-## The degrees of freedom for the null model are  496  and the objective function was  17.62 with Chi Square of  4009.54
-## The degrees of freedom for the model are 268  and the objective function was  1.84 
+## df null model =  496  with the objective function =  17.62 with Chi Square =  4009.54
+## df of  the model are 268  and the objective function was  1.84 
 ## 
 ## The root mean square of the residuals (RMSR) is  0.02 
 ## The df corrected root mean square of the residuals is  0.03 
 ## 
-## The harmonic number of observations is  240 with the empirical chi square  140.27  with prob &lt;  1 
-## The total number of observations was  240  with Likelihood Chi Square =  409.11  with prob &lt;  5.9e-08 
+## The harmonic n.obs is  240 with the empirical chi square  140.27  with prob &lt;  1 
+## The total n.obs was  240  with Likelihood Chi Square =  409.11  with prob &lt;  5.9e-08 
 ## 
 ## Tucker Lewis Index of factoring reliability =  0.924
 ## RMSEA index =  0.047  and the 90 % confidence intervals are  0.038 0.056
@@ -568,10 +577,10 @@ Also part of the output already. Here I used 'minres' as extraction method. Para
 
 ```r
 require(psych)
-parallel &lt;- fa.parallel(f_data, fm = 'minres', fa = 'fa')
+parallel &lt;- fa.parallel(f_data, fm = "minres", fa = "fa")
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
 
 ```
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA
@@ -597,9 +606,9 @@ parallel
 ## [25] -0.49 -0.52 -0.55 -0.58 -0.60 -0.62 -0.67 -0.70
 ## 
 ##  eigen values of simulated factors
-##  [1]  0.83  0.68  0.60  0.53  0.48  0.42  0.37  0.32  0.26  0.22  0.18  0.14
-## [13]  0.10  0.07  0.03  0.00 -0.04 -0.07 -0.10 -0.14 -0.17 -0.20 -0.23 -0.26
-## [25] -0.29 -0.32 -0.35 -0.38 -0.41 -0.45 -0.49 -0.53
+##  [1]  0.82  0.68  0.59  0.52  0.47  0.41  0.36  0.31  0.27  0.23  0.19  0.15
+## [13]  0.11  0.07  0.03  0.01 -0.03 -0.07 -0.10 -0.14 -0.17 -0.20 -0.23 -0.26
+## [25] -0.28 -0.32 -0.35 -0.38 -0.41 -0.45 -0.49 -0.53
 ## 
 ##  eigen values of components 
 ##  [1] 7.24 4.53 3.12 2.33 1.88 1.19 0.93 0.86 0.80 0.71 0.69 0.64 0.63 0.54 0.51
@@ -637,7 +646,7 @@ parallel$fa.values
 
 Depending on the _elbow_ of the graph (Scree Criterion) you would extract 4 or 5.
 
-![](Lecture7_xaringan_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+![](Lecture7_xaringan_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
 
 ```
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA
@@ -651,10 +660,10 @@ The VSS plot suggests 3 factors. Very little improvement with 4. MAP suggests 6 
 
 ```r
 require(psych)
-VSS(f_data, rotate= "varimax", n.obs= 240)# shows plot
+VSS(f_data, rotate = "varimax", n.obs = 240)  # shows plot
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-19-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
 
 ```
 ## 
@@ -703,8 +712,8 @@ Let's extract one with three factors though 5 could also be workable.
 
 
 ```r
-fa_3&lt;-fa(f_data,3, fm = 'minres', rotate='varimax', fa = 'fa')
-sink('fa_3_output.txt')
+fa_3 &lt;- fa(f_data, 3, fm = "minres", rotate = "varimax", fa = "fa")
+sink("fa_3_output.txt")
 fa_3
 ```
 
@@ -757,14 +766,14 @@ fa_3
 ## Mean item complexity =  1.4
 ## Test of the hypothesis that 3 factors are sufficient.
 ## 
-## The degrees of freedom for the null model are  496  and the objective function was  17.62 with Chi Square of  4009.54
-## The degrees of freedom for the model are 403  and the objective function was  6.18 
+## df null model =  496  with the objective function =  17.62 with Chi Square =  4009.54
+## df of  the model are 403  and the objective function was  6.18 
 ## 
 ## The root mean square of the residuals (RMSR) is  0.08 
 ## The df corrected root mean square of the residuals is  0.09 
 ## 
-## The harmonic number of observations is  240 with the empirical chi square  1517.47  with prob &lt;  1.1e-128 
-## The total number of observations was  240  with Likelihood Chi Square =  1394.7  with prob &lt;  2.3e-109 
+## The harmonic n.obs is  240 with the empirical chi square  1517.47  with prob &lt;  1.1e-128 
+## The total n.obs was  240  with Likelihood Chi Square =  1394.7  with prob &lt;  2.3e-109 
 ## 
 ## Tucker Lewis Index of factoring reliability =  0.649
 ## RMSEA index =  0.101  and the 90 % confidence intervals are  0.096 0.107
@@ -779,8 +788,8 @@ fa_3
 
 ```r
 sink()
-fa_5&lt;-fa(f_data,5, fm = 'minres', rotate='varimax', fa = 'fa')
-sink('fa_5_output.txt')
+fa_5 &lt;- fa(f_data, 5, fm = "minres", rotate = "varimax", fa = "fa")
+sink("fa_5_output.txt")
 fa_5
 ```
 
@@ -833,14 +842,14 @@ fa_5
 ## Mean item complexity =  1.5
 ## Test of the hypothesis that 5 factors are sufficient.
 ## 
-## The degrees of freedom for the null model are  496  and the objective function was  17.62 with Chi Square of  4009.54
-## The degrees of freedom for the model are 346  and the objective function was  3.17 
+## df null model =  496  with the objective function =  17.62 with Chi Square =  4009.54
+## df of  the model are 346  and the objective function was  3.17 
 ## 
 ## The root mean square of the residuals (RMSR) is  0.04 
 ## The df corrected root mean square of the residuals is  0.05 
 ## 
-## The harmonic number of observations is  240 with the empirical chi square  355.07  with prob &lt;  0.36 
-## The total number of observations was  240  with Likelihood Chi Square =  710.66  with prob &lt;  2.2e-27 
+## The harmonic n.obs is  240 with the empirical chi square  355.07  with prob &lt;  0.36 
+## The total n.obs was  240  with Likelihood Chi Square =  710.66  with prob &lt;  2.2e-27 
 ## 
 ## Tucker Lewis Index of factoring reliability =  0.849
 ## RMSEA index =  0.066  and the 90 % confidence intervals are  0.059 0.073
@@ -862,10 +871,10 @@ sink()
 
 
 ```r
-fa.diagram(fa_5, marg=c(.01,.01,1,.01))
+fa.diagram(fa_5, marg = c(0.01, 0.01, 1, 0.01))
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Factors.
@@ -875,11 +884,11 @@ How would you label those 5 factors?
 
 ```r
 require(semPlot)
-semplot1&lt;-semPlotModel(fa_5$loadings)
-semPaths(semplot1, what="std", layout="circle", nCharNodes = 6)
+semplot1 &lt;- semPlotModel(fa_5$loadings)
+semPaths(semplot1, what = "std", layout = "circle", nCharNodes = 6)
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Try it yourself.
@@ -919,10 +928,10 @@ There are many methods. Most of the time you'll get [similar results](https://st
 
 ```r
 require(psych)
-parallel &lt;- fa.parallel(f_data, fm = 'pa', fa = 'fa')
+parallel &lt;- fa.parallel(f_data, fm = "pa", fa = "fa")
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
 
 ```
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA
@@ -937,9 +946,11 @@ You can further beautify this by generating labels for those 32 items.
 ```r
 require(stargazer)
 require(plyr)
-factor_loadings&lt;-as.data.frame(as.matrix.data.frame(fa_5$loadings))
-factor_loadings&lt;-plyr::rename(factor_loadings, c("V1"="Factor 1","V2"="Factor 2", "V3"="Factor 3", "V4"="Factor 4", "V5"="Factor 5"))
-stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=FALSE, type="html")
+factor_loadings &lt;- as.data.frame(as.matrix.data.frame(fa_5$loadings))
+factor_loadings &lt;- plyr::rename(factor_loadings, c(V1 = "Factor 1",
+    V2 = "Factor 2", V3 = "Factor 3", V4 = "Factor 4", V5 = "Factor 5"))
+stargazer(factor_loadings, summary = FALSE, out = "results_loadings.html",
+    header = FALSE, type = "html")
 ```
 
 
@@ -984,10 +995,11 @@ stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=
 
 ```r
 require(GPArotation)
-plot(fa_5,labels=names(f_data),cex=.7, ylim=c(-.1,1)) 
+plot(fa_5, labels = names(f_data), cex = 0.7, ylim = c(-0.1,
+    1))
 ```
 
-![](Lecture7_xaringan_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
+![](Lecture7_xaringan_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
 
 ---
 ## Too busy and not very useful.
@@ -996,10 +1008,10 @@ Just plot the first two factors, and those with loadings above .5. Label it.
 
 
 ```r
-factor.plot(fa_5, choose=c(1,2), cut=0.5, labels=colnames(f_data))
+factor.plot(fa_5, choose = c(1, 2), cut = 0.5, labels = colnames(f_data))
 ```
 
-![](Lecture7_xaringan_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
+![](Lecture7_xaringan_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
 
 ---
 ## ggplot2.
@@ -1042,7 +1054,7 @@ Also check the reading list! (many more than listed here)
 
 * Kline, P. (1993). _An Easy Guide to Factor Analysis_. London: Routledge.
 * Tabachnick, B.G. &amp; Fidell, L.S. (2007). _Using Multivariate Statistics._ Boston, MA.: Pearson Education.
-* Thomas, E. (2016). _Factor analysis_. http://langcog.stanford.edu/expts/MLL/Coursework/Psych.%20253/powerpoints%20and%20handouts/Factor%20Analysis/ho3-factoranal%20(1).pdf (SPSS based, data used here)
+
 
 
 
