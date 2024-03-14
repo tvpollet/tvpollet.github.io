@@ -354,6 +354,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Barcelona Music Reward Questionnaire](https://doi.org/10.1525/mp.2013.31.2.118){:target="_blank"}
 * [Art Experience Questionnaire](http://www.neurohumanitiestudies.eu/archivio/Empirical_Studies_of_the_Arts_2010_Chatterjee.pdf){:target="_blank"} 
 * [The free will inventory: Measuring beliefs about agency and responsibility](https://doi.org/10.1016/j.concog.2014.01.006){:target="_blank"} 
+* [Animal Empathy Scale](https://doi.org/10.2752/089279300786999699){:target="_blank"}
 
 
 ## Guardian 'blind dates' database.
