@@ -11,8 +11,20 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
 ```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
 ```
 
 ## PY0794: Advanced Quantitative research methods.
@@ -107,7 +119,7 @@ There are also multiple packages in R which can do SEM (OpenMX, sem, Lavaan). To
 Data on children's performance in two schools. (a subset)
 
 ```{r, out.width = "380px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("http://lavaan.ugent.be/tutorial/figure/cfa-1.png")
+knitr::include_graphics("https://lavaan.ugent.be/tutorial/cfa_files/figure-html/cfa-1.png")
 ```
 
 ---
@@ -157,9 +169,9 @@ textual =~ x4 + x5 + x6
 
 speed =~ x7 + x8 + x9
 
-```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("http://lavaan.ugent.be/tutorial/figure/cfa-1.png")
-``` 
+```{r, out.width = "380px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://lavaan.ugent.be/tutorial/cfa_files/figure-html/cfa-1.png")
+```
 
 ---
 ## Our model in lavaan.
@@ -223,7 +235,7 @@ sink()
 
 The TLI suggested an acceptable fit (.9), as did the CFI (.93). However, the RMSEA (.092) suggested a relatively poor fit with a 90%CI ranging from .071 to .114.
 
-The CFI is another fit measure, some argue >.9, some argue >.95. read more [here](http://www.ejbrm.com/issue/download.html?idArticle=183).
+The CFI is another fit measure, some argue >.9, some argue >.95. read more [here](https://core.ac.uk/download/pdf/297019805.pdf).
 
 Many measures exist, most commonly reported RMSEA,CFI,TLI
 

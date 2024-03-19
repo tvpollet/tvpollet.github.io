@@ -4,9 +4,11 @@
     <title>Lecture 8: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -19,10 +21,14 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-11-11 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-03-04 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
+
+
+
 
 
 
@@ -116,7 +122,7 @@ There are also multiple packages in R which can do SEM (OpenMX, sem, Lavaan). To
 
 Data on children's performance in two schools. (a subset)
 
-&lt;img src="http://lavaan.ugent.be/tutorial/figure/cfa-1.png" width="380px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://lavaan.ugent.be/tutorial/cfa_files/figure-html/cfa-1.png" width="380px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Notations in Lavaan.
@@ -165,7 +171,7 @@ textual =~ x4 + x5 + x6
 
 speed =~ x7 + x8 + x9
 
-&lt;img src="http://lavaan.ugent.be/tutorial/figure/cfa-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://lavaan.ugent.be/tutorial/cfa_files/figure-html/cfa-1.png" width="380px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Our model in lavaan.
@@ -175,10 +181,10 @@ In order to define the model we place it in-between single (!) quotes. We can an
 
 ```r
 require(lavaan)
-Model_1 &lt;- '  # Three factors.
+Model_1 &lt;- "  # Three factors.
               visual  =~ x1 + x2 + x3 
               textual =~ x4 + x5 + x6
-              speed   =~ x7 + x8 + x9 '
+              speed   =~ x7 + x8 + x9 "
 ```
 
 ---
@@ -193,7 +199,7 @@ If there are no meaningful correlations, then it makes little sense to perform C
 
 ```r
 require(psych)
-f_data&lt;-(lavaan::HolzingerSwineford1939)[,c(7:15)]
+f_data &lt;- (lavaan::HolzingerSwineford1939)[, c(7:15)]
 KMO(f_data)
 ```
 
@@ -217,7 +223,7 @@ require(MVN)
 mvn(f_data, multivariatePlot = "qq")
 ```
 
-&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-6-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
 
 ```
 ## $multivariateNormality
@@ -314,13 +320,13 @@ mvn(f_data)
 
 ```r
 require(lavaan)
-fit &lt;- cfa(Model_1, data=HolzingerSwineford1939)
-sink(file = 'summary_fit.txt')
-summary(fit, fit.measures=TRUE)
+fit &lt;- cfa(Model_1, data = HolzingerSwineford1939)
+sink(file = "summary_fit.txt")
+summary(fit, fit.measures = TRUE)
 ```
 
 ```
-## lavaan 0.6-12 ended normally after 35 iterations
+## lavaan 0.6.17 ended normally after 35 iterations
 ## 
 ##   Estimator                                         ML
 ##   Optimization method                           NLMINB
@@ -352,14 +358,15 @@ summary(fit, fit.measures=TRUE)
 ##                                                       
 ##   Akaike (AIC)                                7517.490
 ##   Bayesian (BIC)                              7595.339
-##   Sample-size adjusted Bayesian (BIC)         7528.739
+##   Sample-size adjusted Bayesian (SABIC)       7528.739
 ## 
 ## Root Mean Square Error of Approximation:
 ## 
 ##   RMSEA                                          0.092
 ##   90 Percent confidence interval - lower         0.071
 ##   90 Percent confidence interval - upper         0.114
-##   P-value RMSEA &lt;= 0.05                          0.001
+##   P-value H_0: RMSEA &lt;= 0.050                    0.001
+##   P-value H_0: RMSEA &gt;= 0.080                    0.840
 ## 
 ## Standardized Root Mean Square Residual:
 ## 
@@ -443,17 +450,17 @@ require(semPlot)
 semPaths(fit, layout = "circle", style = "ram", what = "std")
 ```
 
-![](Lecture8_xaringan_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](Lecture8_xaringan_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 
 ---
 ## Lisrel style plot.
 
 
 ```r
-semPaths(fit, layout='circle',style = "lisrel",what="std")
+semPaths(fit, layout = "circle", style = "lisrel", what = "std")
 ```
 
-![](Lecture8_xaringan_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+![](Lecture8_xaringan_files/figure-html/unnamed-chunk-13-1.png)&lt;!-- --&gt;
 
 ---
 ## Try it yourself!
@@ -469,11 +476,15 @@ Make a plot of your three-factor model.
 ```r
 require(dplyr)
 require(stargazer)
-results_table&lt;-parameterEstimates(fit, standardized=TRUE) %&gt;% 
-filter(op == "=~") %&gt;% 
-dplyr::select('Latent Factor'=lhs, Indicator=rhs, B=est, SE=se, Z=z, 'p value'=pvalue, Beta=std.all)
-#export via stargazer. (Other options are ??xtable)
-stargazer(results_table, summary = FALSE,out= "results_table.html", header = F)
+results_table &lt;- parameterEstimates(fit, standardized = TRUE) %&gt;%
+    filter(op == "=~") %&gt;%
+    dplyr::select(`Latent Factor` = lhs, Indicator = rhs,
+        B = est, SE = se, Z = z, `p value` = pvalue,
+        Beta = std.all)
+# export via stargazer. (Other options are
+# ??xtable)
+stargazer(results_table, summary = FALSE, out = "results_table.html",
+    header = F)
 ```
 
 ```
@@ -520,15 +531,14 @@ You could also still check the distributions of those.
 ```r
 require(ggplot2)
 require(corrplot)
-plot_matrix &lt;- function(matrix_toplot){
-corrplot(matrix_toplot, is.corr = FALSE, 
-               type = 'lower', 
-               order = "original", 
-               tl.col='black', tl.cex=.75)}
+plot_matrix &lt;- function(matrix_toplot) {
+    corrplot(matrix_toplot, is.corr = FALSE, type = "lower",
+        order = "original", tl.col = "black", tl.cex = 0.75)
+}
 plot_matrix(residuals(fit)$cov)
 ```
 
-&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-15-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Single factor model.
@@ -536,8 +546,8 @@ plot_matrix(residuals(fit)$cov)
 
 ```r
 require(lavaan)
-Model_2 &lt;- '  # one factor.
-              ability  =~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 '
+Model_2 &lt;- "  # one factor.
+              ability  =~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 "
 ```
 
 ---
@@ -545,13 +555,13 @@ Model_2 &lt;- '  # one factor.
 
 
 ```r
-fit_model_2&lt;-cfa(Model_2, data= HolzingerSwineford1939)
-sink(file="summary_fit_2.txt")
-summary(fit_model_2, fit.measures=T)
+fit_model_2 &lt;- cfa(Model_2, data = HolzingerSwineford1939)
+sink(file = "summary_fit_2.txt")
+summary(fit_model_2, fit.measures = T)
 ```
 
 ```
-## lavaan 0.6-12 ended normally after 31 iterations
+## lavaan 0.6.17 ended normally after 31 iterations
 ## 
 ##   Estimator                                         ML
 ##   Optimization method                           NLMINB
@@ -583,14 +593,15 @@ summary(fit_model_2, fit.measures=T)
 ##                                                       
 ##   Akaike (AIC)                                7738.448
 ##   Bayesian (BIC)                              7805.176
-##   Sample-size adjusted Bayesian (BIC)         7748.091
+##   Sample-size adjusted Bayesian (SABIC)       7748.091
 ## 
 ## Root Mean Square Error of Approximation:
 ## 
 ##   RMSEA                                          0.187
 ##   90 Percent confidence interval - lower         0.169
 ##   90 Percent confidence interval - upper         0.206
-##   P-value RMSEA &lt;= 0.05                          0.000
+##   P-value H_0: RMSEA &lt;= 0.050                    0.000
+##   P-value H_0: RMSEA &gt;= 0.080                    1.000
 ## 
 ## Standardized Root Mean Square Residual:
 ## 
@@ -666,15 +677,16 @@ A model with three factors is a better fit to the data than one with a single fa
 
 
 ```r
-anova(fit,fit_model_2)
+anova(fit, fit_model_2)
 ```
 
 ```
+## 
 ## Chi-Squared Difference Test
 ## 
-##             Df    AIC    BIC   Chisq Chisq diff Df diff Pr(&gt;Chisq)    
-## fit         24 7517.5 7595.3  85.305                                  
-## fit_model_2 27 7738.4 7805.2 312.264     226.96       3  &lt; 2.2e-16 ***
+##             Df    AIC    BIC   Chisq Chisq diff   RMSEA Df diff Pr(&gt;Chisq)    
+## fit         24 7517.5 7595.3  85.305                                          
+## fit_model_2 27 7738.4 7805.2 312.264     226.96 0.49801       3  &lt; 2.2e-16 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
@@ -723,12 +735,12 @@ Basically: Is the measurement in both schools the same?
 
 ```r
 require(lavaan)
-Data&lt;- HolzingerSwineford1939
-Group_model_1 &lt;- '  # Three factors.
+Data &lt;- HolzingerSwineford1939
+Group_model_1 &lt;- "  # Three factors.
               visual  =~ x1 + x2 + x3 
               textual =~ x4 + x5 + x6
-              speed   =~ x7 + x8 + x9 '
-fit_CFA_group&lt;-cfa(Group_model_1, data= Data, group="school")
+              speed   =~ x7 + x8 + x9 "
+fit_CFA_group &lt;- cfa(Group_model_1, data = Data, group = "school")
 ```
 
 ---
@@ -736,8 +748,8 @@ fit_CFA_group&lt;-cfa(Group_model_1, data= Data, group="school")
 
 
 ```r
-sink(file = 'group_cfa.txt')
-summary(fit_CFA_group, fit.measures=T)
+sink(file = "group_cfa.txt")
+summary(fit_CFA_group, fit.measures = T)
 sink()
 ```
 
@@ -753,10 +765,11 @@ Combined groups plot.
 ```r
 require(semPlot)
 require(qgraph)
-semPaths(fit_CFA_group, layout='circle',style = "ram",what="std", combineGroups=T)
+semPaths(fit_CFA_group, layout = "circle", style = "ram", what = "std",
+    combineGroups = T)
 ```
 
-&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Separate plots.
@@ -765,10 +778,11 @@ semPaths(fit_CFA_group, layout='circle',style = "ram",what="std", combineGroups=
 ```r
 require(semPlot)
 require(qgraph)
-semPaths(fit_CFA_group, layout='circle',style = "ram",what="std", combineGroups=F)
+semPaths(fit_CFA_group, layout = "circle", style = "ram", what = "std",
+    combineGroups = F)
 ```
 
-&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-24-2.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;&lt;img src="Lecture8_xaringan_files/figure-html/unnamed-chunk-25-2.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Measurement Invariance
@@ -776,7 +790,8 @@ semPaths(fit_CFA_group, layout='circle',style = "ram",what="std", combineGroups=
 
 ```r
 require(semTools)
-semTools::measurementInvariance(model=Group_model_1, data= Data, group="school")
+semTools::measurementInvariance(model = Group_model_1,
+    data = Data, group = "school")
 ```
 
 ```
@@ -788,13 +803,19 @@ semTools::measurementInvariance(model=Group_model_1, data= Data, group="school")
 ## Model 3 : fit.intercepts
 ## Model 4 : fit.means
 ## 
+## 
 ## Chi-Squared Difference Test
 ## 
-##                Df    AIC    BIC  Chisq Chisq diff Df diff Pr(&gt;Chisq)    
-## fit.configural 48 7484.4 7706.8 115.85                                  
-## fit.loadings   54 7480.6 7680.8 124.04      8.192       6     0.2244    
-## fit.intercepts 60 7508.6 7686.6 164.10     40.059       6  4.435e-07 ***
-## fit.means      63 7543.1 7710.0 204.61     40.502       3  8.338e-09 ***
+##                Df    AIC    BIC  Chisq Chisq diff    RMSEA Df diff Pr(&gt;Chisq)
+## fit.configural 48 7484.4 7706.8 115.85                                       
+## fit.loadings   54 7480.6 7680.8 124.04      8.192 0.049272       6     0.2244
+## fit.intercepts 60 7508.6 7686.6 164.10     40.059 0.194211       6  4.435e-07
+## fit.means      63 7543.1 7710.0 204.61     40.502 0.288205       3  8.338e-09
+##                   
+## fit.configural    
+## fit.loadings      
+## fit.intercepts ***
+## fit.means      ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -829,9 +850,18 @@ Stargazer won't change labels! See if you can figure out a solution :). it cost 
 ```r
 require(psytabs)
 require(stargazer)
-MI&lt;- measurementInvariance(model=Group_model_1, data= Data, group="school")
+MI &lt;- measurementInvariance(model = Group_model_1,
+    data = Data, group = "school")
 tab.1 &lt;- measurementInvarianceTable(MI)
-stargazer(tab.1, summary=F, type="html", dep.var.labels = c("$\\chi^2$",	"df",	"$\\Delta$\\chi^2$", "df",	"p", "CFI",	"$\\Delta$CFI", "RMSEA", "$\\Delta$RMSEA", "BIC", "$\\Delta$BIC"), out= "Measurement invariance.html", header=F)
+stargazer(tab.1, summary = F,
+    type = "html", dep.var.labels = c("$\\chi^2$",
+        "df", "$\\Delta$\\chi^2$",
+        "df", "p", "CFI",
+        "$\\Delta$CFI",
+        "RMSEA", "$\\Delta$RMSEA",
+        "BIC", "$\\Delta$BIC"),
+    out = "Measurement invariance.html",
+    header = F)
 ```
 
 ---
