@@ -19,8 +19,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P., & Tovée, M.J. (2024, April 2nd). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _PsyArxiv_ [https://doi.org/10.31234/osf.io/2qfdb](https://doi.org/10.31234/osf.io/2qfdb)
-
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
 * Szabelska, A., **Pollet, T.V.**, Dujols, O., Klein, R.A., & IJzerman, H. (2021, February 25). A Tutorial for Exploratory Research: An Eight-Step Approach. _PsyArxiv_ [https://doi.org/10.31234/osf.io/cy9mz](https://doi.org/10.31234/osf.io/cy9mz)
@@ -29,9 +27,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2024/Accepted/in Press**
 
+[138.](https://doi.org/10.31234/osf.io/2qfdb) **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P.L., & Tovée, M.J. (2024, April 2nd). Sample characteristics for quantitative analyses in Body Image: Issues of generalisability. _Body Image_ [Preprint](https://doi.org/10.31234/osf.io/2qfdb)
+
 [137.](https://doi.org/10.1371/journal.pone.0297075) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (2024). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE, 19(2)_ e0297075.
 
-[136.](https://doi.org/10.5817/CP2024-1-3) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (accepted). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18(1)_ Article 3. [https://doi.org/10.5817/CP2024-1-3](https://doi.org/10.5817/CP2024-1-3)
+[136.](https://doi.org/10.5817/CP2024-1-3) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2024). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18(1)_ Article 3. [https://doi.org/10.5817/CP2024-1-3](https://doi.org/10.5817/CP2024-1-3)
 
 [135.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 112474. [https://doi.org/10.1016/j.paid.2023.112474](https://doi.org/10.1016/j.paid.2023.112474)
 
