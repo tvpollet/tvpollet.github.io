@@ -4,13 +4,15 @@
     <title>Lecture 9: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
-    <script src="libs/viz-1.8.2/viz.js"></script>
-    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-    <script src="libs/grViz-binding-1.0.9/grViz.js"></script>
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/viz/viz.js"></script>
+    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding/grViz.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -23,10 +25,14 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-11-21 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-03-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
+
+
+
 
 
 
@@ -167,21 +173,21 @@ summary(fit_mediationSEM, standardized=TRUE, fit.measures=T)
 ## Regressions:
 ##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
 ##   Y ~                                                                   
-##     X          (c)    0.040    0.117    0.337    0.736    0.040    0.034
+##     X          (c)    0.040    0.126    0.315    0.753    0.040    0.034
 ##   M ~                                                                   
-##     X          (a)    0.561    0.096    5.815    0.000    0.561    0.514
+##     X          (a)    0.561    0.094    5.997    0.000    0.561    0.514
 ##   Y ~                                                                   
-##     M          (b)    0.635    0.103    6.150    0.000    0.635    0.593
+##     M          (b)    0.635    0.104    6.133    0.000    0.635    0.593
 ## 
 ## Variances:
 ##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##    .Y                 2.581    0.326    7.927    0.000    2.581    0.627
-##    .M                 2.633    0.340    7.735    0.000    2.633    0.735
+##    .Y                 2.581    0.318    8.109    0.000    2.581    0.627
+##    .M                 2.633    0.376    7.002    0.000    2.633    0.735
 ## 
 ## Defined Parameters:
 ##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##     ab                0.357    0.079    4.496    0.000    0.357    0.305
-##     total             0.396    0.122    3.242    0.001    0.396    0.339
+##     ab                0.357    0.079    4.508    0.000    0.357    0.305
+##     total             0.396    0.122    3.243    0.001    0.396    0.339
 ```
 
 ```r
@@ -357,8 +363,8 @@ require(lavaanPlot)
 lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
 ```
 
-<div id="htmlwidget-cd2ccd641d0cd2841030" style="width:576px;height:252px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-cd2ccd641d0cd2841030">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-57055446278d8fab583c" style="width:576px;height:252px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-57055446278d8fab583c">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## But it is not the way we want.
@@ -372,8 +378,8 @@ labels&lt;- list(X="independent", M="mediator", Y="dependent")
 lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), labels=labels, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
 ```
 
-<div id="htmlwidget-0685de3d03c6341a657b" style="width:576px;height:252px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0685de3d03c6341a657b">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-25eca3912f59aee34246" style="width:576px;height:252px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-25eca3912f59aee34246">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Make a plot with the estimates.
@@ -385,7 +391,7 @@ labels2&lt;- list("Dependent", "Mediator", "Independent") # need to reorganize.
 semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "ram", nodeLabels = labels2)
 ```
 
-&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-14-1.png" width="400px" /&gt;
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
 
 ---
 ## Make the line visible... .
@@ -397,7 +403,7 @@ require(semPlot)
 semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "lisrel", curvePivot = TRUE, fade=FALSE, nodeLabels = labels2)
 ```
 
-&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
 
 ---
 ## alternative route.
@@ -646,7 +652,7 @@ require(qgraph)
 semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
 ```
 
-&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Try it yourself.
