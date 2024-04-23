@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-03-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -197,10 +197,11 @@ More info: Goldstein, H., Rasbash, J., et al. (1993). A multilevel analysis of s
 
 ```r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture10")
-library(mlmRev) # contains data
+library(mlmRev)  # contains data
 library(lme4)
-Exam&lt;-mlmRev::Exam 
-null_model&lt;-lmer(normexam ~ 1 + (1 | school), data=Exam, REML=F)
+Exam &lt;- mlmRev::Exam
+null_model &lt;- lmer(normexam ~ 1 + (1 | school), data = Exam,
+    REML = F)
 ```
 
 ---
@@ -256,7 +257,7 @@ Same model as before but now in nlme.
 
 ```r
 require(nlme)
-lme(fixed = normexam ~ 1, data = Exam,random = ~ 1 | school)
+lme(fixed = normexam ~ 1, data = Exam, random = ~1 | school)
 ```
 
 ```
@@ -286,7 +287,8 @@ Note that the effect of 'standLRT' is not varying between groups. We are only lo
 
 
 ```r
-fixed_pred&lt;-lmer(normexam ~ standLRT + (1 | school), data=Exam, REML=F)
+fixed_pred &lt;- lmer(normexam ~ standLRT + (1 | school), data = Exam,
+    REML = F)
 summary(fixed_pred)
 ```
 
@@ -370,9 +372,9 @@ In the second model, a model with a random intercept on individual level and a p
 
 ```r
 # suppressed a convergence warning
-randomslope&lt;- lmer(normexam ~ 1 + (standLRT | school), data=Exam)
-null_reml &lt;- lmer(normexam ~ 1 + (1 | school), data=Exam)
-anova(null_reml,randomslope, refit=F) # Otherwise it uses ML.
+randomslope &lt;- lmer(normexam ~ 1 + (standLRT | school), data = Exam)
+null_reml &lt;- lmer(normexam ~ 1 + (1 | school), data = Exam)
+anova(null_reml, randomslope, refit = F)  # Otherwise it uses ML.
 ```
 
 ```
@@ -478,8 +480,9 @@ This model has both a random slope at school level for 'standLRT' and a fixed ef
 
 
 ```r
-standLRT&lt;-lmer(normexam ~ standLRT + (standLRT | school), data=Exam, REML=F)
-sink(file = 'standLRT.txt')
+standLRT &lt;- lmer(normexam ~ standLRT + (standLRT | school), data = Exam,
+    REML = F)
+sink(file = "standLRT.txt")
 summary(standLRT)
 ```
 
@@ -526,8 +529,12 @@ It is possible to enter variables on group level as well. Here, we will add a pr
 
 
 ```r
-schoolaverage&lt;-lmer(normexam ~ standLRT + schavg + (1 + standLRT | school), data=Exam, REML=F)
-sink(file = 'schoolaverage.txt')
+schoolaverage &lt;- lmer(normexam ~
+    standLRT + schavg +
+        (1 + standLRT |
+            school),
+    data = Exam, REML = F)
+sink(file = "schoolaverage.txt")
 summary(schoolaverage)
 ```
 
@@ -572,7 +579,14 @@ sink()
 
 ```r
 require(stargazer)
-stargazer(null_model,standLRT,schoolaverage, type="html", dep.var.labels = c("Scores"), covariate.labels=c("London reading test", "School average"), style= "demography", out= "multilevel models.html", header=F)
+stargazer(null_model,
+    standLRT, schoolaverage,
+    type = "html", dep.var.labels = c("Scores"),
+    covariate.labels = c("London reading test",
+        "School average"),
+    style = "demography",
+    out = "multilevel models.html",
+    header = F)
 ```
 
 ```
@@ -621,7 +635,7 @@ Make a plot.
 
 ```r
 require(lmerTest)
-ranova(fixed_pred) # rand() is alternative command but leads to issues.
+ranova(fixed_pred)  # rand() is alternative command but leads to issues.
 ```
 
 ```
@@ -647,7 +661,8 @@ Are the residuals normal and linear? We are looking for straight lines... .
 ```r
 require(DHARMa)
 # 250 is the default.
-simulationOutput &lt;- simulateResiduals(fittedModel = fixed_pred, n = 250)
+simulationOutput &lt;- simulateResiduals(fittedModel = fixed_pred,
+    n = 250)
 plotSimulatedResiduals(simulationOutput = simulationOutput)
 ```
 
@@ -702,15 +717,15 @@ Not evaluated here. But often (as in your assignment) you will have nested data.
 
 
 ```r
-# This would nest classes in schools.
-# lme 4
-(1|school/class)
+# This would nest classes in schools.  lme 4
+(1 | school/class)
 # nlme: Classes in schools.
-random = ~1 |school/class
-# Suppose that you have two memberships which are non-nested
-# lme4
+random = ~1 | school/class
+# Suppose that you have two memberships which are
+# non-nested lme4
 (1 | school) + (1 | doctor)
-# Harder to do in nlme - find out on your own it involves lists :)
+# Harder to do in nlme - find out on your own it involves
+# lists :)
 ```
 
 &lt;img src="https://media.giphy.com/media/MJ6SslGZEYKhG/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
@@ -753,11 +768,16 @@ require(lmeresampler)
 require(boot)
 require(lme4)
 require(mlmRev)
-Exam&lt;-mlmRev::Exam 
+Exam &lt;- mlmRev::Exam
 set.seed(1981)
-b&lt;-bootstrap(model = schoolaverage, .f = fixef, type = "case", resample = c(TRUE, TRUE), B=100)
-# Only small number to save time normally &gt;1000
-boot_data&lt;-as.data.frame(b$replicates)
+b &lt;- bootstrap(model = schoolaverage,
+    .f = fixef, type = "case",
+    resample = c(TRUE,
+        TRUE), B = 100)
+# Only small number
+# to save time
+# normally &gt;1000
+boot_data &lt;- as.data.frame(b$replicates)
 ```
 
 ---
@@ -790,18 +810,6 @@ print(skim(boot_data))
 ## 1 0.0160 0.0774 ▁▂▇▇▂
 ## 2 0.558  0.598  ▁▃▇▅▁
 ## 3 0.415  0.663  ▃▇▇▅▂
-```
-
-```
-## $numeric
-## 
-## ── Variable type: numeric ──────────────────────────────────────────────────────
-##   skim_…¹ n_mis…² compl…³     mean     sd      p0     p25      p50    p75   p100
-## 1 (Inter…       0       1 -0.00603 0.0342 -0.124  -0.0261 -0.00357 0.0160 0.0774
-## 2 standL…       0       1  0.547   0.0193  0.492   0.536   0.547   0.558  0.598 
-## 3 schavg        0       1  0.329   0.129   0.0595  0.236   0.310   0.415  0.663 
-## # … with 1 more variable: hist &lt;chr&gt;, and abbreviated variable names
-## #   ¹​skim_variable, ²​n_missing, ³​complete_rate
 ```
 
 
