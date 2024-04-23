@@ -1,8 +1,18 @@
 ---
 title: "Solution Lecture 9"
-output: html_document
 author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
 date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
 ---
 
 ```{r setup, include=FALSE}
@@ -118,7 +128,7 @@ colnames(raw)<-c("att",'sn','pbc','int','beh')
 
 Bootstrap. This will take a lot of time.
 
-Contrary, to [Huang](http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html), we find no evidence for a significant mediation effect.
+Contrary, to [Huang](https://web.archive.org/web/20200716131821/http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html), we find no evidence for a significant mediation effect.
 
 ```{r}
 results_raw<-sem(model2,data=raw,se="bootstrap",bootstrap=1000) 
@@ -135,6 +145,12 @@ Huang, F. (2016). Path analysis with R. [http://web.missouri.edu/~huangf/data/mv
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/9wcu6Tr1ecmxa/giphy.gif")
+```
+
+## SessionInfo
+
+```{r}
+sessionInfo()
 ```
 
 

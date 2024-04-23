@@ -4,9 +4,11 @@
     <title>Lecture 10: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.16/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -19,10 +21,13 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-11-28 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-03-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
+
+
 
 
 
@@ -448,7 +453,7 @@ plot(ranef(fixed_pred))
 ## $school
 ```
 
-&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
 ---
 ## plot random slope
 
@@ -461,7 +466,7 @@ plot(ranef(randomslope))
 ## $school
 ```
 
-&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-17-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-18-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Model with random slope AND fixed effect. 
@@ -646,7 +651,7 @@ simulationOutput &lt;- simulateResiduals(fittedModel = fixed_pred, n = 250)
 plotSimulatedResiduals(simulationOutput = simulationOutput)
 ```
 
-&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-24-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Formal test.
@@ -658,7 +663,7 @@ We can also obtain a formal test.
 testUniformity(simulationOutput = simulationOutput)
 ```
 
-![](Lecture10_xaringan_files/figure-html/unnamed-chunk-24-1.png)&lt;!-- --&gt;
+![](Lecture10_xaringan_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
 
 ```
 ## 
@@ -679,7 +684,7 @@ Check our residuals. No real funnel. Homogeneity OK.
 plot(fixed_pred)
 ```
 
-![](Lecture10_xaringan_files/figure-html/unnamed-chunk-25-1.png)&lt;!-- --&gt;
+![](Lecture10_xaringan_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
 
 ---
 ## Some tips.
@@ -723,7 +728,7 @@ plot(ranef(null_model))
 ## $school
 ```
 
-&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-28-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Random slope... .
@@ -737,7 +742,7 @@ plot(ranef(randomslope))
 ## $school
 ```
 
-&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-29-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture10_xaringan_files/figure-html/unnamed-chunk-30-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Bootstrap a fixed effect.
