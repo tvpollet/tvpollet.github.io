@@ -11,13 +11,20 @@ output:
       countIncrementalSlides: false
 ---
 
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+```
 
 ```{r setup, include=FALSE}
+library(xaringanExtra)
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
 
 ## PY0794: Advanced Quantitative research methods.
 
@@ -319,7 +326,7 @@ knitr::include_graphics("https://static-content.springer.com/image/art%3A10.1007
 
 --
 
-* Social network analysis. (Citation network analysis, for example)
+* Social network analysis. (Citation network analysis, [for example](https://connmal.github.io/Bibliometrix_Northumbria/About.html))
 
 --
 
@@ -395,9 +402,9 @@ Feedback via Turnitin.
 
 You can post questions via blackboard (BB). Book an appointment with me for substantive issues, only if unresolved via BB ([check availability](https://tvpollet.github.io/calendar/)).
 
-Questions on assignment via discussion board. (**Unavailable Dec. 17th to Jan. 10th**). 
+Questions on assignment via discussion board. 
 
-Will not answer any questions post Jan 24th (5pm).
+Will not answer any questions post May 14th (1pm).
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://wanna-joke.com/wp-content/uploads/2015/06/finals-calculate-lowest-mark.jpg")

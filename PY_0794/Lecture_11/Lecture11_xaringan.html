@@ -7,6 +7,8 @@
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -19,10 +21,11 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2022-12-05 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
 
 
 
@@ -45,10 +48,11 @@ As an aside all slides were made with ['xaringan'](https://github.com/yihui/xari
 
 
 ```r
-library(mlmRev) # contains data
+library(mlmRev)  # contains data
 library(lme4)
-Exam&lt;-mlmRev::Exam
-fixed_pred&lt;-lmer(normexam ~ standLRT + (1 | school), data=Exam, REML=F)
+Exam &lt;- mlmRev::Exam
+fixed_pred &lt;- lmer(normexam ~ standLRT + (1 | school), data = Exam,
+    REML = F)
 ```
 
 ---
@@ -58,9 +62,13 @@ fixed_pred&lt;-lmer(normexam ~ standLRT + (1 | school), data=Exam, REML=F)
 ```r
 library(ggplot2)
 library(dplyr)
-#subset 3 schools (just picked 3 from the dataframe)
-subset&lt;-filter(Exam, school=='1' | school=='17' | school=='18')
-multilevelplot&lt;-ggplot(subset,aes(standLRT, normexam)) + geom_jitter(alpha = 0.3) + facet_wrap(~school) + xlab("London Reading test") + ylab("Normed Exam Score") + geom_smooth(method="lm") + geom_hline(yintercept=0, linetype="dashed") + theme_bw()
+# subset 3 schools (just picked 3 from the dataframe)
+subset &lt;- filter(Exam, school == "1" | school == "17" | school ==
+    "18")
+multilevelplot &lt;- ggplot(subset, aes(standLRT, normexam)) + geom_jitter(alpha = 0.3) +
+    facet_wrap(~school) + xlab("London Reading test") + ylab("Normed Exam Score") +
+    geom_smooth(method = "lm") + geom_hline(yintercept = 0, linetype = "dashed") +
+    theme_bw()
 ```
 
 ---
@@ -72,11 +80,7 @@ multilevelplot&lt;-ggplot(subset,aes(standLRT, normexam)) + geom_jitter(alpha = 
 plot(multilevelplot)
 ```
 
-```
-## `geom_smooth()` using formula 'y ~ x'
-```
-
-&lt;img src="Lecture11_xaringan_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture11_xaringan_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Pros and cons.
@@ -97,18 +101,19 @@ Illustration based on [this](http://rpsychologist.com/r-guide-longitudinal-lme-l
 
 
 ```r
-# pooled 
-pooled.model &lt;- lm(normexam ~ standLRT, data=Exam)
+# pooled
+pooled.model &lt;- lm(normexam ~ standLRT, data = Exam)
 # Save the fitted values
 Exam$PooledPredictions &lt;- fitted(pooled.model)
 # Intercept
-varying.intercept.model &lt;- lm(normexam ~ standLRT + school, data=Exam)
+varying.intercept.model &lt;- lm(normexam ~ standLRT + school, data = Exam)
 Exam$VaryingInterceptPredictions &lt;- fitted(varying.intercept.model)
 # Slope
-varying.slope.model &lt;- lm(normexam ~ standLRT:school, data=Exam)
+varying.slope.model &lt;- lm(normexam ~ standLRT:school, data = Exam)
 Exam$VaryingSlopePredictions &lt;- fitted(varying.slope.model)
 # Interaction (both slope)
-interaction.model &lt;- lm(normexam ~ standLRT + school + standLRT:school, data=Exam)
+interaction.model &lt;- lm(normexam ~ standLRT + school + standLRT:school,
+    data = Exam)
 Exam$InteractionPredictions &lt;- fitted(interaction.model)
 ```
 ---
@@ -118,15 +123,16 @@ We need a subset.
 ```r
 require(ggplot2)
 require(dplyr)
-subset&lt;-filter(Exam, school=='1' | school=='18' | school=='21' | school=='40' | school=='55' | school=='59')
+subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
+    "21" | school == "40" | school == "55" | school == "59")
 gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
     geom_line(aes(y = PooledPredictions), color = "darkgrey") +
     geom_line(aes(y = VaryingInterceptPredictions), color = "blue") +
-    #geom_line(aes(y = VaryingSlopePredictions), color = "red") +
-    #geom_line(aes(y = InteractionPredictions), color = "black") +
-    geom_point(alpha = 0.3, size = 3) +
-    facet_wrap(~school) + xlab("London Reading test") + ylab("Normed Exam Score") +
-    theme_bw()
+    # geom_line(aes(y = VaryingSlopePredictions), color =
+    # 'red') + geom_line(aes(y = InteractionPredictions),
+    # color = 'black') +
+geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) + xlab("London Reading test") +
+    ylab("Normed Exam Score") + theme_bw()
 ```
 ---
 ## Graph: Random intercept.
@@ -136,7 +142,7 @@ gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
 print(gg)
 ```
 
-![](Lecture11_xaringan_files/figure-html/unnamed-chunk-7-1.png)&lt;!-- --&gt;
+![](Lecture11_xaringan_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
 
 ---
 ## Graph: Random slope.
@@ -145,15 +151,17 @@ print(gg)
 ```r
 require(ggplot2)
 require(dplyr)
-subset&lt;-filter(Exam, school=='1' | school=='18' | school=='21' | school=='40' | school=='55' | school=='59')
+subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
+    "21" | school == "40" | school == "55" | school == "59")
 gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
     geom_line(aes(y = PooledPredictions), color = "darkgrey") +
-    # geom_line(aes(y = VaryingInterceptPredictions), color = "blue") +
-    geom_line(aes(y = VaryingSlopePredictions), color = "red") +
-    #geom_line(aes(y = InteractionPredictions), color = "black") +
-    geom_point(alpha = 0.3, size = 3) +
-    facet_wrap(~school) + xlab("London Reading test") + ylab("Normed Exam Score") +
-    theme_bw()
+    # geom_line(aes(y = VaryingInterceptPredictions), color
+    # = 'blue') +
+geom_line(aes(y = VaryingSlopePredictions), color = "red") +
+    # geom_line(aes(y = InteractionPredictions), color =
+    # 'black') +
+geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) + xlab("London Reading test") +
+    ylab("Normed Exam Score") + theme_bw()
 ```
 
 ---
@@ -164,7 +172,7 @@ gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
 print(gg)
 ```
 
-![](Lecture11_xaringan_files/figure-html/unnamed-chunk-9-1.png)&lt;!-- --&gt;
+![](Lecture11_xaringan_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
 
 ---
 ## Graph: Slope and intercept.
@@ -173,14 +181,16 @@ print(gg)
 ```r
 require(ggplot2)
 require(dplyr)
-subset&lt;-filter(Exam, school=='1' | school=='18' | school=='21' | school=='40' | school=='55' | school=='59')
+subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
+    "21" | school == "40" | school == "55" | school == "59")
 gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
     geom_line(aes(y = PooledPredictions), color = "darkgrey") +
-    # geom_line(aes(y = VaryingInterceptPredictions), color = "blue") +
-    # geom_line(aes(y = VaryingSlopePredictions), color = "red") +
-    geom_line(aes(y = InteractionPredictions), color = "black") +
-    geom_point(alpha = 0.3, size = 3) +
-    facet_wrap(~school) + xlab("London Reading test") + ylab("Normed Exam Score") +
+    # geom_line(aes(y = VaryingInterceptPredictions), color
+    # = 'blue') + geom_line(aes(y =
+    # VaryingSlopePredictions), color = 'red') +
+geom_line(aes(y = InteractionPredictions), color = "black") +
+    geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) +
+    xlab("London Reading test") + ylab("Normed Exam Score") +
     theme_bw()
 ```
 
@@ -192,7 +202,7 @@ gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
 print(gg)
 ```
 
-![](Lecture11_xaringan_files/figure-html/unnamed-chunk-11-1.png)&lt;!-- --&gt;
+![](Lecture11_xaringan_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
 
 
 ---
@@ -227,7 +237,7 @@ A null model looks like this
 
 ```r
 # lme4
-lmer(y ~ 1 + (1 | subjects), data=data)
+lmer(y ~ 1 + (1 | subjects), data = data)
 ```
 
 A null *growth* model looks like this. ("Unconditional growth model")
@@ -235,7 +245,7 @@ A null *growth* model looks like this. ("Unconditional growth model")
 
 ```r
 # lme4
-lmer(y ~ time + (time | subjects), data=data)
+lmer(y ~ time + (time | subjects), data = data)
 ```
 
 
@@ -249,11 +259,11 @@ Here we examine if treatment influences the outcome over time.
 
 
 ```r
-lmer(y ~ time * tx + (time | subjects), data=data)
+lmer(y ~ time * tx + (time | subjects), data = data)
 # dropping a random slope.
-lmer(y ~ time * tx + (1 | subjects), data=data)
+lmer(y ~ time * tx + (1 | subjects), data = data)
 # dropping a random intercept.
-lmer(y ~ time * tx + ( 0 + time | subjects), data=data)
+lmer(y ~ time * tx + (0 + time | subjects), data = data)
 ```
 
 ---
@@ -265,7 +275,7 @@ Now imagine that we have therapists... .
 
 
 ```r
-lmer(y ~ time * tx + (time | therapist/subjects), data=df)
+lmer(y ~ time * tx + (time | therapist/subjects), data = df)
 ```
 
 ---
@@ -280,7 +290,8 @@ But often you'll have random allocation at the subject level.
 
 
 ```r
-lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx || therapist), data=df)
+lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx ||
+    therapist), data = df)
 ```
 
 ---
@@ -291,7 +302,8 @@ We might hypothesize that therapists that are allocated participants that report
 
 
 ```r
-lmer(y ~ time * tx + (time | therapist:subjects) + (time | therapist) + (0 + tx + time:tx | therapist), data=data)
+lmer(y ~ time * tx + (time | therapist:subjects) + (time | therapist) +
+    (0 + tx + time:tx | therapist), data = data)
 ```
 
 ---
@@ -301,7 +313,8 @@ It is also possible that when a therapist is successful with treatment A, that h
 
 
 ```r
-lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx | therapist), data=df)
+lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx |
+    therapist), data = df)
 ```
 
 
@@ -321,8 +334,8 @@ Example
 
 ```r
 # Example
-m &lt;- glmer(remission ~ IL6 + CRP + CancerStage + LengthofStay + Experience +
-    (1 | DID), data = hdp, family = binomial)
+m &lt;- glmer(remission ~ IL6 + CRP + CancerStage + LengthofStay +
+    Experience + (1 | DID), data = hdp, family = binomial)
 ```
 
 ---
@@ -346,7 +359,7 @@ Help! My data are not normal... . Pointers in [Zuur et al. (2009)](https://www.s
 
 --
 
-* Social network analysis. (Citation network analysis, for example)
+* Social network analysis. (Citation network analysis, [for example](https://connmal.github.io/Bibliometrix_Northumbria/About.html))
 
 --
 
@@ -420,9 +433,9 @@ Feedback via Turnitin.
 
 You can post questions via blackboard (BB). Book an appointment with me for substantive issues, only if unresolved via BB ([check availability](https://tvpollet.github.io/calendar/)).
 
-Questions on assignment via discussion board. (**Unavailable Dec. 17th to Jan. 10th**). 
+Questions on assignment via discussion board. 
 
-Will not answer any questions post Jan 24th (5pm).
+Will not answer any questions post May 14th (1pm).
 
 &lt;img src="https://wanna-joke.com/wp-content/uploads/2015/06/finals-calculate-lowest-mark.jpg" width="300px" style="display: block; margin: auto;" /&gt;
 
