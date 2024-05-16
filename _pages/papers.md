@@ -35,7 +35,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [135.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218_ 112474.
 
-[134.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2024). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology, 43_ 5428–5442.
+[134.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2024). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology, 43_, 5428–5442.
 
 ## **2023**
 
