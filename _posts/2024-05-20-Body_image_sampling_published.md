@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Paper about sampling in Body Image published!
+title: Paper about sampling in Body Image published.
 image: /img/hurray-penguin.gif
 tags:
   - Research
