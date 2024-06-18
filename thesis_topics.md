@@ -365,10 +365,10 @@ The Guardian news paper has a returning column in its weekend edition whereby [p
 
 In this project you will contribute to the database, and then you can use the database for your project. It allows you to answer questions on for example, whether men or women are more 'choosy'. Why do some people get high ratings and others low ratings? Are homosexual dates more or less likely to find a match than heterosexual dates?
 
-## Individual differences in Statistical knowledge.
+## Celebrities
 <a href="#thesis-introduction">back to top</a>
 
-You will examine the degree to which your fellow students understand basic concepts in statistics, and whether there are individual differences and how knowledge of statistics is related to performance on exams. This project can be run online. The most interesting project would include a longitudinal component (i.e. at start of semester versus at end of semester). It is therefore better suited as a master project.
+In this project, you would examine age gaps in relationships in Hollywood celebrities in their marriages or examine late life fatherhood of celebrities. We want to examine to which degree they are similar or different from the general population. For example, do male celebrities father children later in life than the typical American man?
 
 ## Traffic behaviour: Gender differences in risk taking.
 <a href="#thesis-introduction">back to top</a>
@@ -423,10 +423,19 @@ Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/cl
 There is an increase in services which allow you to 'buy now and pay later' (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, do individuals who tend to hoard, rely more on these products?
 
 ## Gender and leadership in Psychology courses
+<a href="#thesis-introduction">back to top</a>
 
 In this project, you will find out whether gender influences programme leadership for accredited BPS courses. Women have been less likely to have been offered leadership positions? Is this also the case for acting as a programme leader in psychology?
 
+
+## Individual differences in Statistical knowledge.
+<a href="#thesis-introduction">back to top</a>
+
+You will examine the degree to which your fellow students understand basic concepts in statistics, and whether there are individual differences and how knowledge of statistics is related to performance on exams. This project can be run online. The most interesting project would include a longitudinal component (i.e. at start of semester versus at end of semester). It is therefore better suited as a master project.
+
+
 ## E-sports
+<a href="#thesis-introduction">back to top</a>
 
 E-sports are a rapidly emerging phenomenon and a million or even billion dollar industry. In this area there is room to explore some psychological phenomena, typically documented in regular sports. For example:
 
@@ -435,6 +444,7 @@ E-sports are a rapidly emerging phenomenon and a million or even billion dollar 
 * Does changing a coach work?
 * Are hierarchies in e-sports stable?
 * Do red teams win more than other colours?
+
 
 # Projects which I prefer not to supervise.
 <a href="#thesis-introduction">back to top</a>
