@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (2024, July 5th). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ydb5v](https://doi.org/10.31234/osf.io/ydb5v)
+
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
 * Szabelska, A., **Pollet, T.V.**, Dujols, O., Klein, R.A., & IJzerman, H. (2021, February 25). A Tutorial for Exploratory Research: An Eight-Step Approach. _PsyArxiv_ [https://doi.org/10.31234/osf.io/cy9mz](https://doi.org/10.31234/osf.io/cy9mz)
