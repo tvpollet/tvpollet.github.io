@@ -29,6 +29,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2024/Accepted/in Press**
 
+[139.](https://doi.org/10.1155/2024/5513833) Neave, N., Murphy-Morgan, C., Hodgson, P., & **Pollet, T.V.** (Accepted/In press). A qualitative study of the impact of hoarding behaviours and social networks on older peoples supported housing decisions. Health and Social Care in the Community. [https://doi.org/10.1155/2024/5513833](https://doi.org/10.1155/2024/5513833)
+
 [138.](https://doi.org/10.1016/j.bodyim.2024.101714) **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P.L., & Tovée, M.J. (2024). Sample characteristics for quantitative analyses in _Body Image_: Issues of generalisability. _Body Image, 49_  101714.
 
 [137.](https://doi.org/10.1371/journal.pone.0297075) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (2024). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE, 19(2)_ e0297075.
