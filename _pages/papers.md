@@ -29,7 +29,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2024/Accepted/in Press**
 
-[139.](https://doi.org/10.1155/2024/5513833) Neave, N., Murphy-Morgan, C., Hodgson, P., & **Pollet, T.V.** (Accepted/In press). A qualitative study of the impact of hoarding behaviours and social networks on older peoples supported housing decisions. _Health and Social Care in the Community_. [https://doi.org/10.1155/2024/5513833](https://doi.org/10.1155/2024/5513833)
+[139.](https://doi.org/10.1155/2024/5513833) Murphy-Morgan, C., Hodgson, P., **Pollet, T.V.**, & Neave, N. (2024). A qualitative study of the impact of hoarding behaviours and social networks on older peoples supported housing decisions. _Health and Social Care in the Community_. [https://doi.org/10.1155/2024/5513833](https://doi.org/10.1155/2024/5513833)
 
 [138.](https://doi.org/10.1016/j.bodyim.2024.101714) **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P.L., & Tovée, M.J. (2024). Sample characteristics for quantitative analyses in _Body Image_: Issues of generalisability. _Body Image, 49_  101714.
 
