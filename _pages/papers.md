@@ -52,10 +52,10 @@ Click the number for the corresponding paper to download a copy (it will open in
 [130.](https://doi.org/10.1177/00332941231164079) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2023). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports_,  [doi:10.1177/00332941231164079](https://doi.org/10.1177/00332941231164079
 )
 
-[129.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2023). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior, 52_, 291–300 [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
+[129.](https://doi.org/10.1007/s10508-022-02450-0) Newman, A.V., **Pollet, T.V.**, McCarty, K., Neave, N. & Saxton, T.K. (2023). Consistency of Eye Coloration Across Different Relationship Partners. _Archives of Sexual Behavior, 52_, 291–300. [doi:10.1007/s10508-022-02450-0](https://doi.org/10.1007/s10508-022-02450-0
 )
 
-[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J.L., **Pollet, T.V.**, & Elliott, C. (2023). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations_ [doi:10.1177/00187267221137996](https://doi.org/10.1177/00187267221137996)
+[128.](https://doi.org/10.1177/00187267221137996) Cook, C., Callahan, J.L., **Pollet, T.V.**, & Elliott, C. (2023). Gender(ed) performances: Women’s impression management in stand-up comedy. _Human Relations, 77(4)_, 533-559. [doi:10.1177/00187267221137996](https://doi.org/10.1177/00187267221137996)
 
 ## **2022**
 
