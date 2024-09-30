@@ -21,6 +21,7 @@ Specifically, I cover the [Open Science Framework](./#open-science-framework), [
 
 ![Image help](https://media.giphy.com/media/phJ6eMRFYI6CQ/giphy.gif){: .center-image }
 
+**Below applies to Masters students - for Bachelor students, you will have prebooked sessions**
 
 You can find my availability [here](https://tvpollet.github.io/calendar){:target="_blank"}. Before the meeting make sure you have uploaded all the relevant documents to the [OSF](./#open-science-framework). Please do so around **two working days**, beforehand. That will give me time to review your documents. I might reply outside of office hours but I do not expect you to.
 
