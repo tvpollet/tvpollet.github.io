@@ -1,0 +1,285 @@
+---
+title: 'Thesis session 4: Your level 6 project'
+author: "Prof. Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+  xaringan::moon_reader:
+    css: ["default", "default-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+
+## Reflecting on last week's task: Study Design
+
+- What challenges did you have when designing the study design?
+- Did you have any successes?
+- Are you OK with the literature?
+- What skills have you learned?
+- How might you apply them to your future career?
+- Is everyone happy with their study?
+
+---
+## Where we are at!
+
+At this stage, you should have a very good idea of what your study looks like. If this is what you’re going to do for your dissertation, we can start the ethics process.
+
+```{r, out.width= "500px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNTk4aHBtYmwzc2tsZDN1YnZ2Z2pvd3d5cDBia21ka2J6YnY5anFreSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3nskIst9QtSMg/giphy.gif")
+```
+
+---
+
+## Completing your ethics application
+
+### Top tips
+
+1. Your ethics application needs to be detailed enough for your reviewer to understand what you are doing and be able to replicate your study.
+
+--
+
+2. Don't forget the "extras": participant info sheet, consent, debrief, the questionnaires/interview schedule, and advertisement.
+
+--
+
+3. Only include information once but include it in the correct sections.
+
+```{r, out.width= "400px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://media1.tenor.com/m/EquS9YPyS6MAAAAd/i-have-a-tip-seth-meyers.gif")
+```
+
+---
+
+### Walk through of the first questions on the Student Project Approval form
+
+- **Project title and General aims**
+  - Choose a clear descriptive title (it's the first thing you can do to help your reviewer).
+  - Give some theoretical background and justification for the work.
+  - Make sure you give a rationale for your research.
+  - Poorly rationalised research can be considered unethical as it wastes participants’ time.
+  - State your research question.
+  - State your aims.
+  - Give clear hypotheses about your variables. Consider direction!
+
+---
+### Form continued ... 
+
+**Study details**
+  - Research activities: What will participants do during the study (like the procedure section of an article)? What analyses will you run on the data?
+  - Questionnaires/equipment: Describe the questionnaires you'll be using. Personally, I would include a more brief overview here, give the reviewer the gist. You will provide more detail later.
+  - Ethical considerations: Are there any ethical considerations? If so, how will you offset them?
+
+```{r, out.width= "300px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://media1.tenor.com/m/uGtmpHyH4QEAAAAC/waiting-cat-filing-nail.gif")
+```
+
+---
+## Form continued ... 
+
+**People and personal data**
+
+  - Confirm if you are collecting identifiable data or not (e.g. voice recordings are identifiable because you can hear a voice, online surveys tend not to be).
+  - Sample groups: Who are your participants? How many do you need (G\*power, 2.5x original)? How will you recruit them? Will you exclude anyone and if so, why?
+  - Provide a detailed description of what the participants do… Do this like the method section in an article.
+    - E.g. if it’s an intervention, what does it entail? Has it been published before? Are you adapting something that exists? It needs to be crystal clear to the reviewer what you will do. If something is not stated in the ethics questionnaire you cannot do it!
+    - E.g. if it’s a questionnaire: Who developed it? What does it tell you? Provide some example items. How many items? What are answer anchors/number of points on a scale? How do you calculate the scale score, if appropriate? What’s the validity/reliability (e.g. comparisons to other measures; internal consistency)? Apply the above to any other measures. Include a document or link to the materials.
+
+---
+## Data anonymisation
+
+- **Data management and storage**
+  - If you need identifiable data - How will you anonymize/pseudonymise the data?
+  - Where will data be stored? Will it be deleted at a future date? Will you share your data and if so how will it be presented? Will you be storing data on the OSF? --> Our preference if anonymous.
+
+```{r, out.width= "350px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://media1.tenor.com/m/nf985lW6iawAAAAC/anonymous-hacker.gif")
+```
+
+---
+
+### Data anonymisation: Quant/Intervention
+
+- All contact details will be stored separate from the quant/qual data collected. These details will be used to invite people to [INTERVENTION] and later contact for data collection. Once the details are no longer needed (e.g. participant withdraws or data has been collected) they will be deleted.
+
+--
+
+- All quantitative data will be anonymous and assigned a code number.
+  - [PAPER BASED] The data will be stored in a booklet with a participant number attached. The person’s name and participant number will be stored separately to ensure the same person uses the same number at different time points. Once knowing who is assigned which number is no longer needed, this information will be destroyed.
+  - [DIGITAL] Data will be stored online in the survey software and then downloaded to the university OneDrive. No IP addresses will be collected (or explain how removed). The anonymised data will then be used for the analysis.
+
+---
+
+### Data anonymisation: Qual
+
+- Transcripts of recordings will be de-identified during transcription. Transcripts may be made available in line with open science (e.g. via OSF) but sections where people are identifiable will be removed. Recordings will be retained during the analysis (e.g. for relistening) but will be deleted after publication of the data.
+- Recordings of interviews will be transcribed with any identifiable details being removed – participants will be given a pseudonym. Recordings will be deleted after the analysis of data has taken place. Transcription may be completed by an external organisation but the recording content will be deidentified before sending this information to them.
+
+---
+
+### Data storage: Quant
+
+- Questionnaire data will have any identifiable information removed (whilst this is not requested, it is possible people may write identifiable information in the textboxes - even if you tell them not to.).
+
+--
+
+- All data, once downloaded, will be stored on the University OneDrive; deidentified data (e.g. quantitative data) may be made available in line with open science practices (e.g. via the OSF), or journal repository). Data, be it anonymised or not, may be shared with the supervisor or module staff, as per module requirements. Think about where data are stored, e.g., Qualtrics.
+
+
+```{r, out.width= "350px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://media1.tenor.com/m/9aE1QMbUjCMAAAAC/star-trek-the-next-generation.gif ")
+```
+
+---
+
+### Data storage: Qual
+
+- All data will be stored on the University OneDrive, recordings will be promptly deleted after analysis is complete and the de-identified transcripts will be held on OneDrive. Deidentified whole or excerpts of transcripts may be made available in line with Open Science practices (e.g. hosted on the OSF or a journal repository) to ensure transparency of the analysis.
+- All contact details will be stored on OneDrive and deleted after the interview has taken place. All data collected, anonymous or otherwise, may be shared with the dissertation supervisor or module staff.
+
+---
+
+### High Risk categories
+
+Will this research project involve data processing of identifiable high risk special category data?
+
+High risk special category data includes:
+1. Racial or ethnic origin.
+2. Political opinions.
+3. Religious and philosophical beliefs.
+4. Trade union membership.
+5. Genetic data.
+6. Biometric data for the purpose of uniquely identifying a natural person.
+7. Data concerning health.
+8. Sex life and sexual orientation.
+
+
+```{r, out.width= "300px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://media1.tenor.com/m/vkIeIpdZeSsAAAAC/its-too-risky-bertram-fillcot.gif")
+```
+
+---
+
+### Project duration
+
+- Always give yourself some extra time in case you get an extension or PEC! Personally, I would put late August down (or even next year).
+
+```{r, out.width= "350px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://media1.tenor.com/m/3GB9S47ST2cAAAAC/overtime-work.gif")
+```
+
+---
+
+### Participant info sheet
+
+- Find a document to use for this at the end of the ethics form.
+- Note: It's important not to tell your participants your exact hypotheses. Just let them know what you're expecting them to do. You can be a bit more vague about the purpose of the study here – but don’t lie.
+
+---
+
+### Consent form
+
+- You can find the consent forms on Blackboard. Find one which is appropriate.
+  - E.g. someone doing a qualitative study will probably need a different form to someone doing an online study.
+
+```{r, out.width= "350px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcDF1ODUzb3Y4YXF2dGZnaWM5cjl3eWdhNXhqbGFkNWdxOXM2eWY5ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dvgpOVEAaW2HDY8rH2/giphy.gif")
+```
+
+---
+
+## Debrief sheet
+
+- Here you can tell your participants about your hypotheses and what you expect to find. You can tell them here what the impact might be on either science or practice.
+- This shouldn't be the exact same information as your participant info sheet!
+- If you provide support for participants (links to resources, e.g. Samaritans) this is where it should be included.
+
+```{r, out.width= "500px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmY0dmV0a2E1ZzQydTJseHF5ODNreGUxMGNtMDhzNnZyaXZiMDM2ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Qy26pf8d73XZkVadct/giphy.gif")
+```
+
+---
+
+## Questions/questionnaires
+
+- Include ALL questions.
+- Include response options.
+- Include demographics.
+- If you are running an online study, you can just include the PDF of your survey as that will have everything in!
+
+
+```{r, out.width= "400px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExejBsbHFncng3cGRxNDVsZmEwdjNxOXRsZjdneXAxcDJ3OXVkYmJwMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/64afibPa7ySzhFAf00/giphy.gif")
+```
+
+---
+
+## Recruitment materials
+
+- How will you contact participants?
+- If advertising on social media, it can be helpful to design a colourful ad to grab attention. (Note the limits of different platforms.)
+
+```{r, out.width= "500px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3dqaDkzZTVhb25hazBzNzFlOTJzZnF2aHluazU5YXM5ZjFqbDN2aiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OSqDpH5hmyxsRLB5ze/giphy.gif")
+```
+
+---
+
+## Now:
+
+- Get working on your ethics!
+
+```{r, out.width= "500px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3NqZmt0dmZmcDBheXJmcjd0eHNqem93eW45ZnZqajVydjUwYWp0ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ncMOpLZlqHKVi/giphy.gif")
+```
+
+---
+
+## For next time…
+
+- Continue working on your ethics application and forms.
+- Bring a copy with you to class next week.
+- Print it out (to get peer feedback and my feedback).
+
+
+```{r, out.width= "500px", fig.align = 'center', echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3lwcnYyN3ZldGJlODRhZXpoNHd4MG56aWEwMGFtb216aHFlZW54MiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/zDpYQooxkwXkAWMxRK/giphy.gif")
+```
+
+---
+## References (and further reading.)
+
+* British Psychological Society. (2018). _Code of human research ethics._ [www.bps.org](www.bps.org)
+* Sieber, J. E., & Tolich, M. B. (2013). _Planning ethically responsible research._ SAGE Publications. [https://doi.org/10.4135/9781506335162](https://doi.org/10.4135/9781506335162)
+
+
+[https://tvpollet.github.io/thesis_projects/](https://tvpollet.github.io/thesis_projects/)
+
+
+
+
+
+
+
+
+
+
+
