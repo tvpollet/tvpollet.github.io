@@ -90,9 +90,9 @@ Inevitably, there are things which I cannot cover (but which are very interestin
 
 Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [JASP](https://jasp-stats.org/)) but again feel free to ask me about those.
 
-## Bring your PC / Macbook to class!
-* Rstudio is available on the PCs but you will benefit if you have it on your on machine!  I would encourage you to install this **before** the first class.
-* Install [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) and [R](https://cran.r-project.org/). More detailed [How to]([How to guide](https://rstudio-education.github.io/hopr/starting.html)) and/or step 1 and 2 from [here](https://swirlstats.com/students.html)
+## Bring your Laptop / Macbook to class!
+* Rstudio is available on the PCs in class but you will benefit if you have it on your on machine!  I would encourage you to install this **before** the first class.
+* Install [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) and [R](https://cran.r-project.org/). Follow [this](https://rstudio-education.github.io/hopr/starting.html) or look at step 1 and 2 from [here](https://swirlstats.com/students.html)
 * I expect you to turn off email, messaging, etc. and **only** be engaged with classroom materials. (#no9gag)
 
 ## Contact.
@@ -100,11 +100,11 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 * Ask me any comprehension questions during class breaks or send me an email. Note that I might refer you to discussion board.
 * Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual. These meetings are by exception only as you should raise any queries in class or via the discussion board.
 * email: [thomas.pollet@northumbria.ac.uk](mailto:thomas.pollet@northumbria.ac.uk.)
-* twitter: @tvpollet. 
+* twitter: @tvpollet - bluesky: @tvpollet
 * Phone details are on the learning platform.
 
 
-I typically reply within max. 3 business days (unless you receive an out of office). Note that I will have limited availability during the christmas break. So please post questions early on the blackboard
+I typically reply within max. 3 business days (unless you receive an out of office message). Note that I will have limited availability during the christmas break. So please post questions early on the blackboard
 
 ## Resources.
 Check the [RStudio website](https://www.rstudio.com/). 
