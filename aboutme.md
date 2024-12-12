@@ -5,29 +5,30 @@ subtitle: barba tenus sapientes
 published: true
 ---
 
-I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Follow me on Bluesky</title>
-    <style>
-        .bluesky-button {
-            background-color: #1DA1F2;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-        }
-        .bluesky-button:hover {
-            background-color: #0d8bf2;
-        }
-    </style>
-<body>
-    <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-button">Follow me on Bluesky</a>
-</body>.
+I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fa-brands fa-bluesky"></i> Follow me on Bluesky</a><script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" charset="utf-8"></script>
+
+<style>
+    .bluesky-follow-button {
+        background-color: #1DA1F2;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        line-height: 20px;
+    }
+    .bluesky-follow-button:hover {
+        background-color: #0d8bf2;
+    }
+    .bluesky-follow-button i {
+        margin-right: 5px;
+    }
+</style>
+
 
 ### My work.
 
@@ -53,4 +54,28 @@ Occasionally, I'll include my middle initial V. to differentiate from other Thom
 
 I rock a great beard. What else do you **really** need to know? I play squash (albeit poorly), enjoy hiking holidays, like nature documentaries. I live and work in Newcastle (UK).
 
-Apart from beard related stuff, I like gibbons and cats as you can see on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+Apart from beard related stuff, I like gibbons and cats as you can see on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow me on Bluesky bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fa-brands fa-bluesky"></i> Follow me on Bluesky</a><script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" charset="utf-8"></script>
+
+<style>
+    .bluesky-follow-button {
+        background-color: #1DA1F2;
+        color: white;
+        padding: 5px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        line-height: 20px;
+    }
+    .bluesky-follow-button:hover {
+        background-color: #0d8bf2;
+    }
+    .bluesky-follow-button i {
+        margin-right: 5px;
+    }
+</style>
