@@ -9,7 +9,7 @@ tags:
 published: true
 ---
 
-A very brief post to tell you about the website update. Hurrah!
+A very brief message about the website update. This is how I spent my afternoon. Hurrah!
 
 This was all driven by the fact that I wanted a bluesky button at the bottom of my page. Sigh. Anyway, can you spot the other differences?
 
