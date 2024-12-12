@@ -15,7 +15,7 @@ I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 14px;
+        font-size: 10px;
         border-radius: 5px;
         border: none;
         cursor: pointer;
@@ -66,7 +66,7 @@ Apart from beard related stuff, I like gibbons and cats as you can see on twitte
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: 14px;
+        font-size: 10px;
         border-radius: 5px;
         border: none;
         cursor: pointer;
