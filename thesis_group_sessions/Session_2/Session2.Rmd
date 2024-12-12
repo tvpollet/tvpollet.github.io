@@ -1,0 +1,283 @@
+---
+title: 'Thesis session 2: Your level 6 project'
+author: "Prof. Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+  xaringan::moon_reader:
+    css: ["default", "default-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+## Agenda
+
+- Challenges and Successes: What you've learned
+- Reviewing your literature
+- Constructing a rationale
+- Group work: start constructing your rationale
+- Reflection
+
+```{r, out.width= "450px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmY3Mmk3cWxrcWd1engyaXhjanRzYzh5Mjg1YjdqYzkweDc4bmx1dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ekmhEyFhUhcPRLyUs5/giphy.gif")
+```
+
+
+---
+
+## Reflection
+
+- What were some of the challenges you encountered during your literature search?
+
+--
+
+- What were your successes?
+
+--
+
+- How might you apply what you’ve learned to your future career? And how would you market these skills?
+
+```{r, out.width= "300px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3NhZ292NXh4eWk3b2RjZTFvOXFwa2pwbGVyaHE0M2xkOWFxdWRtYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1AHFPvDWORkvEIE3j8/giphy.gif")
+```
+
+---
+## Reviewing your literature
+
+In one or two sentences summarize the paper that you read which was most relevant to your study idea.
+
+```{r, out.width= "450px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYmFzenFpaTZtYXB6eGR3YTByZmlwZ21rOXFlamhhaDhzeThxOTE4dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NFA61GS9qKZ68/giphy.gif")
+```
+
+---
+
+## Constructing a Rationale
+
+- The purpose of a rationale is to show the logic behind your study.
+
+--
+
+- Start with the previous literature to show what we already know about a topic.
+
+--
+
+- Then identify the “gaps” in the literature.
+
+--
+
+- What don’t we know and why is it important for us to learn?
+
+--
+
+- Remember that the rationale is the logic behind your study, so all the components (variables and methods) of your study should be justified in the rationale.
+
+```{r, out.width= "300px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHN6ZDZkcXAxb3J2ZzFmdGdtejhua3ozemFrZW9zb3Fmc2wyb3Y5bCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tjZCNSk7DBsu3Hq/giphy.gif")
+```
+
+
+---
+
+## Timeline
+
+1. **Reading:** Read literature on your topic and take notes.
+2. **Organizing:** Organize your notes and make sense of what you’ve read. Can you pick up on patterns (similar methods, things authors say are missing in the literature, etc.)?
+3. **Gaps:** Identify the gaps in the literature and what types of gaps they are as this will help you design your study.
+4. **Design:** Decide what study design is appropriate for addressing the gap in the literature that you have identified.
+5. **Write:** Write your rationale.
+
+```{r, out.width= "450px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYW1raTRweHFseDYxbDVnaXlpb3dob3Jybnd5azdla2Z0YTF1dG9heiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7WuIJlmdvBanml4P6t/giphy.gif")
+```
+
+---
+
+## Types of literature gaps I
+
+| Research Gap Type | Definition |
+|-------------------|------------|
+| Evidence Gap (Contradictory Evidence Gap) | Results from studies allow for conclusions in their own right but are contradictory when examined from a more abstract point of view. |
+| Knowledge Gap (Knowledge Void Gap) | Desired research findings do not exist. |
+| Practical-Knowledge Gap (Action-Knowledge Conflict Gap) | Professional behavior or practices deviate from research findings or are not covered by research. |
+| Methodological Gap (Method and Research Design Gap) | A variation of research methods is necessary to generate new insights or avoid distorted findings. |
+
+---
+## Types of literature gaps II
+
+| Research Gap Type | Definition |
+|-------------------|------------|
+| Empirical Gap (Evaluation Void Gap) | Research findings or propositions need to be evaluated or empirically verified. |
+| Theoretical Gap (Theory Application Void Gap) | Theory should be applied to certain research issues to generate new insights. There is a lack of theory thus a gap exists. |
+| Population Gap | Research regarding the population that is not adequately represented or under-researched in the evidence base or prior research. |
+
+---
+
+## Background (e.g. in your ethics application)
+
+- Background information or context
+
+--
+
+- Summary of the relevant literature
+
+--
+
+- Appraise this literature (is it reliable, what does it tell you when you consider ALL of the literature)
+
+--
+
+- Where is the research gap/logic for the current study
+
+--
+
+- What are the aims/hypothesis/research question of the current study
+
+```{r, out.width= "350px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGFrOHdtY3F3Z2lsNTBiYTJ4a2QxejZicXEyNzYzNGE0Nzd4ZDdvbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QvLgO2N1CMVU8PkFE1/giphy.gif")
+```
+
+---
+
+## This rationale should, broadly, explain.
+
+- Sometimes you can be quite specific for the below points but other times you don’t need to explicitly say we’re doing this for X reason … but it must make sense!
+
+--
+
+- Design (quant) /approach (qual)
+
+--
+
+- Recruitment/sample information
+
+--
+
+- Materials and measures
+
+--
+
+- Overall procedure
+
+--
+
+- Data analysis (Quant) / transcription and analysis procedures (qual)
+
+```{r, out.width= "275px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGY4cDZjNjN4ejV5Nmp6OWp3Y3VtdncwYXl3N3Jqamd1cWtjYzh4ayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/al022JHWYjsRgcZmSL/giphy.gif")
+```
+
+---
+## Take home
+
+Basically, when writing a rationale, think about what you want your study to look like and **why**. 
+
+This strengthens your rationale.
+
+```{r, out.width= "350px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZmZ4NXdvOWpreTQ5bno5OTlqYjVqc2U1d3FmdnloYWRkZ2lndmh0cyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/L17xM7PvLcqJggsCYa/giphy.gif")
+```
+
+---
+
+## Example: Background Section
+
+**Audience Size, Power, and Pro-Social Behaviour**
+
+_Many people lament increasing levels of narcissism in society. Narcissistic behaviour includes focusing more on the self (ex. posting selfies) and increasing importance of self‐presentation (ex. use of filters on Instagram) (Andrews et al., 2015; Wu, Wang & Tsai, 2010). Interestingly, narcissism is associated with social media use which has also increased in recent decades (Boland & Anderson, 2019; Hawk et al., 2019). However, we still do not understand why social media use might be associated with more narcissistic behaviour. Feelings of power have been shown to correlate with self‐serving behaviours similar to the traits of narcissism (Ellemers et al., 2019; Ackerman et al., 2011). Thus, in a previous correlational study, we wanted to investigate whether certain social media activities might be linked with feelings of power which could mediate the relationship between social media use and narcissism. We found that the number of average likes on posts and number of Instagram followers or Facebook friends were associated with greater feelings of power, and power was associated with higher levels of narcissism (Brown & Merritt, unpublished data). In the current study, we would like to test the relationship between audience size and feelings of power experimentally._
+
+---
+
+## Example: Design
+
+You wouldn’t write it this way in your ethics…but it’s good to write down what you want to do!
+
+_"We will employ an experimental design with two groups. The independent variable is audience size (10 people v. 1,000 people). 10 people were chosen as a relatively small group, but large enough not to have participants feel like they are engaging in a private communication between two individuals. 1,000 people were chosen as a possible number of actual students who could view a post if it were sent to a list of all psychology students at Northumbria. There are two dependent variables: power, measured with a brief questionnaire, and altruistic behaviours, measured with items about helping struggling students. This will be analysed using an ANOVA, We expect a main effect of audience size, such that people in the large audience condition will experience higher feelings of power and will engage in fewer helping behaviours."_
+
+---
+
+## It’s your turn
+
+- Discuss the previous literature you’ve read with your partner.
+
+--
+
+- Can you identify any gaps and match them to the gaps presented in the table?
+
+--
+
+- What then would justify your study and study design?
+
+
+```{r, out.width= "275px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTNmbDJmMnEzOWFhZm54bXl5Mjc4N3FqYnNqOGwwZnlsMmtpZXhqdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/c7IWjSfUtRHMFQOLjS/giphy.gif")
+```
+
+---
+
+## Between now and next week
+
+- Create a draft of the ‘background’ section of your ethics application
+
+--
+
+- Have a ‘rough idea’ what your study will look like.
+
+--
+
+- Try to rationalise why you have decided these things
+
+--
+
+- Bring both of these with you next week.
+
+--
+
+- Preferably printed on separate pieces of paper
+
+--
+
+- Keep reading! Another 5 (or more) articles, with notes!
+
+```{r, out.width= "300px", echo=FALSE}
+knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExajZ6czgxNHRteTN1eTg2dXAzeGVvcTBjZndidmJuM2t4eGUyMGQyZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KHh3THncWl8KH7jBf5/giphy.gif")
+```
+
+---
+## References (and further reading.)
+
+* Cohen, L., Manion, L., & Morrison, K. (2018). *Research methods in education* (8th ed.). Routledge
+* Coolican, H. (2019). *Research methods and statistics in psychology* (7th ed.). Routledge.
+* Creswell, J. W., & Creswell, J. D. (2018). *Research design: Qualitative, quantitative, and mixed methods approaches* (5th ed.). SAGE Publications.
+
+[https://tvpollet.github.io/thesis_projects/](https://tvpollet.github.io/thesis_projects/)
+
+
+
+
+
+
+
+
+
+
+
