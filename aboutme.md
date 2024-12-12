@@ -56,7 +56,7 @@ I rock a great beard. What else do you **really** need to know? I play squash (a
 
 Apart from beard related stuff, I like gibbons and cats as you can see on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Follow me on Bluesky bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fa-brands fa-bluesky"></i> Follow me on Bluesky</a><script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" charset="utf-8"></script>
+    <title>Follow me on bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fab fa-bluesky"></i> Follow me on Bluesky</a>
 
 <style>
     .bluesky-follow-button {
@@ -78,4 +78,4 @@ Apart from beard related stuff, I like gibbons and cats as you can see on twitte
     .bluesky-follow-button i {
         margin-right: 5px;
     }
-</style>
+</style>.
