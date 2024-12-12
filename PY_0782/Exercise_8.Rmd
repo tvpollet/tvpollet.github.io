@@ -1,0 +1,262 @@
+---
+title: "Solution Lecture 8"
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 8 instructions.
+
+
+Using the 'bfi' data from the 'psych' package, build a five factor model using lavaan.
+
+Discuss the CFI, RMSEA and TLI of that model. Export a table with the factor loadings.
+
+Make a plot.
+
+Compare the fit of a five factor model to a single factor model ("The general factor of personality").
+
+Test the measurement invariance for men vs. women in the five factor model. Make a plot.
+
+Make a table and discuss.
+
+
+## Load the data, set the working directory.
+
+Load the data and get some descriptives.
+
+```{r}
+require(psych)
+Data<-psych::bfi
+require(skimr)
+skim(Data)
+```
+
+
+
+## Subset data.
+
+```{r}
+Data<-psych::bfi 
+big_5<-Data[,c(1:25)]
+```
+
+In exercise 7, we already examined the factorability, which was middling to meritorious. Therefore, we will proceed. Yet, it is worthwhile still exploring the assumption of multivariate normality.
+
+### Multivariate normality
+
+There are some missings. You'll get an error. Here I have _listwise_ removed them.
+
+```{r, warning=F, message=F}
+require(MVN)
+big_5_no_miss<-na.omit(big_5)
+mvn(big_5_no_miss, multivariatePlot=T)
+```
+
+We should bear in mind that the assumption of multivariate normality is violated.
+
+## Lavaan model.
+
+```{r}
+require(lavaan)
+five_factor <- '  # Five factors.
+              Agreeable =~ A1 + A2 + A3 + A4 + A5 
+              Conscientous =~ C1 + C2 + C3 + C4 + C5
+              Extraversion =~ E1 + E2 + E3 + E4 + E5
+              Neurotic =~ N1 + N2 + N3 + N4 + N5
+              Opennness =~ O1 + O2 + O3 + O4 + O5'
+fit_CFA<-cfa(five_factor, data= Data)
+```
+
+Let us examine that massive output file... . As you can see the model converged after 55 iterations. 2436 from the 2800 observations were used (listwise deletion). Read [here](http://lavaan.ugent.be/tutorial/est.html) for other settings.  
+
+While the five factor model could be considered an acceptable fit in RMSEA (.078), it was not in terms of TLI (.754) and CFI (.782). (check [here](http://davidakenny.net/cm/fit.htm))
+
+```{r}
+summary(fit_CFA, fit.measures=T)
+```
+
+### Remember that multivariate normality issue?
+
+Lavaan offers many options... .
+
+```{r}
+fit_CFA_robust<-cfa(five_factor, data= Data, estimator='MLR')
+```
+
+The conclusions are by and large the same. Note that the standard errors are now robust. Can you spot the similarities and differences between the 'original' and the model with robust errors?
+
+```{r}
+summary(fit_CFA_robust, fit.measures=T)
+```
+
+### Residual check
+
+Some issues with correlated residuals. This basically allow us to see where we 'mess up'. You could attempt explicitly modelling those correlations?
+
+```{r, message=F, warning=F}
+require(ggplot2)
+require(corrplot)
+plot_matrix <- function(matrix_toplot){
+corrplot(matrix_toplot, is.corr = FALSE, 
+               type = 'lower', 
+               order = "original", 
+               tl.col='black', tl.cex=.75)}
+plot_matrix(residuals(fit_CFA)$cov)
+```
+
+```{r}
+require(lavaan)
+five_factor_cor <- '  # Five factors.
+              Agreeable =~ A1 + A2 + A3 + A4 + A5 
+              Conscientous =~ C1 + C2 + C3 + C4 + C5
+              Extraversion =~ E1 + E2 + E3 + E4 + E5
+              Neurotic =~ N1 + N2 + N3 + N4 + N5
+              Opennness =~ O1 + O2 + O3 + O4 + O5
+              
+              # Some residuals can covary.
+              N4 ~~ C5
+              N4 ~~ E2
+              N4 ~~ E4'
+fit_CFA_cor<-cfa(five_factor_cor, data= Data)
+```
+
+In this case, we have improved in terms of fit.
+
+```{r}
+summary(fit_CFA_cor, fit.measures=T)
+anova(fit_CFA_cor,fit_CFA)
+```
+
+## Table
+
+Here I have include the table rather than exported. In order to export it, you would use 'out=' . You view the example in class.
+
+```{r, results='asis', message=F, warning=F}
+require(dplyr)
+require(stargazer)
+results_table<-parameterEstimates(fit_CFA, standardized=TRUE) %>% 
+filter(op == "=~") %>% 
+dplyr::select('Latent Factor'=lhs, Indicator=rhs, B=est, SE=se, Z=z, 'p value'=pvalue, Beta=std.all)
+#export via stargazer. (Other options are ??xtable)
+stargazer(results_table, summary = FALSE, type='html', header = F)
+```
+
+
+O4 scores poor in terms of loadings ($\beta$<.3), A1 also does not load very well on its alledged factor ($\beta$<.4).
+
+## Figure.
+
+### Plot
+
+```{r, message=F, warning=F}
+require(semPlot)
+require(qgraph)
+semPaths(fit_CFA, layout='circle',style = "ram",what="std")
+```
+
+### Lisrel style
+
+```{r, message=F, warning=F}
+require(semPlot)
+require(qgraph)
+semPaths(fit_CFA, layout='circle',style = "lisrel",what="std")
+```
+
+## One factor solution.
+
+```{r}
+require(lavaan)
+one_factor <- '  # One factor.
+              General =~ A1 + A2 + A3 + A4 + A5 + C1 + C2 + C3 + C4 + C5 + E1 + E2 + E3 + E4 + E5 + N1 + N2 + N3 + N4 + N5 + O1 + O2               + O3 + O4 + O5'
+fit_CFA_one<-cfa(one_factor, data= Data)
+```
+
+Fit measures. A quick glance at RMSEA, CFI and GFI already tells you that this is not looking great.
+
+```{r}
+summary(fit_CFA_one, fit.measures=T)
+```
+
+### Model comparison.
+
+As should be abundantly clear, the five factor model is favoured to the one factor model.
+
+```{r}
+anova(fit_CFA,fit_CFA_one)
+```
+
+## Group comparison model.
+
+
+```{r}
+five_factor_groups <- '  # Five factors.
+              Agreeable =~ A1 + A2 + A3 + A4 + A5 
+              Conscientous =~ C1 + C2 + C3 + C4 + C5
+              Extraversion =~ E1 + E2 + E3 + E4 + E5
+              Neurotic =~ N1 + N2 + N3 + N4 + N5
+              Opennness =~ O1 + O2 + O3 + O4 + O5'
+fit_CFA_groups<-cfa(five_factor_groups, data= Data, group="gender")
+```
+
+Massive output again. Notice how there are fewer men (1) than women (2).
+
+```{r}
+summary(fit_CFA_groups)
+```
+
+### Group plot.
+
+```{r}
+require(semPlot)
+require(qgraph)
+semPaths(fit_CFA_groups, layout='circle',style = "lisrel",what="std", combineGroups = F)
+```
+
+## Measurement invariance table.
+
+The best fitting model based on both AIC and BIC was one with metric invariance (respectively 199471 and 200341). In terms of RMSEA the model with metric invariance and that with strong invariance scored lowest and was thus the best fit (.077). In absolute terms, CFI favoured either the configural or the metric invariance model (0.775). While the metric invariance model is not an adequate fit in terms of CFI (0.775), it is in RMSEA (.077). Both the $\Delta$CFI and $\Delta$RMSEA suggested that there was no loss in fit moving from a configural model to a metric invariance model (all <.001).
+
+```{r, warning=F, message=F}
+require(semTools)
+MI<-measurementInvariance(model=five_factor_groups, data= Data, group="gender")
+```
+
+Look at the beauty below... . If you want to export it. Check 'xtable'.
+
+```{r, message=F, warning=F, results='asis'}
+require(psytabs)
+require(knitr)
+tab.1 <- measurementInvarianceTable(MI)
+# kable!
+colnames(tab.1) <-  c("$\\chi^2$",	"df",	"$\\Delta\\chi^2$", "df",	"p", "CFI",	"$\\Delta$CFI", "RMSEA", "$\\Delta$RMSEA", "BIC", "$\\Delta$BIC")
+kable(tab.1)
+```
+
+**THE END!**
+
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3o7TKtsBMu4xzIV808/giphy.gif")
+```
+
+## Session Info.
+
+```{r}
+sessionInfo()
+```
+
