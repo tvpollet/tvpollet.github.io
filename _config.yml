@@ -10,21 +10,35 @@
 ############################
 
 # Name of website
-title: My website
+title: Thomas Pollet (Northumbria University)
 
 # Your name to show in the footer
-author: Some Person
+description: This is my personal website.
 
 ###############################################
 # --- List of links in the navigation bar --- #
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
-  Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
-  Author's home: "https://deanattali.com"
+  About Me:
+    - Short bio: "aboutme"
+    - CV: "http://tvpollet.github.io/CV.pdf"
+    - Contact: "contact"
+    - Twitter: "https://twitter.com/tvpollet"
+  Research:
+    - Research interests: "Research_Interests"
+    - Papers List: "papers"
+    - Open Science Framework: "https://osf.io/v6cn3/"
+    - Presentations: "https://prezi.com/user/bwe4makvgrl3/"
+  Teaching:
+    - Courses taught: "courses_taught"
+    - PY0794: "PY0794"
+    - PY0552: "PY0552"
+    - Thesis Projects: "thesis_projects"
+    - Calendar: "calendar"
+    - Open Science Framework: "https://osf.io/v6cn3/"
+    - Meta-Analysis workshop: "Meta-analysis_course"
+  Disclaimer: "disclaimer"
 
 ################
 # --- Logo --- #
