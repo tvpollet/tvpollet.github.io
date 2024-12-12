@@ -1,0 +1,12 @@
+
+Very Simple Structure
+Call: vss(x = x, n = n, rotate = rotate, diagonal = diagonal, fm = fm, 
+    n.obs = n.obs, plot = plot, title = title, use = use, cor = cor)
+Although the VSS complexity 1 shows  5  factors, it is probably more reasonable to think about  3  factors
+VSS complexity 2 achieves a maximimum of 0.81  with  5  factors
+
+The Velicer MAP achieves a minimum of 0.02  with  6  factors 
+BIC achieves a minimum of  -1194.35  with  6  factors
+Sample Size adjusted BIC achieves a minimum of  -210.21  with  8  factors
+
+Statistics by number of factors 
