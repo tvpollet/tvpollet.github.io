@@ -1,0 +1,522 @@
+---
+title: 'Lecture 7: PY 0794 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+   xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+
+```
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+## PY0794: Advanced Quantitative research methods.
+* Last lecture:  Mediation 
+* Today: Exploratory Factor analysis
+
+---
+## Goals (today)
+ 
+ Factor analysis
+ 
+ Some ways of visualising factor analysis.
+
+---
+## Assignment
+
+After today you should be able to complete the following sections for Assignment II:
+
+ Exploratory Factor Analysis and its assumptions.
+ 
+---
+## Factor analysis 
+
+Who has run an exploratory factor analysis?
+
+What was the purpose?
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/l0HlHqERfyDLQD1p6/giphy.gif")
+```
+
+---
+## Purpose.
+
+We want to study the covariation between a large number of observed variables. 
+
+1. How many latent factors would account for most of the variation among the observed variables?
+
+2. Which variables appear to define each factor. What labels could we give to these factors? If the observed covariation can be explained by a small number of factors (e.g., 2-5), this would increase our understanding of the relationships among the variables!
+
+--> Reduce complexity and increase understanding.
+
+--> validate scale (--> ultimately confirmatory factor analysis).
+
+---
+## Terminology.
+
+_Exploratory_ vs. confirmatory. Occasionally you will have a very clear idea has to how many factors there should be. In such a case one would usually do confirmatory analysis.
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/Wt94luq6ZY5tS/giphy.gif")
+```
+
+---
+## Terminology.
+
+Principal components vs. Factor analysis.
+
+_"The idea of principal components analysis (PCA) is to find a small number of linear combinations of the variables so as to capture most of the variation in the dataframe as a whole. ... Principal components analysis finds a set of orthogonal standardized linear combinations which together explain all of the variation in the original data. There are as many principal components as there are variables, but typically it is only the first few of them that explain important amounts of the total variation."_ Crawley (2013:809-810)
+
+---
+## Terminology: Factor analysis
+
+_"With principal components analysis we were fundamentally interested in the variables and their contributions. Factor analysis aims to provide usable numerical values for quantities such as intelligence or social status that are not directly measurable. The idea is to use correlations between observable variables in terms of underlying ‘factors’."_ Crawley (2013:813)
+
+Note that factors here means something fundamentally different than factors when we were describing a single variable. (Something can be a factorial variable in an ANOVA design, for example.)
+
+Also some researchers will use the terms interchangeably (even though they are separate techniques).
+
+---
+## Principal component analysis
+
+Today we will mostly deal with factor analysis (should you require principal component analysis, have a look [here](https://www.r-bloggers.com/principal-component-analysis-using-r/) and [here](http://www.rpubs.com/koushikstat/pca))
+
+The mathematics are also described in those sources.
+
+---
+## Factor analysis assumptions.
+
+In essence you can think of factor analysis as OLS regression, which means similar assumptions apply.
+
+**Measurement**: All variables should be interval. No dummy variables. No outliers.
+
+**Sample size**: >200 , although some advocate 5-10 per variable but see [this](http://people.musc.edu/~elg26/teaching/psstats1.2006/maccallumetal.pdf) on rules of thumb.
+
+**Multivariate normality**: Though not necessary required for exploratory factor analysis, useful to check. 
+
+**Linear**: the proposed relationships are linear. 
+
+**Factorability**: There should be some correlations which can be meaningfully grouped together.  
+
+More on assumptions [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3290828/pdf/fpsyg-03-00055.pdf)
+
+---
+## Data
+
+Data were from [here](https://quantdev.ssri.psu.edu/) but are now available [here](https://tvpollet.github.io/PY_0794/Lecture_7/personality0.txt).  240 participants providing self-ratings (1-9) on 32 variables.
+
+```{r, message=F, warning=F, results='hide'}
+# Downloaded the data into my work directory.
+f_data <- read.table("personality0.txt")
+require(stargazer)
+stargazer(f_data, type = "html", out= "factor_data.html")
+```
+
+---
+## Measurement and sample size
+
+Measurement and sample sizes OK. (Though 1 to 9, one can always question how 'interval' that really is. 1 to 7 would be worse and that is commonly used)
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif")
+```
+
+---
+## Multivariate normality.
+
+As an aside. This is not looking great... . We will ignore it for now, given that we are conducting *exploratory* factor analysis.
+
+```{r, message=F, warning=F, out.width = "400px", fig.align='center'}
+require(MVN)
+mvn(f_data)
+```
+
+---
+## Plot
+
+```{r, message=F, warning=F, out.width = "400px", echo=FALSE, fig.align='center'}
+require(MVN)
+mvn(f_data, multivariatePlot = "qq")
+```
+
+---
+## Linearity
+
+You can do all pairwise scatterplots but with range 1-9 this is not wholly useful. We will just assume linearity is reasonable. (Helped by our central limit theorem!)
+
+```{r, message=F, warning=F, out.width = "300px", fig.align='center'}
+require(ggplot2)
+require(GGally)
+ggpairs(f_data[,1:4]) # example
+```
+
+---
+## Factorability.
+
+Here we want Bartlett's test to be significant! Why?  
+
+```{r}
+bartlett.test(f_data)
+```
+
+---
+## Sample write up
+
+Bartlett's test for sphericity was significant suggesting that factor analysis is appropriate ( $\chi^2$(31) = 350.1, _p_ < .0001).
+
+---
+## KMO-test
+
+Kaiser-Meyer-Olkin factor adequacy ranges from 0 to 1.  All should be >.5 [(Kaiser, 1977)](http://jaltcue.org/files/articles/Kaiser1974_an_index_of_factorial_simplicity.pdf)
+
+```{r, warning=F, message=F}
+require(psych)
+KMO(f_data)
+```
+
+---
+## Interpretations
+
+0.00 to 0.49 unacceptable.
+
+0.50 to 0.59 miserable.
+
+0.60 to 0.69 mediocre.
+
+0.70 to 0.79 middling.
+
+0.80 to 0.89 meritorious.
+
+0.90 to 1.00 marvelous.
+
+---
+## Sample write-up
+
+All 32 items showed middling to meritorious adequacy for factor analysis (all MSA $\geq$ .72).
+
+---
+## Try it yourself.
+
+Download the data from [here](https://stats.idre.ucla.edu/wp-content/uploads/2016/02/M255.sav). Data are ratings of instructors from a study by Sidanius.
+
+Read in the data, make a subset with items 13:24 (Hint: use the select function from dplyr and num_range) and conduct a KMO test.
+
+---
+## ggcorrplot
+
+```{r, warning=F, message=F, tidy.opts=list(width.cutoff=50), tidy=T}
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
+require(ggcorrplot)
+require(dplyr)
+# take the absolute, interested in strength.
+cormatrix<-abs(cor(f_data[,1:20])) 
+corplot<-ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", method = "circle") 
+```
+
+---
+## Plot
+
+```{r, echo=F, fig.align="center",fig.height=5.7, fig.width=8}
+corplot
+```
+
+---
+## Some further terms.
+
+See [here](https://quantdev.ssri.psu.edu/tutorials/intro-basic-exploratory-factor-analysis)
+
+**Factor**: An underlying or latent construct causing the observed variables, to a greater or lesser extent. A factor is estimated by a linear combination of out observed variables. When the ‘best fitting’ factors are found, it should be remembered that these factors are not unique! It can be shown that _any_ rotation of the best-fitting factors is also best-fitting. ‘Interpretability’ is used to select the ‘best’ rotation among the equally ‘good’ rotations: To be useful, factors should be interpretable. Rotation of factors is used to improve the interpretability of factors. So once we have extracted the factors, we will rotate them.
+
+**Factor loadings**: The degree to which the variable is driven or ‘caused’ by the factor. 
+
+---
+## More terms.
+
+**Factor score/weights**: These can be estimated for each factor. This can then be added to your dataframe. Basically a score for your participant on each factor. Occasionally, one would then use those scores in further analyses.
+
+**Communality of a variable**: The extent to which the variability across participants in a variable is ‘explained’ by the set of factors extracted in the factor analysis. Uniqueness = 1-Communality.
+
+---
+## Basic factor analysis
+
+Varimax rotation. Let's start by getting 8 factors. (Request large number and then trim down!)
+
+```{r}
+require(psych)
+fa <- fa(f_data,8, fm = 'minres', rotate='varimax', fa = 'fa')
+```
+
+---
+## Output
+
+```{r}
+sink('fa_output.text')
+fa
+sink()
+```
+
+---
+## Number of factors.
+
+We need to determine the number of factors. Many options! From Revelle (2017:37):
+
+1) Extracting factors until the $\chi^2$ of the residual matrix is not significant.
+
+2) Extracting factors until the change in $\chi^2$ from factor n to factor n+1 is not
+significant.
+
+3) Extracting factors until the eigen values of the real data are less than the corresponding
+eigen values of a random data set of the same size (parallel analysis) fa.parallel (Horn,
+1965).
+
+4) Plotting the magnitude of the successive eigen values and applying the scree test (a
+sudden drop in eigen values analogous to the change in slope seen when scrambling up the talus slope of a mountain and approaching the rock face (Cattell, 1966).
+
+---
+## Continued... .
+
+5) Extracting factors as long as they are interpretable.
+
+6) Using the Very Simple Structure Criterion (vss) (Revelle and Rocklin, 1979).
+
+7) Using Wayne Velicer’s Minimum Average Partial (MAP) criterion (Velicer, 1976).
+
+8) Extracting principal components until the eigen value < 1 (Kaiser criterion).
+
+---
+## Which one?
+
+Each has advantages and disadvantages. 8) although common is probably the worst.
+
+Read more [here](http://personality-project.org/r/psych/HowTo/factor.pdf)
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/3o6gDSdED1B5wjC2Gc/giphy.gif")
+```
+
+---
+## Parallel analysis.
+
+Also part of the output already. Here I used 'minres' as extraction method. Parallel analysis suggests 5 factors (compare red line to blue triangle)
+
+```{r, fig.align="center",fig.height=4, fig.width=8}
+require(psych)
+parallel <- fa.parallel(f_data, fm = 'minres', fa = 'fa')
+```
+
+---
+## Parallel output.
+
+```{r}
+parallel
+```
+
+---
+## Kaiser criterion.
+
+Kaiser criterion is the number of eigenvalues >1. 
+
+This can be seen on the graph. That would suggest 5 factors. 
+
+```{r}
+parallel$fa.values
+```
+
+---
+## Scree plot
+
+Depending on the _elbow_ of the graph (Scree Criterion) you would extract 4 or 5.
+
+```{r, echo=F}
+parallel <- fa.parallel(f_data, fm = 'minres', fa = 'fa')
+```
+
+---
+## VSS / Map test
+
+The VSS plot suggests 3 factors. Very little improvement with 4. MAP suggests 6 factors. Output printed to console, check [here](https://tvpollet.github.io/PY_0782/VSS_output.txt)
+
+```{r,fig.align="center",fig.height=4, fig.width=8}
+require(psych)
+VSS(f_data, rotate= "varimax", n.obs= 240)# shows plot
+```
+
+---
+## Try it yourself.
+
+Conduct a factor analysis extracting a large number of factors (6) on the Sidanius data and store it. Discuss the output with your neigbour.
+
+Run a parallel analysis. Discuss the outcome with your neighbour.
+
+---
+## Back to the self-description data: Three- and five-factor solution
+
+Let's extract one with three factors though 5 could also be workable.
+
+```{r}
+fa_3<-fa(f_data,3, fm = 'minres', rotate='varimax', fa = 'fa')
+sink('fa_3_output.txt')
+fa_3
+sink()
+fa_5<-fa(f_data,5, fm = 'minres', rotate='varimax', fa = 'fa')
+sink('fa_5_output.txt')
+fa_5
+sink()
+```
+
+---
+## Diagram.
+
+```{r, fig.align="center",fig.height=5.5, fig.width=8}
+fa.diagram(fa_5, marg=c(.01,.01,1,.01))
+```
+
+---
+## Factors.
+
+How would you label those 5 factors?
+
+```{r, warning=F, message=F, fig.align="center",fig.height=4, fig.width=8}
+require(semPlot)
+semplot1<-semPlotModel(fa_5$loadings)
+semPaths(semplot1, what="std", layout="circle", nCharNodes = 6)
+```
+
+---
+## Try it yourself.
+
+Make a plot for your item scores.
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/hTTnsRaU1geWuvUUjB/giphy.gif")
+```
+
+---
+## Fit indices.
+
+RMSEA and Tucker-Lewis Index (TLI).
+
+A widely used cut-off for RMSEA is .06 [(Hu & Bentler, 1999)](http://www.tandfonline.com/doi/abs/10.1080/10705519909540118), others suggest .08 as acceptable. But beware of [cut-offs](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2743032/). RMSEA is sample size dependent more so than TLI
+
+For the Tucker-Lewis Index >.9 or >.95 is considered a good fit. Again beware of cut-offs.
+
+Other indices also exist and we will discuss those when we move to SEM.
+
+---
+## Back to the models.
+
+The five factor model does better than the three factor model. But beware exploratory rather than confirmatory. 
+
+**Sample description**: While the five factor model could be considered a close fit in RMSEA (.071), it was not in terms of TLI (.849).
+
+---
+## Extraction methods: choice paralysis.
+
+There are many methods. Most of the time you'll get [similar results](https://stats.stackexchange.com/questions/50745/best-factor-extraction-methods-in-factor-analysis/50758)
+
+`fm`= minres factor analysis, principal axis factor analysis, weighted least squares factor analysis, generalized least squares factor analysis and maximum likelihood factor analysis. Minres and Principal Axis factoring are commonly used.
+
+---
+## Principal Axis Factoring
+
+```{r, fig.align="center",fig.height=4.5, fig.width=8}
+require(psych)
+parallel <- fa.parallel(f_data, fm = 'pa', fa = 'fa')
+```
+
+---
+## Extract loadings.
+
+You can further beautify this by generating labels for those 32 items.
+
+```{r, opts_chunk$set(out.width = 15), tidy=T, message=F, warning=F, results="asis"}
+require(stargazer)
+require(plyr)
+factor_loadings<-as.data.frame(as.matrix.data.frame(fa_5$loadings))
+factor_loadings<-plyr::rename(factor_loadings, c("V1"="Factor 1","V2"="Factor 2", "V3"="Factor 3", "V4"="Factor 4", "V5"="Factor 5"))
+stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=FALSE, type="html")
+```
+
+---
+## Plot loadings.
+
+```{r, message=F, warning=F}
+require(GPArotation)
+plot(fa_5,labels=names(f_data),cex=.7, ylim=c(-.1,1)) 
+```
+
+---
+## Too busy and not very useful.
+
+Just plot the first two factors, and those with loadings above .5. Label it.
+
+```{r}
+factor.plot(fa_5, choose=c(1,2), cut=0.5, labels=colnames(f_data))
+```
+
+---
+## ggplot2.
+
+Alternative graphs, see [here](https://rpubs.com/danmirman/plotting_factor_analysis)
+
+---
+## Extensions.
+
+[Multiple factor analysis](http://www.sthda.com/english/articles/31-principal-component-methods-in-r-practical-guide/116-mfa-multiple-factor-analysis-in-r-essentials) (group-component)
+
+---
+## I just want Cronbach's Alpha... .
+
+Find out how to do it [here](https://personality-project.org/r/html/alpha.html)
+
+Perhaps you should [not](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2792363/) rely on it too much?
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/1zSz5MVw4zKg0/giphy.gif")
+```
+
+---
+## Exercise
+
+Load the BFI data from the 'psych' package (??bfi). This contains data on 2800 participants completing items relating to the 'big five' from the IPIP pool. You'll have to subset the variables for your factor analysis.
+
+Conduct a Bartlett's test & KMO test.
+
+Conduct an exploratory factor analysis (using 'minres' as method), using parallel analysis, discuss the scree plot, Very Simple Structure and Velicer map test.
+
+---
+## Exercise (cont'd)
+
+Extract a five factor model (use varimax rotation), export the factor loadings of these five factors. Discuss the RMSEA and TLI for that five factor model.
+
+Make a plot for the factors. 
+
+---
+## References (and further reading.)
+Also check the reading list! (many more than listed here)
+
+* Kline, P. (1993). _An Easy Guide to Factor Analysis_. London: Routledge.
+* Tabachnick, B.G. & Fidell, L.S. (2007). _Using Multivariate Statistics._ Boston, MA.: Pearson Education.
+
+
+
+

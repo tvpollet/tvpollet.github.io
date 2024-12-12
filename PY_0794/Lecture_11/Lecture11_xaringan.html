@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 11: PY 0794 - Advanced Quantitative Research Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Lecture 11: PY 0794 - Advanced Quantitative Research Methods
+]
+.author[
+### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
+]
+.date[
+### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
+
+---
+
+
+
+
+
+
+
+
+## PY0794: Advanced Quantitative research methods.
+
+* Last lecture:  Multilevel: part I.
+
+* Today: Multilevel: part II.
+
+As an aside all slides were made with ['xaringan'](https://github.com/yihui/xaringan)
+
+---
+
+
+## Reload the data.
+
+
+```r
+library(mlmRev)  # contains data
+library(lme4)
+Exam &lt;- mlmRev::Exam
+fixed_pred &lt;- lmer(normexam ~ standLRT + (1 | school), data = Exam,
+    REML = F)
+```
+
+---
+## Make a plot
+
+
+```r
+library(ggplot2)
+library(dplyr)
+# subset 3 schools (just picked 3 from the dataframe)
+subset &lt;- filter(Exam, school == "1" | school == "17" | school ==
+    "18")
+multilevelplot &lt;- ggplot(subset, aes(standLRT, normexam)) + geom_jitter(alpha = 0.3) +
+    facet_wrap(~school) + xlab("London Reading test") + ylab("Normed Exam Score") +
+    geom_smooth(method = "lm") + geom_hline(yintercept = 0, linetype = "dashed") +
+    theme_bw()
+```
+
+---
+## Look at the pretty, pretty.
+
+
+
+```r
+plot(multilevelplot)
+```
+
+&lt;img src="Lecture11_xaringan_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## Pros and cons.
+
+* Positive is that it shows the actual data. But it doesn't really show what happens in a multilevel designs.
+
+--
+
+* Can we have a graph with demonstrates everything again?
+
+&lt;img src="https://media.giphy.com/media/11bZ6yXgXBsg4U/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+
+---
+## A random intercept and random slope. 
+
+Illustration based on [this](http://rpsychologist.com/r-guide-longitudinal-lme-lmer).
+
+
+```r
+# pooled
+pooled.model &lt;- lm(normexam ~ standLRT, data = Exam)
+# Save the fitted values
+Exam$PooledPredictions &lt;- fitted(pooled.model)
+# Intercept
+varying.intercept.model &lt;- lm(normexam ~ standLRT + school, data = Exam)
+Exam$VaryingInterceptPredictions &lt;- fitted(varying.intercept.model)
+# Slope
+varying.slope.model &lt;- lm(normexam ~ standLRT:school, data = Exam)
+Exam$VaryingSlopePredictions &lt;- fitted(varying.slope.model)
+# Interaction (both slope)
+interaction.model &lt;- lm(normexam ~ standLRT + school + standLRT:school,
+    data = Exam)
+Exam$InteractionPredictions &lt;- fitted(interaction.model)
+```
+---
+## Build graph
+We need a subset.
+
+```r
+require(ggplot2)
+require(dplyr)
+subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
+    "21" | school == "40" | school == "55" | school == "59")
+gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
+    geom_line(aes(y = PooledPredictions), color = "darkgrey") +
+    geom_line(aes(y = VaryingInterceptPredictions), color = "blue") +
+    # geom_line(aes(y = VaryingSlopePredictions), color =
+    # 'red') + geom_line(aes(y = InteractionPredictions),
+    # color = 'black') +
+geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) + xlab("London Reading test") +
+    ylab("Normed Exam Score") + theme_bw()
+```
+---
+## Graph: Random intercept.
+
+
+```r
+print(gg)
+```
+
+![](Lecture11_xaringan_files/figure-html/unnamed-chunk-8-1.png)&lt;!-- --&gt;
+
+---
+## Graph: Random slope.
+
+
+```r
+require(ggplot2)
+require(dplyr)
+subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
+    "21" | school == "40" | school == "55" | school == "59")
+gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
+    geom_line(aes(y = PooledPredictions), color = "darkgrey") +
+    # geom_line(aes(y = VaryingInterceptPredictions), color
+    # = 'blue') +
+geom_line(aes(y = VaryingSlopePredictions), color = "red") +
+    # geom_line(aes(y = InteractionPredictions), color =
+    # 'black') +
+geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) + xlab("London Reading test") +
+    ylab("Normed Exam Score") + theme_bw()
+```
+
+---
+## Graph: Random slope
+
+
+```r
+print(gg)
+```
+
+![](Lecture11_xaringan_files/figure-html/unnamed-chunk-10-1.png)&lt;!-- --&gt;
+
+---
+## Graph: Slope and intercept.
+
+
+```r
+require(ggplot2)
+require(dplyr)
+subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
+    "21" | school == "40" | school == "55" | school == "59")
+gg &lt;- ggplot(subset, aes(x = standLRT, y = normexam, group = school)) +
+    geom_line(aes(y = PooledPredictions), color = "darkgrey") +
+    # geom_line(aes(y = VaryingInterceptPredictions), color
+    # = 'blue') + geom_line(aes(y =
+    # VaryingSlopePredictions), color = 'red') +
+geom_line(aes(y = InteractionPredictions), color = "black") +
+    geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) +
+    xlab("London Reading test") + ylab("Normed Exam Score") +
+    theme_bw()
+```
+
+---
+## Graph: Slope and intercept.
+
+
+```r
+print(gg)
+```
+
+![](Lecture11_xaringan_files/figure-html/unnamed-chunk-12-1.png)&lt;!-- --&gt;
+
+
+---
+## Try it yourself.
+
+Use the 'Scottish schools' dataset and make those 3 graphs. (If you cannot load MLMrev, it should be available) from blackboard.
+
+&lt;img src="https://media.giphy.com/media/3o6MbeLh1L6QLUAHZe/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Common designs.
+
+* You might have not cared so far as you only collect experimental data and multilevel models might not apply. Actually, they can be used for some of the designs you encounter.
+
+--
+
+* Let us look at those.
+
+--
+* Where subjects is each subject's id, tx represent treatment allocation and is coded 0 or 1, therapist refers to either clustering due to therapists, or for instance a participant's group in group therapies. Y is the outcome variable.
+
+---
+## Repeated measures design.
+
+&lt;img src="https://rpsychologist.com/static/276d95ccfb68cf7e283fa0463dadab02/7c1cd/2lvl.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+## Write some models.
+
+A null model looks like this
+
+
+```r
+# lme4
+lmer(y ~ 1 + (1 | subjects), data = data)
+```
+
+A null *growth* model looks like this. ("Unconditional growth model")
+
+
+```r
+# lme4
+lmer(y ~ time + (time | subjects), data = data)
+```
+
+
+&lt;img src="https://media.boingboing.net/wp-content/uploads/2016/11/bcf.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Conditional growth model.
+
+Here we examine if treatment influences the outcome over time.
+
+
+```r
+lmer(y ~ time * tx + (time | subjects), data = data)
+# dropping a random slope.
+lmer(y ~ time * tx + (1 | subjects), data = data)
+# dropping a random intercept.
+lmer(y ~ time * tx + (0 + time | subjects), data = data)
+```
+
+---
+## Three Levels.
+
+Now imagine that we have therapists... .
+
+&lt;img src="https://rpsychologist.com/static/5f5294451b5fd3d2bb2fd2163c8ab772/699b7/3lvl.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+
+```r
+lmer(y ~ time * tx + (time | therapist/subjects), data = df)
+```
+
+---
+## Crossed-over design (subject level)
+
+In the previous example, a therapist could only offer either treatment or control. Randomization at therapist level
+
+But often you'll have random allocation at the subject level.
+
+&lt;img src="https://rpsychologist.com/static/3bcfadd69212fb1d2795db3e1c27fce6/d0d8c/3lvl-crossed.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+
+
+```r
+lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx ||
+    therapist), data = df)
+```
+
+---
+## Different level 3 variance-covariance strucures... .
+
+We might hypothesize that therapists that are allocated participants that report worse symptoms at treatment start have better outcomes (more room for improvement). --&gt; we solve this via modelling the variance-covariance matrix
+
+
+
+```r
+lmer(y ~ time * tx + (time | therapist:subjects) + (time | therapist) +
+    (0 + tx + time:tx | therapist), data = data)
+```
+
+---
+## Different level 3 variance-covariance strucures... .
+
+It is also possible that when a therapist is successful with treatment A, that he/she will also be with B. We could model all such possible scenarios. This basically amounts to an *unstructured* variance-covariance matrix. (Luckily this is also the default for most packages.).
+
+
+```r
+lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx |
+    therapist), data = df)
+```
+
+
+---
+## Glmer.
+
+What if you don't have a normal distribution. For example, you have a forced choice task --&gt; Binomial.
+
+--
+
+Extensions to non-linear models. Logit.
+
+--
+
+Example
+
+
+```r
+# Example
+m &lt;- glmer(remission ~ IL6 + CRP + CancerStage + LengthofStay +
+    Experience + (1 | DID), data = hdp, family = binomial)
+```
+
+---
+## family: Other models... .
+
+Help! My data are not normal... . Pointers in [Zuur et al. (2009)](https://www.springer.com/gp/book/9780387874579).
+
+* Count data --&gt; Poisson, Negative Binomial, -- 'Excess of zeroes'.
+
+* Ordinal --&gt; probit / censored regression.
+
+* 'Weird' functions. Gamma distribution.
+
+&lt;img src="https://static-content.springer.com/image/art%3A10.1007%2Fs40750-016-0050-z/MediaObjects/40750_2016_50_Fig1_HTML.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Cool stuff, which I am unable to cover.
+
+* Machine learning. ('caret' package, Random forests) and text mining: check [here](http://tidytextmining.com/).
+
+--
+
+* Social network analysis. (Citation network analysis, [for example](https://connmal.github.io/Bibliometrix_Northumbria/About.html))
+
+--
+
+* Bayesian statistics. Check out McElreath, R. (2015). _Statistical Rethinking. Texts in Statistical Science_. CRC Press. --&gt; new version due soon.
+
+--
+
+* [Meta-analysis](https://tvpollet.github.io/Meta-analysis_course). Check out the amazing 'metafor' package.
+
+--
+
+* Statistical simulation. If you are interested, have a read of an example [here](https://link.springer.com/article/10.1007/s40750-016-0050-z).
+
+--
+
+* [Using R for writing](https://rpubs.com/YaRrr/papaja_guide). 
+
+--
+
+* 'Shiny': App. building.
+
+---
+## Rcmdr
+
+SPSS-light.
+
+(Thomas opens 'Rcmdr').
+
+---
+## Running your analyses for your projects.
+
+* Distinguish between exploratory and confirmatory analyses. Make analysis plan ahead.
+
+--
+
+* Visual checks. Correlation matrices/plots. Any issues identified?
+
+--
+
+* Find the fitting analysis. (Most likely one we have seen?). Check assumptions! (Is it multilevel?)
+
+--
+
+* Run the analysis. Bootstrap if you can. Check if different methods lead to same conclusion.
+
+
+---
+## Stuff which I have missed?
+
+Any statistical tests you commonly employ that we have not covered?
+
+---
+## Complete feedback form online.
+
+What will (likely) change with regards to next year... .
+
+* Exercises (Do you want more?). Perhaps interactive. Might become *mandatory*.
+* ...
+
+Any feedback, points you want to raise?
+
+&lt;img src="https://memegenerator.net/img/instances/400x/72027892/let-us-be-clear-we-only-want-positive-feedback-thats-easy-to-implement.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Marks.
+
+Still all to play for... .
+
+Feedback via Turnitin. 
+
+You can post questions via blackboard (BB). Book an appointment with me for substantive issues, only if unresolved via BB ([check availability](https://tvpollet.github.io/calendar/)).
+
+Questions on assignment via discussion board. 
+
+Will not answer any questions post May 14th (1pm).
+
+&lt;img src="https://wanna-joke.com/wp-content/uploads/2015/06/finals-calculate-lowest-mark.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Exercise.
+
+No set exercise, other than that I want you to explore an R package and see what it does. Alternatively, work through a tutorial. (see some examples [here](http://personality-project.org/r/)) or [here](https://www.bigbookofr.com/)).
+
+No inspiration then look through R-bloggers or datacamp. Or my tweets... .
+
+Look at the vignette, example code, and try it on some data. Write it up in a small notebook.
+
+
+---
+## References (and further reading.)
+Also check the reading list! (many more than listed here).
+
+* Gelman, A., &amp; Hill, J. (2006). _Data analysis using regression and multilevel/hierarchical models._ New York, NY: Cambridge University Press.
+
+* Gelman, A., Hill, J., &amp; Vehtari, A. (2020). _Regression and other stories._ New York, NY: Cambridge University Press.
+
+* Hox, J. J. (2010). _Multilevel analysis: Techniques and applications (2nd ed.)._ London: Taylor &amp; Francis.
+
+* Magnusson, K. (2015). Using R and lme/lmer to fit different two- and three-level longitudinal models [http://rpsychologist.com/r-guide-longitudinal-lme-lmer](http://rpsychologist.com/r-guide-longitudinal-lme-lmer)
+
+* Nieuwenhuis, R. (2017). R-Sessions 16: Multilevel Model Specification (lme4) [http://www.rensenieuwenhuis.nl/r-sessions-16-multilevel-model-specification-lme4/](http://www.rensenieuwenhuis.nl/r-sessions-16-multilevel-model-specification-lme4/)
+
+
+---
+## References continued.
+
+* Snijders, T. A. B., &amp; Berkhof, J. (2008). Diagnostic Checks for Multilevel Models. In: _Handbook of Multilevel Analysis_ (pp. 141–175). New York, NY: Springer New York. http://doi.org/10.1007/978-0-387-73186-5_3
+
+* Snijders, T. A. B., &amp; Bosker, R. J. (1999). _Multilevel analysis: An introduction to basic and advanced multilevel modeling_. London: Sage Publications Limited.
+
+* Zuur, A., Ieno, E. N., Walker, N., Saveliev, A. A., &amp; Smith, G. M. (2009). _Mixed effects models and extensions in ecology with R._ New York, NY: Springer.
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

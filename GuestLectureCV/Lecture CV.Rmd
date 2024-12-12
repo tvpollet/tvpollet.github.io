@@ -1,0 +1,682 @@
+---
+title: "Guest Lecture: CV's and social media"
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: "`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Resumes and social media.
+
+* Introduction
+
+* How to evaluate resumes? (What's the evidence?)
+
+* How to improve your resume?
+
+* Facebook and LinkedIn
+
+
+---
+## Why should you care?
+
+* If you have not made a CV you will require one soon. 
+
+* It is often your first contact with a potential employer!
+
+--
+
+
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/xT4uQBNEr2CFjaV84M/giphy.gif")
+```
+---
+## Importance <sup>1,2</sup>
+
+* The first communication between an applicant and prospective employer
+
+--
+
+* Most often used selection instrument:
+    
+    1. Relatively inexpensive 
+    2. Overview of experience, education, knowledge, skills
+    3. Judgment of personality, cognitive ability, fit
+
+--
+
+* Recruiters spend < 10 seconds reviewing a resume
+
+--> First impressions matter! 
+
+.footnote[
+[1] Burns et al. (2014).
+
+[2] Cole et al. (2009).
+
+]
+
+---
+## Components.
+
+**Personal information**:
+Name, address, date of birth, phone number, e-mail address, driver’s license
+
+--
+
+**Education**
+Dates, name of the program and university, minor, major, diploma (yes or no), GPA 
+
+--
+
+**Work experience**
+Dates, name company, job title, description of tasks and responsibilities
+
+--
+
+**Skills**
+Languages, software, courses, etc.
+
+--
+
+**Optional** personal statement, hobbies, ancillary activities
+
+--
+
+**Style** 
+Font, picture, language, length, etc
+
+---
+## Do's and Don'ts - What's the evidence?
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("donts.png")
+```
+---
+## Exercise.
+
+Evaluate the resumes for a job as Careers Coach at University of Sunderland.
+
+* Hireability
+
+* Big Five Personality Traits (Openness, Conscientiousness, Extraversion, Agreeableness, Neuroticism)
+
+* Cognitive ability
+
+---
+## Ratings.
+
+Visit the following link via your phone or PC.
+
+[app.gosoapbox.com](app.gosoapbox.com)
+
+Enter: 
+
+757-945-273 as event code.
+
+
+---
+## What can we reliably assess.
+
+Recruiters use resumes to evaluate ability and other personality-related attributes (e.g., motivation, leadership) 
+
+--
+
+However, evaluations of hiring recommendations and personality judgments are highly idiosyncratic
+
+--> For example, Burns et al. (2014) found an ICC of 0.07 for overall hireability ratings
+
+--
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/xT5LMRImdGpAvZcXoQ/giphy.gif")
+```
+
+
+---
+##What can we validly assess?
+
+Burns et al. (2014) found that actual applicant personality hardly explains hiring recommendations, it is the _perceptions_ of personality that are important
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("brunswik.png")
+```
+
+---
+##What do recruiters find important? <sup>1</sup>
+
+**Cognitive ability**:
+
+Academic achievement
+
+Maintaining a full-time job
+
+Supervising others (+ low agreeableness)
+
+--
+
+**Extraversion, Openness to experience, and Emotional stability**:
+
+Extracurricular and volunteer experiences
+
+--
+
+**Conscientiousness**:
+
+Academic achievement / GPA
+
+Internships
+
+Professional and study associations / Awards
+
+
+.footnote[
+[1] Cole et al. (2003). / Cole et al. (2009).
+
+]
+---
+##What do recruiters find important?
+
+**Hireability <sup>1</sup>**:
+
+Provide detailed information about education, including honors and awards
+
+Use school e-mail address over personal addresses
+
+Avoid making your resume stand out by applying unusual fonts or formats (to names)
+
+Provide education information before experience information
+
+Include all leadership roles and financial returns
+
+Include information on extracurricular and volunteer experiences
+
+.footnote[
+[1] Burns et al. (2014)
+
+]
+---
+##What predicts performance? <sup>1</sup>
+
+```{r, out.width = "550px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("schmidthunter.png")
+```
+
+.footnote[
+[1] Schmidt & Hunter (1998)
+
+]
+---
+###Take-home messages.
+
+* Use cognitive ability tests and personality questionnaires to measure these constructs
+
+--
+
+* Use resumes to check whether applicants fulfill the **minimum** requirements of the job, do not use them to assess cognitive ability or personality
+
+--
+
+* Resume evaluation is idiosyncratic: Explicate any lay theories you might have about what makes a candidate suitable and search for scientific evidence before using such theories.
+
+---
+class: inverse, middle, center
+
+#How to improve your CV?
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/CqWedF7qGZZ5u/giphy.gif")
+```
+
+---
+##Resume evaluations of recently graduated students <sup>1</sup> 
+
+* Fit with the job:  
+ 
+  - Relevant education
+ 
+  - Work experience
+
+* Fit with the organisation: 
+  
+  - Work experience
+
+* Fit with the recruiter:
+ 
+ - Extracurricular activities
+ 
+ - Relevant education
+
+.footnote[
+[1] Tsai et al. (2011)
+
+]
+---
+##Recommendation
+
+**Tip 1**: Match!!! Emphasize relevant aspects within your education and work experience to increase fit perceptions
+
+.pull-left[
+Education:
+
+* Relevant courses
+
+* Minor
+
+* M-Thesis / B-Thesis
+
+* GPA
+]
+
+.pull-right[
+Work experience:
+
+* Tasks
+
+* Courses / Training
+
+* Order
+
+]
+
+---
+## Example.
+
+
+```{r, out.width = "1000px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("Example1.png")
+```
+
+---
+##What can we validly assess? <sup>1</sup>
+
+
+```{r, echo=FALSE}
+htmltools::includeHTML("inferred_trait.html")
+```
+
+--> It is the **perceptions** that are important!
+
+.footnote[
+[1] Cole et al. (2009)
+
+]
+---
+## Recommendation <sup>1</sup>
+
+**Tip 2**: Emphasize aspects that make you *seem* conscientious, open to experience, and extraverted
+
+* Provide information on extracurricular activities, volunteer work, internships, grades, awards, memberships of study / professional associations
+
+* Show an eye for detail (avoid spelling errors and inconsistencies
+
+.footnote[
+[1] Burns et al. (2014)
+
+]
+---
+## Style.
+
+* Length: the longer, the less attention your resume will get.
+
+--> **Tip 3**: Keep your resume short (max. 2 pages)
+
+* Font: Sans serif preferred over serif <sup>1</sup>
+
+--> **Tip 4**: Use a sans serif font like Arial, Calibri, Verdana
+
+.footnote[
+
+[1] van Toorenburg et al., (2015)
+]
+---
+## Style.
+
+* Spelling: Crucial! <sup>1</sup>
+
+--> **Tip 5**: Always ask someone to proofread your resume
+
+* Personal statement:  Only if it relates to the specific	job 
+
+--> **Tip 6**: If you include a personal statement, make it as specific as possible.<sup>2</sup>
+
+.footnote[
+
+[1] van Toorenburg et al., (2015)
+[2] Thoms et al., (1999)
+]
+
+---
+## Example.
+
+**Example 1**:
+Characteristics: committed, results driven, ambitious, creative.  
+
+**Example 2**:
+
+A recent business economics graduate with an honors degree from the Vrije Universiteit Amsterdam, looking to secure a Commercial Analyst position to use and further develop my analytical skills and knowledge in a practical and fast-paced environment. My career goal is to assume a role which allows me to take responsibility for the analysis and interpretation of commercial data for a well-respected and market-leading leading company.	
+
+---
+## Perhaps only relevant on the continent: Should you include a picture?
+
+```{r, out.width = "600px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("sampleCVs.png")
+```
+
+---
+## Should you include a picture? <sup>1</sup>
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("RuffleChart.png")
+```
+
+**Tip 7**: Do not include a picture, unless you are an attractive man :(.
+
+.footnote[
+[1] Ruffle & Shtudiner (2014)
+
+]
+
+---
+## E-mail address
+
+cute.kitten777@hotmail.com
+
+LittleMisSunshine@yahoo.com
+
+Princess.Sophie@gmail.com
+
+OrcSlayer1991@yahoo.com
+
+--> up to 20% of the resumes contain an informal e-mail address.
+
+---
+## E-mail address <sup>1</sup>
+
+```{r, out.width = "700px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("email_study.png")
+```
+
+.footnote[
+
+[1] van Toorenburg et al., (2015)
+]
+---
+##Tips
+
+**Tip 1**: Match!!! Emphasize relevant aspects within your education and work experience to increase fit perceptions.
+
+**Tip 2**: Emphasize aspects that make you seem conscientious, open to experience, and extraverted.
+
+**Tip 3**: Keep your resume short (max. 2 pages).
+
+**Tip 4**: Use a sans serif font like Arial, Calibri, Verdana.
+
+**Tip 5**: Always ask someone to proofread your resume.
+
+**Tip 6**: If you include a personal statement, make it as specific as possible.
+
+(**Tip 7**: Do not include a picture, unless you are an attractive man)
+
+**Tip 8**: Use a professional (or student) e-mail address.
+
+---
+## Group exercise.
+
+Evaluate each other’s resume using these 8 tips (well perhaps 7).
+
+--> 15 minutes per resume
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/10QoHS5CjW50Ri/giphy.gif")
+```
+
+---
+class: inverse, middle, center
+
+# Facebook and linkedin.
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/xTiTnxM7bZ9200V2Eg/giphy.gif")
+```
+
+
+---
+## Answer some questions.
+
+Visit the following link via your phone or PC.
+
+[app.gosoapbox.com](app.gosoapbox.com)
+
+Enter: 
+
+757-945-273 as event code.
+
+---
+## Facebook
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("facebook.png")
+```
+---
+## Facebook <sup>1,2</sup>
+
+* 73% of the recruiters use social media platforms such as Facebook to recruit applicants)
+
+--
+
+* 1/3 of the recruiters have rejected candidates based on social media information:
+  - Negative remarks about previous employer
+  
+  - Language and spelling errors
+  
+  - Information that disconfirms resume 
+  
+  - Alcohol and drugs
+  
+  - Inappropriate pictures
+
+.footnote[
+[1] Van Iddekinge et al. (2002)
+
+[2] Levinson (2010) 
+
+]
+
+---
+## Behavioural residues. <sup>1</sup>
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("gosling.png")
+```
+
+.footnote[
+[1] Gosling et al. (2002)
+
+]
+
+---
+## Are these inferences correct? <sup>1</sup>
+
+```{r, echo=FALSE}
+htmltools::includeHTML("kluemper.html")
+```
+
+.footnote[
+
+[1] Kluemper et al., (2012)
+]
+
+---
+## What cues are used? <sup>1</sup>
+
+```{r, echo=FALSE}
+htmltools::includeHTML("gosling2011.html")
+```
+
+.footnote[
+
+[1] Gosling et al., (2011)
+]
+
+---
+##Does it predict performance? <sup>1</sup>
+
+* Recruiter ratings of applicants’ Facebook information are unrelated to supervisor ratings of job performance, turnover intentions, and actual turnover.
+
+--
+
+* Facebook ratings do not provide incremental validity over traditional tests and questionnaires.
+
+--
+
+* Subgroup differences tend to favor female and white applicants.
+
+---
+## Job-related social networking sites.
+
+**Facebook vs. LinkedIn**
+
+* People are likely to post information  more deliberately on LinkedIn
+
+* LinkedIn is less dynamic than Facebook
+
+* LinkedIn provides less information than Facebook
+
+--> Would LinkedIn allow for more or less valid trait inferences.
+
+---
+##LinkedIn <sup>1</sup>
+
+```{r, out.width = "900px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("vandeven.png")
+```
+
+.footnote[
+
+[1] Van de Ven et al., (2017)
+]
+
+---
+##LinkedIn <sup>1</sup>
+
+```{r, out.width = "900px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("vandeven2.png")
+```
+
+.footnote[
+
+[1] Van de Ven et al., (2017)
+]
+---
+## What cues were used?
+
+What cues were used to infer Extraversion?
+
+--
+  - Number of connections
+  
+  - Presence of summary section 
+  
+  - Number of interests
+
+--
+
+What cues were used to infer Self-presentation?
+--
+
+  - Number of connections
+  
+  - Number of recommendations
+  
+  - Presence of summary section
+
+  - Number of groups
+
+---
+## Final recommendation.
+
+Make sure you can be found on the internet (e.g., through LinkedIn), remove all inappropriate pictures and comments, make sure that online information resembles the information on your resume and avoid language and spelling errors
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/AuwBPJztsEWkw/giphy.gif")
+```
+
+---
+##Any Questions?
+
+[http://tvpollet.github.io](http://tvpollet.github.io)
+
+Twitter: @tvpollet
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3ohzdRoOp1FUYbtGDu/giphy.gif")
+```
+
+---
+##Acknowledgments
+
+I am greatly indebted to Dr. Janneke Oostrom (VU Amsterdam) who provided the content of this lecture. (Any mistakes are my own).
+
+You for listening!
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/10avZ0rqdGFyfu/giphy.gif")
+```
+
+---
+## References (and further reading.)
+
+* Burns, G. N., Christiansen, N. D., Morris, M. B., Periard, D. A., & Coaster, J. A. (2014). Effects of applicant personality on resume evaluations. _Journal of Business and Psychology, 29(4)_, 573–591.
+
+* Brown, B. K., & Campion, M. A. (1994). Biodata phenomenology: Recruiters’ perceptions and use of biographical information in resume screening. _Journal of Applied Psychology, 79(6)_, 897–908.
+
+* Cole, M. S., Feild, H. S., & Giles, W. F. (2003). Using recruiter assessments of applicants’ resume content to predict applicant mental ability and big five personality dimensions. _International Journal of Selection and Assessment, 11(1)_, 78–88.
+
+* Cole, M. S., Feild, H. S., Giles, W. F., & Harris, S. G. (2009). Recruiters’ inferences of applicant personality based on resume screening: Do paper people have a personality? _Journal of Business and Psychology, 24(1)_, 5–18.
+
+---
+## References continued.
+
+* Gosling, S. D., Ko, S. J., Mannarelli, T., & Morris, M. E. (2002). A room with a cue: Personality judgments based on offices and bedrooms. _Journal of Personality and Social Psychology, 82(3)_, 379–398. 
+
+* Gosling, S. D., Augustine, A. A., Vazire, S., Holtzman, N., & Gaddis, S. (2011). Manifestations of personality in online social networks: Self-reported Facebook-related behaviors and observable profile information. _Cyberpsychology, Behavior, and Social Networking, 14(9)_, 483–488.
+
+* Kluemper, R, D. H., Rosen, P. A., & Mossholder, K. W. (2012). Social Networking Websites, Personality Ratings, and the Organizational Context: More Than Meets the Eye? _Journal of Applied Social Psychology, 42(5)_, 1143–1172. 
+
+* Levinson, M. (2010). Social networking ever more critical to job search success. _CIO.com_, June. Retrieved from http://www.cio.com
+
+---
+## References continued.
+
+* Ruffle, B. J., & Shtudiner, Z. (2014). Are good-looking people more employable? _Management Science, 61(8)_, 1760–1776.
+
+* Schmidt, F. L., & Hunter, J. E. (1998). The validity and utility of selection methods in personnel psychology: Practical and theoretical implications of 85 years of research findings. _Psychological Bulletin, 124(2)_, 262–274. 
+
+---
+## References continued.
+
+* Thoms, P., McMasters, R., Roberts, M. R., & Dombkowski, D. A. (1999). Resume characteristics as predictors of an invitation to interview. _Journal of Business and Psychology, 13(3)_, 339–356.
+
+* Tsai, W.-C., Chi, N.-W., Huang, T.-C., & Hsu, A.-J. (2011). The Effects of Applicant Résumé Contents on Recruiters’ Hiring Recommendations: The Mediating Roles of Recruiter Fit Perceptions. _Applied Psychology, 60(2)_, 231–254. 
+
+* van de Ven, N., Bogaert, A., Serlie, A., Brandt, M. J., & Denissen, J. J. A. (2017). Personality perception based on LinkedIn profiles. _Journal of Managerial Psychology, 32(6)_, 418–429. https://doi.org/10.1108/JMP-07-2016-0220
+
+---
+## References continued.
+
+* Van Iddekinge, C. H., Lanivich, S. E., Roth, P. L., & Junco, E. (2016). Social media for selection? Validity and adverse impact potential of a Facebook-based assessment. _Journal of Management, 42(7)_, 1811–1835.
+
+* van Toorenburg, M., Oostrom, J. K., & Pollet, T. V. (2015). What a Difference Your E-Mail Makes: Effects of Informal E-Mail Addresses in Online Résumé Screening. _Cyberpsychology, Behavior, and Social Networking, 18(3)_, 135–140. 

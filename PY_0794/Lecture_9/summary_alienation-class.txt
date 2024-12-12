@@ -1,0 +1,94 @@
+lavaan 0.6-5 ended normally after 84 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of free parameters                         17
+                                                      
+  Number of observations                           932
+                                                      
+Model Test User Model:
+                                                      
+  Test statistic                                 4.735
+  Degrees of freedom                                 4
+  P-value (Chi-square)                           0.316
+
+Model Test Baseline Model:
+
+  Test statistic                              2133.722
+  Degrees of freedom                                15
+  P-value                                        0.000
+
+User Model versus Baseline Model:
+
+  Comparative Fit Index (CFI)                    1.000
+  Tucker-Lewis Index (TLI)                       0.999
+
+Loglikelihood and Information Criteria:
+
+  Loglikelihood user model (H0)             -15213.274
+  Loglikelihood unrestricted model (H1)     -15210.906
+                                                      
+  Akaike (AIC)                               30460.548
+  Bayesian (BIC)                             30542.783
+  Sample-size adjusted Bayesian (BIC)        30488.792
+
+Root Mean Square Error of Approximation:
+
+  RMSEA                                          0.014
+  90 Percent confidence interval - lower         0.000
+  90 Percent confidence interval - upper         0.053
+  P-value RMSEA <= 0.05                          0.930
+
+Standardized Root Mean Square Residual:
+
+  SRMR                                           0.007
+
+Parameter Estimates:
+
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+  Standard errors                             Standard
+
+Latent Variables:
+                   Estimate  Std.Err  z-value  P(>|z|)
+  ses =~                                              
+    education         1.000                           
+    sei               5.219    0.422   12.364    0.000
+  alien67 =~                                          
+    anomia67          1.000                           
+    powerless67       0.979    0.062   15.895    0.000
+  alien71 =~                                          
+    anomia71          1.000                           
+    powerless71       0.922    0.059   15.498    0.000
+
+Regressions:
+                   Estimate  Std.Err  z-value  P(>|z|)
+  alien71 ~                                           
+    alien67   (aa)    0.607    0.051   11.898    0.000
+    ses              -0.227    0.052   -4.334    0.000
+  alien67 ~                                           
+    ses       (sa)   -0.575    0.056  -10.195    0.000
+
+Covariances:
+                   Estimate  Std.Err  z-value  P(>|z|)
+ .anomia67 ~~                                         
+   .anomia71          1.623    0.314    5.176    0.000
+ .powerless67 ~~                                      
+   .powerless71       0.339    0.261    1.298    0.194
+
+Variances:
+                   Estimate  Std.Err  z-value  P(>|z|)
+   .education         2.801    0.507    5.525    0.000
+   .sei             264.597   18.126   14.597    0.000
+   .anomia67          4.731    0.453   10.441    0.000
+   .powerless67       2.563    0.403    6.359    0.000
+   .anomia71          4.399    0.515    8.542    0.000
+   .powerless71       3.070    0.434    7.070    0.000
+    ses               6.798    0.649   10.475    0.000
+   .alien67           4.841    0.467   10.359    0.000
+   .alien71           4.083    0.404   10.104    0.000
+
+Defined Parameters:
+                   Estimate  Std.Err  z-value  P(>|z|)
+    IndirectEffect   -0.349    0.041   -8.538    0.000
+

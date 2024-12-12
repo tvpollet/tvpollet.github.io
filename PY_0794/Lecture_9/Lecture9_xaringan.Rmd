@@ -1,0 +1,425 @@
+---
+title: 'Lecture 9: PY 0794 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+   xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r, include=FALSE}
+library(knitr)
+opts_chunk$set(tidy.opts=list(width.cutoff=60, out.width = '.6\\linewidth'),tidy=TRUE, warning=FALSE, message=FALSE)
+```
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+## PY0794: Advanced Quantitative research methods.
+
+* Last lecture: CFA via SEM
+* Today: Mediation via SEM (+ dplyr exercise)
+
+---
+## Assignment
+
+After today you should be able to complete the following sections for Assignment II:
+
+ Mediation via SEM. (getting close to the end, hurray!)
+
+---
+## Reminder Mediation.
+
+'Causal' paths approach.
+
+Sequence of regressions.
+
+```{r, out.width = "450px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("http://journals.plos.org/plosone/article/figure/image?size=medium&id=info:doi/10.1371/journal.pone.0008775.g009")
+```
+
+---
+## Why is this useful again?
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://memegenerator.net/img/images/600x600/12294978/afraid-to-ask-andy.jpg")
+```
+
+---
+## Back to our hypothetical example.
+
+We already did mediations in week 6 with a hypothetical dataset (and with body image data if you completed the exercise!)
+
+Do you remember the methods you used?
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3o6ZtmNGebTwduYJH2/giphy.gif")
+```
+
+---
+## Dataset.
+
+Example, simulated data from [here](http://data.library.virginia.edu/introduction-to-mediation-analysis/). Right click [here](http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv).
+
+X= grades
+
+Y= happiness
+
+Proposed mediator (M): self-esteem.
+
+```{r, tidy.opts=list(width.cutoff=10, size = "footnotesize"), tidy=T}
+# Long string.
+D<- read.csv('mediationData.csv') # redundant
+Data_med<-D
+```
+
+---
+## Lavaan
+
+```{r, message=F, warning=F}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture9")
+require(lavaan)
+mediationmodelSEM <- ' # direct effect
+             Y ~ c*X
+           # mediator
+             M ~ a*X
+             Y ~ b*M
+           # indirect effect (a*b)
+             ab := a*b
+           # total effect
+             total := c + (a*b)
+         '
+```
+
+---
+## Model
+
+```{r}
+fit_mediationSEM <- sem(mediationmodelSEM, se="bootstrap", data = Data_med)
+sink(file="SEM-mediation.txt")
+summary(fit_mediationSEM, standardized=TRUE, fit.measures=T)
+sink()
+```
+
+---
+## Comparison to other methods.
+
+How does that compare to the other method?
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=15, size = "footnotesize")}
+require(mediation)
+med.fit<-lm(M~X, data=Data_med)
+out.fit<-lm(Y~X+M, data=Data_med)
+# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+set.seed(1984)
+med.out <- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
+```
+
+---
+## Summary.
+
+```{r}
+summary(med.out)
+```
+
+---
+## What are the benefits?
+
+Comparison to other pre-specified models!
+
+We can use model fit statistics to compare models
+
+Also, easier if we have multiple mediators and even latent constructs.
+
+---
+## Model with just direct effects.
+
+```{r}
+require(lavaan)
+directmodelSEM <- ' # just direct effects
+                    Y ~ c*X+b*M '
+```
+
+---
+## Direct model
+
+```{r}
+fit_directSEM <- sem(directmodelSEM, se="bootstrap", data = Data_med)
+sink(file="SEM-direct.txt")
+summary(fit_directSEM, standardized=TRUE, fit.measures=T)
+sink()
+```
+
+---
+## How to fool yourself with SEM...
+
+Kline lists 50 (!) ways in which you can fool yourself in his SEM book.
+
+Sample Size: you need large sample. A simple model already requires large amounts of data.
+
+Poor data / Making something out of nothing: If there are no baseline correlations --> SEM won't help.
+
+Naming a latent variable doesn't mean it exists... .
+
+---
+## How to fool yourself with SEM: the saga continues.
+
+Ignoring warnings - some are safe to ignore but often they tell you something meaningful (for example, you are building something nonsensical)
+
+Ignoring practical significance. One can build a model that fits the data closely, but does not explain a whole lot of variance (also note: statistical significance is not the same as clinical or biological significance!).
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/12dA9Gei6U4in6/giphy.gif")
+```
+
+---
+## Visualisations: Make a nice diagram...
+
+LavaanPlot relies on diagrammer.
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=15, size = "footnotesize"), tidy=T, fig.align="center",fig.height=3.5, fig.width=8}
+require(lavaanPlot)
+lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+```
+
+---
+## But it is not the way we want.
+
+You can further improve on this. Check diagrammer.
+
+```{r, tidy.opts=list(width.cutoff=10, size = "footnotesize"), tidy=T, fig.align="center",fig.height=3.5, fig.width=8}
+require(lavaanPlot)
+labels<- list(X="independent", M="mediator", Y="dependent")
+lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), labels=labels, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+```
+
+---
+## Make a plot with the estimates.
+
+```{r, out.width = "400px", warning=F, message=F}
+require(semPlot)
+labels2<- list("Dependent", "Mediator", "Independent") # need to reorganize.
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "ram", nodeLabels = labels2)
+```
+
+---
+## Make the line visible... .
+
+```{r, out.width = "400px", warning=F, message=F}
+# Lisrel.
+require(semPlot)
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "lisrel", curvePivot = TRUE, fade=FALSE, nodeLabels = labels2)
+```
+
+---
+## alternative route.
+
+Check [this package](http://rstudio-pubs-static.s3.amazonaws.com/200846_3a7fb7a163314ccd94c3e0a93e46b71b.html) but requires rJava (which does not always play nice with a Mac).
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/U3z5fUwWra3EA/giphy.gif")
+```
+
+
+---
+## Back to the future.
+
+Data wrangling might still be hard for some of you.
+
+--> Back to dplyr?
+
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/HlxtTSOAD2Kc0/giphy.gif")
+```
+
+---
+## Some further 'dplyr' exercises and useful functions... .
+
+Install the 'tidyverse' package, load the dataset 'mtcars' from the datasets
+
+Load the mtcars dataset.
+
+---
+## Exercise.
+
+1. Calculate a summary table which has the mean/SD of the horse power variable organized by number of gears. (Bonus: export it to .html or Word.)
+
+2. Make a new dataframe called my_cars which contains the columns mpg, hp columns but let the column names be miles_per_gallon and horse_power respectively.
+
+3. Create a new variable in the dataframe called km_per_litre using the mutate function. Note: 1 mpg = 0.425 km/l .
+
+4. Look at the sample_frac() function. Use it to make a new dataframe with a random selection of half the data.
+
+5. Look at the slice function. From the original dataframe select rows 10 to 35.
+
+6. Look at the tibble package and the rownames_to_column function. Make a dataset with just the "Lotus Europa" model. What would be an alternative way of reaching the same goal?
+
+---
+## Solution.
+
+When you are done you can evaluate your results [here](https://tvpollet.github.io/PY_0794/Lecture_9/Exercise_in_class9.html).
+
+---
+## Back to SEM.
+
+Thus far: pretty basic.
+
+We can build more complex models. Also note that SEM can be a useful alternative for multilevel models. (They are actually quite [similar](https://www.ncbi.nlm.nih.gov/pubmed/26777445)).
+
+---
+## Back to SEM: Wheaton data.
+
+Wheaton (1977) "used longitudinal data to develop a model of the stability of alienation from 1967 to 1971, accounting for socioeconomic status as a covariate. Each of the three factors have two indicator variables, SES in 1966 is measured by education and occupational status in 1966 and alienation in both years is measured by powerlessness and anomie (a feeling of being lost with regard to society). The structural component of the model hypothesizes that SES in 1966 influences both alienation in 1967 and 1971 and alienation in 1967 influences the same measure in 1971. We also let the disturbances correlate from one time point to the next." from [here](https://m-clark.github.io/sem/sem.html).
+
+---
+## Make covariance matrix.
+
+We can do SEM based on correlation and covariance matrix!
+
+First make your covariance matrix.
+
+```{r}
+lower <- '
+ 11.834,
+  6.947,    9.364,
+  6.819,    5.091,   12.532,
+  4.783,    5.028,    7.495,    9.986,
+ -3.839,   -3.889,   -3.841,   -3.625,   9.610,
+-21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 '
+
+# convert to a full symmetric covariance matrix with names
+wheaton.cov <- getCov(lower, names=c("anomia67","powerless67", "anomia71",
+                                     "powerless71","education","sei"))
+
+```
+
+---
+## The model we are trying to build.
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png")
+```
+
+---
+## Question?
+
+This model brings which 2 aspects of SEM together?
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3oEv4NalYUxl6/giphy.gif")
+```
+
+
+---
+## Build the model.
+
+```{r}
+require(lavaan)
+# the model
+wheaton.model = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ aa*alien67 + ses
+    alien67 ~ sa*ses
+ 
+  # correlated residuals
+    anomia67 ~~ anomia71
+    powerless67 ~~ powerless71
+
+  # Indirect effect
+    IndirectEffect := sa*aa
+'
+```
+
+---
+## What is missing in the diagram?
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png")
+```
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif")
+```
+
+---
+## Fit the model.
+
+
+```{r}
+require(lavaan)
+alienation <- sem(wheaton.model, sample.cov=wheaton.cov, sample.nobs=932)
+sink(file='summary_alienation.txt')
+summary(alienation, fit.measures=T)
+sink()
+```
+
+---
+## Semplot
+
+```{r, message=F, warning=F, fig.align="center",fig.height=3.5, fig.width=8}
+require(semPlot)
+require(qgraph)
+semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
+```
+
+---
+## Try it yourself.
+
+What happens if you remove the arrow between "Alien67" and "Alien71"? (Compare the fit indices and make a plot)
+
+What happens if you remove the correlated residuals?
+
+---
+## Exercise
+
+Use the following code below to generate a correlation matrix to use (you'll need to load lavaan).
+
+The data comes from this [paper](https://web.archive.org/web/20220718192446/https://core.ecu.edu/wuenschk/Articles/JSB&P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
+
+```{r}
+require(lavaan)
+data<-lav_matrix_lower2full(c(1,.47,1,.66,.50,1,.77,.41,.46,1,.52,.38,.50,.50,1))
+rownames(data)<-colnames(data)<-c("att",'sn','pbc','int','beh') # a matrix.
+```
+
+---
+## Exercise (cont'd)
+
+Reconstruct the model from the article. (Note that there are no (!) latent variables)
+
+Discuss the fit. Make a sem plot.
+
+What happens when you remove the indirect path?
+
+---
+## References (and further reading.) 
+
+Also check the reading list! (many more than listed here)
+
+* Clark, M. (2017). SEM, Graphical and Latent Variable Modeling, [https://m-clark.github.io/sem/sem.html](https://m-clark.github.io/sem/sem.html)
+
+* Rosseel, Y. (2017). Lavaan. [http://lavaan.ugent.be/index.html](http://lavaan.ugent.be/index.html)
+
+* PSU (Adapted from Jenny Bryan) (2019). dplyr exercises [https://psu-psychology.github.io/r-bootcamp-2019/talks/bryan_dplyr_exercises.html](https://psu-psychology.github.io/r-bootcamp-2019/talks/bryan_dplyr_exercises.html)
+
+
+
+
+

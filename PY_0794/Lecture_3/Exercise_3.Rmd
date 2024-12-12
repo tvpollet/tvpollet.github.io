@@ -1,0 +1,306 @@
+---
+title: "Solution Lecture 3"
+output: html_document
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 3: instructions.
+
+Using last week's Salaries dataset, test the assumptions for an ANOVA with monthly salary as dependent variable and academic rank as independent variable.
+
+Conduct an ANOVA with the appropriate post-hoc tests. What do you conclude?
+
+Conduct an alternative non-parametric test to the ANOVA. What do you conclude?
+
+Conduct an ANCOVA with gender as factor, and years since Ph.D. as covariate. What do you conclude?
+
+Load the iris dataset, it is part of the [datasets package](https://rstudio-pubs-static.s3.amazonaws.com/204918_d5ccf842cbc540e78b3d6d3287e6ad38.html).
+
+It is a famous dataset with measurements of 3 species of iris flowers.
+
+Test the assumptions for a MANOVA with Species as the between-subject factor and petal length and sepal length as dependent variables. (_I previously did this for length_)
+
+Run the MANOVA. What do you conclude? Write up the result as you would do for a paper?
+
+BONUS: Plot one of the results from your analyses on the salaries database.
+
+BONUS: Conduct a follow up analysis or plot for the MANOVA.
+
+## Load the salaries database
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture3")
+require(carData)
+salaries<-carData::Salaries
+require(dplyr)
+salaries<- salaries %>% mutate(monthly_salary=salary/9)
+```
+
+## Check assumptions
+
+### Normality
+
+We perform a visual check here. See the slides for (inferior?) alternatives
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist <- ggplot(salaries, aes(x=monthly_salary)) 
+plot_hist <- plot_hist+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~rank) + theme_gdocs(12) + xlab("Monthly salary (in USD)") + ylab("Count")
+plot_hist
+```
+
+More or less OK, perhaps some deviations from normality with the asst. prof group. There is perhaps one extreme case in the prof. group who earns more than 25k USD a month!
+
+### Homogeneity of variance
+
+Many options exist but went with Levene's test.
+```{r}
+require(car)
+leveneTest(monthly_salary ~ rank, data=salaries)
+```
+
+The assumption for homogeneity of variances is violated (Levene's test: _F_(2,394) = 38.71, _p_< .0001).
+
+## ANOVA
+
+```{r}
+require(ez)
+salaries$ID<- c(1:(NROW(salaries))) # This makes an ID variable
+EZ_ANOVA1<-ezANOVA(salaries, dv=monthly_salary, wid=ID, between=rank, detailed=TRUE)
+EZ_ANOVA1
+```
+
+A one-way ANOVA showed a significant effect of academic rank on monthly salary, *F*(2, 394) = 128.22, *p* < .0001, $\eta^2_g$ = .39.
+
+## Alternative (non-parametric) test. 
+
+Many different options (see lecture slides). I went with a medians test.
+
+```{r}
+require(WRS2)
+# WRS, ANOVA for Medians. (note iter=)
+med1way(monthly_salary ~ rank, data=salaries, iter=10000)
+# analysis of Medians leads to same conclusion.
+require(dplyr)
+grouped<-group_by(salaries, rank)
+grouped %>% summarise(median= median(monthly_salary))
+```
+
+A median test showed that the medians differed significantly by academic rank (Test= 96.38, _p_<.0001). The medians showed that Assistant professors (\$8867) earned least, followed by Associate Professors (\$10625), and full Professors earned most (\$13,702).
+
+## ANCOVA
+
+(Note: assumptions not tested here)
+
+```{r}
+require(car)
+require(compute.es)
+Ancova<-lm(monthly_salary~sex+yrs.since.phd, contrasts=list(sex=contr.sum), data=salaries)
+Anova(Ancova, type="III")
+```
+
+A one-way ANCOVA examined the effect of gender on monthly salary whilst controlling for the number of years since Ph.D. There was no statistically significant effect of gender, _F_(1,394)=2.86, _p_=.092. However, the effect of the covariate, years since Ph.D., was significant, _F_(1,394)=78.23, _p_<.0001.
+
+## MANOVA
+
+### Load the iris dataset / histograms.
+
+I previously have made an error in the instructions and had previously run everything with _width_ rather than _length_
+
+```{r}
+require(datasets) # not super-necessary as datasets is part of base r
+require(skimr)
+iris<-datasets::iris
+skim(iris)
+# summarytools also prints nice overview.
+#??summarytools
+require(summarytools)
+dfSummary(iris)
+```
+
+### histograms.
+
+Visual inspection of normality. This time with the 'few theme'.
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist_sepal <- ggplot(iris, aes(x=Sepal.Width)) 
+plot_hist_sepal <- plot_hist_sepal+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~Species) + theme_few(12) + xlab("Sepal Width") + ylab("Count")
+plot_hist_sepal
+plot_hist_petal <- ggplot(iris, aes(x=Petal.Width)) 
+plot_hist_petal <- plot_hist_petal+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~Species) + theme_few(12) + xlab("Petal Width") + ylab("Count")
+plot_hist_petal
+```
+
+This seems generally fine for sepal width but perhaps some issues for petal width. As a follow-up one could consider bootstrapping the results.
+
+Here I do the test for length rather than width.
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist_sepal_l <- ggplot(iris, aes(x=Sepal.Length)) 
+plot_hist_sepal_l <- plot_hist_sepal_l+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~Species) + theme_few(12) + xlab("Sepal Length") + ylab("Count")
+plot_hist_sepal_l
+plot_hist_petal_l <- ggplot(iris, aes(x=Petal.Length)) 
+plot_hist_petal_l <- plot_hist_petal_l+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~Species) + theme_few(12) + xlab("Petal Length") + ylab("Count")
+plot_hist_petal_l
+```
+
+This seems generally fine for sepal width but perhaps some issues for petal width (especially in _setosa_ ?). As a follow-up one could again consider bootstrapping the results.
+
+### Multivariate normality
+
+mardiaTest is deprecated as a function(). So now updated with 'mvn'
+
+```{r}
+require(dplyr)
+multivariatenorm<- iris %>% select(c(Sepal.Width,Petal.Width))
+require(MVN)
+mvn(multivariatenorm)
+```
+
+The assumption of multivariate normality is violated.
+
+Let us look at length. (Now with a Q-Q plot, also note other options for making figures).
+
+```{r}
+require(dplyr)
+multivariatenorm2<- iris %>% select(c(Sepal.Length,Petal.Length))
+require(MVN)
+mvn(multivariatenorm2, multivariatePlot = "qq")
+```
+
+### Homogeneity of variance
+
+```{r}
+require(car)
+leveneTest(Petal.Width~Species, data= iris)
+leveneTest(Sepal.Width~Species, data= iris)
+```
+Levene's tests showed that the assumption of homogeneity of variances is not violated for sepal width, _F_(2,147) = 0.59, _p_= .56) but it is violated for petal width (_F_(2,147) = 19.89, _p_< .00001).
+
+Now let's do it for length.
+
+```{r}
+require(car)
+leveneTest(Petal.Length~Species, data= iris)
+leveneTest(Sepal.Length~Species, data= iris)
+```
+
+Levene's tests showed that the assumption of homogeneity of variances is violated for both sepal length, _F_(2,147) = 6.35, _p_= .002) and for petal length (_F_(2,147) = 19.48, _p_< .00001).
+
+### Box M test
+
+```{r}
+require(heplots)
+boxM(multivariatenorm, iris$Species)
+```
+The Box M test is significant (_p_<.00001). (Note that it is very easily significant, and you should be aware of this. Likely many researchers would still proceed.).
+
+Let's look at length.
+
+```{r}
+require(heplots)
+boxM(multivariatenorm2, iris$Species)
+```
+
+The Box M test is significant (_p_<.00001). (Note that it is very easily significant, and you should be aware of this. Likely many researchers would still proceed.)
+
+### MANOVA
+
+```{r}
+Manovamodel <- manova(cbind(Sepal.Width,Petal.Width) ~ Species, data = iris)
+summary(Manovamodel)
+```
+
+A MANOVA was conducted with two dependent variables (Petal width and Sepal width) and Species as the between-subject factor. A statistically significant effect was found (Pillai's Trace= 1.14, _F_(4,294)=98.18, _p_<.0001).
+
+So, the petal width and sepal widths differ between the species of iris flowers.
+
+Now again for length,... .
+
+```{r}
+Manovamodel <- manova(cbind(Sepal.Length,Petal.Length) ~ Species, data = iris)
+summary(Manovamodel)
+```
+
+A MANOVA was conducted with two dependent variables (Petal Length and Sepal Length) and Species as the between-subject factor. A statistically significant effect was found (Pillai's Trace= 0.99, _F_(4,294)=71.83, _p_<.0001).
+
+## BONUS: Plot one of the results from the analyses salaries database.
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+require(RColorBrewer)
+# get the model predictions
+pred=predict(Ancova)
+# rename sex to gender
+colnames(salaries)[5] <-"gender"
+## plot
+ggplot(data = cbind(salaries, pred),
+    aes(yrs.since.phd, monthly_salary, color=gender)) + geom_point() +
+    facet_grid(. ~ gender) + geom_line(aes(y=pred)) + scale_colour_brewer(palette = "Dark2") + labs(x="Years since Ph.D.", y="Monthly Salary ($)",
+       title="Show me the money...") +  
+  theme_tufte(12) 
+```
+
+## BONUS: Follow up analyses MANOVA
+
+```{r}
+require(ez)
+iris$ID<- c(1:(NROW(iris))) # This makes an ID variable
+EZ_ANOVA_Petal<-ezANOVA(iris, dv=Petal.Width, wid=ID, between=Species, detailed=TRUE)
+EZ_ANOVA_Petal
+EZ_ANOVA_Sepal<-ezANOVA(iris, dv=Sepal.Width, wid=ID, between=Species, detailed=TRUE)
+EZ_ANOVA_Sepal
+# Make a graph
+require(ggplot2)
+require(ggthemes)
+require(cowplot)
+violinplot<-ggplot(iris, aes(x = Species, y = Sepal.Width)) + geom_violin() + geom_boxplot(width = 0.2) + ylab("Sepal Width") + theme_economist_white(12)
+violinplot2<-ggplot(iris, aes(x = Species, y = Petal.Width)) + geom_violin() + geom_boxplot(width = 0.2) + ylab("Petal Width") + theme_economist_white(12)
+plot_grid(violinplot,violinplot2, labels=c('A', 'B'), label_size= 10, align="h")
+ggsave("violinplot_panelled.pdf", width= 250, height=250, units="mm")
+```
+
+The graph shows that setosa has narrower petals but wider sepals. You could run follow up tests to examine the significance between species in terms of width.
+
+Now let's do it for length.
+
+```{r}
+require(ez)
+iris$ID<- c(1:(NROW(iris))) # This makes an ID variable
+EZ_ANOVA_Petal_l<-ezANOVA(iris, dv=Petal.Length, wid=ID, between=Species, detailed=TRUE)
+EZ_ANOVA_Petal_l
+EZ_ANOVA_Sepal_l<-ezANOVA(iris, dv=Sepal.Length, wid=ID, between=Species, detailed=TRUE)
+EZ_ANOVA_Sepal_l
+# Make a graph
+require(ggplot2)
+require(ggthemes)
+require(cowplot)
+violinplot_l<-ggplot(iris, aes(x = Species, y = Sepal.Length)) + geom_violin() + geom_boxplot(width = 0.2) + ylab("Sepal length") + theme_economist_white(12)
+violinplot2_l<-ggplot(iris, aes(x = Species, y = Petal.Length)) + geom_violin() + geom_boxplot(width = 0.2) + ylab("Petal Length") + theme_economist_white(12)
+plot_grid(violinplot_l,violinplot2_l, labels=c('A', 'B'), label_size= 10, align="h")
+ggsave("violinplot_panelled_length.pdf", width= 250, height=250, units="mm")
+```
+ 
+The graph shows that setosa has smaller petals and smaller sepals than other species. The difference is more pronounced in petals than in sepals. You could run follow up tests to examine the significance between species in terms of Sepals. 
+ 
+### The END
+
+```{r, fig.align="center", out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/nXxOjZrbnbRxS/giphy.gif")
+```
+
+```{r}
+sessionInfo()
+```
+

@@ -1,0 +1,92 @@
+---
+title: "In class Exercise 9"
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise... .
+
+1. Calculate a summary table which has the mean/SD of the horse power variable organized by number of gears. (Bonus: export it to .html or Word.)
+
+2. Make a new dataframe called my_cars which contains the columns mpg, hp columns but let the column names be miles_per_gallon and horse_power respectively.
+
+3. Create a new variable in the dataframe called km_per_litre using the mutate function. Note: 1 mpg = 0.425 km/l .
+
+4. Look at the sample_frac() function. Use it to make a new dataframe with a random selection of half the data.
+
+5. Look at the slice function. From the original dataframe select rows 10 to 35.
+
+6. Look at the tibble package and the rownames_to_column function. Make a dataset with just the "Lotus Europa" model. What would be an alternative way of reaching the same goal?
+
+### 1.
+
+```{r}
+
+library(datasets)
+cars<-datasets::mtcars
+library(dplyr)
+grouped<-group_by(cars, gear)
+table<-summarise(grouped, Mean=mean(hp), Sd=sd(hp)) %>% mutate_all(funs(round(., 3)))
+require(stargazer)
+stargazer(table, summary=F, type="html", out= "horsepower.html", header=F)
+```
+
+### 2.
+
+Note that I have not reloaded dplyr. Mutate will also get you there but you'd have to then remove the surplus columns.
+
+```{r}
+my_cars <- cars %>% select(miles_per_gallon = mpg, horse_power=hp) 
+```
+
+### 3.
+
+I have added it to the my_cars dataframe.
+
+```{r}
+my_cars <- my_cars %>% mutate(km_per_litre = 0.425*miles_per_gallon)
+```
+
+### 4. 
+
+Sliced some rows.
+
+```{r}
+my_cars_slice = my_cars %>% slice(10:35)
+```
+
+### 5. 
+
+```{r}  
+my_cars_sample <- my_cars %>% sample_frac(size = 0.5, replace = FALSE)
+```
+
+### 6.
+
+This requires tibble. But if you loaded the tidyverse, it should be in good order.
+
+```{r}
+require(tidyverse)
+mycars_final = rownames_to_column(mtcars, var = "model")
+Lotus_europa <- mycars_final %>% filter(model == "Lotus Europa")
+```
+
+Alternatively.
+
+```{r}
+Lotus_europa2<- mtcars %>% filter(rownames(mtcars) %in% "Lotus Europa")
+```
+
+Or.
+
+```{r}
+Lotus_europa3 <- mtcars %>% filter(rownames(mtcars) == "Lotus Europa")
+```
+
+You could also make a new variable of row names via mutate.
+

@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 3: PY 0794 - Advanced Quantitative Research Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Lecture 3: PY 0794 - Advanced Quantitative Research Methods
+]
+.author[
+### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
+]
+.date[
+### 2024-02-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
+
+---
+
+
+
+
+
+
+
+
+
+## PY0794: Advanced Quantitative research methods.
+Last week: All about visualization.
+
+Today: ANOVA 
+
+---
+
+## Goals (today)
+
+* ANOVA and its variants
+
+--
+
+* Non-parametric alternatives.
+
+---
+## Assignment
+After today you should be able to complete the following sections:
+
+* ANOVA / ANCOVA / MANOVA
+
+--
+
+* Non-parametric alternatives to  these.
+
+---
+## ANOVA
+
+Raise your hand if you have never conducted an ANOVA.
+
+Analysis of Variance.
+
+&lt;img src="https://media.giphy.com/media/3o6Ztr0m2onpgjywj6/giphy.gif" width="600px" /&gt;
+
+---
+## Back to basics: Variance.
+
+ A note on notation: `$$\sigma^2, s^2, var(X)$$`
+
+--
+
+ A measure of **variability**
+
+--
+
+ Can you name other measures?
+
+--
+
+ We can calculate it for a  _sample_ but usually we want to infer this for a _population_.
+
+--
+
+ Remember `$$SD=\sqrt{variance}$$`
+
+---
+## Why would you need an ANOVA? 
+ 
+ We want to compare differences between two or **more** means.
+
+--
+
+ Why not simply run a bunch of _t_-tests?
+ 
+--
+
+ Type I error! (a lot of type I errors)
+
+---
+## How does it work?
+ 
+ Imagine a study with three groups --&gt; three means: `\(\bar x_1, \bar x_2, \bar x_3\)`
+
+--
+
+ We want to find out if those significantly differ.
+
+--
+
+ Grand mean: `\(\bar x_g\)`
+
+---
+## Formulae (for your reference)
+ 
+ Within- and Between- Sum of Squares (SS)
+
+--
+
+ Mean square within (with 3 samples): `$$M_{WithinSS}=\dfrac{\sigma_1^2+\sigma_2^2 + \sigma_3^2}3$$`
+
+--
+
+ Mean square between: `$$M_{BetweenSS}= \dfrac{\sum_{i=1}^n (\bar x_i - \bar x_g)^2}{N-1}$$` with N-1.
+
+--
+
+ Basic gist: if between &gt; within evidence for an effect!
+
+
+---
+## F-test
+
+ `$$F= \dfrac{M_{BetweenSS}}{M_{WithinSS}}$$`
+
+ look up corresponding degrees of freedom. 
+
+ Compare significance.
+
+---
+## Assumptions.
+
+Dependent variable is interval.
+
+--
+
+Independent observation (more about this when we discuss multilevel models).
+
+--
+
+Normally distributed for each category of the Independent variable.
+
+--
+
+[Homogeneity of variance](http://davidmlane.com/hyperstat/A45619.html)
+
+&lt;img src="https://pbs.twimg.com/media/DJtZt-TWAAAWnDm.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+
+---
+## Time for a new dataset?
+
+ Go to [https://psychology.okstate.edu/faculty/jgrice/personalitylab/methods.htm#MANOVA](https://psychology.okstate.edu/faculty/jgrice/personalitylab/methods.htm#MANOVA)
+
+--
+
+ Download the SPSS dataset to your working folder
+
+--
+
+ Open the SPSS dataset.  
+
+---
+## Load data. 
+
+Three groups (Asians (international), Asian Americans, European Americans), NEO PI-R. Read more [here](https://psychology.okstate.edu/faculty/jgrice/personalitylab/Grice_Iwasaki_AMR.pdf)
+
+
+```r
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture3")
+require(haven)
+data &lt;- read_spss("Iwasaki_Personality_Data.sav", user_na = T)
+```
+
+---
+## Skim
+
+
+```r
+require(skimr)
+skim(data)
+```
+
+
+Table: Data summary
+
+|                         |     |
+|:------------------------|:----|
+|Name                     |data |
+|Number of rows           |205  |
+|Number of columns        |7    |
+|_______________________  |     |
+|Column type frequency:   |     |
+|numeric                  |7    |
+|________________________ |     |
+|Group variables          |None |
+
+
+**Variable type: numeric**
+
+|skim_variable | n_missing| complete_rate|   mean|     sd| p0|   p25| p50|   p75| p100|hist  |
+|:-------------|---------:|-------------:|------:|------:|--:|-----:|---:|-----:|----:|:-----|
+|ID            |         2|          0.99| 369.98| 256.78|  1|  51.5| 527| 577.5|  628|▅▁▁▁▇ |
+|GRP           |         2|          0.99|   0.91|   0.80|  0|   0.0|   1|   2.0|    2|▇▁▇▁▆ |
+|N             |         0|          1.00|  95.91|  23.17|  0|  81.0|  97| 110.0|  192|▁▂▇▂▁ |
+|E             |         0|          1.00| 116.53|  22.09|  0| 103.0| 117| 130.0|  192|▁▁▇▇▁ |
+|O             |         0|          1.00| 116.22|  20.57|  0| 104.0| 115| 127.0|  192|▁▁▇▇▁ |
+|A             |         0|          1.00| 113.75|  20.61|  0| 103.0| 115| 127.0|  192|▁▁▇▇▁ |
+|C             |         0|          1.00| 111.62|  20.81|  0|  98.0| 112| 124.0|  192|▁▁▇▆▁ |
+
+---
+## Reduced set.
+
+2 missings. Remove this, find out the codings.
+
+
+```r
+require(dplyr)
+require(labelled)  # use this to turn into a factor
+data$GRP &lt;- to_factor(data$GRP)  #GRP is dbl+lbl
+# missings are Not a number.
+data_no_miss &lt;- dplyr::filter(data, GRP != "NaN")
+levels(data_no_miss$GRP)
+```
+
+```
+## [1] "European Americans"   "Asian Internationals" "Asian Americans"
+```
+
+---
+## Openness to Experience.
+
+Test whether groups differ in Openness to Experience (O) based on their culture.
+
+&lt;img src="http://i0.kym-cdn.com/photos/images/original/001/090/918/8f8.jpg" width="450px" style="display: block; margin: auto;" /&gt;
+
+---
+## Assumption Checks.
+
+Non-independent observations = check!
+
+Interval dependent = check!
+
+Normality --&gt; Plot
+
+Homogeneity of variance.
+
+---
+## Plot
+
+Look back at week 2 to make this a more beautiful plot!
+
+Mostly people would look at the _overall_ plot, but ideally one would check plots for each group.
+
+
+```r
+require(ggplot2)
+plot_hist &lt;- ggplot(data_no_miss, aes(x = O))
+plot_hist &lt;- plot_hist + geom_histogram(colour = "black", fill = "white")
+plot_hist
+```
+
+&lt;img src="Lecture3-xaringan_files/figure-html/opts_chunk$set(out.width=50)-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## Plot facets.
+
+
+```r
+plot_hist_facet &lt;- ggplot(data_no_miss, aes(x = O))
+plot_hist_facet &lt;- plot_hist_facet + geom_histogram(colour = "black",
+    fill = "white")
+plot_hist_facet + facet_wrap(~GRP)
+```
+
+&lt;img src="Lecture3-xaringan_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## Normality
+
+What do you think?
+ 
+---
+## Fairly Robust.
+
+Remember central limit theorem!
+
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Empirical_CLT_-_Figure_-_040711.jpg/500px-Empirical_CLT_-_Figure_-_040711.jpg" width="500px" /&gt;
+
+---
+## Other approaches: Shapiro-Wilk
+
+Not significant --&gt; retain null hypothesis, not significantly different from normal distribution.
+
+--
+
+
+```r
+data_eur &lt;- filter(data_no_miss, GRP == "European Americans")
+data_asian_i &lt;- filter(data_no_miss, GRP == "Asian Internationals")
+data_asian_a &lt;- filter(data_no_miss, GRP == "Asian Americans")
+# You would do this for all 3!
+shapiro.test(data_asian_a$O)
+```
+
+```
+## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  data_asian_a$O
+## W = 0.96901, p-value = 0.1584
+```
+
+---
+## Kolmogorov-Smirnov.
+
+Beware K-S test: easily significant! 
+
+--
+
+
+```r
+ks.test(data_asian_a$O, "pnorm")  #pnorm --&gt; normal distribution
+```
+
+```
+## 
+## 	Asymptotic one-sample Kolmogorov-Smirnov test
+## 
+## data:  data_asian_a$O
+## D = 1, p-value &lt; 2.2e-16
+## alternative hypothesis: two-sided
+```
+
+---
+## Visual checks.
+
+Recommendation check normality visually! (histogram / violin plot / ...)
+
+Think back to the 'Datasaurus'.
+
+&lt;img src="INSTA.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Variety of other options.
+
+??nortest package. Read the vignette and references.
+
+ Anderson-Darling test.
+
+ Cramer-von Mises test.
+
+ Lilliefors test (K-S) (correction of K-S).
+
+ Shapiro-Francia test.
+
+ Jarque Bera test (+ adjusted).
+
+---
+## Homogeneity of variance.
+
+Bartlett's test - assumes normality.
+
+--
+
+If significant could also point to deviation in normality as opposed to violation of the assumption of homogeneity of variance.
+
+--
+
+
+```r
+bartlett.test(O ~ GRP, data = data_no_miss)
+```
+
+```
+## 
+## 	Bartlett test of homogeneity of variances
+## 
+## data:  O by GRP
+## Bartlett's K-squared = 3.1821, df = 2, p-value = 0.2037
+```
+
+---
+## Levene's test.
+
+[Levene's test](http://www.itl.nist.gov/div898/handbook/eda/section3/eda35a.htm) does not assume normality.
+
+
+```r
+require(car)  # package which does test
+require(dplyr)
+# It needs to be a factor but already is!
+leveneTest(O ~ GRP, data = data_no_miss)
+```
+
+```
+## Levene's Test for Homogeneity of Variance (center = median)
+##        Df F value Pr(&gt;F)
+## group   2  1.7076 0.1839
+##       200
+```
+
+---
+## Outcome of assumption checks.
+
+Assumptions are upheld here! 
+
+Sample write up:
+Visual inspection suggested that the distribution of the dependent variable is close to normal. A Levene's test suggests that the assumption of homogeneity of variances is not violated, _F_(2,200) = 1.71, _p_= .18) 
+
+We can move on to ANOVA!
+
+&lt;img src="http://www.reactiongifs.com/r/hfma.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Kurtosis/Skewness. 
+
+As an aside: you could mention, the platykurtosis in the Asian American group.
+
+(In your assignment I would count both correct in this case).
+
+&lt;img src="https://www.researchgate.net/profile/John_Mitchell2/publication/5570487/figure/fig1/AS:213411729285120@1427892729413/Mesokurtic-leptokurtic-and-platykurtic.png" width="400px" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="https://miro.medium.com/max/1020/1*hxVvqttoCSkUT2_R1zA0Tg.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Try it yourself.
+
+Test the assumptions for an ANOVA with Extraversion (E) and group as independent variable.
+
+&lt;img src="https://media.giphy.com/media/3o6MbgJH2fc63n6v4I/giphy.gif" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+## ANOVA.
+
+[Many ways to do an ANOVA.](https://web.archive.org/web/20171212214358/http://talklab.psy.gla.ac.uk/r_training/anova/index.html)
+
+Why this matters will become clearer when we discuss Types of Sums of Squares.
+
+---
+## aov()
+
+Analysis of variance.
+
+
+```r
+Anova1 &lt;- aov(O ~ GRP, data = data_no_miss)
+summary(Anova1)
+```
+
+```
+##              Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## GRP           2   8774    4387   15.05 8.13e-07 ***
+## Residuals   200  58284     291                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## lm(): Linear model.
+
+
+```r
+Anova2 &lt;- lm(O ~ GRP, data = data_no_miss)
+summary(Anova2)
+```
+
+```
+## 
+## Call:
+## lm(formula = O ~ GRP, data = data_no_miss)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -41.400 -11.982  -0.982  11.828  41.600 
+## 
+## Coefficients:
+##                         Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)              113.400      1.971  57.529  &lt; 2e-16 ***
+## GRPAsian Internationals   -2.039      2.817  -0.724     0.47    
+## GRPAsian Americans        13.582      3.015   4.505 1.13e-05 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 17.07 on 200 degrees of freedom
+## Multiple R-squared:  0.1308,	Adjusted R-squared:  0.1222 
+## F-statistic: 15.05 on 2 and 200 DF,  p-value: 8.126e-07
+```
+
+---
+## F-test.
+
+summary prints parameter tests but should you be after the _F_-test.
+
+--
+
+
+```r
+anova(Anova2)
+```
+
+```
+## Analysis of Variance Table
+## 
+## Response: O
+##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## GRP         2   8774  4387.0  15.054 8.126e-07 ***
+## Residuals 200  58284   291.4                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## Drop1.
+
+For your reference. drop1 can also get you some relevant key info.
+
+Don't worry about [AIC](https://en.wikipedia.org/wiki/Akaike_information_criterion) for now. It is a model fit statistic (lower = better). More about this when we discuss multilevel models.
+
+
+```r
+drop1(Anova2)  # some additional info. ??drop1
+```
+
+```
+## Single term deletions
+## 
+## Model:
+## O ~ GRP
+##        Df Sum of Sq   RSS    AIC
+## &lt;none&gt;              58284 1155.0
+## GRP     2      8774 67058 1179.4
+```
+
+---
+## ez Package
+
+Best bet for replicating SPSS results!
+
+
+```r
+require(ez)
+Ez_ANOVA1 &lt;- ezANOVA(data_no_miss, dv = O, wid = ID, between = GRP,
+    detailed = TRUE)
+```
+
+
+```r
+Ez_ANOVA1
+```
+
+```
+## $ANOVA
+##   Effect DFn DFd      SSn      SSd        F            p p&lt;.05       ges
+## 1    GRP   2 200 8773.973 58283.59 15.05393 8.125554e-07     * 0.1308424
+## 
+## $`Levene's Test for Homogeneity of Variance`
+##   DFn DFd      SSn      SSd        F       p p&lt;.05
+## 1   2 200 356.9336 20903.13 1.707561 0.18394
+```
+
+---
+## ges?
+
+Effect size measure!
+
+--
+
+ges= Generalized Eta-Squared. `\(\eta^2_g\)` . There is also _partial_ `\(\eta^2\)`. Read more [here](https://lbecker.uccs.edu/glm_effectsize).
+
+--
+
+How to do Greek symbols and mathematical functions? [here](http://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/) or check the .rmd for this lecture.
+
+---
+## Omega squared and partial omega squared.
+
+If you are up for a challenge. You can figure out how to calculate this effect size measure on your own!.
+
+&lt;img src="https://pbs.twimg.com/media/B11-iLMCQAEotPP.jpg" width="380px" style="display: block; margin: auto;" /&gt;
+
+---
+## Write up.
+
+A one-way ANOVA showed a significant effect of cultural group on openness to experience *F*(2, 200) = 15.05, *p* &lt; .0001, `\(\eta^2_g\)` = .13. 
+
+---
+## Store results
+
+
+```r
+require(apaTables)
+apa.aov.table(Anova1, filename = "APA_Anova_Table.doc", table.number = 1)
+```
+
+```
+## 
+## 
+## Table 1 
+## 
+## ANOVA results using O as the dependent variable
+##  
+## 
+##    Predictor        SS  df        MS       F    p partial_eta2
+##  (Intercept) 964467.00   1 964467.00 3309.57 .000             
+##          GRP   8773.97   2   4386.98   15.05 .000          .13
+##        Error  58283.59 200    291.42                          
+##  CI_90_partial_eta2
+##                    
+##          [.06, .20]
+##                    
+## 
+## Note: Values in square brackets indicate the bounds of the 90% confidence interval for partial eta-squared
+```
+
+---
+## Post-hoc tests.
+
+ Where does the difference lie?
+
+&lt;img src="http://1.bp.blogspot.com/-tgrTTYSW8V8/UzVuNLzHzcI/AAAAAAAADfw/Pxpfw42Ie_0/s1600/ANOVA.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+
+---
+## Post-hoc tests.
+
+
+```r
+resultTukey &lt;- TukeyHSD(Anova1)
+resultTukey
+```
+
+```
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = O ~ GRP, data = data_no_miss)
+## 
+## $GRP
+##                                              diff       lwr       upr     p adj
+## Asian Internationals-European Americans -2.038889 -8.689634  4.611856 0.7496332
+## Asian Americans-European Americans      13.582143  6.463135 20.701151 0.0000335
+## Asian Americans-Asian Internationals    15.621032  8.438902 22.803161 0.0000020
+```
+---
+## Post-hoc tests: corrections.
+
+Have you heard of post-hoc corrections? Why do they exist?
+
+--
+
+Read more [here](https://stats.idre.ucla.edu/r/faq/how-can-i-do-post-hoc-pairwise-comparisons-in-r/) and use them sensibly.
+
+--
+
+Why Bonferroni should be abandoned (in [medicine](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1112991/) and [ecology](https://academic.oup.com/beheco/article/15/6/1044/206216/A-farewell-to-Bonferroni-the-problems-of-low)).    
+
+--
+
+&lt;img src="https://i.pinimg.com/736x/0a/b2/7f/0ab27f6bf618f07030b19fdf9823241f--statistics-psychology-jokes.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Make a report. Stargazer.
+
+You can make a prettier layout. By changing the variable names, etc. You can also change the labels it prints.
+
+Totally check out stargazer!
+
+
+```r
+require(broom)
+require(stargazer)
+# Broom turns our result into a dataframe!  We can then
+# 'tidy' it and make a report!
+tidy_resultTukey &lt;- tidy(resultTukey)
+stargazer(tidy_resultTukey, summary = F, type = "html", out = "Tukey.html")
+```
+
+---
+## apaTables
+
+Alternative. This will also have Cohen's d effect size values.
+
+
+```r
+require(apaTables)
+apa.d.table(iv = GRP, dv = O, data = data_no_miss,
+    filename = "Table_1_APA_tukey.doc", show.conf.interval = T,
+    landscape = T, table.number = 1)
+```
+
+```
+## 
+## 
+## Table 1 
+## 
+## Means, standard deviations, and d-values with confidence intervals
+##  
+## 
+##   Variable                M      SD    1             2           
+##   1. European Americans   113.40 17.12                           
+##                                                                  
+##   2. Asian Internationals 111.36 15.24 0.13                      
+##                                        [-0.20, 0.45]             
+##                                                                  
+##   3. Asian Americans      126.98 19.11 0.75          0.92        
+##                                        [0.40, 1.11]  [0.55, 1.28]
+##                                                                  
+## 
+## Note. M indicates mean. SD indicates standard deviation. d-values are estimates calculated using formulas 4.18 and 4.19
+## from Borenstein, Hedges, Higgins, &amp; Rothstein (2009). d-values not calculated if unequal variances prevented pooling.
+## Values in square brackets indicate the 95% confidence interval for each d-value. 
+## The confidence interval is a plausible range of population d-values 
+## that could have caused the sample d-value (Cumming, 2014). 
+## 
+```
+
+---
+## Try it yourself.
+
+
+* Run an ANOVA with 'E' extraversion as the dependent, and group as the independent.
+
+* Conduct the post-hoc tests and export those as either .html or .docx
+
+---
+## What if we were unlucky?
+
+How would you have proceeded, if the assumptions were violated?
+
+&lt;img src="https://media.giphy.com/media/qBVEww0YjwWyI/giphy.gif" width="600px" style="display: block; margin: auto;" /&gt;
+
+---
+## Non-parametric tests.
+
+They do not assume a normal distribution but can be less powerful.
+
+Many options exist. You can read and find others (see references).
+
+&lt;img src="https://media.giphy.com/media/12mlYz930XO2HK/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## WRS2 package
+
+The t1way function computes a one-way ANOVA for the trimmed means. Homoscedasticity assumption not required.
+
+--
+
+lincoln() for the posthoc tests.
+
+--
+
+
+```r
+# WRS.
+require(WRS2)
+t1way(O ~ GRP, data = data_no_miss)
+```
+
+```
+## Call:
+## t1way(formula = O ~ GRP, data = data_no_miss)
+## 
+## Test statistic: F = 11.067 
+## Degrees of freedom 1: 2 
+## Degrees of freedom 2: 74.67 
+## p-value: 6e-05 
+## 
+## Explanatory measure of effect size: 0.43 
+## Bootstrap CI: [0.26; 0.59]
+```
+
+---
+## t1waybt (WRS2)
+
+The t1waybt function computes a one-way ANOVA for the [_trimmed means_](http://davidmlane.com/hyperstat/A11971.html). 
+
+--
+
+
+```r
+# Specify Between.
+t1waybt(O ~ GRP, data = data_no_miss, nboot = 10000)
+```
+
+```
+## Call:
+## t1waybt(formula = O ~ GRP, data = data_no_miss, nboot = 10000)
+## 
+## Effective number of bootstrap samples was 10000.
+## 
+## Test statistic: 11.067 
+## p-value: 0 
+## Variance explained: 0.2 
+## Effect size: 0.448
+```
+
+---
+## med1way (WRS2)
+
+Computes a one-way ANOVA for the medians. Homoscedasticity assumption not required. Avoid too many ties.
+
+--
+
+
+```r
+# WRS, ANOVA for Medians. (note iter=)
+med1way(O ~ GRP, data = data_no_miss, iter = 10000)
+```
+
+```
+## Call:
+## med1way(formula = O ~ GRP, data = data_no_miss, iter = 10000)
+## 
+## Test statistic F: 6.6673 
+## Critical value: 3.2621 
+## p-value: 0.0036
+```
+
+```r
+# analysis of Medians leads to same conclusion.
+```
+
+--
+
+Read through WRS2 manual or Wilcox (2012) to find out more.
+
+---
+## Permutation tests.
+
+Permutation tests use random shuffles of the data to get the correct distribution of a test statistic under a null hypothesis. (No power issue by the way)
+
+--
+
+Shuffles are not the same as bootstraps. Some assumptions do still apply (e.g., non-independence of observations).
+
+--
+
+Read more [here](http://thomasleeper.com/Rcourse/Tutorials/permutationtests.html) and [here](http://rcompanion.org/handbook/K_01.html)
+
+--
+
+
+```r
+require(coin)
+independence_test(O ~ GRP, data = data_no_miss)
+```
+
+```
+## 
+## 	Asymptotic General Independence Test
+## 
+## data:  O by
+## 	 GRP (European Americans, Asian Internationals, Asian Americans)
+## maxT = 5.0961, p-value = 8.742e-07
+## alternative hypothesis: two.sided
+```
+
+---
+## Sample write up.
+
+A permutation test via the 'coin' package showed that there are significant differences between the three groups in Openness to Experience (maxT= 5.10, _p_&lt; .0001).
+
+(Note post-hoc tests are currently unavailable via 'coin' but you can get them via 'rcompanion', more [here](https://rcompanion.org/rcompanion/d_06a.html))
+
+---
+## ANCOVA
+
+The difference is the ***C***. Covariate.
+
+--
+
+Often we want to control for a potential confound, so suppose that you are testing a new weight loss drug. You could analyse the participant's weight at the end of the trial while partialling out their start weight. This would be an ANCOVA scenario (but [beware](http://files.eric.ed.gov/fulltext/ED312298.pdf)).
+
+--
+
+Beware of [Lord's paradox](http://m-clark.github.io/docs/lord/#lord’s_paradox). If one researcher calculates a change score and runs an independent samples _t_-test while the other runs an ANCOVA, don't expect the same conclusion. 
+
+---
+## Important: order effects.
+
+The order in which you put in things matters!!
+
+--
+
+
+```r
+# Type I errors
+lm_ancova &lt;- lm(O ~ E + GRP, data = data_no_miss)
+anova(lm_ancova)
+```
+
+```
+## Analysis of Variance Table
+## 
+## Response: O
+##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## E           1   8349  8348.9  34.339 1.894e-08 ***
+## GRP         2  10325  5162.7  21.234 4.379e-09 ***
+## Residuals 199  48383   243.1                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## Compare to previous slide!
+
+
+```r
+# note that the order matters for the F-tests.
+lm_ancova2 &lt;- lm(O ~ GRP + E, data = data_no_miss)
+anova(lm_ancova2)
+```
+
+```
+## Analysis of Variance Table
+## 
+## Response: O
+##            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
+## GRP         2   8774  4387.0  18.044 6.289e-08 ***
+## E           1   9900  9900.3  40.720 1.209e-09 ***
+## Residuals 199  48383   243.1                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## More about Types of errors later.
+
+Type I,II,III errors. 
+
+--
+
+For now, you should be aware that type of errors matters (I,II,III). read more [here](http://www.utstat.toronto.edu/reid/sta442f/2009/typeSS.pdf) and [here](https://bookdown.org/ndphillips/YaRrr/anova.html#type-i-type-ii-and-type-iii-anovas)
+
+--
+
+SPSS uses type III. So let's aim to emulate (even though that might not always be [optimal](http://www.dwoll.de/r/ssTypes.php))
+
+---
+## Order invariant: SPSS uses Type III.
+
+
+```r
+# Type III errors
+require(car)
+require(compute.es)
+Ancova &lt;- lm(O ~ GRP + E, contrasts = list(GRP_fact = contr.sum),
+    data = data_no_miss)
+Anova(Ancova, type = "III")
+```
+
+```
+## Anova Table (Type III tests)
+## 
+## Response: O
+##             Sum Sq  Df F value    Pr(&gt;F)    
+## (Intercept)  17222   1  70.835 7.554e-15 ***
+## GRP          10325   2  21.234 4.379e-09 ***
+## E             9900   1  40.720 1.209e-09 ***
+## Residuals    48383 199                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## post-hoc tests.
+
+
+```r
+require(multcomp)
+posth = glht(Ancova, linfct = mcp(GRP = "Tukey"))
+```
+
+---
+## summary(posth)
+
+
+```r
+summary(posth)  ##shows the output in a nice format
+```
+
+```
+## 
+## 	 Simultaneous Tests for General Linear Hypotheses
+## 
+## Multiple Comparisons of Means: Tukey Contrasts
+## 
+## 
+## Fit: lm(formula = O ~ GRP + E, data = data_no_miss, contrasts = list(GRP_fact = contr.sum))
+## 
+## Linear Hypotheses:
+##                                                Estimate Std. Error t value
+## Asian Internationals - European Americans == 0    4.837      2.789   1.734
+## Asian Americans - European Americans == 0        17.870      2.835   6.304
+## Asian Americans - Asian Internationals == 0      13.033      2.808   4.642
+##                                                Pr(&gt;|t|)    
+## Asian Internationals - European Americans == 0    0.195    
+## Asian Americans - European Americans == 0        &lt;1e-04 ***
+## Asian Americans - Asian Internationals == 0      &lt;1e-04 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## (Adjusted p values reported -- single-step method)
+```
+
+---
+## Sample write up. 
+
+A one-way ANCOVA was conducted to compare Openness across groups whilst controlling for Extraversion. There was a significant effect of cultural group, _F_(2,199)=21.23, _p_&lt;.0001. In addition, the effect of the covariate, Extraversion, was significant, _F_(1,199)=40.72, _p_&lt;.0001.
+
+--
+
+You would then describe the post-hoc differences and also explore how extraversion is associated with (e.g., correlation, plot.)
+
+---
+## Non-parametric alternative.
+
+Look at the 'lmPerm' package and [this](https://statmethods.wordpress.com/2012/05/21/permutation-tests-in-r/).
+
+---
+## MANOVA
+
+All the previous assumptions + (+ multicollinearity (not an assumption but a problem)
+
+--
+
+Multivariate normality
+
+--
+
+Homogeneity of _co_-variances.
+
+---
+## Multivariate Normality
+
+[Multivariate Shapiro test.](https://en.wikipedia.org/wiki/Shapiro%E2%80%93Wilk_test) (The Univariate's test bigger brother...).
+
+--
+
+Sensitive to sample size, if large small deviations will lead to significance.
+
+
+```r
+require(RVAideMemoire)
+multivariatenorm &lt;- dplyr::select(data_no_miss, -GRP, -ID)
+mshapiro.test(multivariatenorm)
+```
+
+```
+## 
+## 	Multivariate Shapiro-Wilk normality test
+## 
+## data:  (N,E,O,A,C)
+## W = 0.98577, p-value = 0.03887
+```
+
+---
+## Alternative methods.
+
+A whole host of alternatives. More [here](http://dwoll.de/rexrepos/posts/normality.html).
+
+--
+
+
+```r
+require(MVN)  # Alternative method, one example
+mvn(multivariatenorm)
+```
+
+```
+## $multivariateNormality
+##            Test       HZ    p value MVN
+## 1 Henze-Zirkler 1.049975 0.01411504  NO
+## 
+## $univariateNormality
+##               Test  Variable Statistic   p value Normality
+## 1 Anderson-Darling     N        0.3874    0.3848    YES   
+## 2 Anderson-Darling     E        0.5247    0.1793    YES   
+## 3 Anderson-Darling     O        0.6676    0.0802    YES   
+## 4 Anderson-Darling     A        0.4504    0.2729    YES   
+## 5 Anderson-Darling     C        0.6231    0.1034    YES   
+## 
+## $Descriptives
+##     n     Mean  Std.Dev Median Min Max  25th  75th       Skew   Kurtosis
+## N 203  95.9064 21.23737     97  36 160  81.0 109.5 -0.1442702 -0.1102764
+## E 203 116.7291 19.93406    117  50 175 103.0 129.5 -0.1039661  0.6504353
+## O 203 116.4236 18.21999    115  72 166 104.0 127.0  0.3079877 -0.1699643
+## A 203 113.9261 18.29136    115  58 161 103.0 127.0 -0.2962256  0.1136037
+## C 203 111.7734 18.53971    112  57 171  98.5 124.0  0.1476949  0.4428221
+```
+
+---
+## Conclusion: Multivariate normality
+
+Violated (but could be way worse, trust me ... )
+
+
+```r
+mvn(multivariatenorm, multivariatePlot = "qq")
+```
+
+&lt;img src="Lecture3-xaringan_files/figure-html/unnamed-chunk-44-1.png" width="300px" /&gt;
+
+```
+## $multivariateNormality
+##            Test       HZ    p value MVN
+## 1 Henze-Zirkler 1.049975 0.01411504  NO
+## 
+## $univariateNormality
+##               Test  Variable Statistic   p value Normality
+## 1 Anderson-Darling     N        0.3874    0.3848    YES   
+## 2 Anderson-Darling     E        0.5247    0.1793    YES   
+## 3 Anderson-Darling     O        0.6676    0.0802    YES   
+## 4 Anderson-Darling     A        0.4504    0.2729    YES   
+## 5 Anderson-Darling     C        0.6231    0.1034    YES   
+## 
+## $Descriptives
+##     n     Mean  Std.Dev Median Min Max  25th  75th       Skew   Kurtosis
+## N 203  95.9064 21.23737     97  36 160  81.0 109.5 -0.1442702 -0.1102764
+## E 203 116.7291 19.93406    117  50 175 103.0 129.5 -0.1039661  0.6504353
+## O 203 116.4236 18.21999    115  72 166 104.0 127.0  0.3079877 -0.1699643
+## A 203 113.9261 18.29136    115  58 161 103.0 127.0 -0.2962256  0.1136037
+## C 203 111.7734 18.53971    112  57 171  98.5 124.0  0.1476949  0.4428221
+```
+
+---
+## Solutions.
+
+Solution: Check for outliers, run analyses again. Report both!
+
+--
+
+Transformations. [Box-Cox transform](https://stat.ethz.ch/R-manual/R-devel/library/MASS/html/boxcox.html).
+
+--
+
+Central limit theorem to the rescue again! (also note Hotelling's `\(T^2\)` robust)
+
+&lt;img src="https://media.giphy.com/media/D49L3FpxqtQ3u/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Homogeneity of variance.
+
+As with the univariate case. So, you would run a series of tests such as Levene's Test and examine those.
+
+Not done here but you can run these on your own.
+
+---
+## Homogeneity of covariances: Box's M test.
+
+Approach with care. 
+
+--
+
+Very easily significant. Therefore, usually _p_=.001 as threshold. More [here](https://en.wikiversity.org/wiki/Box%27s_M).
+
+--
+
+
+```r
+require(heplots)  #alternative is 'biotools' package.
+boxM(multivariatenorm, data_no_miss$GRP)
+```
+
+```
+## 
+## 	Box's M-test for Homogeneity of Covariance Matrices
+## 
+## data:  multivariatenorm
+## Chi-Sq (approx.) = 40.668, df = 30, p-value = 0.09256
+```
+
+---
+## MANOVA
+
+
+```r
+Manovamodel &lt;- manova(cbind(N, E, A, O, C) ~ GRP, data = data_no_miss)
+summary(Manovamodel)
+```
+
+```
+##            Df  Pillai approx F num Df den Df    Pr(&gt;F)    
+## GRP         2 0.41862    10.43     10    394 1.106e-15 ***
+## Residuals 200                                             
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## MANOVA
+
+Other measures exist but Pillai's Trace is typically most common. You can find out more about them [here](https://online.stat.psu.edu/stat505/lesson/8/8.3). Also about the **math** (also see references).
+
+&lt;img src="https://i1.wp.com/68.media.tumblr.com/29f192c8081899ed1f037ef6003384d3/tumblr_os2spqdfC71r0msi2o1_1280.gif?zoom=2&amp;w=605&amp;ssl=1" width="450px" style="display: block; margin: auto;" /&gt;
+
+---
+## Report.
+
+Pillai's Trace most commonly reported.
+
+Sample report: A MANOVA was conducted with five dependent variables (Neuroticism, Extraversion, Conscientousness, Agreeableness, and Openness to Experience) and cultural group as the between-subject factor. A statistically significant effect was found (Pillai's Trace= .42, _F_(10,394)=10.43, _p_&lt;.0001).
+
+--
+
+You would then report follow-up tests! (e.g., Univariate ANOVA's)
+
+--
+
+In conclusion the personality profiles differ between these 3 groups.
+
+---
+## Follow up tests
+
+Univariate ANOVA's / plot your data / [Discriminant analysis](https://pjbartlein.github.io/GeogDataAnalysis/lec17.html).
+
+---
+## Exercise. 
+
+Using last week's Salaries dataset, test the assumptions for an ANOVA with monthly salary as dependent variable and academic rank as independent variable.
+
+Conduct an ANOVA with the appropriate post-hoc tests. What do you conclude?
+
+Conduct an alternative non-parametric test to the ANOVA. What do you conclude.
+
+Conduct an ANCOVA with gender as factor, and years since Ph.D. as covariate. What do you conclude? 
+
+---
+## Exercise continued.
+
+Load the iris dataset, it is part of the [datasets package](https://rstudio-pubs-static.s3.amazonaws.com/204918_d5ccf842cbc540e78b3d6d3287e6ad38.html).
+
+It is a famous dataset with measurements of 3 species of iris flowers.
+
+Test the assumptions for a MANOVA with Species as the between-subject factor and petal length and sepal length as dependent variables.
+
+Run the MANOVA. What do you conclude? Write up the result as you would do for a paper?
+
+BONUS: Plot one of the results from your analyses on the salaries database.
+
+BONUS: Conduct a follow up analysis or plot for the MANOVA.
+
+---
+## References (and further reading.) 
+
+* Crawley, M. J. (2013). _The R book: Second edition._ New York, NY: John Wiley &amp; Sons.
+* Kassambara, A. (2017) STHDA: _[One way ANOVA in R](http://www.sthda.com/english/wiki/one-way-anova-test-in-r)_ 
+* Kassambara, A. (2017) STHDA: _[Statistical tests and assumptions](http://www.sthda.com/english/wiki/statistical-tests-and-assumptions)_
+* Mangiafico, S. (2017) [rcompanion](http://rcompanion.org/handbook/)
+* Siegel, S. &amp; Castellan, N.J. Jr. (1988). _Nonparametric statistics for the behavioral sciences. 2nd Edn._ McGraw-Hill, New York.
+* Wickham, H., &amp; Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
+* Wilcox, R. (2012). Introduction to Robust Estimation and Hypothesis Testing (3rd ed.). New York, NY: Elsevier.
+
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

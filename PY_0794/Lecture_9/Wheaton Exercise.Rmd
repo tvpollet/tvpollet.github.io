@@ -1,0 +1,216 @@
+---
+title: "SEM madness with the Wheaton data"
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Hypothesised model
+
+# Data
+
+```{r}
+require(lavaan)
+lower <- '
+ 11.834,
+  6.947,    9.364,
+  6.819,    5.091,   12.532,
+  4.783,    5.028,    7.495,    9.986,
+ -3.839,   -3.889,   -3.841,   -3.625,   9.610,
+-21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 '
+
+# convert to a full symmetric covariance matrix with names
+wheaton.cov <- getCov(lower, names=c("anomia67","powerless67", "anomia71",
+                                     "powerless71","education","sei"))
+
+```
+
+## Model
+
+```{r}
+require(lavaan)
+# the model
+wheaton.model = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ aa*alien67 + ses
+    alien67 ~ sa*ses
+ 
+  # correlated residuals
+    anomia67 ~~ anomia71
+    powerless67 ~~ powerless71
+
+  # Indirect effect
+    IndirectEffect := sa*aa
+'
+```
+
+## Fit the model.
+
+
+```{r}
+require(lavaan)
+alienation <- sem(wheaton.model, sample.cov=wheaton.cov, sample.nobs=932)
+summary(alienation, fit.measures=T)
+```
+
+## Plot
+
+```{r, message=F, warning=F, fig.align="center",fig.height=3.5, fig.width=8}
+require(semPlot)
+require(qgraph)
+semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
+```
+
+# Model without the arrow? 
+
+This model drops the arrow.
+
+```{r}
+require(lavaan)
+# the model
+wheaton.model2 = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ ses
+    alien67 ~ sa*ses
+ 
+  # correlated residuals
+    anomia67 ~~ anomia71
+    powerless67 ~~ powerless71
+'
+```
+
+You'll notice that the fit statistics are identical?!
+
+Why is that? We have modelled the covariance now instead of the arrow! In short, we cannot differentiate between double-headed arrow and directed arrow in terms of fit! It is a decision by the researcher to have one or the other but they are equivalent models -- Read more in the sources cited. 
+
+```{r}
+require(lavaan)
+alienation_without <- sem(wheaton.model2, sample.cov=wheaton.cov, sample.nobs=932)
+summary(alienation_without, fit.measures=T)
+```
+
+```{r, message=F, warning=F, fig.align="center",fig.height=3.5, fig.width=8}
+require(semPlot)
+require(qgraph)
+semPaths(alienation_without,style = "lisrel",what="std",  curvePivot = TRUE)
+```
+
+# Model without covariance between latent constructs
+
+```{r}
+require(lavaan)
+# the model
+wheaton.model3 = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ ses
+    alien67 ~ sa*ses
+    
+  # Orthogonal (not correlated)  
+    alien71 ~~ 0*alien67
+ 
+  # correlated residuals
+    anomia67 ~~ anomia71
+    powerless67 ~~ powerless71
+'
+```
+
+```{r}
+require(lavaan)
+alienation_without2 <- sem(wheaton.model3, sample.cov=wheaton.cov, sample.nobs=932)
+summary(alienation_without2, fit.measures=T)
+```
+```{r, message=F, warning=F, fig.align="center",fig.height=3.5, fig.width=8}
+require(semPlot)
+require(qgraph)
+semPaths(alienation_without2,style = "lisrel",what="std",  curvePivot = TRUE)
+```
+
+This model is clearly inferior in terms of fit and also in absolute terms no longer a good fit in RMSEA.
+
+## Model without correlated residuals
+
+```{r}
+require(lavaan)
+# the model
+wheaton.model_no_corr_resid = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ aa*alien67 + ses
+    alien67 ~ sa*ses
+
+  # Indirect effect
+    IndirectEffect := sa*aa
+'
+```
+
+## Fit the model.
+
+
+```{r}
+require(lavaan)
+alienation_no_corr_resid <- sem(wheaton.model_no_corr_resid, sample.cov=wheaton.cov, sample.nobs=932)
+summary(alienation_no_corr_resid, fit.measures=T)
+```
+
+You can tell that this model is substantially worse. But what if we just remove the powerlessness correlated residuals?
+
+```{r}
+require(lavaan)
+# the model
+wheaton.model_only_corr_resid = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ aa*alien67 + ses
+    alien67 ~ sa*ses
+    
+  # correlated residuals (anomia)
+    anomia67 ~~ anomia71
+
+  # Indirect effect
+    IndirectEffect := sa*aa
+'
+```
+
+## Fit the model.
+
+Nearly identical AIC but some improvement in BIC.
+
+```{r}
+require(lavaan)
+alienation_only_corr_resid <- sem(wheaton.model_only_corr_resid, sample.cov=wheaton.cov, sample.nobs=932)
+summary(alienation_only_corr_resid, fit.measures=T)
+```
+
+# Session info.
+
+```{r}
+sessionInfo()
+```
+

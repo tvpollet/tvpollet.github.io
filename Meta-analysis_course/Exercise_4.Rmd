@@ -1,0 +1,208 @@
+---
+title: "Solution Session 4"
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer)'
+output:
+  html_document:
+    toc: true
+---
+
+## Questions.
+
+
+Using the `dat.raudenbush1985` from week 3. Rerun the random-effects meta-analysis with REML estimation. 
+
+* Make a funnel plot with study labels. What do you make of it?
+* Make a funnel plot with inverse variance on the y-axis.
+* Perform Egger's test for funnel plot asymmetry.
+* Perform Begg & Mazumdar's test for funnel plot asymmetry. Based on _both_ Egger's test and this test what do you conclude.
+* Make a contour-enhanced funnel plot. What does it reveal?
+* Make a radial plot.
+* **Bonus** perform and interpret a _p_ uniform analysis. For the purpose of this analysis treat the treatment effect `yi` in this dataset, as a Cohen's _d_.
+
+
+## Load and manipulate the data
+
+There are 19 studies.
+
+```{r}
+library(meta)
+library(metafor)
+Data<-dat.raudenbush1985
+head(Data)
+```
+
+I have made the names as in our slides. Note that this is unnecessary duplication (as TE = _yi_ ) but then it maps on nicely to our code.
+
+```{r}
+library(dplyr)
+Data <- Data %>% mutate(TE=yi, seTE=sqrt(vi))
+```
+
+As in the solution of exercise 3, let's combine, author and year. 
+
+Let's bracket the year as per convention. Here I rely on base R and [this snippet](https://stackoverflow.com/questions/29884082/apply-parentheses-around-elements-of-r-dataframe).
+
+```{r}
+Data$year_b <- paste0("(", format(unlist(Data[,3])),")")
+```
+
+Then we combine as done in [here](https://stackoverflow.com/questions/18115550/combine-two-or-more-columns-in-a-dataframe-into-a-new-column-with-a-new-name). Here I have opted for a '[tidyverse](https://www.tidyverse.org/)' solution.
+
+```{r}
+library(tidyverse)
+Data <-Data %>% unite(author_year, c(author, year_b), sep = " ", remove = FALSE)
+```
+
+Let's redo our model but now with `author_year`.
+
+```{r}
+require(meta)
+model_reml2<-metagen(TE,
+        seTE,
+        data=Data,
+        studlab=paste(author_year),
+        comb.fixed = FALSE,
+        comb.random = TRUE,
+        method.tau = "REML",
+        hakn = FALSE,
+        prediction=TRUE,
+        sm="SMD")
+model_reml2
+```
+
+## Funnel plot
+
+Wen note that there is a 'gap' in the funnel plot where studies should be. Note that there is one study with a very large effect size (1.18) by Pellegrini and Hicks (1972) (aware group). The study by Maxwell (1970) also has a very large effect size. Note, as mentioned in the slides, that publication bias is but one potential source for funnel plot asymmetry.
+
+```{r, 'funnel', fig.width=6,fig.height=4, fig.pos='center', dev='svg'}
+funnel(model_reml2,xlab = "SMD", studlab = TRUE) # adds label on X
+```
+
+
+```{r}
+funnel(model_reml2, yaxis="invvar", main="Inverse Sampling Variance")
+```
+
+
+
+Egger's test is not significant but it is very, very close _t_(17)= 2.038, _p_= .057 . 
+
+```{r}
+metabias(model_reml2)
+```
+
+## Begg and Mazumdar test
+
+This rank correlation method would lead to a very similar conclusion as above: _p_ = .074 (vs. _p_ = .057). Note that this test has low statistical power, i.e. one would need a large number of studies. Based on this I would be inclined that the tests do not allow us to rule out publication bias. (Again, note as before, that other processes can cause funnel plot asymmetry and that our tests are based on such asymmetry.)
+
+```{r}
+metabias(model_reml2,method.bias = "rank")
+```
+
+## Duval & Tweedie's trim & fill procedure.
+
+This procedure would have added 3 studies, which would have reduced the effect dramatically. The estimated effect drops from .084 to .028, so its estimate is around 1/3 of the original.
+
+Note that there is a broad discussion on trim & fill procedure, though in our particular case, one would draw the same conclusion: after one adjusts for publication bias, there is even less evidence for a 'Pygmalion' effect in this set.
+
+```{r}
+trimfill(model_reml2)
+```
+
+## Contour enhanced funnel plot
+
+
+```{r, 'contour funnel', message=FALSE,warning=FALSE, eval=T, fig.width=6,fig.height=6, fig.pos='center', dev='svg'}
+meta::funnel(model_reml2, xlab="SMD",level = 0.95, contour = c(0.95, 0.975, 0.99),
+       col.contour = c("darkgray", "gray", "lightgray"),
+       lwd = 2, cex = 2, pch = 16)
+legend(1.25, 0.10,
+       c("0.05 > p > 0.025", "0.025 > p > 0.01", "< 0.01"),
+       fill = c("darkgray", "gray", "lightgray"), bg=c("white"))
+```
+
+Only a few studies have statistically significant effect sizes (grey background), others do not (white background). Interestingly, it shows that most studies did not produce significant effects. As is clear, there are 2 studies with (very) large effects and low precision (i.e., high standard error). As in the previous plots, there is some indication of publication bias as studies with comparatively lower effect size estimates and low precision are missing (lower quadrant).
+
+## Radial plot
+
+```{r, 'radial', fig.width=6,fig.height=5, fig.pos='center', dev='svg'}
+radial(model_reml2)
+```
+
+## Intermezzo: Why no fail-safe N's?
+
+The effect wasn't significant to begin with. So, in order to reduce its significance we would have added 0 studies.
+
+## p-uniform
+
+This is not optimal, but it looks like for our purpose we'll have to convert our treatment effect (`yi` or `Te`) to  a metric which we can feed to _p_-uniform. If you were to have the _M_ and _SD_ for each condition, you could use those. However, in this case, they are not reported in our dataset. From the materials we read that the effect sizes are standard mean differences ('SMD'), though it has not been noted as to whether these are Cohen's _d_ or not. For our purpose we will treat them as Cohen's _d_ . So we are going to have to do some data-wrangling
+
+
+Remember:
+$$r=\frac{d}{\sqrt{d^2+A}}$$
+and A is our correction factor.
+
+$$A= \frac{(n_1+n_2)^2}{n_1n_2}$$
+
+### Correction factor A
+
+So let"s use `dplyr`to calculate our correction factor A.
+
+```{r}
+require(dplyr)
+Data <- Data %>% mutate(correction_factor_A= ((n1i+n2i)^2)/(n1i*n2i))
+```
+
+Have a look at the dataframe, you should notice that studies where treatment and control sample sizes were the same have A=4.
+
+### Pearson correlation from SMD estimate
+
+```{r}
+Data <- Data %>% mutate(pearson_r= TE/(sqrt((TE^2)+correction_factor_A)))
+```
+
+Finally we'll also need to weigh those correlation coefficients, here we simple sum `n1i` and `n2i` to obtain N (here labelled `pearson_weight`).
+
+```{r}
+Data <- Data %>% mutate(pearson_weight= (n1i+n2i))
+```
+
+
+### P-uniform
+
+```{r}
+require(puniform)
+puni_star(ri = Data$pearson_r, ni=Data$pearson_weight, side='right')
+```
+
+Perhaps unsurprisingly as there are _only_ 3 significant estimates, the _p_ uniform method does not suggest issues.
+
+## Acknowledgments and further reading... .
+
+The example is from [here](http://www.metafor-project.org/doku.php/analyses:raudenbush2009#fixed-effects_model). 
+
+
+Note that throughout I have varied the rounding when I reported, you should make your own decisions on how precise you believe your results to be. 
+
+Please see the slides for further reading but a good place to start is Chapter 7 on publication bias in Koricheva, J., Gurevitch, J., & Mengersen, K. (2013). _Handbook of Meta-Analysis in Ecology and Evolution_. Princeton, NJ: Princeton University Press.
+
+
+**Cited literature**
+
+Raudenbush, S. W. (1984). Magnitude of teacher expectancy effects on pupil IQ as a function of the credibility of expectancy induction: A synthesis of findings from 18 experiments. _Journal of Educational Psychology, 76(1)_, 85–97.
+
+Raudenbush, S. W. (2009). Analyzing effect sizes: Random effects models. In H. Cooper, L. V. Hedges, & J. C. Valentine (Eds.), _The handbook of research synthesis and meta-analysis_ (2nd ed., pp. 295–315). New York: Russell Sage Foundation.
+
+## The end.
+
+```{r, out.width = "400px", echo=FALSE}
+knitr::include_graphics("http://giphygifs.s3.amazonaws.com/media/nXxOjZrbnbRxS/giphy.gif") # giphy.com fair use.
+```
+
+## Session info.
+
+```{r}
+sessionInfo()
+```
+

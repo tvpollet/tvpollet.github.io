@@ -1,0 +1,173 @@
+{\rtf1\ansi\deff0 {\fonttbl {\f0 Times New Roman;}}
+\paperw15840 \paperh12240 \margl1440 \margr1440 \margt1440 \margb1440 \landscape 
+{\pard Table 1 \par}
+{\pard  \par}
+{\pard\i Means and standard deviations for len as a function of a 2(supp) X 3(dose) design\par}
+{\pard  \par}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa100\sb100\intbl\qc{dose:0.5}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{supp}\cell
+\pard\sa0\sb0\intbl\qc{{\i M}}\cell
+\pard\sa0\sb0\intbl\qc{{{\i M}\par}{95% CI\par}[LL, UL]}\cell
+\pard\sa0\sb0\intbl\qc{{\i SD}}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{OJ}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{13.23}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx598{[10.04, 16.42]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{4.46}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{VC}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{7.98}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx598{[6.02, 9.94]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{2.75}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa100\sb100\intbl\qc{dose:1}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{supp}\cell
+\pard\sa0\sb0\intbl\qc{{\i M}}\cell
+\pard\sa0\sb0\intbl\qc{{{\i M}\par}{95% CI\par}[LL, UL]}\cell
+\pard\sa0\sb0\intbl\qc{{\i SD}}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{OJ}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{22.70}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx598{[19.90, 25.50]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{3.91}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{VC}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{16.77}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx598{[14.97, 18.57]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{2.52}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa100\sb100\intbl\qc{dose:2}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{supp}\cell
+\pard\sa0\sb0\intbl\qc{{\i M}}\cell
+\pard\sa0\sb0\intbl\qc{{{\i M}\par}{95% CI\par}[LL, UL]}\cell
+\pard\sa0\sb0\intbl\qc{{\i SD}}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrt\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{OJ}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{26.06}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx598{[24.16, 27.96]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{2.66}\cell
+\row
+}
+{
+\trowd \trgaph100
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx2051 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx2915 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx4626 
+\clbrdrb\brdrw15\brdrs
+\clvertalc\cellx5490 
+\pard\sa0\sb0\intbl\qr{VC}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{26.14}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx598{[22.71, 29.57]}\cell
+\pard\sa0\sb0\intbl\tqdec\tldot\tx302{4.80}\cell
+\row
+}
+{\pard \par}{\pard{\i Note.} {\i M} and {\i SD} represent mean and standard deviation, respectively. {\i LL} and {\i UL} indicate the lower and upper limits of the 95% confidence interval for the mean, respectively. The confidence interval is a plausible range of population means that could have created a sample mean (Cumming, 2014).\par}
+}

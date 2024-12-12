@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 6: PY 0794 - Advanced Quantitative Research Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <script src="libs/d3-3.3.8/d3.min.js"></script>
+    <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
+    <link href="libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
+    <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
+    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+    <script src="libs/chromatography-0.1/chromatography.js"></script>
+    <script src="libs/DiagrammeR-binding-1.0.10/DiagrammeR.js"></script>
+    <script src="libs/viz-1.8.2/viz.js"></script>
+    <script src="libs/grViz-binding-1.0.10/grViz.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Lecture 6: PY 0794 - Advanced Quantitative Research Methods
+]
+.author[
+### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
+]
+.date[
+### 2024-01-15 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
+
+---
+
+
+
+
+## PY0794: Advanced Quantitative research methods.
+* Last lecture: Moderation effects. two-way ANOVA
+* Today: Mediation
+
+---
+## Goals (today)
+ 
+ Diagrams
+ 
+ Mediation: Many ways of reaching the same goal... .
+
+&lt;img src="https://media.giphy.com/media/YOAS9D27FLCQznt1tR/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Assignment
+
+After today you should be able to complete the following sections for Assignment II:
+
+ Mediation (Baron / Kenny).
+ 
+ Sobel z  / Preacher &amp; Hayes Method.
+ 
+ Imai, Keele, &amp; Tingley Method.
+
+---
+## What is a mediation?
+
+Any of you ever conducted a mediation test?
+
+What scenarios would a mediation test be useful?
+
+&lt;img src="https://media.giphy.com/media/fVyPPH3Mm8eBb2gsht/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Mediation.
+
+Grown out of path models. 
+
+A --&gt; C
+
+A --&gt; B --&gt; C
+
+We might be especially interested if the relationship between A and C is **fully** explained by B!
+
+---
+## Path models.
+
+Date all the way back to 1921 and [Sewall Wright](http://www.ssc.wisc.edu/soc/class/soc952/Wright/Wright_Correlation%20and%20Causation.pdf).
+
+These are chains of OLS regressions where we can divide the contribution of coefficients (direct, indirect, total). (Note that you should check the assumptions of OLS for each relevant step).
+
+No 'loops' are allowed... .
+
+(More advanced: DAGs -- Directed Acyclic Graphs)
+
+---
+## Causal?
+
+What do you think?
+
+--
+
+Hidden confounders. 
+
+--
+
+Choice of arrows. 
+
+--
+
+Experimental manipulations.
+
+---
+## Drawing Diagrams.
+
+Alternative to Powerpoint.
+
+&lt;img src="https://media.giphy.com/media/Oo6GWyiWEDgtO/giphy.gif" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+## Diagrammer.
+
+```r
+require(DiagrammeR)
+mermaid(" graph LR
+	        A(Age)--&gt;F(Fertility)
+	        A--&gt;O(Cystic ovarian &lt;br&gt; disease)
+	        A--&gt;R(Retained &lt;br&gt; placenta)
+	        R--&gt;O
+	        R--&gt;M(Metritis)
+	        M--&gt;O
+	        O--&gt;F
+	        M--&gt;F
+	        ")
+```
+
+---
+## Plot
+
+<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b3442243166446b6fc43" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-b3442243166446b6fc43">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
+
+---
+## More beautiful...
+
+
+```r
+grViz("
+	digraph causal {	  # Nodes
+	  node [shape = plaintext]
+	  A [label = 'Age']
+	  R [label = 'Retained\n Placenta']
+	  M [label = 'Metritis']
+	  O [label = 'Cystic ovarian\n disease']
+	  F [label = 'Fertility']
+	  # Edges
+	  edge [color = black, arrowhead = vee]
+	  rankdir = LR
+	  A-&gt;F
+	  A-&gt;O
+	  A-&gt;R
+	  R-&gt;O
+	  R-&gt;M
+	  M-&gt;O
+	  O-&gt;F
+	  M-&gt;F
+	  # Graph
+	  graph [overlap = true, fontsize = 10]}")
+```
+
+---
+## Look at the shiny-shiny.
+
+<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-354d457f7cba6fe6ab76" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-354d457f7cba6fe6ab76">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+---
+## Check Diagrammer tutorial
+
+It can make all sorts of flow-charts and diagrams.
+
+Back to mediation ... .
+
+---
+## Beware!
+
+Differing views: Some argue that mediation is only useful when you **experimentally** manipulate the mediator. 
+
+Also beware of sequencing! If you propose something to be a mediator then ideally it should be measured **after** your IV. If you propose complex chains A--&gt;B--&gt;C--&gt;D, then you need to consider the temporal order of A,B,C,D. 
+
+&lt;img src="https://media.giphy.com/media/QHCXq5IsZ4bFS/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Dataset.
+
+Example, simulated data from [here](http://data.library.virginia.edu/introduction-to-mediation-analysis/)
+
+X= grades
+
+Y= happiness
+
+Proposed mediator (M): self-esteem.
+
+
+```r
+# Data can be
+# loaded from here
+# http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv
+D &lt;- read.csv("mediationData.csv")
+Data_med &lt;- D
+```
+
+---
+## Causal steps approach (Baron and Kenny (1986) method).
+
+Three steps to demonstrate existence of mediation. X → Y, X → M, and X + M → Y
+
+Read more [here](http://webcom.upmf-grenoble.fr/LIP/Perso/DMuller/GSERM/Articles/Journal%20of%20Personality%20and%20Social%20Psychology%201986%20Baron.pdf). (as an aside &gt;71,000 citations in Google Scholar).
+
+---
+## Step 1. 
+
+There should be a relationship between X and Y, and the regression coefficient should be significant.
+
+&lt;img src="mediation_step1.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Test of step 1
+
+We find a significant association.
+
+
+```r
+model_1 &lt;- lm(Y ~ X, Data_med)
+summary(model_1)
+```
+
+```
+## 
+## Call:
+## lm(formula = Y ~ X, data = Data_med)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -5.0262 -1.2340 -0.3282  1.5583  5.1622 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   2.8572     0.6932   4.122 7.88e-05 ***
+## X             0.3961     0.1112   3.564 0.000567 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.929 on 98 degrees of freedom
+## Multiple R-squared:  0.1147,	Adjusted R-squared:  0.1057 
+## F-statistic:  12.7 on 1 and 98 DF,  p-value: 0.0005671
+```
+
+---
+## Controversy.
+
+According to Baron &amp; Kenny (1986) if this step is not significant then there can be no mediation, and one should stop here!
+
+However, according to other scholars one could still move forward, if there is a solid theoretical rationale for the relationship between X and Y. Check [this](https://pdfs.semanticscholar.org/e930/616bee242ec451b76f9998d81778042ad449.pdf).
+
+Basically, it is possible that suppression is happening and the mediator is suppressing the relationship between X and Y.
+
+&lt;img src="https://media.giphy.com/media/2vkUwFvCnTEtupTsqu/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Step 2.
+
+The independent variable should also relate to the mediator. If not, then there would be no mediation
+
+&lt;img src="mediation_step2.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Test of step 2.
+
+We also find support for this step... .
+
+
+```r
+model_2 &lt;- lm(M ~ X, Data_med)
+summary(model_2)
+```
+
+```
+## 
+## Call:
+## lm(formula = M ~ X, data = Data_med)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -4.3046 -0.8656  0.1344  1.1344  4.6954 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  1.49952    0.58920   2.545   0.0125 *  
+## X            0.56102    0.09448   5.938 4.39e-08 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.639 on 98 degrees of freedom
+## Multiple R-squared:  0.2646,	Adjusted R-squared:  0.2571 
+## F-statistic: 35.26 on 1 and 98 DF,  p-value: 4.391e-08
+```
+
+---
+## Step 3.
+
+The effect of X should be reduced when we included the mediator.
+
+The B for X should be substantially reduced in size or drop out of significance (but [beware](http://jonathanrenshon.com/Teaching/NPS/ResearchDesign/Gelman-Significance.pdf))
+
+&lt;img src="mediation_step3.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Test of step 3.
+
+
+```r
+model_3 &lt;- lm(Y ~ X + M, Data_med)
+summary(model_3)
+```
+
+```
+## 
+## Call:
+## lm(formula = Y ~ X + M, data = Data_med)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -3.7631 -1.2393  0.0308  1.0832  4.0055 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   1.9043     0.6055   3.145   0.0022 ** 
+## X             0.0396     0.1096   0.361   0.7187    
+## M             0.6355     0.1005   6.321 7.92e-09 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 1.631 on 97 degrees of freedom
+## Multiple R-squared:  0.373,	Adjusted R-squared:  0.3601 
+## F-statistic: 28.85 on 2 and 97 DF,  p-value: 1.471e-10
+```
+
+---
+## Conclusion: 3 steps.
+
+The coefficient dropped from .39 to 0.04. (Model 1 to Model 3). It also dropped out of significance. But is this significant in itself? We will return to this when we discuss SEM.
+
+---
+## How would you report it?
+
+Typically researchers would make a diagram as shown and then add the B or `\(\beta\)` coefficients. to it.
+
+For example: 
+
+&lt;img src="mediation_example.gif" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+## Try it yourself.
+
+Download your dataset from  [here](https://stats.idre.ucla.edu/wp-content/uploads/2016/02/mediation_data.sav). You might need right click and save as.
+
+Conduct a causal steps mediation analysis, with 'math' as independent variable, 'read' as mediator and 'science' as outcome variable.
+
+&lt;img src="https://media.giphy.com/media/jo7xZ9T1fAgwg/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Testing significance of the mediation.
+
+Many ways to assess if the mediation is significant. 
+
+Older models use [Sobel test](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.452.5935&amp;rep=rep1&amp;type=pdf). The Sobel test is also known as the 'product' moment approach. (Multiplication of paths). You can read also more [here](https://umassmed.edu/uploadedFiles/QHS/MacKinnonetal%20PM2002.pdf). There are also alternatives (Goodman / Aroian test).
+
+Recommendation is bootstrapping methods. One method is Preacher &amp; Hayes (2004),... .
+
+---
+## Sobel test
+
+
+```r
+require(bda)
+# reload (note that
+# Rmarkdown is
+# forgetful, so you
+# might want to
+# reload the data)
+Data_med &lt;- read.csv("mediationData.csv")
+mediation.test(Data_med$M,
+    Data_med$X, Data_med$Y)
+```
+
+```
+##                Sobel       Aroian      Goodman
+## z.value 4.327891e+00 4.299405e+00 4.356951e+00
+## p.value 1.505439e-05 1.712572e-05 1.318868e-05
+```
+
+---
+## Sample write up.
+
+A Sobel _z_ test showed that the mediation effect reported in Fig. X was significant (Sobel _z_= 4.33, _p_&lt;.0001). 
+
+---
+## Three measures.
+
+Slight differences in calculation.
+
+Some recommend [Aroian](http://imaging.mrc-cbu.cam.ac.uk/statswiki/FAQ/SobelTest). (I am largely indifferent, and have mostly used Sobel in my previous work).
+
+Downside measures only work well in 'large' samples (opinions vary as to what large is, perhaps &gt;100 - but when in doubt use different method). 
+
+Bootstrapping to the rescue!
+
+---
+## Mediation 
+
+Here we use 10,000 bootstraps. The std=T command ensures standardization.
+
+
+```r
+require(psych)
+mediationmodel1 &lt;- mediate(Y ~ X + (M), std = TRUE,
+    data = Data_med, n.iter = 10000, plot = F)
+```
+
+---
+## Output
+
+Exported the results. sink() command.
+
+
+```r
+sink("mediation.txt")
+mediationmodel1
+sink()
+```
+
+
+```
+## 
+## Mediation/Moderation Analysis 
+## Call: mediate(y = Y ~ X + (M), data = Data_med, n.iter = 10000, std = TRUE, 
+##     plot = F)
+## 
+## The DV (Y) was  Y . The IV (X) was  X . The mediating variable(s) =  M .
+## 
+## Total effect(c) of  X  on  Y  =  0.34   S.E. =  0.1  t  =  3.56  df=  98   with p =  0.00057
+## Direct effect (c') of  X  on  Y  removing  M  =  0.03   S.E. =  0.09  t  =  0.36  df=  97   with p =  0.72
+## Indirect effect (ab) of  X  on  Y  through  M   =  0.3 
+## Mean bootstrapped indirect effect =  0.3  with standard error =  0.06  Lower CI =  0.2    Upper CI =  0.43
+## R = 0.61 R2 = 0.37   F = 28.85 on 2 and 97 DF   p-value:  2.02e-13 
+## 
+##  To see the longer output, specify short = FALSE in the print statement or ask for the summary
+```
+
+---
+## Result
+
+Click [here](https://tvpollet.github.io/PY_0782/mediation.txt)
+
+Sample write up:
+
+A mediation model with 10,000 bootstraps indicated that the indirect path was significant, `\(\beta\)`= .3, SE = .06, 95% CI [.19, .43].
+
+You could add the package which produced this.
+
+---
+## Plot.
+
+
+```r
+setEPS()
+postscript("path.eps", horizontal = FALSE, onefile = FALSE, paper = "special")
+par(mar=c(1,1,1,1))
+mediate.diagram(mediationmodel1)
+dev.off
+```
+
+&lt;img src="https://tvpollet.github.io/PY_0782/path.png" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Try it yourself.
+
+Conduct either a Sobel test _or_ a bootstrapping test for the mediation you just did.
+
+---
+## Other method: 'mediate' package.
+
+Based on [this paper](https://pdfs.semanticscholar.org/2d61/1458f70a315dec999cd044def11b28920a0b.pdf).
+
+Long story short, this is a newer and perhaps better method.
+
+&lt;img src="https://media.giphy.com/media/dZFSFnniLOXZQvkkd5/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Mediate
+
+
+```r
+require(mediation)
+med.fit &lt;- lm(M ~ X, data = Data_med)
+out.fit &lt;- lm(Y ~ X + M, data = Data_med)
+# Robust SE is ignored for Bootstrap. Otherwise
+# omit boot=TRUE.
+set.seed(1984)
+med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M",
+    boot = TRUE, sims = 10000)
+```
+
+---
+## Results
+
+
+```r
+summary(med.out)
+```
+
+```
+## 
+## Causal Mediation Analysis 
+## 
+## Nonparametric Bootstrap Confidence Intervals with the Percentile Method
+## 
+##                Estimate 95% CI Lower 95% CI Upper p-value    
+## ACME             0.3565       0.2145         0.53  &lt;2e-16 ***
+## ADE              0.0396      -0.2027         0.29   0.748    
+## Total Effect     0.3961       0.1589         0.64   0.001 ***
+## Prop. Mediated   0.9000       0.4900         2.08   0.001 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Sample Size Used: 100 
+## 
+## 
+## Simulations: 10000
+```
+
+---
+## Summary
+
+The mediation analysis showed a significant average causal mediation effect (ACME): 0.36, 95%CI [0.21, 0.53], but the average direct effect (ADE) was not significant .04, 95%CI [-0.20, 0.29].
+
+---
+## Plot
+
+
+```r
+plot(med.out) 
+```
+
+&lt;img src="Lecture6_xaringan_files/figure-html/plot-1.png" width="450" height="450" /&gt;
+
+---
+## Sensitivity analysis
+
+'The sequential ignorability assumption must be satisfied in order to identify the
+average mediation effects. This key assumption implies that the treatment assignment
+is essentially random after adjusting for observed pre-treatment covariates
+and that the assignment of mediator values is also essentially random once both
+observed treatment and the same set of observed pre-treatment covariates are
+adjusted for.’ (Imai et al., 2011, pp. 863–864)
+
+Simply put: no hidden or unmeasured confounder(s), accounting for what we find!
+
+---
+## Sensitivity parameter
+
+Simply put, the sensitivity parameter corresponds to the correlation between errors in the step 2 and step 3 regression equations in Baron &amp; Kenny's terms.
+
+It is assumed to be 0.
+
+This parameter is denoted by `\(\rho\)`. 
+
+Under sequential ignorability, `\(\rho\)` is equal to zero and thus the magnitude of this correlation coefficient represents the departure from the ignorability assumption (about the mediator).
+
+---
+## How to test it?
+
+
+```r
+sensitivity_analysis&lt;-medsens(med.out, rho.by = 0.05) 
+summary(sensitivity_analysis)
+```
+
+```
+## 
+## Mediation Sensitivity Analysis for Average Causal Mediation Effect
+## 
+## Sensitivity Region
+## 
+##       Rho    ACME 95% CI Lower 95% CI Upper R^2_M*R^2_Y* R^2_M~R^2_Y~
+## [1,] 0.40  0.1141      -0.0016       0.2297       0.1600       0.0738
+## [2,] 0.45  0.0766      -0.0357       0.1889       0.2025       0.0934
+## [3,] 0.50  0.0358      -0.0742       0.1459       0.2500       0.1153
+## [4,] 0.55 -0.0093      -0.1187       0.1002       0.3025       0.1395
+## [5,] 0.60 -0.0601      -0.1713       0.0511       0.3600       0.1660
+## 
+## Rho at which ACME = 0: 0.55
+## R^2_M*R^2_Y* at which ACME = 0: 0.3025
+## R^2_M~R^2_Y~ at which ACME = 0: 0.1395
+```
+
+---
+## Interpretation
+
+`\(R^2_M*R^2_Y\)` the proportion of the _previously unexplained variance_ in the mediator and outcome variables is required to be explained by an unobservable pretreatment confounder in order to render a mediation of 0.
+
+`\(\widetilde{R^2_M}\widetilde{R^2_Y}\)`: How much  of the proportion of the _original_ variance explained by an unobserved confounder is required to render a mediation effect of 0?
+
+--&gt; 0.1395 . Depending on where you stand that's substantial or not.
+
+---
+## Critique
+
+Many models could fit, no evaluation in terms of absolute fit. Perhaps, a model with several main effects also fits the data well. We will return to this when we discuss SEM.
+
+When fitting multiple mediators, those will be averaged! So, there could be a scenario where one is important but another one is not.
+
+&lt;img src="https://media.giphy.com/media/l4q819XpZi0SyAfXW/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Exercise
+
+Download the data 'PSE_MOL_Doors.sav', these are the data from an experiment by Kamila Irvine and Piers Cornelissen. This file contains data on 95 women performing various scales and body image-related tasks. doors_front is the score from a gap estimation task, w_dn is the actual gap a participant can pass through. The (estimated) Point of subjective equality or PSE (the BMI they believe themselves to be) when viewing an imageset varying in BMI. Participants used the method of adjustment to estimate their body size with the same stimulus set as for the yes-no task (MOL).  BMI is the participant's actual BMI.
+
+Test the mediation model: doors_front --&gt; PSE --&gt; BMI via the causal steps method by Baron &amp; Kenny. Report as you would do in a paper.
+
+Make a diagram. (use 'mediate')
+
+---
+## Exercise (cont'd)
+
+Calculate a Sobel _z_ test and report.
+
+Test the mediation via Preacher &amp; Hayes method.
+
+Now test a mediation model with 2 mediators (PSE and MOL) but with the same independent and dependent variables.
+
+Export a figure for that mediation model.
+
+Test the mediation via Imai et al.'s method.
+
+BONUS: perform the sensitivity analysis via Imai et al.'s method.
+
+---
+## References (and further reading.) 
+
+Also check the reading list! (many more than listed here)
+
+* Kim, B. (2016). Introduction to Mediation Analysis http://data.library.virginia.edu/introduction-to-mediation-analysis/
+* Hayes, A. F. (2013). _Introduction to Mediation, Moderation and Conditional Process Analysis._ Guilford Press.
+* Imai, K., Keele, L., &amp; Tingley, D. (2011). A general approach to causal mediation analysis. _Psychological Methods, 15(4)_, 309–334. https://doi.org/10.1037/a0020761
+* Pearl, J. (2009). _Causality_. Cambridge university press.
+* Sobel, M. E. (1982). Asymptotic Confidence Intervals for Indirect Effects in Structural Equation Models. _Sociological Methodology, 13_, 290. https://doi.org/10.2307/270723
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

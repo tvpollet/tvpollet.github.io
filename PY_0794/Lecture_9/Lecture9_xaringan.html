@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 9: PY 0794 - Advanced Quantitative Research Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/viz/viz.js"></script>
+    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="libs/grViz-binding/grViz.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Lecture 9: PY 0794 - Advanced Quantitative Research Methods
+]
+.author[
+### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
+]
+.date[
+### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
+
+---
+
+
+
+
+
+
+
+
+## PY0794: Advanced Quantitative research methods.
+
+* Last lecture: CFA via SEM
+* Today: Mediation via SEM (+ dplyr exercise)
+
+---
+## Assignment
+
+After today you should be able to complete the following sections for Assignment II:
+
+ Mediation via SEM. (getting close to the end, hurray!)
+
+---
+## Reminder Mediation.
+
+'Causal' paths approach.
+
+Sequence of regressions.
+
+&lt;img src="http://journals.plos.org/plosone/article/figure/image?size=medium&amp;id=info:doi/10.1371/journal.pone.0008775.g009" width="450px" style="display: block; margin: auto;" /&gt;
+
+---
+## Why is this useful again?
+
+&lt;img src="https://memegenerator.net/img/images/600x600/12294978/afraid-to-ask-andy.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Back to our hypothetical example.
+
+We already did mediations in week 6 with a hypothetical dataset (and with body image data if you completed the exercise!)
+
+Do you remember the methods you used?
+
+&lt;img src="https://media.giphy.com/media/3o6ZtmNGebTwduYJH2/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Dataset.
+
+Example, simulated data from [here](http://data.library.virginia.edu/introduction-to-mediation-analysis/). Right click [here](http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv).
+
+X= grades
+
+Y= happiness
+
+Proposed mediator (M): self-esteem.
+
+
+```r
+# Long string.
+D&lt;- read.csv('mediationData.csv') # redundant
+Data_med&lt;-D
+```
+
+---
+## Lavaan
+
+
+```r
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture9")
+require(lavaan)
+mediationmodelSEM &lt;- ' # direct effect
+             Y ~ c*X
+           # mediator
+             M ~ a*X
+             Y ~ b*M
+           # indirect effect (a*b)
+             ab := a*b
+           # total effect
+             total := c + (a*b)
+         '
+```
+
+---
+## Model
+
+
+```r
+fit_mediationSEM &lt;- sem(mediationmodelSEM, se="bootstrap", data = Data_med)
+sink(file="SEM-mediation.txt")
+summary(fit_mediationSEM, standardized=TRUE, fit.measures=T)
+```
+
+```
+## lavaan 0.6-12 ended normally after 1 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         5
+## 
+##   Number of observations                           100
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                                77.413
+##   Degrees of freedom                                 3
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -379.612
+##   Loglikelihood unrestricted model (H1)       -379.612
+##                                                       
+##   Akaike (AIC)                                 769.225
+##   Bayesian (BIC)                               782.250
+##   Sample-size adjusted Bayesian (BIC)          766.459
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value RMSEA &lt;= 0.05                             NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   Y ~                                                                   
+##     X          (c)    0.040    0.126    0.314    0.753    0.040    0.034
+##   M ~                                                                   
+##     X          (a)    0.561    0.099    5.642    0.000    0.561    0.514
+##   Y ~                                                                   
+##     M          (b)    0.635    0.102    6.216    0.000    0.635    0.593
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##    .Y                 2.581    0.326    7.916    0.000    2.581    0.627
+##    .M                 2.633    0.366    7.191    0.000    2.633    0.735
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##     ab                0.357    0.080    4.473    0.000    0.357    0.305
+##     total             0.396    0.125    3.161    0.002    0.396    0.339
+```
+
+```r
+sink()
+```
+
+---
+## Comparison to other methods.
+
+How does that compare to the other method?
+
+
+```r
+require(mediation)
+med.fit&lt;-lm(M~X, data=Data_med)
+out.fit&lt;-lm(Y~X+M, data=Data_med)
+# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+set.seed(1984)
+med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
+```
+
+---
+## Summary.
+
+
+```r
+summary(med.out)
+```
+
+```
+## 
+## Causal Mediation Analysis 
+## 
+## Nonparametric Bootstrap Confidence Intervals with the Percentile Method
+## 
+##                Estimate 95% CI Lower 95% CI Upper p-value    
+## ACME             0.3565       0.2145         0.53  &lt;2e-16 ***
+## ADE              0.0396      -0.2027         0.29   0.748    
+## Total Effect     0.3961       0.1589         0.64   0.001 ***
+## Prop. Mediated   0.9000       0.4900         2.08   0.001 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Sample Size Used: 100 
+## 
+## 
+## Simulations: 10000
+```
+
+---
+## What are the benefits?
+
+Comparison to other pre-specified models!
+
+We can use model fit statistics to compare models
+
+Also, easier if we have multiple mediators and even latent constructs.
+
+---
+## Model with just direct effects.
+
+
+```r
+require(lavaan)
+directmodelSEM &lt;- ' # just direct effects
+                    Y ~ c*X+b*M '
+```
+
+---
+## Direct model
+
+
+```r
+fit_directSEM &lt;- sem(directmodelSEM, se="bootstrap", data = Data_med)
+sink(file="SEM-direct.txt")
+summary(fit_directSEM, standardized=TRUE, fit.measures=T)
+```
+
+```
+## lavaan 0.6-12 ended normally after 1 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                         3
+## 
+##   Number of observations                           100
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 0.000
+##   Degrees of freedom                                 0
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                                46.681
+##   Degrees of freedom                                 2
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       1.000
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)               -189.311
+##   Loglikelihood unrestricted model (H1)       -189.311
+##                                                       
+##   Akaike (AIC)                                 384.622
+##   Bayesian (BIC)                               392.437
+##   Sample-size adjusted Bayesian (BIC)          382.963
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.000
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.000
+##   P-value RMSEA &lt;= 0.05                             NA
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.000
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                            Bootstrap
+##   Number of requested bootstrap draws             1000
+##   Number of successful bootstrap draws            1000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##   Y ~                                                                   
+##     X          (c)    0.040    0.123    0.322    0.747    0.040    0.034
+##     M          (b)    0.635    0.100    6.351    0.000    0.635    0.593
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
+##    .Y                 2.581    0.339    7.625    0.000    2.581    0.627
+```
+
+```r
+sink()
+```
+
+---
+## How to fool yourself with SEM...
+
+Kline lists 50 (!) ways in which you can fool yourself in his SEM book.
+
+Sample Size: you need large sample. A simple model already requires large amounts of data.
+
+Poor data / Making something out of nothing: If there are no baseline correlations --&gt; SEM won't help.
+
+Naming a latent variable doesn't mean it exists... .
+
+---
+## How to fool yourself with SEM: the saga continues.
+
+Ignoring warnings - some are safe to ignore but often they tell you something meaningful (for example, you are building something nonsensical)
+
+Ignoring practical significance. One can build a model that fits the data closely, but does not explain a whole lot of variance (also note: statistical significance is not the same as clinical or biological significance!).
+
+&lt;img src="https://media.giphy.com/media/12dA9Gei6U4in6/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Visualisations: Make a nice diagram...
+
+LavaanPlot relies on diagrammer.
+
+
+```r
+require(lavaanPlot)
+lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+```
+
+<div id="htmlwidget-85e8a5b03f17fcb0109c" style="width:576px;height:252px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-85e8a5b03f17fcb0109c">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+---
+## But it is not the way we want.
+
+You can further improve on this. Check diagrammer.
+
+
+```r
+require(lavaanPlot)
+labels&lt;- list(X="independent", M="mediator", Y="dependent")
+lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), labels=labels, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+```
+
+<div id="htmlwidget-d76cbcf08f17dbb4de3d" style="width:576px;height:252px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d76cbcf08f17dbb4de3d">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+
+---
+## Make a plot with the estimates.
+
+
+```r
+require(semPlot)
+labels2&lt;- list("Dependent", "Mediator", "Independent") # need to reorganize.
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "ram", nodeLabels = labels2)
+```
+
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
+
+---
+## Make the line visible... .
+
+
+```r
+# Lisrel.
+require(semPlot)
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "lisrel", curvePivot = TRUE, fade=FALSE, nodeLabels = labels2)
+```
+
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
+
+---
+## alternative route.
+
+Check [this package](http://rstudio-pubs-static.s3.amazonaws.com/200846_3a7fb7a163314ccd94c3e0a93e46b71b.html) but requires rJava (which does not always play nice with a Mac).
+
+&lt;img src="https://media.giphy.com/media/U3z5fUwWra3EA/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Back to the future.
+
+Data wrangling might still be hard for some of you.
+
+--&gt; Back to dplyr?
+
+
+&lt;img src="https://media.giphy.com/media/HlxtTSOAD2Kc0/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Some further 'dplyr' exercises and useful functions... .
+
+Install the 'tidyverse' package, load the dataset 'mtcars' from the datasets
+
+Load the mtcars dataset.
+
+---
+## Exercise.
+
+1. Calculate a summary table which has the mean/SD of the horse power variable organized by number of gears. (Bonus: export it to .html or Word.)
+
+2. Make a new dataframe called my_cars which contains the columns mpg, hp columns but let the column names be miles_per_gallon and horse_power respectively.
+
+3. Create a new variable in the dataframe called km_per_litre using the mutate function. Note: 1 mpg = 0.425 km/l .
+
+4. Look at the sample_frac() function. Use it to make a new dataframe with a random selection of half the data.
+
+5. Look at the slice function. From the original dataframe select rows 10 to 35.
+
+6. Look at the tibble package and the rownames_to_column function. Make a dataset with just the "Lotus Europa" model. What would be an alternative way of reaching the same goal?
+
+---
+## Solution.
+
+When you are done you can evaluate your results [here](https://tvpollet.github.io/PY_0794/Lecture_9/Exercise_in_class9.html).
+
+---
+## Back to SEM.
+
+Thus far: pretty basic.
+
+We can build more complex models. Also note that SEM can be a useful alternative for multilevel models. (They are actually quite [similar](https://www.ncbi.nlm.nih.gov/pubmed/26777445)).
+
+---
+## Back to SEM: Wheaton data.
+
+Wheaton (1977) "used longitudinal data to develop a model of the stability of alienation from 1967 to 1971, accounting for socioeconomic status as a covariate. Each of the three factors have two indicator variables, SES in 1966 is measured by education and occupational status in 1966 and alienation in both years is measured by powerlessness and anomie (a feeling of being lost with regard to society). The structural component of the model hypothesizes that SES in 1966 influences both alienation in 1967 and 1971 and alienation in 1967 influences the same measure in 1971. We also let the disturbances correlate from one time point to the next." from [here](https://m-clark.github.io/sem/sem.html).
+
+---
+## Make covariance matrix.
+
+We can do SEM based on correlation and covariance matrix!
+
+First make your covariance matrix.
+
+
+```r
+lower &lt;- '
+ 11.834,
+  6.947,    9.364,
+  6.819,    5.091,   12.532,
+  4.783,    5.028,    7.495,    9.986,
+ -3.839,   -3.889,   -3.841,   -3.625,   9.610,
+-21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 '
+
+# convert to a full symmetric covariance matrix with names
+wheaton.cov &lt;- getCov(lower, names=c("anomia67","powerless67", "anomia71",
+                                     "powerless71","education","sei"))
+```
+
+---
+## The model we are trying to build.
+
+&lt;img src="https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png" width="500px" style="display: block; margin: auto;" /&gt;
+
+---
+## Question?
+
+This model brings which 2 aspects of SEM together?
+
+&lt;img src="https://media.giphy.com/media/3oEv4NalYUxl6/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Build the model.
+
+
+```r
+require(lavaan)
+# the model
+wheaton.model = '
+  # measurement model
+    ses     =~ education + sei
+    alien67 =~ anomia67 + powerless67
+    alien71 =~ anomia71 + powerless71
+ 
+  # structural model
+    alien71 ~ aa*alien67 + ses
+    alien67 ~ sa*ses
+ 
+  # correlated residuals
+    anomia67 ~~ anomia71
+    powerless67 ~~ powerless71
+
+  # Indirect effect
+    IndirectEffect := sa*aa
+'
+```
+
+---
+## What is missing in the diagram?
+
+&lt;img src="https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Fit the model.
+
+
+
+```r
+require(lavaan)
+alienation &lt;- sem(wheaton.model, sample.cov=wheaton.cov, sample.nobs=932)
+sink(file='summary_alienation.txt')
+summary(alienation, fit.measures=T)
+```
+
+```
+## lavaan 0.6-12 ended normally after 84 iterations
+## 
+##   Estimator                                         ML
+##   Optimization method                           NLMINB
+##   Number of model parameters                        17
+## 
+##   Number of observations                           932
+## 
+## Model Test User Model:
+##                                                       
+##   Test statistic                                 4.735
+##   Degrees of freedom                                 4
+##   P-value (Chi-square)                           0.316
+## 
+## Model Test Baseline Model:
+## 
+##   Test statistic                              2133.722
+##   Degrees of freedom                                15
+##   P-value                                        0.000
+## 
+## User Model versus Baseline Model:
+## 
+##   Comparative Fit Index (CFI)                    1.000
+##   Tucker-Lewis Index (TLI)                       0.999
+## 
+## Loglikelihood and Information Criteria:
+## 
+##   Loglikelihood user model (H0)             -15213.274
+##   Loglikelihood unrestricted model (H1)     -15210.906
+##                                                       
+##   Akaike (AIC)                               30460.548
+##   Bayesian (BIC)                             30542.783
+##   Sample-size adjusted Bayesian (BIC)        30488.792
+## 
+## Root Mean Square Error of Approximation:
+## 
+##   RMSEA                                          0.014
+##   90 Percent confidence interval - lower         0.000
+##   90 Percent confidence interval - upper         0.053
+##   P-value RMSEA &lt;= 0.05                          0.930
+## 
+## Standardized Root Mean Square Residual:
+## 
+##   SRMR                                           0.007
+## 
+## Parameter Estimates:
+## 
+##   Standard errors                             Standard
+##   Information                                 Expected
+##   Information saturated (h1) model          Structured
+## 
+## Latent Variables:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##   ses =~                                              
+##     education         1.000                           
+##     sei               5.219    0.422   12.364    0.000
+##   alien67 =~                                          
+##     anomia67          1.000                           
+##     powerless67       0.979    0.062   15.895    0.000
+##   alien71 =~                                          
+##     anomia71          1.000                           
+##     powerless71       0.922    0.059   15.498    0.000
+## 
+## Regressions:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##   alien71 ~                                           
+##     alien67   (aa)    0.607    0.051   11.898    0.000
+##     ses              -0.227    0.052   -4.334    0.000
+##   alien67 ~                                           
+##     ses       (sa)   -0.575    0.056  -10.195    0.000
+## 
+## Covariances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##  .anomia67 ~~                                         
+##    .anomia71          1.623    0.314    5.176    0.000
+##  .powerless67 ~~                                      
+##    .powerless71       0.339    0.261    1.298    0.194
+## 
+## Variances:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##    .education         2.801    0.507    5.525    0.000
+##    .sei             264.597   18.126   14.597    0.000
+##    .anomia67          4.731    0.453   10.441    0.000
+##    .powerless67       2.563    0.403    6.359    0.000
+##    .anomia71          4.399    0.515    8.542    0.000
+##    .powerless71       3.070    0.434    7.070    0.000
+##     ses               6.798    0.649   10.475    0.000
+##    .alien67           4.841    0.467   10.359    0.000
+##    .alien71           4.083    0.404   10.104    0.000
+## 
+## Defined Parameters:
+##                    Estimate  Std.Err  z-value  P(&gt;|z|)
+##     IndirectEffect   -0.349    0.041   -8.538    0.000
+```
+
+```r
+sink()
+```
+
+---
+## Semplot
+
+
+```r
+require(semPlot)
+require(qgraph)
+semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
+```
+
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## Try it yourself.
+
+What happens if you remove the arrow between "Alien67" and "Alien71"? (Compare the fit indices and make a plot)
+
+What happens if you remove the correlated residuals?
+
+---
+## Exercise
+
+Use the following code below to generate a correlation matrix to use (you'll need to load lavaan).
+
+The data comes from this [paper](https://web.archive.org/web/20220718192446/https://core.ecu.edu/wuenschk/Articles/JSB&amp;P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
+
+
+```r
+require(lavaan)
+data&lt;-lav_matrix_lower2full(c(1,.47,1,.66,.50,1,.77,.41,.46,1,.52,.38,.50,.50,1))
+rownames(data)&lt;-colnames(data)&lt;-c("att",'sn','pbc','int','beh') # a matrix.
+```
+
+---
+## Exercise (cont'd)
+
+Reconstruct the model from the article. (Note that there are no (!) latent variables)
+
+Discuss the fit. Make a sem plot.
+
+What happens when you remove the indirect path?
+
+---
+## References (and further reading.) 
+
+Also check the reading list! (many more than listed here)
+
+* Clark, M. (2017). SEM, Graphical and Latent Variable Modeling, [https://m-clark.github.io/sem/sem.html](https://m-clark.github.io/sem/sem.html)
+
+* Rosseel, Y. (2017). Lavaan. [http://lavaan.ugent.be/index.html](http://lavaan.ugent.be/index.html)
+
+* PSU (Adapted from Jenny Bryan) (2019). dplyr exercises [https://psu-psychology.github.io/r-bootcamp-2019/talks/bryan_dplyr_exercises.html](https://psu-psychology.github.io/r-bootcamp-2019/talks/bryan_dplyr_exercises.html)
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

@@ -1,0 +1,132 @@
+---
+title: 'Intro : PY 0794 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+  xaringan::moon_reader:
+    css: ["default", "default-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r echo=F, message=F, warning = F}
+require(xaringanExtra) 
+require(stargazer)
+require(tidyverse)
+require(knitr)
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+## PY0794: Advanced Quantitative research methods.
+
+* Change introduced a couple of years ago.
+
+--
+
+* Worksheets to provide you additional support.
+
+--
+
+* Class time focused on practice.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/14afmHqKZ3ctsk/giphy.gif")
+```
+
+---
+## Some reassurance.
+
+* Statistics is hard, no way around it. This course is about applying it.
+
+--
+
+* You will be challenged - as most of you will not have had any engagement in programming.
+
+--
+
+* If you engage, make the exercises, you will be alright! The worst thing: stop engaging.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/lPHxZqqE1n6Fy/giphy.gif")
+```
+
+---
+## Housekeeping
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://imageserve.babycenter.com/4/000/366/LDQDRyAQRh8cmTkhyi7PbAPh3JwqubPo_lg.jpg")
+```
+
+ Course manual.
+ 
+ Reading list.
+ 
+ Attendance. / Be punctual. / Be engaged.
+ 
+ Exercise after each lecture. Keep up!
+ 
+ Appointment via: thomas.pollet@northumbria.ac.uk
+
+---
+## Assignments
+
+The bit you care about most: marks. 
+
+--
+
+ 30% each (remaining 40% Qual. components)
+ 
+ Deadlines: see Turnitin briefs (1pm) / MRes. Handbook.
+ 
+ Graded via rubrics
+ 
+ Empty .rmd shell which you will turn into a .pdf
+ 
+ Screenshot + .pdf + .rmd
+
+---
+## Assignments (bis)
+
+ Complete the exercises in class (+ any bonus), you can find them under 'Learning resources'.
+ 
+ Questions via elearning environment, _but_ only if you attempted the corresponding exercise.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://s-media-cache-ak0.pinimg.com/originals/25/d4/7c/25d47c93e8e3f3a8b15657162e00c069.jpg")
+```
+
+---
+## Today.
+
+- Who has installed Rstudio + R?
+
+--
+
+- Who has completed the preparation?
+
+--
+
+- Group allocation.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/ZF80fJYbcmLrL2X4tL/giphy.gif")
+```
+
+
+---
+## Acknowledgments.
+
+These slides were built with [xaringan](https://github.com/yihui/xaringan).
+
+
+
+
+
+
+

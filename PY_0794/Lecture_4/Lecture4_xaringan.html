@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Lecture 4: PY 0794 - Advanced Quantitative Research Methods</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Lecture 4: PY 0794 - Advanced Quantitative Research Methods
+]
+.author[
+### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
+]
+.date[
+### 2024-03-19 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+]
+
+---
+
+
+
+
+
+
+
+
+## PY0794: Advanced Quantitative research methods.
+* Last week: ANOVA and its associated nightmares.
+* Today all correlation and regression.
+
+(ANOVA will return next week!)
+
+---
+## Goals (today)
+ Correlation and ordinary least squares (OLS) regression
+
+ Assumptions underpinning regression
+
+ Logistic regression.
+
+---
+## Assignment
+
+After today you should be able to complete the following sections:
+
+ Correlation
+
+ OLS Regression / assumptions.
+
+ Plots.
+
+ Logistic regression
+
+---
+## (Pearson) Correlation
+ 
+ A correlation is mostly the first step. 
+ 
+ You want to find out the strength of an association
+
+&lt;img src="https://media.giphy.com/media/B1vrzEi8cuFW/giphy.gif" width="300px" /&gt;
+
+---
+## Formula (for your reference)
+
+Sample correlation coefficient. These are the formulae.
+
+`\(r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}\)`
+
+is equivalent to
+
+`\(r = \frac{cov (x,y)}{\sqrt{var(x)*var(y)}}\)`
+
+&lt;img src="https://media.giphy.com/media/ne3xrYlWtQFtC/giphy.gif" width="300px" /&gt;
+
+---
+## Correlation.
+
+Covariance divided by the geometric mean of variances.
+
+Read back your notes or check [here](https://www.sheffield.ac.uk/polopoly_fs/1.43991!/file/Tutorial-14-correlation.pdf)
+
+---
+## Assumptions.
+
+levels of measurement: continuous. (Alternative: ordinal correlations)
+
+normality (outliers)
+
+homoscedasticity
+
+linearity (Think back of [Anscombe's quartet](https://www.r-bloggers.com/using-and-abusing-data-visualization-anscombes-quartet-and-cheating-bonferroni/))
+
+---
+## Population versus sample.
+
+Note that if you have sampled the entire population, then there is no probability!
+
+Particular pet peeve of [mine](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00734/full).
+
+---
+## Remember.
+
+ Correlation is not causation (but some work in computing science, can infer this in basic associations!)
+ 
+ Check [this](http://www.tylervigen.com/spurious-correlations)
+ 
+&lt;img src="https://media.giphy.com/media/Kx0YtQsusXfvq/giphy.gif" width="300px" /&gt;
+
+---
+## Correlation.
+
+
+```r
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture4")
+require(datasets)
+iris&lt;-iris # not really necessary but typically good to store away
+cor(iris[1],iris[2]) # Correlation.
+```
+
+```
+##              Sepal.Width
+## Sepal.Length  -0.1175698
+```
+
+```r
+cor(iris$Sepal.Length, iris$Sepal.Width)
+```
+
+```
+## [1] -0.1175698
+```
+
+```r
+# also change methods Kendall / Spearman. 
+cor(iris[1],iris[2], method='kendall')
+```
+
+```
+##              Sepal.Width
+## Sepal.Length -0.07699679
+```
+
+---
+## Significance test.
+
+
+```r
+# custom confidence interval 90%
+cor.test(iris$Sepal.Length, iris$Sepal.Width, conf.level = .90)
+```
+
+```
+## 
+## 	Pearson's product-moment correlation
+## 
+## data:  iris$Sepal.Length and iris$Sepal.Width
+## t = -1.4403, df = 148, p-value = 0.1519
+## alternative hypothesis: true correlation is not equal to 0
+## 90 percent confidence interval:
+##  -0.24846981  0.01754741
+## sample estimates:
+##        cor 
+## -0.1175698
+```
+
+---
+## Sample write up
+
+The Pearson correlation between sepal length and sepal width was not statistically significant (_r_(148)= -.12, _p_=.15).
+
+
+&lt;img src="https://media.giphy.com/media/CQDF0q4pffDW0/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Make a pretty chart.
+
+
+```r
+require(ggplot2) # note geom_jitter
+require(ggthemes)
+require(RColorBrewer)
+gg&lt;-ggplot(data = iris,aes(Sepal.Width, Sepal.Length, color=Species)) + geom_jitter()
+gg&lt;- gg + facet_grid(. ~ Species) + geom_smooth(method='lm') 
+gg&lt;- gg + scale_colour_brewer(palette = "Dark2")
+gg &lt;- gg + labs(x="Sepal Width", y="Sepal Length", title="Sepals") + theme_tufte(12) 
+gg
+```
+
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-8-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Correlation matrix
+
+
+```r
+require(apaTables)
+require(dplyr)
+cor_table&lt;-dplyr::select(iris,-Species)
+apa.cor.table(cor_table, filename = "correlations-iris.doc")
+```
+
+```
+## 
+## 
+## Means, standard deviations, and correlations with confidence intervals
+##  
+## 
+##   Variable        M    SD   1           2            3         
+##   1. Sepal.Length 5.84 0.83                                    
+##                                                                
+##   2. Sepal.Width  3.06 0.44 -.12                               
+##                             [-.27, .04]                        
+##                                                                
+##   3. Petal.Length 3.76 1.77 .87**       -.43**                 
+##                             [.83, .91]  [-.55, -.29]           
+##                                                                
+##   4. Petal.Width  1.20 0.76 .82**       -.37**       .96**     
+##                             [.76, .86]  [-.50, -.22] [.95, .97]
+##                                                                
+## 
+## Note. M and SD are used to represent mean and standard deviation, respectively.
+## Values in square brackets indicate the 95% confidence interval.
+## The confidence interval is a plausible range of population correlations 
+## that could have caused the sample correlation (Cumming, 2014).
+##  * indicates p &lt; .05. ** indicates p &lt; .01.
+## 
+```
+
+---
+## ggcorrplot.
+
+
+```r
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
+require(ggcorrplot)
+cormatrix&lt;-cor(cor_table)
+ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", lab = TRUE) 
+```
+
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-10-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Other packages exist.
+
+For further info. see the tutorial referenced at the end by Willems.
+
+??corrplot 
+
+---
+## New data: Prestige dataset
+
+This is based on Fox (2015) and Fox (2002)
+
+
+```r
+library(carData)
+prestige&lt;-carData::Prestige
+```
+
+---
+## What is it about?
+
+education: The average number of years of education for occupational incumbents.
+
+income: The average income of occupational incumbents, in dollars.
+
+women: The percentage of women in the occupation.
+
+prestige:The average prestige rating for the occupation.
+
+census: The code of the occupation used in the survey.
+
+type: Professional and managerial(prof), white collar(wc), blue collar(bc), or missing(NA)
+
+---
+## Try it yourself.
+
+Load the Prestige dataset
+
+Make a correlation matrix with all the continuous variables. (use select from dplyr to remove strings)
+
+And: _either_ export a .docx _or_ make a correlation plot.
+
+&lt;img src="https://media.giphy.com/media/3qQ329Rgle89i/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Partial correlations.
+
+Partial correlations, when you want to control for a continuous variable (z)
+
+```r
+require(ppcor)
+pcor.test(x = prestige$education, y= prestige$prestige , z=prestige$income)
+```
+
+```
+##    estimate      p.value statistic   n gp  Method
+## 1 0.7660533 1.032202e-20  11.85813 102  1 pearson
+```
+
+---
+## Linear regression.
+
+When would you use linear regression?
+
+&lt;img src="https://media.giphy.com/media/26vUQoB8kmwkERtWE/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+
+---
+## Run a basic one.
+
+
+```r
+model_education&lt;-lm(prestige~education, data=prestige)
+summary(model_education)
+```
+
+```
+## 
+## Call:
+## lm(formula = prestige ~ education, data = prestige)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -26.0397  -6.5228   0.6611   6.7430  18.1636 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)  -10.732      3.677  -2.919  0.00434 ** 
+## education      5.361      0.332  16.148  &lt; 2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 9.103 on 100 degrees of freedom
+## Multiple R-squared:  0.7228,	Adjusted R-squared:   0.72 
+## F-statistic: 260.8 on 1 and 100 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+## Assumptions.
+
+**Linearity**: Think back to the datasaurus! (This also relates to multicollinearity, measurement error).
+
+**Normality**: All errors normally distributed around 0.
+
+**Homoscedasticity**: The variance of the errors should be constant for the (combination) (as with ANOVA)
+
+**Independence**: Errors should be independent.
+
+More [here](https://peerj.com/articles/3323/).
+
+---
+## How to check?
+
+**Linearity**: Scatterplot between X &amp; Y
+
+**Normality**: Plot of error terms
+
+**Homoscedasticity**: Many options (e.g., Breusch-Pagan test). Visual check: Is there a larger spread of measurements around the regression line at one side of the scatterplot than at the other
+
+**Independence**: Durbin-Watson test / Check for autocorrelation (Ljung-Box test)
+
+---
+## Solutions: linearity.
+
+Good idea to plot before you start.
+
+
+```r
+require(ggplot2)
+require(scales)
+require(ggthemes) 
+plot_edu&lt;-ggplot(prestige, aes(education,prestige)) + geom_jitter() 
+plot_edu&lt;- plot_edu + scale_y_continuous(limits=c(0,100),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(6,18), breaks = pretty_breaks(6)) + ylab("Prestige") + xlab("Education") + geom_smooth(method='loess') + theme_tufte(12)
+```
+
+---
+## Plot: By and large linear?
+
+
+```r
+plot_edu
+```
+
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
+
+---
+## plot() 
+
+**4** diagnostic models (but still have to check independence of error). 
+
+More [here](http://data.library.virginia.edu/diagnostic-plots/). 
+
+[Here](https://rpubs.com/therimalaya/43190) is how you do it in ggplot2!
+
+
+```r
+plot(model_education, which = 1)
+```
+
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-17-1.png)&lt;!-- --&gt;
+
+---
+## Q-Q plot.
+
+```r
+plot(model_education, which = 2)
+```
+
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-18-1.png)&lt;!-- --&gt;
+
+---
+## Scale location plot.
+
+
+```r
+plot(model_education, which = 3)
+```
+
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-19-1.png)&lt;!-- --&gt;
+
+---
+## Outliers
+
+
+```r
+plot(model_education, which = 4)
+```
+
+![](Lecture4_xaringan_files/figure-html/unnamed-chunk-20-1.png)&lt;!-- --&gt;
+
+---
+## Can't we just use scatter plots?
+
+Perhaps for basic models but it will quickly become complex.
+
+Some of these plots give you information which you could not get from just scatter plots.
+
+&lt;img src="https://media.giphy.com/media/5T8tEJtCgvDuo/giphy.gif" width="300px" /&gt;
+
+---
+## Homoscedasticity: Breusch-Pagan test.
+
+
+```r
+require(lmtest)
+bptest(model_education)
+```
+
+```
+## 
+## 	studentized Breusch-Pagan test
+## 
+## data:  model_education
+## BP = 0.70577, df = 1, p-value = 0.4009
+```
+
+---
+## Durbin-Watson test (lmtest).
+
+
+```r
+dwtest(model_education) #Durbin-Watson test.
+```
+
+```
+## 
+## 	Durbin-Watson test
+## 
+## data:  model_education
+## DW = 1.4392, p-value = 0.001598
+## alternative hypothesis: true autocorrelation is greater than 0
+```
+
+---
+## Box test.
+
+Also note that there is one other alternative typically used in econometrics (Breusch-Godfroy). Check [here](https://stats.stackexchange.com/questions/148004/testing-for-autocorrelation-ljung-box-versus-breusch-godfrey).
+
+
+```r
+Box.test(residuals(model_education), type="Ljung-Box") #Box test
+```
+
+```
+## 
+## 	Box-Ljung test
+## 
+## data:  residuals(model_education)
+## X-squared = 7.9574, df = 1, p-value = 0.004789
+```
+
+---
+## Write up.
+
+Visual inspection suggested that a linear fit was appropriate. Visual inspection also suggested that the errors from the OLS regression model were approximately normally distributed. A Breusch-Pagan test showed that the assumption of homoscedasticity could be upheld ( `\(\chi^2\)`(1)= 0.71, _p_=.40). However, a Durbin-Watson test indicated that the assumption of independence of errors was violated (Durbin-Watson test= 1.44, _p_=.002).
+
+---
+## Problems... .
+
+**Linearity**: Transform data (e.g., log-transform) / fit curve
+
+**Normality**: Transform data / fit curve
+
+**Heteroscedasticity**: sandwich package can calculate errors adjusting for this.
+
+**Autocorrelation**: sandwich package can calculate (e.g., Newey-West errors), alternatively look into panel model packages (??plm)
+
+&lt;img src="https://media.giphy.com/media/3oEduRCITWQ5BruE8g/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+
+---
+## Hierarchical regression.
+
+Usually we run more than one! And we build a table. (Normally you would check the assumptions of every model!)
+
+
+```r
+lm_education_women&lt;-lm(prestige~education+women, data=prestige)
+summary(lm_education_women)
+```
+
+```
+## 
+## Call:
+## lm(formula = prestige ~ education + women, data = prestige)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -28.010  -4.069   1.050   5.027  18.942 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) -8.75416    3.54213  -2.471 0.015164 *  
+## education    5.42780    0.31612  17.170  &lt; 2e-16 ***
+## women       -0.09305    0.02719  -3.422 0.000904 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 8.652 on 99 degrees of freedom
+## Multiple R-squared:  0.7521,	Adjusted R-squared:  0.7471 
+## F-statistic: 150.2 on 2 and 99 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+## Stargazer! 
+
+
+```r
+require(stargazer)
+stargazer(model_education,lm_education_women,  dep.var.labels=c("Prestige"),covariate.labels=c("Education (years)","Women (%)"), style="demography", out="hierarchical.htm", header=F)
+```
+
+```
+## 
+## \begin{table}[!htbp] \centering 
+##   \caption{} 
+##   \label{} 
+## \begin{tabular}{@{\extracolsep{5pt}}lcc} 
+## \\[-1.8ex]\hline \\[-1.8ex] 
+## \\[-1.8ex] &amp; \multicolumn{2}{c}{Prestige} \\ 
+## \\[-1.8ex] &amp; Model 1 &amp; Model 2\\ 
+## \hline \\[-1.8ex] 
+##  Education (years) &amp; 5.361$^{***}$ &amp; 5.428$^{***}$ \\ 
+##   &amp; (0.332) &amp; (0.316) \\ 
+##   Women (%) &amp;  &amp; $-$0.093$^{***}$ \\ 
+##   &amp;  &amp; (0.027) \\ 
+##   Constant &amp; $-$10.732$^{**}$ &amp; $-$8.754$^{*}$ \\ 
+##   &amp; (3.677) &amp; (3.542) \\ 
+##  \textit{N} &amp; 102 &amp; 102 \\ 
+## R$^{2}$ &amp; 0.723 &amp; 0.752 \\ 
+## Adjusted R$^{2}$ &amp; 0.720 &amp; 0.747 \\ 
+## Residual Std. Error &amp; 9.103 (df = 100) &amp; 8.652 (df = 99) \\ 
+## F Statistic &amp; 260.751$^{***}$ (df = 1; 100) &amp; 150.199$^{***}$ (df = 2; 99) \\ 
+## \hline \\[-1.8ex] 
+## \multicolumn{3}{l}{$^{*}$p $&lt;$ .05; $^{**}$p $&lt;$ .01; $^{***}$p $&lt;$ .001} \\ 
+## \end{tabular} 
+## \end{table}
+```
+
+---
+## Sample write up.
+
+Table X describes a hierarchical regression on prestige. The first model showed a statistically significant, positive, effect of years of education on prestige. In the second model, the effect of  education was upheld, while controlling for the % of women. The effect of % women was also statistically significant.
+
+---
+## Interpreting B coefficients.
+
+Centering (week 2). We can use our model to make predictions... .
+
+
+```r
+require(dplyr)
+# use :: just in case of conflicts.
+prestige&lt;-dplyr::mutate(prestige, women_cent= women-mean(women), education_cent= education-mean(education), prestige_cent= prestige-mean(prestige))
+centered_model&lt;-lm(prestige_cent~education_cent+women_cent, data=prestige)
+```
+
+---
+## Centered model.
+
+2 years of extra education --&gt; increase of 10.86 in prestige scores (all else being equal!)
+
+a 10% shift in the number of women --&gt; decrease of around 1 point (0.93) in terms of prestige.
+
+
+```r
+summary(centered_model)
+```
+
+```
+## 
+## Call:
+## lm(formula = prestige_cent ~ education_cent + women_cent, data = prestige)
+## 
+## Residuals:
+##     Min      1Q  Median      3Q     Max 
+## -28.010  -4.069   1.050   5.027  18.942 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)    -1.865e-15  8.566e-01   0.000 1.000000    
+## education_cent  5.428e+00  3.161e-01  17.170  &lt; 2e-16 ***
+## women_cent     -9.305e-02  2.719e-02  -3.422 0.000904 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 8.652 on 99 degrees of freedom
+## Multiple R-squared:  0.7521,	Adjusted R-squared:  0.7471 
+## F-statistic: 150.2 on 2 and 99 DF,  p-value: &lt; 2.2e-16
+```
+
+```r
+2*5.428
+```
+
+```
+## [1] 10.856
+```
+
+```r
+#alternatively
+2*coefficients(centered_model)[2]
+```
+
+```
+## education_cent 
+##       10.85559
+```
+
+```r
+# Shift of 10%
+10*coefficients(centered_model)[3]
+```
+
+```
+## women_cent 
+## -0.9304622
+```
+
+---
+## from B to Beta...
+
+Remember scale() - `\(\beta\)`'s are nothing more than standardized B's! (but beware scale() takes matrices as input - look at _z_-score functions).
+
+Interpreted in shifts of standard deviations. A `\(\beta\)` of 1 implies that a shift of 1SD in X leads to a shift of 1SD in Y.
+
+
+```r
+# -1 so we can drop the intercept -- standardized regression has no intercept.
+model_education_stand&lt;-lm(scale(prestige)~scale(education)-1, data=prestige)
+summary(model_education_stand)
+```
+
+```
+## 
+## Call:
+## lm(formula = scale(prestige) ~ scale(education) - 1, data = prestige)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -1.51354 -0.37914  0.03843  0.39193  1.05575 
+## 
+## Coefficients:
+##                  Estimate Std. Error t value Pr(&gt;|t|)    
+## scale(education)  0.85018    0.05239   16.23   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## Residual standard error: 0.5265 on 101 degrees of freedom
+## Multiple R-squared:  0.7228,	Adjusted R-squared:  0.7201 
+## F-statistic: 263.4 on 1 and 101 DF,  p-value: &lt; 2.2e-16
+```
+
+---
+## Alternative. QuantPsyc package.
+
+Note be wary with interaction terms! (center them beforehand - values might not be correct from QuantPsyc). Alternative function: lm.beta.
+
+
+```r
+require(QuantPsyc)
+lm.beta(model_education)
+```
+
+```
+## education 
+## 0.8501769
+```
+
+---
+## Bootstrapping a B coefficient.
+
+Again note that you can do this for _any_ statistic.
+
+
+```r
+# Bootstrap 95% CI for B coefficient.
+library(boot)
+# function which does bootstrapping.
+coeff_B &lt;- function(data, indices) {
+data_boot &lt;- data[indices, ] # allows boot to select sample
+B_boot &lt;- lm(prestige_cent ~ education_cent + women_cent, data = data_boot)
+return(B_boot$coeff[2]) # education in position 2 / alter for different variables.
+}
+# bootstrapping with 10000 replications
+set.seed(666)
+results_coeff_B &lt;- boot(data = prestige, statistic = coeff_B, R = 10000)
+```
+
+---
+## view results
+
+
+```r
+# view results
+results_coeff_B
+```
+
+```
+## 
+## ORDINARY NONPARAMETRIC BOOTSTRAP
+## 
+## 
+## Call:
+## boot(data = prestige, statistic = coeff_B, R = 10000)
+## 
+## 
+## Bootstrap Statistics :
+##     original       bias    std. error
+## t1* 5.427796 -0.002099921   0.2891988
+```
+
+---
+## 95% BCa (bias-corrected accelerated) confidence interval.
+
+
+```r
+# get 95% confidence interval 
+boot.ci(results_coeff_B, type="bca")
+```
+
+```
+## BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
+## Based on 10000 bootstrap replicates
+## 
+## CALL : 
+## boot.ci(boot.out = results_coeff_B, type = "bca")
+## 
+## Intervals : 
+## Level       BCa          
+## 95%   ( 4.860,  5.994 )  
+## Calculations and Intervals on Original Scale
+```
+
+The 95% BCA confidence interval (with 10,000 bootstraps) for the (centered) coefficient of education is [4.85, 5.97].
+
+---
+## Logistic Regression.
+
+Sometimes we have a dichotomous outcome (for example: Yes/No, Alive/Dead)
+
+We cannot use OLS regression as it violates the assumptions of normality.
+
+---
+## Clever trick... 
+
+We can take proportions and turn them into Odds Ratios and then turn those into LogOdds which then conform to linearity.
+
+Read the references for full explanation and underpinning.
+
+&lt;img src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Assumptions logistic regression.
+
+Some typical assumptions for OLS/MANOVA do not apply (homoscedasticity/normal distribution error terms/...) but:
+
+Correct coding of dependent variable (correctly measured).
+
+All relevant variables included. No over/underfitting.
+
+Independent observations (also relates to multicollinearity - independent variables should not be strongly related to one another).
+
+Linearity between _log-odds_ and independent variable.
+
+Sample size, required for estimation (according to some n=10 per IV ok, others n&gt;30 per IV).
+
+---
+## Assumption checks?
+
+[Some](https://stats.stackexchange.com/questions/45050/diagnostics-for-logistic-regression) argue that logistic regression does not require assumption checks, and thus we would not check these. 
+
+Long story but Maximum likelihood estimation has better properties than OLS in terms of estimation
+
+Instead, some argue that at the design stage think about sample size / distribution, et cetera before running the model.
+
+Again, you can always bootstrap, which might make some of your conclusions more robust!
+
+&lt;img src="https://media.giphy.com/media/nVV3Aodoc0KGs/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Pima Indian data.
+
+9 variables and 768 cases, women aged 21 or older.
+
+
+```r
+require(mlbench) # contains the data
+require(skimr)
+# Pima data first needs data() command.
+data(PimaIndiansDiabetes2)
+pima_data&lt;-PimaIndiansDiabetes2
+skim(pima_data)
+```
+
+
+Table: Data summary
+
+|                         |          |
+|:------------------------|:---------|
+|Name                     |pima_data |
+|Number of rows           |768       |
+|Number of columns        |9         |
+|_______________________  |          |
+|Column type frequency:   |          |
+|factor                   |1         |
+|numeric                  |8         |
+|________________________ |          |
+|Group variables          |None      |
+
+
+**Variable type: factor**
+
+|skim_variable | n_missing| complete_rate|ordered | n_unique|top_counts         |
+|:-------------|---------:|-------------:|:-------|--------:|:------------------|
+|diabetes      |         0|             1|FALSE   |        2|neg: 500, pos: 268 |
+
+
+**Variable type: numeric**
+
+|skim_variable | n_missing| complete_rate|   mean|     sd|    p0|   p25|    p50|    p75|   p100|hist  |
+|:-------------|---------:|-------------:|------:|------:|-----:|-----:|------:|------:|------:|:-----|
+|pregnant      |         0|          1.00|   3.85|   3.37|  0.00|  1.00|   3.00|   6.00|  17.00|▇▃▂▁▁ |
+|glucose       |         5|          0.99| 121.69|  30.54| 44.00| 99.00| 117.00| 141.00| 199.00|▁▇▇▃▂ |
+|pressure      |        35|          0.95|  72.41|  12.38| 24.00| 64.00|  72.00|  80.00| 122.00|▁▃▇▂▁ |
+|triceps       |       227|          0.70|  29.15|  10.48|  7.00| 22.00|  29.00|  36.00|  99.00|▆▇▁▁▁ |
+|insulin       |       374|          0.51| 155.55| 118.78| 14.00| 76.25| 125.00| 190.00| 846.00|▇▂▁▁▁ |
+|mass          |        11|          0.99|  32.46|   6.92| 18.20| 27.50|  32.30|  36.60|  67.10|▅▇▃▁▁ |
+|pedigree      |         0|          1.00|   0.47|   0.33|  0.08|  0.24|   0.37|   0.63|   2.42|▇▃▁▁▁ |
+|age           |         0|          1.00|  33.24|  11.76| 21.00| 24.00|  29.00|  41.00|  81.00|▇▃▁▁▁ |
+
+---
+## Logistic regression.
+
+
+```r
+log1&lt;-glm(diabetes~mass, data=pima_data, family=binomial)
+log2&lt;-glm(diabetes~mass+age, data=pima_data, family=binomial)
+summary(log1)
+```
+
+```
+## 
+## Call:
+## glm(formula = diabetes ~ mass, family = binomial, data = pima_data)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.0094  -0.9184  -0.6598   1.2254   1.9107  
+## 
+## Coefficients:
+##             Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -3.99682    0.42885   -9.32  &lt; 2e-16 ***
+## mass         0.10250    0.01261    8.13 4.31e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 981.53  on 756  degrees of freedom
+## Residual deviance: 904.89  on 755  degrees of freedom
+##   (11 observations deleted due to missingness)
+## AIC: 908.89
+## 
+## Number of Fisher Scoring iterations: 4
+```
+
+---
+## summary of log2
+
+
+```r
+summary(log2)
+```
+
+```
+## 
+## Call:
+## glm(formula = diabetes ~ mass + age, family = binomial, data = pima_data)
+## 
+## Deviance Residuals: 
+##     Min       1Q   Median       3Q      Max  
+## -2.0306  -0.8907  -0.5692   1.1011   2.1555  
+## 
+## Coefficients:
+##              Estimate Std. Error z value Pr(&gt;|z|)    
+## (Intercept) -5.740908   0.537331 -10.684  &lt; 2e-16 ***
+## mass         0.107810   0.013071   8.248  &lt; 2e-16 ***
+## age          0.045746   0.007017   6.519 7.07e-11 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+## 
+## (Dispersion parameter for binomial family taken to be 1)
+## 
+##     Null deviance: 981.53  on 756  degrees of freedom
+## Residual deviance: 860.61  on 754  degrees of freedom
+##   (11 observations deleted due to missingness)
+## AIC: 866.61
+## 
+## Number of Fisher Scoring iterations: 4
+```
+
+---
+## Likelihood ratio tests.
+
+summary() gives you parameter estimates and associated tests (Wald tests). 
+
+Likelihood ratio tests tend to perform better with [smaller samples](https://stats.stackexchange.com/questions/193643/likelihood-ratio-vs-wald-test).
+
+You should be concerned if the conclusions differ (likely suggests non-linearity).
+
+---
+## Likelihood ratio tests.
+
+
+```r
+anova(log1, test="Chisq")
+```
+
+```
+## Analysis of Deviance Table
+## 
+## Model: binomial, link: logit
+## 
+## Response: diabetes
+## 
+## Terms added sequentially (first to last)
+## 
+## 
+##      Df Deviance Resid. Df Resid. Dev  Pr(&gt;Chi)    
+## NULL                   756     981.53              
+## mass  1   76.637       755     904.89 &lt; 2.2e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## Likelihood ratio tests, log2.
+
+
+```r
+anova(log2, test="Chisq")
+```
+
+```
+## Analysis of Deviance Table
+## 
+## Model: binomial, link: logit
+## 
+## Response: diabetes
+## 
+## Terms added sequentially (first to last)
+## 
+## 
+##      Df Deviance Resid. Df Resid. Dev  Pr(&gt;Chi)    
+## NULL                   756     981.53              
+## mass  1   76.637       755     904.89 &lt; 2.2e-16 ***
+## age   1   44.279       754     860.61 2.847e-11 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## Odds ratios.
+
+The coefficients are not really interpretable given that they are a linear relationship between the independent variable and log-odds.
+
+We can take the exponential to interpret them!
+
+&lt;img src="https://media.giphy.com/media/JYTm7I9nMRlgk/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+
+---
+## Odds ratios.
+
+incr= custom increments (not useful/necessary if you have factors). Note that you might want to center your data beforehand! (ease of interpretation).
+
+
+```r
+require(oddsratio)
+# shift of 5 in BMI.
+or_glm(pima_data, incr= list(mass= 5), log1)
+```
+
+```
+##   predictor oddsratio ci_low (2.5) ci_high (97.5) increment
+## 1      mass     1.669        1.479          1.894         5
+```
+
+```r
+or_glm(pima_data, incr= list(mass= 5, age=1), log2)
+```
+
+```
+##   predictor oddsratio ci_low (2.5) ci_high (97.5) increment
+## 1      mass     1.714        1.512          1.955         5
+## 2       age     1.047        1.033          1.061         1
+```
+
+---
+## Alternative way.
+
+
+```r
+require(questionr)
+odds.ratio(log1)
+```
+
+```
+##                    OR     2.5 % 97.5 %         p    
+## (Intercept) 0.0183740 0.0077693 0.0418 &lt; 2.2e-16 ***
+## mass        1.1079369 1.0814358 1.1363  4.31e-16 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+```r
+odds.ratio(log2)
+```
+
+```
+##                    OR     2.5 % 97.5 %         p    
+## (Intercept) 0.0032119 0.0010872 0.0090 &lt; 2.2e-16 ***
+## mass        1.1138365 1.0862633 1.1434 &lt; 2.2e-16 ***
+## age         1.0468089 1.0326489 1.0615 7.072e-11 ***
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+---
+## What does that mean?
+
+In model 2: The odds of having diabetes versus not having diabetes, is 1.11 times (95%CI [1.09,1.14]) higher when BMI increases with one unit (while controlling for age).
+
+You can then use this to calculate specific odds.
+
+---
+## Where is my R squared?
+
+Complex - you can get  Pseudo `\(R^2\)` but perhaps you should [not](https://stats.stackexchange.com/questions/3559/which-pseudo-r2-measure-is-the-one-to-report-for-logistic-regression-cox-s). 
+
+
+```r
+require(rcompanion)
+nagelkerke(log1, restrictNobs=T)
+```
+
+```
+## $Models
+##                                                   
+## Model: "glm, diabetes ~ mass, binomial, pima_data"
+## Null:  "glm, diabetes ~ 1, binomial, fit$model"   
+## 
+## $Pseudo.R.squared.for.model.vs.null
+##                              Pseudo.R.squared
+## McFadden                            0.0780790
+## Cox and Snell (ML)                  0.0962815
+## Nagelkerke (Cragg and Uhler)        0.1325200
+## 
+## $Likelihood.ratio.test
+##  Df.diff LogLik.diff  Chisq    p.value
+##       -1     -38.318 76.637 2.0549e-18
+## 
+## $Number.of.observations
+##           
+## Model: 757
+## Null:  757
+## 
+## $Messages
+## [1] "Note: For models fit with REML, these statistics are based on refitting with ML"
+## 
+## $Warnings
+## [1] "None"
+```
+
+```r
+nagelkerke(log2, restrictNobs=T)
+```
+
+```
+## $Models
+##                                                         
+## Model: "glm, diabetes ~ mass + age, binomial, pima_data"
+## Null:  "glm, diabetes ~ 1, binomial, fit$model"         
+## 
+## $Pseudo.R.squared.for.model.vs.null
+##                              Pseudo.R.squared
+## McFadden                             0.123192
+## Cox and Snell (ML)                   0.147626
+## Nagelkerke (Cragg and Uhler)         0.203191
+## 
+## $Likelihood.ratio.test
+##  Df.diff LogLik.diff  Chisq    p.value
+##       -2     -60.458 120.92 5.5392e-27
+## 
+## $Number.of.observations
+##           
+## Model: 757
+## Null:  757
+## 
+## $Messages
+## [1] "Note: For models fit with REML, these statistics are based on refitting with ML"
+## 
+## $Warnings
+## [1] "None"
+```
+
+---
+## Stargazer!
+
+We can get a nice table with Odds Ratios and summaries. Or look into broom() and tidy() (see last week).
+
+
+```r
+require(stargazer)
+stargazer(log1,log2, covariate.labels=c("BMI","Age"), omit=c("Constant"), apply.coef=exp, t.auto=F, p.auto=F, report = "vc*", style="asr", out="logistic.htm", header=FALSE)
+```
+
+---
+## Sample write up.
+
+Table X shows the key results for a hierarchical logistic regression analysis. In Model 1, there was a statistically significant effect of BMI on having diabetes, ( `\(\chi^2(1)\)`=76.64, _p_&lt;.0001). Moreover, in Model 2 there was a significant effect of age ( `\(\chi^2(1)\)`=44.28, _p_&lt;.0001), after accounting for BMI ( `\(\chi^2(1)\)`=76.64, _p_&lt;.0001).
+
+The `\(\chi^2\)` values correspond to the likelihood ratio test (the Deviance value) for the variables (you also can calculate for the model - check the rcompanion output). 
+
+You might want to add a Pseudo- `\(R^2\)`.
+
+You would then describe the odds ratios or illustrate the effect.
+
+---
+## vcd package
+
+Continuous --&gt; You can plot the odds ratios. Look at how to do that in [ggplot2](https://blogs.uoregon.edu/rclub/2016/04/05/plotting-your-logistic-regression-models/)
+
+How to plot our results for categorical variables? Mosaic plots! Also look at alternatives
+
+Look into [ggmosaic()](https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html) if you want it in ggplot2.
+
+---
+## How to do it?
+
+First make some categorical variables.
+
+
+```r
+require(dplyr) # make some categorical variables
+pima_data&lt;- pima_data %&gt;% mutate(obese=cut(mass, breaks=c(-Inf, 30, Inf), labels=c("No","Yes")))
+pima_data&lt;- pima_data %&gt;% mutate(nulligravada=cut(pregnant, breaks=c(-Inf, 0.99, Inf), labels=c("never pregnant","ever pregnant")))
+```
+
+---
+## Vcd
+
+
+```r
+require(RColorBrewer)
+# pick some colours.
+colours&lt;-c(color = brewer.pal(2, "Set3"))
+fill_colours&lt;-rep(colours, each=4) # 4 quadrants to fill
+require(vcd)
+mosaicplot1&lt;-mosaic(~ diabetes + nulligravada + obese, zero_size = 0, data=pima_data, gp = gpar(fill = fill_colours, col = 0), legend=F, labeling = labeling_values)
+```
+
+&lt;img src="Lecture4_xaringan_files/figure-html/opts_chunk$set(out.width=12)-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+## Exercise. 
+
+- Load last week's Salaries dataset. If necessary, calculate monthly_salary again.
+
+- calculate a Spearman and Pearson correlation between years since Ph.D. and monthly salary. Conduct a significance test for one of them. Pick one and discuss the outcome 
+
+- Build a hierarchical regression model, in step 1 use monthly salary as dependent and year since Ph.D. as independent, in step 2 add gender (keep all variables from step 1), in step 3 add rank (keep all variables from step 2). Export the hierarchical regression table.
+
+- Test the assumptions for the final model, how would you combat any issues that arise in terms of violations of these assumptions?
+
+---
+## Exercise. (cont'd)
+
+- Calculate the standardized coefficients for model 1 ($\beta$). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
+
+- What does the final model predict in terms of monthly salary shift, when there is a shift of being 3 years post-Ph.D.
+
+- Install and load the 'caret' package. load the GermanCredit dataset. ??GermanCredit to find out more also [here](&lt;https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)&gt;). It contains data on credit scores for a 1,000 cases and has 62 variables.  As done before, you might want to explore the descriptive statistics.
+
+- Make a corrplot() for up to 10 continuous variables in the GermanCredit dataset. Export a correlation matrix (up to 10 variables). 
+
+---
+## Exercise (cont'd)
+
+- Conduct a hierarchical logistic regression on 'Class' as dependent, in each step keeping the previous variables. In step 1 add Amount. In step 2 add CreditHistory.PaidDuly. In step 3 add Age. In step 4 add Telephone. Export a table with your key results.
+
+- Choose some categorical variables and make a (beautiful) mosaic plot with credit class as dependent.
+
+- Calculate all odds ratios for model 4. Calculate the odds ratio for a shift in 1,000 DM (Deutsche Mark - pre-euro era) in credit status for model 4. 
+
+- BONUS: Make a mosaic plot via ggmosaic()  with credit class as dependent.
+
+- BONUS: Have a look at [ROC curves](https://cran.r-project.org/web/packages/plotROC/vignettes/examples.html) and plot one for the credit data.
+ 
+---
+## References (and further reading.) 
+
+Also check the reading list! (many more than listed here)
+
+* Crawley, M. J. (2013). _The R book: Second edition._ New York, NY: John Wiley &amp; Sons.
+* Fox, J. (2015). _Applied regression analysis and generalized linear models_. London, UK: Sage.
+* Torres-Reyna, O. (2010). [Regression 101.](https://www.princeton.edu/~otorres/Regression101R.pdf)
+* Wickham, H., &amp; Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
+* Willems, K. (2017). [R correlation tutorial](https://www.datacamp.com/community/blog/r-correlation-tutorial#gs.I6sFjp8)
+* Zuur, A., Ieno, E.N., Walker, N., Saveliev, A.A., &amp; Smith, G.M. (2009). _Mixed effects models and extensions in ecology with R_. New York, NY: Springer. 
+
+
+
+
+
+
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

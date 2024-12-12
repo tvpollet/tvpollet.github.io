@@ -1,0 +1,893 @@
+---
+title: 'Lecture 2: PY 0794 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+  xaringan::moon_reader:
+    css: ["default", "default-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+## PY0794: Advanced Quantitative research methods.
+* Last week: Introduction.
+* Today all about visualization.
+
+---
+## Goals (today) 
+
+ Data manipulation.
+
+--
+
+ Data visualization.
+
+--
+
+ Basic tests (_t_-tests, and a non-parametric alternative.)
+
+---
+## Assignment
+
+After today you should be able to complete the following sections:
+
+--
+
+ Descriptive statistics and data wrangling.
+
+--
+
+ Histogram
+
+--
+
+ Violin plot
+
+--
+
+ _t_-test and non-parametric alternative
+
+---
+## Flights dataset
+
+Again this is based on [Whickham & Grolemund (2017)](http://r4ds.had.co.nz/) and on work by [Gert Stulp](http://www.gertstulp.com/) 
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture2")
+library(nycflights13)
+flights<-nycflights13::flights
+```
+
+---
+## 'dplyr' 
+ **Last week:** Pick observations by their values: **filter()**.
+
+--
+
+ Reorder the rows: **arrange()**. (read about this [here](http://r4ds.had.co.nz/transform.html#arrange-rows-with-arrange))
+
+--
+
+ _Pick variables by their names **select()**._
+
+--
+
+ _Create new variables with functions of existing variables **mutate()**._
+
+--
+
+ _Collapse many values down to a single summary **summarise()**._
+
+---
+## Load dplyr
+
+Load dplyr:
+```{r warning = F}
+library(dplyr)
+```
+
+---
+## select()
+
+Sometimes you have dozens, even >100 or >1000 variables.
+
+You can use select() to make a reduced data frame.
+
+--
+
+```{r}
+flights_red<-select(flights, year, month, day)
+### This overrides our earlier attempt
+flights_red<-select(flights, year:day)
+### all columns excluding those from year:day (inclusive)
+flights_red<-select(flights, -(year:day))
+```
+
+---
+## Try it yourself. 
+ Team up with a partner.
+ 
+ Load the flights data.
+ 
+ Make a new dataframe with all variables starting from dep_time to arr_delay (inclusive).
+
+---
+## helper functions.
+For more complex cases:
+
+--
+
+starts_with("abc"): matches names that begin with “abc”.
+ 
+--
+
+ends_with("xyz"): matches names that end with “xyz”.
+
+--
+
+contains("ijk"): matches names that contain “ijk”.
+ 
+--
+
+matches("(.)\\1"): selects variables that match a "regular expression". This one matches any variables that contain repeated characters. ??regex
+
+--
+ 
+num_range("x", 1:3): matches x1, x2 and x3.
+
+---
+## rename()
+
+* select() can be used to rename variables, **but** it drops all of the variables not explicitly mentioned. 
+* Instead, use rename(), which is a variant of select() which keeps all the variables that are not explicitly mentioned. 
+* However, I found this to be [buggy](https://stackoverflow.com/questions/34275576/avoiding-error-when-using-rename-in-dplyr-and-column-doesnt-exist) so back to base R but feel free to use rename().
+
+---
+## names
+
+```{r}
+# Note the square brackets for indexing the columns.
+names(flights_red)[1:3]=c("Year", "Month", "Day")
+head(flights_red)
+```
+
+---
+## mutate()
+
+ %>% : the pipe. Basically means apply function to.
+
+
+--
+
+ mutate() allows you to make new variables
+
+--
+
+```{r, results='hide'}
+flights <- flights %>% mutate(speed = distance / (air_time * 60), log_speed=log(speed))
+```
+
+--
+ transmute() if you want **only** the things you have calculated.
+
+---
+## helper functions() for mutate()
+
+ Again a whole load of helper functions exist. You can read more about them [here](http://r4ds.had.co.nz/transform.html#add-new-variables-with-mutate)
+
+ the key thing to remember is that you can apply all the functions we covered last week.
+
+---
+## Centering and standardizing.
+
+ **centering**: subtracting the mean. (Often used to make scores more interpretable and to avoid collinearity, which is a big [deal](https://link.springer.com/article/10.1007/s00265-010-1045-6)). More about this when we discuss OLS regression.
+
+--
+
+ **standardizing**: Z-scores. We use the scale() function.
+
+--
+
+```{r, results='hide'}
+flights<- flights %>% mutate(speed_cent = speed - mean(speed, na.rm = TRUE))
+flights<- flights %>% mutate(speed_stand = scale(speed)) 
+```
+
+* now about that 'na.rm = TRUE' --> this removes any missings.
+
+--
+
+* Reminder about Z-scores.
+```{r, out.width = "350px", echo=FALSE}
+knitr::include_graphics("http://deafstudeerconsultant.nl/wp-content/uploads/2015/01/z-score-normale-verdeling.jpg")
+```
+
+---
+## summarise()
+
+Get one row with data for the dataframe.
+```{r}
+summarise(flights, mean_speed = mean(speed, na.rm = TRUE))
+```
+
+---
+## group_by
+ more useful if combined with group_by , let's look at delays by [carrier](http://aspmhelp.faa.gov/index.php/ASQP:_Carrier_Codes_and_Names)
+ 
+```{r}
+by_carrier <- group_by(flights, carrier)
+summarise(by_carrier, delay = mean(dep_delay, na.rm = TRUE))
+```
+---
+## Try it yourself.
+
+* calculate 'gain' which is arr_delay - dep_delay.
+* calculate 'airtime_hours' which is airtime (in mins.) divided by the number of minutes in an hour. 
+* now calculate 'gain per hour'. (gain/airtime_hours)
+* standardize 'gain per hour'.
+* use group_by to calculate the means of gain per hour by carrier.
+
+---
+## Replacing missings. 
+
+ Often we want to replace missings. For example, we want to replace the missings with the means or median.
+
+```{r}
+flights <- flights %>% mutate(dep_delay_no_miss= ifelse(is.na(dep_delay), 
+           mean(dep_delay, na.rm = T), dep_delay))
+mean(flights$dep_delay_no_miss)
+```
+
+--
+
+Here we use an 'ifelse' function to replace the missings.
+
+True can be abbreviated to 'T'.
+
+---
+## So far, so good.
+
+Now that we know the basics of manipulating dataframes let's move to graphs.
+
+Why is plotting your data important?
+
+--
+
+[Anscombe's quartet (1973)](http://www.jstor.org/stable/pdf/2682899.pdf?refreqid=excelsior%3A19d1f2fcfb1dacfb0ec692faa1512a37). _r_= .816
+
+--
+
+```{r, out.width = "350px", echo=FALSE}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Anscombe%27s_quartet_3.svg/1280px-Anscombe%27s_quartet_3.svg.png")
+```
+
+ Often: testing important assumptions. 
+
+---
+## Datasaurus.
+
+* An extension of Anscombe's quartet. Read more [here](https://www.autodeskresearch.com/publications/samestats)
+
+```{r, fig.align="center", out.width = "775px", echo=FALSE}
+knitr::include_graphics("AllDinosAnimatedSmaller.gif") # from https://www.autodeskresearch.com/publications/samestats
+```
+
+---
+## Now let's make some graphs.
+
+ggplot2
+
+some 'helper' packages, 'scales' helps with axes, 'Rcolorbrewer' use, 'ggthemes' allows standardized templates, 'cow plot' allows panelling graphs.
+
+```{r warning=F}
+library(ggplot2)
+library(scales) ### no longer needed in newer versions.
+library(RColorBrewer)
+library(ggthemes)
+```
+
+---
+## Scatter plot
+
+* Our data file is truly massive, so for this exercise we are just going to select all flights from JFK airport on christmas day.
+
+```{r}
+flights_jfk_new<-filter(flights, month == 12, day == 25, origin == 'JFK')
+```
+
+--
+
+* Scatter plot
+
+```{r, fig.align="center",fig.height=2.1, fig.width=2.3, fig.retina = 3}
+ggplot(flights_jfk_new, aes(x=dep_delay, y=arr_delay)) + geom_point() 
+```
+
+---
+## What is that warning about?
+
+* 2 missing cases.
+* Let us replace those, in fact we already did that for dep_delay, but that was based on the **whole** set. For this exercise, we'll replace it again (so now it is replaced with the mean on X-mas day)
+
+```{r, tidy.opts=list(width.cutoff=55)}
+flights_jfk_new <- flights_jfk_new %>% 
+                   mutate(dep_delay_no_miss= ifelse(is.na(dep_delay), 
+                   mean(dep_delay, na.rm = T), dep_delay))
+flights_jfk_new <- flights_jfk_new %>% 
+                   mutate(arr_delay_no_miss= ifelse(is.na(arr_delay), 
+                   mean(arr_delay, na.rm = T), arr_delay))
+```
+
+---
+## Plot again
+
+```{r, fig.align='center' ,fig.height=4, fig.width=4, fig.retina = 3, tidy.opts=list(width.cutoff=5)}
+graph_delays<-ggplot(flights_jfk_new, aes(x=dep_delay_no_miss, y=arr_delay_no_miss)) 
+graph_delays + geom_point() 
+```
+
+---
+## Colour by airline
+
+Recap: ggplot(your_data, aes(x=x_variable, y=y_variable)) + geom_point()
+
+Now let's colour it by carrier. 
+
+```{r, fig.align="center",fig.height=3.75, fig.width=3.75, fig.retina = 3, tidy.opts=list(width.cutoff=5)}
+graph_colour <- ggplot(flights_jfk_new, aes(x=dep_delay_no_miss, y=arr_delay_no_miss, 
+                                             colour=carrier)) 
+graph_colour + geom_point()
+```
+
+---
+## Flexibility.
+
+* The beauty of ggplot is that using a different “geom”-function will create a different graph:
+
+```{r, fig.align="center",fig.height=3.5, fig.width=3.5, fig.retina = 3}
+graph_delays + geom_count() 
+```
+
+---
+## Let's try another one.
+
+```{r, warning=F, message=F, fig.align="center",fig.height=4.5, fig.width=6, fig.retina = 3}
+graph_delays +  geom_count() + geom_smooth()
+```
+
+---
+## Try it yourself.
+* Make a similar set as we did but now: flights leaving LaGuardia (LGA) airport on X-mas day.
+* Make a plot with departure delay on the X-axis and speed on the Y-axis.
+* Colour the points by carrier.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("http://images.complex.com/complex/image/upload/c_limit,w_680/fl_lossy,pg_1,q_auto/tsb8pkwfrsx8cde2aqkz.jpg")
+```
+
+---
+## You can tweak everything!
+
+Example with Delta and United airlines.
+
+```{r, fig.height=3, fig.width=6, tidy.opts=list(width.cutoff=35), fig.retina = 3}
+flights_jfk_new_2_airlines<-filter(flights_jfk_new, carrier== "DL" | carrier== "UA" )
+graph_beauty<-ggplot(flights_jfk_new_2_airlines, 
+                     aes(x=dep_delay_no_miss, y=arr_delay_no_miss, 
+                                             colour=carrier))  + 
+  geom_point(size=3, shape=13, alpha=0.5) + ### size/shape of points + transparency
+  geom_smooth(method="lm") + ### Add linear regression lines
+  scale_colour_brewer(palette = "Set1") + # Change the colours
+  labs(x="Delay departure", y="Delay arrival",
+       title="United vs. Delta - Showdown") +  
+  # Change labels on axes and add title
+  theme_bw() # Remove the gray background
+```
+
+---
+## Look at the pretty, pretty!
+
+```{r, warning=F, message=F, out.width = "475px", fig.retina = 3}
+graph_beauty
+```
+
+---
+## Many types of graphs.
+| #  | geom      | graph            |
+|----|:----------|:-----------------|
+| 1  | [geom_density()](#anchor1) | Density plot (distribution) |
+| 2  | [geom_histogram()](#anchor2) | Histogram (distribution) |
+| 3  | [geom_violin()](#anchor3) | Violin pot (multiple distributions) |
+| 4  | [geom_boxplot()](#anchor4) | Boxplot (multiple distributions) |
+| 5  | [geom_bar()](#anchor5) | Bar chart (categorical + continuous/categorical) |
+| 6  | [geom_point()](#anchor6) | Scatter (continuous + continuous) |
+| 7  | [geom_count()](#anchor7) | Bubble plot (continuous + continuous/categorical) |
+| 8  | [geom_jitter()](#anchor8) | Scatter (continuous + continuous/categorical) |
+
+---
+## Many types of graphs, continued
+| #  | geom      | graph            |
+|----|:----------|:-----------------|
+| 9  | [geom_smooth()](#anchor9) | Prediction line (continuous + continuous) |
+| 10 | [geom_line()](#anchor10) | Line (continuous + continuous/categorical) |
+| 11 | [geom_errorbar()](#anchor11) | Errorbar (continuous + continuous/categorical) |
+
+--
+
+We will not cover all of these today.
+
+--
+
+Need any help / reference? All the codes can be found [here](http://ggplot2.tidyverse.org/reference/)
+
+---
+## Histogram.
+
+Let's make a panelled histogram comparing the delays in departure of two major airlines Jetblue (code= B6) and Delta airlines on X-mas day.
+
+--
+
+To help ourselves we'll make to separate sets. We'll also save them.
+
+--
+
+```{r}
+### Note that I now went for new, short names. 
+### Ideally you want your naming to be consistent.
+jfk_delta<-filter(flights_jfk_new, carrier== "DL")
+jfk_jetblue<-filter(flights_jfk_new, carrier== "B6")
+write.csv(jfk_delta,row.names = F, file= 'jfk_delta.csv')
+write.csv(jfk_jetblue,row.names = F, file= 'jfk_jetblue.csv')
+```
+
+---
+## Basics.
+
+```{r, fig.height=5, fig.width=5, fig.pos='center', fig.retina = 3}
+plot_dl<-ggplot(jfk_delta, aes(dep_delay))
+plot_jetblue<-ggplot(jfk_jetblue, aes(dep_delay))
+### Plot Delta.
+plot_dl+geom_histogram(colour = "black", fill = "white")
+```
+
+---
+## Binwidth?
+
+* Defaults used. Binwidth is [important](http://www.stat.cmu.edu/~rnugent/PCMI2016/papers/WandBinWidth.pdf). Not too large/small.
+
+```{r, fig.height=1.8, fig.width=2, fig.retina = 3}
+plot_dl+geom_histogram(binwidth=1)
+plot_dl+geom_histogram(binwidth=40)
+```
+
+---
+## Settle on 5?
+
+```{r, fig.height=1.8, fig.width=3, tidy.opts=list(width.cutoff=35), fig.retina = 3}
+plot_dl<-plot_dl+geom_histogram(binwidth=5, colour = "black", fill = "white")
+plot_jetblue<-plot_jetblue + geom_histogram(binwidth=5, colour = "black", fill = "white")
+plot_dl
+plot_jetblue
+```
+
+---
+## Change labels.
+
+```{r, fig.height=1.8, fig.width=2.2, fig.retina = 3}
+plot_dl+ylab("Count") + xlab("Departure Delay - Delta")
+plot_jetblue + ylab("Count") + xlab("Departure Delay - Jet Blue")
+```
+
+---
+## Change the ticks / axes limits.
+
+```{r, warning=F, message=F, fig.height=1.9, fig.width=3, tidy.opts=list(width.cutoff=35), fig.retina = 3}
+plot_dl + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6))
+plot_dl + scale_x_continuous(limits=c(-20,300),breaks = pretty_breaks(6)) 
+```
+
+---
+## Intermediate formatting lost. 
+
+* In the end we will need ***all*** the commands in one go! Or we need to store intermediate graphs and update those!
+
+```{r, out.width = "500px", echo=FALSE, fig.pos='center', }
+knitr::include_graphics("https://media.giphy.com/media/gKsJUddjnpPG0/giphy.gif")
+```
+
+---
+## Themes.
+
+* ggthemes. ??ggthemes for all options.
+* google doc theme. Base size = fonts.
+
+```{r, warning=F, message=F, fig.height=3.6, fig.width=5, fig.pos="center", fig.retina = 3}
+plot_dl+theme_gdocs(base_size = 14)
+```
+
+---
+## All in one!
+
+```{r, warning=F, message=F, tidy=TRUE, fig.height=4, fig.width=4, tidy.opts=list(width.cutoff=12), fig.retina = 3}
+plot_dl<-plot_dl+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Delta") + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
+plot_dl
+```
+
+---
+## Try it yourself.
+
+* Make a plot for jetblue, similar to the one for Delta Airlines
+
+--
+
+* Solution
+
+```{r, tidy=TRUE, fig.height=3, fig.width=4, tidy.opts=list(width.cutoff=35), warning=F, message=F, fig.retina = 3}
+plot_jetblue<-plot_jetblue+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Jet Blue")+ scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
+plot_jetblue
+```
+
+---
+## Saving it. ggsave??
+
+```{r, tidy=TRUE, tidy.opts=list(width.cutoff=55), warning=F,message=F}
+ggsave("plot_jetblue.pdf", width= 250, height=250, units="mm")
+```
+
+--
+
+default is to save last plot displayed but you can explicitly name it (plot = )
+
+--
+
+You can change the output size to different units ("in")
+
+--
+
+dpi for resolution. 
+
+--
+
+different formats (e.g., .png, .tiff)
+
+--
+
+It will be saved in your working directory. (change that with path = ).
+
+---
+## Combing multiple charts. plot_grid()
+
+```{r, echo=F, message=F, warning=F, tidy.opts=list(width.cutoff=55), fig.retina = 3}
+plot_jetblue<-plot_jetblue+ geom_histogram(binwidth=5, colour = "black", fill = "white") +  ylab("Count") + xlab("Departure Delay - Jet Blue") + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
+plot_dl<-plot_dl+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Delta") + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
+```
+
+```{r, tidy=TRUE, fig.height=4, fig.width=8, tidy.opts=list(width.cutoff=55), fig.retina = 3, warning=F, message=F}
+library(cowplot)
+plot_grid(plot_dl,plot_jetblue, labels=c('A', 'B'), label_size= 10, align="h")
+ggsave("plot_panelled.pdf", width= 250, height=250, units="mm")
+```
+
+---
+## Interpretation.
+
+```{r, tidy=TRUE, fig.height=5, fig.width=8, tidy.opts=list(width.cutoff=55), warning=F, message=F, echo=F, fig.retina = 3}
+library(cowplot)
+plot_grid(plot_dl,plot_jetblue, labels=c('A', 'B'), label_size= 10, align="h")
+ggsave("plot_panelled.pdf", width= 250, height=250, units="mm")
+```
+
+---
+## What is good/bad about this chart?
+
+* Quite clear.
+
+--
+
+* Only 2 groups? Overlay?
+
+--
+
+* Varying N. Sample size.
+
+--
+
+* White space.
+
+--
+
+* Units? (in minutes).
+
+--
+
+* (Suppressed some 'missing' values? - binning can obscure things - not always major issue)
+
+---
+## Violin plot (with box plot)
+
+* Now let's approach this in a different way.
+
+* Violin plots combined with a box plot (remember last week) give us good overview.
+
+```{r, out.width = "500px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/x5JsFS1XtqCeA/giphy.gif") # From giphy
+```
+
+---
+## Basic violin plot.
+
+```{r,tidy=TRUE, fig.height=3.5, fig.width=8, tidy.opts=list(width.cutoff=50), fig.retina = 3}
+### combine them into a single dataframe.
+violinplot_data<-rbind.data.frame(jfk_delta,jfk_jetblue)
+library(dplyr)
+violinplot_data<- violinplot_data %>% mutate(carrier= recode(carrier, B6= "Jet Blue", DL="Delta Airlines"))
+### make plot
+violinplot<-ggplot(violinplot_data, aes(x = carrier, y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2) 
+violinplot
+```
+
+---
+## Add some 'oomph'.
+
+```{r,fig.height=4.5, fig.width=8,tidy=T, tidy.opts=list(width.cutoff=55), fig.retina = 3}
+violinplot + xlab("Carrier")+ylab("Delay Departure (mins.)") + theme_stata(14)
+```
+
+---
+## Can you describe the graph?
+
+* What are the key points?
+
+```{r, out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/bmcu39f2kh0WY/giphy.gif")
+```
+
+---
+## Changing the order. 
+
+* Suppose we want Jet Blue on the left for the X-axis.
+
+```{r,fig.height=2.1, fig.width=6,tidy=T, tidy.opts=list(width.cutoff=50), fig.retina = 3}
+### recode.
+library(haven) # needed for as_factor
+violinplot_data$carrier_rec<-as_factor(violinplot_data$carrier)
+ordered_levels<-c("Jet Blue", "Delta Airlines")
+violinplot_data<- mutate(violinplot_data, carrier_rec = factor(carrier_rec, levels = ordered_levels))
+### violinplot_2
+violinplot_2<-ggplot(violinplot_data, aes(x = carrier_rec, y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2)  + xlab("Carrier")+ylab("Delay Departure (mins.)") + theme_stata(14)
+violinplot_2
+```
+
+---
+## _t_-test: Are there more delays with Delta than with Jet Blue?
+
+* Let's run an independent samples _t_-test
+```{r}
+t.test(dep_delay~carrier, data=violinplot_data)
+```
+
+---
+## Let's break it down.
+
+* dependent variable~independent variable 
+
+--
+
+* Welch correction, this corrects for assumption of equality of variances. And should be the [default](https://www.rips-irsp.com/articles/10.5334/irsp.82/galley/42/download/), also check [this](https://academic.oup.com/beheco/article/17/4/688/215960/The-unequal-variance-t-test-is-an-underused).
+
+---
+## No SD?
+
+* We need standard deviations for our report!
+
+```{r}
+sd(jfk_delta$dep_delay_no_miss)
+sd(jfk_jetblue$dep_delay_no_miss)
+```
+
+---
+## APA style write up.
+
+You have done this before!
+
+An independent-samples _t_-test was used to compare the delays in departure between Delta Airlines and Jet Blue in minutes. There was no significant difference between Delta airlines (_M_ = 17.30, _SD_ = 51.17) and Jet Blue (_M_ = 5.89, _SD_= 24.10) in average departure delay time, _t_(52.83)= 1.45, _p_=.15.
+
+---
+## Non-parametric tests.
+
+* Do not make typical assumptions associated with parametric statistics (e.g., (roughly) normal distribution).
+* Useful in our case, given the clear extreme values!
+* Downside: information lost, often less powerful. 
+
+```{r, out.width = "350px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/l0MYwaJHfKsKwu4Ug/giphy.gif")
+```
+
+---
+## Wilcoxon-Mann-Whitney U. 
+
+*  Other alternatives exist (e.g., Mood's median test)
+*  Wilcoxon-Mann-Whitney U is common [alternative](http://vassarstats.net/textbook/ch11a.html) to _t_-test. (Sometimes, just called Mann-Whitney U).
+
+```{r}
+wilcox.test(dep_delay~carrier, data=violinplot_data)
+```
+
+---
+## Kruskal-Wallis.
+
+* We need as_factor. Read more [here](http://vassarstats.net/textbook/ch14a.html)
+
+```{r}
+kruskal.test(dep_delay~as_factor(carrier), data=violinplot_data)
+```
+
+---
+## Medians?
+
+* We need the medians for our report!
+
+```{r}
+median(jfk_delta$dep_delay_no_miss)
+median(jfk_jetblue$dep_delay_no_miss)
+```
+
+---
+## APA style write up.
+
+* A Wilcoxon-Mann-Whitney test showed that there was a significant difference between Delta airlines (_Mdn_ = 1) and Jet Blue (_Mdn_= -1) in delays, _W_= 3375.5, _p_= .026.
+* So: Delta airlines significantly later than Jet Blue.
+
+```{r, out.width = "275px", echo=FALSE}
+knitr::include_graphics("apa.png")
+```
+
+---
+## Bootstrapping! 
+
+Bootstrapping is sampling ***with replacement***
+
+It is a non-parametric technique.
+
+Basically repeatedly drawing a sample and calculating a statistic.
+
+Can be applied to nearly any technique.
+
+---
+## How to do it.
+
+boot package. Find out more [here](http://people.tamu.edu/~alawing/materials/ESSM689/Btutorial.pdf).
+
+--
+
+We make a function with two arguments (data and indices). We will then feed our data to the function!
+
+--
+
+```{r,tidy=T, tidy.opts=list(width.cutoff=45)}
+### Bootstrap 95% CI for t-test
+library(boot)
+### function to obtain p.values from t.test from the data 
+p_value <- function(data, indices) {
+  data_boot <- data[indices,] # allows boot to select sample 
+  T_test_boot <- t.test(dep_delay~carrier, data=data_boot)
+  return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
+} 
+```
+
+---
+## Now let's run it. 
+
+```{r,tidy=T, tidy.opts=list(width.cutoff=55)}
+### Bootstrapping is truly random.
+### We need a 'seed' to make it replicable.
+set.seed(2019)
+### R is number of samples we want to draw?
+### we store it in results.
+results <- boot(data=violinplot_data, statistic=p_value,R=10000)
+```
+
+---
+## Results.
+
+```{r}
+## view results
+head(results) 
+```
+
+---
+## Plot Results.
+```{r, out.width = "450px", fig.retina = 3}
+plot(results)
+```
+
+---
+## 95%CI for _p_.
+
+* Various types. Read all about [here](http://www.tau.ac.il/~saharon/Boot/10.1.1.133.8405.pdf)
+
+--
+
+* One of the ['best'](https://faculty.washington.edu/heagerty/Courses/b572/public/GregImholte-1.pdf) methods is Bias-Corrected Accelerated.
+
+--
+
+```{r}
+boot.ci(results, type="bca")
+```
+
+---
+## What would you write in your report?
+
+* The 95% Bias-Corrected Accelerated interval (using 10,000 bootstrap samples) for _p_ was [.006, .857].
+
+```{r, out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/yNs2a0jRkYxy6191B2/giphy.gif")
+```
+
+---
+## Test it yourself.
+
+* Do the same as shown but now do it for delay in arrival.
+
+---
+## Exercise. 
+- Install and load the 'carData' package. load the professorial 'Salaries' dataset.
+ 
+- This dataset has 397 cases and 6 variables. ??Salaries. Have a look (perhaps use ??skimr)
+ 
+- Calculate the monthly salary (note that these are 9 month salaries)
+ 
+- Make a 'beautiful' scatter plot with yrs.since.phd on X-axis and monthly salary and save it.
+ 
+- Colour the scatter plot by gender.
+ 
+- Make a panelled 'beautiful' histogram with the distribution of salaries by rank and save it.
+
+---
+## Exercise (cont'd).
+
+- Make a 'beautiful' violin plot with gender on the X-axis and monthly salary on Y-axis.
+
+- Test whether men earn more than women do. Use a parametric test and bootstrap it. Also use a non-parametric  test. Report it as you would in an academic paper. Reflect and discuss: Why is this a good/bad testing approach?
+ 
+-  Bonus: calculate the mode of monthly income for each gender. calculate the (parametric) 95%CI for the mean of monthly income for each gender. 
+ 
+---
+## References (and further reading.)
+
+* Crawley, M. J. (2013). _The R book: Second edition._ New York, NY: John Wiley & Sons.
+* Davison, A. C., & Hinkley, D. V. (1997). _Bootstrap methods and their application_. Cambridge, UK: Cambridge University Press.
+* Pruim, R., Kaplan, D., & Horton, N. (2012). [mosaic: project MOSAIC statistics and mathematics teaching utilities](https://cran.r-project.org/doc/contrib/Horton+Pruim+Kaplan_MOSAIC-StudentGuide.pdf). R package version 0.6-2. 
+* Siegel, S. & Castellan, N.J. Jr. (1988). _Nonparametric statistics for the behavioral sciences. 2nd Edn._ McGraw-Hill, New York.
+* Stulp, G. (2017). _[ggplotgui](https://github.com/gertstulp/ggplotgui)_
+* Wickham, H., & Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
+* Willems, K. (2015) _[How to Make a Histogram with ggplot2](https://www.datacamp.com/community/tutorials/make-histogram-ggplot2#gs.MSjGyL8)_
+
+---
+## Acknowledgments.
+
+[Gert Stulp](http://gertstulp.github.io) provided code for the ggplot2 section of this lecture.
+
+These slides were built with [xaringan](https://github.com/yihui/xaringan).
+
+
+
+
+
+
+
