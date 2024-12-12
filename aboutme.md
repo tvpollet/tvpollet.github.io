@@ -5,8 +5,7 @@ subtitle: barba tenus sapientes
 published: true
 ---
 
-I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky <head>
-    <meta charset="UTF-8">
+I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Follow me on Bluesky</title>
     <style>
@@ -26,10 +25,10 @@ I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on
             background-color: #0d8bf2;
         }
     </style>
-</head>
 <body>
     <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-button">Follow me on Bluesky</a>
-</body>
+</body>.
+
 ### My work.
 
 My research focuses on understanding the wealth of **social relationships** people have (e.g., romantic relationships, friendships, family relationships) and understanding the role of **individual differences** (e.g., personality, height, hormones,…) for these social relationships from an **interdisciplinary framework**. To this end, I conduct survey, observational, and experimental studies, next to analysing secondary datasets. Furthermore, I am interested in (improving) **methodology and statistics** and frequently collaborate with others on diverse topics (see below).
