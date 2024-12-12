@@ -1,0 +1,395 @@
+---
+title: "Solution Lecture 4"
+output: html_document
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 4 instructions.
+
+- Load last week's Salaries dataset. If necessary, calculate monthly_salary again.
+
+- calculate a Spearman and Pearson correlation between years since Ph.D. and monthly salary. Conduct a significance test for one of them. Pick one and discuss the outcome 
+
+- Build a hierarchical regression model, in step 1 use monthly salary as dependent and year since Ph.D. as independent, in step 2 add gender (keep all variables from step 1), in step 3 add rank (keep all variables from step 2). Export the hierarchical regression table.
+
+- Test the assumptions for the final model, how would you combat any issues that arise in terms of violations of these assumptions?
+
+- Calculate the standardized coefficients for model 1 ($\beta$). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
+
+- What does the final model predict in terms of monthly salary shift, when there is a shift of being 3 years post-Ph.D.
+
+- Install and load the 'caret' package. load the GermanCredit dataset. ??GermanCredit to find out more also [here](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)). It contains data on credit scores for a 1,000 cases and has 62 variables.  As done before, you might want to explore the descriptive statistics.
+
+- Make a corrplot() for up to 10 continuous variables in the GermanCredit dataset. Export a correlation matrix (up to 10 variables). 
+
+- Conduct a hierarchical logistic regression on 'Class' as dependent, in each step keeping the previous variables. In step 1 add Amount. In step 2 add CreditHistory.PaidDuly. In step 3 add Age. In step 4 add Telephone. Export a table with your key results.
+
+- Choose some categorical variables and make a (beautiful) mosaic plot with credit class as dependent.
+
+- Calculate all odds ratios for model 4. Calculate the odds ratio for a shift in 1,000 DM (Deutsche Mark - pre-euro era) in credit status for model 4. 
+
+- BONUS: Make a mosaic plot via ggmosaic()  with credit class as dependent.
+
+- BONUS: Have a look at [ROC curves](https://cran.r-project.org/web/packages/plotROC/vignettes/examples.html) and plot one for the credit data.
+
+## Back to the salaries data.
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture4")
+require(carData)
+salaries<-carData::Salaries
+require(dplyr)
+salaries<- salaries %>% mutate(monthly_salary=salary/9)
+require(skimr)
+skim(salaries)
+```
+
+## Correlation coefficients.
+
+```{r}
+cor(salaries$yrs.since.phd, salaries$monthly_salary)
+cor(salaries$yrs.since.phd, salaries$monthly_salary, method='spearman')
+```
+
+## Significance tests for correlations.
+
+Here I have also calculated the 99% confidence interval.
+
+```{r}
+cor.test(salaries$yrs.since.phd, salaries$monthly_salary, conf.level = .99)
+cor.test(salaries$yrs.since.phd, salaries$monthly_salary, method = 'spearman', conf.level = .99)
+```
+
+**Sample write up**: Years since Ph.D. and monthly salary were positively and moderately related ($r_s$= .476, _p_<.0001).
+
+## hierarchical OLS regression.
+
+Build the models.
+
+```{r}
+# rename sex to gender
+colnames(salaries)[5] <-"gender"
+# Linear models.
+lm_1<-lm(monthly_salary ~ yrs.since.phd, data= salaries)
+lm_2<-lm(monthly_salary ~ yrs.since.phd + gender, data= salaries)
+lm_3<-lm(monthly_salary ~ yrs.since.phd + gender + rank, data= salaries)
+summary(lm_1)
+summary(lm_2)
+summary(lm_3)
+```
+
+Note that in the final model years since Ph.D. is no longer statistically significant. It is important to note that we have not yet looked into the assumptions or made graphs.
+
+## Export the models.
+
+I chose American Sociological review.
+ 
+```{r}
+require(stargazer)
+stargazer(lm_1,lm_2,lm_3,  dep.var.labels=c("Monthly Salary (USD)"),covariate.labels=c("Years since Ph.D.","Gender: Male", "Rank: Associate Prof.", "Rank: Prof."), style="asr", out="hierarchical_exercise4_stargazer.htm", header=F)
+```
+
+You can also rely on APA Tables. But I found it buggy when combining multiple models (issues with rbind()). (There is also apaStyle but that does not play nice with RJava on Mac). Here is an example.
+
+```{r}
+require(apaTables)
+apa.reg.table(lm_1,filename = 'APA_exercise4.doc',table.number = 1)
+```
+
+## Assumptions.
+
+### Linearity.
+
+Note that here we only checked the assumptions for the **final** model.
+
+```{r}
+plot(lm_3, which = 1)
+```
+
+Plot 1: Not curvilinear but also not very nicely distributed. Not wholly linear as we would want it. The data shows clumping, likely as there are pay grades. There are no data between 11,000-13,000 USD and we linearly interpolate. That could be wrong - as in reality people move up in steps, something our model does not account for. While one would loose information, a solution could be to explore ordinal methods (incl. [tobit regression](https://stats.idre.ucla.edu/r/dae/tobit-models/)). These more advanced methods can handle censoring issues. There is a trade-off between keeping things 'simple'(- in reality most relationships are not wholly linear) and easily interpretable versus correctly describing the data (but also running the risk of overfitting). Within its remits we can still use our model, however - bearing in mind that it is a _linear_ representation of the relationships between variables.
+
+### Normality of residuals.
+
+```{r}
+plot(lm_3, which=2)
+```
+
+**Plot 2**: Generally OK but at the top end our model 'derails'. Also one extreme case (44), we could consider running the analysis with or without that case. 
+Another potential solution is to log-transform our data. What happens then?
+
+
+```{r}
+lm_3_log<-lm(log10(monthly_salary) ~ yrs.since.phd + gender + rank, data= salaries)
+plot(lm_3_log, which=2)
+```
+
+This looks much nicer, does it not! But we should bear in mind that a shift in X now represents a shift in log10(Y) which might make it harder to directly interpret the coefficients (but less of a worry with distribution of the residuals now.)
+
+### Homoscedasticity.
+
+```{r}
+plot(lm_3, which=3)
+```
+
+**Plot 3**: Ideally, we would want a straight line here. That is not the case. Again notice the issues with the gap in X. The 'funnel' is widening when X is increasing. So, this could point to issues with heteroscedasticity. The plot is slightly better for our log-transformed data. A solution is to work with Heteroscedasticity consistent errors.
+
+```{r}
+plot(lm_3_log, which=3)
+```
+
+A Breusch-Pagan test shows that in both cases, there would be issues with the assumption of homoscedasticity. (Also it suggests that the problem is actually the same, if not stronger, in the 'log' model).
+
+```{r}
+require(lmtest)
+bptest(lm_3)
+bptest(lm_3_log)
+```
+
+### Cook's distance.
+
+Cook's distance gives an indication of influential cases in the regression model. Some put the cut-off at 4/(N - k -1)  -- (check [here](https://stats.stackexchange.com/questions/22161/how-to-read-cooks-distance-plots)). But best to just check the plots.
+
+```{r}
+plot(lm_3, which=4)
+```
+
+
+**Plot 4**: The plot is largely fine, there are some influential cases (351, 283), perhaps one would ignore 331 as it is close to other peaks. One could run the analyses with and without those cases. Alternatively, one could bootstrap the relevant statistics, in case of worry about robustness. (Or rely on 'robust' techniques - an example below).
+
+Incidentally in our transformed model, 283 (and perhaps 351) are again potential 'monkey wrenches' you could consider again to bootstrap your models, or present models with and without those 'outliers'.
+
+```{r}
+plot(lm_3_log, which=4)
+```
+
+### Autocorrelation.
+
+In this case both models exhibit autocorrelation.
+
+```{r}
+require(lmtest)
+dwtest(lm_3)
+dwtest(lm_3_log)
+```
+
+## Heteroscedasticty and autocorrelation corrected errors.
+
+Not that I expect you to run this but here is an example of a model which correctly deals with this issue. Notice the difference it makes for the Gender coefficient's SE and significance level. Whereas before we might have ruled out the existence of an effect, this model suggests a trend (still not strong evidence though).
+
+```{r}
+require(sandwich)
+summary(lm_3)
+vcv <- vcovHAC(lm_3) # variance covariance matrix (which we might want to store)
+coeftest(lm_3, vcov = vcovHAC(lm_3)) 
+```
+
+## $\beta$ for model 1
+
+Here we calculate the $\beta$'s for model 1. I used dplyr to z-score (and the mosaic package to get an alternative method for _z_-scoring as scale() can run into problems).
+
+```{r}
+require(dplyr)
+require(mosaic)
+salaries <- salaries %>% mutate(monthly_salary_stand=zscore(monthly_salary), yrs.since.phd_stand=zscore(yrs.since.phd))
+lm_stand1<- lm(monthly_salary_stand ~ yrs.since.phd_stand-1, data= salaries)
+summary(lm_stand1)
+# alternative
+require(QuantPsyc)
+lm.beta(lm_1)
+```
+
+The $\beta$ is 0.42 this implies that a shift in one standard deviation of years since Ph.D. results in a shift of .42 standard deviation. (Notice how this is the same value as your Pearson correlation coefficient!)
+
+
+
+## Bootstrap
+
+```{r}
+# Bootstrap 95% CI for B coefficient.
+library(boot)
+# function to obtain p.values from F-test from the data
+coeff_B <- function(data, indices) {
+data_boot <- data[indices, ] # allows boot to select sample
+B_boot <- lm(monthly_salary_stand ~ yrs.since.phd_stand-1, data = data_boot)
+return(B_boot$coeff[1]) # position of years 
+}
+# bootstrapping with 10000 replications
+set.seed(1983) # slightly worse year.
+results_coeff_B <- boot(data = salaries, statistic = coeff_B, R = 10000)
+```
+
+Now let us calculate the confidence interval.
+
+```{r}
+plot(results_coeff_B)
+```
+
+
+```{r}
+# get 95% confidence interval 
+boot.ci(results_coeff_B, type='bca')
+```
+
+**Sample write up**: The 95% confidence interval for $\beta$ using 10,000 samples and bias-corrected accelerated bootstrapping is [.31, .52]. (If you had done a bootstrap of the Pearson correlation coefficient you should get similar values).
+
+## Model prediction.
+
+Best to center everything. No point in centering categorical variables, note that we are calculating a shift here based on the reference categories (_women_ and _asst profs._). A shift of 3 years is associated with around $31 less a month, all else being equal. Now that is not very impressive, and that's in part explained by the fact that academic rank does so much of the 'heavy lifting' and we are now looking at a shift away from the means (!). For a shift at the start of the career, you could use the initial model. A shift from asst. to associate professor implies another \$1557 a month (all else being equal). (For men add another \$572 a month (!))
+
+```{r}
+require(dplyr)
+# create centered variables
+salaries<-dplyr::mutate(salaries, monthly_salary_cent=monthly_salary-mean(monthly_salary),yrs.since.phd_cent=yrs.since.phd-mean(yrs.since.phd))
+# lm.
+lm_3_cent<-lm(monthly_salary_cent ~ yrs.since.phd_cent + gender + rank, data=salaries)
+summary(lm_3_cent)
+# a shift of 3 for all coefficients
+3*lm_3_cent$coefficients
+```
+
+## German credit data.
+
+```{r}
+require(caret)
+data(GermanCredit)
+data_credit<-GermanCredit
+require(skimr)
+skim(data_credit)
+```
+
+You could also use the 'summarytools' package.
+
+## Corrplot and Correlation matrix output.
+
+You might have used different variables. Because they are all scored as between and 0 and 1 you could use them all in these plots.
+
+```{r}
+require(apaTables)
+require(dplyr)
+cor_table<-dplyr::select(data_credit, c(Age,Amount,Telephone))
+apa.cor.table(cor_table, filename = "correlations-credit.doc")
+
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
+require(ggcorrplot)
+cormatrix<-cor(cor_table)
+ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", lab = TRUE)
+```
+
+## Hierarchical logistic regression
+
+We built 4 hierarchical models.
+
+```{r}
+levels(data_credit$Class) # Bad is the reference category.
+data_credit$Class_ref_good<-relevel(data_credit$Class, ref="Good") # recode, as this is perhaps more sensible if we want to know who will default.
+log1<-glm(Class_ref_good~ Amount, data=data_credit, family = binomial)
+log2<-glm(Class_ref_good~ Amount+CreditHistory.PaidDuly, data=data_credit, family = binomial)
+log3<-glm(Class_ref_good~ Amount+CreditHistory.PaidDuly+Age, data=data_credit, family = binomial)
+log4<-glm(Class_ref_good~ Amount+CreditHistory.PaidDuly+Age+Telephone, data=data_credit, family = binomial)
+summary(log1)
+summary(log2)
+summary(log3)
+summary(log4)
+```
+
+## Export the results.
+
+This exports the results. Note that the odds ratio of amount is close to 1. This is because the base unit is 1 DM (Deutsche Mark) - which might not make a lot of sense! (Rescore via log10 or standardize?)
+
+
+```{r}
+require(stargazer)
+stargazer(log1,log2,log3,log4,dep.var.labels=c("Credit status (reference= Good)"), covariate.labels=c("Amount (in DM)", "Credit History (Duly paid)","Age", "Telephone (yes/no)"), report = "vc*", omit=c("Constant"), apply.coef=exp, t.auto=F, p.auto=F, style="asr", out="logistic_base_exercise4.htm", header=FALSE)
+```
+
+Note that a value <1 means that odds will become lower. For ease of interpretation one would take the inverse of the odds ratio.
+
+Here are the Pseudo- $R^2$ values.
+
+```{r}
+require(rcompanion)
+nagelkerke(log1, restrictNobs=T)
+nagelkerke(log2, restrictNobs=T)
+nagelkerke(log3, restrictNobs=T)
+nagelkerke(log4, restrictNobs=T)
+```
+
+## Mosaic plot.
+
+Here is an example of a mosaic plot. It becomes a bit more difficult with more variables added.
+
+```{r}
+require(RColorBrewer)
+# pick some colours.
+colours<-c(color = brewer.pal(2, "Set2"))
+fill_colours<-rep(colours, each=2) # 4 quadrants to fill
+require(vcd)
+mosaicplot1<-mosaic(~ Class_ref_good + Telephone, zero_size = 0, data=data_credit, gp = gpar(fill = fill_colours, col = 0), legend=F, labeling = labeling_values)
+```
+
+Another example, now with rental status and owning a telephone. You can further tinker with settings and variables. You can even have tests already included, explore the vcd package vignette for more!.
+
+```{r}
+require(RColorBrewer)
+# pick some colours.
+colours<-c(color = brewer.pal(2, "Set2"))
+fill_colours<-rep(colours, each=4) # 4 quadrants to fill
+require(vcd)
+mosaicplot2<-mosaic(~ Class_ref_good + Housing.Rent + Telephone, zero_size = 0, data=data_credit, gp = gpar(fill = fill_colours, col = 0), legend=F, labeling = labeling_values)
+```
+
+## Odds ratios.
+
+A shift of a 1,000 DM increases the odds of bad credit (instead of good credit) with a factor 1.145 (while keeping everything else constant). (Note that this model is based on people of an average age, who do not own a phone and who did not duly pay).
+
+```{r}
+require(oddsratio)
+require(dplyr)
+require(questionr)
+data_credit<- data_credit %>% mutate(Age_cent=Age-mean(Age), Amount_cent= Amount-mean(Amount))
+log_4_cent<- glm(Class_ref_good~ Amount_cent+CreditHistory.PaidDuly+Age_cent+Telephone, data=data_credit, family = binomial)
+odds.ratio(log_4_cent)
+# shift of 1,000 DM -- everything else put to 0
+or_glm(data_credit, incr= list(Amount_cent=1000, CreditHistory.PaidDuly=0, Age_cent=0, Telephone=0), log_4_cent)
+# alternative, which gaves same core resuls (other coeff's not interpretable)
+exp(log_4_cent$coefficients*1000)
+```
+
+## BONUS: ggmosaic()
+
+Facetted by Housing: rental status. Could be further improved by changing 0's and 1's.
+
+You might run into errors, see [this](https://github.com/haleyjeppson/ggmosaic/issues/9). The solution is to load the package 'devtools' and install the github version of ggmosaic, this line will do the trick: install_github('cran/ggmosaic').
+
+```{r}
+require(ggmosaic) # install development version as ggplot came with major updates breaking old ggmosaic.
+require(ggthemes)
+ggplot(data=data_credit) +
+  geom_mosaic(aes(x=product(Class_ref_good,Telephone), fill=Class_ref_good)) + facet_grid(Housing.Rent~.) + labs(x='Telephone') + scale_fill_brewer(palette="Dark2") + theme_gdocs()
+```
+
+## BONUS: ROC Curve.
+
+ROC curves are supercool and they are a tool used across a broad range of sciences. You can read up on them in the Agresti reference from the reading list. You can also read more in the reading lists or [here](https://online.stat.psu.edu/stat504/lesson/7/7.2/7.2.3). Anyway, have a look what's out there and try to have a go at making one yourself.
+
+```{r}
+require(pROC)
+resRoc <- roc(data_credit$Class_ref_good ~ log4$fitted)
+plot(resRoc, legacy.axes = TRUE)
+auc(resRoc)
+```
+
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/xT9IgKWQeoclWggTDO/giphy.gif")
+```
+
+```{r}
+sessionInfo()
+```
+

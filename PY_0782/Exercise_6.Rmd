@@ -1,0 +1,278 @@
+---
+title: "Solution Lecture 6"
+output: html_document
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 6 instructions.
+
+Download the data 'PSE_MOL_Doors.sav', these are the data from an experiment by Kamila Irvine and Piers Cornelissen. This file contains data on 95 women performing various scales and body image-related tasks. doors_front is the score from a gap estimation task, w_dn is the actual gap a participant can pass through. The (estimated) Point of subjective equality or PSE (the BMI they believe themselves to be) when viewing an imageset varying in BMI. Participants used the method of adjustment to estimate their body size with the same stimulus set as for the yes-no task (MOL).  BMI is the participant's actual BMI.
+
+Test the mediation model: doors_front --> PSE --> BMI via the causal steps method by Baron & Kenny. Report as you would do in a paper.
+
+Make a diagram (use 'mediate').
+
+Calculate a Sobel _z_ test and report.
+
+Test the mediation via Preacher & Hayes method.
+
+Now test a mediation model with 2 mediators (PSE and MOL) but with the same independent and dependent variables.
+
+Export a figure for that mediation model.
+
+Test the mediation via Imai et al.'s method.
+
+BONUS: perform the sensitivity analysis via Imai et al.'s method.
+
+## Load the data and describe.
+
+Load the data and get some descriptives.
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture6")
+require(haven)
+Data<-read_spss("PSE_MOL_DOORS.sav")
+require(skimr)
+skim(Data)
+```
+
+## Baron & Kenny.
+
+Bear in mind that here I have not checked the assumptions.
+
+### Step 1.
+
+There is support for Step 1.
+
+```{r}
+step1<-lm(BMI~doors_front, data=Data)
+summary(step1)
+```
+
+### Step 2.
+
+We also find support for step 2.
+
+```{r}
+step2<-lm(PSE~doors_front, data= Data)
+summary(step2)
+```
+
+### Step 3.
+
+Step 3 shows that the effect of doors_front was reduced from .156 to .020 and no longer significant.
+
+```{r}
+step3<-lm(BMI~PSE+doors_front, data= Data)
+summary(step3)
+```
+
+### Step 4
+
+We want this so we can make a diagram.
+
+```{r}
+step4<-lm(BMI~PSE, data= Data)
+summary(step4)
+```
+
+## Make a diagram
+
+Here is an example. That's admittedly not great.
+
+```{r}
+require(DiagrammeR)
+mermaid(" graph LR
+	        D(Doors)-->|.19***|P(PSE)
+	        P-->|.71***|B(BMI)
+          D-->|.16** / .02|B
+	        ")
+```
+
+This is perhaps better. Notice that these are B's.
+
+```{r}
+library(diagram)
+data <- c(0, "'.19***'", 0,
+          0, 0, 0, 
+          "'.71***'", "'.16** (.02)'", 0)
+M<- matrix (nrow=3, ncol=3, byrow = TRUE, data=data)
+plot<- plotmat (M, pos=c(1,2), 
+                name= c( "PSE","Doors", "BMI"), 
+                box.type = "rect", box.size = 0.12, box.prop=0.5,  curve=0)
+```
+
+Note that 'mediate' will standardize coefficients, which is why they are different from the above graph. (You can replace the values from the above as it is a better figure)
+
+```{r}
+require(psych)
+mediationmodel1<-mediate(BMI~doors_front+(PSE), std=TRUE, data=Data, n.iter=10000, plot=F)
+mediate.diagram(mediationmodel1)
+```
+
+**Summary**: A mediation analysis via Baron & Kenny's (1986) method showed that there was mediation (Figure X).
+
+## Sobel _z_ test.
+
+The mediator contains missing values! Therefore we remove those... .
+
+```{r}
+# create reduced dataframe. Remove missings.
+Data_red<-na.omit(cbind.data.frame(Data$PSE,Data$doors_front,Data$BMI))
+# rename the columns.
+colnames(Data_red)<-c("PSE","doors","BMI")
+require(bda)
+mediation.test(Data_red$PSE,Data_red$doors, Data_red$BMI)
+
+```
+
+A Sobel _z_ test showed that the mediation effect reported in Fig. X was significant (Sobel _z_= 3.63, _p_=.0003). 
+
+## Preacher & Hayes method.
+
+Standardized indirect effects were computed for 10,000 bootstrapped samples, and the 95% percentile confidence interval was examined via the 'psych' package. The bootstrapped standardized indirect effect was 0.27, and the 95% confidence interval ranged from 0.12 to 0.41. Thus, the indirect effect was statistically significant and mediation is supported.
+
+```{r}
+require(psych)
+set.seed(12345)
+mediate(BMI~doors_front+(PSE), std=T, data= Data, n.iter=10000)
+# below calls a longer output
+set.seed(12345)
+summary(mediate(BMI~doors_front+(PSE), std=T, data= Data, n.iter=10000), short=F)
+```
+
+## Both PSE and MOL.
+
+Note that this averages the effect of the mediators.
+
+```{r}
+require(psych)
+dual_path<-mediate(BMI~doors_front+(PSE)+(MOL), std=T, data= Data, n.iter=10000)
+dual_path
+```
+
+```{r}
+setEPS()
+postscript("dual_path.eps", horizontal = FALSE, onefile = FALSE, paper = "special")
+par(mar=c(1,1,1,1))
+mediate.diagram(dual_path)
+dev.off()
+```
+
+
+## Mediate. (+ Bonus: sensitivity analysis)
+
+The 'mediate' function cannot handle multiple mediators, we therefore test them sequentially. 'multimed' can handle multiple mediators but cannot take continuous variables as 'treat'.
+
+**Important**: below will take time.
+
+```{r}
+require(mediation)
+med.fit<-lm(PSE~doors_front, data=Data)
+out.fit<-lm(BMI~doors_front+PSE, data=Data)
+# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+set.seed(1984)
+med.out <- mediate(med.fit, out.fit, treat = "doors_front", mediator = "PSE", boot=TRUE, sims = 10000)
+```
+
+```{r}
+summary(med.out)
+plot(med.out) 
+sensitivity_analysis<-medsens(med.out) 
+summary(sensitivity_analysis)
+```
+
+Using a 10,000 bootstraps, the mediation analysis via Imai, Keele & Tingley's method (2011) showed a significant average causal mediation effect (ACME): 0.14, 95%CI [0.06, 0.21]. However, the average direct effect was no longer significant (ADE):.02, 95%CI [-0.06, 0.10].
+
+Now we do the same via MOL.
+
+```{r}
+require(mediation)
+med.fit2<-lm(MOL~doors_front, data=Data)
+out.fit2<-lm(BMI~doors_front+MOL, data=Data)
+# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+set.seed(1984)
+med.out2 <- mediate(med.fit2, out.fit2, treat = "doors_front", mediator = "MOL", boot=TRUE, sims = 10000)
+```
+
+So, we find support for mediation via both paths. The 'hidden confounder' has to be stronger for MOL than for PSE in order to explain away the mediation effect.
+
+```{r}
+summary(med.out2)
+plot(med.out2) 
+sensitivity_analysis2<-medsens(med.out2) 
+summary(sensitivity_analysis2)
+```
+
+## MBESS
+
+If mediation does not work, here is an alternative to achieve roughly the same thing.
+
+MBESS needs **complete** data. 
+
+```{r}
+Data_no_miss<-na.omit(Data)
+```
+
+Below does the calculation with PSE as a mediator.
+
+Note the warning points to the fact that there are 'extreme order statistics as endpoints'. This points to potential issues with outliers in the bootstrap.
+
+```{r}
+require(MBESS)
+set.seed(1234)
+MBESS_1<-MBESS::mediation(x = Data_no_miss$doors_front, mediator = Data_no_miss$PSE, dv = Data_no_miss$BMI, bootstrap = TRUE, which.boot = "BCa", B = 10000)
+MBESS_1
+```
+
+Using a 10,000 bootstraps via Bias-Corrected Acceleration, the MBESS mediation method (Preacher & Kelley 2011) showed a significant indirect effect: 0.136, 95%CI [0.07, 0.22]. 
+
+So, the indirect effect estimate ('ACME in mediate') is quite similar to the above (the confidence intervals differ somewhat due to differen methods of estimation). 
+You can derive the total effect as follows:
+
+```{r}
+# Indirect.Effect / Ratio.of.Indirect.to.Total.Effect
+0.13593392 / 0.87440417 
+```
+
+It does not print the average direct effect, like the Imai et al. method, when bootstrapping but you can still get an estimate (it is c.prime = .019). Note to the similarity to the estimate in the causal steps approach. These are unstandardised effects (hence the difference with the output from 'psych', for example). The 95% CI is not bootstrapped but is a normal approximation.
+
+```{r}
+MBESS_2<-MBESS::mediation(x = Data_no_miss$doors_front, mediator = Data_no_miss$PSE, dv = Data_no_miss$BMI)
+MBESS_2
+```
+
+
+## Robust Mediation.
+
+Here is yet another way to do a mediation, this time via the 'robmed' package. This method relaxes assumptions about normality which commonly apply to regression methods of mediation ([Alfons, Ates, and Groenen, 2018](https://hdl.handle.net/1765/109594)). This package also allows controlling for a variable via specifying `covariate = `. Check the manual.
+
+Using a 10,000 bootstraps via Bias-Corrected Acceleration, the robust mediation method (2011) showed a significant indirect effect: 0.11, 95%CI [0.04, 0.22]. The output also reports the bootstrapped direct effect estimate (akin to c' or ADE) but not the 95% CI.
+
+```{r}
+require(robmed)
+set.seed(1234)
+robmed <- test_mediation(Data,
+                       x = "doors_front",
+                       y = "BMI",
+                       m = "PSE", R=10000, type='bca')
+summary(robmed)
+```
+
+Do check the manual for further information.
+
+# A word of caution: Causal ordering!
+
+This was a toy example. As you might have spotted the logical chain might not make sense at all: we are predicting participants' actual BMI as an _outcome_ measure. However, it might be more sensible that BMI is a **predictor** of people's perceptions of whether they pass through a gap (rather than the other way round!). Have a look at the [paper](https://doi.org/10.1016/j.neuropsychologia.2018.11.015). It just goes to show, that we can build all sorts of models with these mediation packages and get "significant" results, but that they might make no theoretical sense!
+
+**THE END!**
+
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/aLdiZJmmx4OVW/giphy.gif")
+```

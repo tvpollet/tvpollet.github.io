@@ -1,0 +1,212 @@
+---
+title: "Solution Lecture 2"
+output: html_document
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 2: instructions.
+
+- Install and load the 'carData' package. load the professorial 'Salaries' dataset.
+ 
+- This dataset has 397 cases and 6 variables. ??Salaries. Have a look (perhaps use ??skimr)
+ 
+- Calculate the monthly salary (note that these are 9 month salaries)
+ 
+- Make a 'beautiful' scatter plot with yrs.since.phd on X-axis and monthly salary and save it.
+ 
+- Colour the scatter plot by gender.
+ 
+- Make a paneled 'beautiful' histogram with the distribution of salaries by rank and save it.
+
+- Make a 'beautiful' violin plot with gender on the X-axis and monthly salary on Y-axis.
+
+- Test whether men earn more than women do. Use a parametric test and bootstrap it. Also use a non-parametric  test. Report it as you would in an academic paper. Reflect and discuss: Why is this a good/bad testing approach?
+ 
+-  Bonus: calculate the mode of monthly income for each gender. calculate the (parametric) 95%CI for the mean of monthly income for each gender. 
+
+## Load salaries dataset.
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture2")
+require(car)
+salaries<-carData::Salaries
+require(skimr)
+skim(salaries)
+# Make 9 month salary
+require(dplyr)
+salaries<- salaries %>% mutate(monthly_salary=salary/9)
+```
+
+## 'Beautiful' scatter plot.
+
+Perhaps not the most beautiful but demonstrating the High Charts theme. Other themes: ??ggthemes. Toyed around with some settings
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+phd_plot<- ggplot(data = salaries, aes(yrs.since.phd, monthly_salary)) + geom_point(size=2.5, shape=16, alpha=0.5) + theme_hc(12)  + labs(x="Years since Ph.D.", y="Monthly Salary ($)", title="Salary Post-Ph.D.") 
+phd_plot
+ggsave("scatterplot_phd.pdf", width= 5, height=5, units="in")
+```
+
+
+## Colour scatter plot by gender.
+
+Altered the colour. Note that you could still toy with shapes and note that I removed the transparency. I toyed with the X-axis. You might also want to adjust your Y-axis.
+
+```{r}
+# rename sex to gender.
+colnames(salaries)[5] <-"gender"
+# make plot (if you are clever, you can recycle the previous plot)
+require(scales)
+gender_phd_plot<- ggplot(data = salaries, aes(yrs.since.phd, monthly_salary, colour= gender)) + scale_colour_brewer(palette = "Accent") + geom_point(size=2.5, shape=16) + theme_hc(12)  + labs(x="Years since Ph.D.", y="Monthly Salary ($)", title="Salary Post-Ph.D.") + scale_x_continuous(limits=c(-2,60),breaks = pretty_breaks(4))
+gender_phd_plot
+ggsave("scatterplot_gender_phd.pdf", width= 5, height=5, units="in")
+```
+
+## Panelled histogram.
+You can do it as in class but the following should save us some time! I used dplyr to make 3 separate plots. 
+
+```{r}
+require(dplyr)
+require(ggplot2)
+require(scales)
+require(cowplot)
+# note that I used coord_cartesian here to set the limits. You might need to peak a couple of times to get a sensible range.
+plots_3 <- salaries %>% group_by(rank) %>% do(plots=ggplot(data=.) +
+         aes(x=monthly_salary) + geom_histogram() +  ylab("Count") + xlab("Monthly Salary (US$)") + ggtitle(unique(.$rank)) + theme_gdocs(11) + coord_cartesian(xlim=c(5000,30000),ylim=c(0,30)) + scale_x_continuous(breaks = pretty_breaks(6)) + scale_y_continuous(breaks = pretty_breaks(4)))
+plots_3$plots[1]
+plots_3$plots[2]
+plots_3$plots[3]
+# plot them together, we need plotlist()
+plot_grid(plotlist=c(plots_3$plots[1],plots_3$plots[2],plots_3$plots[3]), align="h")
+ggsave("histograms_salary.pdf", width= 7, height=7, units="in")
+
+```
+
+Note that graph might not be optimal as we have a lot of white space! So have a look at the example below using density and histogram.
+
+```{r}
+require(dplyr)
+require(ggplot2)
+require(scales)
+require(cowplot)
+plot_density<-ggplot(salaries, aes(monthly_salary, fill=rank))+ geom_density(alpha=.4) + scale_fill_brewer(palette = "Pastel2") + geom_histogram(aes(y=..density..), alpha=0.5,position="identity") + ylab("Density") + xlab("Monthly Salary (US$)") + theme_fivethirtyeight(11)
+plot_density 
+ggsave("density_salary.pdf", width= 7, height=7, units="in")
+```
+
+It shows the differences quite neatly perhaps most striking is the very wide range of professorial salaries.
+
+## Violin plot.
+
+Could be even more beautiful but below is fairly clean, not?
+
+```{r}
+violinplot_gender<-ggplot(salaries, aes(x = gender, y = monthly_salary)) + geom_violin() + geom_boxplot(width = 0.2) + ylab("Monthly Salary (US$)") + xlab("Gender") + theme_economist_white(12)
+violinplot_gender
+ggsave("violinplot_gender.pdf",width= 5, height=5, units="in") 
+```
+
+Note some of the outliers in the male data and the 'long tail'. 
+
+## Tests.
+
+### t-test
+A _t_-test, first.
+
+```{r}
+t.test(monthly_salary~gender, data=salaries)
+require(dplyr)
+gender_group_sd<- salaries %>% group_by(gender) %>% summarise(SD_monthly=sd(monthly_salary))
+gender_group_sd
+```
+
+An independent-samples _t_-test was used to compare the (mean) monthly salaries between men and women. There was a significant difference with men (_M_ = \$12788, _SD_ = 3381.88) earning on average more than women do (_M_ = \$11222, _SD_= 2883.57), _t_(50.12)= 3.16, _p_=.003.
+
+But: bear in mind the outliers, and also some other things (e.g., taking into account rank/yrs since Ph.D.?)
+
+### Bootstrap it.
+
+```{r}
+### Bootstrap 95% CI for t-test
+require(boot)
+### function to obtain p.values from t.test from the data 
+p_value <- function(data, indices) {
+  data_boot <- data[indices,] # allows boot to select sample 
+  T_test_boot <- t.test(monthly_salary~gender, data=data_boot)
+  return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
+} 
+### Bootstrapping is truly random.
+### We need a 'seed' to make it replicable.
+set.seed(1981) # best year ever... .
+### R is number of samples we want to draw?
+### we store it in results.
+results <- boot(data=salaries, statistic=p_value,R=10000)
+plot(results)
+boot.ci(results, type="bca")
+boot.ci(results, conf=.90, type="bca")
+
+```
+
+The 95% bootstrapped confidence interval for _p_ ranges from <.0001 to .3548. (But note if you had picked a smaller CI, 90%CI, it would be a narrower range, duh :) - still quite a broad range)
+
+### Median test
+
+```{r}
+wilcox.test(monthly_salary~gender, data=salaries)
+gender_group_med<- salaries %>% group_by(gender) %>% summarise(median_monthly=median(monthly_salary))
+gender_group_med
+```
+
+A Wilcoxon-Mann-Whitney U test showed that men (_Median_=12005) earned significantly more than women did (_Median_=11528) _W_=5182.5, _p_= .008.
+
+But note that the medians are actually not significantly different, if you use a Mood's median test! (They are testing different things, medians vs. ranks.). So depending on how you look at the data, you might draw different conclusions here! Again, bear in mind that one would try and do multiple robustness checks to find out if any conclusion holds up. For example, by controlling for potential third variables. Have a think about what those could be.
+
+```{r}
+require(RVAideMemoire)
+mood.medtest(monthly_salary~gender, data=salaries)
+```
+
+## BONUS: Mode and 95%CI
+
+### Mode
+
+```{r}
+library(modeest)
+require(dplyr)
+male_data<-filter(salaries, gender=="Male")
+mlv(male_data$monthly_salary,  method='mfv')
+female_data<-filter(salaries, gender=='Female')
+mlv(female_data$monthly_salary,  method='mfv')
+
+```
+The modal monthly income for men was \$9222 for women it was \$8333. (Note that these are the averages of the two numbers reported).
+
+### 95%CI 
+
+There alternative ways of doing this but I did it via dplyr. Look back to the slides of week 1.
+
+```{r}
+require(dplyr)
+gender_group_95CI<- salaries %>% group_by(gender) %>% summarise(mean_monthly=mean(monthly_salary), SD_monthly=sd(monthly_salary), se_monthly=SD_monthly/sqrt(length(monthly_salary)), LL=(mean_monthly - 1.96*se_monthly), UL= (mean_monthly + 1.96*se_monthly))
+gender_group_95CI
+```
+The (parametric) 95% CI for mean monthly income of men is [\$12438, \$13138], in contrast for women this is [\$10317, \$12128]. These do not overlap.
+
+
+The end.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/opmIBtljGbwZi/giphy.gif")
+```
+
+```{r}
+sessionInfo()
+```
+
