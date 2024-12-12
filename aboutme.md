@@ -5,7 +5,7 @@ subtitle: barba tenus sapientes
 published: true
 ---
 
-I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fa-brands fa-bluesky"></i> Follow me on Bluesky</a><script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js" charset="utf-8"></script>
+I am Prof. Dr. Thomas Pollet. You can find out more about me on this site and on twitter <a href="https://twitter.com/tvpollet?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @tvpollet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script> or on bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fab fa-bluesky"></i> Follow me on Bluesky</a>
 
 <style>
     .bluesky-follow-button {
