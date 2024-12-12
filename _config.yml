@@ -9,6 +9,11 @@
 # --- Required options --- #
 ############################
 
+collections:
+  pages:
+    output: true
+    permalink: /:path
+
 # Name of website
 title: Thomas Pollet (Northumbria University)
 
