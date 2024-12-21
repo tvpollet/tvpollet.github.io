@@ -343,6 +343,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 #### Environmental psychology
 
 * [Environmental distress](https://doi.org/10.1007/s10393-006-0069-x){:target="_blank"}
+* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
 
 #### Miscellaneous
 
@@ -351,12 +352,12 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
 * [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
-* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
 * [The Barcelona Music Reward Questionnaire](https://doi.org/10.1525/mp.2013.31.2.118){:target="_blank"}
 * [Art Experience Questionnaire](http://www.neurohumanitiestudies.eu/archivio/Empirical_Studies_of_the_Arts_2010_Chatterjee.pdf){:target="_blank"} 
 * [The free will inventory: Measuring beliefs about agency and responsibility](https://doi.org/10.1016/j.concog.2014.01.006){:target="_blank"} 
 * [Animal Empathy Scale](https://doi.org/10.2752/089279300786999699){:target="_blank"}
 * [Utrecht Homesickness Questionnaire]( https://doi.org/10.1348/000712602162508){:target="_blank"}
+* [Food Disgust scale](https://doi.org/10.1016/j.foodqual.2017.07.013){:target="_blank"}
 
 
 ## Guardian 'blind dates' database.
