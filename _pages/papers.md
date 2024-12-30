@@ -29,7 +29,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2024/Accepted/in Press**
 
-[140.](https://doi.org/10.1038/s41598-024-81373-3) Peperkoorn, L.S., Hill, R.A., Barton, R.A. & **Pollet, T.V.** (2024). Meta-analysis of the red advantage in combat sports. _Scientific Reports, 14,_  30822.[https://doi.org/10.1038/s41598-024-81373-3](https://doi.org/10.1038/s41598-024-81373-3)
+[140.](https://doi.org/10.1038/s41598-024-81373-3) Peperkoorn, L.S., Hill, R.A., Barton, R.A. & **Pollet, T.V.** (2024). Meta-analysis of the red advantage in combat sports. _Scientific Reports, 14,_  30822. [https://doi.org/10.1038/s41598-024-81373-3](https://doi.org/10.1038/s41598-024-81373-3)
 
 [139.](https://doi.org/10.1155/2024/5513833) Murphy-Morgan, C., Hodgson, P., **Pollet, T.V.**, & Neave, N. (2024). A qualitative study of the impact of hoarding behaviours and social networks on older peoples supported housing decisions. _Health and Social Care in the Community_ 5513833. [https://doi.org/10.1155/2024/5513833](https://doi.org/10.1155/2024/5513833)
 
