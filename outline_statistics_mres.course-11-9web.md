@@ -21,7 +21,10 @@ This section of the course counts for 20 credits. 1 credit corresponds with arou
 ## Course objectives.
 There are four ***key*** course objectives. 
 
-1. KU3: Formulate balanced judgements with regard to complex, incomplete, ambiguous or sensitive data. 2. KU 4 - Contribute to the creation of new knowledge and practical applications within the discipline through a critical understanding of the processes through which knowledge is created 3. IPSA 2 - Use a variety of techniques, advanced research methods and technological skills applicable to psychological enquiry 4. PVA 1 - Apply relevant ethical, legal and professional practice frameworks (e.g., BPS), and maintain appropriate professional boundaries.
+1. KU3: Formulate balanced judgements with regard to complex, incomplete, ambiguous or sensitive data. 
+2. KU 4 - Contribute to the creation of new knowledge and practical applications within the discipline through a critical understanding of the processes through which knowledge is created 
+3. IPSA 2 - Use a variety of techniques, advanced research methods and technological skills applicable to psychological enquiry 
+4. PVA 1 - Apply relevant ethical, legal and professional practice frameworks (e.g., BPS), and maintain appropriate professional boundaries.
 
 In addition, you will learn:
 
@@ -55,19 +58,19 @@ I assume that you have *some* basic knowledge on statistical concepts. There is 
 You can find materials relating to induction [here](/induction_PY0794).
 
 ## Lectures.
-The academic calendar is in your programme handbook. For the Quant. Part of the module in semester 1, we will work through 11 lectures in 12 weeks, notice that there will be an academic development week with no lecture after week 5. Depending on timing the content of this schedule might shift a bit.
+The academic calendar is in your programme handbook. For the Quant. Part of the module in semester 2, we will work through 12 lectures in 10 weeks, notice that there will be an academic development week with no lecture after week 5. Depending on timing the content of this schedule might shift a bit.
 
-1. 30/1. Introduction. R Studio and R environment. Basics of Markdown. 
-2. 6/2. Data visualisation. (+ basic tests)
-3. 13/2. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
-4. 20/2. Correlation and multiple regression. Logistic Regression.
-5. 27/2. Moderation analyses. 
-6. 12/3. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
-7. 19/3. Exploratory Factor Analysis.
-8. 16/4. Confirmatory Factor Analysis CFA I
-9. 23/4. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
-10. 30/4. Multilevel models I + II
-11. 7/5. Buffer / Revision week / queries.
+1. 28/1. Introduction. R Studio and R environment. Basics of Markdown. 
+2. 4/2. Data visualisation. (+ basic tests)
+3. 11/2. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
+4. 28/2. Correlation and multiple regression. Logistic Regression.
+5. 25/2. Moderation analyses. (**Break after this week**)
+6. 11/3. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
+7. 18/3. Exploratory Factor Analysis.
+8. 25/3. Confirmatory Factor Analysis CFA I
+9. 1/4. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
+10. 29/4. Multilevel models I + II
+11. 6/5. Buffer / Revision week / queries.
 
 The handouts for every course lecture will be available via the electronic learning portal. There is no need to take extensive notes, as all the key information will be on the sheets.
 
@@ -144,6 +147,11 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 
 I take on board relevant study feedback. Below I only list the most meaningful changes.
 
+#### 2024-2025
+
+* Revised some minor aspects of the assessments
+* Revised and updated course content
+
 #### 2023-2024
 
 * Semester 2 module. Now preceded by programming course.
@@ -157,7 +165,7 @@ I take on board relevant study feedback. Below I only list the most meaningful c
 
 #### 2021-2022
 * Positive reception of worksheets and 'flipped classroom', so implemented for this year.
-* Positive feedback on assistants who will continue to be available. They also wrote 'cheat sheets' which will be available.
+* Positive feedback on assistants who will continue to be available. They also asked for 'cheat sheets' which will be available.
 * Revised and updated some course content.
 
 #### 2020-2021
