@@ -163,7 +163,9 @@ knitr::include_graphics("https://pbs.twimg.com/media/DJtZt-TWAAAWnDm.jpg")
 ---
 ## Time for a new dataset?
 
- Go to [https://psychology.okstate.edu/faculty/jgrice/personalitylab/methods.htm#MANOVA](https://psychology.okstate.edu/faculty/jgrice/personalitylab/methods.htm#MANOVA)
+ Go to [https://web.archive.org/web/20220813152747/https://psychology.okstate.edu/faculty/jgrice/personalitylab/methods.htm#MANOVA](https://web.archive.org/web/20220813152747/https://psychology.okstate.edu/faculty/jgrice/personalitylab/methods.htm#MANOVA)
+ 
+ Direct [link](https://web.archive.org/web/20180115145902/http://psychology.okstate.edu/faculty/jgrice/personalitylab/Iwasaki_Personality_Data.sav)
 
 --
 
@@ -176,7 +178,7 @@ knitr::include_graphics("https://pbs.twimg.com/media/DJtZt-TWAAAWnDm.jpg")
 ---
 ## Load data. 
 
-Three groups (Asians (international), Asian Americans, European Americans), NEO PI-R. Read more [here](https://psychology.okstate.edu/faculty/jgrice/personalitylab/Grice_Iwasaki_AMR.pdf)
+Three groups (Asians (international), Asian Americans, European Americans), NEO PI-R. Read more [here](https://web.archive.org/web/20220813152747/https://psychology.okstate.edu/faculty/jgrice/personalitylab/Grice_Iwasaki_AMR.pdf)
 
 ```{r}
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture3")

@@ -1,8 +1,18 @@
 ---
 title: "Solution Lecture 3"
-output: html_document
-author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
-date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+author: "Prof. Thomas Pollet, Northumbria University, UK (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer/)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
 ---
 
 ```{r setup, include=FALSE}
@@ -293,6 +303,10 @@ ggsave("violinplot_panelled_length.pdf", width= 250, height=250, units="mm")
 ```
  
 The graph shows that setosa has smaller petals and smaller sepals than other species. The difference is more pronounced in petals than in sepals. You could run follow up tests to examine the significance between species in terms of Sepals. 
+
+### A note on the iris dataset.
+
+You can read more [here](https://en.wikipedia.org/wiki/Iris_flower_data_set). It is widely used also in Machine Learning, hence I include it in the curriculum. However, it was promoted by Ronald Fisher, and you can read more about Fisher's Eugenics [here](https://www.newstatesman.com/long-reads/2020/07/ra-fisher-and-science-hatred).
  
 ### The END
 
