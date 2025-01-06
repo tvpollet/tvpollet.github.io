@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-03-19 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-01-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -120,7 +120,7 @@ Particular pet peeve of [mine](https://www.frontiersin.org/articles/10.3389/fpsy
 ## Correlation.
 
 
-```r
+``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture4")
 require(datasets)
 iris&lt;-iris # not really necessary but typically good to store away
@@ -132,7 +132,7 @@ cor(iris[1],iris[2]) # Correlation.
 ## Sepal.Length  -0.1175698
 ```
 
-```r
+``` r
 cor(iris$Sepal.Length, iris$Sepal.Width)
 ```
 
@@ -140,7 +140,7 @@ cor(iris$Sepal.Length, iris$Sepal.Width)
 ## [1] -0.1175698
 ```
 
-```r
+``` r
 # also change methods Kendall / Spearman. 
 cor(iris[1],iris[2], method='kendall')
 ```
@@ -154,7 +154,7 @@ cor(iris[1],iris[2], method='kendall')
 ## Significance test.
 
 
-```r
+``` r
 # custom confidence interval 90%
 cor.test(iris$Sepal.Length, iris$Sepal.Width, conf.level = .90)
 ```
@@ -185,7 +185,7 @@ The Pearson correlation between sepal length and sepal width was not statistical
 ## Make a pretty chart.
 
 
-```r
+``` r
 require(ggplot2) # note geom_jitter
 require(ggthemes)
 require(RColorBrewer)
@@ -202,7 +202,7 @@ gg
 ## Correlation matrix
 
 
-```r
+``` r
 require(apaTables)
 require(dplyr)
 cor_table&lt;-dplyr::select(iris,-Species)
@@ -240,7 +240,7 @@ apa.cor.table(cor_table, filename = "correlations-iris.doc")
 ## ggcorrplot.
 
 
-```r
+``` r
 # ggcorrplot, you can then further tweak this, as it is a ggplot.
 require(ggcorrplot)
 cormatrix&lt;-cor(cor_table)
@@ -262,7 +262,7 @@ For further info. see the tutorial referenced at the end by Willems.
 This is based on Fox (2015) and Fox (2002)
 
 
-```r
+``` r
 library(carData)
 prestige&lt;-carData::Prestige
 ```
@@ -298,7 +298,7 @@ And: _either_ export a .docx _or_ make a correlation plot.
 
 Partial correlations, when you want to control for a continuous variable (z)
 
-```r
+``` r
 require(ppcor)
 pcor.test(x = prestige$education, y= prestige$prestige , z=prestige$income)
 ```
@@ -320,7 +320,7 @@ When would you use linear regression?
 ## Run a basic one.
 
 
-```r
+``` r
 model_education&lt;-lm(prestige~education, data=prestige)
 summary(model_education)
 ```
@@ -376,7 +376,7 @@ More [here](https://peerj.com/articles/3323/).
 Good idea to plot before you start.
 
 
-```r
+``` r
 require(ggplot2)
 require(scales)
 require(ggthemes) 
@@ -388,7 +388,7 @@ plot_edu&lt;- plot_edu + scale_y_continuous(limits=c(0,100),breaks = pretty_brea
 ## Plot: By and large linear?
 
 
-```r
+``` r
 plot_edu
 ```
 
@@ -404,7 +404,7 @@ More [here](http://data.library.virginia.edu/diagnostic-plots/).
 [Here](https://rpubs.com/therimalaya/43190) is how you do it in ggplot2!
 
 
-```r
+``` r
 plot(model_education, which = 1)
 ```
 
@@ -413,7 +413,7 @@ plot(model_education, which = 1)
 ---
 ## Q-Q plot.
 
-```r
+``` r
 plot(model_education, which = 2)
 ```
 
@@ -423,7 +423,7 @@ plot(model_education, which = 2)
 ## Scale location plot.
 
 
-```r
+``` r
 plot(model_education, which = 3)
 ```
 
@@ -433,7 +433,7 @@ plot(model_education, which = 3)
 ## Outliers
 
 
-```r
+``` r
 plot(model_education, which = 4)
 ```
 
@@ -452,7 +452,7 @@ Some of these plots give you information which you could not get from just scatt
 ## Homoscedasticity: Breusch-Pagan test.
 
 
-```r
+``` r
 require(lmtest)
 bptest(model_education)
 ```
@@ -469,7 +469,7 @@ bptest(model_education)
 ## Durbin-Watson test (lmtest).
 
 
-```r
+``` r
 dwtest(model_education) #Durbin-Watson test.
 ```
 
@@ -488,7 +488,7 @@ dwtest(model_education) #Durbin-Watson test.
 Also note that there is one other alternative typically used in econometrics (Breusch-Godfroy). Check [here](https://stats.stackexchange.com/questions/148004/testing-for-autocorrelation-ljung-box-versus-breusch-godfrey).
 
 
-```r
+``` r
 Box.test(residuals(model_education), type="Ljung-Box") #Box test
 ```
 
@@ -524,7 +524,7 @@ Visual inspection suggested that a linear fit was appropriate. Visual inspection
 Usually we run more than one! And we build a table. (Normally you would check the assumptions of every model!)
 
 
-```r
+``` r
 lm_education_women&lt;-lm(prestige~education+women, data=prestige)
 summary(lm_education_women)
 ```
@@ -555,7 +555,7 @@ summary(lm_education_women)
 ## Stargazer! 
 
 
-```r
+``` r
 require(stargazer)
 stargazer(model_education,lm_education_women,  dep.var.labels=c("Prestige"),covariate.labels=c("Education (years)","Women (%)"), style="demography", out="hierarchical.htm", header=F)
 ```
@@ -598,7 +598,7 @@ Table X describes a hierarchical regression on prestige. The first model showed 
 Centering (week 2). We can use our model to make predictions... .
 
 
-```r
+``` r
 require(dplyr)
 # use :: just in case of conflicts.
 prestige&lt;-dplyr::mutate(prestige, women_cent= women-mean(women), education_cent= education-mean(education), prestige_cent= prestige-mean(prestige))
@@ -613,7 +613,7 @@ centered_model&lt;-lm(prestige_cent~education_cent+women_cent, data=prestige)
 a 10% shift in the number of women --&gt; decrease of around 1 point (0.93) in terms of prestige.
 
 
-```r
+``` r
 summary(centered_model)
 ```
 
@@ -628,7 +628,7 @@ summary(centered_model)
 ## 
 ## Coefficients:
 ##                  Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)    -1.865e-15  8.566e-01   0.000 1.000000    
+## (Intercept)     9.133e-15  8.566e-01   0.000 1.000000    
 ## education_cent  5.428e+00  3.161e-01  17.170  &lt; 2e-16 ***
 ## women_cent     -9.305e-02  2.719e-02  -3.422 0.000904 ***
 ## ---
@@ -639,7 +639,7 @@ summary(centered_model)
 ## F-statistic: 150.2 on 2 and 99 DF,  p-value: &lt; 2.2e-16
 ```
 
-```r
+``` r
 2*5.428
 ```
 
@@ -647,7 +647,7 @@ summary(centered_model)
 ## [1] 10.856
 ```
 
-```r
+``` r
 #alternatively
 2*coefficients(centered_model)[2]
 ```
@@ -657,7 +657,7 @@ summary(centered_model)
 ##       10.85559
 ```
 
-```r
+``` r
 # Shift of 10%
 10*coefficients(centered_model)[3]
 ```
@@ -675,7 +675,7 @@ Remember scale() - `\(\beta\)`'s are nothing more than standardized B's! (but be
 Interpreted in shifts of standard deviations. A `\(\beta\)` of 1 implies that a shift of 1SD in X leads to a shift of 1SD in Y.
 
 
-```r
+``` r
 # -1 so we can drop the intercept -- standardized regression has no intercept.
 model_education_stand&lt;-lm(scale(prestige)~scale(education)-1, data=prestige)
 summary(model_education_stand)
@@ -707,7 +707,7 @@ summary(model_education_stand)
 Note be wary with interaction terms! (center them beforehand - values might not be correct from QuantPsyc). Alternative function: lm.beta.
 
 
-```r
+``` r
 require(QuantPsyc)
 lm.beta(model_education)
 ```
@@ -723,7 +723,7 @@ lm.beta(model_education)
 Again note that you can do this for _any_ statistic.
 
 
-```r
+``` r
 # Bootstrap 95% CI for B coefficient.
 library(boot)
 # function which does bootstrapping.
@@ -741,7 +741,7 @@ results_coeff_B &lt;- boot(data = prestige, statistic = coeff_B, R = 10000)
 ## view results
 
 
-```r
+``` r
 # view results
 results_coeff_B
 ```
@@ -764,7 +764,7 @@ results_coeff_B
 ## 95% BCa (bias-corrected accelerated) confidence interval.
 
 
-```r
+``` r
 # get 95% confidence interval 
 boot.ci(results_coeff_B, type="bca")
 ```
@@ -834,7 +834,7 @@ Again, you can always bootstrap, which might make some of your conclusions more 
 9 variables and 768 cases, women aged 21 or older.
 
 
-```r
+``` r
 require(mlbench) # contains the data
 require(skimr)
 # Pima data first needs data() command.
@@ -883,7 +883,7 @@ Table: Data summary
 ## Logistic regression.
 
 
-```r
+``` r
 log1&lt;-glm(diabetes~mass, data=pima_data, family=binomial)
 log2&lt;-glm(diabetes~mass+age, data=pima_data, family=binomial)
 summary(log1)
@@ -893,10 +893,6 @@ summary(log1)
 ## 
 ## Call:
 ## glm(formula = diabetes ~ mass, family = binomial, data = pima_data)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.0094  -0.9184  -0.6598   1.2254   1.9107  
 ## 
 ## Coefficients:
 ##             Estimate Std. Error z value Pr(&gt;|z|)    
@@ -919,7 +915,7 @@ summary(log1)
 ## summary of log2
 
 
-```r
+``` r
 summary(log2)
 ```
 
@@ -927,10 +923,6 @@ summary(log2)
 ## 
 ## Call:
 ## glm(formula = diabetes ~ mass + age, family = binomial, data = pima_data)
-## 
-## Deviance Residuals: 
-##     Min       1Q   Median       3Q      Max  
-## -2.0306  -0.8907  -0.5692   1.1011   2.1555  
 ## 
 ## Coefficients:
 ##              Estimate Std. Error z value Pr(&gt;|z|)    
@@ -963,7 +955,7 @@ You should be concerned if the conclusions differ (likely suggests non-linearity
 ## Likelihood ratio tests.
 
 
-```r
+``` r
 anova(log1, test="Chisq")
 ```
 
@@ -988,7 +980,7 @@ anova(log1, test="Chisq")
 ## Likelihood ratio tests, log2.
 
 
-```r
+``` r
 anova(log2, test="Chisq")
 ```
 
@@ -1025,7 +1017,7 @@ We can take the exponential to interpret them!
 incr= custom increments (not useful/necessary if you have factors). Note that you might want to center your data beforehand! (ease of interpretation).
 
 
-```r
+``` r
 require(oddsratio)
 # shift of 5 in BMI.
 or_glm(pima_data, incr= list(mass= 5), log1)
@@ -1036,7 +1028,7 @@ or_glm(pima_data, incr= list(mass= 5), log1)
 ## 1      mass     1.669        1.479          1.894         5
 ```
 
-```r
+``` r
 or_glm(pima_data, incr= list(mass= 5, age=1), log2)
 ```
 
@@ -1050,7 +1042,7 @@ or_glm(pima_data, incr= list(mass= 5, age=1), log2)
 ## Alternative way.
 
 
-```r
+``` r
 require(questionr)
 odds.ratio(log1)
 ```
@@ -1063,7 +1055,7 @@ odds.ratio(log1)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ```
 
-```r
+``` r
 odds.ratio(log2)
 ```
 
@@ -1089,7 +1081,7 @@ You can then use this to calculate specific odds.
 Complex - you can get  Pseudo `\(R^2\)` but perhaps you should [not](https://stats.stackexchange.com/questions/3559/which-pseudo-r2-measure-is-the-one-to-report-for-logistic-regression-cox-s). 
 
 
-```r
+``` r
 require(rcompanion)
 nagelkerke(log1, restrictNobs=T)
 ```
@@ -1122,7 +1114,7 @@ nagelkerke(log1, restrictNobs=T)
 ## [1] "None"
 ```
 
-```r
+``` r
 nagelkerke(log2, restrictNobs=T)
 ```
 
@@ -1160,7 +1152,7 @@ nagelkerke(log2, restrictNobs=T)
 We can get a nice table with Odds Ratios and summaries. Or look into broom() and tidy() (see last week).
 
 
-```r
+``` r
 require(stargazer)
 stargazer(log1,log2, covariate.labels=c("BMI","Age"), omit=c("Constant"), apply.coef=exp, t.auto=F, p.auto=F, report = "vc*", style="asr", out="logistic.htm", header=FALSE)
 ```
@@ -1191,7 +1183,7 @@ Look into [ggmosaic()](https://cran.r-project.org/web/packages/ggmosaic/vignette
 First make some categorical variables.
 
 
-```r
+``` r
 require(dplyr) # make some categorical variables
 pima_data&lt;- pima_data %&gt;% mutate(obese=cut(mass, breaks=c(-Inf, 30, Inf), labels=c("No","Yes")))
 pima_data&lt;- pima_data %&gt;% mutate(nulligravada=cut(pregnant, breaks=c(-Inf, 0.99, Inf), labels=c("never pregnant","ever pregnant")))
@@ -1201,7 +1193,7 @@ pima_data&lt;- pima_data %&gt;% mutate(nulligravada=cut(pregnant, breaks=c(-Inf,
 ## Vcd
 
 
-```r
+``` r
 require(RColorBrewer)
 # pick some colours.
 colours&lt;-c(color = brewer.pal(2, "Set3"))
@@ -1226,7 +1218,7 @@ mosaicplot1&lt;-mosaic(~ diabetes + nulligravada + obese, zero_size = 0, data=pi
 ---
 ## Exercise. (cont'd)
 
-- Calculate the standardized coefficients for model 1 ($\beta$). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
+- Calculate the standardized coefficients for model 1 (`\(\beta\)`). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
 
 - What does the final model predict in terms of monthly salary shift, when there is a shift of being 3 years post-Ph.D.
 

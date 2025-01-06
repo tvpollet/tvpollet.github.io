@@ -1,8 +1,18 @@
 ---
 title: "Solution Lecture 4"
-output: html_document
-author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
-date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+author: "Prof. Thomas Pollet, Northumbria University, UK (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer/)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
 ---
 
 ```{r setup, include=FALSE}
@@ -384,6 +394,7 @@ plot(resRoc, legacy.axes = TRUE)
 auc(resRoc)
 ```
 
+## The end
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/xT9IgKWQeoclWggTDO/giphy.gif")
