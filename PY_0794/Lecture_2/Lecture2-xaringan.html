@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-01-30 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-01-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -76,7 +76,7 @@ After today you should be able to complete the following sections:
 Again this is based on [Whickham &amp; Grolemund (2017)](http://r4ds.had.co.nz/) and on work by [Gert Stulp](http://www.gertstulp.com/) 
 
 
-```r
+``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture2")
 library(nycflights13)
 flights&lt;-nycflights13::flights
@@ -107,7 +107,7 @@ flights&lt;-nycflights13::flights
 
 Load dplyr:
 
-```r
+``` r
 library(dplyr)
 ```
 
@@ -138,7 +138,7 @@ You can use select() to make a reduced data frame.
 --
 
 
-```r
+``` r
 flights_red&lt;-select(flights, year, month, day)
 ### This overrides our earlier attempt
 flights_red&lt;-select(flights, year:day)
@@ -189,7 +189,7 @@ num_range("x", 1:3): matches x1, x2 and x3.
 ## names
 
 
-```r
+``` r
 # Note the square brackets for indexing the columns.
 names(flights_red)[1:3]=c("Year", "Month", "Day")
 head(flights_red)
@@ -222,7 +222,7 @@ head(flights_red)
 --
 
 
-```r
+``` r
 flights &lt;- flights %&gt;% mutate(speed = distance / (air_time * 60), log_speed=log(speed))
 ```
 
@@ -248,7 +248,7 @@ flights &lt;- flights %&gt;% mutate(speed = distance / (air_time * 60), log_spee
 --
 
 
-```r
+``` r
 flights&lt;- flights %&gt;% mutate(speed_cent = speed - mean(speed, na.rm = TRUE))
 flights&lt;- flights %&gt;% mutate(speed_stand = scale(speed)) 
 ```
@@ -265,7 +265,7 @@ flights&lt;- flights %&gt;% mutate(speed_stand = scale(speed))
 
 Get one row with data for the dataframe.
 
-```r
+``` r
 summarise(flights, mean_speed = mean(speed, na.rm = TRUE))
 ```
 
@@ -281,7 +281,7 @@ summarise(flights, mean_speed = mean(speed, na.rm = TRUE))
  more useful if combined with group_by , let's look at delays by [carrier](http://aspmhelp.faa.gov/index.php/ASQP:_Carrier_Codes_and_Names)
  
 
-```r
+``` r
 by_carrier &lt;- group_by(flights, carrier)
 summarise(by_carrier, delay = mean(dep_delay, na.rm = TRUE))
 ```
@@ -322,7 +322,7 @@ summarise(by_carrier, delay = mean(dep_delay, na.rm = TRUE))
  Often we want to replace missings. For example, we want to replace the missings with the means or median.
 
 
-```r
+``` r
 flights &lt;- flights %&gt;% mutate(dep_delay_no_miss= ifelse(is.na(dep_delay), 
            mean(dep_delay, na.rm = T), dep_delay))
 mean(flights$dep_delay_no_miss)
@@ -370,7 +370,7 @@ ggplot2
 some 'helper' packages, 'scales' helps with axes, 'Rcolorbrewer' use, 'ggthemes' allows standardized templates, 'cow plot' allows panelling graphs.
 
 
-```r
+``` r
 library(ggplot2)
 library(scales) ### no longer needed in newer versions.
 library(RColorBrewer)
@@ -383,7 +383,7 @@ library(ggthemes)
 * Our data file is truly massive, so for this exercise we are just going to select all flights from JFK airport on christmas day.
 
 
-```r
+``` r
 flights_jfk_new&lt;-filter(flights, month == 12, day == 25, origin == 'JFK')
 ```
 
@@ -392,12 +392,13 @@ flights_jfk_new&lt;-filter(flights, month == 12, day == 25, origin == 'JFK')
 * Scatter plot
 
 
-```r
+``` r
 ggplot(flights_jfk_new, aes(x=dep_delay, y=arr_delay)) + geom_point() 
 ```
 
 ```
-## Warning: Removed 2 rows containing missing values (`geom_point()`).
+## Warning: Removed 2 rows containing missing values or values outside the scale range
+## (`geom_point()`).
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-15-1.png" width="165.6" style="display: block; margin: auto;" /&gt;
@@ -409,7 +410,7 @@ ggplot(flights_jfk_new, aes(x=dep_delay, y=arr_delay)) + geom_point()
 * Let us replace those, in fact we already did that for dep_delay, but that was based on the **whole** set. For this exercise, we'll replace it again (so now it is replaced with the mean on X-mas day)
 
 
-```r
+``` r
 flights_jfk_new &lt;- flights_jfk_new %&gt;% 
                    mutate(dep_delay_no_miss= ifelse(is.na(dep_delay), 
                    mean(dep_delay, na.rm = T), dep_delay))
@@ -422,7 +423,7 @@ flights_jfk_new &lt;- flights_jfk_new %&gt;%
 ## Plot again
 
 
-```r
+``` r
 graph_delays&lt;-ggplot(flights_jfk_new, aes(x=dep_delay_no_miss, y=arr_delay_no_miss)) 
 graph_delays + geom_point() 
 ```
@@ -437,7 +438,7 @@ Recap: ggplot(your_data, aes(x=x_variable, y=y_variable)) + geom_point()
 Now let's colour it by carrier. 
 
 
-```r
+``` r
 graph_colour &lt;- ggplot(flights_jfk_new, aes(x=dep_delay_no_miss, y=arr_delay_no_miss, 
                                              colour=carrier)) 
 graph_colour + geom_point()
@@ -451,7 +452,7 @@ graph_colour + geom_point()
 * The beauty of ggplot is that using a different “geom”-function will create a different graph:
 
 
-```r
+``` r
 graph_delays + geom_count() 
 ```
 
@@ -461,7 +462,7 @@ graph_delays + geom_count()
 ## Let's try another one.
 
 
-```r
+``` r
 graph_delays +  geom_count() + geom_smooth()
 ```
 
@@ -481,7 +482,7 @@ graph_delays +  geom_count() + geom_smooth()
 Example with Delta and United airlines.
 
 
-```r
+``` r
 flights_jfk_new_2_airlines&lt;-filter(flights_jfk_new, carrier== "DL" | carrier== "UA" )
 graph_beauty&lt;-ggplot(flights_jfk_new_2_airlines, 
                      aes(x=dep_delay_no_miss, y=arr_delay_no_miss, 
@@ -499,7 +500,7 @@ graph_beauty&lt;-ggplot(flights_jfk_new_2_airlines,
 ## Look at the pretty, pretty!
 
 
-```r
+``` r
 graph_beauty
 ```
 
@@ -546,7 +547,7 @@ To help ourselves we'll make to separate sets. We'll also save them.
 --
 
 
-```r
+``` r
 ### Note that I now went for new, short names. 
 ### Ideally you want your naming to be consistent.
 jfk_delta&lt;-filter(flights_jfk_new, carrier== "DL")
@@ -559,7 +560,7 @@ write.csv(jfk_jetblue,row.names = F, file= 'jfk_jetblue.csv')
 ## Basics.
 
 
-```r
+``` r
 plot_dl&lt;-ggplot(jfk_delta, aes(dep_delay))
 plot_jetblue&lt;-ggplot(jfk_jetblue, aes(dep_delay))
 ### Plot Delta.
@@ -578,13 +579,13 @@ plot_dl+geom_histogram(colour = "black", fill = "white")
 * Defaults used. Binwidth is [important](http://www.stat.cmu.edu/~rnugent/PCMI2016/papers/WandBinWidth.pdf). Not too large/small.
 
 
-```r
+``` r
 plot_dl+geom_histogram(binwidth=1)
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-26-1.png" width="144" /&gt;
 
-```r
+``` r
 plot_dl+geom_histogram(binwidth=40)
 ```
 
@@ -594,7 +595,7 @@ plot_dl+geom_histogram(binwidth=40)
 ## Settle on 5?
 
 
-```r
+``` r
 plot_dl&lt;-plot_dl+geom_histogram(binwidth=5, colour = "black", fill = "white")
 plot_jetblue&lt;-plot_jetblue + geom_histogram(binwidth=5, colour = "black", fill = "white")
 plot_dl
@@ -602,7 +603,7 @@ plot_dl
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-27-1.png" width="216" /&gt;
 
-```r
+``` r
 plot_jetblue
 ```
 
@@ -612,13 +613,13 @@ plot_jetblue
 ## Change labels.
 
 
-```r
+``` r
 plot_dl+ylab("Count") + xlab("Departure Delay - Delta")
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-28-1.png" width="158.4" /&gt;
 
-```r
+``` r
 plot_jetblue + ylab("Count") + xlab("Departure Delay - Jet Blue")
 ```
 
@@ -628,13 +629,13 @@ plot_jetblue + ylab("Count") + xlab("Departure Delay - Jet Blue")
 ## Change the ticks / axes limits.
 
 
-```r
+``` r
 plot_dl + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6))
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-29-1.png" width="216" /&gt;
 
-```r
+``` r
 plot_dl + scale_x_continuous(limits=c(-20,300),breaks = pretty_breaks(6)) 
 ```
 
@@ -654,7 +655,7 @@ plot_dl + scale_x_continuous(limits=c(-20,300),breaks = pretty_breaks(6))
 * google doc theme. Base size = fonts.
 
 
-```r
+``` r
 plot_dl+theme_gdocs(base_size = 14)
 ```
 
@@ -664,17 +665,8 @@ plot_dl+theme_gdocs(base_size = 14)
 ## All in one!
 
 
-```r
-plot_dl &lt;- plot_dl +
-    geom_histogram(binwidth = 5,
-        colour = "black",
-        fill = "white") +
-    ylab("Count") + xlab("Departure Delay - Delta") +
-    scale_y_continuous(limits = c(0,
-        50), breaks = pretty_breaks(6)) +
-    scale_x_continuous(limits = c(-15,
-        250), breaks = pretty_breaks(6)) +
-    theme_gdocs(base_size = 14)
+``` r
+plot_dl&lt;-plot_dl+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Delta") + scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
 plot_dl
 ```
 
@@ -690,15 +682,8 @@ plot_dl
 * Solution
 
 
-```r
-plot_jetblue &lt;- plot_jetblue + geom_histogram(binwidth = 5,
-    colour = "black", fill = "white") +
-    ylab("Count") + xlab("Departure Delay - Jet Blue") +
-    scale_y_continuous(limits = c(0,
-        50), breaks = pretty_breaks(6)) +
-    scale_x_continuous(limits = c(-15,
-        250), breaks = pretty_breaks(6)) +
-    theme_gdocs(base_size = 14)
+``` r
+plot_jetblue&lt;-plot_jetblue+ geom_histogram(binwidth=5, colour = "black", fill = "white") + ylab("Count") + xlab("Departure Delay - Jet Blue")+ scale_y_continuous(limits=c(0,50),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(-15,250),breaks = pretty_breaks(6)) + theme_gdocs(base_size = 14)
 plot_jetblue
 ```
 
@@ -708,8 +693,8 @@ plot_jetblue
 ## Saving it. ggsave??
 
 
-```r
-ggsave("plot_jetblue.pdf", width = 250, height = 250, units = "mm")
+``` r
+ggsave("plot_jetblue.pdf", width= 250, height=250, units="mm")
 ```
 
 --
@@ -738,16 +723,15 @@ It will be saved in your working directory. (change that with path = ).
 
 
 
-```r
+``` r
 library(cowplot)
-plot_grid(plot_dl, plot_jetblue, labels = c("A", "B"), label_size = 10,
-    align = "h")
+plot_grid(plot_dl,plot_jetblue, labels=c('A', 'B'), label_size= 10, align="h")
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-36-1.png" width="576" /&gt;
 
-```r
-ggsave("plot_panelled.pdf", width = 250, height = 250, units = "mm")
+``` r
+ggsave("plot_panelled.pdf", width= 250, height=250, units="mm")
 ```
 
 ---
@@ -793,16 +777,13 @@ ggsave("plot_panelled.pdf", width = 250, height = 250, units = "mm")
 ## Basic violin plot.
 
 
-```r
+``` r
 ### combine them into a single dataframe.
-violinplot_data &lt;- rbind.data.frame(jfk_delta, jfk_jetblue)
+violinplot_data&lt;-rbind.data.frame(jfk_delta,jfk_jetblue)
 library(dplyr)
-violinplot_data &lt;- violinplot_data %&gt;%
-    mutate(carrier = recode(carrier, B6 = "Jet Blue",
-        DL = "Delta Airlines"))
+violinplot_data&lt;- violinplot_data %&gt;% mutate(carrier= recode(carrier, B6= "Jet Blue", DL="Delta Airlines"))
 ### make plot
-violinplot &lt;- ggplot(violinplot_data, aes(x = carrier,
-    y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2)
+violinplot&lt;-ggplot(violinplot_data, aes(x = carrier, y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2) 
 violinplot
 ```
 
@@ -812,9 +793,8 @@ violinplot
 ## Add some 'oomph'.
 
 
-```r
-violinplot + xlab("Carrier") + ylab("Delay Departure (mins.)") +
-    theme_stata(14)
+``` r
+violinplot + xlab("Carrier")+ylab("Delay Departure (mins.)") + theme_stata(14)
 ```
 
 &lt;img src="Lecture2-xaringan_files/figure-html/unnamed-chunk-40-1.png" width="576" /&gt;
@@ -832,18 +812,14 @@ violinplot + xlab("Carrier") + ylab("Delay Departure (mins.)") +
 * Suppose we want Jet Blue on the left for the X-axis.
 
 
-```r
+``` r
 ### recode.
-library(haven)  # needed for as_factor
-violinplot_data$carrier_rec &lt;- as_factor(violinplot_data$carrier)
-ordered_levels &lt;- c("Jet Blue", "Delta Airlines")
-violinplot_data &lt;- mutate(violinplot_data, carrier_rec = factor(carrier_rec,
-    levels = ordered_levels))
+library(haven) # needed for as_factor
+violinplot_data$carrier_rec&lt;-as_factor(violinplot_data$carrier)
+ordered_levels&lt;-c("Jet Blue", "Delta Airlines")
+violinplot_data&lt;- mutate(violinplot_data, carrier_rec = factor(carrier_rec, levels = ordered_levels))
 ### violinplot_2
-violinplot_2 &lt;- ggplot(violinplot_data, aes(x = carrier_rec,
-    y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2) +
-    xlab("Carrier") + ylab("Delay Departure (mins.)") +
-    theme_stata(14)
+violinplot_2&lt;-ggplot(violinplot_data, aes(x = carrier_rec, y = dep_delay)) + geom_violin() + geom_boxplot(width = 0.2)  + xlab("Carrier")+ylab("Delay Departure (mins.)") + theme_stata(14)
 violinplot_2
 ```
 
@@ -854,7 +830,7 @@ violinplot_2
 
 * Let's run an independent samples _t_-test
 
-```r
+``` r
 t.test(dep_delay~carrier, data=violinplot_data)
 ```
 
@@ -887,7 +863,7 @@ t.test(dep_delay~carrier, data=violinplot_data)
 * We need standard deviations for our report!
 
 
-```r
+``` r
 sd(jfk_delta$dep_delay_no_miss)
 ```
 
@@ -895,7 +871,7 @@ sd(jfk_delta$dep_delay_no_miss)
 ## [1] 51.17242
 ```
 
-```r
+``` r
 sd(jfk_jetblue$dep_delay_no_miss)
 ```
 
@@ -926,7 +902,7 @@ An independent-samples _t_-test was used to compare the delays in departure betw
 *  Wilcoxon-Mann-Whitney U is common [alternative](http://vassarstats.net/textbook/ch11a.html) to _t_-test. (Sometimes, just called Mann-Whitney U).
 
 
-```r
+``` r
 wilcox.test(dep_delay~carrier, data=violinplot_data)
 ```
 
@@ -945,7 +921,7 @@ wilcox.test(dep_delay~carrier, data=violinplot_data)
 * We need as_factor. Read more [here](http://vassarstats.net/textbook/ch14a.html)
 
 
-```r
+``` r
 kruskal.test(dep_delay~as_factor(carrier), data=violinplot_data)
 ```
 
@@ -963,7 +939,7 @@ kruskal.test(dep_delay~as_factor(carrier), data=violinplot_data)
 * We need the medians for our report!
 
 
-```r
+``` r
 median(jfk_delta$dep_delay_no_miss)
 ```
 
@@ -971,7 +947,7 @@ median(jfk_delta$dep_delay_no_miss)
 ## [1] 1
 ```
 
-```r
+``` r
 median(jfk_jetblue$dep_delay_no_miss)
 ```
 
@@ -1010,38 +986,35 @@ We make a function with two arguments (data and indices). We will then feed our 
 --
 
 
-```r
+``` r
 ### Bootstrap 95% CI for t-test
 library(boot)
-### function to obtain p.values from t.test
-### from the data
+### function to obtain p.values from t.test from the data 
 p_value &lt;- function(data, indices) {
-    data_boot &lt;- data[indices, ]  # allows boot to select sample 
-    T_test_boot &lt;- t.test(dep_delay ~ carrier,
-        data = data_boot)
-    return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
-}
+  data_boot &lt;- data[indices,] # allows boot to select sample 
+  T_test_boot &lt;- t.test(dep_delay~carrier, data=data_boot)
+  return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
+} 
 ```
 
 ---
 ## Now let's run it. 
 
 
-```r
-### Bootstrapping is truly random.  We need a 'seed'
-### to make it replicable.
+``` r
+### Bootstrapping is truly random.
+### We need a 'seed' to make it replicable.
 set.seed(2019)
-### R is number of samples we want to draw?  we store
-### it in results.
-results &lt;- boot(data = violinplot_data, statistic = p_value,
-    R = 10000)
+### R is number of samples we want to draw?
+### we store it in results.
+results &lt;- boot(data=violinplot_data, statistic=p_value,R=10000)
 ```
 
 ---
 ## Results.
 
 
-```r
+``` r
 ## view results
 head(results) 
 ```
@@ -11185,19 +11158,19 @@ head(results)
 ## [625]  1059217545 -1376304458
 ## 
 ## $statistic
-## function(data, indices) {
-##     data_boot &lt;- data[indices, ]  # allows boot to select sample 
-##     T_test_boot &lt;- t.test(dep_delay ~ carrier,
-##         data = data_boot)
-##     return(T_test_boot[[3]])  ### [[]] denotes the position in output - 3rd element
+## function (data, indices) 
+## {
+##     data_boot &lt;- data[indices, ]
+##     T_test_boot &lt;- t.test(dep_delay ~ carrier, data = data_boot)
+##     return(T_test_boot[[3]])
 ## }
-## &lt;bytecode: 0x1294190b0&gt;
+## &lt;bytecode: 0x137d0edf0&gt;
 ```
 
 ---
 ## Plot Results.
 
-```r
+``` r
 plot(results)
 ```
 
@@ -11215,7 +11188,7 @@ plot(results)
 --
 
 
-```r
+``` r
 boot.ci(results, type="bca")
 ```
 
