@@ -123,6 +123,9 @@ require(haven)
 write_sav(jfk, 'jfk.sav')
 ```
 
+
+# SessionInfo
+
 The end.
 
 ```{r, out.width = "400px", echo=FALSE}
