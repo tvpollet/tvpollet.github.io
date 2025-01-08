@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-02-16 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-01-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -213,23 +213,22 @@ So when testing a three-way interaction, you would include all two-way interacti
 ## Interaction Anova.
 
 
-```r
+``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture5")
 require(car)
-ToothGrowth2 &lt;- ToothGrowth  # ToothGrowth into new object.
-ToothGrowth2$dose &lt;- as.factor(ToothGrowth$dose)
+ToothGrowth2&lt;-ToothGrowth # ToothGrowth into new object.
+ToothGrowth2$dose&lt;-as.factor(ToothGrowth$dose)
 # This ensures you get the same results as beloved SPSS.
-options(contrasts = c("contr.helmert", "contr.poly"))  # change options. 
-# need this for correct SS. - type command
-ANOVAtwobythree &lt;- Anova(lm(len ~ supp * dose, data = ToothGrowth2),
-    type = 3)
+options(contrasts = c("contr.helmert", "contr.poly")) # change options. 
+ # need this for correct SS. - type command
+ANOVAtwobythree&lt;-Anova(lm(len~supp*dose, data=ToothGrowth2), type = 3)
 ```
 
 ---
 ## Results.
 
 
-```r
+``` r
 ANOVAtwobythree
 ```
 
@@ -251,11 +250,10 @@ ANOVAtwobythree
 ## Alternative route.
 
 
-```r
-# alternative route. Notice that the options are different
-# here!
-options(contrasts = c("contr.sum", "contr.poly"))
-ANOVAtwobythree_alt &lt;- lm(len ~ supp * dose, data = ToothGrowth2)
+``` r
+# alternative route. Notice that the options are different here!
+options(contrasts = c("contr.sum","contr.poly"))
+ANOVAtwobythree_alt&lt;-lm(len~supp*dose, data=ToothGrowth2) 
 summary(ANOVAtwobythree_alt)
 ```
 
@@ -288,8 +286,8 @@ summary(ANOVAtwobythree_alt)
 ## Alternative route: F-test
 
 
-```r
-drop1(ANOVAtwobythree_alt, . ~ ., test = "F")
+``` r
+drop1(ANOVAtwobythree_alt, .~., test="F")
 ```
 
 ```
@@ -311,19 +309,17 @@ drop1(ANOVAtwobythree_alt, . ~ ., test = "F")
 return_aov will return an ANOVA list from which we can then call objects
 
 
-```r
+``` r
 # make an ID variable
-ToothGrowth2$id &lt;- seq(1:60)
-require(ez)  # even better bet to get SPSS like results.
-ez &lt;- ezANOVA(data = ToothGrowth2, dv = .(len), wid = .(id),
-    between = .(supp, dose), return_aov = T, detailed = TRUE,
-    type = 3)
+ToothGrowth2$id&lt;- seq(1:60)
+require(ez) # even better bet to get SPSS like results.
+ez&lt;-ezANOVA(data=ToothGrowth2, dv=.(len), wid=.(id), between = .(supp, dose), return_aov=T, detailed=TRUE, type=3)
 ```
 
 ---
 ## Ez output.
 
-```r
+``` r
 ez
 ```
 
@@ -364,10 +360,10 @@ If you want exports you'll need the 'car' or 'ez' objects route.
 If you want to make it prettier, you would change the labels in the dataframe (and consider dropping certain columns (e.g., the star notation)).
 
 
-```r
+``` r
 require(stargazer)
-stargazer(ANOVAtwobythree, summary = F, type = "html", out = "ANOVA_2_3.html")
-stargazer(ez$ANOVA, summary = F, type = "html", out = "ez_2_3.html")
+stargazer(ANOVAtwobythree, summary = F, type="html", out="ANOVA_2_3.html")
+stargazer(ez$ANOVA, summary = F, type="html", out="ez_2_3.html")
 ```
 
 ---
@@ -381,8 +377,8 @@ You would then further explore the contrasts or plot the results.
 ## Post-hoc tests.
 
 
-```r
-TukeyHSD(ez$aov, which = "dose")
+``` r
+TukeyHSD(ez$aov, which="dose")
 ```
 
 ```
@@ -401,7 +397,7 @@ TukeyHSD(ez$aov, which = "dose")
 ---
 ## alternative
 
-```r
+``` r
 library(multcomp)
 summary(glht(ez$aov, linfct = mcp(dose = "Tukey")))
 ```
@@ -417,9 +413,9 @@ summary(glht(ez$aov, linfct = mcp(dose = "Tukey")))
 ## 
 ## Linear Hypotheses:
 ##              Estimate Std. Error t value Pr(&gt;|t|)    
-## 1 - 0.5 == 0    9.130      1.148   7.951   &lt;1e-05 ***
-## 2 - 0.5 == 0   15.495      1.148  13.493   &lt;1e-05 ***
-## 2 - 1 == 0      6.365      1.148   5.543   &lt;1e-05 ***
+## 1 - 0.5 == 0    9.130      1.148   7.951  &lt; 1e-06 ***
+## 2 - 0.5 == 0   15.495      1.148  13.493  &lt; 1e-06 ***
+## 2 - 1 == 0      6.365      1.148   5.543 2.19e-06 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## (Adjusted p values reported -- single-step method)
@@ -431,19 +427,17 @@ summary(glht(ez$aov, linfct = mcp(dose = "Tukey")))
 ggpubr makes ggplot2 even easier, and churns out some beautiful graphs.
 
 
-```r
+``` r
 require(ggpubr)
-plot_moderation &lt;- ggviolin(ToothGrowth2, x = "dose",
-    y = "len", color = "dose", palette = c("black",
-        "darkblue", "darkred"), add = c("jitter", "boxplot"),
-    shape = "dose") + labs(x = "Condition", y = "Length",
-    color = "Dose", shape = "Dose")
-plot_moderation + facet_wrap(~supp)
+plot_moderation &lt;- ggviolin(ToothGrowth2, x = "dose", y = "len",
+                color = "dose", palette =c("black", "darkblue", "darkred"),
+                add = c("jitter","boxplot"), shape = "dose") + labs(x="Condition", y= "Length", color="Dose", shape= "Dose")
+plot_moderation  + facet_wrap(~supp)
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
 
-```r
+``` r
 # Jitter could be omitted
 ```
 
@@ -451,11 +445,9 @@ plot_moderation + facet_wrap(~supp)
 ## Export Means and SD.
 
 
-```r
+``` r
 require(apaTables)
-apa.2way.table(supp, dose, len, ToothGrowth2, filename = "toothgrowth ANOVA",
-    table.number = 1, show.conf.interval = T, show.marginal.means = T,
-    landscape = TRUE)
+apa.2way.table(supp, dose,  len, ToothGrowth2, filename = 'toothgrowth ANOVA', table.number = 1,show.conf.interval = T, show.marginal.means = T, landscape = TRUE)
 ```
 
 ```
@@ -494,29 +486,25 @@ apa.2way.table(supp, dose, len, ToothGrowth2, filename = "toothgrowth ANOVA",
 Note the singular.ok = T statement.
 
 
-```r
-# Bootstrap CI for ANOVA
+``` r
+# Bootstrap CI for ANOVA 
 library(boot)
-# function to obtain p.values from F-test from
-# the data
+# function to obtain p.values from F-test from the data 
 p_value_twowayaov &lt;- function(data, indices) {
-    data_boot &lt;- data[indices, ]  # allows boot to select sample 
-    ANOVAtwobytwo_boot &lt;- Anova(lm(len ~ supp * dose,
-        data = data_boot), contrasts = c("contr.sum",
-        "contr.poly"), type = 3, singular.ok = TRUE)
-    return(ANOVAtwobytwo_boot$`Pr(&gt;F)`[4])
-}
-# bootstrapping with 1000 replications
+  data_boot &lt;- data[indices,] # allows boot to select sample 
+  ANOVAtwobytwo_boot&lt;-Anova(lm(len~supp*dose, data=data_boot), contrasts = c("contr.sum", "contr.poly"), type = 3, singular.ok = TRUE)
+  return(ANOVAtwobytwo_boot$`Pr(&gt;F)`[4])
+} 
+# bootstrapping with 1000 replications 
 set.seed(1234)
-results_twowayaov &lt;- boot(data = ToothGrowth2, statistic = p_value_twowayaov,
-    R = 1000)
+results_twowayaov &lt;- boot(data=ToothGrowth2,statistic=p_value_twowayaov,R=1000)
 ```
 
 ---
 ## Bootstrap results
 
 
-```r
+``` r
 # view results
 results_twowayaov
 ```
@@ -539,7 +527,7 @@ results_twowayaov
 ## Bootstrap plots
 
 
-```r
+``` r
 plot(results_twowayaov)
 ```
 
@@ -550,9 +538,9 @@ plot(results_twowayaov)
 89% CI - check [here](https://twitter.com/rlmcelreath/status/846637291661643776) why.
 
 
-```r
-# get 89% confidence interval
-boot.ci(results_twowayaov, conf = 0.89, type = "bca")
+``` r
+# get 89% confidence interval 
+boot.ci(results_twowayaov, conf = 0.89, type="bca")
 ```
 
 ```
@@ -574,9 +562,9 @@ boot.ci(results_twowayaov, conf = 0.89, type = "bca")
 There are ways to "automate" this search for interaction, and there are 'tree' based models which will uncover interactions.
 
 
-```r
+``` r
 require(tree)
-tree &lt;- tree(len ~ ., ToothGrowth)
+tree&lt;-tree(len~., ToothGrowth)
 plot(tree)
 text(tree)
 ```
@@ -589,9 +577,9 @@ text(tree)
 Read about ??party. Amazing package to find patterns in your data. (It does so in a very clever way. )
 
 
-```r
+``` r
 require(party)
-ctree &lt;- ctree(len ~ ., ToothGrowth)  # opted for original dataframe
+ctree&lt;-ctree(len~., ToothGrowth) # opted for original dataframe
 ```
 
 Party= Recursive Partitioning of Variance. (underpinning it is permutation testing...)
@@ -602,7 +590,7 @@ Party= Recursive Partitioning of Variance. (underpinning it is permutation testi
 ## plot
 
 
-```r
+``` r
 plot(ctree)
 ```
 
@@ -614,15 +602,13 @@ plot(ctree)
 Back to the Salaries dataset.
 
 
-```r
+``` r
 require(car)
-salaries &lt;- carData::Salaries
+salaries&lt;-carData::Salaries
 require(dplyr)
-salaries &lt;- salaries %&gt;%
-    mutate(monthly_salary = salary/9)
-salaries &lt;- salaries %&gt;%
-    mutate(yrs.since.phd_cent = yrs.since.phd - mean(yrs.since.phd))
-names(salaries)[5] &lt;- "gender"  # renamed
+salaries&lt;- salaries %&gt;% mutate(monthly_salary=salary/9)
+salaries&lt;- salaries %&gt;% mutate(yrs.since.phd_cent= yrs.since.phd -mean(yrs.since.phd))
+names(salaries)[5] &lt;- "gender" # renamed
 ```
 
 ---
@@ -630,9 +616,8 @@ names(salaries)[5] &lt;- "gender"  # renamed
 Regression model.
 
 
-```r
-interaction &lt;- lm(monthly_salary ~ gender * yrs.since.phd_cent,
-    data = salaries)
+``` r
+interaction&lt;-lm(monthly_salary~gender*yrs.since.phd_cent,data=salaries)
 summary(interaction)
 ```
 
@@ -665,7 +650,7 @@ summary(interaction)
 phia package (can do quick basic plots)
 
 
-```r
+``` r
 require(phia)
 means_int &lt;- interactionMeans(interaction)
 plot(means_int)
@@ -679,7 +664,7 @@ plot(means_int)
 Not useful here as only 2 levels, but for model with 3 this is how you would get the post-hoc tests.
 
 
-```r
+``` r
 testInteractions(interaction)
 ```
 
@@ -697,9 +682,9 @@ testInteractions(interaction)
 You can modify this. Alternatively look to ggplot2 (Basically a scatterplot with grouping).
 
 
-```r
+``` r
 library(effects)
-plot(allEffects(interaction), multiline = TRUE, ci.style = "bands")
+plot(allEffects(interaction), multiline=TRUE, ci.style="bands")
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-35-1.png" width="350px" /&gt;
@@ -719,13 +704,12 @@ Make a plot.
 We can again do something clever, permutations! More [here](http://avesbiodiv.mncn.csic.es/estadistica/permut1.pdf) and the 'vegan' manual.
 
 
-```r
+``` r
 library(vegan)
-ToothGrowth2 &lt;- ToothGrowth
-attach(ToothGrowth2)  # need to attach data
+ToothGrowth2&lt;-ToothGrowth
+attach(ToothGrowth2) # need to attach data
 # margin corresponds to type III error.
-adonis2(len ~ supp * dose, data = ToothGrowth2, by = "margin",
-    method = "euclidean")
+adonis2(len~ supp*dose, data = ToothGrowth2, by='margin', method='euclidean') 
 ```
 
 ```
@@ -761,10 +745,10 @@ state-anxiety (Z)? (Basic example - consider **centering** when you run it yours
 ## Model
 
 
-```r
+``` r
 require(psychTools)
-epi.bfi &lt;- psychTools::epi.bfi
-interaction2 &lt;- lm(bdi ~ stateanx * epiNeur, data = epi.bfi)
+epi.bfi&lt;-psychTools::epi.bfi
+interaction2&lt;-lm(bdi ~ stateanx*epiNeur, data=epi.bfi)
 summary(interaction2)
 ```
 
@@ -797,10 +781,10 @@ summary(interaction2)
 Usually we are interested in shifts of one SD.
 
 
-```r
+``` r
 library(rockchalk)
-plotCurves(interaction2, plotx = "epiNeur", modx = "stateanx",
-    modxVals = "std.dev.", interval = "confidence")
+plotCurves(interaction2, plotx="epiNeur",
+modx="stateanx", modxVals="std.dev.", interval='confidence')
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
@@ -809,14 +793,13 @@ plotCurves(interaction2, plotx = "epiNeur", modx = "stateanx",
 ## Simple slopes method.
 
 
-```r
+``` r
 require(interactions)
-sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
-    johnson_neyman = FALSE)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx, johnson_neyman = FALSE)
 ```
 
 ```
-## SIMPLE SLOPES ANALYSIS 
+## SIMPLE SLOPES ANALYSIS
 ## 
 ## Slope of epiNeur when stateanx = 28.36434 (- 1 SD): 
 ## 
@@ -848,12 +831,12 @@ The benefit of the J-N interval: it tells you exactly where the predictor’s sl
 ## How to do it. (interactions package, formerly 'jtools')
 
 
-```r
+``` r
 johnson_neyman(interaction2, pred = epiNeur, modx = stateanx)
 ```
 
 ```
-## JOHNSON-NEYMAN INTERVAL 
+## JOHNSON-NEYMAN INTERVAL
 ## 
 ## When stateanx is OUTSIDE the interval [-35.09, 22.25], the slope of epiNeur
 ## is p &lt; .05.
@@ -867,22 +850,21 @@ johnson_neyman(interaction2, pred = epiNeur, modx = stateanx)
 ## Problems with heteroscedasticity?
 
 
-```r
-require(sandwich)  # Robust estimation.
+``` r
+require(sandwich) # Robust estimation.
 require(lmtest)
-sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
-    robust = T)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx, robust=T)
 ```
 
 ```
-## JOHNSON-NEYMAN INTERVAL 
+## JOHNSON-NEYMAN INTERVAL
 ## 
 ## When stateanx is OUTSIDE the interval [-154.05, 22.72], the slope of
 ## epiNeur is p &lt; .05.
 ## 
 ## Note: The range of observed values of stateanx is [21.00, 79.00]
 ## 
-## SIMPLE SLOPES ANALYSIS 
+## SIMPLE SLOPES ANALYSIS
 ## 
 ## Slope of epiNeur when stateanx = 28.36434 (- 1 SD): 
 ## 
@@ -909,9 +891,8 @@ sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
 90% CI - tweak everything ??interact_plot. Again, ggplot2 can also do this. Also check ??interplot.
 
 
-```r
-interact_plot(interaction2, pred = "epiNeur", modx = "stateanx",
-    interval = TRUE, int.width = 0.9)
+``` r
+interact_plot(interaction2, pred = "epiNeur", modx = "stateanx", interval = TRUE, int.width = 0.9)
 ```
 
 &lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
@@ -931,11 +912,10 @@ If you haven't conducted one, what would be a scenario where you would test one?
 **Example**:  Hypothetical language acquisition study from [here](http://coltekin.net/cagri/R/r-exercisesse5.html#x6-230005.2), similar to [this design](http://www.estudiosfonicos.cchs.csic.es/asig2/b12/Nazzi,_Bertoncini_y_Mehler_1998.pdf). We are interested in children who are raised bilingually, where one of the languages they speak is ‘home only’ and the other language is also used in their school. MLU is mean length of utterance.
 
 
-```r
-library(ez)
-bilingual &lt;- read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
-rm_anov &lt;- ezANOVA(data = bilingual, dv = mlu, wid = .(subj),
-    within = .(language, age), between = gender, type = 3)
+``` r
+library(ez) 
+bilingual&lt;-read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
+rm_anov&lt;-ezANOVA(data=bilingual, dv=mlu, wid=.(subj), within=.(language, age), between=gender, type = 3) 
 ```
 
 ---
@@ -953,7 +933,7 @@ Specify errors **always** to be on safe side.
 It is a list, you can call parts with the $ sign.
 
 
-```r
+``` r
 rm_anov$ANOVA
 ```
 
@@ -972,7 +952,7 @@ rm_anov$ANOVA
 ## Sphericity test.
 
 
-```r
+``` r
 rm_anov$`Mauchly's Test for Sphericity`
 ```
 
@@ -992,7 +972,7 @@ If significant, then you would opt for sphericity corrected measures.
 Greenhouse-Geiser correction / Huyn-Feldt corrections for sphericity.
 
 
-```r
+``` r
 rm_anov$`Sphericity Corrections`
 ```
 

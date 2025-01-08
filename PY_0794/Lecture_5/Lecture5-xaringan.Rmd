@@ -369,7 +369,7 @@ plot(results_twowayaov)
 
 ---
 ## CI
-89% CI - check [here](https://easystats.github.io/bayestestR/articles/credible_interval.html#vs--95-ci) why.
+89% CI - check [here](https://twitter.com/rlmcelreath/status/846637291661643776) why.
 
 ```{r}
 # get 89% confidence interval 
