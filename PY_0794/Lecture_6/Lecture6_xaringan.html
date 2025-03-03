@@ -4,19 +4,22 @@
     <title>Lecture 6: PY 0794 - Advanced Quantitative Research Methods</title>
     <meta charset="utf-8" />
     <meta name="author" content="Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)" />
-    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
-    <script src="libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
-    <script src="libs/d3-3.3.8/d3.min.js"></script>
-    <script src="libs/dagre-0.4.0/dagre-d3.min.js"></script>
-    <link href="libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet" />
-    <script src="libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
-    <link href="libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
-    <script src="libs/chromatography-0.1/chromatography.js"></script>
-    <script src="libs/DiagrammeR-binding-1.0.10/DiagrammeR.js"></script>
-    <script src="libs/viz-1.8.2/viz.js"></script>
-    <script src="libs/grViz-binding-1.0.10/grViz.js"></script>
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/htmltools-fill/fill.css" rel="stylesheet" />
+    <script src="libs/htmlwidgets/htmlwidgets.js"></script>
+    <script src="libs/d3/d3.min.js"></script>
+    <script src="libs/dagre/dagre-d3.min.js"></script>
+    <link href="libs/mermaid/dist/mermaid.css" rel="stylesheet" />
+    <script src="libs/mermaid/dist/mermaid.slim.min.js"></script>
+    <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
+    <script src="libs/chromatography/chromatography.js"></script>
+    <script src="libs/DiagrammeR-binding/DiagrammeR.js"></script>
+    <script src="libs/viz/viz.js"></script>
+    <script src="libs/grViz-binding/grViz.js"></script>
   </head>
   <body>
     <textarea id="source">
@@ -29,10 +32,14 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-01-15 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-02-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
+
+
+
+
 
 
 
@@ -119,7 +126,7 @@ Alternative to Powerpoint.
 ---
 ## Diagrammer.
 
-```r
+``` r
 require(DiagrammeR)
 mermaid(" graph LR
 	        A(Age)--&gt;F(Fertility)
@@ -136,14 +143,14 @@ mermaid(" graph LR
 ---
 ## Plot
 
-<div class="DiagrammeR html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b3442243166446b6fc43" style="width:504px;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-b3442243166446b6fc43">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
+<div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-a9c77c4a1321c4c111ef" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-a9c77c4a1321c4c111ef">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## More beautiful...
 
 
-```r
+``` r
 grViz("
 	digraph causal {	  # Nodes
 	  node [shape = plaintext]
@@ -170,8 +177,8 @@ grViz("
 ---
 ## Look at the shiny-shiny.
 
-<div class="grViz html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-354d457f7cba6fe6ab76" style="width:504px;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-354d457f7cba6fe6ab76">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-ae6d4b6037f1a00fa02f" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-ae6d4b6037f1a00fa02f">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Check Diagrammer tutorial
@@ -201,12 +208,10 @@ Y= happiness
 Proposed mediator (M): self-esteem.
 
 
-```r
-# Data can be
-# loaded from here
-# http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv
-D &lt;- read.csv("mediationData.csv")
-Data_med &lt;- D
+``` r
+# Data can be loaded from here http://static.lib.virginia.edu/statlab/materials/data/mediationData.csv
+D&lt;- read.csv("mediationData.csv")
+Data_med&lt;-D
 ```
 
 ---
@@ -221,7 +226,7 @@ Read more [here](http://webcom.upmf-grenoble.fr/LIP/Perso/DMuller/GSERM/Articles
 
 There should be a relationship between X and Y, and the regression coefficient should be significant.
 
-&lt;img src="mediation_step1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://library.virginia.edu/sites/default/files/inline-images/mediation_step1.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Test of step 1
@@ -229,7 +234,7 @@ There should be a relationship between X and Y, and the regression coefficient s
 We find a significant association.
 
 
-```r
+``` r
 model_1 &lt;- lm(Y ~ X, Data_med)
 summary(model_1)
 ```
@@ -271,7 +276,7 @@ Basically, it is possible that suppression is happening and the mediator is supp
 
 The independent variable should also relate to the mediator. If not, then there would be no mediation
 
-&lt;img src="mediation_step2.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://library.virginia.edu/sites/default/files/inline-images/mediation_step2.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Test of step 2.
@@ -279,7 +284,7 @@ The independent variable should also relate to the mediator. If not, then there 
 We also find support for this step... .
 
 
-```r
+``` r
 model_2 &lt;- lm(M ~ X, Data_med)
 summary(model_2)
 ```
@@ -312,13 +317,13 @@ The effect of X should be reduced when we included the mediator.
 
 The B for X should be substantially reduced in size or drop out of significance (but [beware](http://jonathanrenshon.com/Teaching/NPS/ResearchDesign/Gelman-Significance.pdf))
 
-&lt;img src="mediation_step3.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://library.virginia.edu/sites/default/files/inline-images/mediation_step3.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Test of step 3.
 
 
-```r
+``` r
 model_3 &lt;- lm(Y ~ X + M, Data_med)
 summary(model_3)
 ```
@@ -381,16 +386,11 @@ Recommendation is bootstrapping methods. One method is Preacher &amp; Hayes (200
 ## Sobel test
 
 
-```r
+``` r
 require(bda)
-# reload (note that
-# Rmarkdown is
-# forgetful, so you
-# might want to
-# reload the data)
-Data_med &lt;- read.csv("mediationData.csv")
-mediation.test(Data_med$M,
-    Data_med$X, Data_med$Y)
+#reload (note that Rmarkdown is forgetful, so you might want to reload the data)
+Data_med&lt;- read.csv("mediationData.csv")
+mediation.test(Data_med$M,Data_med$X, Data_med$Y)
 ```
 
 ```
@@ -421,10 +421,9 @@ Bootstrapping to the rescue!
 Here we use 10,000 bootstraps. The std=T command ensures standardization.
 
 
-```r
+``` r
 require(psych)
-mediationmodel1 &lt;- mediate(Y ~ X + (M), std = TRUE,
-    data = Data_med, n.iter = 10000, plot = F)
+mediationmodel1&lt;-mediate(Y~X+(M), std=TRUE, data=Data_med, n.iter=10000, plot=F)
 ```
 
 ---
@@ -433,29 +432,13 @@ mediationmodel1 &lt;- mediate(Y ~ X + (M), std = TRUE,
 Exported the results. sink() command.
 
 
-```r
+``` r
 sink("mediation.txt")
 mediationmodel1
 sink()
 ```
 
 
-```
-## 
-## Mediation/Moderation Analysis 
-## Call: mediate(y = Y ~ X + (M), data = Data_med, n.iter = 10000, std = TRUE, 
-##     plot = F)
-## 
-## The DV (Y) was  Y . The IV (X) was  X . The mediating variable(s) =  M .
-## 
-## Total effect(c) of  X  on  Y  =  0.34   S.E. =  0.1  t  =  3.56  df=  98   with p =  0.00057
-## Direct effect (c') of  X  on  Y  removing  M  =  0.03   S.E. =  0.09  t  =  0.36  df=  97   with p =  0.72
-## Indirect effect (ab) of  X  on  Y  through  M   =  0.3 
-## Mean bootstrapped indirect effect =  0.3  with standard error =  0.06  Lower CI =  0.2    Upper CI =  0.43
-## R = 0.61 R2 = 0.37   F = 28.85 on 2 and 97 DF   p-value:  2.02e-13 
-## 
-##  To see the longer output, specify short = FALSE in the print statement or ask for the summary
-```
 
 ---
 ## Result
@@ -472,7 +455,7 @@ You could add the package which produced this.
 ## Plot.
 
 
-```r
+``` r
 setEPS()
 postscript("path.eps", horizontal = FALSE, onefile = FALSE, paper = "special")
 par(mar=c(1,1,1,1))
@@ -500,22 +483,20 @@ Long story short, this is a newer and perhaps better method.
 ## Mediate
 
 
-```r
+``` r
 require(mediation)
-med.fit &lt;- lm(M ~ X, data = Data_med)
-out.fit &lt;- lm(Y ~ X + M, data = Data_med)
-# Robust SE is ignored for Bootstrap. Otherwise
-# omit boot=TRUE.
+med.fit&lt;-lm(M~X, data=Data_med)
+out.fit&lt;-lm(Y~X+M, data=Data_med)
+# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
 set.seed(1984)
-med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M",
-    boot = TRUE, sims = 10000)
+med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
 ```
 
 ---
 ## Results
 
 
-```r
+``` r
 summary(med.out)
 ```
 
@@ -548,11 +529,11 @@ The mediation analysis showed a significant average causal mediation effect (ACM
 ## Plot
 
 
-```r
+``` r
 plot(med.out) 
 ```
 
-&lt;img src="Lecture6_xaringan_files/figure-html/plot-1.png" width="450" height="450" /&gt;
+&lt;img src="Lecture6-xaringan_files/figure-html/plot-1.png" width="450" height="450" /&gt;
 
 ---
 ## Sensitivity analysis
@@ -581,7 +562,7 @@ Under sequential ignorability, `\(\rho\)` is equal to zero and thus the magnitud
 ## How to test it?
 
 
-```r
+``` r
 sensitivity_analysis&lt;-medsens(med.out, rho.by = 0.05) 
 summary(sensitivity_analysis)
 ```

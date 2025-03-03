@@ -10,8 +10,16 @@ output:
       highlightLines: true
       countIncrementalSlides: false
 ---
+
 ```{r setup, include=FALSE}
+library(xaringanExtra)
+options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
 ```
 
 
@@ -241,7 +249,7 @@ Read more [here](http://webcom.upmf-grenoble.fr/LIP/Perso/DMuller/GSERM/Articles
 There should be a relationship between X and Y, and the regression coefficient should be significant.
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("mediation_step1.png")
+knitr::include_graphics("https://library.virginia.edu/sites/default/files/inline-images/mediation_step1.png")
 ```
 
 ---
@@ -273,7 +281,7 @@ knitr::include_graphics("https://media.giphy.com/media/2vkUwFvCnTEtupTsqu/giphy.
 The independent variable should also relate to the mediator. If not, then there would be no mediation
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("mediation_step2.png")
+knitr::include_graphics("https://library.virginia.edu/sites/default/files/inline-images/mediation_step2.png")
 ```
 
 ---
@@ -294,7 +302,7 @@ The effect of X should be reduced when we included the mediator.
 The B for X should be substantially reduced in size or drop out of significance (but [beware](http://jonathanrenshon.com/Teaching/NPS/ResearchDesign/Gelman-Significance.pdf))
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
-knitr::include_graphics("mediation_step3.png")
+knitr::include_graphics("https://library.virginia.edu/sites/default/files/inline-images/mediation_step3.png")
 ```
 
 ---
