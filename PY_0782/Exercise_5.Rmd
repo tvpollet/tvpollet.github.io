@@ -1,0 +1,440 @@
+---
+title: "Solution Lecture 5"
+author: "Prof. Thomas Pollet, Northumbria University, UK (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer/)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise 5 instructions.
+
+Download the data thechase_R.xlsx . This file contains coding for 50 episodes from [ITV's The Chase](https://en.wikipedia.org/wiki/The_Chase_(UK_game_show)) (coded by yours Truly). Read the data (use the 'readxl' package for example). The codes are largely self-explanatory.
+
+Test the assumptions for a 2 (gender_contestant) x 5 (Opponent) ANOVA on 'High' (this is the highest offer made by the chaser). 
+
+Conduct the 2 x 5 ANOVA. Calculate the post-hoc contrasts. Report as you would do in a paper.
+
+Make a (beautiful) violin plot.
+
+Conduct a 2 (gender_contestant) x 2 (age) ANOVA on 'chosen' (the amount chosen by the contestant.).
+
+Make a plot showing the interaction (see the examples from the slides or check ggplot2).
+
+BONUS: Load the salaries dataset, test the interaction effect for yrs.service x yrs.since.Ph.D. on monthly salary.  
+Calculate Johnson-Neyman interval range.
+
+BONUS: use vegan to conduct a permutation analysis. for the 2 x 5 ANOVA you conducted above.
+
+BONUS: use the party package to model 'high'. (Reduce the dataset via 'dplyr', keep a sensible number of variables).
+
+
+## The Chase data.
+
+Load the data and get some descriptives.
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture5")
+require(readxl)
+chase<-read_xlsx("thechase_R.xlsx")
+require(skimr)
+skim(chase)
+```
+
+## Assumptions.
+
+I have also looked at 'Chosen' rather than 'High'.
+
+### Facetted by opponent.
+
+Here is a graph facetted by opponent to explore normality.
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist <- ggplot(chase, aes(x=Chosen)) 
+plot_hist <- plot_hist+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~Opponent) + theme_gdocs(12) + xlab("Amount Chosen") + ylab("Count")
+plot_hist
+```
+
+Not great in terms of distribution! 
+
+How would you resolve it? (see below for the answer)
+
+Incidentally the above was for *chosen* rather than *high*.
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist <- ggplot(chase, aes(x=High)) 
+plot_hist <- plot_hist+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~Opponent) + theme_gdocs(12) + xlab("Highest offer") + ylab("Count")
+plot_hist
+```
+
+
+### Facetted by gender.
+
+Here is one facetted by gender.
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist2 <- ggplot(chase, aes(x=Chosen)) 
+plot_hist2 <- plot_hist2+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~gender_contestant) + theme_gdocs(12) + xlab("Amount Chosen") + ylab("Count")
+plot_hist2
+```
+
+This similarly shows some issues. Long tail... .
+
+Let us look at Highest offers. (note that it overrides previous codes.)
+
+```{r}
+require(ggplot2)
+require(ggthemes)
+plot_hist2 <- ggplot(chase, aes(x=High)) 
+plot_hist2 <- plot_hist2+ geom_histogram(colour = "black", fill = "white") + facet_wrap(~gender_contestant) + theme_gdocs(12) + xlab("Highest offer") + ylab("Count")
+plot_hist2
+```
+
+
+### Formal normality test.
+
+Unsurprisingly these tests suggest violations for 'Chosen'. 
+
+```{r}
+# other routes.
+require(nortest)
+# Anderson-Darling test.
+ad.test(chase$Chosen)
+# Cramer-von Mises test.
+cvm.test(chase$Chosen)
+# transform, we need to add a constant to make every value positive. 
+require(dplyr)
+chase <- chase %>% mutate(Log_chosen=log10(Chosen+10000))
+ad.test(chase$Log_chosen)
+cvm.test(chase$Log_chosen)
+```
+This reduces non-normality (values went down) but still strong evidence for violations.
+
+Let us look at some plots, to see what has happened.
+
+```{r}
+require(ggplot2)
+qqplot <- ggplot(chase, aes(sample = Chosen))
+qqplot + stat_qq()
+# log
+qqplot_log <- ggplot(chase, aes(sample = Log_chosen))
+qqplot_log + stat_qq()
+```
+
+The log-transformed data looks better but clearly one outlier. In conclusion, we have clear violations but we will tackle these issues in the 'bonus' section.
+
+What happens to the highest offer.
+
+```{r}
+# other routes but now for highest offer .
+require(nortest)
+# Anderson-Darling test.
+ad.test(chase$High)
+# Cramer-von Mises test.
+cvm.test(chase$High)
+```
+
+Also some issues there... . Transforming it improves it somewhat but still non-normal according to the tests, but graphically it looks a lot better than 'Chosen'.
+
+```{r}
+require(dplyr)
+chase <- chase %>% mutate(Log_high=log10(High))
+ad.test(chase$Log_high)
+cvm.test(chase$Log_high)
+```
+
+
+### Homogeneity test.
+
+The assumption of homogeneity of variances is not violated for neither opponent nor gender of the contestant, respectively: _F_(4,195) = 2.23, _p_= .067 and _F_(1,198) = 0.95, _p_= .331.
+
+Note that there is a trend with 'Opponent' (_p_= .067) but this is not really too worrisome.
+
+```{r}
+require(car)
+leveneTest(Chosen ~ gender_contestant, data=chase)
+leveneTest(Chosen ~ Opponent, data=chase)
+```
+
+Incidentally, if you use the transformed data, then there is similarly no issue.
+
+```{r}
+leveneTest(Log_chosen ~ gender_contestant, data=chase)
+leveneTest(Log_chosen ~ Opponent, data=chase)
+```
+
+As an aside, note that in the current analyses we do **not** account for the fact that observations do not satisfy the assumption of independence. As you might have noticed, the data are nested within episodes! (The offers (and chosen offers) will depend based on previous players' performance!). We will further discuss this when we cover multilevel models.
+
+Similarly no issues with the high offers made, in terms of homogeneity of variance.
+
+```{r}
+require(car)
+leveneTest(High~ gender_contestant, data=chase)
+leveneTest(High ~ Opponent, data=chase)
+```
+
+
+## 2 x 5 ANOVA
+
+### Raw data 'chosen'.
+
+```{r}
+require(ez)
+chase$contest_id<-seq(1:200) # need to make an ID.
+ez<-ezANOVA(data=chase, dv=.(Chosen), wid=.(contest_id), between = .(gender_contestant,Opponent), return_aov=T, detailed=TRUE, type=3)
+ez
+```
+
+**Sample write up**:
+
+A two-way ANOVA was conducted to examine the effect of gender and opponent on the amount of the offer chosen. There was no significant interaction effect, _F_(4,190)= 1.23, _p_= .301, $\eta^2_g$= .025. Neither were there any significant main effects for opponent and gender of the contestant, respectively: _F_(4,190)= 2.25, _p_= .065, $\eta^2_g$= .045 and _F_(1,190)= 2.25, _p_= .166, $\eta^2_g$= .01. 
+
+### Raw data: 'high'
+Now let us look at the highest offers. Similarly no significant effects.
+
+```{r}
+chase$contest_id<-seq(1:200) # need to make an ID.
+ez2<-ezANOVA(data=chase, dv=.(High), wid=.(contest_id), between = .(gender_contestant,Opponent), return_aov=T, detailed=TRUE, type=3)
+ez2
+```
+
+A two-way ANOVA was conducted to examine the effect of gender and opponent on the highest offer made. There was no significant interaction effect, _F_(4,190)= 0.501, _p_= .735, $\eta^2_g$= .01. Neither were there any significant main effects for opponent and gender of the contestant, respectively: _F_(4,190)= 1.29, _p_= .274, $\eta^2_g$= .026 and _F_(1,190)= 1.70, _p_= .193, $\eta^2_g$= .009. 
+
+### Log-transformed data: Chosen.
+
+Incidentally, you would draw the same conclusion if you analyzed the log-transformed data.
+
+```{r}
+require(ez)
+ez_log<-ezANOVA(data=chase, dv=.(Log_chosen), wid=.(contest_id), between = .(gender_contestant,Opponent), return_aov=T, detailed=TRUE, type=3)
+ez_log
+```
+
+### Post-hoc effects.
+
+It makes little sense to report these given that none of the effects are significant but I have reported them here nonetheless, so that you have an example.
+
+```{r}
+library(multcomp)
+summary(glht(ez$aov, linfct = mcp(Opponent = "Tukey")))
+```
+
+## Violin plot
+
+### Raw data.
+
+No outliers really with Jenny but all other chasers have outliers. (You can further improve the graph, by for example sorting the names).
+
+```{r}
+require(ggpubr)
+require(RColorBrewer)
+plot_moderation <- ggviolin(chase, x = "Opponent", y = "Chosen",
+                color = "Opponent", palette = "Set1",
+                add = c("jitter","boxplot"), shape = "Opponent") + labs(x="Opponent", y= "Amount chosen (GBP)", color="Opponent", shape= "Opponent")
+plot_moderation  + facet_wrap(~gender_contestant)
+```
+
+### Raw data: high.
+
+Note that this overrides... .
+
+```{r}
+require(ggpubr)
+require(RColorBrewer)
+plot_moderation <- ggviolin(chase, x = "Opponent", y = "High",
+                color = "Opponent", palette = "Set1",
+                add = c("jitter","boxplot"), shape = "Opponent") + labs(x="Opponent", y= "Highest offer (GBP)", color="Opponent", shape= "Opponent")
+plot_moderation  + facet_wrap(~gender_contestant)
+```
+
+
+### log-transform data: chosen.
+
+```{r}
+plot_moderation2 <- ggviolin(chase, x = "Opponent", y = "Log_chosen",
+                color = "Opponent", palette = "Set1",
+                add = c("jitter","boxplot"), shape = "Opponent") + labs(x="Opponent", y= "Transformed amount chosen (log10(x+10000))", color="Opponent", shape= "Opponent")
+plot_moderation2  + facet_wrap(~gender_contestant)
+```
+
+## Gender x Age interaction models
+
+There is no evidence for an interaction between gender and age. 
+
+Note that in the log. transformed data, we find some suggestions (but note that we have not examined all assumptions from OLS regression - normally you would do so before drawing any firm conclusions.)
+
+```{r}
+interaction<-lm(Chosen ~ gender_contestant*Age, data=chase)
+summary(interaction)
+interaction2<-lm(Log_chosen ~ gender_contestant*Age, data=chase)
+summary(interaction2)
+main_model<-lm(Log_chosen ~ gender_contestant+Age, data=chase)
+summary(main_model)
+```
+
+## Plot
+
+You might have noticed that the methods of the slides from Lecture 5 do not work as here you have a factor x numeric interaction! So you need to go back to earlier lectures.
+
+Look back to exercise 2, for example (note some packages should still be loaded.). 
+
+The figure shows lots of overlap... . Again, you can further beautify this... .
+
+
+```{r}
+require(scales)
+chase_plot<- ggplot(data = chase, aes(Age, Chosen, colour= gender_contestant)) + scale_colour_brewer(palette = "Pastel1") + geom_point(size=2.5, shape=16) + theme_hc(12)  + labs(x="Age (Years)", y="Chosen (GBP)", title="Chase") + scale_x_continuous(limits=c(18,80),breaks = pretty_breaks(4)) + geom_smooth(method="lm")
+chase_plot
+```
+
+
+
+## BONUS: Continuous x Continuous interaction.
+
+Load the data.
+
+```{r}
+require(car)
+salaries<-carData::Salaries
+require(dplyr)
+salaries<- salaries %>% mutate(monthly_salary=salary/9)
+salaries<- salaries %>% mutate(yrs.since.phd_cent= yrs.since.phd -mean(yrs.since.phd), yrs.service_cent= yrs.service - mean(yrs.service))
+interaction_salaries<-lm(monthly_salary ~ yrs.since.phd_cent*yrs.service_cent, data=salaries)
+summary(interaction_salaries)
+```
+
+
+Note that this is likely not sensible to do?!
+
+**Why not?** : These are very highly correlated! 
+
+Note that you would also further check
+
+```{r}
+cor.test(salaries$yrs.since.phd, salaries$yrs.service)
+```
+
+### Johnson Neyman plot
+
+```{r}
+require(jtools)
+require(interactions)
+johnson_neyman(interaction_salaries, pred = yrs.since.phd_cent, modx = yrs.service_cent)
+```
+
+
+## BONUS: use vegan.
+
+The conclusion is that again there is no evidence for an interaction effect. Note that it might not work if the data are not 'attached'.
+
+
+```{r}
+require(vegan)
+# margin corresponds to type III error.
+require(readxl)
+chase<-read_xlsx("thechase_R.xlsx")
+require(dplyr)
+chase <- chase %>% mutate(Log_chosen=log10(Chosen+10000))
+attach(chase)
+set.seed(123) # seeds to make it replicable
+adonis2(Chosen~gender_contestant*Opponent, data = chase, by='margin', method='euclidean') 
+set.seed(234)
+adonis2(Log_chosen~gender_contestant*Opponent, data = chase, by='margin', method='euclidean')
+set.seed(345)
+adonis2(High~gender_contestant*Opponent, data = chase, by='margin', method='euclidean') 
+```
+
+LmPerm is also an option. (Check the vignette,'uniquely' corresponds to type III). There still is no evidence for an interaction.
+
+
+```{r}
+require(lmPerm)
+set.seed(123456)
+anova(lmp(Chosen~gender_contestant*Opponent,chase))
+set.seed(789)
+anova(lmp(High~gender_contestant*Opponent,chase))
+```
+
+Incidentally you would find effects when conducting permutation tests... .
+
+A median test similarly suggests there are differences based on opponents! (You would then explore these further).
+
+```{r}
+require(lmPerm)
+set.seed(01234)
+anova(lmp(Chosen~gender_contestant+Opponent,chase))
+require(WRS2)
+set.seed(1234)
+med1way(Chosen~ gender_contestant+Opponent, data=chase, iter=10000)
+set.seed(1234)
+med1way(Chosen~Opponent, data=chase, iter=10000)
+```
+
+
+## BONUS use party.
+
+None of the variables were selected :/.
+
+```{r}
+chase_red<-chase%>%dplyr::select(c(Opponent,Age,High,gender_contestant))
+chase_red$gender_contestant<-as.factor(chase_red$gender_contestant)
+chase_red$Opponent<-as.factor(chase_red$Opponent)
+require(party)
+ctree<-ctree(High~., chase_red)
+plot(ctree)
+```
+
+Note that this overrides... . What happens when we pick 'Chosen'. Still nothing... .
+
+```{r}
+chase_red<-chase%>%dplyr::select(c(Opponent,Age,Chosen,gender_contestant))
+chase_red$gender_contestant<-as.factor(chase_red$gender_contestant)
+chase_red$Opponent<-as.factor(chase_red$Opponent)
+require(party)
+ctree<-ctree(Chosen~., chase_red)
+plot(ctree)
+```
+
+Alas, also no effect on success... . So unfortunately not much interesting going on there... .
+
+```{r}
+chase_red<-chase%>%dplyr::select(c(Opponent,Age,success_player,gender_contestant))
+chase_red$gender_contestant<-as.factor(chase_red$gender_contestant)
+chase_red$Opponent<-as.factor(chase_red$Opponent)
+chase_red$success_player<-as.factor(chase_red$success_player)
+require(party)
+ctree<-ctree(success_player~., chase_red)
+plot(ctree)
+```
+
+## The end
+
+THE END!
+
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/Q6gPyUYrCk76g/giphy.gif")
+```
+
+```{r}
+sessionInfo()
+```
+
