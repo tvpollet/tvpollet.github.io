@@ -30,7 +30,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 ## **2025/Accepted/in Press**
 
 [141.](https://doi.org/10.31234/osf.io/x2u6s_v2
-). Shiramizu, V.M., Stern, J., Bartoš, F., Rafiee, Y., **Pollet, T.V.**, & Jones, B.C. (accepted). Testing the Congruency Hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women’s sexual satisfaction? _Hormones and Behavior_ 
+) Shiramizu, V.M., Stern, J., Bartoš, F., Rafiee, Y., **Pollet, T.V.**, & Jones, B.C. (accepted). Testing the Congruency Hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women’s sexual satisfaction? _Hormones and Behavior_ 
 
 ## **2024**
 
