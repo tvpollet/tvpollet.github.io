@@ -27,7 +27,12 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Boothroyd, L.G., **Pollet, T.V.**, Evans, E.H., Yi, Q., & Tovée, M.J. (2018, September 7th). Adaptation-like effects in body weight attractiveness are not simply norm based. _PsyArxiv_ [https://doi.org/10.31234/osf.io/gsnkf](https://doi.org/10.31234/osf.io/gsnkf)
 
-## **2024/Accepted/in Press**
+## **2025/Accepted/in Press**
+
+[141.](https://doi.org/10.31234/osf.io/x2u6s_v2
+). Shiramizu, V.M., Stern, J., Bartoš, F., Rafiee, Y., **Pollet, T.V.**, & Jones, B.C. (accepted). Testing the Congruency Hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women’s sexual satisfaction? _Hormones and Behavior_ 
+
+## **2024**
 
 [140.](https://doi.org/10.1038/s41598-024-81373-3) Peperkoorn, L.S., Hill, R.A., Barton, R.A. & **Pollet, T.V.** (2024). Meta-analysis of the red advantage in combat sports. _Scientific Reports, 14,_  30822. [https://doi.org/10.1038/s41598-024-81373-3](https://doi.org/10.1038/s41598-024-81373-3)
 
