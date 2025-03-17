@@ -9,6 +9,7 @@
     <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/htmltools-fill/fill.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <script src="libs/viz/viz.js"></script>
     <link href="libs/DiagrammeR-styles/styles.css" rel="stylesheet" />
@@ -25,7 +26,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-03-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -84,20 +85,20 @@ Y= happiness
 Proposed mediator (M): self-esteem.
 
 
-```r
+``` r
 # Long string.
-D&lt;- read.csv('mediationData.csv') # redundant
-Data_med&lt;-D
+D &lt;- read.csv("mediationData.csv")  # redundant
+Data_med &lt;- D
 ```
 
 ---
 ## Lavaan
 
 
-```r
+``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture9")
 require(lavaan)
-mediationmodelSEM &lt;- ' # direct effect
+mediationmodelSEM &lt;- " # direct effect
              Y ~ c*X
            # mediator
              M ~ a*X
@@ -106,91 +107,18 @@ mediationmodelSEM &lt;- ' # direct effect
              ab := a*b
            # total effect
              total := c + (a*b)
-         '
+         "
 ```
 
 ---
 ## Model
 
 
-```r
-fit_mediationSEM &lt;- sem(mediationmodelSEM, se="bootstrap", data = Data_med)
-sink(file="SEM-mediation.txt")
-summary(fit_mediationSEM, standardized=TRUE, fit.measures=T)
-```
-
-```
-## lavaan 0.6-12 ended normally after 1 iterations
-## 
-##   Estimator                                         ML
-##   Optimization method                           NLMINB
-##   Number of model parameters                         5
-## 
-##   Number of observations                           100
-## 
-## Model Test User Model:
-##                                                       
-##   Test statistic                                 0.000
-##   Degrees of freedom                                 0
-## 
-## Model Test Baseline Model:
-## 
-##   Test statistic                                77.413
-##   Degrees of freedom                                 3
-##   P-value                                        0.000
-## 
-## User Model versus Baseline Model:
-## 
-##   Comparative Fit Index (CFI)                    1.000
-##   Tucker-Lewis Index (TLI)                       1.000
-## 
-## Loglikelihood and Information Criteria:
-## 
-##   Loglikelihood user model (H0)               -379.612
-##   Loglikelihood unrestricted model (H1)       -379.612
-##                                                       
-##   Akaike (AIC)                                 769.225
-##   Bayesian (BIC)                               782.250
-##   Sample-size adjusted Bayesian (BIC)          766.459
-## 
-## Root Mean Square Error of Approximation:
-## 
-##   RMSEA                                          0.000
-##   90 Percent confidence interval - lower         0.000
-##   90 Percent confidence interval - upper         0.000
-##   P-value RMSEA &lt;= 0.05                             NA
-## 
-## Standardized Root Mean Square Residual:
-## 
-##   SRMR                                           0.000
-## 
-## Parameter Estimates:
-## 
-##   Standard errors                            Bootstrap
-##   Number of requested bootstrap draws             1000
-##   Number of successful bootstrap draws            1000
-## 
-## Regressions:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##   Y ~                                                                   
-##     X          (c)    0.040    0.126    0.314    0.753    0.040    0.034
-##   M ~                                                                   
-##     X          (a)    0.561    0.099    5.642    0.000    0.561    0.514
-##   Y ~                                                                   
-##     M          (b)    0.635    0.102    6.216    0.000    0.635    0.593
-## 
-## Variances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##    .Y                 2.581    0.326    7.916    0.000    2.581    0.627
-##    .M                 2.633    0.366    7.191    0.000    2.633    0.735
-## 
-## Defined Parameters:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##     ab                0.357    0.080    4.473    0.000    0.357    0.305
-##     total             0.396    0.125    3.161    0.002    0.396    0.339
-```
-
-```r
+``` r
+fit_mediationSEM &lt;- sem(mediationmodelSEM, se = "bootstrap",
+    data = Data_med)
+sink(file = "SEM-mediation.txt")
+summary(fit_mediationSEM, standardized = TRUE, fit.measures = T)
 sink()
 ```
 
@@ -200,20 +128,29 @@ sink()
 How does that compare to the other method?
 
 
-```r
+``` r
 require(mediation)
-med.fit&lt;-lm(M~X, data=Data_med)
-out.fit&lt;-lm(Y~X+M, data=Data_med)
-# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+med.fit &lt;- lm(M ~ X,
+    data = Data_med)
+out.fit &lt;- lm(Y ~ X +
+    M, data = Data_med)
+# Robust SE is
+# ignored for
+# Bootstrap.
+# Otherwise omit
+# boot=TRUE.
 set.seed(1984)
-med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
+med.out &lt;- mediate(med.fit,
+    out.fit, treat = "X",
+    mediator = "M", boot = TRUE,
+    sims = 10000)
 ```
 
 ---
 ## Summary.
 
 
-```r
+``` r
 summary(med.out)
 ```
 
@@ -250,85 +187,20 @@ Also, easier if we have multiple mediators and even latent constructs.
 ## Model with just direct effects.
 
 
-```r
+``` r
 require(lavaan)
-directmodelSEM &lt;- ' # just direct effects
-                    Y ~ c*X+b*M '
+directmodelSEM &lt;- " # just direct effects
+                    Y ~ c*X+b*M "
 ```
 
 ---
 ## Direct model
 
 
-```r
-fit_directSEM &lt;- sem(directmodelSEM, se="bootstrap", data = Data_med)
-sink(file="SEM-direct.txt")
-summary(fit_directSEM, standardized=TRUE, fit.measures=T)
-```
-
-```
-## lavaan 0.6-12 ended normally after 1 iterations
-## 
-##   Estimator                                         ML
-##   Optimization method                           NLMINB
-##   Number of model parameters                         3
-## 
-##   Number of observations                           100
-## 
-## Model Test User Model:
-##                                                       
-##   Test statistic                                 0.000
-##   Degrees of freedom                                 0
-## 
-## Model Test Baseline Model:
-## 
-##   Test statistic                                46.681
-##   Degrees of freedom                                 2
-##   P-value                                        0.000
-## 
-## User Model versus Baseline Model:
-## 
-##   Comparative Fit Index (CFI)                    1.000
-##   Tucker-Lewis Index (TLI)                       1.000
-## 
-## Loglikelihood and Information Criteria:
-## 
-##   Loglikelihood user model (H0)               -189.311
-##   Loglikelihood unrestricted model (H1)       -189.311
-##                                                       
-##   Akaike (AIC)                                 384.622
-##   Bayesian (BIC)                               392.437
-##   Sample-size adjusted Bayesian (BIC)          382.963
-## 
-## Root Mean Square Error of Approximation:
-## 
-##   RMSEA                                          0.000
-##   90 Percent confidence interval - lower         0.000
-##   90 Percent confidence interval - upper         0.000
-##   P-value RMSEA &lt;= 0.05                             NA
-## 
-## Standardized Root Mean Square Residual:
-## 
-##   SRMR                                           0.000
-## 
-## Parameter Estimates:
-## 
-##   Standard errors                            Bootstrap
-##   Number of requested bootstrap draws             1000
-##   Number of successful bootstrap draws            1000
-## 
-## Regressions:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##   Y ~                                                                   
-##     X          (c)    0.040    0.123    0.322    0.747    0.040    0.034
-##     M          (b)    0.635    0.100    6.351    0.000    0.635    0.593
-## 
-## Variances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)   Std.lv  Std.all
-##    .Y                 2.581    0.339    7.625    0.000    2.581    0.627
-```
-
-```r
+``` r
+fit_directSEM &lt;- sem(directmodelSEM, se = "bootstrap", data = Data_med)
+sink(file = "SEM-direct.txt")
+summary(fit_directSEM, standardized = TRUE, fit.measures = T)
 sink()
 ```
 
@@ -358,13 +230,16 @@ Ignoring practical significance. One can build a model that fits the data closel
 LavaanPlot relies on diagrammer.
 
 
-```r
+``` r
 require(lavaanPlot)
-lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+lavaanPlot(model = fit_mediationSEM,
+    node_options = list(shape = "box",
+        fontname = "Helvetica"),
+    edge_options = list(color = "grey"))
 ```
 
-<div id="htmlwidget-85e8a5b03f17fcb0109c" style="width:576px;height:252px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-85e8a5b03f17fcb0109c">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-73222e8070aeac3729dc" style="width:576px;height:252px;"></div>
+<script type="application/json" data-for="htmlwidget-73222e8070aeac3729dc">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## But it is not the way we want.
@@ -372,23 +247,30 @@ lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname
 You can further improve on this. Check diagrammer.
 
 
-```r
+``` r
 require(lavaanPlot)
-labels&lt;- list(X="independent", M="mediator", Y="dependent")
-lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), labels=labels, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+labels &lt;- list(X = "independent",
+    M = "mediator", Y = "dependent")
+lavaanPlot(model = fit_mediationSEM,
+    graph_options = list(rankdir = "LR"),
+    labels = labels,
+    node_options = list(shape = "box",
+        fontname = "Helvetica"),
+    edge_options = list(color = "grey"))
 ```
 
-<div id="htmlwidget-d76cbcf08f17dbb4de3d" style="width:576px;height:252px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-d76cbcf08f17dbb4de3d">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-f9877f49d71b72148edd" style="width:576px;height:252px;"></div>
+<script type="application/json" data-for="htmlwidget-f9877f49d71b72148edd">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Make a plot with the estimates.
 
 
-```r
+``` r
 require(semPlot)
-labels2&lt;- list("Dependent", "Mediator", "Independent") # need to reorganize.
-semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "ram", nodeLabels = labels2)
+labels2 &lt;- list("Dependent", "Mediator", "Independent")  # need to reorganize.
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
+    whatLabels = "std", intercepts = FALSE, style = "ram", nodeLabels = labels2)
 ```
 
 &lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
@@ -397,10 +279,12 @@ semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatL
 ## Make the line visible... .
 
 
-```r
+``` r
 # Lisrel.
 require(semPlot)
-semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "lisrel", curvePivot = TRUE, fade=FALSE, nodeLabels = labels2)
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
+    whatLabels = "std", intercepts = FALSE, style = "lisrel",
+    curvePivot = TRUE, fade = FALSE, nodeLabels = labels2)
 ```
 
 &lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
@@ -470,18 +354,18 @@ We can do SEM based on correlation and covariance matrix!
 First make your covariance matrix.
 
 
-```r
-lower &lt;- '
+``` r
+lower &lt;- "
  11.834,
   6.947,    9.364,
   6.819,    5.091,   12.532,
   4.783,    5.028,    7.495,    9.986,
  -3.839,   -3.889,   -3.841,   -3.625,   9.610,
--21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 '
+-21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 "
 
 # convert to a full symmetric covariance matrix with names
-wheaton.cov &lt;- getCov(lower, names=c("anomia67","powerless67", "anomia71",
-                                     "powerless71","education","sei"))
+wheaton.cov &lt;- getCov(lower, names = c("anomia67", "powerless67",
+    "anomia71", "powerless71", "education", "sei"))
 ```
 
 ---
@@ -501,10 +385,10 @@ This model brings which 2 aspects of SEM together?
 ## Build the model.
 
 
-```r
+``` r
 require(lavaan)
 # the model
-wheaton.model = '
+wheaton.model = "
   # measurement model
     ses     =~ education + sei
     alien67 =~ anomia67 + powerless67
@@ -520,7 +404,7 @@ wheaton.model = '
 
   # Indirect effect
     IndirectEffect := sa*aa
-'
+"
 ```
 
 ---
@@ -535,110 +419,11 @@ wheaton.model = '
 
 
 
-```r
+``` r
 require(lavaan)
-alienation &lt;- sem(wheaton.model, sample.cov=wheaton.cov, sample.nobs=932)
-sink(file='summary_alienation.txt')
-summary(alienation, fit.measures=T)
-```
-
-```
-## lavaan 0.6-12 ended normally after 84 iterations
-## 
-##   Estimator                                         ML
-##   Optimization method                           NLMINB
-##   Number of model parameters                        17
-## 
-##   Number of observations                           932
-## 
-## Model Test User Model:
-##                                                       
-##   Test statistic                                 4.735
-##   Degrees of freedom                                 4
-##   P-value (Chi-square)                           0.316
-## 
-## Model Test Baseline Model:
-## 
-##   Test statistic                              2133.722
-##   Degrees of freedom                                15
-##   P-value                                        0.000
-## 
-## User Model versus Baseline Model:
-## 
-##   Comparative Fit Index (CFI)                    1.000
-##   Tucker-Lewis Index (TLI)                       0.999
-## 
-## Loglikelihood and Information Criteria:
-## 
-##   Loglikelihood user model (H0)             -15213.274
-##   Loglikelihood unrestricted model (H1)     -15210.906
-##                                                       
-##   Akaike (AIC)                               30460.548
-##   Bayesian (BIC)                             30542.783
-##   Sample-size adjusted Bayesian (BIC)        30488.792
-## 
-## Root Mean Square Error of Approximation:
-## 
-##   RMSEA                                          0.014
-##   90 Percent confidence interval - lower         0.000
-##   90 Percent confidence interval - upper         0.053
-##   P-value RMSEA &lt;= 0.05                          0.930
-## 
-## Standardized Root Mean Square Residual:
-## 
-##   SRMR                                           0.007
-## 
-## Parameter Estimates:
-## 
-##   Standard errors                             Standard
-##   Information                                 Expected
-##   Information saturated (h1) model          Structured
-## 
-## Latent Variables:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##   ses =~                                              
-##     education         1.000                           
-##     sei               5.219    0.422   12.364    0.000
-##   alien67 =~                                          
-##     anomia67          1.000                           
-##     powerless67       0.979    0.062   15.895    0.000
-##   alien71 =~                                          
-##     anomia71          1.000                           
-##     powerless71       0.922    0.059   15.498    0.000
-## 
-## Regressions:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##   alien71 ~                                           
-##     alien67   (aa)    0.607    0.051   11.898    0.000
-##     ses              -0.227    0.052   -4.334    0.000
-##   alien67 ~                                           
-##     ses       (sa)   -0.575    0.056  -10.195    0.000
-## 
-## Covariances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##  .anomia67 ~~                                         
-##    .anomia71          1.623    0.314    5.176    0.000
-##  .powerless67 ~~                                      
-##    .powerless71       0.339    0.261    1.298    0.194
-## 
-## Variances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##    .education         2.801    0.507    5.525    0.000
-##    .sei             264.597   18.126   14.597    0.000
-##    .anomia67          4.731    0.453   10.441    0.000
-##    .powerless67       2.563    0.403    6.359    0.000
-##    .anomia71          4.399    0.515    8.542    0.000
-##    .powerless71       3.070    0.434    7.070    0.000
-##     ses               6.798    0.649   10.475    0.000
-##    .alien67           4.841    0.467   10.359    0.000
-##    .alien71           4.083    0.404   10.104    0.000
-## 
-## Defined Parameters:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##     IndirectEffect   -0.349    0.041   -8.538    0.000
-```
-
-```r
+alienation &lt;- sem(wheaton.model, sample.cov = wheaton.cov, sample.nobs = 932)
+sink(file = "summary_alienation.txt")
+summary(alienation, fit.measures = T)
 sink()
 ```
 
@@ -646,10 +431,10 @@ sink()
 ## Semplot
 
 
-```r
+``` r
 require(semPlot)
 require(qgraph)
-semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
+semPaths(alienation, style = "lisrel", what = "std", curvePivot = TRUE)
 ```
 
 &lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
@@ -666,13 +451,15 @@ What happens if you remove the correlated residuals?
 
 Use the following code below to generate a correlation matrix to use (you'll need to load lavaan).
 
-The data comes from this [paper](https://web.archive.org/web/20220718192446/https://core.ecu.edu/wuenschk/Articles/JSB&amp;P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
+The data comes from this [paper](http://core.ecu.edu/psyc/wuenschk/Articles/JSB&amp;P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
 
 
-```r
+``` r
 require(lavaan)
-data&lt;-lav_matrix_lower2full(c(1,.47,1,.66,.50,1,.77,.41,.46,1,.52,.38,.50,.50,1))
-rownames(data)&lt;-colnames(data)&lt;-c("att",'sn','pbc','int','beh') # a matrix.
+data &lt;- lav_matrix_lower2full(c(1, 0.47, 1, 0.66, 0.5, 1, 0.77,
+    0.41, 0.46, 1, 0.52, 0.38, 0.5, 0.5, 1))
+rownames(data) &lt;- colnames(data) &lt;- c("att", "sn", "pbc", "int",
+    "beh")  # a matrix.
 ```
 
 ---
