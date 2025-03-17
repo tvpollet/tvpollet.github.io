@@ -1,15 +1,25 @@
 ---
 title: "Solution Lecture 6"
-output: html_document
-author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
-date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+author: "Prof. Thomas Pollet, Northumbria University, UK (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer/)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Exercise 6 instructions.
+# Exercise 6 instructions.
 
 Download the data 'PSE_MOL_Doors.sav', these are the data from an experiment by Kamila Irvine and Piers Cornelissen. This file contains data on 95 women performing various scales and body image-related tasks. doors_front is the score from a gap estimation task, w_dn is the actual gap a participant can pass through. The (estimated) Point of subjective equality or PSE (the BMI they believe themselves to be) when viewing an imageset varying in BMI. Participants used the method of adjustment to estimate their body size with the same stimulus set as for the yes-no task (MOL).  BMI is the participant's actual BMI.
 
@@ -80,6 +90,8 @@ We want this so we can make a diagram.
 step4<-lm(BMI~PSE, data= Data)
 summary(step4)
 ```
+
+As discussed in class this method is generally problematic, and typically you would want to use more advanced methods such as those implemented via `mediation` (see below).
 
 ## Make a diagram
 
