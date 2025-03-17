@@ -21,11 +21,10 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-03-12 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-02-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
-
 
 
 
@@ -127,11 +126,11 @@ More on assumptions [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3290828/
 Data were from [here](https://quantdev.ssri.psu.edu/) but are now available [here](https://tvpollet.github.io/PY_0794/Lecture_7/personality0.txt).  240 participants providing self-ratings (1-9) on 32 variables.
 
 
-```r
+``` r
 # Downloaded the data into my work directory.
 f_data &lt;- read.table("personality0.txt")
 require(stargazer)
-stargazer(f_data, type = "html", out = "factor_data.html")
+stargazer(f_data, type = "html", out= "factor_data.html")
 ```
 
 ---
@@ -147,7 +146,7 @@ Measurement and sample sizes OK. (Though 1 to 9, one can always question how 'in
 As an aside. This is not looking great... . We will ignore it for now, given that we are conducting *exploratory* factor analysis.
 
 
-```r
+``` r
 require(MVN)
 mvn(f_data)
 ```
@@ -315,10 +314,10 @@ mvn(f_data)
 You can do all pairwise scatterplots but with range 1-9 this is not wholly useful. We will just assume linearity is reasonable. (Helped by our central limit theorem!)
 
 
-```r
+``` r
 require(ggplot2)
 require(GGally)
-ggpairs(f_data[, 1:4])  # example
+ggpairs(f_data[,1:4]) # example
 ```
 
 &lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-8-1.png" width="300px" style="display: block; margin: auto;" /&gt;
@@ -329,7 +328,7 @@ ggpairs(f_data[, 1:4])  # example
 Here we want Bartlett's test to be significant! Why?  
 
 
-```r
+``` r
 bartlett.test(f_data)
 ```
 
@@ -352,7 +351,7 @@ Bartlett's test for sphericity was significant suggesting that factor analysis i
 Kaiser-Meyer-Olkin factor adequacy ranges from 0 to 1.  All should be &gt;.5 [(Kaiser, 1977)](http://jaltcue.org/files/articles/Kaiser1974_an_index_of_factorial_simplicity.pdf)
 
 
-```r
+``` r
 require(psych)
 KMO(f_data)
 ```
@@ -403,15 +402,13 @@ Read in the data, make a subset with items 13:24 (Hint: use the select function 
 ## ggcorrplot
 
 
-```r
-# ggcorrplot, you can then further tweak this, as
-# it is a ggplot.
+``` r
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
 require(ggcorrplot)
 require(dplyr)
 # take the absolute, interested in strength.
-cormatrix &lt;- abs(cor(f_data[, 1:20]))
-corplot &lt;- ggcorrplot(cormatrix, hc.order = TRUE, type = "lower",
-    method = "circle")
+cormatrix&lt;-abs(cor(f_data[,1:20])) 
+corplot&lt;-ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", method = "circle") 
 ```
 
 ---
@@ -441,94 +438,18 @@ See [here](https://quantdev.ssri.psu.edu/tutorials/intro-basic-exploratory-facto
 Varimax rotation. Let's start by getting 8 factors. (Request large number and then trim down!)
 
 
-```r
+``` r
 require(psych)
-fa &lt;- fa(f_data, 8, fm = "minres", rotate = "varimax", fa = "fa")
+fa &lt;- fa(f_data,8, fm = 'minres', rotate='varimax', fa = 'fa')
 ```
 
 ---
 ## Output
 
 
-```r
-sink("fa_output.text")
+``` r
+sink('fa_output.text')
 fa
-```
-
-```
-## Factor Analysis using method =  minres
-## Call: fa(r = f_data, nfactors = 8, rotate = "varimax", fm = "minres", 
-##     fa = "fa")
-## Standardized loadings (pattern matrix) based upon correlation matrix
-##           MR1   MR2   MR4   MR8   MR6   MR5   MR7   MR3   h2   u2 com
-## distant  0.60  0.02  0.11 -0.13  0.13  0.24  0.04  0.10 0.48 0.52 1.7
-## talkatv -0.76  0.06 -0.01  0.09  0.11  0.14  0.04  0.07 0.63 0.37 1.2
-## carelss  0.05 -0.25  0.12 -0.08  0.63  0.19  0.08  0.14 0.54 0.46 1.9
-## hardwrk -0.18  0.70  0.14  0.06 -0.21  0.01 -0.04  0.07 0.59 0.41 1.5
-## anxious  0.16  0.02  0.75  0.07  0.09  0.15 -0.09  0.06 0.63 0.37 1.3
-## agreebl -0.03  0.02 -0.01  0.71  0.08 -0.17  0.13  0.15 0.58 0.42 1.3
-## tense    0.15  0.06  0.77 -0.04  0.04  0.21 -0.21  0.09 0.72 0.28 1.5
-## kind    -0.12  0.19  0.04  0.64 -0.22 -0.12  0.04 -0.21 0.56 0.44 1.9
-## opposng -0.01 -0.07  0.09 -0.14  0.09  0.68  0.00 -0.10 0.51 0.49 1.2
-## relaxed -0.03 -0.09 -0.52  0.25  0.05 -0.09  0.49 -0.10 0.61 0.39 2.7
-## disorgn  0.02 -0.31  0.02 -0.01  0.82  0.08  0.10 -0.05 0.79 0.21 1.3
-## outgoin -0.84  0.12  0.00  0.15 -0.02 -0.03  0.12  0.01 0.75 0.25 1.1
-## approvn -0.29  0.13 -0.04  0.48 -0.07 -0.14  0.19  0.11 0.40 0.60 2.6
-## shy      0.71 -0.22  0.17  0.00  0.03 -0.07 -0.01 -0.07 0.59 0.41 1.4
-## discipl  0.05  0.69  0.04  0.08 -0.19  0.00 -0.03  0.16 0.55 0.45 1.3
-## harsh    0.08 -0.04  0.05 -0.18  0.15  0.64 -0.05  0.26 0.55 0.45 1.7
-## persevr -0.14  0.64  0.09  0.14 -0.08  0.04 -0.04 -0.18 0.50 0.50 1.5
-## friendl -0.52  0.16  0.10  0.48 -0.06 -0.15  0.11 -0.27 0.64 0.36 3.2
-## worryin  0.16 -0.03  0.77 -0.04  0.00  0.10 -0.15 -0.20 0.69 0.31 1.4
-## respnsi -0.01  0.56 -0.01  0.29 -0.40  0.06 -0.13 -0.16 0.60 0.40 2.8
-## contrar  0.06 -0.08  0.17 -0.16  0.12  0.72  0.00  0.06 0.59 0.41 1.3
-## sociabl -0.74 -0.06 -0.04  0.22 -0.06 -0.07  0.11 -0.06 0.63 0.37 1.3
-## lazy     0.16 -0.63  0.16 -0.02  0.26  0.15  0.16 -0.03 0.57 0.43 1.9
-## coopera -0.11  0.13 -0.12  0.63 -0.06 -0.24  0.04 -0.07 0.51 0.49 1.6
-## quiet    0.79 -0.14  0.21  0.16 -0.03  0.02  0.03 -0.08 0.71 0.29 1.3
-## organiz -0.10  0.40  0.00  0.09 -0.76  0.00 -0.03  0.04 0.76 0.24 1.6
-## criticl  0.09  0.12  0.13 -0.11 -0.12  0.62 -0.05 -0.10 0.46 0.54 1.4
-## lax      0.02 -0.33 -0.04  0.10  0.25  0.04  0.39  0.01 0.34 0.66 2.9
-## laidbck -0.05 -0.07 -0.28  0.03  0.11 -0.04  0.84  0.05 0.80 0.20 1.3
-## withdrw  0.74 -0.06  0.17 -0.11  0.12  0.22  0.04  0.13 0.67 0.33 1.5
-## givinup  0.34 -0.46  0.28 -0.10  0.12  0.13  0.02  0.22 0.50 0.50 3.6
-## easygon -0.16 -0.11 -0.23  0.30 -0.01 -0.06  0.51 -0.03 0.45 0.55 2.5
-## 
-##                        MR1  MR2  MR4  MR8  MR6  MR5  MR7  MR3
-## SS loadings           4.55 2.96 2.50 2.29 2.24 2.23 1.59 0.52
-## Proportion Var        0.14 0.09 0.08 0.07 0.07 0.07 0.05 0.02
-## Cumulative Var        0.14 0.23 0.31 0.38 0.45 0.52 0.57 0.59
-## Proportion Explained  0.24 0.16 0.13 0.12 0.12 0.12 0.08 0.03
-## Cumulative Proportion 0.24 0.40 0.53 0.65 0.77 0.89 0.97 1.00
-## 
-## Mean item complexity =  1.8
-## Test of the hypothesis that 8 factors are sufficient.
-## 
-## df null model =  496  with the objective function =  17.62 with Chi Square =  4009.54
-## df of  the model are 268  and the objective function was  1.84 
-## 
-## The root mean square of the residuals (RMSR) is  0.02 
-## The df corrected root mean square of the residuals is  0.03 
-## 
-## The harmonic n.obs is  240 with the empirical chi square  140.27  with prob &lt;  1 
-## The total n.obs was  240  with Likelihood Chi Square =  409.11  with prob &lt;  5.9e-08 
-## 
-## Tucker Lewis Index of factoring reliability =  0.924
-## RMSEA index =  0.047  and the 90 % confidence intervals are  0.038 0.056
-## BIC =  -1059.7
-## Fit based upon off diagonal values = 0.99
-## Measures of factor score adequacy             
-##                                                    MR1  MR2  MR4  MR8  MR6  MR5
-## Correlation of (regression) scores with factors   0.96 0.89 0.91 0.88 0.90 0.88
-## Multiple R square of scores with factors          0.92 0.79 0.83 0.77 0.82 0.78
-## Minimum correlation of possible factor scores     0.83 0.59 0.66 0.55 0.64 0.56
-##                                                    MR7  MR3
-## Correlation of (regression) scores with factors   0.89 0.73
-## Multiple R square of scores with factors          0.79 0.53
-## Minimum correlation of possible factor scores     0.58 0.06
-```
-
-```r
 sink()
 ```
 
@@ -575,9 +496,9 @@ Read more [here](http://personality-project.org/r/psych/HowTo/factor.pdf)
 Also part of the output already. Here I used 'minres' as extraction method. Parallel analysis suggests 5 factors (compare red line to blue triangle)
 
 
-```r
+``` r
 require(psych)
-parallel &lt;- fa.parallel(f_data, fm = "minres", fa = "fa")
+parallel &lt;- fa.parallel(f_data, fm = 'minres', fa = 'fa')
 ```
 
 &lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
@@ -590,7 +511,7 @@ parallel &lt;- fa.parallel(f_data, fm = "minres", fa = "fa")
 ## Parallel output.
 
 
-```r
+``` r
 parallel
 ```
 
@@ -606,9 +527,9 @@ parallel
 ## [25] -0.49 -0.52 -0.55 -0.58 -0.60 -0.62 -0.67 -0.70
 ## 
 ##  eigen values of simulated factors
-##  [1]  0.82  0.68  0.59  0.52  0.47  0.41  0.36  0.31  0.27  0.23  0.19  0.15
-## [13]  0.11  0.07  0.03  0.01 -0.03 -0.07 -0.10 -0.14 -0.17 -0.20 -0.23 -0.26
-## [25] -0.28 -0.32 -0.35 -0.38 -0.41 -0.45 -0.49 -0.53
+##  [1]  0.86  0.68  0.60  0.52  0.46  0.41  0.36  0.31  0.26  0.23  0.20  0.16
+## [13]  0.12  0.08  0.04  0.00 -0.04 -0.07 -0.10 -0.14 -0.17 -0.20 -0.23 -0.25
+## [25] -0.28 -0.32 -0.36 -0.39 -0.42 -0.45 -0.49 -0.53
 ## 
 ##  eigen values of components 
 ##  [1] 7.24 4.53 3.12 2.33 1.88 1.19 0.93 0.86 0.80 0.71 0.69 0.64 0.63 0.54 0.51
@@ -627,7 +548,7 @@ Kaiser criterion is the number of eigenvalues &gt;1.
 This can be seen on the graph. That would suggest 5 factors. 
 
 
-```r
+``` r
 parallel$fa.values
 ```
 
@@ -658,9 +579,9 @@ Depending on the _elbow_ of the graph (Scree Criterion) you would extract 4 or 5
 The VSS plot suggests 3 factors. Very little improvement with 4. MAP suggests 6 factors. Output printed to console, check [here](https://tvpollet.github.io/PY_0782/VSS_output.txt)
 
 
-```r
+``` r
 require(psych)
-VSS(f_data, rotate = "varimax", n.obs = 240)  # shows plot
+VSS(f_data, rotate= "varimax", n.obs= 240)# shows plot
 ```
 
 &lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
@@ -670,7 +591,7 @@ VSS(f_data, rotate = "varimax", n.obs = 240)  # shows plot
 ## Very Simple Structure
 ## Call: vss(x = x, n = n, rotate = rotate, diagonal = diagonal, fm = fm, 
 ##     n.obs = n.obs, plot = plot, title = title, use = use, cor = cor)
-## Although the VSS complexity 1 shows  5  factors, it is probably more reasonable to think about  3  factors
+## VSS complexity 1 achieves a maximimum of 0.62  with  3  factors
 ## VSS complexity 2 achieves a maximimum of 0.81  with  5  factors
 ## 
 ## The Velicer MAP achieves a minimum of 0.02  with  6  factors 
@@ -711,158 +632,14 @@ Run a parallel analysis. Discuss the outcome with your neighbour.
 Let's extract one with three factors though 5 could also be workable.
 
 
-```r
-fa_3 &lt;- fa(f_data, 3, fm = "minres", rotate = "varimax", fa = "fa")
-sink("fa_3_output.txt")
+``` r
+fa_3&lt;-fa(f_data,3, fm = 'minres', rotate='varimax', fa = 'fa')
+sink('fa_3_output.txt')
 fa_3
-```
-
-```
-## Factor Analysis using method =  minres
-## Call: fa(r = f_data, nfactors = 3, rotate = "varimax", fm = "minres", 
-##     fa = "fa")
-## Standardized loadings (pattern matrix) based upon correlation matrix
-##           MR2   MR1   MR3   h2   u2 com
-## distant -0.13 -0.55  0.27 0.39 0.61 1.6
-## talkatv -0.05  0.79  0.04 0.63 0.37 1.0
-## carelss -0.61 -0.01  0.23 0.42 0.58 1.3
-## hardwrk  0.64  0.23  0.12 0.48 0.52 1.3
-## anxious  0.05 -0.18  0.49 0.28 0.72 1.3
-## agreebl  0.08  0.08 -0.40 0.17 0.83 1.1
-## tense    0.11 -0.18  0.64 0.46 0.54 1.2
-## kind     0.40  0.15 -0.34 0.30 0.70 2.2
-## opposng -0.21  0.07  0.49 0.28 0.72 1.4
-## relaxed -0.22  0.10 -0.64 0.47 0.53 1.3
-## disorgn -0.71  0.02  0.06 0.50 0.50 1.0
-## outgoin  0.10  0.84 -0.12 0.74 0.26 1.1
-## approvn  0.18  0.31 -0.37 0.26 0.74 2.4
-## shy     -0.14 -0.73  0.04 0.56 0.44 1.1
-## discipl  0.60  0.00  0.06 0.37 0.63 1.0
-## harsh   -0.24 -0.02  0.51 0.32 0.68 1.4
-## persevr  0.55  0.20  0.06 0.34 0.66 1.3
-## friendl  0.27  0.51 -0.28 0.41 0.59 2.1
-## worryin  0.09 -0.21  0.52 0.32 0.68 1.4
-## respnsi  0.73  0.05 -0.04 0.53 0.47 1.0
-## contrar -0.24  0.01  0.58 0.39 0.61 1.3
-## sociabl  0.02  0.72 -0.22 0.57 0.43 1.2
-## lazy    -0.64 -0.19  0.10 0.46 0.54 1.2
-## coopera  0.27  0.14 -0.48 0.32 0.68 1.8
-## quiet   -0.04 -0.77  0.04 0.59 0.41 1.0
-## organiz  0.73  0.08 -0.06 0.55 0.45 1.0
-## criticl  0.07 -0.03  0.48 0.24 0.76 1.1
-## lax     -0.48  0.00 -0.20 0.27 0.73 1.3
-## laidbck -0.33  0.11 -0.46 0.33 0.67 2.0
-## withdrw -0.17 -0.70  0.28 0.60 0.40 1.4
-## givinup -0.43 -0.38  0.26 0.39 0.61 2.6
-## easygon -0.16  0.20 -0.50 0.31 0.69 1.5
-## 
-##                        MR2  MR1  MR3
-## SS loadings           4.63 4.62 4.00
-## Proportion Var        0.14 0.14 0.13
-## Cumulative Var        0.14 0.29 0.41
-## Proportion Explained  0.35 0.35 0.30
-## Cumulative Proportion 0.35 0.70 1.00
-## 
-## Mean item complexity =  1.4
-## Test of the hypothesis that 3 factors are sufficient.
-## 
-## df null model =  496  with the objective function =  17.62 with Chi Square =  4009.54
-## df of  the model are 403  and the objective function was  6.18 
-## 
-## The root mean square of the residuals (RMSR) is  0.08 
-## The df corrected root mean square of the residuals is  0.09 
-## 
-## The harmonic n.obs is  240 with the empirical chi square  1517.47  with prob &lt;  1.1e-128 
-## The total n.obs was  240  with Likelihood Chi Square =  1394.7  with prob &lt;  2.3e-109 
-## 
-## Tucker Lewis Index of factoring reliability =  0.649
-## RMSEA index =  0.101  and the 90 % confidence intervals are  0.096 0.107
-## BIC =  -814
-## Fit based upon off diagonal values = 0.91
-## Measures of factor score adequacy             
-##                                                    MR2  MR1  MR3
-## Correlation of (regression) scores with factors   0.94 0.95 0.92
-## Multiple R square of scores with factors          0.89 0.91 0.85
-## Minimum correlation of possible factor scores     0.78 0.81 0.70
-```
-
-```r
 sink()
-fa_5 &lt;- fa(f_data, 5, fm = "minres", rotate = "varimax", fa = "fa")
-sink("fa_5_output.txt")
+fa_5&lt;-fa(f_data,5, fm = 'minres', rotate='varimax', fa = 'fa')
+sink('fa_5_output.txt')
 fa_5
-```
-
-```
-## Factor Analysis using method =  minres
-## Call: fa(r = f_data, nfactors = 5, rotate = "varimax", fm = "minres", 
-##     fa = "fa")
-## Standardized loadings (pattern matrix) based upon correlation matrix
-##           MR1   MR2   MR4   MR5   MR3   h2   u2 com
-## distant  0.59  0.08  0.08 -0.11  0.30 0.46 0.54 1.7
-## talkatv -0.76  0.03 -0.02  0.12  0.16 0.62 0.38 1.2
-## carelss  0.02  0.60  0.09 -0.03  0.28 0.45 0.55 1.5
-## hardwrk -0.20 -0.65  0.14  0.11  0.10 0.50 0.50 1.4
-## anxious  0.17  0.08  0.70  0.16  0.22 0.59 0.41 1.5
-## agreebl -0.02  0.02 -0.06  0.64 -0.17 0.44 0.56 1.2
-## tense    0.16  0.01  0.77  0.01  0.26 0.70 0.30 1.3
-## kind    -0.10 -0.31  0.03  0.61 -0.18 0.51 0.49 1.8
-## opposng -0.01  0.11  0.09 -0.13  0.63 0.43 0.57 1.2
-## relaxed -0.02  0.13 -0.69  0.34 -0.07 0.62 0.38 1.6
-## disorgn -0.01  0.72  0.00  0.04  0.15 0.55 0.45 1.1
-## outgoin -0.83 -0.08 -0.05  0.22  0.00 0.74 0.26 1.2
-## approvn -0.27 -0.13 -0.12  0.51 -0.12 0.37 0.63 1.9
-## shy      0.72  0.20  0.16  0.00 -0.09 0.58 0.42 1.3
-## discipl  0.03 -0.63  0.04  0.09  0.09 0.42 0.58 1.1
-## harsh    0.07  0.13  0.07 -0.22  0.64 0.48 0.52 1.4
-## persevr -0.16 -0.54  0.11  0.19  0.09 0.38 0.62 1.6
-## friendl -0.50 -0.17  0.06  0.55 -0.16 0.60 0.40 2.4
-## worryin  0.18  0.05  0.73  0.05  0.13 0.59 0.41 1.2
-## respnsi -0.01 -0.73  0.06  0.23  0.02 0.59 0.41 1.2
-## contrar  0.05  0.14  0.15 -0.15  0.72 0.58 0.42 1.3
-## sociabl -0.72  0.01 -0.09  0.26 -0.10 0.60 0.40 1.3
-## lazy     0.19  0.68  0.07  0.03  0.13 0.51 0.49 1.3
-## coopera -0.10 -0.18 -0.11  0.57 -0.28 0.46 0.54 1.9
-## quiet    0.80  0.10  0.17  0.16  0.00 0.70 0.30 1.2
-## organiz -0.06 -0.76 -0.02  0.06 -0.06 0.58 0.42 1.0
-## criticl  0.09 -0.17  0.14 -0.11  0.58 0.40 0.60 1.4
-## lax      0.04  0.47 -0.22  0.23  0.10 0.33 0.67 2.1
-## laidbck -0.03  0.25 -0.59  0.28  0.09 0.50 0.50 1.9
-## withdrw  0.73  0.14  0.13 -0.09  0.27 0.66 0.34 1.5
-## givinup  0.36  0.46  0.22 -0.10  0.13 0.42 0.58 2.7
-## easygon -0.13  0.13 -0.44  0.43 -0.02 0.42 0.58 2.4
-## 
-##                        MR1  MR2  MR4  MR5  MR3
-## SS loadings           4.51 4.43 2.97 2.52 2.36
-## Proportion Var        0.14 0.14 0.09 0.08 0.07
-## Cumulative Var        0.14 0.28 0.37 0.45 0.52
-## Proportion Explained  0.27 0.26 0.18 0.15 0.14
-## Cumulative Proportion 0.27 0.53 0.71 0.86 1.00
-## 
-## Mean item complexity =  1.5
-## Test of the hypothesis that 5 factors are sufficient.
-## 
-## df null model =  496  with the objective function =  17.62 with Chi Square =  4009.54
-## df of  the model are 346  and the objective function was  3.17 
-## 
-## The root mean square of the residuals (RMSR) is  0.04 
-## The df corrected root mean square of the residuals is  0.05 
-## 
-## The harmonic n.obs is  240 with the empirical chi square  355.07  with prob &lt;  0.36 
-## The total n.obs was  240  with Likelihood Chi Square =  710.66  with prob &lt;  2.2e-27 
-## 
-## Tucker Lewis Index of factoring reliability =  0.849
-## RMSEA index =  0.066  and the 90 % confidence intervals are  0.059 0.073
-## BIC =  -1185.64
-## Fit based upon off diagonal values = 0.98
-## Measures of factor score adequacy             
-##                                                    MR1  MR2  MR4  MR5  MR3
-## Correlation of (regression) scores with factors   0.96 0.94 0.93 0.90 0.89
-## Multiple R square of scores with factors          0.91 0.89 0.86 0.81 0.79
-## Minimum correlation of possible factor scores     0.83 0.78 0.72 0.62 0.58
-```
-
-```r
 sink()
 ```
 
@@ -870,8 +647,8 @@ sink()
 ## Diagram.
 
 
-```r
-fa.diagram(fa_5, marg = c(0.01, 0.01, 1, 0.01))
+``` r
+fa.diagram(fa_5, marg=c(.01,.01,1,.01))
 ```
 
 &lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
@@ -882,10 +659,10 @@ fa.diagram(fa_5, marg = c(0.01, 0.01, 1, 0.01))
 How would you label those 5 factors?
 
 
-```r
+``` r
 require(semPlot)
-semplot1 &lt;- semPlotModel(fa_5$loadings)
-semPaths(semplot1, what = "std", layout = "circle", nCharNodes = 6)
+semplot1&lt;-semPlotModel(fa_5$loadings)
+semPaths(semplot1, what="std", layout="circle", nCharNodes = 6)
 ```
 
 &lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
@@ -926,9 +703,9 @@ There are many methods. Most of the time you'll get [similar results](https://st
 ## Principal Axis Factoring
 
 
-```r
+``` r
 require(psych)
-parallel &lt;- fa.parallel(f_data, fm = "pa", fa = "fa")
+parallel &lt;- fa.parallel(f_data, fm = 'pa', fa = 'fa')
 ```
 
 &lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
@@ -943,14 +720,12 @@ parallel &lt;- fa.parallel(f_data, fm = "pa", fa = "fa")
 You can further beautify this by generating labels for those 32 items.
 
 
-```r
+``` r
 require(stargazer)
 require(plyr)
-factor_loadings &lt;- as.data.frame(as.matrix.data.frame(fa_5$loadings))
-factor_loadings &lt;- plyr::rename(factor_loadings, c(V1 = "Factor 1",
-    V2 = "Factor 2", V3 = "Factor 3", V4 = "Factor 4", V5 = "Factor 5"))
-stargazer(factor_loadings, summary = FALSE, out = "results_loadings.html",
-    header = FALSE, type = "html")
+factor_loadings&lt;-as.data.frame(as.matrix.data.frame(fa_5$loadings))
+factor_loadings&lt;-plyr::rename(factor_loadings, c("V1"="Factor 1","V2"="Factor 2", "V3"="Factor 3", "V4"="Factor 4", "V5"="Factor 5"))
+stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=FALSE, type="html")
 ```
 
 
@@ -993,10 +768,9 @@ stargazer(factor_loadings, summary = FALSE, out = "results_loadings.html",
 ## Plot loadings.
 
 
-```r
+``` r
 require(GPArotation)
-plot(fa_5, labels = names(f_data), cex = 0.7, ylim = c(-0.1,
-    1))
+plot(fa_5,labels=names(f_data),cex=.7, ylim=c(-.1,1)) 
 ```
 
 ![](Lecture7_xaringan_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
@@ -1007,8 +781,8 @@ plot(fa_5, labels = names(f_data), cex = 0.7, ylim = c(-0.1,
 Just plot the first two factors, and those with loadings above .5. Label it.
 
 
-```r
-factor.plot(fa_5, choose = c(1, 2), cut = 0.5, labels = colnames(f_data))
+``` r
+factor.plot(fa_5, choose=c(1,2), cut=0.5, labels=colnames(f_data))
 ```
 
 ![](Lecture7_xaringan_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
