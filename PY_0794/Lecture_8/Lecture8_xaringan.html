@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-04-15 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-03-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -179,7 +179,7 @@ speed =~ x7 + x8 + x9
 In order to define the model we place it in-between single (!) quotes. We can annotate with #
 
 
-```r
+``` r
 require(lavaan)
 Model_1 &lt;- "  # Three factors.
               visual  =~ x1 + x2 + x3 
@@ -197,7 +197,7 @@ Basically, we are dealing with regressions (and factor analyses are a variant of
 If there are no meaningful correlations, then it makes little sense to perform CFA. So one would usually examine or plot those. One way is to use the KMO test which we used last time.
 
 
-```r
+``` r
 require(psych)
 f_data &lt;- (lavaan::HolzingerSwineford1939)[, c(7:15)]
 KMO(f_data)
@@ -218,7 +218,7 @@ KMO(f_data)
 Caution, not multivariate normal. One solution is robust estimation... . Maximum Likelihood (ML) more robust than some other methods but still cautious (affects standard errors of paths).
 
 
-```r
+``` r
 require(MVN)
 mvn(f_data, multivariatePlot = "qq")
 ```
@@ -269,7 +269,7 @@ mvn(f_data, multivariatePlot = "qq")
 ## Test.
 
 
-```r
+``` r
 require(MVN)
 mvn(f_data)
 ```
@@ -318,106 +318,11 @@ mvn(f_data)
 ## CFA
 
 
-```r
+``` r
 require(lavaan)
 fit &lt;- cfa(Model_1, data = HolzingerSwineford1939)
 sink(file = "summary_fit.txt")
 summary(fit, fit.measures = TRUE)
-```
-
-```
-## lavaan 0.6.17 ended normally after 35 iterations
-## 
-##   Estimator                                         ML
-##   Optimization method                           NLMINB
-##   Number of model parameters                        21
-## 
-##   Number of observations                           301
-## 
-## Model Test User Model:
-##                                                       
-##   Test statistic                                85.306
-##   Degrees of freedom                                24
-##   P-value (Chi-square)                           0.000
-## 
-## Model Test Baseline Model:
-## 
-##   Test statistic                               918.852
-##   Degrees of freedom                                36
-##   P-value                                        0.000
-## 
-## User Model versus Baseline Model:
-## 
-##   Comparative Fit Index (CFI)                    0.931
-##   Tucker-Lewis Index (TLI)                       0.896
-## 
-## Loglikelihood and Information Criteria:
-## 
-##   Loglikelihood user model (H0)              -3737.745
-##   Loglikelihood unrestricted model (H1)      -3695.092
-##                                                       
-##   Akaike (AIC)                                7517.490
-##   Bayesian (BIC)                              7595.339
-##   Sample-size adjusted Bayesian (SABIC)       7528.739
-## 
-## Root Mean Square Error of Approximation:
-## 
-##   RMSEA                                          0.092
-##   90 Percent confidence interval - lower         0.071
-##   90 Percent confidence interval - upper         0.114
-##   P-value H_0: RMSEA &lt;= 0.050                    0.001
-##   P-value H_0: RMSEA &gt;= 0.080                    0.840
-## 
-## Standardized Root Mean Square Residual:
-## 
-##   SRMR                                           0.065
-## 
-## Parameter Estimates:
-## 
-##   Standard errors                             Standard
-##   Information                                 Expected
-##   Information saturated (h1) model          Structured
-## 
-## Latent Variables:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##   visual =~                                           
-##     x1                1.000                           
-##     x2                0.554    0.100    5.554    0.000
-##     x3                0.729    0.109    6.685    0.000
-##   textual =~                                          
-##     x4                1.000                           
-##     x5                1.113    0.065   17.014    0.000
-##     x6                0.926    0.055   16.703    0.000
-##   speed =~                                            
-##     x7                1.000                           
-##     x8                1.180    0.165    7.152    0.000
-##     x9                1.082    0.151    7.155    0.000
-## 
-## Covariances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##   visual ~~                                           
-##     textual           0.408    0.074    5.552    0.000
-##     speed             0.262    0.056    4.660    0.000
-##   textual ~~                                          
-##     speed             0.173    0.049    3.518    0.000
-## 
-## Variances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##    .x1                0.549    0.114    4.833    0.000
-##    .x2                1.134    0.102   11.146    0.000
-##    .x3                0.844    0.091    9.317    0.000
-##    .x4                0.371    0.048    7.779    0.000
-##    .x5                0.446    0.058    7.642    0.000
-##    .x6                0.356    0.043    8.277    0.000
-##    .x7                0.799    0.081    9.823    0.000
-##    .x8                0.488    0.074    6.573    0.000
-##    .x9                0.566    0.071    8.003    0.000
-##     visual            0.809    0.145    5.564    0.000
-##     textual           0.979    0.112    8.737    0.000
-##     speed             0.384    0.086    4.451    0.000
-```
-
-```r
 sink()
 ```
 
@@ -445,7 +350,7 @@ Write a three factor model in lavaan's format and evaluate the fit measures.
 ## Visualise and interpret.
 
 
-```r
+``` r
 require(semPlot)
 semPaths(fit, layout = "circle", style = "ram", what = "std")
 ```
@@ -456,7 +361,7 @@ semPaths(fit, layout = "circle", style = "ram", what = "std")
 ## Lisrel style plot.
 
 
-```r
+``` r
 semPaths(fit, layout = "circle", style = "lisrel", what = "std")
 ```
 
@@ -473,7 +378,7 @@ Make a plot of your three-factor model.
 ## Export a table.
 
 
-```r
+``` r
 require(dplyr)
 require(stargazer)
 results_table &lt;- parameterEstimates(fit, standardized = TRUE) %&gt;%
@@ -528,7 +433,7 @@ Mostly weak to no correlations (&lt;.3 in absolute size). Hurray, again!
 You could also still check the distributions of those.
 
 
-```r
+``` r
 require(ggplot2)
 require(corrplot)
 plot_matrix &lt;- function(matrix_toplot) {
@@ -544,7 +449,7 @@ plot_matrix(residuals(fit)$cov)
 ## Single factor model.
 
 
-```r
+``` r
 require(lavaan)
 Model_2 &lt;- "  # one factor.
               ability  =~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9 "
@@ -554,93 +459,10 @@ Model_2 &lt;- "  # one factor.
 ## Text output.
 
 
-```r
+``` r
 fit_model_2 &lt;- cfa(Model_2, data = HolzingerSwineford1939)
 sink(file = "summary_fit_2.txt")
 summary(fit_model_2, fit.measures = T)
-```
-
-```
-## lavaan 0.6.17 ended normally after 31 iterations
-## 
-##   Estimator                                         ML
-##   Optimization method                           NLMINB
-##   Number of model parameters                        18
-## 
-##   Number of observations                           301
-## 
-## Model Test User Model:
-##                                                       
-##   Test statistic                               312.264
-##   Degrees of freedom                                27
-##   P-value (Chi-square)                           0.000
-## 
-## Model Test Baseline Model:
-## 
-##   Test statistic                               918.852
-##   Degrees of freedom                                36
-##   P-value                                        0.000
-## 
-## User Model versus Baseline Model:
-## 
-##   Comparative Fit Index (CFI)                    0.677
-##   Tucker-Lewis Index (TLI)                       0.569
-## 
-## Loglikelihood and Information Criteria:
-## 
-##   Loglikelihood user model (H0)              -3851.224
-##   Loglikelihood unrestricted model (H1)      -3695.092
-##                                                       
-##   Akaike (AIC)                                7738.448
-##   Bayesian (BIC)                              7805.176
-##   Sample-size adjusted Bayesian (SABIC)       7748.091
-## 
-## Root Mean Square Error of Approximation:
-## 
-##   RMSEA                                          0.187
-##   90 Percent confidence interval - lower         0.169
-##   90 Percent confidence interval - upper         0.206
-##   P-value H_0: RMSEA &lt;= 0.050                    0.000
-##   P-value H_0: RMSEA &gt;= 0.080                    1.000
-## 
-## Standardized Root Mean Square Residual:
-## 
-##   SRMR                                           0.143
-## 
-## Parameter Estimates:
-## 
-##   Standard errors                             Standard
-##   Information                                 Expected
-##   Information saturated (h1) model          Structured
-## 
-## Latent Variables:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##   ability =~                                          
-##     x1                1.000                           
-##     x2                0.508    0.152    3.345    0.001
-##     x3                0.493    0.146    3.376    0.001
-##     x4                1.930    0.256    7.533    0.000
-##     x5                2.123    0.282    7.518    0.000
-##     x6                1.796    0.239    7.512    0.000
-##     x7                0.385    0.137    2.803    0.005
-##     x8                0.398    0.129    3.089    0.002
-##     x9                0.606    0.138    4.383    0.000
-## 
-## Variances:
-##                    Estimate  Std.Err  z-value  P(&gt;|z|)
-##    .x1                1.098    0.092   11.895    0.000
-##    .x2                1.315    0.108   12.188    0.000
-##    .x3                1.212    0.099   12.186    0.000
-##    .x4                0.380    0.048    7.963    0.000
-##    .x5                0.486    0.059    8.193    0.000
-##    .x6                0.356    0.043    8.295    0.000
-##    .x7                1.145    0.094   12.215    0.000
-##    .x8                0.981    0.080   12.202    0.000
-##    .x9                0.919    0.076   12.105    0.000
-##     ability           0.261    0.069    3.775    0.000
-```
-
-```r
 sink()
 ```
 
@@ -676,7 +498,7 @@ A model with three factors is a better fit to the data than one with a single fa
 --&gt; this means overwhelming support for the three factor solution.
 
 
-```r
+``` r
 anova(fit, fit_model_2)
 ```
 
@@ -733,7 +555,7 @@ Basically: Is the measurement in both schools the same?
 ## Group model
 
 
-```r
+``` r
 require(lavaan)
 Data &lt;- HolzingerSwineford1939
 Group_model_1 &lt;- "  # Three factors.
@@ -747,7 +569,7 @@ fit_CFA_group &lt;- cfa(Group_model_1, data = Data, group = "school")
 ## Massive output! 
 
 
-```r
+``` r
 sink(file = "group_cfa.txt")
 summary(fit_CFA_group, fit.measures = T)
 sink()
@@ -762,7 +584,7 @@ sink()
 Combined groups plot.
 
 
-```r
+``` r
 require(semPlot)
 require(qgraph)
 semPaths(fit_CFA_group, layout = "circle", style = "ram", what = "std",
@@ -775,7 +597,7 @@ semPaths(fit_CFA_group, layout = "circle", style = "ram", what = "std",
 ## Separate plots.
 
 
-```r
+``` r
 require(semPlot)
 require(qgraph)
 semPaths(fit_CFA_group, layout = "circle", style = "ram", what = "std",
@@ -788,7 +610,7 @@ semPaths(fit_CFA_group, layout = "circle", style = "ram", what = "std",
 ## Measurement Invariance
 
 
-```r
+``` r
 require(semTools)
 semTools::measurementInvariance(model = Group_model_1,
     data = Data, group = "school")
@@ -847,7 +669,7 @@ More [here](http://users.ugent.be/~yrosseel/lavaan/multiplegroup6Dec2012.pdf) an
 Stargazer won't change labels! See if you can figure out a solution :). it cost me a day... .
 
 
-```r
+``` r
 require(psytabs)
 require(stargazer)
 MI &lt;- measurementInvariance(model = Group_model_1,
