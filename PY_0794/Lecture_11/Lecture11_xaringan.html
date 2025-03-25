@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-03-25 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -47,7 +47,7 @@ As an aside all slides were made with ['xaringan'](https://github.com/yihui/xari
 ## Reload the data.
 
 
-```r
+``` r
 library(mlmRev)  # contains data
 library(lme4)
 Exam &lt;- mlmRev::Exam
@@ -59,7 +59,7 @@ fixed_pred &lt;- lmer(normexam ~ standLRT + (1 | school), data = Exam,
 ## Make a plot
 
 
-```r
+``` r
 library(ggplot2)
 library(dplyr)
 # subset 3 schools (just picked 3 from the dataframe)
@@ -76,7 +76,7 @@ multilevelplot &lt;- ggplot(subset, aes(standLRT, normexam)) + geom_jitter(alpha
 
 
 
-```r
+``` r
 plot(multilevelplot)
 ```
 
@@ -100,7 +100,7 @@ plot(multilevelplot)
 Illustration based on [this](http://rpsychologist.com/r-guide-longitudinal-lme-lmer).
 
 
-```r
+``` r
 # pooled
 pooled.model &lt;- lm(normexam ~ standLRT, data = Exam)
 # Save the fitted values
@@ -120,7 +120,7 @@ Exam$InteractionPredictions &lt;- fitted(interaction.model)
 ## Build graph
 We need a subset.
 
-```r
+``` r
 require(ggplot2)
 require(dplyr)
 subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
@@ -138,7 +138,7 @@ geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) + xlab("London Reading t
 ## Graph: Random intercept.
 
 
-```r
+``` r
 print(gg)
 ```
 
@@ -148,7 +148,7 @@ print(gg)
 ## Graph: Random slope.
 
 
-```r
+``` r
 require(ggplot2)
 require(dplyr)
 subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
@@ -168,7 +168,7 @@ geom_point(alpha = 0.3, size = 3) + facet_wrap(~school) + xlab("London Reading t
 ## Graph: Random slope
 
 
-```r
+``` r
 print(gg)
 ```
 
@@ -178,7 +178,7 @@ print(gg)
 ## Graph: Slope and intercept.
 
 
-```r
+``` r
 require(ggplot2)
 require(dplyr)
 subset &lt;- filter(Exam, school == "1" | school == "18" | school ==
@@ -198,7 +198,7 @@ geom_line(aes(y = InteractionPredictions), color = "black") +
 ## Graph: Slope and intercept.
 
 
-```r
+``` r
 print(gg)
 ```
 
@@ -235,7 +235,7 @@ Use the 'Scottish schools' dataset and make those 3 graphs. (If you cannot load 
 A null model looks like this
 
 
-```r
+``` r
 # lme4
 lmer(y ~ 1 + (1 | subjects), data = data)
 ```
@@ -243,7 +243,7 @@ lmer(y ~ 1 + (1 | subjects), data = data)
 A null *growth* model looks like this. ("Unconditional growth model")
 
 
-```r
+``` r
 # lme4
 lmer(y ~ time + (time | subjects), data = data)
 ```
@@ -258,7 +258,7 @@ lmer(y ~ time + (time | subjects), data = data)
 Here we examine if treatment influences the outcome over time.
 
 
-```r
+``` r
 lmer(y ~ time * tx + (time | subjects), data = data)
 # dropping a random slope.
 lmer(y ~ time * tx + (1 | subjects), data = data)
@@ -274,7 +274,7 @@ Now imagine that we have therapists... .
 &lt;img src="https://rpsychologist.com/static/5f5294451b5fd3d2bb2fd2163c8ab772/699b7/3lvl.png" width="300px" style="display: block; margin: auto;" /&gt;
 
 
-```r
+``` r
 lmer(y ~ time * tx + (time | therapist/subjects), data = df)
 ```
 
@@ -289,7 +289,7 @@ But often you'll have random allocation at the subject level.
 
 
 
-```r
+``` r
 lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx ||
     therapist), data = df)
 ```
@@ -301,7 +301,7 @@ We might hypothesize that therapists that are allocated participants that report
 
 
 
-```r
+``` r
 lmer(y ~ time * tx + (time | therapist:subjects) + (time | therapist) +
     (0 + tx + time:tx | therapist), data = data)
 ```
@@ -312,7 +312,7 @@ lmer(y ~ time * tx + (time | therapist:subjects) + (time | therapist) +
 It is also possible that when a therapist is successful with treatment A, that he/she will also be with B. We could model all such possible scenarios. This basically amounts to an *unstructured* variance-covariance matrix. (Luckily this is also the default for most packages.).
 
 
-```r
+``` r
 lmer(y ~ time * tx + (time | therapist:subjects) + (time * tx |
     therapist), data = df)
 ```
@@ -332,7 +332,7 @@ Extensions to non-linear models. Logit.
 Example
 
 
-```r
+``` r
 # Example
 m &lt;- glmer(remission ~ IL6 + CRP + CancerStage + LengthofStay +
     Experience + (1 | DID), data = hdp, family = binomial)
@@ -421,7 +421,7 @@ What will (likely) change with regards to next year... .
 
 Any feedback, points you want to raise?
 
-&lt;img src="https://memegenerator.net/img/instances/400x/72027892/let-us-be-clear-we-only-want-positive-feedback-thats-easy-to-implement.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/0*KYX8EXjIiWeQ7-du.jpg" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 
@@ -435,7 +435,7 @@ You can post questions via blackboard (BB). Book an appointment with me for subs
 
 Questions on assignment via discussion board. 
 
-Will not answer any questions post May 14th (1pm).
+Will not answer any questions post May 13th (1 pm).
 
 &lt;img src="https://wanna-joke.com/wp-content/uploads/2015/06/finals-calculate-lowest-mark.jpg" width="300px" style="display: block; margin: auto;" /&gt;
 
