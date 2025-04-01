@@ -26,7 +26,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-03-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-04-01 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -87,8 +87,8 @@ Proposed mediator (M): self-esteem.
 
 ``` r
 # Long string.
-D &lt;- read.csv("mediationData.csv")  # redundant
-Data_med &lt;- D
+D&lt;- read.csv('mediationData.csv') # redundant
+Data_med&lt;-D
 ```
 
 ---
@@ -98,7 +98,7 @@ Data_med &lt;- D
 ``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture9")
 require(lavaan)
-mediationmodelSEM &lt;- " # direct effect
+mediationmodelSEM &lt;- ' # direct effect
              Y ~ c*X
            # mediator
              M ~ a*X
@@ -107,7 +107,7 @@ mediationmodelSEM &lt;- " # direct effect
              ab := a*b
            # total effect
              total := c + (a*b)
-         "
+         '
 ```
 
 ---
@@ -115,10 +115,9 @@ mediationmodelSEM &lt;- " # direct effect
 
 
 ``` r
-fit_mediationSEM &lt;- sem(mediationmodelSEM, se = "bootstrap",
-    data = Data_med)
-sink(file = "SEM-mediation.txt")
-summary(fit_mediationSEM, standardized = TRUE, fit.measures = T)
+fit_mediationSEM &lt;- sem(mediationmodelSEM, se="bootstrap", data = Data_med)
+sink(file="SEM-mediation.txt")
+summary(fit_mediationSEM, standardized=TRUE, fit.measures=T)
 sink()
 ```
 
@@ -130,20 +129,11 @@ How does that compare to the other method?
 
 ``` r
 require(mediation)
-med.fit &lt;- lm(M ~ X,
-    data = Data_med)
-out.fit &lt;- lm(Y ~ X +
-    M, data = Data_med)
-# Robust SE is
-# ignored for
-# Bootstrap.
-# Otherwise omit
-# boot=TRUE.
+med.fit&lt;-lm(M~X, data=Data_med)
+out.fit&lt;-lm(Y~X+M, data=Data_med)
+# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
 set.seed(1984)
-med.out &lt;- mediate(med.fit,
-    out.fit, treat = "X",
-    mediator = "M", boot = TRUE,
-    sims = 10000)
+med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
 ```
 
 ---
@@ -189,8 +179,8 @@ Also, easier if we have multiple mediators and even latent constructs.
 
 ``` r
 require(lavaan)
-directmodelSEM &lt;- " # just direct effects
-                    Y ~ c*X+b*M "
+directmodelSEM &lt;- ' # just direct effects
+                    Y ~ c*X+b*M '
 ```
 
 ---
@@ -198,9 +188,9 @@ directmodelSEM &lt;- " # just direct effects
 
 
 ``` r
-fit_directSEM &lt;- sem(directmodelSEM, se = "bootstrap", data = Data_med)
-sink(file = "SEM-direct.txt")
-summary(fit_directSEM, standardized = TRUE, fit.measures = T)
+fit_directSEM &lt;- sem(directmodelSEM, se="bootstrap", data = Data_med)
+sink(file="SEM-direct.txt")
+summary(fit_directSEM, standardized=TRUE, fit.measures=T)
 sink()
 ```
 
@@ -232,14 +222,11 @@ LavaanPlot relies on diagrammer.
 
 ``` r
 require(lavaanPlot)
-lavaanPlot(model = fit_mediationSEM,
-    node_options = list(shape = "box",
-        fontname = "Helvetica"),
-    edge_options = list(color = "grey"))
+lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
 ```
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-73222e8070aeac3729dc" style="width:576px;height:252px;"></div>
-<script type="application/json" data-for="htmlwidget-73222e8070aeac3729dc">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-f1e873222e8070aeac37" style="width:576px;height:252px;"></div>
+<script type="application/json" data-for="htmlwidget-f1e873222e8070aeac37">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## But it is not the way we want.
@@ -249,18 +236,12 @@ You can further improve on this. Check diagrammer.
 
 ``` r
 require(lavaanPlot)
-labels &lt;- list(X = "independent",
-    M = "mediator", Y = "dependent")
-lavaanPlot(model = fit_mediationSEM,
-    graph_options = list(rankdir = "LR"),
-    labels = labels,
-    node_options = list(shape = "box",
-        fontname = "Helvetica"),
-    edge_options = list(color = "grey"))
+labels&lt;- list(X="independent", M="mediator", Y="dependent")
+lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), labels=labels, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
 ```
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-f9877f49d71b72148edd" style="width:576px;height:252px;"></div>
-<script type="application/json" data-for="htmlwidget-f9877f49d71b72148edd">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-29dcf9877f49d71b7214" style="width:576px;height:252px;"></div>
+<script type="application/json" data-for="htmlwidget-29dcf9877f49d71b7214">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Make a plot with the estimates.
@@ -268,9 +249,8 @@ lavaanPlot(model = fit_mediationSEM,
 
 ``` r
 require(semPlot)
-labels2 &lt;- list("Dependent", "Mediator", "Independent")  # need to reorganize.
-semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
-    whatLabels = "std", intercepts = FALSE, style = "ram", nodeLabels = labels2)
+labels2&lt;- list("Dependent", "Mediator", "Independent") # need to reorganize.
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "ram", nodeLabels = labels2)
 ```
 
 &lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
@@ -282,9 +262,7 @@ semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
 ``` r
 # Lisrel.
 require(semPlot)
-semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
-    whatLabels = "std", intercepts = FALSE, style = "lisrel",
-    curvePivot = TRUE, fade = FALSE, nodeLabels = labels2)
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "lisrel", curvePivot = TRUE, fade=FALSE, nodeLabels = labels2)
 ```
 
 &lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
@@ -355,17 +333,17 @@ First make your covariance matrix.
 
 
 ``` r
-lower &lt;- "
+lower &lt;- '
  11.834,
   6.947,    9.364,
   6.819,    5.091,   12.532,
   4.783,    5.028,    7.495,    9.986,
  -3.839,   -3.889,   -3.841,   -3.625,   9.610,
--21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 "
+-21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 '
 
 # convert to a full symmetric covariance matrix with names
-wheaton.cov &lt;- getCov(lower, names = c("anomia67", "powerless67",
-    "anomia71", "powerless71", "education", "sei"))
+wheaton.cov &lt;- getCov(lower, names=c("anomia67","powerless67", "anomia71",
+                                     "powerless71","education","sei"))
 ```
 
 ---
@@ -388,7 +366,7 @@ This model brings which 2 aspects of SEM together?
 ``` r
 require(lavaan)
 # the model
-wheaton.model = "
+wheaton.model = '
   # measurement model
     ses     =~ education + sei
     alien67 =~ anomia67 + powerless67
@@ -404,7 +382,7 @@ wheaton.model = "
 
   # Indirect effect
     IndirectEffect := sa*aa
-"
+'
 ```
 
 ---
@@ -421,9 +399,9 @@ wheaton.model = "
 
 ``` r
 require(lavaan)
-alienation &lt;- sem(wheaton.model, sample.cov = wheaton.cov, sample.nobs = 932)
-sink(file = "summary_alienation.txt")
-summary(alienation, fit.measures = T)
+alienation &lt;- sem(wheaton.model, sample.cov=wheaton.cov, sample.nobs=932)
+sink(file='summary_alienation.txt')
+summary(alienation, fit.measures=T)
 sink()
 ```
 
@@ -434,7 +412,7 @@ sink()
 ``` r
 require(semPlot)
 require(qgraph)
-semPaths(alienation, style = "lisrel", what = "std", curvePivot = TRUE)
+semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
 ```
 
 &lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
@@ -451,15 +429,13 @@ What happens if you remove the correlated residuals?
 
 Use the following code below to generate a correlation matrix to use (you'll need to load lavaan).
 
-The data comes from this [paper](http://core.ecu.edu/psyc/wuenschk/Articles/JSB&amp;P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
+The data comes from this [paper](https://web.archive.org/web/20221027140554/https://core.ecu.edu/wuenschk/Articles/JSB&amp;P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
 
 
 ``` r
 require(lavaan)
-data &lt;- lav_matrix_lower2full(c(1, 0.47, 1, 0.66, 0.5, 1, 0.77,
-    0.41, 0.46, 1, 0.52, 0.38, 0.5, 0.5, 1))
-rownames(data) &lt;- colnames(data) &lt;- c("att", "sn", "pbc", "int",
-    "beh")  # a matrix.
+data&lt;-lav_matrix_lower2full(c(1,.47,1,.66,.50,1,.77,.41,.46,1,.52,.38,.50,.50,1))
+rownames(data)&lt;-colnames(data)&lt;-c("att",'sn','pbc','int','beh') # a matrix.
 ```
 
 ---

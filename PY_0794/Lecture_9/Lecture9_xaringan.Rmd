@@ -391,7 +391,7 @@ What happens if you remove the correlated residuals?
 
 Use the following code below to generate a correlation matrix to use (you'll need to load lavaan).
 
-The data comes from this [paper](https://web.archive.org/web/20220718192446/https://core.ecu.edu/wuenschk/Articles/JSB&P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
+The data comes from this [paper](https://web.archive.org/web/20221027140554/https://core.ecu.edu/wuenschk/Articles/JSB&P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
 
 ```{r}
 require(lavaan)
