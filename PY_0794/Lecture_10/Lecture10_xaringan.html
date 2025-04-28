@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2024-04-23 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2025-03-25 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -50,7 +50,7 @@ Multilevel models
 ## Assignment
 After today you should be able to complete the following sections for Assignment II:
 
- Multilevel model. (Some bits still next week. Such as plotting it.)
+ Multilevel model. (Some bits still in Lecture 11. Such as plotting it.)
  
 ---
 ## Other packages.
@@ -195,7 +195,7 @@ More info: Goldstein, H., Rasbash, J., et al. (1993). A multilevel analysis of s
 ## Multilevel model. (lme4)
 
 
-```r
+``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture10")
 library(mlmRev)  # contains data
 library(lme4)
@@ -208,35 +208,9 @@ null_model &lt;- lmer(normexam ~ 1 + (1 | school), data = Exam,
 ## Summary 
 
 
-```r
+``` r
 sink("null_model.txt")
 summary(null_model)
-```
-
-```
-## Linear mixed model fit by maximum likelihood  ['lmerMod']
-## Formula: normexam ~ 1 + (1 | school)
-##    Data: Exam
-## 
-##      AIC      BIC   logLik deviance df.resid 
-##  11016.6  11035.6  -5505.3  11010.6     4056 
-## 
-## Scaled residuals: 
-##     Min      1Q  Median      3Q     Max 
-## -3.9471 -0.6486  0.0117  0.6992  3.6578 
-## 
-## Random effects:
-##  Groups   Name        Variance Std.Dev.
-##  school   (Intercept) 0.1686   0.4107  
-##  Residual             0.8478   0.9207  
-## Number of obs: 4059, groups:  school, 65
-## 
-## Fixed effects:
-##             Estimate Std. Error t value
-## (Intercept) -0.01317    0.05363  -0.246
-```
-
-```r
 sink()
 ```
 
@@ -255,7 +229,7 @@ We can also average across models (have a look at the [MuMin package](https://ww
 Same model as before but now in nlme.
 
 
-```r
+``` r
 require(nlme)
 lme(fixed = normexam ~ 1, data = Exam, random = ~1 | school)
 ```
@@ -286,7 +260,7 @@ Note that the effect of 'standLRT' is not varying between groups. We are only lo
 ## Model random intercept + fixed effect.
 
 
-```r
+``` r
 fixed_pred &lt;- lmer(normexam ~ standLRT + (1 | school), data = Exam,
     REML = F)
 summary(fixed_pred)
@@ -338,7 +312,7 @@ Inference best done in other ways... .
 When comparing FIXED effects we rely on ML. (The `\(\chi^2\)` is known as the likelihood ratio test).
 
 
-```r
+``` r
 anova(null_model, fixed_pred)
 ```
 
@@ -370,7 +344,7 @@ In the second model, a model with a random intercept on individual level and a p
 ## Model comparison II
 
 
-```r
+``` r
 # suppressed a convergence warning
 randomslope &lt;- lmer(normexam ~ 1 + (standLRT | school), data = Exam)
 null_reml &lt;- lmer(normexam ~ 1 + (1 | school), data = Exam)
@@ -393,7 +367,7 @@ anova(null_reml, randomslope, refit = F)  # Otherwise it uses ML.
 ## Random Slope, summary
 
 
-```r
+``` r
 summary(randomslope)
 ```
 
@@ -426,7 +400,7 @@ summary(randomslope)
 [conditional AIC](https://www.jstor.org/stable/20441193?seq=1#page_scan_tab_contents). This similarly suggests that a random slope model is a better fit. (Have a look at cAIC4, it can also do bootstraps if you would need it.)
 
 
-```r
+``` r
 require(cAIC4)
 cAIC(null_reml)$caic
 ```
@@ -435,7 +409,7 @@ cAIC(null_reml)$caic
 ## [1] 10909.74
 ```
 
-```r
+``` r
 cAIC(randomslope)$caic
 ```
 
@@ -447,7 +421,7 @@ cAIC(randomslope)$caic
 ## plot random intercept
 
 
-```r
+``` r
 plot(ranef(fixed_pred))
 ```
 
@@ -460,7 +434,7 @@ plot(ranef(fixed_pred))
 ## plot random slope
 
 
-```r
+``` r
 plot(ranef(randomslope))
 ```
 
@@ -479,43 +453,11 @@ This model has both a random slope at school level for 'standLRT' and a fixed ef
 ## Model with random slope AND fixed effect.
 
 
-```r
+``` r
 standLRT &lt;- lmer(normexam ~ standLRT + (standLRT | school), data = Exam,
     REML = F)
 sink(file = "standLRT.txt")
 summary(standLRT)
-```
-
-```
-## Linear mixed model fit by maximum likelihood  ['lmerMod']
-## Formula: normexam ~ standLRT + (standLRT | school)
-##    Data: Exam
-## 
-##      AIC      BIC   logLik deviance df.resid 
-##   9328.9   9366.7  -4658.4   9316.9     4053 
-## 
-## Scaled residuals: 
-##     Min      1Q  Median      3Q     Max 
-## -3.8313 -0.6325  0.0340  0.6832  3.4562 
-## 
-## Random effects:
-##  Groups   Name        Variance Std.Dev. Corr
-##  school   (Intercept) 0.09044  0.3007       
-##           standLRT    0.01454  0.1206   0.50
-##  Residual             0.55366  0.7441       
-## Number of obs: 4059, groups:  school, 65
-## 
-## Fixed effects:
-##             Estimate Std. Error t value
-## (Intercept) -0.01151    0.03978  -0.289
-## standLRT     0.55673    0.01994  27.924
-## 
-## Correlation of Fixed Effects:
-##          (Intr)
-## standLRT 0.365
-```
-
-```r
 sink()
 ```
 
@@ -528,7 +470,7 @@ It is possible to enter variables on group level as well. Here, we will add a pr
 ## Model.
 
 
-```r
+``` r
 schoolaverage &lt;- lmer(normexam ~
     standLRT + schavg +
         (1 + standLRT |
@@ -536,40 +478,6 @@ schoolaverage &lt;- lmer(normexam ~
     data = Exam, REML = F)
 sink(file = "schoolaverage.txt")
 summary(schoolaverage)
-```
-
-```
-## Linear mixed model fit by maximum likelihood  ['lmerMod']
-## Formula: normexam ~ standLRT + schavg + (1 + standLRT | school)
-##    Data: Exam
-## 
-##      AIC      BIC   logLik deviance df.resid 
-##   9324.4   9368.6  -4655.2   9310.4     4052 
-## 
-## Scaled residuals: 
-##     Min      1Q  Median      3Q     Max 
-## -3.8279 -0.6313  0.0337  0.6844  3.4370 
-## 
-## Random effects:
-##  Groups   Name        Variance Std.Dev. Corr
-##  school   (Intercept) 0.07448  0.2729       
-##           standLRT    0.01489  0.1220   0.38
-##  Residual             0.55362  0.7441       
-## Number of obs: 4059, groups:  school, 65
-## 
-## Fixed effects:
-##              Estimate Std. Error t value
-## (Intercept) -0.001239   0.036675  -0.034
-## standLRT     0.552392   0.020178  27.375
-## schavg       0.294771   0.105590   2.792
-## 
-## Correlation of Fixed Effects:
-##          (Intr) stnLRT
-## standLRT  0.268       
-## schavg    0.089 -0.087
-```
-
-```r
 sink()
 ```
 
@@ -577,7 +485,7 @@ sink()
 ## Export some of the results.
 
 
-```r
+``` r
 require(stargazer)
 stargazer(null_model,
     standLRT, schoolaverage,
@@ -633,7 +541,7 @@ Make a plot.
 ## Significance check for random effect?
 
 
-```r
+``` r
 require(lmerTest)
 ranova(fixed_pred)  # rand() is alternative command but leads to issues.
 ```
@@ -658,7 +566,7 @@ Check [this](https://cran.r-project.org/web/packages/DHARMa/vignettes/DHARMa.htm
 Are the residuals normal and linear? We are looking for straight lines... .
 
 
-```r
+``` r
 require(DHARMa)
 # 250 is the default.
 simulationOutput &lt;- simulateResiduals(fittedModel = fixed_pred,
@@ -674,7 +582,7 @@ plotSimulatedResiduals(simulationOutput = simulationOutput)
 We can also obtain a formal test.
 
 
-```r
+``` r
 testUniformity(simulationOutput = simulationOutput)
 ```
 
@@ -695,7 +603,7 @@ testUniformity(simulationOutput = simulationOutput)
 Check our residuals. No real funnel. Homogeneity OK.
 
 
-```r
+``` r
 plot(fixed_pred)
 ```
 
@@ -716,7 +624,7 @@ Effect size measures. These are generally not easy to obtain but have a look at 
 Not evaluated here. But often (as in your assignment) you will have nested data.
 
 
-```r
+``` r
 # This would nest classes in schools.  lme 4
 (1 | school/class)
 # nlme: Classes in schools.
@@ -734,7 +642,7 @@ random = ~1 | school/class
 ## Just to give you an idea.
 
 
-```r
+``` r
 require(lmerTest)
 plot(ranef(null_model))
 ```
@@ -749,7 +657,7 @@ plot(ranef(null_model))
 ## Random slope... .
 
 
-```r
+``` r
 plot(ranef(randomslope))
 ```
 
@@ -763,7 +671,7 @@ plot(ranef(randomslope))
 ## Bootstrap a fixed effect.
 
 
-```r
+``` r
 require(lmeresampler)
 require(boot)
 require(lme4)
@@ -784,7 +692,7 @@ boot_data &lt;- as.data.frame(b$replicates)
 ## Results.
 
 
-```r
+``` r
 require(skimr)
 print(skim(boot_data))
 ```
@@ -817,7 +725,7 @@ print(skim(boot_data))
 ## Results (cont'd).
 
 
-```r
+``` r
 quantile(na.omit(boot_data$schavg), prob = c(0.025, 0.975))
 ```
 

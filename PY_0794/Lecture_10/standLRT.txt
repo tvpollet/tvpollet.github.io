@@ -1,0 +1,26 @@
+Linear mixed model fit by maximum likelihood  ['lmerMod']
+Formula: normexam ~ standLRT + (standLRT | school)
+   Data: Exam
+
+     AIC      BIC   logLik deviance df.resid 
+  9328.9   9366.7  -4658.4   9316.9     4053 
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.8313 -0.6325  0.0340  0.6832  3.4562 
+
+Random effects:
+ Groups   Name        Variance Std.Dev. Corr
+ school   (Intercept) 0.09044  0.3007       
+          standLRT    0.01454  0.1206   0.50
+ Residual             0.55366  0.7441       
+Number of obs: 4059, groups:  school, 65
+
+Fixed effects:
+            Estimate Std. Error t value
+(Intercept) -0.01151    0.03978  -0.289
+standLRT     0.55673    0.01994  27.924
+
+Correlation of Fixed Effects:
+         (Intr)
+standLRT 0.365 
