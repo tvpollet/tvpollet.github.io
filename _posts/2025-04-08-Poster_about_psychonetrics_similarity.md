@@ -1,6 +1,6 @@
 ---
 layout: post
-title: After the talk a poster about judgments of similarity of other species to humans... .
+title: After the talk, a poster about judgments of similarity of other species to humans... .
 image: /img/baboon_laptop.gif
 tags:
   - Psychonetrics
