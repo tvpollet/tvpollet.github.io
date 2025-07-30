@@ -1,0 +1,116 @@
+---
+title: "Power simulation for a RI-CLPM"
+author: "Prof. Thomas Pollet, Northumbria University, UK"
+date: '`r format(Sys.Date())`'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
+bibliography: r-analysis-references.bib
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Background
+
+A paper I reviewed conducted an RI-CLPM, I wanted to verify the proposed sample size for 80% power. The authors proposed _n_ = 400. I thought I would share the code, in case anybody wanted to have a go at a power analysis for RI-CLPM.
+
+# Packages
+
+
+```{r packages}
+library("powRICLPM")
+library("tidyverse")
+library("future")
+library("furrr")
+library("progressr")
+library("ggplot2")
+library("ggthemes")
+library("wesanderson")
+library("grateful")
+library("papaja")
+```
+
+```{r}
+future::plan(multisession)
+```
+
+
+# Simulation.
+
+## Setup
+
+Values from Manual.
+
+```{r}
+Phi <- matrix(c(.4, .1, .15, .3), ncol = 2, byrow = TRUE)
+```
+
+```{r}
+check_Phi(Phi)
+```
+
+Below uses reasonable starting values from the [manual](https://jeroendmulder.github.io/powRICLPM/articles/start.html). 
+
+However, I changed a key path of interest, this is .15 (A on B). (Authors proposed _r_ = .15)
+
+Number of reps is perhaps smallish (but I boosted it from example), you might want to boost it to 10k but for our purpose 1,000 seems sufficient. Note that this takes some time.
+
+I have hidden the warnings error as `lavaan` will print various warnings for individual models.
+
+```{r message=FALSE, warning= F}
+out_preliminary <- powRICLPM(target_power = 0.8,search_lower = 200, search_upper = 1000, search_step = 50, time_points = c(3, 4, 5), ICC = c(0.3, 0.5, 0.7), RI_cor = 0.3, Phi = Phi, within_cor = 0.3, reps = 1000, seed = 1234567)
+```
+
+## Output
+
+```{r}
+summary(out_preliminary)
+```
+
+A on B --> .15 
+
+The graph could be further beautified, but I have left it here. And perhaps Tufte's theme is not ideal.
+
+```{r}
+plot(out_preliminary, parameter = "wB2~wA1") + theme_tufte() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  +
+  scale_color_manual(values = wes_palette("GrandBudapest1")) + scale_fill_manual(values = wes_palette("GrandBudapest1")) + guides(shape = "none")
+```
+
+This is a weaker effect.
+
+B on A --> .1
+
+```{r}
+plot(out_preliminary, parameter = "wA2~wB1") + theme_tufte() + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))  +
+  scale_color_manual(values = wes_palette("GrandBudapest1")) + scale_fill_manual(values = wes_palette("GrandBudapest1"))  + guides(shape = "none")
+```
+
+# Conclusion
+
+The above simulations suggest that _n_ = 400 does not seem to satisfy 80% power, under any scenario. The above code can be modified to other scenarios. Note that as described by the package author, there are assumptions made (e.g., Multivariate normality, etc) -- see the paper by [Mulder (2022)](https://doi.org/10.1080/10705511.2022.2122467). So, a broader range of scenarios might need to be explored for a particular design.
+
+# Package citations
+
+```{r}
+r_refs(file = "r-analysis-references.bib")
+my_citation <- cite_r(file = "r-analysis-references.bib")
+```
+
+`r my_citation`
+
+# SessionInfo
+
+```{r}
+sessionInfo()
+```
