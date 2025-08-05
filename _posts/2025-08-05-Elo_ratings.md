@@ -8,6 +8,7 @@ tags:
   - Methods
   - Simulation
 published: true
+---
 
 For a grant proposal I intend to write, I wanted to play around with a simulation for [ELO ratings](https://en.wikipedia.org/wiki/Elo_rating_system). If you are somewhat familiar with chess (or sport tournaments), you will know this as a way for quantifying skill. It also is used in the study of [animal dominance hierarchies](https://link.springer.com/article/10.1007/s10764-017-9952-2) and you might also know of `[EloRating](https://cran.r-project.org/web/packages/EloRating/index.html)` and `[EloSteepness](https://cran.r-project.org/web/packages/EloSteepness/index.html)`. This is but a basic simulation with just two players, just to give a taster of what happens. I'll save the details for another time - but in a nutshell, we can think of many things as a tournament and we can use the ELO system to describe the agents within that system. And who knows, we might be able to derive some useful insights.
 
