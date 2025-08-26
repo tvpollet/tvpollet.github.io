@@ -48,14 +48,14 @@ These could be good candidates or starting points:
 ### Relationships / Jealousy.
 
 * Women's sexual strategies: the hidden dimension of extra-pair mating. [https://doi.org/10.1016/S0191-8869(99)00151-8](https://doi.org/10.1016/S0191-8869(99)00151-8)
-* Birth order and Jealousy. Are laterborns more jealous than firstborns? [https://www.sciencedirect.com/science/article/pii/S0191886997001360](https://www.sciencedirect.com/science/article/pii/S0191886997001360)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
 * Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
 * [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
 * [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
 * [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
-* Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540)
+* Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540) -- Requires married couples.
+* The Big 5 and relationship maintenance on Facebook. [https://doi.org/10.1177/0265407518772089](https://doi.org/10.1177/0265407518772089)
 
 ### Prosocial behaviour / altruism
 
@@ -120,6 +120,7 @@ Due to the nature of the data collection, this project **cannot** be conducted o
 ### Individual differences in social networks
 
 Some individuals have a larger social network while others have a smaller one. Why is this the case?  One reason for this could be that this is due to differences in personality (see Malcolm et al., 2021).
+
 I am looking for projects expanding this work (for example, looking at other individual difference variables). This can be conducted online but you will likely need around 200+ cases to make this a very good project.
 
 Read more here:
@@ -169,7 +170,6 @@ Here is a paper relating to this project, following a similar approach:
 
 Nearly all work in psychology suffers from selection bias: some people will not sign up to certain studies. In the case of obesity, this could imply that there is range restriction: people exceeding a certain BMI might be unlikely to take part in advertised studies. Via coding samples of a leading journal and comparing those to the general population, we can find out if certain weight categories are over- or underrepresented.
 
-
 This project works best if there is more than one student.
 
 Here is a paper relating to this project, following a similar approach:
@@ -185,7 +185,6 @@ This project works best if there is more than one student.
 Here is a paper relating to this project, following a similar approach:
 
 **Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
-
 
 ### Which sports are covered in journals on sport psychology?
 
@@ -214,7 +213,7 @@ Here is a paper relating to this project, following a similar approach:
 
 Psychologists have been studying personality for a very long time. The most dominant classification is a five factor model but researchers have more recently argued for a six factor model (HEXACO), as well as focussing on the 'Dark Triad' of personality. In this project you would survey leading personality journals and find out which models researchers are using for personality.
 
-Ashton, M. C., & Lee, K. (2009). The HEXACO–60: A Short Measure of the Major Dimensions of Personality. Journal of Personality Assessment, 91(4), 340–345. https://doi.org/10.1080/00223890902935878
+Ashton, M. C., & Lee, K. (2009). The HEXACO–60: A Short Measure of the Major Dimensions of Personality. Journal of Personality Assessment, 91(4), 340–345. [https://doi.org/10.1080/00223890902935878](https://doi.org/10.1080/00223890902935878)
 
 
 ### Visualisations in standard psychology text books.
