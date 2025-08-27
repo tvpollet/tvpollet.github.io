@@ -21,7 +21,7 @@ I **strongly** prefer that you pick a topic within the set below. My experience 
 If you want to go off the beaten path and suggest your own project: I am a behavioural scientist with an interest in methodology. 
 I work broadly on social relationships, so topics akin to **social psychology, relationship research, evolutionary psychology, and personality psychology** fall within my interests. I'll consider projects which you have developed / proposed in those areas, but there is **no 'unlimited' choice**. Some projects also simply cannot be done as part of your degree, due to legal, practical, ethical, or scientific reasons. With 'scientific' reasons I mean that what you have in mind might be so complex that it cannot be unpacked in a single project - it is a question for say a PhD project. (For example, what you have in mind is a complex mediation model, but it is unlikely that you are able to collect the data to test such a model). 
 
-My experience is that students also propose projects which tend to be unrealistic, so ask yourself whether your project is all that it is cracked up to be. If it is not, then why not opt for a replication study, for example. I do not weigh 'novelty' in my judgment of your thesis or whether your findings are 'significant' or not. I also provide a list of topics which I prefer not to supervise, to help guide you but I am always open to be convinced.
+My experience is that students also propose projects which tend to be unrealistic, so ask yourself whether your project is all that it is cracked up to be. If it is not, then why not opt for a replication study, for example. I do not weigh 'novelty' in my judgment of your thesis or whether your findings are 'significant' or not. I also provide a list of topics which I prefer not to supervise, to help guide you -- but I am always open to be convinced.
 
 # Embarras du choix (A wide range of topics to choose from)
 
@@ -56,6 +56,7 @@ These could be good candidates or starting points:
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540) -- Requires married couples.
 * The Big 5 and relationship maintenance on Facebook. [https://doi.org/10.1177/0265407518772089](https://doi.org/10.1177/0265407518772089)
+* Birth order and relationships. [https://link.springer.com/article/10.1007/s12110-003-1017-x](https://link.springer.com/article/10.1007/s12110-003-1017-x)
 
 ### Prosocial behaviour / altruism
 
@@ -463,7 +464,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects in Parapsychology.
 * Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
 * Projects on COVID-19 (but see exceptions above).
-* Projects on body image and the media.
+* Projects on body image and the media (but see exceptions above).
 * Projects on nutrition, supplements, or aromas.
 * Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy - unless they are dealing with well thought out replications).
 * Projects on attachment theory and/or psychological trauma.
@@ -475,7 +476,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects on aggression, violence, rape, sexual violence.
 * Projects on human-animal relationships.
 * Projects on stress and mental health (unless they are dealing with social network analysis).
-* Projects on Instagram/Facebook/TikTok (unless they are dealing with social network analysis).
+* Projects on Instagram/Facebook/TikTok (unless they are dealing with social network analysis, or exceptions listed above).
 * Projects on addiction, smoking, alcohol, drug consumption (unless they are dealing with social network analysis).
 * Projects on social identity, ethnicity, and/or intergroup behaviour (unless these are related to social network analysis or well thought out replication projects).
 * Projects on sexual orientation, gender identity, masculinity/femininity, 2D:4D ratios (unless these are related to social network analysis or well thought out replication projects).
