@@ -98,7 +98,7 @@ These could be good candidates or starting points:
 
 * [College students’ prevalence and perceptions of text messaging while driving](https://doi.org/10.1016/j.aap.2011.03.003){:target="_blank"}
 
-### Other
+### Celebrities / Miscellaneous
 * The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf){:target="_blank"}
 
 There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](http://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
@@ -136,14 +136,16 @@ Here is an example borne out of a student project. This project looked at well-b
 
 * Cheyne, T., Smith, M.A., & **Pollet, T.V.** (2020, July 30th). Egocentric network characteristics of persons with Type 1 Diabetes and their relationships to perceived social support and well-being. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fng7x](https://doi.org/10.31234/osf.io/fng7x){:target="_blank"}
 
-Crudely put there are two designs. In the example above, you focus on sampling individuals (e.g., Individuals with a certain diagnosis, army personnel, mothers who breastfeed, etc). This is likely the 'easier option'. Alternatively, you can pick a group of interest (e.g., a support group for parents with disabled children, a church, a food bank, a charity, ... .) and try to map everybody in that group. For this design, the sample can be smaller but we might need/want multiple measurements and we need to carefully consider ethical issues.
+Crudely put there are two designs. In the example above, you focus on sampling individuals (e.g., Individuals with a certain diagnosis, army personnel, mothers who breastfeed, caregivers for relatives with dementia,  etc). This is likely the 'easier option'. 
+
+Alternatively, you can pick a group of interest (e.g., a support group for parents/caregivers with disabled children, a church, a food bank, a charity, ... .) and try to map everybody in that group. For this design, the sample can be smaller but we might need/want multiple measurements and we need to carefully consider ethical issues.
 
 ## Meta-science: doing science on science... ?!
 <a href="#thesis-introduction">back to top</a>
 
 There are a range of projects to be conducted which deal with the methods used in different fields in psychology. The benefits of these types of projects are that in most cases the data are already there (or you have control over the data collection).
 
-### The 'Prometheus effect' in psychology: Are effect sizes exaggerated?
+### The 'Prometheus effect' in psychology: Are initial effect sizes exaggerated?
 
 The first time an effect is published, its effect size tends to be exaggerated (e.g., Jennions & Moller, 2002). This is known as the Prometheus effect or Winner's curse. Via collating data from meta-analyses, you will examine whether an original effect is exaggerated when compared to its meta-analytic estimate and whether this exaggeration is larger for some fields than for others.
 
@@ -243,14 +245,6 @@ The [Pioneer fund](https://en.wikipedia.org/wiki/Pioneer_Fund){:target="_blank"}
 
 Intelligence is thought to be an individual level construct. Yet, some researchers have argued that we can calculate an estimate of intelligence for a country ?!. Unsurprisingly, this is very controversial. In this project, you will examine for which types of research 'national intelligence' has been used and what its statistical relationship is with other constructs (e.g., GDP per capita).
 
-### What is the typical sample size used in undergraduate/masters psychology projects at our University?
-
-In this project, you will code the sample sizes used in theses in psychology, as well as the method used. It is important as this will allow us to examine whether student projects have sufficient [statistical power](https://en.wikipedia.org/wiki/Power_of_a_test){:target="_blank"}. It will also help your future colleagues by tallying what is normative.
-
-### What is the 'type' of sample used in undergraduate/masters psychology projects at our University?
-
-A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code theses from psychology and the samples they use. Are they predominantly students? Are some of them fairly diverse (international students) or are they mostly British? Are they mostly dominated by one gender? These are the types of questions you are able to address. 
-
 ### Body Mass Index (BMI): A continuous measure that often gets 'binned'.
 
 Some metrics are continuous but we end up turning them into categories. This is typically [a bad idea](https://pubmed.ncbi.nlm.nih.gov/16217841/){:target="_blank"}. With the Body Mass Index (BMI), rather than analysing a continuous variable, researchers might rely on categories such as overweight, underweight, healthy and obese. This comes at an information cost. In this project, you will systematically review papers from the journal 'Body Image' and assess how often researchers apply binning to BMI when testing hypotheses.
@@ -263,7 +257,7 @@ Often in psychology we use a developed scale but then this scale gets applied to
 
 For this project you will need to use the free software [JASP](www.jasp.org){:target="_blank"} and you'll need to learn a bit about meta-analysis (but it is not that hard! + it will look great on your CV).
 
-* Alaric Lloyd's [Bachelor thesis project](https://osf.io/54q6w/){:target="_blank"} on sexual self-esteem. Check the [draft paper](https://psyarxiv.com/swzm6/){:target="_blank"} here.
+* Alaric Lloyd's [Bachelor thesis project](https://osf.io/54q6w/){:target="_blank"} on sexual self-esteem. Check the [published paper](https://doi.org/10.1080/19419899.2021.1984982){:target="_blank"} here.
 
 ### Candidate scales to explore
 
@@ -325,12 +319,10 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Vaccine Hesitancy Scale](https://doi.org/10.1016/j.vaccine.2017.12.043){:target="_blank"}
 * [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
 
-
 #### Romantic relationships, LGBTQIA+ and sexual behaviour
 
 * [Romantic Disengagement Scale (RDS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2564288/){:target="_blank"}
 * [Relational distance](https://doi.org/10.1111/1475-6811.00046){:target="_blank"}
-* [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
 * [Reasons for parenthood scale](https://www.tandfonline.com/doi/full/10.1080/02646830500129438){:target="_blank"}
 * [The Dating Anxiety Scale for Adolescents](https://local.psy.miami.edu/media/college-of-arts-and-sciences/psychology/documents/faculty/alagreca/glickman_lagreca_2004.pdf){:target="_blank"}
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
@@ -340,10 +332,15 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 [This handbook](https://www.taylorfrancis.com/books/handbook-sexuality-related-measures-robin-milhausen-john-sakaluk-terri-fisher-clive-davis-william-yarber/10.4324/9781315183169){:target="_blank"} might offer some further ideas of measures to explore in the context of sexuality.
 
+#### Family relationships
+
+* [Scales on fathering](https://journals.sagepub.com/doi/abs/10.1177/0013164403258453?casa_token=gCiu7Q3_bW4AAAAA:QmAzlX8Pbt85cwQaqAwaMMrrcAISdbdo-iPresjq9f0YK6QZiVAAksQncFMLC31rWJ_vfLnD4sy4){:target="_blank"}
+* [The Lifespan Sibling Relationship Scale](https://doi.org/10.1177/026540750017600){:target="_blank"}
+
 #### Environmental psychology
 
 * [Environmental distress](https://doi.org/10.1007/s10393-006-0069-x){:target="_blank"}
-* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature 
+* [Nature Exposure scale](https://doi.org/10.1016/j.jenvp.2013.07.013){:target="_blank"} : A scale proposed to measure exposure to nature. 
 
 #### Miscellaneous
 
@@ -396,19 +393,6 @@ Here is an example project conducted at Northumbria University.
 Here is a paper we wrote on cyclists:
 * Cobey, K.D.\*, Stulp, G.\*, Laan, F., Buunk, A.P. & **Pollet, T.V.** (2013). Sex differences in risk taking behavior among Dutch cyclists. _Evolutionary Psychology, 11,_ 350-364. (*Authors contributed equally), [access .pdf here](http://journals.sagepub.com/doi/pdf/10.1177/147470491301100206)
 
-## Gender differences in everyday risk taking during 'Covid19 times'.
-<a href="#thesis-introduction">back to top</a>
-
-This builds on the above framework. All else being equal, men take more risks in daily life than women. Can we observe this in everyday behaviour?
-
-* Observing gender differences in use of hand sanitiser when entering a building.
-* Observing gender differences in mask wearing on campus.
-* Observing gender differences in mask wearing on public transport.
-
-Here is a paper we wrote on these behaviours:
-
-* Bainbridge, S., Allsopp, S., & **Pollet, T.V.** (2022). Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis. _Human Ethology, 37,_ 36-45. [access .pdf here](https://doi.org/10.22330/he/37/036-045){:target="_blank"}
-
 ## Measuring student satisfaction: Do we know if you are satisfied?
 <a href="#thesis-introduction">back to top</a>
 
@@ -417,36 +401,19 @@ The [National Student Survey](https://www.thestudentsurvey.com/){:target="_blank
 ## 'There are no funny women in standup comedy' - Random guy.
 <a href="#thesis-introduction">back to top</a>
 
-Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/clare-cook/){:target="_blank"}, I am conducting research on gendered perceptions of stand-up comedians. In this project, we will explore if female standup comedians are perceived as less funny than male standup comedians. We are also interested in finding out other stereotypes (e.g., are attractive women in comedy seen as less funny). There is also a possibility to look at perceptions of mental health in standup comedy.
+Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/clare-cook/){:target="_blank"}, I am conducting research on gendered perceptions of stand-up comedians. In this project, we will explore if female standup comedians are perceived as less funny than male standup comedians. We are also interested in finding out other stereotypes (e.g., are attractive women in comedy seen as less funny).
+
+Another option is to examine who people list as being funny comedians and whether those sets differ between men and women.
 
 ## Individual differences in "Buy now, pay later"
 <a href="#thesis-introduction">back to top</a>
 
-There is an increase in services which allow you to 'buy now and pay later' (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, do individuals who tend to hoard, rely more on these products?
+There is an increase in services which allow you to 'buy now and pay later' (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, does personality and/or time orientation predict who uses these services.
 
 ## Gender and leadership in Psychology courses
 <a href="#thesis-introduction">back to top</a>
 
 In this project, you will find out whether gender influences programme leadership for accredited BPS courses. Women have been less likely to have been offered leadership positions? Is this also the case for acting as a programme leader in psychology?
-
-
-## Individual differences in Statistical knowledge.
-<a href="#thesis-introduction">back to top</a>
-
-You will examine the degree to which your fellow students understand basic concepts in statistics, and whether there are individual differences and how knowledge of statistics is related to performance on exams. This project can be run online. The most interesting project would include a longitudinal component (i.e. at start of semester versus at end of semester). It is therefore better suited as a master project.
-
-
-## E-sports
-<a href="#thesis-introduction">back to top</a>
-
-E-sports are a rapidly emerging phenomenon and a million or even billion dollar industry. In this area there is room to explore some psychological phenomena, typically documented in regular sports. For example:
-
-* The 'too much talent effect' : If you continue to add excellent players, is there a point after which performance goes down?
-* Is there a 'home advantage'?
-* Does changing a coach work?
-* Are hierarchies in e-sports stable?
-* Do red teams win more than other colours?
-
 
 # Projects which I prefer not to supervise.
 <a href="#thesis-introduction">back to top</a>
@@ -455,7 +422,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 
 * Projects using a Qualitative methodology. I have very, very limited experience with Qualitative methods.
 * Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements (saliva). I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
-* Projects involving 'special populations'. I do not have access to 'special populations', so I cannot supervise projects involving children, vulnerable adults, service users, people with (mental) health diagnoses, or whichever special population you have in mind. However, if you have strong ties with these communities, then perhaps projects on social networks are still viable.
+* Projects involving 'special populations'. I do not have access to 'special populations', so I cannot supervise projects involving children, vulnerable adults, service users, people with (mental) health diagnoses, teachers, prisoners, or whichever special population you have in mind. However, if you have strong ties with these communities, then perhaps projects on social networks are still viable.
 * Projects in Cognitive Psychology. (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Consumer Psychology / Marketing (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Positive Psychology / Happiness studies.
@@ -463,6 +430,7 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects in Organisational Psychology (unless they are dealing with social network analysis or listed above)
 * Projects in Parapsychology.
 * Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
+* Projects on generative AI (unless these are replications).
 * Projects on COVID-19 (but see exceptions above).
 * Projects on body image and the media (but see exceptions above).
 * Projects on nutrition, supplements, or aromas.
