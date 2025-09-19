@@ -15,13 +15,17 @@ published: true
 
 Click the number for the corresponding paper to download a copy (it will open in a new window), if available. You will need adobe acrobat reader or something similar to read these papers (in .pdf). These papers are for reference only i.e. personal, educational, non-commercial use (also see the [disclaimer](https://tvpollet.github.io/disclaimer/)).
 
-## **Preprints.**
+## **Preprints**
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2025, May 13). How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fdkj5_v2](https://doi.org/10.31234/osf.io/fdkj5_v2)
+* **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, August 11). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _PsyArxiv_ [https://doi.org/10.31219/osf.io/fpej9_v1](https://doi.org/10.31219/osf.io/fpej9_v1)
 
-* **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (2024, July 5th). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ydb5v](https://doi.org/10.31234/osf.io/ydb5v)
+* **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (2025, Aug. 7th). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ydb5v_v2](https://doi.org/10.31234/osf.io/ydb5v_v2)
+
+* **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
+
+* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2025, Jan. 6th). How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fdkj5_v2](https://doi.org/10.31234/osf.io/fdkj5_v2)
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
