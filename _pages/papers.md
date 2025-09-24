@@ -33,7 +33,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2025/Accepted/in Press**
 
-[142.](https://doi.org/10.31234/osf.io/ydb5v_v2) * **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (accepted). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology_
+[142.](https://doi.org/10.31234/osf.io/ydb5v_v2) **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (accepted). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology_
 
 [141.](https://doi.org/10.1016/j.yhbeh.2025.105719) Shiramizu, V.M., Stern, J., Bartoš, F., Rafiee, Y., **Pollet, T.V.**, & Jones, B.C. (2025). Testing the Congruency Hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women’s sexual satisfaction? _Hormones and Behavior, 170_ 105719.
 
