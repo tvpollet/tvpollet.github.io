@@ -21,8 +21,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, August 11). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _PsyArxiv_ [https://doi.org/10.31219/osf.io/fpej9_v1](https://doi.org/10.31219/osf.io/fpej9_v1)
 
-* **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (2025, Aug. 7th). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/ydb5v_v2](https://doi.org/10.31234/osf.io/ydb5v_v2)
-
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2025, Jan. 6th). How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fdkj5_v2](https://doi.org/10.31234/osf.io/fdkj5_v2)
@@ -35,9 +33,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2025/Accepted/in Press**
 
+[142.](https://doi.org/10.31234/osf.io/ydb5v_v2) * **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (accepted). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology_
+
 [141.](https://doi.org/10.1016/j.yhbeh.2025.105719) Shiramizu, V.M., Stern, J., Bartoš, F., Rafiee, Y., **Pollet, T.V.**, & Jones, B.C. (2025). Testing the Congruency Hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women’s sexual satisfaction? _Hormones and Behavior, 170_ 105719.
 
-[140.](https://doi.org/10.1177/00332941231164079) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2025). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports; 128(2)_, 1004-1023.
+[140.](https://doi.org/10.1177/00332941231164079) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2025). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports, 128(2)_, 1004-1023.
 
 ## **2024**
 
