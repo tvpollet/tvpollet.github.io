@@ -29,7 +29,7 @@ navbar-links:
     - Short bio: "aboutme"
     - CV: "http://tvpollet.github.io/CV.pdf"
     - Contact: "contact"
-    - Twitter: "https://twitter.com/tvpollet"
+    - Bluesky: "https://bsky.app/profile/tvpollet.bsky.social"
   Research:
     - Research interests: "Research_Interests"
     - Papers List: "papers"
@@ -73,7 +73,7 @@ social-network-links:
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
 # facebook: deanattali
   github: tvpollet
-  twitter: tvpollet
+#  twitter: tvpollet
 #  patreon: DeanAttali
 #  youtube: "@daattali"
 # whatsapp: 15551212
@@ -93,7 +93,7 @@ social-network-links:
 #  calendly: yourname
 #  mastodon: instance.url/@username
   bluesky: tvpollet.bsky.social
-#  ORCID: your ORCID ID
+  ORCID: 0000-0002-4210-935X
   google-scholar: T2fYknYAAAAJ
 #  discord: "invite_code" or "users/userid" or "invite/invite_code"
 #  kaggle: yourname
@@ -112,7 +112,7 @@ rss-description: This website is a virtual proof that I'm awesome
 
 # Select which social network share links to show in posts
 share-links-active:
-  twitter: true
+  twitter: false
   facebook: false
   linkedin: false
   vk: false
