@@ -44,7 +44,7 @@ No man is an island. Honestly, I would not have made it this far were it not for
 
 Here is a co-author figure of some people I have published preprints with. [Code](https://tvpollet.github.io/Files_for_sharing/Psy_Arxiv_website.html) can be found here.
 
-![co-author graph of Thomas V. Pollet](https://tvpollet.gihub.io/img/Psy_Arxiv_network.png)
+![co-author graph of Thomas V. Pollet](https://tvpollet.gihub.io/img/Psy_Arxiv_network.jpg)
 
 Here is a list of some people I have collaborated / am collaborating with.
 
