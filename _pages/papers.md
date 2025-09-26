@@ -382,7 +382,8 @@ My work contributes to the following sustainable development goals (3,4,5,16). T
 * 126: Gender differences in mask wearing
 * 122: Social support and mental health
 * 116: Type 1 Diabetes and social support
-* 115, 113: Body image and loneliness studies
+* 102, 114, 115: Body image 
+* 113: Loneliness studies
 * 108: Sleep and stress responses
 * 91: PTSD in war survivors
 * 79: PTSD interventions for children/adolescents
