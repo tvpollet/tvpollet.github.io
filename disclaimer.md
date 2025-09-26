@@ -28,13 +28,16 @@ These terms shall be governed by and interpreted in accordance with the laws of 
 
 No rights can be deducted from the information (granted as well as submitted) on this website or the email correspondence.
 
-#### With regards to Northumbria university email: 
+#### With regard to Sustinabale Development Goals (SDG) images
+In line with the [guidelines](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf), the images are used for informational use only.
+
+#### With regard to Northumbria university email: 
 
 This message is intended solely for the addressee and may contain confidential and/or legally privileged information. Any use, disclosure or reproduction without the sender’s explicit consent is unauthorised and may be unlawful. If you have received this message in error, please notify Northumbria University immediately and permanently delete it. Any views or opinions expressed in this message are solely those of the author and do not necessarily represent those of the University. Northumbria University email is provided by Microsoft Office365 and is hosted within the EEA, although some information may be replicated globally for backup purposes. The University cannot guarantee that this message or any attachment is virus free or has not been intercepted and/or amended.
 
 I work flexibly, I am emailing you when as it works for me. I respect your working arrangements may be different so please respond whenever is convenient for you.    
 
-#### With regards to copyright of Northumbria University teaching materials hosted here (PY0794/PY0554).:
+#### With regard to copyright of Northumbria University teaching materials hosted here (PY0794/PY0554).:
 
 I herewith, assert my copyright, my teaching is my intellectual property (see the teaching page). These teaching materials have been generated via my personally owned equipment and software, therefore I establish that the exclusive copyright lies with me, rather than the university - regardless of what an employment contract states. Should the university dispute this, then please contact me as well as our [local UCU rep](https://www.ucu-unn.org.uk/) in writing, as per the terms established above.
 
