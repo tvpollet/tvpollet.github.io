@@ -80,27 +80,27 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [123.](https://doi.org/10.1017/S0144686X22000666) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2022). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ 1-26. [doi:10.1017/S0144686X22000666](https://doi.org/10.1017/S0144686X22000666) 
 
-[123.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [doi:10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
+[122.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [doi:10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
 
-[122.](https://doi.org/10.1371/journal.pone.0266167) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS ONE, 17(12)_, e0266167. [doi:10.1371/journal.pone.0266167](https://doi.org/10.1371/journal.pone.0266167)
+[121.](https://doi.org/10.1371/journal.pone.0266167) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS ONE, 17(12)_, e0266167. [doi:10.1371/journal.pone.0266167](https://doi.org/10.1371/journal.pone.0266167)
 
-[121.](https://doi.org/10.1080/0309877X.2022.2060069) **Pollet, T.V.**, & Shepherd, L. (2022). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education, 46(9)_, 1195-1211 [doi:10.1080/0309877X.2022.2060069](https://doi.org/10.1080/0309877X.2022.2060069)
+[120.](https://doi.org/10.1080/0309877X.2022.2060069) **Pollet, T.V.**, & Shepherd, L. (2022). Subscales in the National Student Survey (NSS): Some considerations on their structure. _Journal of Further and Higher Education, 46(9)_, 1195-1211 [doi:10.1080/0309877X.2022.2060069](https://doi.org/10.1080/0309877X.2022.2060069)
 
-[120.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442. [doi:10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
+[119.](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834) Metcalfe, D., McKenzie, K., McCarty, K., **Pollet, T.V.**, & Murray G. (2022). An exploration of the impact of contextual information on the emotion recognition ability of autistic adults.  _International Journal of Psychology, 57(3),_ 433-442. [doi:10.1002/ijop.12834](https://doi.org/10.1002/ijop.12834)
 
 ## **2021**
 
-[119.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982).
+[118.](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf) Lloyd, A., Brown, G., & **Pollet, T.V.** (2021). A meta-analysis of the reliability of the Sexual Self-Esteem Inventory for Women (SSEI-W) measure. _Psychology & Sexuality_ [https://doi.org/10.1080/19419899.2021.1984982](https://doi.org/10.1080/19419899.2021.1984982).
 
-[118.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
+[117.](https://journals.ku.edu/hct/article/view/14847) Sillence, E., Saxton, T.K., & **Pollet, T.V.** (2021). Facebook: Social Uses and Anxiety - A Replication Attempt. _Human Communication & Technology, 2(1),_ 19-36.
 
-[117.](https://doi.org/10.1080/21642850.2021.1951272) Cheyne, T., Smith, M.A., & **Pollet, T.V.** (2021). Egocentric network characteristics of persons with Type 1 Diabetes and their relationships to perceived social support and well-being. _Health Psychology and Behavioral Medicine, 9(1),_ 662-680.
+[116.](https://doi.org/10.1080/21642850.2021.1951272) Cheyne, T., Smith, M.A., & **Pollet, T.V.** (2021). Egocentric network characteristics of persons with Type 1 Diabetes and their relationships to perceived social support and well-being. _Health Psychology and Behavioral Medicine, 9(1),_ 662-680.
 
-[116.](http://tvpollet.github.io/pdfs/Pollet_et_al_2021_Body_Image.pdf)  **Pollet, T.V.**, Dawson, S., Tovée, M.J., Cornelissen, P.L., & Cornelissen, K.K. (2021). Engagement with fat talk as a function of social comparison and body image concerns: Two replication studies support main effects but do not support an interaction effect. _Body Image, 38,_ 317-324.
+[115.](http://tvpollet.github.io/pdfs/Pollet_et_al_2021_Body_Image.pdf)  **Pollet, T.V.**, Dawson, S., Tovée, M.J., Cornelissen, P.L., & Cornelissen, K.K. (2021). Engagement with fat talk as a function of social comparison and body image concerns: Two replication studies support main effects but do not support an interaction effect. _Body Image, 38,_ 317-324.
 
-[115.](http://tvpollet.github.io/pdfs/Mohamed_et_al_2021.pdf)  Mohamed, S., Kramer, R.S.S, Thornborrow, T., **Pollet, T.V.**, Cornelissen, P.L., & Tovée, M.J. (2021). 3D visualisation of psychometric judgements of the ideal male body. _Body Image, 38,_ 295-305.
+[114.](http://tvpollet.github.io/pdfs/Mohamed_et_al_2021.pdf)  Mohamed, S., Kramer, R.S.S, Thornborrow, T., **Pollet, T.V.**, Cornelissen, P.L., & Tovée, M.J. (2021). 3D visualisation of psychometric judgements of the ideal male body. _Body Image, 38,_ 295-305.
 
-[114.](https://doi.org/10.5817/CP2021-2-6) Brown, R.M., Roberts, S.G.B., & **Pollet, T.V.** (2021). Loneliness is negatively related to Facebook network size, but not related to Facebook network structure. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 15(2)_, article 6. [https://doi.org/10.5817/CP2021-2-6](https://doi.org/10.5817/CP2021-2-6)
+[113.](https://doi.org/10.5817/CP2021-2-6) Brown, R.M., Roberts, S.G.B., & **Pollet, T.V.** (2021). Loneliness is negatively related to Facebook network size, but not related to Facebook network structure. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 15(2)_, article 6. [https://doi.org/10.5817/CP2021-2-6](https://doi.org/10.5817/CP2021-2-6)
 
 [112.](http://tvpollet.github.io/pdfs/Malcolm_et_al_2021.pdf) Malcolm, C., Saxton, T.K., McCarty, K., Roberts, S.G.B., & **Pollet, T.V.** (2021). Extraversion is associated with advice network size, but not network density or emotional closeness to network members.  _Personality and Individual Differences, 168_ 110311 [https://doi.org/10.1016/j.paid.2020.110311](https://doi.org/10.1016/j.paid.2020.110311)
 
@@ -368,13 +368,11 @@ Buunk, A.P., & **Pollet, T.V.** (2009). Evolutionaire Sociale Psychologie. In Ti
 
 ![Sustainable goals](https://tvpollet.github.io/img/the-global-goals-grid-color.png)
 
-My work contributes to the following sustainable development goals. The numbers below refer to the papers above.
+My work contributes to the following sustainable development goals (3,4,5,16). The numbers below refer to the papers above.
 
 ## SDG 3: Good Health and Well-being
 
 ![SDG3](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_3.png)
-
-Here are some example papers addressing mental health, reproductive health, physical health, and well-being:
 
 * 141: Oral contraceptive use and women's sexual satisfaction
 * 138: Hoarding behaviors and older adults' housing decisions
@@ -388,6 +386,16 @@ Here are some example papers addressing mental health, reproductive health, phys
 * 108: Sleep and stress responses
 * 91: PTSD in war survivors
 * 79: PTSD interventions for children/adolescents
+
+## SDG 4: Quality Education 
+
+![SDG4](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_4.png)
+
+* 142: Gender representation in educational materials
+* 136: Research methodology and publication bias
+* 132, 120: Student satisfaction and educational assessment
+* 125: Factors affecting academic performance
+* 97, 137: Diversity in academic research
 
 ## SDG 5: Gender Equality
 
@@ -410,3 +418,12 @@ Here are some example papers addressing mental health, reproductive health, phys
 * 119: Autism and social inclusion
 * 97, 137: Sample diversity in research 
 * 29, 27: Out-group bias and discrimination
+
+## SDG 16: Peace, Justice and Strong Institutions 
+
+![SDG16](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_16.png)
+
+* 91: Mental health impacts of war
+* 79: Treatment for war-related trauma in youth
+* 62: Political extremism and conspiracy theories
+* 27: Intergroup conflict and bias
