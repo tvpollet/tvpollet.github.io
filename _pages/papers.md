@@ -368,63 +368,62 @@ Buunk, A.P., & **Pollet, T.V.** (2009). Evolutionaire Sociale Psychologie. In Ti
 
 ![Sustainable goals](https://tvpollet.github.io/img/the-global-goals-grid-color.png)
 
-My work contributes to the following sustainable development goals (3,4,5,16). The numbers below refer to the papers above.
+My work contributes to the following sustainable development goals (3,4,5,16). The numbers below refer to the papers above. This is not an exhaustive list.
 
 ## SDG 3: Good Health and Well-being
 
 ![SDG3](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_3.png)
 
-* 141: Oral contraceptive use and women's sexual satisfaction
-* 138: Hoarding behaviors and older adults' housing decisions
-* 135: Instagram use and mental well-being
-* 134: Mental well-being of Involuntary Celibates
-* 133: Loneliness scales in older adults
-* 126: Gender differences in mask wearing
-* 122: Social support and mental health
-* 116: Type 1 Diabetes and social support
-* 102, 114, 115: Body image 
-* 113: Loneliness studies
-* 108: Sleep and stress responses
-* 91: PTSD in war survivors
-* 79: PTSD interventions for children/adolescents
+* [141](https://doi.org/10.1016/j.yhbeh.2025.105719): Oral contraceptive use and women's sexual satisfaction
+* [138](https://doi.org/10.1155/2024/5513833): Hoarding behaviors and older adults' housing decisions
+* [135](https://doi.org/10.5817/CP2024-1-3): Instagram use and mental well-being
+* [134](https://doi.org/10.1016/j.paid.2023.112474): Mental well-being of Involuntary Celibates
+* [133](https://doi.org/10.1007/s12144-023-04697-9): Loneliness scales in older adults
+* [126](https://doi.org/10.22330/he/37/036-045): Gender differences in mask wearing
+* [122](https://doi.org/10.1080/09638237.2022.2069695): Social support and mental health
+* [116](https://doi.org/10.1080/21642850.2021.1951272): Type 1 Diabetes and social support
+* [102](http://tvpollet.github.io/pdfs/Cornelissen_et_al_2019_PSPB.pdf), [114](http://tvpollet.github.io/pdfs/Mohamed_et_al_2021.pdf), [115](http://tvpollet.github.io/pdfs/Pollet_et_al_2021_Body_Image.pdf): Body image 
+* [113](https://doi.org/10.5817/CP2021-2-6): Loneliness
+* [108](http://tvpollet.github.io/pdfs/Elder_et_al_2020.pdf): Sleep and stress responses
+* [91](http://tvpollet.github.io/pdfs/Morina_et_al_2018.pdf): PTSD in war survivors
+* [79](http://tvpollet.github.io/pdfs/Morina_et_al_2016.pdf): PTSD interventions for children/adolescents
 
 ## SDG 4: Quality Education 
 
 ![SDG4](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_4.png)
 
-* 142: Gender representation in educational materials
-* 136: Research methodology and publication bias
-* 132, 120: Student satisfaction and educational assessment
-* 125: Factors affecting academic performance
-* 97, 137: Diversity in academic research
+* [142](https://doi.org/10.31234/osf.io/ydb5v_v2): Gender representation in educational materials
+* [136](https://doi.org/10.1371/journal.pone.0297075): Research methodology and publication bias
+* [132](https://doi.org/10.1080/03075079.2023.2284808), [120](https://doi.org/10.1080/0309877X.2022.2060069): Student satisfaction and educational assessment
+* [125](https://doi.org/10.1007/s12144-022-03336-z): Factors affecting academic performance
+* [97](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2), [137](https://doi.org/10.1016/j.bodyim.2024.101714): Diversity in academic research
 
 ## SDG 5: Gender Equality
 
 ![SDG5](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_5.png)
 
-* 142: Women's representation in psychology textbooks
-* 141: Women's reproductive health and autonomy
-* 130: Gender role conformity in acting
-* 127: Women in stand-up comedy
-* 126: Gender differences in health behaviors
-* 121: Gender differences in loneliness measurement
-* 118: Sexual self-esteem in women
+* [142](https://doi.org/10.31234/osf.io/ydb5v_v2): Women's representation in psychology textbooks
+* [141](https://doi.org/10.1016/j.yhbeh.2025.105719): Women's reproductive health and autonomy
+* [130](https://dro.dur.ac.uk/38441/): Gender role conformity in acting
+* [127](https://doi.org/10.1177/00187267221137996): Women in stand-up comedy
+* [126](https://doi.org/10.22330/he/37/036-045): Gender differences in health behaviors
+* [121](https://doi.org/10.1371/journal.pone.0266167): Gender differences in loneliness measurement
+* [118](http://tvpollet.github.io/pdfs/Lloyd_et_al_2021.pdf): Sexual self-esteem in women
 
 ## SDG 10: Reduced Inequalities
 
 ![SDG10](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_10.png)
 
-* 142: Gender representation inequality in academia
-* 127: Gender inequality in entertainment
-* 119: Autism and social inclusion
-* 97, 137: Sample diversity in research 
-* 29, 27: Out-group bias and discrimination
+* [142](https://doi.org/10.31234/osf.io/ydb5v_v2): Gender representation inequality in academia
+* [127](https://doi.org/10.1177/00187267221137996): Gender inequality in entertainment
+* [119](https://onlinelibrary.wiley.com/doi/10.1002/ijop.12834): Autism and social inclusion
+* [97](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2), [137](https://doi.org/10.1016/j.bodyim.2024.101714): Sample diversity in research 
+
 
 ## SDG 16: Peace, Justice and Strong Institutions 
 
 ![SDG16](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_16.png)
 
-* 91: Mental health impacts of war
-* 79: Treatment for war-related trauma in youth
-* 62: Political extremism and conspiracy theories
-* 27: Intergroup conflict and bias
+* [91](http://tvpollet.github.io/pdfs/Morina_et_al_2018.pdf): Mental health impacts of war
+* [79](http://tvpollet.github.io/pdfs/Morina_et_al_2016.pdf): Treatment for war-related trauma in youth
+* [62](http://tvpollet.github.io/pdfs/Van_Prooijen_et_al_2015.pdf): Political extremism and conspiracy theories
