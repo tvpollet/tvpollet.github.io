@@ -35,7 +35,7 @@ xaringanExtra::use_tile_view()
 
 * Belgian
 
-* Father of a 3 year old --> Permanently tired.
+* Father of a 4 year old (Minna) --> Permanently tired.
 
 ```{r, out.width= "450px", fig.align="center", echo=FALSE}
 knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtqZ3JtZW5vZGIxMGJvcGc2cWVpc2N6MTNoeG5rc2U1MWVjcnBjciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Dr1ZZREmna8lTAmVwM/giphy.gif")
@@ -57,11 +57,11 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtqZ3JtZW
 
 * Board games (e.g., Wingspan)
 
-* Nintendo switch: mostly turn based: Civilisation 6
+* Nintendo switch: mostly turn based: Civilisation 6 / Disco Elysium
 
 * MMA - even published some papers on this.
 
-* Reading: fiction (currently: **Candy house** by Jennifer Egan) and non-fiction (currently: **You don't have to be mad to work here...** by Benji Waterhouse, just finished: **'Bullsh*t jobs'** by David Graeber)
+* Reading: fiction (currently: **The Bee sting** by Paul Murray) and non-fiction (currently: **Zero Zero Zero** by Roberto Saviano)
 
 * Nice (Belgian) beer
 
@@ -72,7 +72,7 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2sxMDBjY2
 ---
 ## How I support you.
 
-* You will get the most out of me, if your topic and method aligns with my expertise. Broadly relating to social psychology / social relationships / individual differences.
+* You will get the most out of me, if your topic and method closely aligns with my expertise. Broadly relating to social psychology / social relationships / individual differences.
 
 --
 
@@ -88,7 +88,7 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2sxMDBjY2
 
 --
 
-* **All this support will be offered in these group sessions (supplemented via MS teams). There will be no additional support via email/chat/personal meetings.**
+* **All this support will be offered in these group sessions (supplemented via MS teams). There will be no additional support via email/personal meetings -- only in exceptional cases.**
 
 ---
 ## MS Teams
@@ -195,23 +195,13 @@ As stated: you can do a 'solo' project. No pressure. But advantages to working t
 * If things go sour - I have a back up plan for certain scenarios.
 
 ---
-## Constraints on 'solo' projects.
+## Two tracks
 
-Not anything goes! I am the expert and based on >80 to completion - I know the red flags.
+* Submitted a proposal --> which was accepted (with modification) or rejected.
 
-* Projects with ethical implications (e.g., studying drug abuse, trauma, violence, etc). Even if you believe them to be minor, you need to think of the worst case scenario!
+* Or you
 
---
-
-* Special populations (e.g., incels, children, mental health diagnoses, minorities but also populations like parents, teachers, carers, etc. due to access constraints). Exceptions do exist... .
-
---
-
-* Most effects in psychology are weak at best - so you'll need a large sample (easily >100) to be able to document even a basic relationship reliably. If concerned about sample size, best to join with others or choose a different approach.
-
---
-
-* Unfeasible questions (e.g., longitudinal nature) or poor designs (e.g., unable to rule out confounding) or sampling issues (e.g., question is about politics but you only ask students). If you really insist - they will nearly always lead to poor marks... . 
+--> you do have some say but I am the expert.
 
 ---
 ## Constraints on 'solo' projects.
@@ -261,13 +251,13 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTY4am9ibj
 ---
 ## Project timeline. Key dates.
 
-* **Ethics Deadline**: draft to me: 7th of November 2024, 13:00; final (in portal): 5th of December 2024, 13:00.
+* **Ethics Deadline**: draft to me: 5th of November 2025, 13:00; final (in portal): 3th of December 2025, 13:00.
 
-* **Conference**: Semester 2 - Week 6
+* **Conference**: Semester 2 - Week 6 
 
-* **Submission**: April 3rd 2025, 1pm
+* **Submission**: Mar 26th 2025, 1pm
 
-* **Feedback**: May 6th 2025, 1pm
+* **Feedback**:  Apr 27th 2025, 1pm
 
 ```{r, out.width= "275px", fig.align="center", echo=FALSE}
 knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbmJwMHFmaTc2aDVsYmt5aGs4ZDRkbXdvdGRvenMwejNlZDNibXRkeiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cgcZYdRy0vw1ovUuES/giphy.gif")
@@ -325,11 +315,10 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYThnYTBoM2
 ---
 ## Some ideas based on already shared with me
 
-* **Erin**: Perhaps a replication of Seidman - [The Big 5 and relationship maintenance on Facebook](https://doi.org/10.1177/0265407518772089)
+* **Amelia**: Personality and Marine Conservation.
 
-* **Molly**: Perhaps a replication of [this study on Jealousy, attachment style above](https://www.sciencedirect.com/science/article/pii/S0191886997001360) - or the project below? - A review and meta-analysis of the ['PAQ-R'](https://link.springer.com/article/10.1023/A:1015344909518)
+* **Erin**: Interested in Birth order.
 
-* **Faye**: Perhaps a replication of ['Private flirts, public friends: Understanding romantic jealousy responses to an ambiguous social network site message as a function of message access exclusivity'](https://doi.org/10.1016/j.chb.2014.02.050)
 
 ---
 ## Matching?
