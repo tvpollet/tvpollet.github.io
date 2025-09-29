@@ -296,36 +296,29 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYThnYTBoM2
 
 
 ---
-## Project ideas
-
-* Individual differences in jealousy. --> A replication of a previous study on either height or birth order/attachment/narcissism.
-
-* 'Social anhedonia' and friendships. --> other individual differences and social networks.
-
-* Representation in journals. (Body Image / Autism)
-
-* Measurement via scales.
-
-* Observing use of e-scooters and wearing helmets. E.g. : Are men less likely to wear one than women?
-
-* ['Guardian blind dates' database](https://www.theguardian.com/lifeandstyle/series/blind-date)
-
---> other ideas: [https://tvpollet.github.io/thesis_topics/](https://tvpollet.github.io/thesis_topics/)
-
----
 ## Some ideas based on already shared with me
 
 * **Amelia**: Personality and Marine Conservation.
 
-* **Erin**: Interested in Birth order.
+* **Erin**:  Birth order, romantic relationships, jealousy - replication study.
 
+* **Bryony**: Impulsive behaviour and jealousy
+
+---
+## Project ideas
+
+* Individual differences in jealousy. --> A replication of a previous study on either height or birth order/attachment/narcissism.
+
+* Testing a tool for mapping out social networks (usability) in Qualtrics.
+
+* A replication of a study in environmental psychology on 
+
+* Representation in journal
 
 ---
 ## Matching?
 
-I need your name and three keywords on a piece of paper. (In order of preference) (e.g. John Doe, 1. Psychology of Religion 2. E-Sports 3. Organisational psychology)
-
-Or pick one from the previous slide (Jealousy / Social Networks / Representation in Journals / Measurement / e-scooters / Blind dates)
+I need your name and your preference.
 
 I'll try and match you up - and then will chat to each group... .
 
