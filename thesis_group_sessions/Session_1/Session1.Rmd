@@ -57,11 +57,19 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExamtqZ3JtZW
 
 * Board games (e.g., Wingspan)
 
+--
+
 * Nintendo switch: mostly turn based: Civilisation 6 / Disco Elysium
+
+--
 
 * MMA - even published some papers on this.
 
+--
+
 * Reading: fiction (currently: **The Bee sting** by Paul Murray) and non-fiction (currently: **Zero Zero Zero** by Roberto Saviano)
+
+--
 
 * Nice (Belgian) beer
 
@@ -172,7 +180,7 @@ As stated: you can do a 'solo' project. No pressure. But advantages to working t
 
 --
 
-* You still have to write your own paper and focus on slightly different aspects of the project. (For example, someone will focus one predictor)
+* You still have to write your own paper and focus on slightly different aspects of the project.
 
 --
 
@@ -180,7 +188,7 @@ As stated: you can do a 'solo' project. No pressure. But advantages to working t
 
 --
 
-* Your ‘peer support’ is going to be even more specific, others in this room will know way more about the project if they’re involved
+* Your ‘peer support’ is going to be even more specific, others in this room will know way more about the project if they’re involved.
 
 --
 
@@ -199,18 +207,9 @@ As stated: you can do a 'solo' project. No pressure. But advantages to working t
 
 * Submitted a proposal --> which was accepted (with modification) or rejected.
 
-* Or you
+* Or you will follow my lead and pick from a 'menu'.
 
---> you do have some say but I am the expert.
-
----
-## Constraints on 'solo' projects.
-
-* Things we already know pretty well or where a lot better designed studies have been done (e.g., Violence and video games) --> better to do a well thought out replication project or quantitative review on measurement. 
-
---> If there is already a randomised control study with 1,000s of people, then your small study might be not very informative.
-
---> This is a thesis not a PhD. Rather a robust replication than a poorly designed underpowered study. 
+--> you do have some input but I am the expert.
 
 ```{r, out.width= "275px", fig.align="center", echo=FALSE}
 knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGRqdGZxeWEzY3RlcWNsa254b3diZzdkMDBiOXBlbnBmaTk4dmRhdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7nFmRxSw6AmyI/giphy.gif")
@@ -244,7 +243,7 @@ This is a rough timeline… might change week on week depending upon where we’
 
 * Week 10: Feedback on your written work so far and wrapping up before winter break
 
-```{r, out.width= "275px", fig.align="center", echo=FALSE}
+```{r, out.width= "250px", fig.align="center", echo=FALSE}
 knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExbTY4am9ibjE2aWxvMHlydGZlZG1zdjhqc3NqNG91bHRuM2Y5a2pmbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2rAELJSGMbnOao4wFr/giphy-downsized-large.gif")
 ```
 
@@ -298,22 +297,34 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYThnYTBoM2
 ---
 ## Some ideas based on already shared with me
 
-* **Amelia**: Personality and Marine Conservation.
+* **Amelia**: Personality and Marine Conservation. 
 
-* **Erin**:  Birth order, romantic relationships, jealousy - replication study.
+* **Erin**:  Birth order, romantic relationships, jealousy - [replication study](http://www.tpettijohn.net/academic/McGuirk-Pettijohn_BirthOrderandRomanticRelationships.pdf).
 
-* **Bryony**: Impulsive behaviour and jealousy
+* **Bryony**: Impulsive behaviour and jealousy.
 
 ---
 ## Project ideas
 
-* Individual differences in jealousy. --> A replication of a previous study on either height or birth order/attachment/narcissism.
+* Individual differences in jealousy. --> A replication of a previous study on [height preferences](https://doi.org/10.1016/j.evolhumbehav.2007.11.006).
 
-* Testing a tool for mapping out social networks (usability) in Qualtrics.
+--
 
-* A replication of a study in environmental psychology on 
+* Testing a tool for mapping out social networks in Qualtrics. Evaluating whether this works.
 
-* Representation in journal
+
+```{r, out.width= "450px", fig.align="center", echo=FALSE}
+knitr::include_graphics("Qualtrics_network.png")
+```
+
+---
+## Project ideas (contd)
+
+* A replication of a study in environmental psychology on [nature exposure, religiosity and pro-environmental behaviour](https://www.sciencedirect.com/science/article/pii/S0272494413000558?via%3Dihub)
+
+--
+
+* Representation in meta-analysis. -- Which countries are included?
 
 ---
 ## Matching?
