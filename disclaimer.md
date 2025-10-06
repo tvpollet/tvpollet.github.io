@@ -28,7 +28,7 @@ These terms shall be governed by and interpreted in accordance with the laws of 
 
 No rights can be deducted from the information (granted as well as submitted) on this website or the email correspondence.
 
-#### With regard to Sustinabale Development Goals (SDG) images
+#### With regard to Sustainable Development Goals (SDG) images
 In line with the [guidelines](https://www.un.org/sustainabledevelopment/wp-content/uploads/2019/01/SDG_Guidelines_AUG_2019_Final.pdf), the images are used for informational use only.
 
 #### With regard to Northumbria university email: 
@@ -36,6 +36,10 @@ In line with the [guidelines](https://www.un.org/sustainabledevelopment/wp-conte
 This message is intended solely for the addressee and may contain confidential and/or legally privileged information. Any use, disclosure or reproduction without the sender’s explicit consent is unauthorised and may be unlawful. If you have received this message in error, please notify Northumbria University immediately and permanently delete it. Any views or opinions expressed in this message are solely those of the author and do not necessarily represent those of the University. Northumbria University email is provided by Microsoft Office365 and is hosted within the EEA, although some information may be replicated globally for backup purposes. The University cannot guarantee that this message or any attachment is virus free or has not been intercepted and/or amended.
 
 I work flexibly, I am emailing you when as it works for me. I respect your working arrangements may be different so please respond whenever is convenient for you.    
+
+#### With regard to AI use in my academic work
+
+I use AI tools for my work (mostly locally Ollama with Mistral large). This is mostly for coding, writing (I am a non-native speaker). Occasionally, I also seek feedback on ideas or criticism (as I would do with a colleague). In all instances, I review its work. Where relevant, I will disclose this. Should you have queries about my use of these tools, please do contact me.
 
 #### With regard to copyright of Northumbria University teaching materials hosted here (PY0794/PY0554).:
 
