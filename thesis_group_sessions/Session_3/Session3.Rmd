@@ -103,7 +103,7 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTZzM3YyMn
 
 - Some of this will be easy - if you are doing a replication study: you will be doing something as close to the original!
 
-```{r, out.width= "450px", fig.align = 'center', echo=FALSE}
+```{r, out.width= "350px", fig.align = 'center', echo=FALSE}
 knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDFnYmdmdWdsbjV3bHF4bTRncDBla3BjYnY2Y3ppZW83bGNxdGZweSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/gL8jsD3ljXyyoQ10H1/giphy.gif")
 ```
 
@@ -126,7 +126,7 @@ knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDFnYmdmdW
 - Do you have a backup plan if you run into issues?
 
 
-```{r, out.width= "450px", fig.align = 'center', echo=FALSE}
+```{r, out.width= "350px", fig.align = 'center', echo=FALSE}
 knitr::include_graphics("https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExanVpeW9tdGQ2a3oycjdsN3FsOTl3dWwxbjZiaXVhemZyenN1ODVmcSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5JzLvyryTfs1NGgjY8/giphy.gif")
 ```
 
