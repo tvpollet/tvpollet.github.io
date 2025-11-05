@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (2025, November 5). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3dcth_v1](https://doi.org/10.31234/osf.io/3dcth_v1)
+
 * **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (2025, September 26). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _PsyArxiv_ [https://doi.org/10.31234/osf.io/hn2j4_v1](https://doi.org/10.31234/osf.io/hn2j4_v1)
 
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, August 11). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _PsyArxiv_ [https://doi.org/10.31219/osf.io/fpej9_v1](https://doi.org/10.31219/osf.io/fpej9_v1)
