@@ -19,13 +19,13 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, November 12). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _OSF preprints_ [https://doi.org/10.31219/osf.io/fpej9_v2](https://doi.org/10.31219/osf.io/fpej9_v2)
+
 * Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (2025, November 5). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3dcth_v1](https://doi.org/10.31234/osf.io/3dcth_v1)
 
 * **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (2025, September 26). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _PsyArxiv_ [https://doi.org/10.31234/osf.io/hn2j4_v1](https://doi.org/10.31234/osf.io/hn2j4_v1)
 
-* **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, August 11). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _PsyArxiv_ [https://doi.org/10.31219/osf.io/fpej9_v1](https://doi.org/10.31219/osf.io/fpej9_v1)
-
-* **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S. G. B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
+* **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
 
 * **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2025, Jan. 6th). How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fdkj5_v2](https://doi.org/10.31234/osf.io/fdkj5_v2)
 
@@ -37,7 +37,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2025/Accepted/in Press**
 
-[143.]()  Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (accepted). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_
+[143.]() Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (accepted). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_
 
 [142.](https://doi.org/10.22330/001c.147268) **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (accepted). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology, 40_(1), 59-79. [https://doi.org/10.22330/001c.147268](https://doi.org/10.22330/001c.147268)
 
@@ -45,29 +45,29 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [140.](https://doi.org/10.1177/00332941231164079) Orhan, M. A., Collisson, B., Howell, J. L., Kowal, M., & **Pollet, T.V.** (2025). Comparing Foodie Calls in Poland, the United Kingdom, and the United States: A Registered Replication Report. _Psychological Reports, 128(2)_, 1004-1023.
 
+[139.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (2025). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts 9_(5), 1177–1188. [https://doi.org/10.1037/aca0000604](https://doi.org/10.1037/aca0000604)
+
 ## **2024**
 
-[139.](https://doi.org/10.1038/s41598-024-81373-3) Peperkoorn, L.S., Hill, R.A., Barton, R.A. & **Pollet, T.V.** (2024). Meta-analysis of the red advantage in combat sports. _Scientific Reports, 14,_  30822. [https://doi.org/10.1038/s41598-024-81373-3](https://doi.org/10.1038/s41598-024-81373-3)
+[138.](https://doi.org/10.1038/s41598-024-81373-3) Peperkoorn, L.S., Hill, R.A., Barton, R.A. & **Pollet, T.V.** (2024). Meta-analysis of the red advantage in combat sports. _Scientific Reports, 14,_  30822. [https://doi.org/10.1038/s41598-024-81373-3](https://doi.org/10.1038/s41598-024-81373-3)
 
-[138.](https://doi.org/10.1155/2024/5513833) Murphy-Morgan, C., Hodgson, P., **Pollet, T.V.**, & Neave, N. (2024). A qualitative study of the impact of hoarding behaviours and social networks on older peoples supported housing decisions. _Health and Social Care in the Community_ 5513833. [https://doi.org/10.1155/2024/5513833](https://doi.org/10.1155/2024/5513833)
+[137.](https://doi.org/10.1155/2024/5513833) Murphy-Morgan, C., Hodgson, P., **Pollet, T.V.**, & Neave, N. (2024). A qualitative study of the impact of hoarding behaviours and social networks on older peoples supported housing decisions. _Health and Social Care in the Community_ 5513833. [https://doi.org/10.1155/2024/5513833](https://doi.org/10.1155/2024/5513833)
 
-[137.](https://doi.org/10.1016/j.bodyim.2024.101714) **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P.L., & Tovée, M.J. (2024). Sample characteristics for quantitative analyses in _Body Image_: Issues of generalisability. _Body Image, 49,_  101714.
+[136.](https://doi.org/10.1016/j.bodyim.2024.101714) **Pollet, T.V.**, Bovet, J., Buhaenko, R., Cornelissen, P.L., & Tovée, M.J. (2024). Sample characteristics for quantitative analyses in _Body Image_: Issues of generalisability. _Body Image, 49,_  101714.
 
-[136.](https://doi.org/10.1371/journal.pone.0297075) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (2024). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE, 19(2)_ e0297075.
+[135.](https://doi.org/10.1371/journal.pone.0297075) Linden, A.H., **Pollet, T.V.**, & Hönekopp, J. (2024). Publication Bias in Psychology: A Closer Look at the Correlation Between Sample Size and Effect Size. _PLoS ONE, 19(2)_ e0297075.
 
-[135.](https://doi.org/10.5817/CP2024-1-3) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2024). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18(1),_ Article 3. [https://doi.org/10.5817/CP2024-1-3](https://doi.org/10.5817/CP2024-1-3)
+[134.](https://doi.org/10.5817/CP2024-1-3) Roberts, S.G.B., Malcolm, C., McCarty, K., & **Pollet, T.V.** (2024). No relationships between self-reported Instagram use or type of use and mental well-being: A study using a nationally representative online sample of UK adults. _Cyberpsychology: Journal of Psychosocial Research on Cyberspace, 18(1),_ Article 3. [https://doi.org/10.5817/CP2024-1-3](https://doi.org/10.5817/CP2024-1-3)
 
-[134.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218,_ 112474.
+[133.](https://doi.org/10.1016/j.paid.2023.112474) Delaney, T. W., **Pollet, T.V.**, & Cook, C. (2024). The mental well-being of Involuntary Celibates. _Personality and Individual Differences, 218,_ 112474.
 
-[133.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2024). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology, 43_, 5428–5442.
+[132.](https://doi.org/10.1007/s12144-023-04697-9) Thompson, A., & **Pollet, T.V.** (2024). An Exploratory Psychometric Network Analysis of Loneliness Scales in a Sample of Older Adults. _Current Psychology, 43_, 5428–5442.
 
-[132.](https://doi.org/10.1080/03075079.2023.2284808) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2024). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education, 49(11)_, 1945–1964. [https://doi.org/10.1080/03075079.2023.2284808](https://doi.org/10.1080/03075079.2023.2284808)
+[131.](https://doi.org/10.1080/03075079.2023.2284808) **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2024). Consequences of arbitrary binning the mid-point category in survey data: An illustration with student satisfaction in National Student Survey. _Studies in Higher Education, 49(11)_, 1945–1964. [https://doi.org/10.1080/03075079.2023.2284808](https://doi.org/10.1080/03075079.2023.2284808)
 
-[131.](http://tvpollet.github.io/pdfs/Finister_et_al_2021.pdf) Finister, C., **Pollet, T.V.**, & Neave, N. (2024). An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks.  _The Social Science Journal, 61(4),_ 899-907.
+[130.](http://tvpollet.github.io/pdfs/Finister_et_al_2021.pdf) Finister, C., **Pollet, T.V.**, & Neave, N. (2024). An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks.  _The Social Science Journal, 61(4),_ 899-907.
 
 ## **2023**
-
-[130.](https://dro.dur.ac.uk/38441/) Cook, C., **Pollet, T.V.** & Callahan, J.L. (2023). Acting gender: Actors’ experiences of gender role conformity and hopes for their characters. _Psychology of Aesthetics, Creativity, and the Arts_ [https://doi.org/10.1037/aca0000604](https://doi.org/10.1037/aca0000604)
 
 [129.](https://doi.org/10.1177/00332941231176403) Brown, R., Roberts, S. G. B., & **Pollet, T.V.** (2023). HEXACO personality factors and their associations with Facebook use and Facebook network characteristics. _Psychological Reports_, [https://doi.org/10.1177/00332941231176403](https://doi.org/10.1177/00332941231176403)
 
