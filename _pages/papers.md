@@ -37,9 +37,9 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2025/Accepted/in Press**
 
-[143.]() Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (accepted). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_
+[143.](https://researchportal.northumbria.ac.uk/en/publications/in-search-of-a-professional-image-how-women-comedians-engage-gend/) Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (accepted). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_
 
-[142.](https://doi.org/10.22330/001c.147268) **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (accepted). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology, 40_(1), 59-79. [https://doi.org/10.22330/001c.147268](https://doi.org/10.22330/001c.147268)
+[142.](https://doi.org/10.22330/001c.147268) **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (2025). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology, 40_(1), 59-79. [https://doi.org/10.22330/001c.147268](https://doi.org/10.22330/001c.147268)
 
 [141.](https://doi.org/10.1016/j.yhbeh.2025.105719) Shiramizu, V.M., Stern, J., Bartoš, F., Rafiee, Y., **Pollet, T.V.**, & Jones, B.C. (2025). Testing the Congruency Hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women’s sexual satisfaction? _Hormones and Behavior, 170,_ 105719.
 
@@ -374,7 +374,7 @@ Buunk, A.P., & **Pollet, T.V.** (2009). Evolutionaire Sociale Psychologie. In Ti
 
 ![Sustainable goals](https://tvpollet.github.io/img/the-global-goals-grid-color.png)
 
-My work contributes to the following sustainable development goals (3,4,5,16). The numbers below refer to the papers above. This is not an exhaustive list.
+My work contributes to the following sustainable development goals (in particular: 3,4,5,16). The numbers below refer to the papers above. This is not an exhaustive list.
 
 ## SDG 3: Good Health and Well-being
 
@@ -408,6 +408,7 @@ My work contributes to the following sustainable development goals (3,4,5,16). T
 
 ![SDG5](https://tvpollet.github.io/img/TheGlobalGoals_Icons_Color_Goal_5.png)
 
+* [143.](https://researchportal.northumbria.ac.uk/en/publications/in-search-of-a-professional-image-how-women-comedians-engage-gend/): Gender in stand up comedy
 * [142](https://doi.org/10.31234/osf.io/ydb5v_v2): Women's representation in psychology textbooks
 * [141](https://doi.org/10.1016/j.yhbeh.2025.105719): Women's reproductive health and autonomy
 * [130](https://dro.dur.ac.uk/38441/): Gender role conformity in acting
