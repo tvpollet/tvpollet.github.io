@@ -19,11 +19,11 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (2025, November 28). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _PsyArxiv_ [https://doi.org/10.31234/osf.io/hn2j4_v2](https://doi.org/10.31234/osf.io/hn2j4_v2)
+
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, November 12). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _OSF preprints_ [https://doi.org/10.31219/osf.io/fpej9_v2](https://doi.org/10.31219/osf.io/fpej9_v2)
 
 * Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (2025, November 5). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3dcth_v1](https://doi.org/10.31234/osf.io/3dcth_v1)
-
-* **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (2025, September 26). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _PsyArxiv_ [https://doi.org/10.31234/osf.io/hn2j4_v1](https://doi.org/10.31234/osf.io/hn2j4_v1)
 
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
 
@@ -37,7 +37,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2025/Accepted/in Press**
 
-[143.](https://researchportal.northumbria.ac.uk/en/publications/in-search-of-a-professional-image-how-women-comedians-engage-gend/) Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (accepted). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_
+[143.](https://researchportal.northumbria.ac.uk/en/publications/in-search-of-a-professional-image-how-women-comedians-engage-gend/) Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (2025). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_ [https://doi.org/10.1111/gwao.70067](https://doi.org/10.1111/gwao.70067)
 
 [142.](https://doi.org/10.22330/001c.147268) **Pollet, T.V.**, Bovet, J., Renner, E., & Barrett, L. (2025). An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks. _Human Ethology, 40_(1), 59-79. [https://doi.org/10.22330/001c.147268](https://doi.org/10.22330/001c.147268)
 
@@ -86,7 +86,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 [123.](https://doi.org/10.1017/S0144686X22000666) Thompson, A., Smith, M.A., McNeill, A., & **Pollet, T.V.** (2022). Friendships, loneliness and psychological well-being in older adults: A limit to the benefit of increasing the number friendships. _Ageing & Society_ 1-26. [doi:10.1017/S0144686X22000666](https://doi.org/10.1017/S0144686X22000666) 
 
-[122.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health_  [doi:10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
+[122.](https://doi.org/10.1080/09638237.2022.2069695) Rippon, D., Shepherd, J., Wakefield, S., Lee, A. &  **Pollet, T.V.** (2022). The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological well-being in people with a mental health diagnosis. _Journal of Mental Health, 33_(6), 721–730 [doi:10.1080/09638237.2022.2069695](https://doi.org/10.1080/09638237.2022.2069695).
 
 [121.](https://doi.org/10.1371/journal.pone.0266167) **Pollet, T.V.**, Thompson, A., Malcolm, C., McCarty, K., Saxton, T.K., & Roberts, S.G.B. (2022). Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence. _PLoS ONE, 17(12)_, e0266167. [doi:10.1371/journal.pone.0266167](https://doi.org/10.1371/journal.pone.0266167)
 
