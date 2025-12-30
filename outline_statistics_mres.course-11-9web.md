@@ -60,17 +60,17 @@ You can find materials relating to induction [here](/induction_PY0794).
 ## Lectures.
 The academic calendar is in your programme handbook. For the Quant. Part of the module in semester 2, we will work through 12 lectures in 10 weeks, notice that there will be an academic development week with no lecture after week 5. Depending on timing the content of this schedule might shift a bit.
 
-1. 28/1. Introduction. R Studio and R environment. Basics of Markdown. 
-2. 4/2. Data visualisation. (+ basic tests)
-3. 11/2. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
-4. 28/2. Correlation and multiple regression. Logistic Regression.
-5. 25/2. Moderation analyses. (**Break after this week**)
-6. 11/3. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
-7. 18/3. Exploratory Factor Analysis.
-8. 25/3. Confirmatory Factor Analysis CFA I
-9. 1/4. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
-10. 29/4. Multilevel models I + II
-11. 6/5. Buffer / Revision week / queries.
+1. 27/1. Introduction. R Studio and R environment. Basics of Markdown. 
+2. 3/2. Data visualisation. (+ basic tests)
+3. 10/2. Basic ANOVA + Extensions (ANCOVA / MANOVA) 
+4. 17/2. Correlation and multiple regression. Logistic Regression.
+5. 24/2. Moderation analyses. (**Break after this week**)
+6. 10/3. Path analysis and 'Basic Mediation' (Sobel test / 'Preacher & Hayes method'). 
+7. 17/3. Exploratory Factor Analysis.
+8. 24/3. Confirmatory Factor Analysis CFA I
+9. 21/4. Confirmatory Factor Analysis II and SEM. Mediation via SEM.
+10. 28/4. Multilevel models I + II
+11. 5/5. Buffer / Revision week / queries.
 
 The handouts for every course lecture will be available via the electronic learning portal. There is no need to take extensive notes, as all the key information will be on the sheets.
 
@@ -99,15 +99,15 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 * I expect you to turn off email, messaging, etc. and **only** be engaged with classroom materials. (#no9gag)
 
 ## Contact.
-* Discussion board. This is the preferred method, as several of your colleagues will have either the same or very similar queries! 
-* Ask me any comprehension questions during class breaks or send me an email. Note that I might refer you to discussion board.
+* **Discussion board**. This is the preferred method, as several of your colleagues will have either the same or very similar queries! 
+* Ask me any comprehension questions during class breaks. By exception, you can email me. Note that I might refer you to discussion board. Especially, if your queries deal with assessments.
 * Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual. These meetings are by exception only as you should raise any queries in class or via the discussion board.
 * email: [thomas.pollet@northumbria.ac.uk](mailto:thomas.pollet@northumbria.ac.uk.)
-* twitter: @tvpollet - bluesky: @tvpollet
+* bluesky: @tvpollet
 * Phone details are on the learning platform.
 
 
-I typically reply within max. 3 business days (unless you receive an out of office message). Note that I will have limited availability during the christmas break. So please post questions early on the blackboard
+I typically reply within max. 3 business days (unless you receive an out of office message). Note that I will have limited availability during the Easter break. So please post questions early on the blackboard
 
 ## Resources.
 Check the [RStudio website](https://www.rstudio.com/). 
@@ -134,7 +134,7 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 * [Data Colada](www.datacolada.org)
 * [Dorothy Bishop](http://deevybee.blogspot.com/)
 
-### People to follow on Twitter / Mastodon / Bluesky.
+### People to follow on Mastodon / Bluesky.
 * Nathan Yau
 * Hadley Wickham
 * Edward Tufte
@@ -147,16 +147,21 @@ You can view some videos on youtube on R, including by [yours truly](https://www
 
 I take on board relevant study feedback. Below I only list the most meaningful changes.
 
+#### 2025-2026
+* Revised some minor aspects of the assessments
+* Revised and updated course content (R 4.5.1).
+* Some additional videos to support you.
+
 #### 2024-2025
 
-* Revised some minor aspects of the assessments
-* Revised and updated course content
+* Revised some minor aspects of the assessments.
+* Revised and updated course content.
 
 #### 2023-2024
 
 * Semester 2 module. Now preceded by programming course.
-* Short video(s) on theming
-* Revised and updated course content
+* Short video(s) on theming.
+* Revised and updated course content.
 
 #### 2022-2023
 * Shorter videos on Rstudio and R to be released.
@@ -169,11 +174,11 @@ I take on board relevant study feedback. Below I only list the most meaningful c
 * Revised and updated some course content.
 
 #### 2020-2021
-* Supply of additional materials
+* Supply of additional materials.
 * two assistants now available for more sessions.
 * Revised and updated course content. Checked functionality on R 4.0+ 
 
 #### 2019-2020
 * Two assistants are available to aid with some exercises.
 * RStudio + R available in Library commons.
-* Revised and updated course content 
+* Revised and updated course content. 
