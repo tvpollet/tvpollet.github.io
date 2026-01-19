@@ -36,6 +36,7 @@ knitr::include_graphics("goal.jpeg")
 
 
 ## Housekeeping {.build} 
+
 ```{r, out.width = "300px", echo=FALSE}
 knitr::include_graphics("https://imageserve.babycenter.com/4/000/366/LDQDRyAQRh8cmTkhyi7PbAPh3JwqubPo_lg.jpg")
 ```
@@ -496,7 +497,7 @@ coffee_data_the_return<-read_sav('coffee_data.sav')
  Even from (public) weblinks. Here in .dat format. head() shows you the first lines.
 ```{r message=F, warning=F}
 require(data.table)
-mydat <- fread('https://www.cdc.gov/healthyyouth/data/yrbs/sadc_2019/Middle_School/sadc_ms_2019_state_a_m.dat')
+mydat <- fread('https://ftp.cdc.gov/pub/data/yrbs/SADC_2019/Middle_School/sadc_ms_2019_state_a_m.dat')
 head(mydat)
 ```
 
@@ -522,7 +523,7 @@ library(tidyverse)
  If you want to use the base version of these functions after loading dplyr, you’ll need to use their full names: stats::filter() and stats::lag()
 
 ```{r, out.width = "200px", echo=FALSE}
-knitr::include_graphics("http://s2.quickmeme.com/img/83/83f3188fb441ef8a727dac6715f50478910342242eb4f6e974675a3f75c044d8.jpg")
+knitr::include_graphics("wakawaka.jpg")
 ```
 
 ## NYC Flights {.build}

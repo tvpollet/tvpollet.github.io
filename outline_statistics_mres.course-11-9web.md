@@ -41,7 +41,7 @@ In addition, you will learn:
 * Style and presentation are important. Please closely follow the guidelines.
 * At the end of ***each*** session, you should apply what you have learnt in your assignment. Do not leave it to the last weeks!
 * For fairness and transparency, I will ***only answer questions on the assignments via the elearning portal***. When posting a question make sure it is clearly phrased. Ensure that the problem is not due to your machine, i.e. ensure that you have run your code on a different machine as well. Contrary to popular belief there are bad questions, rather bad ways in which to ask for [help](https://www.r-project.org/posting-guide.html). When asking a question on the forum, clearly indicate what you have already done to tackle the problem. For example, include a link to a post with a similar problem to indicate that you have searched for a solution, but that your problem still remains. I also encourage you to find help out there in the real world (e.g., post a question on [www.stats.stackexchange.com](www.stats.stackexchange.com)). Also, make sure your problem is reproducible (indicate which packages are loaded, which system you are on, etc.). I expect you to have worked through the exercise corresponding to the lecture _before_ asking the question. If you have not attempted to complete the exercise, then my first response to your question will be, have you tried working through the exercise? Note that when I answer, I might not give you the direct answer as then you would just copy that, rather I will point to the resources which will likely allow you to resolve your issue. I hope you understand, that there is little value in me just giving you the code, rather than you working through the solution and finding out why your solution did not work. There might be some issues which you cannot resolve, even after help, you should then consider moving on to the next item in the assignment, after you have given it your all. There are plenty of items on the list and you can get a very good grade, even if you are unable to solve a particular question.
-* **If you run into issues please post them on the discussion board as ***early*** as you can, I might not be able to reply if you leave it right up to the deadline.** You should count on 2, max. 3 working days for an initial reply in the forum (if I am in office).
+* **If you run into issues please post them on the discussion board as *early* as you can, I might not be able to reply if you leave it right up to the deadline.** You should count on 2, max. 3 working days for an initial reply in the forum (if I am in office).
 
 ## Attendance.
 * **Attendance is required** as the class is run in workshop format. The knowledge you gain is cumulative, and therefore it is important that you do not miss sessions, as future classes depend on what you have previously learned.
@@ -98,7 +98,7 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 * Install [RStudio desktop](https://www.rstudio.com/products/rstudio/download/) and [R](https://cran.r-project.org/). Follow [this](https://rstudio-education.github.io/hopr/starting.html) or look at step 1 and 2 from [here](https://swirlstats.com/students.html)
 * I expect you to turn off email, messaging, etc. and **only** be engaged with classroom materials. (#no9gag)
 
-## Contact.
+## Contact
 * **Discussion board**. This is the preferred method, as several of your colleagues will have either the same or very similar queries! 
 * Ask me any comprehension questions during class breaks. By exception, you can email me. Note that I might refer you to discussion board. Especially, if your queries deal with assessments.
 * Additional 1 to 1 meetings are by appointment only (email). I am in 'CoCo' which is in the Northumberland Building (NB165) but meetings might also be virtual. These meetings are by exception only as you should raise any queries in class or via the discussion board.
@@ -107,9 +107,9 @@ Similarly, I will not cover other software packages (e.g., AMOS, MLWin, Gephi, [
 * Phone details are on the learning platform.
 
 
-I typically reply within max. 3 business days (unless you receive an out of office message). Note that I will have limited availability during the Easter break. So please post questions early on the blackboard
+I typically reply within max. 3 business days (unless you receive an out of office message). Note that I will have limited availability during the Easter break. So please post questions early on the blackboard site.
 
-## Resources.
+## Resources
 Check the [RStudio website](https://www.rstudio.com/). 
 
 Give [swirl](https://swirlstats.com/) a go!
