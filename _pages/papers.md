@@ -36,7 +36,7 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 ## **2026/Accepted/in Press**
 
-* [144.](https://doi.org/10.31234/osf.io/hn2j4_v2) **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (accepted). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _Personality and Individual Differences_
+[144.](https://doi.org/10.31234/osf.io/hn2j4_v2) **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (accepted). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _Personality and Individual Differences_
 
 ## **2025**
 
