@@ -19,8 +19,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
-* **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (2025, November 28). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _PsyArxiv_ [https://doi.org/10.31234/osf.io/hn2j4_v2](https://doi.org/10.31234/osf.io/hn2j4_v2)
-
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, November 12). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _OSF preprints_ [https://doi.org/10.31219/osf.io/fpej9_v2](https://doi.org/10.31219/osf.io/fpej9_v2)
 
 * Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (2025, November 5). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3dcth_v1](https://doi.org/10.31234/osf.io/3dcth_v1)
@@ -35,7 +33,12 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * Boothroyd, L.G., **Pollet, T.V.**, Evans, E.H., Yi, Q., & Tovée, M.J. (2018, September 7th). Adaptation-like effects in body weight attractiveness are not simply norm based. _PsyArxiv_ [https://doi.org/10.31234/osf.io/gsnkf](https://doi.org/10.31234/osf.io/gsnkf)
 
-## **2025/Accepted/in Press**
+
+## **2026/Accepted/in Press**
+
+* [144.](https://doi.org/10.31234/osf.io/hn2j4_v2) **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (accepted). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _Personality and Individual Differences_
+
+## **2025**
 
 [143.](https://researchportal.northumbria.ac.uk/en/publications/in-search-of-a-professional-image-how-women-comedians-engage-gend/) Cook, C.,  Callahan, J.L., Elsey, V. & **Pollet, T.V.** (2025). In Search of a Professional Image: How Women Comedians Engage Gender in their Work. _Gender, Work & Organization_ [https://doi.org/10.1111/gwao.70067](https://doi.org/10.1111/gwao.70067)
 
