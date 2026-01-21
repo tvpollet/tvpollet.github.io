@@ -16,9 +16,11 @@ header_text: Thesis Topics
 
 Hurray! You are thinking about doing your thesis project with me (at any level). On this page I will provide some topics which I would (prefer to) supervise. It also has some further information on the projects. This is still in progress, all feedback welcome. Do also alert me to dead links, which I will fix. Information on the thesis supervision itself can be found [here](https://tvpollet.github.io/thesis_projects){:target="_blank"}.
 
-I **strongly** prefer that you pick a topic within the set below. My experience is that preset topics tend to lead to higher marks. Students also face less agony in terms of decisions.
+In some cases **I will set the topic for you**. This is the case, for example, where I have group supervision. 
 
-If you want to go off the beaten path and suggest your own project: I am a behavioural scientist with an interest in methodology. 
+If you are allowed to pick your own topic, then I **strongly** prefer that you pick a topic within the set below. My experience is that preset topics tend to lead to higher marks. Students also face less agony in terms of decisions. 
+
+If you want to go off the beaten path and suggest your very own project: I am a behavioural scientist with an interest in methodology. 
 I work broadly on social relationships, so topics akin to **social psychology, relationship research, evolutionary psychology, and personality psychology** fall within my interests. I'll consider projects which you have developed / proposed in those areas, but there is **no 'unlimited' choice**. Some projects also simply cannot be done as part of your degree, due to legal, practical, ethical, or scientific reasons. With 'scientific' reasons I mean that what you have in mind might be so complex that it cannot be unpacked in a single project - it is a question for say a PhD project. (For example, what you have in mind is a complex mediation model, but it is unlikely that you are able to collect the data to test such a model). 
 
 My experience is that students also propose projects which tend to be unrealistic, so ask yourself whether your project is all that it is cracked up to be. If it is not, then why not opt for a replication study, for example. I do not weigh 'novelty' in my judgment of your thesis or whether your findings are 'significant' or not. I also provide a list of topics which I prefer not to supervise, to help guide you -- but I am always open to be convinced.
@@ -38,8 +40,9 @@ Good candidate projects have straightforward designs, have the materials availab
 
 Here are some examples of student projects which were based on replications.
 
-* Sarah Dawson's [Bachelor thesis project](https://osf.io/uyw9e/){:target="_blank"} on fat talk. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} here.
-* Lotte Groeneboom & Joanne Costello's [Masters Thesis Project](https://osf.io/sdjxm/){:target="_blank"} on 'Red laptops'. Check the [draft paper](https://psyarxiv.com/3bfwh/){:target="_blank"} also. This was published in [Displays](https://doi.org/10.1016/j.displa.2018.10.008){:target="_blank"}.
+* Many students contributed to a [replication project](https://osf.io/preprints/psyarxiv/hn2j4_v2){:target="_blank"} on birth order and jealousy published in _Personality and Individual Differences._ 
+* Sarah Dawson's [Bachelor thesis project](https://osf.io/uyw9e/){:target="_blank"} on fat talk. This was incorporated in a paper for _Body Image_. Check the [paper](https://psyarxiv.com/3bfwh/){:target="_blank"} here.
+* Lotte Groeneboom & Joanne Costello's [Masters Thesis Project](https://osf.io/sdjxm/){:target="_blank"} on 'Red laptops'. This formed study 1 for a paper. Check the [paper](https://psyarxiv.com/3bfwh/){:target="_blank"}. This was published in [Displays](https://doi.org/10.1016/j.displa.2018.10.008){:target="_blank"}.
 
 There is some variation, and you can also suggest your own, but I am particularly interested in replication projects dealing with **interpersonal relationships** (e.g., **jealousy**, **love**).
 
@@ -47,8 +50,8 @@ These could be good candidates or starting points:
 
 ### Relationships / Jealousy.
 
-* Women's sexual strategies: the hidden dimension of extra-pair mating. [https://doi.org/10.1016/S0191-8869(99)00151-8](https://doi.org/10.1016/S0191-8869(99)00151-8)
 * Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
+* Women's sexual strategies: the hidden dimension of extra-pair mating. [https://doi.org/10.1016/S0191-8869(99)00151-8](https://doi.org/10.1016/S0191-8869(99)00151-8)
 * Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
 * [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
 * [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
@@ -56,7 +59,6 @@ These could be good candidates or starting points:
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540) -- Requires married couples.
 * The Big 5 and relationship maintenance on Facebook. [https://doi.org/10.1177/0265407518772089](https://doi.org/10.1177/0265407518772089)
-* Birth order and relationships. [https://link.springer.com/article/10.1007/s12110-003-1017-x](https://link.springer.com/article/10.1007/s12110-003-1017-x)
 
 ### Prosocial behaviour / altruism
 
@@ -66,14 +68,14 @@ These could be good candidates or starting points:
 
 ### Colour
 
+* Was she wearing red? The function of victim-blaming in women’s intrasexual competition. [https://doi.org/10.1111/sjop.12870](https://doi.org/10.1111/sjop.12870). You will require quite a sizable sample.
 * Does the receptacle influence the perceived flavour of a drink? [https://link.springer.com/article/10.1186/2044-7248-3-3](https://link.springer.com/article/10.1186/2044-7248-3-3). We would only aim to replicate the US sample in the UK. This study can be run online.
 * Does the colour of the mug influence the taste of the coffee? [https://link.springer.com/article/10.1186/2044-7248-3-10](https://link.springer.com/article/10.1186/2044-7248-3-10). Study 2 seems a good candidate. You will require a sizable sample.
 * Dressed for Sex: Red as a Female Sexual Signal in Humans. [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2) Experiment 1 seems a good candidate.
-* Was she wearing red? The function of victim-blaming in women’s intrasexual competition. [https://doi.org/10.1111/sjop.12870](https://doi.org/10.1111/sjop.12870). You will require quite a sizable sample.
+
 
 ### Consumer Psychology
 
-* Scarcity, sex, and spending: Recession cues increase women's desire for men owning luxury products and men's desire to buy them. Studies 2-3 but requires large samples. [https://doi.org/10.1016/j.jbusres.2019.07.021](https://doi.org/10.1016/j.jbusres.2019.07.021){:target="_blank"}
 * [Consumer perceptions of cultured meat](https://doi.org/10.1016/j.appet.2019.02.021){:target="_blank"}.
 * [Zero is a special price](https://people.duke.edu/~dandan/webfiles/PapersPI/Zero%20as%20a%20Special%20Price.pdf) - Many experiments but experiment 1 is a candidate.
 * [The deadweight loss of christmas](https://www.amherst.edu/media/view/104699/original/christmas.pdf). A study on giving cash at christmas! 
@@ -161,7 +163,7 @@ Here is a paper relating to this project:
 
 ### How diverse are the samples used in journals covering psychopathology?
 
-A recurrent criticism of psychology is that samples largely are non-representative, and mostly consist of students (e.g., Arnett, 2008). In this project you will code articles from journals such as _Depression and Anxiety_ or _Schizophrenia Research_ to find out which samples they use. How many of these are clinical samples? How many are from non-Western societies? I am open to suggestions of other journals. 
+A recurrent criticism of psychology is that samples largely are non-representative, and mostly consist of students (e.g., Arnett, 2008). In this project you will code articles from journals such as _Schizophrenia Research_ to find out which samples they use. How many of these are clinical samples? How many are from non-Western societies? I am open to suggestions of other journals. 
 
 This project works best if there is more than one student.
 
@@ -219,35 +221,9 @@ Psychologists have been studying personality for a very long time. The most domi
 Ashton, M. C., & Lee, K. (2009). The HEXACO–60: A Short Measure of the Major Dimensions of Personality. Journal of Personality Assessment, 91(4), 340–345. [https://doi.org/10.1080/00223890902935878](https://doi.org/10.1080/00223890902935878)
 
 
-### Visualisations in standard psychology text books.
-
-Bar charts can hide a lot of information. Yet, they are often the default (and while I am hopefully improving, they are also common in my papers). In this project, you will explore and examine the type of figures used in psychology text books. We will focus on a subdiscipline such as evolutionary psychology or consumer psychology, for example.
-
-![Bar charts](https://pagepiccinini.files.wordpress.com/2016/02/barplot_psa1.jpg){: .center-image }
-
-### Statistical power and moderation effects in social psychology.
-
-You will have heard of the 2 x 2 design. But: were you aware that you likely need around 4 times (if not more) the sample size to establish an interaction effect as opposed to a main effect (Gelman et al., 2020). In this project, you will examine what the typical sample sizes are which are used for 2 x 2 designs and whether interactions are adequately 'powered' in social psychology.
-
 ### Evolutionary psychology textbooks and use of animal examples.
 
 Evolutionary psychology often draws upon animal examples. In this exploratory project, you will index which species feature in Evolutionary Psychology textbooks.
-
-### Evolutionary psychology textbooks and use of anthropological examples.
-
-Evolutionary psychology studies the human mind from an evolutionary perspective via a variety of methods. Often, anthropological data are also invoked as evidence. However, there tends to be only a handful field sites where anthropologists, or at least those with an interest in evolution and human behaviour, have ventured. In this project, you will index which societies have been used as examples in these text books.
-
-### Evolutionary psychology textbooks and scientific racism.
-
-The [Pioneer fund](https://en.wikipedia.org/wiki/Pioneer_Fund){:target="_blank"} is a controversial organisation which has funded research into eugenics. In this project, you will examine the degree to which researchers funded by the Pioneer fund are cited in Evolutionary Psychology text books.
-
-### 'National Intelligence': How is it used as a concept?
-
-Intelligence is thought to be an individual level construct. Yet, some researchers have argued that we can calculate an estimate of intelligence for a country ?!. Unsurprisingly, this is very controversial. In this project, you will examine for which types of research 'national intelligence' has been used and what its statistical relationship is with other constructs (e.g., GDP per capita).
-
-### Body Mass Index (BMI): A continuous measure that often gets 'binned'.
-
-Some metrics are continuous but we end up turning them into categories. This is typically [a bad idea](https://pubmed.ncbi.nlm.nih.gov/16217841/){:target="_blank"}. With the Body Mass Index (BMI), rather than analysing a continuous variable, researchers might rely on categories such as overweight, underweight, healthy and obese. This comes at an information cost. In this project, you will systematically review papers from the journal 'Body Image' and assess how often researchers apply binning to BMI when testing hypotheses.
 
 
 ## Meta-analysis of validated scales: Are we measuring things consistently across different groups?
@@ -319,7 +295,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [The Vaccine Hesitancy Scale](https://doi.org/10.1016/j.vaccine.2017.12.043){:target="_blank"}
 * [The brief HIV knowledge questionnaire](https://guilfordjournals.com/doi/abs/10.1521/aeap.14.2.172.23902){:target="_blank"}
 
-#### Romantic relationships, LGBTQIA+ and sexual behaviour
+#### Romantic relationships, LGBTQIA+, and sexual behaviour
 
 * [Romantic Disengagement Scale (RDS)](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2564288/){:target="_blank"}
 * [Relational distance](https://doi.org/10.1111/1475-6811.00046){:target="_blank"}
@@ -346,8 +322,8 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 * [Boredom in free time](https://doi.org/10.1080/02614360122569){:target="_blank"}. Bored?
 * [Multidimensional State Boredom scale](https://doi.org/10.1177/1073191111421303). Continuously bored? large project.
-* [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scales with self-undermining behaviour at work.
 * [The preference for solitude scale](https://www.scu.edu/media/college-of-arts-and-sciences/psychology/documents/Burger-JRP-1995.pdf){:target="_blank"}
+* [The Self-undermining scale](https://www.isonderhouden.nl/doc/pdf/arnoldbakker/articles/articles_arnold_bakker_512.pdf){:target="_blank"}. This scale deals with self-undermining behaviour at work.
 * [The adult reading motivation scale](https://doi.org/10.1080/02702710701568991){:target="_blank"}
 * [The Barcelona Music Reward Questionnaire](https://doi.org/10.1525/mp.2013.31.2.118){:target="_blank"}
 * [Art Experience Questionnaire](http://www.neurohumanitiestudies.eu/archivio/Empirical_Studies_of_the_Arts_2010_Chatterjee.pdf){:target="_blank"} 
@@ -356,18 +332,6 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [Utrecht Homesickness Questionnaire]( https://doi.org/10.1348/000712602162508){:target="_blank"}
 * [Food Disgust scale](https://doi.org/10.1016/j.foodqual.2017.07.013){:target="_blank"}
 
-
-## Guardian 'blind dates' database.
-<a href="#thesis-introduction">back to top</a>
-
-The Guardian news paper has a returning column in its weekend edition whereby [people go on a date](https://www.theguardian.com/lifeandstyle/series/blind-date){:target="_blank"}. We are compiling a database on these dates.
-
-In this project you will contribute to the database, and then you can use the database for your project. It allows you to answer questions on for example, whether men or women are more 'choosy'. Why do some people get high ratings and others low ratings? Are homosexual dates more or less likely to find a match than heterosexual dates?
-
-## Celebrities
-<a href="#thesis-introduction">back to top</a>
-
-In this project, you would examine age gaps in relationships in Hollywood celebrities in their marriages or examine late life fatherhood of celebrities. We want to examine to which degree they are similar or different from the general population. For example, do male celebrities father children later in life than the typical American man?
 
 ## Traffic behaviour: Gender differences in risk taking.
 <a href="#thesis-introduction">back to top</a>
@@ -397,18 +361,6 @@ Here is a paper we wrote on cyclists:
 <a href="#thesis-introduction">back to top</a>
 
 The [National Student Survey](https://www.thestudentsurvey.com/){:target="_blank"} is a commonly used tool to measure student satisfaction. It is argued to consist of eight scales but it is unclear to which degree this measure has been rigorously validated. [Our research](https://psyarxiv.com/vb2k6/){:target="_blank"} suggests that these eight dimensions are not easily identified. Another aspect of reliability which has seemingly not been assessed is a test-retest correlation of the items. In this project, you will administer the survey twice and examine whether the NSS is temporally stable. Ideally, you would collect minimum 270+ responses in the first wave, in order to assess the factor structure. Therefore, this project might work well as a collaborative project involving more than one student (you are able to have separate research questions, e.g., differences between courses, or one project focussing on factor analysis and one on test-retest).
-
-## 'There are no funny women in standup comedy' - Random guy.
-<a href="#thesis-introduction">back to top</a>
-
-Together with [Clare Cook](https://www.northumbria.ac.uk/about-us/our-staff/c/clare-cook/){:target="_blank"}, I am conducting research on gendered perceptions of stand-up comedians. In this project, we will explore if female standup comedians are perceived as less funny than male standup comedians. We are also interested in finding out other stereotypes (e.g., are attractive women in comedy seen as less funny).
-
-Another option is to examine who people list as being funny comedians and whether those sets differ between men and women.
-
-## Individual differences in "Buy now, pay later"
-<a href="#thesis-introduction">back to top</a>
-
-There is an increase in services which allow you to 'buy now and pay later' (e.g., Klarna). In this project, you will examine the individual differences in who uses these types of products. For example, does personality and/or time orientation predict who uses these services.
 
 ## Gender and leadership in Psychology courses
 <a href="#thesis-introduction">back to top</a>
