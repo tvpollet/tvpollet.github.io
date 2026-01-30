@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 
+title: "A tool to check Doi's for student work"
 image: /img/AI.gif
 tags:
   - Teaching
