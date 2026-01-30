@@ -43,11 +43,11 @@ Now a window will open (see below). Scan for Pdfs will search the folder for .pd
 
 ![Layout app](/img/Info_doi_layout.png "The App")
 
-I recommend running only a couple of .pdfs at a time (Would not recommend running dozens of pdfs in one go - thought it likely will work... .). I recommend exporting your results and removing the ones you checked from the folder and to batch your work if there are large amounts you intend to check.
+I recommend running only a couple of .pdfs at a time (Would not recommend running dozens of pdfs in one go - though it likely will work... .). I recommend exporting your results and removing the ones you checked from the folder and to batch your work if there are large amounts you intend to check.
  
 **Known issues / limitations**: 
 
-* I have checked only a handful of .pdfs (incl. published papers and turnitin downloaded from Blackboard). I have also checked a MS word doc converted to .pdf. It works fine but I have not tested all flavours of fonts, etc. It runs smoothly but you might have to wait a while if there are many refs (and or longer .pdfs)
+* I have checked only a handful of .pdfs (incl. published papers and Turnitin .pdfs downloaded from Blackboard). I have also checked a MS word doc converted to .pdf. It works fine but I have not tested all flavours of fonts, etc. It runs smoothly but you might have to wait a while if there are many refs (and/or longer .pdfs)
 
 * This relies on crossref (www.crossref.org / check status if it is down) which captures meta-data. Though widely used, there are some doi's that are not indexed in crossref. If you intend to run truly massive volumes of ref checks you should get in touch with me and I'll look into tweaking this so you can rely on their API.
 
@@ -56,9 +56,9 @@ I recommend running only a couple of .pdfs at a time (Would not recommend runnin
 * I have checked docs with approx. 50-60 references - akin to a student thesis. If you check many docs with many references you might face issues. I recommend checking only a couple at the time. I have built in a delay but if you try to check many refs, you might be timed out - as it calls on crossref.
 
 **Recommendation**:
-This is only tool, it might highlight some suspect doi's which you would then want to further check. You might not want to use it for every single assessment/thesis you encounter. Then again, it is easy to do. This won't definitively tell you whether anything untoward has happened, but if you find multiple references that do not seem to exist (or are incorrectly referenced) this could be something for you to look into. (Note also as above, that there might be some false positives, for example, a broken up hyperlink or a reference not in crossref).
+This is only tool, it will highlight some suspect doi's which you would then want to further check. You might not want to use it for every single assessment/thesis you encounter. Then again, it is easy to do. This won't definitively tell you whether anything untoward has happened, but if you find multiple references that do not seem to exist (or are incorrectly referenced) this could be something for you to look into. (Note also as above, that there might be some false positives, for example, a broken up hyperlink or a reference not in crossref).
  
 **Caveat emptor**:
-It comes with no warranty - as it is just something I pulled together . I built this to solve my problem of having to repetitively check doi's. Likely somebody else has built something better and more useful but this runs local and apart from querying the doi's no data leaves your machine... . If you run into issues, drop me a line and I'll see what I can do to help - I am not rebuilding it for other purposes though and am not volunteering as Shiny tech support... :).
+It comes with no warranty - as it is just something I pulled together. I built this to solve my problem of having to repetitively check doi's. Likely somebody else has built something better and more useful but this runs local and apart from querying the doi's no data leaves your machine... . If you run into issues, drop me a line and I'll see what I can do to help - I am not rebuilding it for other purposes though and am not volunteering as Shiny tech support... :).
 
 [Disclaimer](https://tvpollet.github.io/disclaimer)
