@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-01-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2026-02-10 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -67,7 +67,7 @@ After today you should be able to complete the following sections:
  
  You want to find out the strength of an association
 
-&lt;img src="https://media.giphy.com/media/B1vrzEi8cuFW/giphy.gif" width="300px" /&gt;
+&lt;img src="https://media.giphy.com/media/B1vrzEi8cuFW/giphy.gif" alt="" width="300px" /&gt;
 
 ---
 ## Formula (for your reference)
@@ -80,7 +80,7 @@ is equivalent to
 
 `\(r = \frac{cov (x,y)}{\sqrt{var(x)*var(y)}}\)`
 
-&lt;img src="https://media.giphy.com/media/ne3xrYlWtQFtC/giphy.gif" width="300px" /&gt;
+&lt;img src="https://media.giphy.com/media/ne3xrYlWtQFtC/giphy.gif" alt="" width="300px" /&gt;
 
 ---
 ## Correlation.
@@ -114,7 +114,7 @@ Particular pet peeve of [mine](https://www.frontiersin.org/articles/10.3389/fpsy
  
  Check [this](http://www.tylervigen.com/spurious-correlations)
  
-&lt;img src="https://media.giphy.com/media/Kx0YtQsusXfvq/giphy.gif" width="300px" /&gt;
+&lt;img src="https://media.giphy.com/media/Kx0YtQsusXfvq/giphy.gif" alt="" width="300px" /&gt;
 
 ---
 ## Correlation.
@@ -123,8 +123,8 @@ Particular pet peeve of [mine](https://www.frontiersin.org/articles/10.3389/fpsy
 ``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture4")
 require(datasets)
-iris&lt;-iris # not really necessary but typically good to store away
-cor(iris[1],iris[2]) # Correlation.
+iris &lt;- iris  # not really necessary but typically good to store away
+cor(iris[1], iris[2])  # Correlation.
 ```
 
 ```
@@ -141,8 +141,8 @@ cor(iris$Sepal.Length, iris$Sepal.Width)
 ```
 
 ``` r
-# also change methods Kendall / Spearman. 
-cor(iris[1],iris[2], method='kendall')
+# also change methods Kendall / Spearman.
+cor(iris[1], iris[2], method = "kendall")
 ```
 
 ```
@@ -156,7 +156,7 @@ cor(iris[1],iris[2], method='kendall')
 
 ``` r
 # custom confidence interval 90%
-cor.test(iris$Sepal.Length, iris$Sepal.Width, conf.level = .90)
+cor.test(iris$Sepal.Length, iris$Sepal.Width, conf.level = 0.9)
 ```
 
 ```
@@ -179,24 +179,32 @@ cor.test(iris$Sepal.Length, iris$Sepal.Width, conf.level = .90)
 The Pearson correlation between sepal length and sepal width was not statistically significant (_r_(148)= -.12, _p_=.15).
 
 
-&lt;img src="https://media.giphy.com/media/CQDF0q4pffDW0/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/CQDF0q4pffDW0/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Make a pretty chart.
 
 
 ``` r
-require(ggplot2) # note geom_jitter
+require(ggplot2)  # note geom_jitter
 require(ggthemes)
 require(RColorBrewer)
-gg&lt;-ggplot(data = iris,aes(Sepal.Width, Sepal.Length, color=Species)) + geom_jitter()
-gg&lt;- gg + facet_grid(. ~ Species) + geom_smooth(method='lm') 
-gg&lt;- gg + scale_colour_brewer(palette = "Dark2")
-gg &lt;- gg + labs(x="Sepal Width", y="Sepal Length", title="Sepals") + theme_tufte(12) 
+gg &lt;- ggplot(data = iris,
+    aes(Sepal.Width,
+        Sepal.Length,
+        color = Species)) +
+    geom_jitter()
+gg &lt;- gg + facet_grid(. ~
+    Species) + geom_smooth(method = "lm")
+gg &lt;- gg + scale_colour_brewer(palette = "Dark2")
+gg &lt;- gg + labs(x = "Sepal Width",
+    y = "Sepal Length",
+    title = "Sepals") +
+    theme_tufte(12)
 gg
 ```
 
-&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-8-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-8-1.png" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Correlation matrix
@@ -205,7 +213,7 @@ gg
 ``` r
 require(apaTables)
 require(dplyr)
-cor_table&lt;-dplyr::select(iris,-Species)
+cor_table &lt;- dplyr::select(iris, -Species)
 apa.cor.table(cor_table, filename = "correlations-iris.doc")
 ```
 
@@ -241,13 +249,18 @@ apa.cor.table(cor_table, filename = "correlations-iris.doc")
 
 
 ``` r
-# ggcorrplot, you can then further tweak this, as it is a ggplot.
+# ggcorrplot, you
+# can then further
+# tweak this, as it
+# is a ggplot.
 require(ggcorrplot)
-cormatrix&lt;-cor(cor_table)
-ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", lab = TRUE) 
+cormatrix &lt;- cor(cor_table)
+ggcorrplot(cormatrix,
+    hc.order = TRUE,
+    type = "lower", lab = TRUE)
 ```
 
-&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-10-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-10-1.png" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Other packages exist.
@@ -264,7 +277,7 @@ This is based on Fox (2015) and Fox (2002)
 
 ``` r
 library(carData)
-prestige&lt;-carData::Prestige
+prestige &lt;- carData::Prestige
 ```
 
 ---
@@ -291,7 +304,7 @@ Make a correlation matrix with all the continuous variables. (use select from dp
 
 And: _either_ export a .docx _or_ make a correlation plot.
 
-&lt;img src="https://media.giphy.com/media/3qQ329Rgle89i/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3qQ329Rgle89i/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Partial correlations.
@@ -300,7 +313,7 @@ Partial correlations, when you want to control for a continuous variable (z)
 
 ``` r
 require(ppcor)
-pcor.test(x = prestige$education, y= prestige$prestige , z=prestige$income)
+pcor.test(x = prestige$education, y = prestige$prestige, z = prestige$income)
 ```
 
 ```
@@ -313,7 +326,7 @@ pcor.test(x = prestige$education, y= prestige$prestige , z=prestige$income)
 
 When would you use linear regression?
 
-&lt;img src="https://media.giphy.com/media/26vUQoB8kmwkERtWE/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/26vUQoB8kmwkERtWE/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -321,7 +334,7 @@ When would you use linear regression?
 
 
 ``` r
-model_education&lt;-lm(prestige~education, data=prestige)
+model_education &lt;- lm(prestige ~ education, data = prestige)
 summary(model_education)
 ```
 
@@ -379,9 +392,12 @@ Good idea to plot before you start.
 ``` r
 require(ggplot2)
 require(scales)
-require(ggthemes) 
-plot_edu&lt;-ggplot(prestige, aes(education,prestige)) + geom_jitter() 
-plot_edu&lt;- plot_edu + scale_y_continuous(limits=c(0,100),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(6,18), breaks = pretty_breaks(6)) + ylab("Prestige") + xlab("Education") + geom_smooth(method='loess') + theme_tufte(12)
+require(ggthemes)
+plot_edu &lt;- ggplot(prestige, aes(education, prestige)) + geom_jitter()
+plot_edu &lt;- plot_edu + scale_y_continuous(limits = c(0, 100),
+    breaks = pretty_breaks(6)) + scale_x_continuous(limits = c(6,
+    18), breaks = pretty_breaks(6)) + ylab("Prestige") + xlab("Education") +
+    geom_smooth(method = "loess") + theme_tufte(12)
 ```
 
 ---
@@ -392,7 +408,7 @@ plot_edu&lt;- plot_edu + scale_y_continuous(limits=c(0,100),breaks = pretty_brea
 plot_edu
 ```
 
-&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/unnamed-chunk-16-1.png" alt="" width="400px" /&gt;
 
 ---
 ## plot() 
@@ -446,7 +462,7 @@ Perhaps for basic models but it will quickly become complex.
 
 Some of these plots give you information which you could not get from just scatter plots.
 
-&lt;img src="https://media.giphy.com/media/5T8tEJtCgvDuo/giphy.gif" width="300px" /&gt;
+&lt;img src="https://media.giphy.com/media/5T8tEJtCgvDuo/giphy.gif" alt="" width="300px" /&gt;
 
 ---
 ## Homoscedasticity: Breusch-Pagan test.
@@ -470,7 +486,7 @@ bptest(model_education)
 
 
 ``` r
-dwtest(model_education) #Durbin-Watson test.
+dwtest(model_education)  #Durbin-Watson test.
 ```
 
 ```
@@ -489,7 +505,7 @@ Also note that there is one other alternative typically used in econometrics (Br
 
 
 ``` r
-Box.test(residuals(model_education), type="Ljung-Box") #Box test
+Box.test(residuals(model_education), type = "Ljung-Box")  #Box test
 ```
 
 ```
@@ -516,7 +532,7 @@ Visual inspection suggested that a linear fit was appropriate. Visual inspection
 
 **Autocorrelation**: sandwich package can calculate (e.g., Newey-West errors), alternatively look into panel model packages (??plm)
 
-&lt;img src="https://media.giphy.com/media/3oEduRCITWQ5BruE8g/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3oEduRCITWQ5BruE8g/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Hierarchical regression.
@@ -525,7 +541,7 @@ Usually we run more than one! And we build a table. (Normally you would check th
 
 
 ``` r
-lm_education_women&lt;-lm(prestige~education+women, data=prestige)
+lm_education_women &lt;- lm(prestige ~ education + women, data = prestige)
 summary(lm_education_women)
 ```
 
@@ -557,7 +573,14 @@ summary(lm_education_women)
 
 ``` r
 require(stargazer)
-stargazer(model_education,lm_education_women,  dep.var.labels=c("Prestige"),covariate.labels=c("Education (years)","Women (%)"), style="demography", out="hierarchical.htm", header=F)
+stargazer(model_education,
+    lm_education_women,
+    dep.var.labels = c("Prestige"),
+    covariate.labels = c("Education (years)",
+        "Women (%)"),
+    style = "demography",
+    out = "hierarchical.htm",
+    header = F)
 ```
 
 ```
@@ -600,9 +623,19 @@ Centering (week 2). We can use our model to make predictions... .
 
 ``` r
 require(dplyr)
-# use :: just in case of conflicts.
-prestige&lt;-dplyr::mutate(prestige, women_cent= women-mean(women), education_cent= education-mean(education), prestige_cent= prestige-mean(prestige))
-centered_model&lt;-lm(prestige_cent~education_cent+women_cent, data=prestige)
+# use :: just in
+# case of
+# conflicts.
+prestige &lt;- dplyr::mutate(prestige,
+    women_cent = women -
+        mean(women),
+    education_cent = education -
+        mean(education),
+    prestige_cent = prestige -
+        mean(prestige))
+centered_model &lt;- lm(prestige_cent ~
+    education_cent +
+        women_cent, data = prestige)
 ```
 
 ---
@@ -628,7 +661,7 @@ summary(centered_model)
 ## 
 ## Coefficients:
 ##                  Estimate Std. Error t value Pr(&gt;|t|)    
-## (Intercept)     9.133e-15  8.566e-01   0.000 1.000000    
+## (Intercept)     6.413e-15  8.566e-01   0.000 1.000000    
 ## education_cent  5.428e+00  3.161e-01  17.170  &lt; 2e-16 ***
 ## women_cent     -9.305e-02  2.719e-02  -3.422 0.000904 ***
 ## ---
@@ -640,7 +673,7 @@ summary(centered_model)
 ```
 
 ``` r
-2*5.428
+2 * 5.428
 ```
 
 ```
@@ -648,8 +681,8 @@ summary(centered_model)
 ```
 
 ``` r
-#alternatively
-2*coefficients(centered_model)[2]
+# alternatively
+2 * coefficients(centered_model)[2]
 ```
 
 ```
@@ -659,7 +692,7 @@ summary(centered_model)
 
 ``` r
 # Shift of 10%
-10*coefficients(centered_model)[3]
+10 * coefficients(centered_model)[3]
 ```
 
 ```
@@ -676,8 +709,10 @@ Interpreted in shifts of standard deviations. A `\(\beta\)` of 1 implies that a 
 
 
 ``` r
-# -1 so we can drop the intercept -- standardized regression has no intercept.
-model_education_stand&lt;-lm(scale(prestige)~scale(education)-1, data=prestige)
+# -1 so we can drop the intercept -- standardized
+# regression has no intercept.
+model_education_stand &lt;- lm(scale(prestige) ~ scale(education) -
+    1, data = prestige)
 summary(model_education_stand)
 ```
 
@@ -728,13 +763,15 @@ Again note that you can do this for _any_ statistic.
 library(boot)
 # function which does bootstrapping.
 coeff_B &lt;- function(data, indices) {
-data_boot &lt;- data[indices, ] # allows boot to select sample
-B_boot &lt;- lm(prestige_cent ~ education_cent + women_cent, data = data_boot)
-return(B_boot$coeff[2]) # education in position 2 / alter for different variables.
+    data_boot &lt;- data[indices, ]  # allows boot to select sample
+    B_boot &lt;- lm(prestige_cent ~ education_cent + women_cent,
+        data = data_boot)
+    return(B_boot$coeff[2])  # education in position 2 / alter for different variables.
 }
 # bootstrapping with 10000 replications
 set.seed(666)
-results_coeff_B &lt;- boot(data = prestige, statistic = coeff_B, R = 10000)
+results_coeff_B &lt;- boot(data = prestige, statistic = coeff_B,
+    R = 10000)
 ```
 
 ---
@@ -765,8 +802,8 @@ results_coeff_B
 
 
 ``` r
-# get 95% confidence interval 
-boot.ci(results_coeff_B, type="bca")
+# get 95% confidence interval
+boot.ci(results_coeff_B, type = "bca")
 ```
 
 ```
@@ -798,7 +835,7 @@ We can take proportions and turn them into Odds Ratios and then turn those into 
 
 Read the references for full explanation and underpinning.
 
-&lt;img src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Assumptions logistic regression.
@@ -826,7 +863,7 @@ Instead, some argue that at the design stage think about sample size / distribut
 
 Again, you can always bootstrap, which might make some of your conclusions more robust!
 
-&lt;img src="https://media.giphy.com/media/nVV3Aodoc0KGs/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/nVV3Aodoc0KGs/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Pima Indian data.
@@ -835,11 +872,11 @@ Again, you can always bootstrap, which might make some of your conclusions more 
 
 
 ``` r
-require(mlbench) # contains the data
+require(mlbench)  # contains the data
 require(skimr)
 # Pima data first needs data() command.
 data(PimaIndiansDiabetes2)
-pima_data&lt;-PimaIndiansDiabetes2
+pima_data &lt;- PimaIndiansDiabetes2
 skim(pima_data)
 ```
 
@@ -884,8 +921,8 @@ Table: Data summary
 
 
 ``` r
-log1&lt;-glm(diabetes~mass, data=pima_data, family=binomial)
-log2&lt;-glm(diabetes~mass+age, data=pima_data, family=binomial)
+log1 &lt;- glm(diabetes ~ mass, data = pima_data, family = binomial)
+log2 &lt;- glm(diabetes ~ mass + age, data = pima_data, family = binomial)
 summary(log1)
 ```
 
@@ -956,7 +993,7 @@ You should be concerned if the conclusions differ (likely suggests non-linearity
 
 
 ``` r
-anova(log1, test="Chisq")
+anova(log1, test = "Chisq")
 ```
 
 ```
@@ -981,7 +1018,7 @@ anova(log1, test="Chisq")
 
 
 ``` r
-anova(log2, test="Chisq")
+anova(log2, test = "Chisq")
 ```
 
 ```
@@ -1009,7 +1046,7 @@ The coefficients are not really interpretable given that they are a linear relat
 
 We can take the exponential to interpret them!
 
-&lt;img src="https://media.giphy.com/media/JYTm7I9nMRlgk/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/JYTm7I9nMRlgk/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Odds ratios.
@@ -1020,7 +1057,7 @@ incr= custom increments (not useful/necessary if you have factors). Note that yo
 ``` r
 require(oddsratio)
 # shift of 5 in BMI.
-or_glm(pima_data, incr= list(mass= 5), log1)
+or_glm(pima_data, incr = list(mass = 5), log1)
 ```
 
 ```
@@ -1029,7 +1066,7 @@ or_glm(pima_data, incr= list(mass= 5), log1)
 ```
 
 ``` r
-or_glm(pima_data, incr= list(mass= 5, age=1), log2)
+or_glm(pima_data, incr = list(mass = 5, age = 1), log2)
 ```
 
 ```
@@ -1083,7 +1120,7 @@ Complex - you can get  Pseudo `\(R^2\)` but perhaps you should [not](https://sta
 
 ``` r
 require(rcompanion)
-nagelkerke(log1, restrictNobs=T)
+nagelkerke(log1, restrictNobs = T)
 ```
 
 ```
@@ -1115,7 +1152,7 @@ nagelkerke(log1, restrictNobs=T)
 ```
 
 ``` r
-nagelkerke(log2, restrictNobs=T)
+nagelkerke(log2, restrictNobs = T)
 ```
 
 ```
@@ -1154,7 +1191,9 @@ We can get a nice table with Odds Ratios and summaries. Or look into broom() and
 
 ``` r
 require(stargazer)
-stargazer(log1,log2, covariate.labels=c("BMI","Age"), omit=c("Constant"), apply.coef=exp, t.auto=F, p.auto=F, report = "vc*", style="asr", out="logistic.htm", header=FALSE)
+stargazer(log1, log2, covariate.labels = c("BMI", "Age"), omit = c("Constant"),
+    apply.coef = exp, t.auto = F, p.auto = F, report = "vc*",
+    style = "asr", out = "logistic.htm", header = FALSE)
 ```
 
 ---
@@ -1184,9 +1223,13 @@ First make some categorical variables.
 
 
 ``` r
-require(dplyr) # make some categorical variables
-pima_data&lt;- pima_data %&gt;% mutate(obese=cut(mass, breaks=c(-Inf, 30, Inf), labels=c("No","Yes")))
-pima_data&lt;- pima_data %&gt;% mutate(nulligravada=cut(pregnant, breaks=c(-Inf, 0.99, Inf), labels=c("never pregnant","ever pregnant")))
+require(dplyr)  # make some categorical variables
+pima_data &lt;- pima_data %&gt;%
+    mutate(obese = cut(mass, breaks = c(-Inf, 30, Inf), labels = c("No",
+        "Yes")))
+pima_data &lt;- pima_data %&gt;%
+    mutate(nulligravada = cut(pregnant, breaks = c(-Inf, 0.99,
+        Inf), labels = c("never pregnant", "ever pregnant")))
 ```
 
 ---
@@ -1196,13 +1239,15 @@ pima_data&lt;- pima_data %&gt;% mutate(nulligravada=cut(pregnant, breaks=c(-Inf,
 ``` r
 require(RColorBrewer)
 # pick some colours.
-colours&lt;-c(color = brewer.pal(2, "Set3"))
-fill_colours&lt;-rep(colours, each=4) # 4 quadrants to fill
+colours &lt;- c(color = brewer.pal(2, "Set3"))
+fill_colours &lt;- rep(colours, each = 4)  # 4 quadrants to fill
 require(vcd)
-mosaicplot1&lt;-mosaic(~ diabetes + nulligravada + obese, zero_size = 0, data=pima_data, gp = gpar(fill = fill_colours, col = 0), legend=F, labeling = labeling_values)
+mosaicplot1 &lt;- mosaic(~diabetes + nulligravada + obese, zero_size = 0,
+    data = pima_data, gp = gpar(fill = fill_colours, col = 0),
+    legend = F, labeling = labeling_values)
 ```
 
-&lt;img src="Lecture4_xaringan_files/figure-html/opts_chunk$set(out.width=12)-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture4_xaringan_files/figure-html/opts_chunk$set(out.width=12)-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Exercise. 
@@ -1263,9 +1308,9 @@ Also check the reading list! (many more than listed here)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
