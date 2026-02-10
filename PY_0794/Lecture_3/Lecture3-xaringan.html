@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-01-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2026-02-10 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -66,7 +66,7 @@ Raise your hand if you have never conducted an ANOVA.
 
 Analysis of Variance.
 
-&lt;img src="https://media.giphy.com/media/3o6Ztr0m2onpgjywj6/giphy.gif" width="600px" /&gt;
+&lt;img src="https://media.giphy.com/media/3o6Ztr0m2onpgjywj6/giphy.gif" alt="" width="600px" /&gt;
 
 ---
 ## Back to basics: Variance.
@@ -159,7 +159,7 @@ Normally distributed for each category of the Independent variable.
 
 [Homogeneity of variance](http://davidmlane.com/hyperstat/A45619.html)
 
-&lt;img src="https://pbs.twimg.com/media/DJtZt-TWAAAWnDm.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://pbs.twimg.com/media/DJtZt-TWAAAWnDm.jpg" alt="" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Time for a new dataset?
@@ -185,7 +185,7 @@ Three groups (Asians (international), Asian Americans, European Americans), NEO 
 ``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture3")
 require(haven)
-data&lt;-read_spss("Iwasaki_Personality_Data.sav", user_na=T)
+data &lt;- read_spss("Iwasaki_Personality_Data.sav", user_na = T)
 ```
 
 ---
@@ -232,10 +232,10 @@ Table: Data summary
 
 ``` r
 require(dplyr)
-require(labelled) # use this to turn into a factor
-data$GRP&lt;-to_factor(data$GRP) #GRP is dbl+lbl
+require(labelled)  # use this to turn into a factor
+data$GRP &lt;- to_factor(data$GRP)  #GRP is dbl+lbl
 # missings are Not a number.
-data_no_miss&lt;-dplyr::filter(data, GRP!='NaN')
+data_no_miss &lt;- dplyr::filter(data, GRP != "NaN")
 levels(data_no_miss$GRP)
 ```
 
@@ -248,7 +248,7 @@ levels(data_no_miss$GRP)
 
 Test whether groups differ in Openness to Experience (O) based on their culture.
 
-&lt;img src="http://i0.kym-cdn.com/photos/images/original/001/090/918/8f8.jpg" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="http://i0.kym-cdn.com/photos/images/original/001/090/918/8f8.jpg" alt="" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Assumption Checks.
@@ -271,24 +271,25 @@ Mostly people would look at the _overall_ plot, but ideally one would check plot
 
 ``` r
 require(ggplot2)
-plot_hist &lt;- ggplot(data_no_miss, aes(x=O)) 
-plot_hist &lt;- plot_hist+ geom_histogram(colour = "black", fill = "white")
-plot_hist 
+plot_hist &lt;- ggplot(data_no_miss, aes(x = O))
+plot_hist &lt;- plot_hist + geom_histogram(colour = "black", fill = "white")
+plot_hist
 ```
 
-&lt;img src="Lecture3-xaringan_files/figure-html/opts_chunk$set(out.width=50)-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture3-xaringan_files/figure-html/opts_chunk$set(out.width=50)-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Plot facets.
 
 
 ``` r
-plot_hist_facet &lt;- ggplot(data_no_miss, aes(x=O)) 
-plot_hist_facet &lt;- plot_hist_facet+geom_histogram(colour = "black", fill = "white") 
+plot_hist_facet &lt;- ggplot(data_no_miss, aes(x = O))
+plot_hist_facet &lt;- plot_hist_facet + geom_histogram(colour = "black",
+    fill = "white")
 plot_hist_facet + facet_wrap(~GRP)
 ```
 
-&lt;img src="Lecture3-xaringan_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture3-xaringan_files/figure-html/unnamed-chunk-8-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Normality
@@ -300,7 +301,7 @@ What do you think?
 
 Remember central limit theorem!
 
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Empirical_CLT_-_Figure_-_040711.jpg/500px-Empirical_CLT_-_Figure_-_040711.jpg" width="500px" /&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Empirical_CLT_-_Figure_-_040711.jpg/500px-Empirical_CLT_-_Figure_-_040711.jpg" alt="" width="500px" /&gt;
 
 ---
 ## Other approaches: Shapiro-Wilk
@@ -311,9 +312,9 @@ Not significant --&gt; retain null hypothesis, not significantly different from 
 
 
 ``` r
-data_eur&lt;-filter(data_no_miss, GRP=='European Americans')
-data_asian_i&lt;-filter(data_no_miss, GRP=='Asian Internationals')
-data_asian_a&lt;-filter(data_no_miss, GRP=='Asian Americans')
+data_eur &lt;- filter(data_no_miss, GRP == "European Americans")
+data_asian_i &lt;- filter(data_no_miss, GRP == "Asian Internationals")
+data_asian_a &lt;- filter(data_no_miss, GRP == "Asian Americans")
 # You would do this for all 3!
 shapiro.test(data_asian_a$O)
 ```
@@ -335,7 +336,7 @@ Beware K-S test: easily significant!
 
 
 ``` r
-ks.test(data_asian_a$O, "pnorm") #pnorm --&gt; normal distribution
+ks.test(data_asian_a$O, "pnorm")  #pnorm --&gt; normal distribution
 ```
 
 ```
@@ -354,7 +355,7 @@ Recommendation check normality visually! (histogram / violin plot / ...)
 
 Think back to the 'Datasaurus'.
 
-&lt;img src="INSTA.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="INSTA.jpg" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Variety of other options.
@@ -384,7 +385,7 @@ If significant could also point to deviation in normality as opposed to violatio
 
 
 ``` r
-bartlett.test(O ~ GRP, data=data_no_miss)
+bartlett.test(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -402,10 +403,10 @@ bartlett.test(O ~ GRP, data=data_no_miss)
 
 
 ``` r
-require(car) # package which does test
+require(car)  # package which does test
 require(dplyr)
 # It needs to be a factor but already is!
-leveneTest(O ~ GRP, data=data_no_miss)
+leveneTest(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -425,7 +426,7 @@ Visual inspection suggested that the distribution of the dependent variable is c
 
 We can move on to ANOVA!
 
-&lt;img src="http://www.reactiongifs.com/r/hfma.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="http://www.reactiongifs.com/r/hfma.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Kurtosis/Skewness. 
@@ -434,16 +435,16 @@ As an aside: you could mention, the platykurtosis in the Asian American group.
 
 (In your assignment I would count both correct in this case).
 
-&lt;img src="https://www.researchgate.net/profile/John_Mitchell2/publication/5570487/figure/fig1/AS:213411729285120@1427892729413/Mesokurtic-leptokurtic-and-platykurtic.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://www.researchgate.net/profile/John_Mitchell2/publication/5570487/figure/fig1/AS:213411729285120@1427892729413/Mesokurtic-leptokurtic-and-platykurtic.png" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="https://miro.medium.com/max/1020/1*hxVvqttoCSkUT2_R1zA0Tg.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://miro.medium.com/max/1020/1*hxVvqttoCSkUT2_R1zA0Tg.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Try it yourself.
 
 Test the assumptions for an ANOVA with Extraversion (E) and group as independent variable.
 
-&lt;img src="https://media.giphy.com/media/3o6MbgJH2fc63n6v4I/giphy.gif" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3o6MbgJH2fc63n6v4I/giphy.gif" alt="" width="500px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## ANOVA.
@@ -459,7 +460,7 @@ Analysis of variance.
 
 
 ``` r
-Anova1&lt;-aov(O ~ GRP, data=data_no_miss)
+Anova1 &lt;- aov(O ~ GRP, data = data_no_miss)
 summary(Anova1)
 ```
 
@@ -476,7 +477,7 @@ summary(Anova1)
 
 
 ``` r
-Anova2&lt;-lm(O~ GRP, data=data_no_miss)
+Anova2 &lt;- lm(O ~ GRP, data = data_no_miss)
 summary(Anova2)
 ```
 
@@ -534,7 +535,7 @@ Don't worry about [AIC](https://en.wikipedia.org/wiki/Akaike_information_criteri
 
 
 ``` r
-drop1(Anova2) # some additional info. ??drop1
+drop1(Anova2)  # some additional info. ??drop1
 ```
 
 ```
@@ -555,7 +556,8 @@ Best bet for replicating SPSS results!
 
 ``` r
 require(ez)
-Ez_ANOVA1&lt;-ezANOVA(data_no_miss, dv=O, wid=ID, between=GRP, detailed=TRUE)
+Ez_ANOVA1 &lt;- ezANOVA(data_no_miss, dv = O, wid = ID, between = GRP,
+    detailed = TRUE)
 ```
 
 
@@ -591,7 +593,7 @@ How to do Greek symbols and mathematical functions? [here](http://csrgxtu.github
 
 If you are up for a challenge. You can figure out how to calculate this effect size measure on your own!.
 
-&lt;img src="https://pbs.twimg.com/media/B11-iLMCQAEotPP.jpg" width="380px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://pbs.twimg.com/media/B11-iLMCQAEotPP.jpg" alt="" width="380px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Write up.
@@ -604,7 +606,7 @@ A one-way ANOVA showed a significant effect of cultural group on openness to exp
 
 ``` r
 require(apaTables)
-apa.aov.table(Anova1, filename="APA_Anova_Table.doc", table.number = 1)
+apa.aov.table(Anova1, filename = "APA_Anova_Table.doc", table.number = 1)
 ```
 
 ```
@@ -632,14 +634,14 @@ apa.aov.table(Anova1, filename="APA_Anova_Table.doc", table.number = 1)
 
  Where does the difference lie?
 
-&lt;img src="http://1.bp.blogspot.com/-tgrTTYSW8V8/UzVuNLzHzcI/AAAAAAAADfw/Pxpfw42Ie_0/s1600/ANOVA.jpg" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="http://1.bp.blogspot.com/-tgrTTYSW8V8/UzVuNLzHzcI/AAAAAAAADfw/Pxpfw42Ie_0/s1600/ANOVA.jpg" alt="" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Post-hoc tests.
 
 
 ``` r
-resultTukey&lt;-TukeyHSD(Anova1)
+resultTukey &lt;- TukeyHSD(Anova1)
 resultTukey
 ```
 
@@ -670,7 +672,7 @@ Why Bonferroni should be abandoned (in [medicine](https://www.ncbi.nlm.nih.gov/p
 
 --
 
-&lt;img src="https://i.pinimg.com/736x/0a/b2/7f/0ab27f6bf618f07030b19fdf9823241f--statistics-psychology-jokes.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://i.pinimg.com/736x/0a/b2/7f/0ab27f6bf618f07030b19fdf9823241f--statistics-psychology-jokes.jpg" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Make a report. Stargazer.
@@ -683,10 +685,10 @@ Totally check out stargazer!
 ``` r
 require(broom)
 require(stargazer)
-# Broom turns our result into a dataframe!
-# We can then 'tidy' it and make a report!
-tidy_resultTukey&lt;-tidy(resultTukey)
-stargazer(tidy_resultTukey, summary = F, type="html", out="Tukey.html")
+# Broom turns our result into a dataframe!  We can then
+# 'tidy' it and make a report!
+tidy_resultTukey &lt;- tidy(resultTukey)
+stargazer(tidy_resultTukey, summary = F, type = "html", out = "Tukey.html")
 ```
 
 ---
@@ -697,7 +699,9 @@ Alternative. This will also have Cohen's d effect size values.
 
 ``` r
 require(apaTables)
-apa.d.table(iv=GRP, dv=O, data=data_no_miss, filename="Table_1_APA_tukey.doc", show.conf.interval=T, landscape=T, table.number = 1)
+apa.d.table(iv = GRP, dv = O, data = data_no_miss,
+    filename = "Table_1_APA_tukey.doc", show.conf.interval = T,
+    landscape = T, table.number = 1)
 ```
 
 ```
@@ -739,7 +743,7 @@ apa.d.table(iv=GRP, dv=O, data=data_no_miss, filename="Table_1_APA_tukey.doc", s
 
 How would you have proceeded, if the assumptions were violated?
 
-&lt;img src="https://media.giphy.com/media/qBVEww0YjwWyI/giphy.gif" width="600px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/qBVEww0YjwWyI/giphy.gif" alt="" width="600px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Non-parametric tests.
@@ -748,7 +752,7 @@ They do not assume a normal distribution but can be less powerful.
 
 Many options exist. You can read and find others (see references).
 
-&lt;img src="https://media.giphy.com/media/12mlYz930XO2HK/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/12mlYz930XO2HK/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## WRS2 package
@@ -763,9 +767,9 @@ lincoln() for the posthoc tests.
 
 
 ``` r
-#WRS.
+# WRS.
 require(WRS2)
-t1way(O ~ GRP, data=data_no_miss)
+t1way(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -777,8 +781,8 @@ t1way(O ~ GRP, data=data_no_miss)
 ## Degrees of freedom 2: 74.67 
 ## p-value: 6e-05 
 ## 
-## Explanatory measure of effect size: 0.41 
-## Bootstrap CI: [0.28; 0.58]
+## Explanatory measure of effect size: 0.44 
+## Bootstrap CI: [0.24; 0.61]
 ```
 
 ---
@@ -791,7 +795,7 @@ The t1waybt function computes a one-way ANOVA for the [_trimmed means_](http://d
 
 ``` r
 # Specify Between.
-t1waybt(O ~ GRP, data=data_no_miss, nboot=10000)
+t1waybt(O ~ GRP, data = data_no_miss, nboot = 10000)
 ```
 
 ```
@@ -801,7 +805,7 @@ t1waybt(O ~ GRP, data=data_no_miss, nboot=10000)
 ## Effective number of bootstrap samples was 10000.
 ## 
 ## Test statistic: 11.067 
-## p-value: 2e-04 
+## p-value: 1e-04 
 ## Variance explained: 0.191 
 ## Effect size: 0.437
 ```
@@ -816,7 +820,7 @@ Computes a one-way ANOVA for the medians. Homoscedasticity assumption not requir
 
 ``` r
 # WRS, ANOVA for Medians. (note iter=)
-med1way(O ~ GRP, data=data_no_miss, iter=10000)
+med1way(O ~ GRP, data = data_no_miss, iter = 10000)
 ```
 
 ```
@@ -854,7 +858,7 @@ Read more [here](http://thomasleeper.com/Rcourse/Tutorials/permutationtests.html
 
 ``` r
 require(coin)
-independence_test(O ~ GRP, data=data_no_miss)
+independence_test(O ~ GRP, data = data_no_miss)
 ```
 
 ```
@@ -897,7 +901,7 @@ The order in which you put in things matters!!
 
 ``` r
 # Type I errors
-lm_ancova&lt;-lm(O~E+GRP, data=data_no_miss)
+lm_ancova &lt;- lm(O ~ E + GRP, data = data_no_miss)
 anova(lm_ancova)
 ```
 
@@ -919,7 +923,7 @@ anova(lm_ancova)
 
 ``` r
 # note that the order matters for the F-tests.
-lm_ancova2&lt;-lm(O~GRP+E, data=data_no_miss)
+lm_ancova2 &lt;- lm(O ~ GRP + E, data = data_no_miss)
 anova(lm_ancova2)
 ```
 
@@ -956,8 +960,9 @@ SPSS uses type III. So let's aim to emulate (even though that might not always b
 # Type III errors
 require(car)
 require(compute.es)
-Ancova&lt;-lm(O~GRP+E, contrasts=list(GRP_fact=contr.sum), data=data_no_miss)
-Anova(Ancova, type="III")
+Ancova &lt;- lm(O ~ GRP + E, contrasts = list(GRP_fact = contr.sum),
+    data = data_no_miss)
+Anova(Ancova, type = "III")
 ```
 
 ```
@@ -979,7 +984,7 @@ Anova(Ancova, type="III")
 
 ``` r
 require(multcomp)
-posth=glht(Ancova, linfct=mcp(GRP="Tukey"))  
+posth = glht(Ancova, linfct = mcp(GRP = "Tukey"))
 ```
 
 ---
@@ -987,7 +992,7 @@ posth=glht(Ancova, linfct=mcp(GRP="Tukey"))
 
 
 ``` r
-summary(posth) ##shows the output in a nice format
+summary(posth)  ##shows the output in a nice format
 ```
 
 ```
@@ -1052,7 +1057,7 @@ Sensitive to sample size, if large small deviations will lead to significance.
 
 ``` r
 require(RVAideMemoire)
-multivariatenorm&lt;-dplyr::select(data_no_miss, -GRP,-ID)
+multivariatenorm &lt;- dplyr::select(data_no_miss, -GRP, -ID)
 mshapiro.test(multivariatenorm)
 ```
 
@@ -1073,30 +1078,59 @@ A whole host of alternatives. More [here](http://dwoll.de/rexrepos/posts/normali
 
 
 ``` r
-require(MVN) # Alternative method, one example
+require(MVN)  # Alternative method, one example
 mvn(multivariatenorm)
 ```
 
 ```
-## $multivariateNormality
-##            Test       HZ    p value MVN
-## 1 Henze-Zirkler 1.049975 0.01411504  NO
+## $multivariate_normality
+##            Test Statistic p.value     Method          MVN
+## 1 Henze-Zirkler      1.05   0.014 asymptotic ✗ Not normal
 ## 
-## $univariateNormality
-##               Test  Variable Statistic   p value Normality
-## 1 Anderson-Darling     N        0.3874    0.3848    YES   
-## 2 Anderson-Darling     E        0.5247    0.1793    YES   
-## 3 Anderson-Darling     O        0.6676    0.0802    YES   
-## 4 Anderson-Darling     A        0.4504    0.2729    YES   
-## 5 Anderson-Darling     C        0.6231    0.1034    YES   
+## $univariate_normality
+##               Test Variable Statistic p.value Normality
+## 1 Anderson-Darling        N     0.387   0.385  ✓ Normal
+## 2 Anderson-Darling        E     0.525   0.179  ✓ Normal
+## 3 Anderson-Darling        O     0.668   0.080  ✓ Normal
+## 4 Anderson-Darling        A     0.450   0.273  ✓ Normal
+## 5 Anderson-Darling        C     0.623   0.103  ✓ Normal
 ## 
-## $Descriptives
-##     n     Mean  Std.Dev Median Min Max  25th  75th       Skew   Kurtosis
-## N 203  95.9064 21.23737     97  36 160  81.0 109.5 -0.1442702 -0.1102764
-## E 203 116.7291 19.93406    117  50 175 103.0 129.5 -0.1039661  0.6504353
-## O 203 116.4236 18.21999    115  72 166 104.0 127.0  0.3079877 -0.1699643
-## A 203 113.9261 18.29136    115  58 161 103.0 127.0 -0.2962256  0.1136037
-## C 203 111.7734 18.53971    112  57 171  98.5 124.0  0.1476949  0.4428221
+## $descriptives
+##   Variable   n    Mean Std.Dev Median Min Max  25th  75th   Skew Kurtosis
+## 1        N 203  95.906  21.237     97  36 160  81.0 109.5 -0.145    2.918
+## 2        E 203 116.729  19.934    117  50 175 103.0 129.5 -0.105    3.687
+## 3        O 203 116.424  18.220    115  72 166 104.0 127.0  0.310    2.858
+## 4        A 203 113.926  18.291    115  58 161 103.0 127.0 -0.298    3.145
+## 5        C 203 111.773  18.540    112  57 171  98.5 124.0  0.149    3.477
+## 
+## $data
+## # A tibble: 203 × 5
+##        N     E     O     A     C
+##    &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+##  1    70   114   110   119   120
+##  2   123   122   115    99   107
+##  3    93   159   136    65   123
+##  4    63   127    85   119    97
+##  5    36   161   155   143   108
+##  6    86   131   118   115    94
+##  7    60   147   109    84    91
+##  8   107   127   109   105    97
+##  9   109   127   124    97    94
+## 10    89   140   109    78   127
+## # ℹ 193 more rows
+## 
+## $subset
+## NULL
+## 
+## $outlierMethod
+## [1] "none"
+## 
+## attr(,"class")
+## [1] "mvn"
+```
+
+``` r
+mvn &lt;- mvn(multivariatenorm)
 ```
 
 ---
@@ -1106,32 +1140,10 @@ Violated (but could be way worse, trust me ... )
 
 
 ``` r
-mvn(multivariatenorm, multivariatePlot = "qq")
+plot(mvn, diagnostic = "multivariate", type = "qq")
 ```
 
-&lt;img src="Lecture3-xaringan_files/figure-html/unnamed-chunk-44-1.png" width="300px" /&gt;
-
-```
-## $multivariateNormality
-##            Test       HZ    p value MVN
-## 1 Henze-Zirkler 1.049975 0.01411504  NO
-## 
-## $univariateNormality
-##               Test  Variable Statistic   p value Normality
-## 1 Anderson-Darling     N        0.3874    0.3848    YES   
-## 2 Anderson-Darling     E        0.5247    0.1793    YES   
-## 3 Anderson-Darling     O        0.6676    0.0802    YES   
-## 4 Anderson-Darling     A        0.4504    0.2729    YES   
-## 5 Anderson-Darling     C        0.6231    0.1034    YES   
-## 
-## $Descriptives
-##     n     Mean  Std.Dev Median Min Max  25th  75th       Skew   Kurtosis
-## N 203  95.9064 21.23737     97  36 160  81.0 109.5 -0.1442702 -0.1102764
-## E 203 116.7291 19.93406    117  50 175 103.0 129.5 -0.1039661  0.6504353
-## O 203 116.4236 18.21999    115  72 166 104.0 127.0  0.3079877 -0.1699643
-## A 203 113.9261 18.29136    115  58 161 103.0 127.0 -0.2962256  0.1136037
-## C 203 111.7734 18.53971    112  57 171  98.5 124.0  0.1476949  0.4428221
-```
+&lt;img src="Lecture3-xaringan_files/figure-html/unnamed-chunk-44-1.png" alt="" width="300px" /&gt;
 
 ---
 ## Solutions.
@@ -1146,7 +1158,7 @@ Transformations. [Box-Cox transform](https://stat.ethz.ch/R-manual/R-devel/libra
 
 Central limit theorem to the rescue again! (also note Hotelling's `\(T^2\)` robust)
 
-&lt;img src="https://media.giphy.com/media/D49L3FpxqtQ3u/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/D49L3FpxqtQ3u/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Homogeneity of variance.
@@ -1168,7 +1180,7 @@ Very easily significant. Therefore, usually _p_=.001 as threshold. More [here](h
 
 
 ``` r
-require(heplots) #alternative is 'biotools' package.
+require(heplots)  #alternative is 'biotools' package.
 boxM(multivariatenorm, data_no_miss$GRP)
 ```
 
@@ -1185,7 +1197,7 @@ boxM(multivariatenorm, data_no_miss$GRP)
 
 
 ``` r
-Manovamodel &lt;- manova(cbind(N,E,A,O,C) ~ GRP, data = data_no_miss)
+Manovamodel &lt;- manova(cbind(N, E, A, O, C) ~ GRP, data = data_no_miss)
 summary(Manovamodel)
 ```
 
@@ -1202,7 +1214,7 @@ summary(Manovamodel)
 
 Other measures exist but Pillai's Trace is typically most common. You can find out more about them [here](https://online.stat.psu.edu/stat505/lesson/8/8.3). Also about the **math** (also see references).
 
-&lt;img src="https://i1.wp.com/68.media.tumblr.com/29f192c8081899ed1f037ef6003384d3/tumblr_os2spqdfC71r0msi2o1_1280.gif?zoom=2&amp;w=605&amp;ssl=1" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://i1.wp.com/68.media.tumblr.com/29f192c8081899ed1f037ef6003384d3/tumblr_os2spqdfC71r0msi2o1_1280.gif?zoom=2&amp;w=605&amp;ssl=1" alt="" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Report.
@@ -1274,9 +1286,9 @@ BONUS: Conduct a follow up analysis or plot for the MANOVA.
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

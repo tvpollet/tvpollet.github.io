@@ -766,6 +766,7 @@ A whole host of alternatives. More [here](http://dwoll.de/rexrepos/posts/normali
 ```{r, warning=F, message=F, tidy=T, tidy.opts=list(width.cutoff=50)}
 require(MVN) # Alternative method, one example
 mvn(multivariatenorm)
+mvn<-mvn(multivariatenorm)
 ```
 
 ---
@@ -774,7 +775,7 @@ mvn(multivariatenorm)
 Violated (but could be way worse, trust me ... )
 
 ```{r, out.width = "300px"}
-mvn(multivariatenorm, multivariatePlot = "qq")
+plot(mvn, diagnostic = "multivariate", type = 'qq')
 ```
 
 ---
