@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-01-06 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2026-02-16 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -63,7 +63,7 @@ Work through the exercises first, if you have not done so! It will give you insi
 
 Questions in discussion board on Blackboard. 
 
-&lt;img src="https://media.giphy.com/media/VMFLO3cVYqru0/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/VMFLO3cVYqru0/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
  
 ---
 ## Types of errors (I,II,III).
@@ -74,14 +74,14 @@ Initially ANOVA was designed for **balanced** designs: equal N for each factor.
 
 When unbalanced: different ways for calculating Sums of Squares.
 
-&lt;img src="balanced.png" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="balanced.png" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Type of errors
 
 If everything is uncorrelated as in A below then it does not matter at all. However, if the predictors correlate then there are several options. More info [here](https://web.archive.org/web/20230405031457/https://egret.psychol.cam.ac.uk/statistics/R/anova.html) and [here](https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/).
 
-&lt;img src="correlatedpredictors.png" width="275px" style="display: block; margin: auto;" /&gt;
+&lt;img src="correlatedpredictors.png" alt="" width="275px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Terminology
@@ -92,7 +92,7 @@ If everything is uncorrelated as in A below then it does not matter at all. Howe
 
 **Type III SS ("marginal", "orthogonal")**: SS[A] = t; SS[B] = x; SS[A*B] = z. This assesses the contribution of each predictor over and above all others. 
 
-&lt;img src="correlatedpredictors.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="correlatedpredictors.png" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Which one to use?
@@ -112,7 +112,7 @@ Can anybody explain what an interaction effect is?
 
 What is an example? And why should we particularly care in psychology?
 
-&lt;img src="https://media.giphy.com/media/A8NNZlVuA1LoY/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/A8NNZlVuA1LoY/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Synonyms
@@ -123,7 +123,7 @@ Moderation is not the same as mediation. (More about that soon.)
 
 Multiplying of terms.
 
-&lt;img src="https://media.giphy.com/media/982lslKcbbiZq/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/982lslKcbbiZq/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Two-way ANOVA (2x2 or 2x3 for example)
@@ -137,7 +137,7 @@ Do you recall what these are? (look back to slides from week 3 if you do not rem
 
 Often you see these types of plots... .
 
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Two-way_interaction_effect_example.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Two-way_interaction_effect_example.png" alt="" width="500px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Talk to your neighbour.
@@ -146,7 +146,7 @@ Have you come across an interaction design in your internship or Ba.-Thesis.
 
 What shape was it?
 
-&lt;img src="https://i.pinimg.com/736x/7e/14/65/7e1465dd3f7a064f0eb4d13731e1af96--anxiety-cat-social-anxiety.jpg" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://i.pinimg.com/736x/7e/14/65/7e1465dd3f7a064f0eb4d13731e1af96--anxiety-cat-social-anxiety.jpg" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Other forms?
@@ -155,7 +155,7 @@ What other forms can interactions take?
 
 Two-way / Three-way.
 
-&lt;img src="GSS_sealevel_interaction.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="GSS_sealevel_interaction.png" alt="" width="500px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## ToothGrowth dataset. 
@@ -174,7 +174,7 @@ What are the solutions, in case of violations?
 
 Check your solution [here](http://www.sthda.com/english/wiki/two-way-anova-test-in-r#check-anova-assumptions-test-validity)
 
-&lt;img src="https://media.giphy.com/media/IgnStOJbnpXzi/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/IgnStOJbnpXzi/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Notations. (Crawley, 2013:396)
@@ -216,12 +216,13 @@ So when testing a three-way interaction, you would include all two-way interacti
 ``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture5")
 require(car)
-ToothGrowth2&lt;-ToothGrowth # ToothGrowth into new object.
-ToothGrowth2$dose&lt;-as.factor(ToothGrowth$dose)
+ToothGrowth2 &lt;- ToothGrowth  # ToothGrowth into new object.
+ToothGrowth2$dose &lt;- as.factor(ToothGrowth$dose)
 # This ensures you get the same results as beloved SPSS.
-options(contrasts = c("contr.helmert", "contr.poly")) # change options. 
- # need this for correct SS. - type command
-ANOVAtwobythree&lt;-Anova(lm(len~supp*dose, data=ToothGrowth2), type = 3)
+options(contrasts = c("contr.helmert", "contr.poly"))  # change options. 
+# need this for correct SS. - type command
+ANOVAtwobythree &lt;- Anova(lm(len ~ supp * dose, data = ToothGrowth2),
+    type = 3)
 ```
 
 ---
@@ -251,9 +252,10 @@ ANOVAtwobythree
 
 
 ``` r
-# alternative route. Notice that the options are different here!
-options(contrasts = c("contr.sum","contr.poly"))
-ANOVAtwobythree_alt&lt;-lm(len~supp*dose, data=ToothGrowth2) 
+# alternative route. Notice that the options are different
+# here!
+options(contrasts = c("contr.sum", "contr.poly"))
+ANOVAtwobythree_alt &lt;- lm(len ~ supp * dose, data = ToothGrowth2)
 summary(ANOVAtwobythree_alt)
 ```
 
@@ -287,7 +289,7 @@ summary(ANOVAtwobythree_alt)
 
 
 ``` r
-drop1(ANOVAtwobythree_alt, .~., test="F")
+drop1(ANOVAtwobythree_alt, . ~ ., test = "F")
 ```
 
 ```
@@ -311,9 +313,11 @@ return_aov will return an ANOVA list from which we can then call objects
 
 ``` r
 # make an ID variable
-ToothGrowth2$id&lt;- seq(1:60)
-require(ez) # even better bet to get SPSS like results.
-ez&lt;-ezANOVA(data=ToothGrowth2, dv=.(len), wid=.(id), between = .(supp, dose), return_aov=T, detailed=TRUE, type=3)
+ToothGrowth2$id &lt;- seq(1:60)
+require(ez)  # even better bet to get SPSS like results.
+ez &lt;- ezANOVA(data = ToothGrowth2, dv = .(len), wid = .(id),
+    between = .(supp, dose), return_aov = T, detailed = TRUE,
+    type = 3)
 ```
 
 ---
@@ -362,8 +366,8 @@ If you want to make it prettier, you would change the labels in the dataframe (a
 
 ``` r
 require(stargazer)
-stargazer(ANOVAtwobythree, summary = F, type="html", out="ANOVA_2_3.html")
-stargazer(ez$ANOVA, summary = F, type="html", out="ez_2_3.html")
+stargazer(ANOVAtwobythree, summary = F, type = "html", out = "ANOVA_2_3.html")
+stargazer(ez$ANOVA, summary = F, type = "html", out = "ez_2_3.html")
 ```
 
 ---
@@ -378,7 +382,7 @@ You would then further explore the contrasts or plot the results.
 
 
 ``` r
-TukeyHSD(ez$aov, which="dose")
+TukeyHSD(ez$aov, which = "dose")
 ```
 
 ```
@@ -415,7 +419,7 @@ summary(glht(ez$aov, linfct = mcp(dose = "Tukey")))
 ##              Estimate Std. Error t value Pr(&gt;|t|)    
 ## 1 - 0.5 == 0    9.130      1.148   7.951  &lt; 1e-06 ***
 ## 2 - 0.5 == 0   15.495      1.148  13.493  &lt; 1e-06 ***
-## 2 - 1 == 0      6.365      1.148   5.543 2.19e-06 ***
+## 2 - 1 == 0      6.365      1.148   5.543 2.07e-06 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## (Adjusted p values reported -- single-step method)
@@ -429,13 +433,15 @@ ggpubr makes ggplot2 even easier, and churns out some beautiful graphs.
 
 ``` r
 require(ggpubr)
-plot_moderation &lt;- ggviolin(ToothGrowth2, x = "dose", y = "len",
-                color = "dose", palette =c("black", "darkblue", "darkred"),
-                add = c("jitter","boxplot"), shape = "dose") + labs(x="Condition", y= "Length", color="Dose", shape= "Dose")
-plot_moderation  + facet_wrap(~supp)
+plot_moderation &lt;- ggviolin(ToothGrowth2, x = "dose",
+    y = "len", color = "dose", palette = c("black",
+        "darkblue", "darkred"), add = c("jitter", "boxplot"),
+    shape = "dose") + labs(x = "Condition", y = "Length",
+    color = "Dose", shape = "Dose")
+plot_moderation + facet_wrap(~supp)
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-21-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-21-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ``` r
 # Jitter could be omitted
@@ -447,7 +453,9 @@ plot_moderation  + facet_wrap(~supp)
 
 ``` r
 require(apaTables)
-apa.2way.table(supp, dose,  len, ToothGrowth2, filename = 'toothgrowth ANOVA', table.number = 1,show.conf.interval = T, show.marginal.means = T, landscape = TRUE)
+apa.2way.table(supp, dose, len, ToothGrowth2, filename = "toothgrowth ANOVA",
+    table.number = 1, show.conf.interval = T, show.marginal.means = T,
+    landscape = TRUE)
 ```
 
 ```
@@ -487,17 +495,21 @@ Note the singular.ok = T statement.
 
 
 ``` r
-# Bootstrap CI for ANOVA 
+# Bootstrap CI for ANOVA
 library(boot)
-# function to obtain p.values from F-test from the data 
+# function to obtain p.values from F-test from
+# the data
 p_value_twowayaov &lt;- function(data, indices) {
-  data_boot &lt;- data[indices,] # allows boot to select sample 
-  ANOVAtwobytwo_boot&lt;-Anova(lm(len~supp*dose, data=data_boot), contrasts = c("contr.sum", "contr.poly"), type = 3, singular.ok = TRUE)
-  return(ANOVAtwobytwo_boot$`Pr(&gt;F)`[4])
-} 
-# bootstrapping with 1000 replications 
+    data_boot &lt;- data[indices, ]  # allows boot to select sample 
+    ANOVAtwobytwo_boot &lt;- Anova(lm(len ~ supp * dose,
+        data = data_boot), contrasts = c("contr.sum",
+        "contr.poly"), type = 3, singular.ok = TRUE)
+    return(ANOVAtwobytwo_boot$`Pr(&gt;F)`[4])
+}
+# bootstrapping with 1000 replications
 set.seed(1234)
-results_twowayaov &lt;- boot(data=ToothGrowth2,statistic=p_value_twowayaov,R=1000)
+results_twowayaov &lt;- boot(data = ToothGrowth2, statistic = p_value_twowayaov,
+    R = 1000)
 ```
 
 ---
@@ -539,8 +551,8 @@ plot(results_twowayaov)
 
 
 ``` r
-# get 89% confidence interval 
-boot.ci(results_twowayaov, conf = 0.89, type="bca")
+# get 89% confidence interval
+boot.ci(results_twowayaov, conf = 0.89, type = "bca")
 ```
 
 ```
@@ -564,12 +576,12 @@ There are ways to "automate" this search for interaction, and there are 'tree' b
 
 ``` r
 require(tree)
-tree&lt;-tree(len~., ToothGrowth)
+tree &lt;- tree(len ~ ., ToothGrowth)
 plot(tree)
 text(tree)
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-27-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-27-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## 'party'!
@@ -579,12 +591,12 @@ Read about ??party. Amazing package to find patterns in your data. (It does so i
 
 ``` r
 require(party)
-ctree&lt;-ctree(len~., ToothGrowth) # opted for original dataframe
+ctree &lt;- ctree(len ~ ., ToothGrowth)  # opted for original dataframe
 ```
 
 Party= Recursive Partitioning of Variance. (underpinning it is permutation testing...)
 
-&lt;img src="https://media.giphy.com/media/149EV8wlV75ZQc/giphy.gif" width="350px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/149EV8wlV75ZQc/giphy.gif" alt="" width="350px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## plot
@@ -594,7 +606,7 @@ Party= Recursive Partitioning of Variance. (underpinning it is permutation testi
 plot(ctree)
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-30-1.png" width="375px" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-30-1.png" alt="" width="375px" /&gt;
 
 ---
 ## Continuous variables and interactions
@@ -604,11 +616,13 @@ Back to the Salaries dataset.
 
 ``` r
 require(car)
-salaries&lt;-carData::Salaries
+salaries &lt;- carData::Salaries
 require(dplyr)
-salaries&lt;- salaries %&gt;% mutate(monthly_salary=salary/9)
-salaries&lt;- salaries %&gt;% mutate(yrs.since.phd_cent= yrs.since.phd -mean(yrs.since.phd))
-names(salaries)[5] &lt;- "gender" # renamed
+salaries &lt;- salaries %&gt;%
+    mutate(monthly_salary = salary/9)
+salaries &lt;- salaries %&gt;%
+    mutate(yrs.since.phd_cent = yrs.since.phd - mean(yrs.since.phd))
+names(salaries)[5] &lt;- "gender"  # renamed
 ```
 
 ---
@@ -617,7 +631,8 @@ Regression model.
 
 
 ``` r
-interaction&lt;-lm(monthly_salary~gender*yrs.since.phd_cent,data=salaries)
+interaction &lt;- lm(monthly_salary ~ gender * yrs.since.phd_cent,
+    data = salaries)
 summary(interaction)
 ```
 
@@ -656,7 +671,7 @@ means_int &lt;- interactionMeans(interaction)
 plot(means_int)
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-33-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-33-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Test interactions (phia)
@@ -671,9 +686,9 @@ testInteractions(interaction)
 ```
 ## F Test: 
 ## P-value adjustment method: holm
-##               Value     SE         Df Sum of Sq      F Pr(&gt;F)
-## Female-Male -440.53 591.51          1   5148409 0.5547 0.4569
-## Residuals           393.00 3647788770
+##               Value     SE  Df  Sum of Sq      F Pr(&gt;F)
+## Female-Male -440.53 591.51   1    5148409 0.5547 0.4569
+## Residuals                  393 3647788770
 ```
 
 ---
@@ -684,10 +699,10 @@ You can modify this. Alternatively look to ggplot2 (Basically a scatterplot with
 
 ``` r
 library(effects)
-plot(allEffects(interaction), multiline=TRUE, ci.style="bands")
+plot(allEffects(interaction), multiline = TRUE, ci.style = "bands")
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-35-1.png" width="350px" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-35-1.png" alt="" width="350px" /&gt;
 
 ---
 ## Try it yourself
@@ -696,7 +711,7 @@ Conduct a  2 x 2 ANOVA with gender (or sex if you don't want to rename...) and y
 
 Make a plot.
 
-&lt;img src="https://media.giphy.com/media/tZpGRRMUoXgeQ/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/tZpGRRMUoXgeQ/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Permutation tests.
@@ -706,10 +721,11 @@ We can again do something clever, permutations! More [here](http://avesbiodiv.mn
 
 ``` r
 library(vegan)
-ToothGrowth2&lt;-ToothGrowth
-attach(ToothGrowth2) # need to attach data
+ToothGrowth2 &lt;- ToothGrowth
+attach(ToothGrowth2)  # need to attach data
 # margin corresponds to type III error.
-adonis2(len~ supp*dose, data = ToothGrowth2, by='margin', method='euclidean') 
+adonis2(len ~ supp * dose, data = ToothGrowth2, by = "margin",
+    method = "euclidean")
 ```
 
 ```
@@ -747,8 +763,8 @@ state-anxiety (Z)? (Basic example - consider **centering** when you run it yours
 
 ``` r
 require(psychTools)
-epi.bfi&lt;-psychTools::epi.bfi
-interaction2&lt;-lm(bdi ~ stateanx*epiNeur, data=epi.bfi)
+epi.bfi &lt;- psychTools::epi.bfi
+interaction2 &lt;- lm(bdi ~ stateanx * epiNeur, data = epi.bfi)
 summary(interaction2)
 ```
 
@@ -783,11 +799,11 @@ Usually we are interested in shifts of one SD.
 
 ``` r
 library(rockchalk)
-plotCurves(interaction2, plotx="epiNeur",
-modx="stateanx", modxVals="std.dev.", interval='confidence')
+plotCurves(interaction2, plotx = "epiNeur", modx = "stateanx",
+    modxVals = "std.dev.", interval = "confidence")
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-39-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-39-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Simple slopes method.
@@ -795,7 +811,8 @@ modx="stateanx", modxVals="std.dev.", interval='confidence')
 
 ``` r
 require(interactions)
-sim_slopes(interaction2, pred = epiNeur, modx = stateanx, johnson_neyman = FALSE)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
+    johnson_neyman = FALSE)
 ```
 
 ```
@@ -825,7 +842,7 @@ sim_slopes(interaction2, pred = epiNeur, modx = stateanx, johnson_neyman = FALSE
 
 The benefit of the J-N interval: it tells you exactly where the predictor’s slope becomes significant/insignificant. No arbitrary cut-offs.
 
-&lt;img src="https://media.giphy.com/media/l3q2vScRNubmJGSUo/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/l3q2vScRNubmJGSUo/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## How to do it. (interactions package, formerly 'jtools')
@@ -844,16 +861,17 @@ johnson_neyman(interaction2, pred = epiNeur, modx = stateanx)
 ## Note: The range of observed values of stateanx is [21.00, 79.00]
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-42-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-42-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Problems with heteroscedasticity?
 
 
 ``` r
-require(sandwich) # Robust estimation.
+require(sandwich)  # Robust estimation.
 require(lmtest)
-sim_slopes(interaction2, pred = epiNeur, modx = stateanx, robust=T)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx,
+    robust = T)
 ```
 
 ```
@@ -892,10 +910,11 @@ sim_slopes(interaction2, pred = epiNeur, modx = stateanx, robust=T)
 
 
 ``` r
-interact_plot(interaction2, pred = "epiNeur", modx = "stateanx", interval = TRUE, int.width = 0.9)
+interact_plot(interaction2, pred = "epiNeur", modx = "stateanx",
+    interval = TRUE, int.width = 0.9)
 ```
 
-&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-44-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture5-xaringan_files/figure-html/unnamed-chunk-44-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## RM-ANOVA: Talk to your neighbour. 
@@ -913,9 +932,10 @@ If you haven't conducted one, what would be a scenario where you would test one?
 
 
 ``` r
-library(ez) 
-bilingual&lt;-read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
-rm_anov&lt;-ezANOVA(data=bilingual, dv=mlu, wid=.(subj), within=.(language, age), between=gender, type = 3) 
+library(ez)
+bilingual &lt;- read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
+rm_anov &lt;- ezANOVA(data = bilingual, dv = mlu, wid = .(subj),
+    within = .(language, age), between = gender, type = 3)
 ```
 
 ---
@@ -925,7 +945,7 @@ Different types of error (I,II,III).
 
 Specify errors **always** to be on safe side.
 
-&lt;img src="https://media.giphy.com/media/fNlRJ7Gwr4Lba/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/fNlRJ7Gwr4Lba/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Work through the output.
@@ -1029,9 +1049,9 @@ Also check the reading list! (many more than listed here)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

@@ -185,7 +185,9 @@ Let us look at length. (Now with a Q-Q plot, also note other options for making 
 require(dplyr)
 multivariatenorm2<- iris %>% select(c(Sepal.Length,Petal.Length))
 require(MVN)
-mvn(multivariatenorm2, multivariatePlot = "qq")
+mvn(multivariatenorm2)
+mvn<-mvn(multivariatenorm2)
+plot(mvn, diagnostic = "multivariate", type = 'qq')
 ```
 
 ### Homogeneity of variance
