@@ -32,7 +32,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-03-03 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2026-02-24 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -143,8 +143,8 @@ mermaid(" graph LR
 ---
 ## Plot
 
-<div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-9a6a04758f37b4dceafe" style="width:504px;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-9a6a04758f37b4dceafe">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
+<div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-b244952a725249a4b756" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-b244952a725249a4b756">{"x":{"diagram":" graph LR\n\t        A(Age)-->F(Fertility)\n\t        A-->O(Cystic ovarian <br> disease)\n\t        A-->R(Retained <br> placenta)\n\t        R-->O\n\t        R-->M(Metritis)\n\t        M-->O\n\t        O-->F\n\t        M-->F\n\t        "},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## More beautiful...
@@ -177,8 +177,8 @@ grViz("
 ---
 ## Look at the shiny-shiny.
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-7abcdc063edc94f007eb" style="width:504px;height:504px;"></div>
-<script type="application/json" data-for="htmlwidget-7abcdc063edc94f007eb">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-e8ea55c1a8bd19371cab" style="width:504px;height:504px;"></div>
+<script type="application/json" data-for="htmlwidget-e8ea55c1a8bd19371cab">{"x":{"diagram":"\n\tdigraph causal {\n\t\n\t  # Nodes\n\t  node [shape = plaintext]\n\t  A [label = \"Age\"]\n\t  R [label = \"Retained\n Placenta\"]\n\t  M [label = \"Metritis\"]\n\t  O [label = \"Cystic ovarian\n disease\"]\n\t  F [label = \"Fertility\"]\n\t  \n\t  # Edges\n\t  edge [color = black,\n\t        arrowhead = vee]\n\t  rankdir = LR\n\t  A->F\n\t  A->O\n\t  A->R\n\t  R->O\n\t  R->M\n\t  M->O\n\t  O->F\n\t  M->F\n\t  \n\t  # Graph\n\t  graph [overlap = true, fontsize = 10]\n\t}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Check Diagrammer tutorial
@@ -516,11 +516,11 @@ summary(med.out)
 ## 
 ## Nonparametric Bootstrap Confidence Intervals with the Percentile Method
 ## 
-##                Estimate 95% CI Lower 95% CI Upper p-value    
-## ACME             0.3565       0.2145         0.53  &lt;2e-16 ***
-## ADE              0.0396      -0.2027         0.29   0.748    
-## Total Effect     0.3961       0.1589         0.64   0.001 ***
-## Prop. Mediated   0.9000       0.4900         2.08   0.001 ***
+##                 Estimate 95% CI Lower 95% CI Upper p-value    
+## ACME            0.356522     0.214536     0.527061  &lt;2e-16 ***
+## ADE             0.039604    -0.202650     0.292390  0.7478    
+## Total Effect    0.396126     0.158900     0.640099  0.0010 ***
+## Prop. Mediated  0.900022     0.489992     2.081820  0.0010 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -653,9 +653,9 @@ Also check the reading list! (many more than listed here)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
