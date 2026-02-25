@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A short talk on preference graphs"
-image: /img/node_settling.gif
+image: /img/nodes_settling.gif
 tags:
   - Research
   - Simpson's paradox
