@@ -21,7 +21,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-02-17 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2026-03-10 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -58,7 +58,7 @@ Who has run an exploratory factor analysis?
 
 What was the purpose?
 
-&lt;img src="https://media.giphy.com/media/l0HlHqERfyDLQD1p6/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/l0HlHqERfyDLQD1p6/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Purpose.
@@ -78,7 +78,7 @@ We want to study the covariation between a large number of observed variables.
 
 _Exploratory_ vs. confirmatory. Occasionally you will have a very clear idea has to how many factors there should be. In such a case one would usually do confirmatory analysis.
 
-&lt;img src="https://media.giphy.com/media/Wt94luq6ZY5tS/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/Wt94luq6ZY5tS/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Terminology.
@@ -130,7 +130,7 @@ Data were from [here](https://quantdev.ssri.psu.edu/) but are now available [her
 # Downloaded the data into my work directory.
 f_data &lt;- read.table("personality0.txt")
 require(stargazer)
-stargazer(f_data, type = "html", out= "factor_data.html")
+stargazer(f_data, type = "html", out = "factor_data.html")
 ```
 
 ---
@@ -138,7 +138,7 @@ stargazer(f_data, type = "html", out= "factor_data.html")
 
 Measurement and sample sizes OK. (Though 1 to 9, one can always question how 'interval' that really is. 1 to 7 would be worse and that is commonly used)
 
-&lt;img src="https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3oz8xQQP4ahKiyuxHy/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Multivariate normality.
@@ -152,161 +152,1060 @@ mvn(f_data)
 ```
 
 ```
-## $multivariateNormality
-##            Test       HZ p value MVN
-## 1 Henze-Zirkler 1.000172       0  NO
+## $multivariate_normality
+##            Test Statistic p.value     Method          MVN
+## 1 Henze-Zirkler         1  &lt;0.001 asymptotic ✗ Not normal
 ## 
-## $univariateNormality
-##                Test  Variable Statistic   p value Normality
-## 1  Anderson-Darling  distant     6.9751  &lt;0.001      NO    
-## 2  Anderson-Darling  talkatv     4.2917  &lt;0.001      NO    
-## 3  Anderson-Darling  carelss     6.8577  &lt;0.001      NO    
-## 4  Anderson-Darling  hardwrk     8.0398  &lt;0.001      NO    
-## 5  Anderson-Darling  anxious     4.0905  &lt;0.001      NO    
-## 6  Anderson-Darling  agreebl     7.0108  &lt;0.001      NO    
-## 7  Anderson-Darling   tense      4.3169  &lt;0.001      NO    
-## 8  Anderson-Darling   kind       7.7714  &lt;0.001      NO    
-## 9  Anderson-Darling  opposng     5.2942  &lt;0.001      NO    
-## 10 Anderson-Darling  relaxed     3.5136  &lt;0.001      NO    
-## 11 Anderson-Darling  disorgn     5.1948  &lt;0.001      NO    
-## 12 Anderson-Darling  outgoin     4.8684  &lt;0.001      NO    
-## 13 Anderson-Darling  approvn     5.6728  &lt;0.001      NO    
-## 14 Anderson-Darling    shy       3.7198  &lt;0.001      NO    
-## 15 Anderson-Darling  discipl     4.8654  &lt;0.001      NO    
-## 16 Anderson-Darling   harsh      6.7987  &lt;0.001      NO    
-## 17 Anderson-Darling  persevr     6.2778  &lt;0.001      NO    
-## 18 Anderson-Darling  friendl     8.4708  &lt;0.001      NO    
-## 19 Anderson-Darling  worryin     5.1901  &lt;0.001      NO    
-## 20 Anderson-Darling  respnsi     9.0694  &lt;0.001      NO    
-## 21 Anderson-Darling  contrar     4.7126  &lt;0.001      NO    
-## 22 Anderson-Darling  sociabl     6.3069  &lt;0.001      NO    
-## 23 Anderson-Darling   lazy       3.3986  &lt;0.001      NO    
-## 24 Anderson-Darling  coopera     7.6556  &lt;0.001      NO    
-## 25 Anderson-Darling   quiet      3.4238  &lt;0.001      NO    
-## 26 Anderson-Darling  organiz     3.9451  &lt;0.001      NO    
-## 27 Anderson-Darling  criticl     4.3845  &lt;0.001      NO    
-## 28 Anderson-Darling    lax       4.7180  &lt;0.001      NO    
-## 29 Anderson-Darling  laidbck     3.5410  &lt;0.001      NO    
-## 30 Anderson-Darling  withdrw     6.2122  &lt;0.001      NO    
-## 31 Anderson-Darling  givinup    10.0194  &lt;0.001      NO    
-## 32 Anderson-Darling  easygon     4.8535  &lt;0.001      NO    
+## $univariate_normality
+##                Test Variable Statistic p.value    Normality
+## 1  Anderson-Darling  distant     6.975  &lt;0.001 ✗ Not normal
+## 2  Anderson-Darling  talkatv     4.292  &lt;0.001 ✗ Not normal
+## 3  Anderson-Darling  carelss     6.858  &lt;0.001 ✗ Not normal
+## 4  Anderson-Darling  hardwrk     8.040  &lt;0.001 ✗ Not normal
+## 5  Anderson-Darling  anxious     4.090  &lt;0.001 ✗ Not normal
+## 6  Anderson-Darling  agreebl     7.011  &lt;0.001 ✗ Not normal
+## 7  Anderson-Darling    tense     4.317  &lt;0.001 ✗ Not normal
+## 8  Anderson-Darling     kind     7.771  &lt;0.001 ✗ Not normal
+## 9  Anderson-Darling  opposng     5.294  &lt;0.001 ✗ Not normal
+## 10 Anderson-Darling  relaxed     3.514  &lt;0.001 ✗ Not normal
+## 11 Anderson-Darling  disorgn     5.195  &lt;0.001 ✗ Not normal
+## 12 Anderson-Darling  outgoin     4.868  &lt;0.001 ✗ Not normal
+## 13 Anderson-Darling  approvn     5.673  &lt;0.001 ✗ Not normal
+## 14 Anderson-Darling      shy     3.720  &lt;0.001 ✗ Not normal
+## 15 Anderson-Darling  discipl     4.865  &lt;0.001 ✗ Not normal
+## 16 Anderson-Darling    harsh     6.799  &lt;0.001 ✗ Not normal
+## 17 Anderson-Darling  persevr     6.278  &lt;0.001 ✗ Not normal
+## 18 Anderson-Darling  friendl     8.471  &lt;0.001 ✗ Not normal
+## 19 Anderson-Darling  worryin     5.190  &lt;0.001 ✗ Not normal
+## 20 Anderson-Darling  respnsi     9.069  &lt;0.001 ✗ Not normal
+## 21 Anderson-Darling  contrar     4.713  &lt;0.001 ✗ Not normal
+## 22 Anderson-Darling  sociabl     6.307  &lt;0.001 ✗ Not normal
+## 23 Anderson-Darling     lazy     3.399  &lt;0.001 ✗ Not normal
+## 24 Anderson-Darling  coopera     7.656  &lt;0.001 ✗ Not normal
+## 25 Anderson-Darling    quiet     3.424  &lt;0.001 ✗ Not normal
+## 26 Anderson-Darling  organiz     3.945  &lt;0.001 ✗ Not normal
+## 27 Anderson-Darling  criticl     4.384  &lt;0.001 ✗ Not normal
+## 28 Anderson-Darling      lax     4.718  &lt;0.001 ✗ Not normal
+## 29 Anderson-Darling  laidbck     3.541  &lt;0.001 ✗ Not normal
+## 30 Anderson-Darling  withdrw     6.212  &lt;0.001 ✗ Not normal
+## 31 Anderson-Darling  givinup    10.019  &lt;0.001 ✗ Not normal
+## 32 Anderson-Darling  easygon     4.854  &lt;0.001 ✗ Not normal
 ## 
-## $Descriptives
-##           n     Mean  Std.Dev Median Min Max 25th 75th        Skew     Kurtosis
-## distant 240 3.866667 1.794615      3   1   8 2.00    5  0.21660329 -1.115187889
-## talkatv 240 5.883333 1.677732      6   2   9 5.00    7 -0.18189899 -0.748747155
-## carelss 240 3.412500 1.811357      3   1   9 2.00    5  0.66867120 -0.309281507
-## hardwrk 240 6.925000 1.370108      7   2   9 6.00    8 -0.80831996  0.614831474
-## anxious 240 5.129167 1.880305      5   1   9 4.00    7 -0.09210485 -0.771926581
-## agreebl 240 6.629167 1.372162      7   1   9 6.00    8 -0.78725929  1.042140998
-## tense   240 4.616667 1.904337      5   1   9 3.00    6 -0.02518179 -0.925252081
-## kind    240 6.970833 1.262255      7   2   9 6.00    8 -0.70373663  0.767591124
-## opposng 240 3.858333 1.599141      4   1   8 3.00    5  0.46913404 -0.293884606
-## relaxed 240 5.475000 1.694009      5   1   9 4.00    7 -0.08833270 -0.507015321
-## disorgn 240 4.083333 2.126082      4   1   9 2.00    6  0.16985907 -1.065496081
-## outgoin 240 6.020833 1.809894      6   2   9 5.00    7 -0.34291775 -0.761161418
-## approvn 240 5.858333 1.367867      6   2   9 5.00    7 -0.13555584 -0.154427814
-## shy     240 4.558333 1.969626      5   1   9 3.00    6  0.06063502 -0.919119555
-## discipl 240 6.308333 1.725011      7   1   9 5.00    7 -0.56730380  0.145322024
-## harsh   240 3.600000 1.683789      3   1   8 2.00    5  0.45079493 -0.736948487
-## persevr 240 6.804167 1.405006      7   2   9 6.00    8 -0.62497986  0.642059811
-## friendl 240 7.250000 1.155304      7   2   9 7.00    8 -0.59175740  1.210961241
-## worryin 240 5.212500 2.108126      6   1   9 3.00    7 -0.07134918 -1.139934280
-## respnsi 240 7.291667 1.395725      8   1   9 7.00    8 -1.21576315  2.252882721
-## contrar 240 3.770833 1.500900      4   1   8 3.00    5  0.22186635 -0.472970716
-## sociabl 240 6.445833 1.567579      7   2   9 5.00    8 -0.64011468  0.061296675
-## lazy    240 4.179167 1.893941      4   1   9 3.00    5  0.20658153 -0.597716553
-## coopera 240 6.695833 1.197619      7   3   9 6.00    7 -0.37705887  0.004767416
-## quiet   240 4.604167 1.880750      5   1   9 3.00    6  0.15018658 -0.728162291
-## organiz 240 6.154167 1.963363      6   1   9 5.00    8 -0.45913660 -0.438841538
-## criticl 240 5.170833 1.745282      5   1   9 4.00    6 -0.21890441 -0.556012334
-## lax     240 4.083333 1.664713      4   1   9 3.00    5  0.41571022 -0.088209525
-## laidbck 240 5.245833 1.790837      5   1   9 4.00    7 -0.13048078 -0.522778720
-## withdrw 240 3.754167 1.769684      3   1   7 2.00    5  0.17034350 -1.142037389
-## givinup 240 2.675000 1.553307      2   1   8 1.75    4  1.00112342  0.564770534
-## easygon 240 6.066667 1.601429      6   2   9 5.00    7 -0.41865452 -0.324220228
+## $descriptives
+##    Variable   n  Mean Std.Dev Median Min Max 25th 75th   Skew Kurtosis
+## 1   distant 240 3.867   1.795      3   1   8 2.00    5  0.218    1.901
+## 2   talkatv 240 5.883   1.678      6   2   9 5.00    7 -0.183    2.270
+## 3   carelss 240 3.413   1.811      3   1   9 2.00    5  0.673    2.713
+## 4   hardwrk 240 6.925   1.370      7   2   9 6.00    8 -0.813    3.645
+## 5   anxious 240 5.129   1.880      5   1   9 4.00    7 -0.093    2.247
+## 6   agreebl 240 6.629   1.372      7   1   9 6.00    8 -0.792    4.076
+## 7     tense 240 4.617   1.904      5   1   9 3.00    6 -0.025    2.092
+## 8      kind 240 6.971   1.262      7   2   9 6.00    8 -0.708    3.799
+## 9   opposng 240 3.858   1.599      4   1   8 3.00    5  0.472    2.729
+## 10  relaxed 240 5.475   1.694      5   1   9 4.00    7 -0.089    2.514
+## 11  disorgn 240 4.083   2.126      4   1   9 2.00    6  0.171    1.951
+## 12  outgoin 240 6.021   1.810      6   2   9 5.00    7 -0.345    2.258
+## 13  approvn 240 5.858   1.368      6   2   9 5.00    7 -0.136    2.869
+## 14      shy 240 4.558   1.970      5   1   9 3.00    6  0.061    2.098
+## 15  discipl 240 6.308   1.725      7   1   9 5.00    7 -0.571    3.172
+## 16    harsh 240 3.600   1.684      3   1   8 2.00    5  0.454    2.282
+## 17  persevr 240 6.804   1.405      7   2   9 6.00    8 -0.629    3.673
+## 18  friendl 240 7.250   1.155      7   2   9 7.00    8 -0.595    4.246
+## 19  worryin 240 5.213   2.108      6   1   9 3.00    7 -0.072    1.876
+## 20  respnsi 240 7.292   1.396      8   1   9 7.00    8 -1.223    5.297
+## 21  contrar 240 3.771   1.501      4   1   8 3.00    5  0.223    2.548
+## 22  sociabl 240 6.446   1.568      7   2   9 5.00    8 -0.644    3.087
+## 23     lazy 240 4.179   1.894      4   1   9 3.00    5  0.208    2.422
+## 24  coopera 240 6.696   1.198      7   3   9 6.00    7 -0.379    3.030
+## 25    quiet 240 4.604   1.881      5   1   9 3.00    6  0.151    2.291
+## 26  organiz 240 6.154   1.963      6   1   9 5.00    8 -0.462    2.583
+## 27  criticl 240 5.171   1.745      5   1   9 4.00    6 -0.220    2.464
+## 28      lax 240 4.083   1.665      4   1   9 3.00    5  0.418    2.936
+## 29  laidbck 240 5.246   1.791      5   1   9 4.00    7 -0.131    2.498
+## 30  withdrw 240 3.754   1.770      3   1   7 2.00    5  0.171    1.874
+## 31  givinup 240 2.675   1.553      2   1   8 1.75    4  1.007    3.595
+## 32  easygon 240 6.067   1.601      6   2   9 5.00    7 -0.421    2.698
+## 
+## $data
+##     distant talkatv carelss hardwrk anxious agreebl tense kind opposng relaxed
+## 1         2       7       1       4       7       8     5    9       5       6
+## 2         3       8       2       7       5       8     4    8       5       7
+## 3         6       6       2       5       1       8     2    9       2       8
+## 4         3       7       6       7       8       8     2    8       3       7
+## 5         7       3       3       5       8       6     7    2       3       3
+## 6         7       6       7       6       7       8     7    8       5       5
+## 7         3       6       8       6       6       7     3    5       3       7
+## 8         7       6       2       9       7       8     6    7       2       4
+## 9         2       6       2       8       2       7     4    7       4       8
+## 10        4       7       3       6       3       7     3    7       5       6
+## 11        3       5       2       8       3       7     3    5       4       5
+## 12        3       4       6       4       7       4     7    4       6       5
+## 13        2       5       4       7       8       8     7    8       3       4
+## 14        7       3       2       8       5       8     3    7       4       7
+## 15        7       3       5       6       6       7     6    6       3       5
+## 16        6       3       2       8       4       6     5    8       3       6
+## 17        4       5       4       8       7       6     7    7       4       4
+## 18        6       5       2       9       6       5     6    6       4       4
+## 19        2       7       2       7       3       6     6    7       2       6
+## 20        6       4       3       5       6       6     5    8       2       4
+## 21        5       5       2       8       6       5     6    8       4       2
+## 22        1       8       1       7       2       8     1    8       3       8
+## 23        7       7       5       6       7       7     7    6       4       2
+## 24        5       5       2       8       5       7     7    7       3       6
+## 25        5       6       3       8       8       4     6    7       6       4
+## 26        6       3       5       8       6       7     6    7       6       4
+## 27        3       2       2       7       4       6     4    7       3       7
+## 28        7       6       3       8       5       8     6    7       8       7
+## 29        5       3       3       7       5       6     5    7       6       6
+## 30        6       3       4       6       7       4     4    6       2       5
+## 31        3       5       2       7       6       7     6    8       5       4
+## 32        6       7       2       7       4       3     6    4       4       3
+## 33        6       6       4       8       2       6     6    7       5       4
+## 34        6       6       1       9       3       5     1    8       2       8
+## 35        5       5       2       8       6       8     5    7       4       6
+## 36        3       6       2       6       3       7     3    6       4       7
+## 37        2       5       1       7       2       6     6    5       2       4
+## 38        2       5       3       5       3       7     2    6       2       8
+## 39        6       6       4       7       2       7     2    9       6       8
+## 40        6       5       3       7       4       8     4    6       2       6
+## 41        2       7       6       7       6       6     6    7       3       5
+## 42        5       6       3       7       3       5     4    6       4       7
+## 43        2       9       3       8       8       7     7    7       3       2
+## 44        3       6       3       7       6       7     4    8       4       5
+## 45        1       6       3       4       3       5     3    5       5       8
+## 46        2       6       3       6       3       6     3    7       2       6
+## 47        5       5       6       7       5       6     6    5       5       5
+## 48        2       5       2       8       2       7     1    7       5       5
+## 49        4       5       4       8       7       6     7    5       4       3
+## 50        5       7       5       7       9       7     9    7       6       4
+## 51        3       8       4       6       6       4     7    6       4       2
+## 52        5       6       3       8       6       7     5    8       3       4
+## 53        2       8       2       8       7       6     7    7       7       3
+## 54        6       4       3       8       6       5     6    6       4       4
+## 55        3       8       5       7       5       7     4    8       2       6
+## 56        3       8       3       6       6       7     5    6       3       3
+## 57        6       7       2       8       4       7     6    8       4       5
+## 58        5       5       7       7       7       8     7    8       2       3
+## 59        3       7       9       4       4       7     5    6       3       6
+## 60        2       8       2       9       7       5     8    8       7       5
+## 61        6       8       5       4       4       6     4    5       6       7
+## 62        5       5       2       7       7       5     6    7       5       5
+## 63        3       8       1       7       5       9     5    9       1       4
+## 64        6       5       8       7       7       6     7    4       3       3
+## 65        5       6       3       7       8       5     8    7       4       3
+## 66        5       7       2       8       7       8     8    7       3       3
+## 67        1       9       3       8       4       6     4    8       3       7
+## 68        3       7       6       5       2       7     2    5       3       6
+## 69        6       5       3       7       5       8     6    6       4       5
+## 70        2       9       4       8       2       5     2    5       5       7
+## 71        3       7       3       8       7       6     7    7       4       4
+## 72        6       6       6       6       7       8     4    5       4       6
+## 73        3       7       2       6       5       8     2    6       5       9
+## 74        3       7       2       8       6       6     6    8       4       4
+## 75        3       6       3       6       2       7     3    7       6       5
+## 76        5       3       2       7       3       6     2    7       3       5
+## 77        5       7       8       8       9       7     8    7       7       5
+## 78        5       5       1       7       9       6     5    9       7       6
+## 79        3       7       1       9       6       5     5    8       5       5
+## 80        3       7       2       7       2       7     2    7       5       7
+## 81        2       6       5       7       3       7     3    8       6       7
+## 82        1       9       6       6       6       8     3    7       3       6
+## 83        4       6       3       7       5       8     5    9       2       4
+## 84        1       7       4       8       6       7     6    7       1       6
+## 85        7       3       6       8       4       6     7    8       3       4
+## 86        3       8       5       8       8       7     7    8       8       5
+## 87        3       6       4       7       3       7     2    8       3       7
+## 88        2       7       5       8       5       8     6    8       4       6
+## 89        1       8       6       7       5       8     3    8       4       7
+## 90        1       7       6       5       6       8     2    8       4       7
+## 91        6       7       2       6       5       5     3    8       5       5
+## 92        2       8       6       5       3       6     2    7       6       7
+## 93        3       6       3       6       3       7     3    7       4       7
+## 94        6       3       3       6       7       7     6    7       4       4
+## 95        2       7       4       6       5       9     6    7       3       5
+## 96        3       7       3       7       5       7     4    8       7       5
+## 97        7       4       3       6       6       5     4    6       7       4
+## 98        2       7       1       9       1       7     1    8       5       5
+## 99        5       5       5       6       3       8     1    9       5       6
+## 100       5       8       3       8       4       8     5    7       4       7
+## 101       2       7       4       7       7       6     5    5       4       6
+## 102       7       7       2       6       5       7     6    8       2       5
+## 103       1       8       4       9       5       7     4    8       4       6
+## 104       2       8       4       9       6       6     5    7       5       4
+## 105       1       8       5       5       9       7     7    7       5       7
+## 106       3       3       2       6       8       8     7    7       3       3
+## 107       7       4       3       7       7       7     7    7       3       5
+## 108       3       7       3       7       7       6     4    6       3       6
+## 109       3       5       1       7       6       6     5    5       3       5
+## 110       4       5       5       8       8       8     9    8       6       3
+## 111       5       7       7       7       4       6     2    7       5       6
+## 112       3       6       2       4       2       9     4    9       1       7
+## 113       5       5       3       8       7       6     7    6       6       3
+## 114       3       6       5       7       4       8     2    7       1       8
+## 115       6       4       2       6       2       8     2    7       3       8
+## 116       1       7       1       8       7       8     5    9       2       5
+## 117       5       5       2       9       6       8     7    8       3       5
+## 118       2       5       1       7       1       1     5    5       2       1
+## 119       3       7       4       6       4       6     2    6       2       7
+## 120       3       7       5       8       6       7     6    9       3       5
+## 121       5       4       5       5       6       8     4    8       4       6
+## 122       6       4       7       9       6       7     5    5       3       8
+## 123       5       4       2       7       2       7     2    6       5       8
+## 124       7       2       7       2       8       4     8    5       7       2
+## 125       6       3       4       7       6       7     3    7       3       6
+## 126       2       4       3       5       3       7     4    6       3       5
+## 127       6       5       4       6       5       5     5    6       5       5
+## 128       6       6       4       5       6       6     7    9       4       5
+## 129       7       4       3       6       6       8     3    7       2       9
+## 130       2       7       2       7       3       7     3    7       3       8
+## 131       4       3       2       8       7       8     6    8       4       7
+## 132       5       3       2       3       6       2     4    7       2       4
+## 133       2       7       4       9       5       7     3    7       2       6
+## 134       4       5       2       8       6       8     5    9       2       6
+## 135       1       8       5       7       4       6     4    6       6       8
+## 136       3       8       1       8       5       7     5    8       6       3
+## 137       2       6       2       8       2       6     5    7       5       5
+## 138       6       6       7       7       5       5     3    6       3       6
+## 139       4       8       3       7       4       6     3    6       4       6
+## 140       5       8       3       8       7       8     5    9       3       5
+## 141       6       4       2       4       6       6     4    8       6       6
+## 142       7       5       6       5       5       6     6    6       6       6
+## 143       3       7       4       8       6       4     6    6       4       2
+## 144       4       5       5       9       7       7     7    8       2       5
+## 145       2       7       1       8       2       5     7    7       7       6
+## 146       1       5       4       9       9       4     7    8       2       7
+## 147       6       7       6       8       7       8     7    5       4       5
+## 148       2       8       5       8       7       8     5    7       2       4
+## 149       3       7       4       7       4       6     3    7       4       6
+## 150       3       5       1       8       3       6     2    7       3       6
+## 151       7       6       2       8       7       4     6    6       5       3
+## 152       5       6       1       7       5       9     3    9       3       9
+## 153       5       4       7       7       4       3     6    4       4       4
+## 154       4       5       2       8       9       7     8    8       2       3
+## 155       1       6       1       9       2       5     2    8       4       8
+## 156       5       6       5       3       6       8     5    7       7       6
+## 157       7       7       8       7       5       6     3    6       8       7
+## 158       3       7       2       7       6       8     7    6       3       5
+## 159       2       6       3       6       5       7     5    7       2       5
+## 160       2       7       4       7       3       7     3    8       2       5
+## 161       5       8       3       5       7       5     7    7       6       6
+## 162       6       5       4       3       3       7     3    7       3       7
+## 163       3       8       5       6       5       7     4    6       5       7
+## 164       4       6       4       7       3       6     2    7       3       5
+## 165       4       9       3       7       3       5     2    5       6       2
+## 166       1       9       3       9       3       9     1    8       5       9
+## 167       1       6       2       6       4       8     3    7       3       4
+## 168       5       5       2       8       7       6     7    6       4       4
+## 169       2       3       2       5       4       7     5    6       3       6
+## 170       4       4       3       7       2       7     2    7       4       7
+## 171       3       7       2       8       6       9     6    9       1       8
+## 172       3       4       1       9       5       6     4    7       3       4
+## 173       3       6       4       5       3       6     2    3       5       7
+## 174       2       6       6       7       4       7     2    7       2       5
+## 175       1       3       1       7       4       7     2    9       1       5
+## 176       4       9       5       6       3       5     3    6       2       8
+## 177       6       3       5       6       6       6     6    4       5       4
+## 178       6       4       5       6       6       7     6    8       5       7
+## 179       6       4       2       7       3       4     1    5       5       9
+## 180       6       6       2       8       6       5     6    5       5       4
+## 181       3       5       1       8       7       8     4    8       2       8
+## 182       3       6       2       6       6       9     7    9       6       6
+## 183       3       8       3       7       5       7     5    7       3       6
+## 184       4       9       1       9       4       6     5    8       1       2
+## 185       3       6       1       8       6       7     4    9       3       7
+## 186       2       7       2       7       6       9     3    8       2       4
+## 187       6       4       3       7       5       6     4    7       3       7
+## 188       5       7       5       6       7       6     6    6       8       4
+## 189       3       8       6       8       8       7     7    7       5       3
+## 190       3       3       1       8       6       8     6    8       2       4
+## 191       3       7       2       8       7       7     7    7       6       5
+## 192       3       5       3       7       6       7     6    8       6       6
+## 193       5       3       3       8       6       8     5    7       4       4
+## 194       3       4       2       7       5       8     4    8       2       7
+## 195       7       2       3       4       8       7     5    7       3       5
+## 196       6       4       6       5       7       3     8    3       7       2
+## 197       3       7       2       8       5       7     5    6       6       4
+## 198       2       9       4       6       6       7     5    7       4       5
+## 199       2       7       1       8       6       5     4    9       4       5
+## 200       5       3       6       8       5       8     4    7       4       6
+## 201       2       5       6       8       3       6     3    6       3       7
+## 202       5       4       4       7       9       5     7    7       7       4
+## 203       6       6       5       4       7       6     7    8       6       5
+## 204       3       4       2       5       3       5     4    6       5       7
+## 205       6       4       7       7       4       8     5    7       3       7
+## 206       3       5       3       6       6       6     3    8       5       6
+## 207       4       7       2       7       6       8     4    8       2       5
+## 208       3       4       6       8       7       8     6    7       3       4
+## 209       6       5       2       8       4       6     3    7       3       6
+## 210       5       8       5       3       6       9     1    5       5       6
+## 211       4       5       3       7       3       6     3    6       4       7
+## 212       3       6       6       5       6       4     6    5       4       2
+## 213       4       6       7       9       4       7     5    7       3       8
+## 214       6       5       3       6       4       6     4    7       3       8
+## 215       5       4       4       8       7       7     6    8       5       4
+## 216       1       7       1       8       4       8     5    8       4       6
+## 217       6       3       1       7       7       8     3    9       1       6
+## 218       2       8       2       8       3       7     5    7       4       6
+## 219       2       8       2       8       4       7     2    8       2       3
+## 220       4       6       2       8       6       8     7    8       3       5
+## 221       3       4       1       5       4       8     2    8       3       9
+## 222       1       7       3       9       4       7     2    7       3       4
+## 223       3       7       4       6       4       6     5    7       4       8
+## 224       7       4       1       7       3       3     2    6       3       4
+## 225       2       7       3       6       3       7     6    8       2       7
+## 226       4       6       5       7       6       9     5    8       5       6
+## 227       3       7       7       4       2       8     2    8       1       9
+## 228       3       8       2       7       4       7     2    8       3       7
+## 229       2       4       1       7       5       8     5    8       3       5
+## 230       2       9       5       8       2       6     2    9       3       3
+## 231       2       7       1       9       5       5     3    6       3       5
+## 232       2       6       3       7       3       4     2    8       3       6
+## 233       5       5       6       6       3       7     2    5       2       8
+## 234       2       4       1       7       5       9     6    8       1       5
+## 235       2       4       2       7       7       7     4    7       4       7
+## 236       3       6       3       7       5       6     4    7       3       7
+## 237       2       8       3       7       2       7     2    7       2       8
+## 238       4       9       3       9       7       7     5    7       5       5
+## 239       3       8       4       9       7       6     5    6       3       5
+## 240       8       6       7       7       9       9     9    6       8       4
+##     disorgn outgoin approvn shy discipl harsh persevr friendl worryin respnsi
+## 1         3       2       7   9       5     5       8       9       9       9
+## 2         5       8       7   6       7     3       7       7       5       7
+## 3         7       6       7   5       5     2       5       8       3       9
+## 4         2       5       6   4       6     2       8       8       3       8
+## 5         5       2       5   8       7     5       6       2       8       7
+## 6         6       5       6   8       5     3       6       7       7       7
+## 7         7       8       7   5       7     2       4       8       6       2
+## 8         4       6       5   4       8     6       8       6       5       8
+## 9         3       8       7   3       6     4       8       8       2       8
+## 10        3       5       7   5       7     6       7       6       4       7
+## 11        2       5       4   7       8     7       8       7       3       8
+## 12        5       3       4   7       4     6       4       4       7       5
+## 13        3       5       6   6       7     2       7       7       8       6
+## 14        5       3       5   6       8     2       7       8       7       8
+## 15        3       4       6   6       5     3       7       6       6       7
+## 16        1       6       5   7       8     2       8       7       6       8
+## 17        2       6       5   5       6     1       9       8       9       9
+## 18        1       6       7   5       9     3       9       7       8       9
+## 19        6       8       6   2       6     2       7       7       2       9
+## 20        4       4       6   7       6     2       6       6       4       6
+## 21        1       4       5   5       7     4       9       7       8       8
+## 22        2       8       8   1       4     1       8       9       2       7
+## 23        6       5       5   5       7     5       4       6       7       5
+## 24        1       3       5   4       9     6       7       6       4       7
+## 25        4       4       6   6       8     7       7       7       5       7
+## 26        1       5       6   6       8     6       7       6       6       8
+## 27        3       2       6   6       6     1       7       7       7       7
+## 28        6       3       7   6       9     4       4       7       2       8
+## 29        3       5       5   5       7     2       8       8       5       8
+## 30        6       3       4   8       5     3       6       6       8       5
+## 31        2       4       5   6       8     3       7       7       6       6
+## 32        3       7       5   1       8     2       7       6       6       8
+## 33        6       4       4   4       7     6       6       5       3       8
+## 34        1       7       6   6       9     3       9       7       2       9
+## 35        3       7       7   2       7     2       8       8       8       9
+## 36        1       3       5   6       7     4       3       7       2       7
+## 37        1       6       4   6       6     5       5       6       5       8
+## 38        6       6       5   5       3     6       5       7       2       6
+## 39        3       7       4   5       7     3       7       8       3       8
+## 40        5       5       6   4       7     3       7       7       4       4
+## 41        3       3       4   7       6     6       8       7       8       8
+## 42        5       6       6   4       6     2       7       7       3       7
+## 43        3       8       8   3       6     4       8       9       6       7
+## 44        2       7       5   3       7     5       8       7       5       7
+## 45        8       3       5   7       7     4       8       6       3       5
+## 46        6       7       6   3       5     2       7       8       3       7
+## 47        4       5       5   8       5     5       6       7       6       8
+## 48        1       7       7   2       9     5       9       8       5       9
+## 49        4       3       3   3       7     6       7       6       8       8
+## 50        8       7       7   6       6     3       7       6       8       6
+## 51        2       5       3   4       4     4       6       6       7       8
+## 52        2       8       8   3       8     5       8       7       3       7
+## 53        4       9       7   3       5     4       9       8       7       7
+## 54        4       4       5   7       7     4       7       5       6       7
+## 55        6       8       6   4       9     3       8       8       3       5
+## 56        3       8       5   2       6     3       6       8       4       5
+## 57        3       8       7   1       9     2       7       8       3       9
+## 58        6       3       7   6       6     7       7       7       4       7
+## 59        9       7       6   6       1     3       3       8       8       3
+## 60        6       8       7   3       7     7       6       8       9       8
+## 61        6       7       5   4       7     6       7       6       5       6
+## 62        4       6       5   3       7     2       7       7       7       8
+## 63        1       7       5   2       8     2       9       9       9       9
+## 64        7       5       5   8       6     2       6       7       8       4
+## 65        6       5       4   3       7     3       6       7       8       6
+## 66        4       5       4   7       9     4       8       7       9       9
+## 67        4       9       9   1       6     5       8       9       5       7
+## 68        8       8       7   3       2     5       6       7       3       5
+## 69        2       5       6   6       6     5       6       6       5       8
+## 70        2       8       5   2       8     4       8       8       2       6
+## 71        4       8       7   3       7     1       8       9       6       8
+## 72        5       5       7   3       2     3       5       5       7       3
+## 73        5       7       7   2       4     3       6       7       2       6
+## 74        2       7       6   5       6     5       5       7       8       8
+## 75        6       6       7   4       7     3       3       7       3       4
+## 76        4       3       5   7       8     2       7       7       2       7
+## 77        8       4       3   2       6     8       8       7       8       8
+## 78        3       4       7   7       6     1       9       9       9       9
+## 79        1       8       5   2       9     3       9       9       6       9
+## 80        2       7       6   2       6     3       6       7       3       8
+## 81        4       5       5   3       4     2       7       8       2       8
+## 82        6       9       8   1       3     1       6       8       2       5
+## 83        5       7       7   4       7     2       8       9       5       7
+## 84        4       8       9   3       9     4       7       9       6       8
+## 85        2       4       7   7       9     5       7       8       7       9
+## 86        7       6       5   6       6     6       7       7       7       8
+## 87        4       7       5   3       6     2       8       7       2       6
+## 88        5       8       8   4       8     4       8       8       4       8
+## 89        6       8       6   3       5     3       7       8       6       8
+## 90        6       8       6   6       4     3       5       9       7       7
+## 91        6       7       5   2       4     2       7       8       5       9
+## 92        6       8       5   1       3     7       6       8       3       6
+## 93        3       6       6   6       6     2       4       7       2       7
+## 94        7       2       3   7       5     2       5       7       8       7
+## 95        3       7       8   5       6     3       6       7       5       6
+## 96        2       8       6   5       6     4       8       8       6       9
+## 97        6       3       3   7       6     7       6       6       6       6
+## 98        1       9       9   2       9     4       9       7       2       9
+## 99        6       7       5   5       4     6       9       9       3       6
+## 100       9       8       7   3       8     4       9       9       7       9
+## 101       3       8       5   2       7     3       7       7       6       7
+## 102       4       8       8   6       5     3       7       8       7       8
+## 103       2       9       6   4       8     3       9       9       5       7
+## 104       6       8       7   1       8     3       7       9       6       8
+## 105       6       7       7   4       6     5       7       7       6       6
+## 106       2       6       8   6       6     2       5       7       9       8
+## 107       2       3       7   7       7     5       8       7       8       8
+## 108       3       8       6   3       5     6       7       8       3       6
+## 109       3       5       4   6       7     2       7       6       7       7
+## 110       4       7       5   3       7     5       7       8       8       8
+## 111       2       8       6   3       7     7       7       7       3       8
+## 112       5       7       7   4       4     1       5       9       3       7
+## 113       6       6       6   5       6     7       6       6       6       7
+## 114       6       5       4   4       4     2       4       8       4       8
+## 115       2       4       7   5       7     2       6       6       6       8
+## 116       1       8       6   3       7     3       8       9       6       9
+## 117       4       6       6   8       7     2       8       8       7       9
+## 118       1       6       2   8       2     2       7       8       8       5
+## 119       3       7       5   4       7     2       8       7       5       6
+## 120       6       7       8   3       5     6       7       7       6       5
+## 121       6       7       7   5       4     2       5       7       4       6
+## 122       5       4       6   6       9     5       7       7       6       8
+## 123       3       4       5   4       5     3       7       7       2       8
+## 124       8       2       3   8       1     8       2       5       8       1
+## 125       3       5       6   3       7     2       6       6       7       7
+## 126       6       4       7   4       6     5       6       7       4       7
+## 127       6       4       5   5       7     5       7       5       5       7
+## 128       5       5       8   9       7     4       9       9       7       6
+## 129       7       4       5   6       4     6       6       7       3       6
+## 130       6       7       6   3       6     2       7       8       3       8
+## 131       3       5       5   6       5     4       6       7       7       8
+## 132       3       4       3   7       7     2       7       5       7       7
+## 133       3       7       5   3       9     2       8       8       7       7
+## 134       2       4       6   7       8     1       6       8       6       9
+## 135       5       7       6   2       6     7       5       7       3       7
+## 136       1       8       8   1       6     3       7       9       4       9
+## 137       2       7       3   1       7     5       7       7       2       7
+## 138       6       4       5   6       6     6       7       6       4       6
+## 139       2       7       6   4       6     5       5       7       3       7
+## 140       1       8       6   3       8     4       7       8       4       9
+## 141       6       4       6   8       4     2       7       6       6       4
+## 142       6       7       7   5       5     4       7       6       5       6
+## 143       6       7       7   3       6     4       7       7       6       8
+## 144       5       3       7   7       9     4       7       7       7       9
+## 145       5       8       5   2       9     5       8       7       9       8
+## 146       8       9       6   2       7     6       8       9       9       8
+## 147       6       6       3   5       6     6       9       6       6       7
+## 148       7       7       7   3       8     2       7       9       8       7
+## 149       4       7       5   3       8     4       6       6       4       7
+## 150       4       7       7   4       8     3       8       7       2       9
+## 151       1       7       4   2       6     6       9       8       7       8
+## 152       1       9       9   2       7     3       9       9       2       9
+## 153       6       5       7   7       5     4       7       7       4       7
+## 154       2       5       5   6       6     2       8       8       8       8
+## 155       2       6       5   2       5     1       9       8       3       9
+## 156       7       6       7   3       7     6       7       7       7       8
+## 157       4       6       4   5       3     7       7       8       7       5
+## 158       1       8       7   3       7     3       6       9       7       7
+## 159       6       6       5   5       5     3       6       7       6       7
+## 160       7       6       8   5       8     3       8       8       2       7
+## 161       5       8       5   5       4     6       5       8       7       7
+## 162       6       4       5   6       6     3       6       6       3       7
+## 163       6       8       6   3       5     4       6       6       5       6
+## 164       5       6       7   6       6     2       6       7       3       7
+## 165       6       7       5   3       6     5       6       6       6       6
+## 166       7       9       9   3       7     3       8       8       5       9
+## 167       1       7       6   4       5     3       6       9       7       8
+## 168       2       6       5   6       8     5       6       6       8       8
+## 169       1       5       7   6       5     1       5       6       3       6
+## 170       6       5       5   7       6     3       6       7       3       8
+## 171       2       6       8   4       9     3       9       9       1       8
+## 172       1       6       7   3       9     3       9       7       4       9
+## 173       8       7       6   2       6     4       6       7       3       8
+## 174       8       6       4   4       3     1       7       7       3       5
+## 175       3       3       9   7       7     1       7       9       3       8
+## 176       6       8       6   2       2     5       7       8       3       7
+## 177       5       3       5   7       5     5       6       4       6       6
+## 178       8       7       7   5       4     2       8       9       7       7
+## 179       4       6       5   3       7     4       6       6       3       6
+## 180       1       4       5   7       7     6       7       5       7       9
+## 181       1       9       7   2       6     2       7       8       5       9
+## 182       3       5       7   3       3     3       6       7       6       8
+## 183       3       9       4   1       4     2       6       9       3       7
+## 184       1       9       7   1       9     3       9       9       8       9
+## 185       2       6       6   3       7     3       9       9       5       8
+## 186       2       7       8   4       8     2       8       8       6       9
+## 187       4       5       7   4       6     5       7       6       5       8
+## 188       5       7       5   3       3     5       6       7       6       7
+## 189       6       7       6   3       7     3       9       7       7       7
+## 190       4       4       6   8       7     2       7       7       6       8
+## 191       2       7       7   5       7     4       7       8       7       8
+## 192       3       7       7   4       6     3       8       8       4       8
+## 193       4       5       5   7       7     4       7       7       6       9
+## 194       1       5       6   5       7     3       8       8       4       9
+## 195       6       3       4   8       6     2       5       6       4       7
+## 196       6       5       4   5       5     6       6       6       8       4
+## 197       2       6       8   6       8     6       7       7       3       8
+## 198       6       7       6   4       5     3       6       7       6       7
+## 199       1       8       6   4       7     2       7       9       6       9
+## 200       6       5       5   5       6     3       6       6       4       7
+## 201       4       5       4   7       8     3       7       7       7       7
+## 202       4       3       3   8       4     6       6       6       8       6
+## 203       7       7       6   7       7     4       5       7       8       9
+## 204       4       5       3   6       3     2       3       6       6       8
+## 205       7       2       6   8       5     6       6       7       7       7
+## 206       6       7       6   3       5     1       6       8       7       7
+## 207       2       8       6   3       8     3       9       8       4       8
+## 208       6       3       3   4       7     6       8       8       6       8
+## 209       2       6       6   3       9     4       8       7       3       8
+## 210       8       8       6   5       4     4       6       7       3       7
+## 211       2       4       6   8       9     6       9       5       3       8
+## 212       8       6       5   7       3     4       6       7       7       7
+## 213       7       6       6   5       6     1       8       7       6       8
+## 214       4       4       5   5       2     2       5       5       4       8
+## 215       4       4       6   8       9     3       6       7       7       8
+## 216       1       7       6   6       8     3       6       7       6       9
+## 217       1       4       7   6       6     2       6       8       6       9
+## 218       1       8       6   2       7     2       7       7       6       9
+## 219       3       9       8   2       5     2       7       9       2       9
+## 220       2       6       7   6       8     2       9       7       8       8
+## 221       2       5       5   5       6     3       4       8       2       7
+## 222       3       8       6   2       8     2       7       8       1       7
+## 223       4       7       6   6       7     3       7       8       2       5
+## 224       1       2       4   1       9     5       7       4       1       9
+## 225       5       7       7   7       7     1       8       8       4       7
+## 226       7       9       6   3       7     6       8       9       5       7
+## 227       8       6       6   5       3     5       2       7       3       3
+## 228       5       7       7   6       5     3       7       5       5       8
+## 229       2       6       5   5       5     1       7       8       8       8
+## 230       5       7       7   3       7     3       9       9       3       8
+## 231       1       9       5   5       5     2       6       8       6       8
+## 232       3       4       7   5       7     5       5       7       2       7
+## 233       7       6       5   7       7     2       6       7       2       6
+## 234       2       7       8   5       7     1       7       9       6       9
+## 235       2       7       7   2       7     4       4       7       5       8
+## 236       3       6       6   5       6     3       8       8       5       8
+## 237       5       7       7   5       7     2       4       7       3       6
+## 238       3       9       7   1       9     3       5       9       3       7
+## 239       3       7       5   5       9     2       8       7       7       8
+## 240       7       5       3   4       7     6       6       7       9       8
+##     contrar sociabl lazy coopera quiet organiz criticl lax laidbck withdrw
+## 1         5       9    7       9     9       5       5   5       7       5
+## 2         5       8    2       7     6       6       4   3       7       2
+## 3         2       8    5       8     7       4       5   5       7       6
+## 4         2       6    3       8     4       7       6   6       6       4
+## 5         3       2    6       6     7       5       5   3       3       7
+## 6         5       4    5       7     8       6       6   4       4       6
+## 7         2       9    6       6     4       4       6   9       9       2
+## 8         5       7    4       8     6       6       4   3       2       5
+## 9         3       8    3       8     5       7       7   3       6       3
+## 10        4       7    3       7     5       6       5   3       4       4
+## 11        5       7    4       7     7       8       7   5       5       6
+## 12        6       4    5       4     7       5       5   5       5       7
+## 13        2       6    5       8     8       6       3   3       3       5
+## 14        3       5    3       6     7       4       5   3       7       6
+## 15        4       4    5       6     5       6       4   5       6       6
+## 16        3       7    1       7     7       8       5   1       6       5
+## 17        3       5    5       9     5       9       9   7       3       5
+## 18        6       6    3       5     5       9       6   1       5       6
+## 19        3       7    4       7     2       6       3   2       7       2
+## 20        5       6    7       8     6       6       6   5       5       6
+## 21        6       5    2       5     4       8       6   3       1       6
+## 22        1       8    4       7     3       7       3   6       6       1
+## 23        4       6    7       4     7       5       7   3       4       3
+## 24        5       5    6       6     6       9       5   5       6       7
+## 25        6       4    5       6     6       7       7   5       5       6
+## 26        5       5    2       4     7       9       6   3       5       4
+## 27        3       6    5       7     8       7       4   6       4       4
+## 28        6       6    3       6     6       6       3   6       7       6
+## 29        3       5    2       6     4       7       6   2       5       3
+## 30        2       5    7       6     9       5       5   5       5       6
+## 31        3       4    3       8     6       9       7   4       4       5
+## 32        3       3    5       6     2       7       7   2       3       4
+## 33        6       5    3       5     4       5       6   3       3       5
+## 34        3       7    1       7     3       8       6   1       8       5
+## 35        4       7    2       7     4       8       7   5       7       3
+## 36        3       6    3       7     4       7       5   4       6       5
+## 37        4       7    6       6     6       9       6   3       8       3
+## 38        2       8    7       7     4       4       5   5       7       2
+## 39        4       7    4       7     3       7       7   4       7       4
+## 40        3       7    5       7     4       4       4   6       7       3
+## 41        4       6    6       6     3       7       6   3       6       3
+## 42        5       7    4       6     5       6       4   6       6       4
+## 43        4       8    4       6     3       9       7   4       4       4
+## 44        4       7    6       8     5       8       5   4       6       6
+## 45        4       7    8       7     6       2       9   7       7       2
+## 46        3       6    2       7     4       5       3   5       7       2
+## 47        5       5    5       7     7       5       5   5       5       5
+## 48        5       8    2       7     2       9       8   5       5       1
+## 49        5       6    3       5     5       3       7   3       4       4
+## 50        6       6    4       7     6       2       7   5       7       6
+## 51        4       4    4       4     4       8       8   2       2       3
+## 52        3       8    5       6     4       8       8   3       5       4
+## 53        3       8    3       6     2       5       7   4       3       1
+## 54        4       4    3       5     5       6       4   3       5       5
+## 55        4       7    2       7     3       4       4   7       8       3
+## 56        6       8    4       5     3       1       3   2       5       2
+## 57        2       6    2       7     2       8       6   3       8       2
+## 58        7       7    4       7     7       3       7   5       2       2
+## 59        7       7    9       6     2       1       3   8       7       3
+## 60        7       7    2       8     3       8       8   4       3       3
+## 61        6       7    6       4     3       5       7   5       7       3
+## 62        3       8    4       4     3       7       8   3       4       4
+## 63        1       7    1       9     1       9       1   5       3       1
+## 64        3       7    6       6     4       3       3   6       6       7
+## 65        4       6    5       6     5       4       3   3       3       4
+## 66        2       4    4       6     8       8       7   3       3       5
+## 67        4       9    4       7     2       8       4   3       6       1
+## 68        4       7    8       8     2       2       4   6       6       3
+## 69        3       5    4       6     6       7       5   2       5       4
+## 70        4       8    3       5     2       8       5   4       7       2
+## 71        4       6    3       6     2       7       1   5       4       3
+## 72        4       5    9       9     6       3       2   3       8       3
+## 73        3       9    7       7     1       6       5   7       9       1
+## 74        4       7    6       6     5       8       5   4       6       4
+## 75        5       7    6       5     4       3       6   6       6       4
+## 76        3       3    2       8     7       7       5   3       6       6
+## 77        6       5    6       5     6       3       7   4       7       6
+## 78        4       5    5       7     8       7       9   5       7       6
+## 79        5       8    1       8     2       9       7   2       2       2
+## 80        3       7    4       7     3       7       4   5       5       3
+## 81        4       7    1       8     3       7       7   3       8       2
+## 82        1       9    5       7     1       4       3   5       5       1
+## 83        2       7    4       9     3       6       5   5       6       3
+## 84        3       9    5       8     4       5       6   3       7       2
+## 85        3       3    5       7     8       9       5   5       4       7
+## 86        6       6    6       6     5       5       6   2       3       5
+## 87        3       7    5       6     3       6       4   2       6       2
+## 88        4       8    6       8     5       7       6   3       8       3
+## 89        4       8    5       8     5       5       6   2       7       2
+## 90        4       9    7       7     6       5       5   6       6       4
+## 91        5       8    4       6     5       4       5   4       4       3
+## 92        6       8    4       6     2       7       7   5       8       1
+## 93        3       7    6       7     5       7       2   6       7       3
+## 94        2       5    6       6     8       5       6   4       5       6
+## 95        3       8    3       6     3       7       3   3       7       2
+## 96        6       8    5       7     5       7       6   5       5       3
+## 97        7       4    5       5     6       4       7   3       5       6
+## 98        5       8    1       9     3       9       7   1       4       5
+## 99        4       7    5       8     5       5       7   4       7       5
+## 100       4       8    2       8     4       2       5   6       3       2
+## 101       5       8    6       6     3       6       6   2       6       3
+## 102       3       8    6       8     5       6       7   4       3       2
+## 103       3       8    2       7     3       8       4   5       3       2
+## 104       4       8    3       6     2       7       7   3       3       1
+## 105       5       7    7       7     4       6       8   6       6       2
+## 106       4       6    2       7     6       7       6   5       3       3
+## 107       2       4    4       7     7       7       5   3       5       6
+## 108       3       8    7       6     4       3       4   3       5       4
+## 109       3       7    3       6     5       6       6   4       5       6
+## 110       3       8    3       7     3       6       6   2       3       5
+## 111       3       7    2       6     2       8       6   2       6       4
+## 112       1       8    4       9     4       5       3   7       7       2
+## 113       5       6    5       6     5       6       6   6       5       5
+## 114       2       7    5       8     4       4       2   5       2       3
+## 115       3       4    5       8     6       8       3   2       4       6
+## 116       1       7    2       9     3       7       3   2       2       1
+## 117       4       6    2       7     8       5       7   3       5       6
+## 118       4       6    6       3     5       8       4   4       5       3
+## 119       3       8    4       6     5       6       2   4       5       2
+## 120       3       8    4       7     4       6       5   2       7       6
+## 121       5       6    5       7     6       5       4   4       6       5
+## 122       6       4    7       6     6       5       6   6       6       7
+## 123       4       5    3       5     6       6       5   3       8       5
+## 124       6       2    9       5     7       1       7   8       2       7
+## 125       3       5    6       8     8       6       5   6       5       6
+## 126       2       6    2       8     6       4       4   2       5       3
+## 127       5       5    5       5     5       4       6   5       5       5
+## 128       4       5    6       6     7       5       4   4       4       6
+## 129       3       4    3       7     2       4       6   6       9       7
+## 130       3       8    3       7     2       6       5   5       7       2
+## 131       5       7    5       6     7       7       6   4       7       3
+## 132       3       6    2       6     5       7       3   2       4       5
+## 133       2       7    2       8     3       8       6   2       5       1
+## 134       2       6    5       7     7       8       3   5       6       5
+## 135       4       9    2       7     2       7       6   4       6       4
+## 136       6       9    1       7     2       9       8   3       7       1
+## 137       5       6    1       7     2       8       8   2       5       1
+## 138       5       4    5       5     6       6       6   6       6       6
+## 139       4       8    2       7     2       8       6   3       6       4
+## 140       4       7    2       7     5       7       5   3       3       3
+## 141       3       4    6       6     8       4       4   5       6       6
+## 142       6       6    6       7     7       5       7   4       4       7
+## 143       4       7    2       6     2       8       6   2       3       3
+## 144       3       2    2       8     5       6       7   7       7       4
+## 145       6       7    5       6     2       5       6   5       6       2
+## 146       3       7    5       5     2       6       6   5       7       3
+## 147       5       5    5       7     4       4       6   3       4       5
+## 148       2       9    3       8     2       3       2   2       5       1
+## 149       3       7    3       7     3       7       4   5       4       2
+## 150       3       7    3       8     4       8       5   3       4       4
+## 151       6       8    1       6     5       8       7   5       6       2
+## 152       3       8    3       8     5       9       9   9       9       2
+## 153       6       5    4       7     5       3       4   2       4       6
+## 154       2       4    3       7     7       8       5   2       3       6
+## 155       2       6    2       7     2       6       6   2       4       1
+## 156       6       7    7       7     4       5       7   4       4       5
+## 157       7       6    9       8     7       5       8   7       9       7
+## 158       5       8    5       7     3       9       4   5       6       3
+## 159       3       7    6       7     6       5       3   5       5       3
+## 160       5       7    6       7     5       4       2   7       6       3
+## 161       6       8    7       5     1       6       7   4       4       2
+## 162       4       5    6       6     7       4       5   6       7       6
+## 163       4       7    4       6     2       7       5   5       6       3
+## 164       3       7    2       7     6       7       3   3       6       3
+## 165       5       7    7       6     4       3       6   6       7       4
+## 166       1       7    3       9     3       8       2   9       9       3
+## 167       4       8    5       7     3       9       6   3       1       3
+## 168       4       6    4       6     6       8       7   2       4       6
+## 169       2       5    4       7     5       6       4   4       4       3
+## 170       4       5    3       6     7       5       5   3       5       2
+## 171       7       4    2       7     6       8       7   5       9       2
+## 172       2       6    1       7     4       9       4   1       6       4
+## 173       6       6    4       8     2       3       3   5       7       3
+## 174       1       6    3       6     3       5       4   3       5       1
+## 175       1       6    1       8     5       8       1   2       3       1
+## 176       6       8    7       6     3       6       3   5       6       2
+## 177       5       3    5       5     7       5       6   5       5       6
+## 178       3       7    4       8     6       4       2   4       6       5
+## 179       4       5    4       6     3       6       4   8       8       3
+## 180       5       4    2       5     5       7       6   3       4       6
+## 181       2       7    2       8     4       9       2   7       8       3
+## 182       3       6    7       7     5       6       6   3       5       2
+## 183       2       9    5       7     2       5       3   6       7       2
+## 184       5       9    1       9     1       9       6   4       1       2
+## 185       3       8    4       8     4       8       3   5       5       2
+## 186       4       8    1       8     4       8       6   5       3       2
+## 187       3       6    2       6     4       6       5   4       6       4
+## 188       7       7    7       6     3       5       6   5       3       5
+## 189       4       7    5       6     3       4       6   4       4       3
+## 190       2       7    4       8     6       3       4   3       4       6
+## 191       5       6    3       7     4       7       7   3       5       3
+## 192       3       7    5       8     6       7       3   6       6       4
+## 193       4       4    5       7     7       8       4   5       5       6
+## 194       3       5    5       7     6       8       7   2       6       3
+## 195       4       3    7       7     9       5       4   5       6       7
+## 196       5       7    4       4     6       3       8   5       1       7
+## 197       5       8    4       8     3       9       6   3       3       2
+## 198       4       8    5       6     3       6       5   5       5       3
+## 199       1       7    1       8     3       9       7   1       2       3
+## 200       4       7    3       7     5       6       5   2       7       4
+## 201       2       7    6       7     4       4       7   4       4       5
+## 202       6       5    6       4     7       6       7   3       3       6
+## 203       5       8    8       5     5       6       6   4       4       1
+## 204       4       5    4       7     6       7       7   3       4       5
+## 205       5       6    8       4     5       4       7   5       6       6
+## 206       5       7    4       7     4       3       4   4       7       2
+## 207       2       7    2       7     3       9       2   4       6       4
+## 208       4       5    5       8     4       7       6   5       3       4
+## 209       3       7    1       6     6       9       6   5       4       3
+## 210       1       4    3       4     5       1       3   3       8       6
+## 211       3       5    2       6     6       8       6   4       6       5
+## 212       5       6    6       4     5       2       5   6       3       5
+## 213       3       7    5       7     6       4       2   3       5       4
+## 214       2       7    7       7     5       6       5   5       7       5
+## 215       7       6    6       7     8       7       7   6       6       6
+## 216       1       7    3       9     6       9       3   1       3       1
+## 217       2       5    4       7     9       9       6   3       3       6
+## 218       2       7    3       7     2       9       7   2       5       1
+## 219       3       8    2       8     2       7       2   4       5       2
+## 220       4       7    2       8     7       9       3   2       3       2
+## 221       3       5    7       8     5       6       4   5       5       2
+## 222       2       8    1       7     3       4       5   3       4       2
+## 223       4       7    5       7     4       6       5   4       5       3
+## 224       4       2    1       5     1       9       6   1       3       5
+## 225       2       7    5       7     5       6       2   3       6       1
+## 226       2       9    3       8     2       6       4   6       7       2
+## 227       2       7    7       7     4       2       3   8       8       6
+## 228       4       6    4       7     5       6       6   4       7       4
+## 229       1       8    5       8     4       8       3   1       5       2
+## 230       3       6    4       7     2       7       5   3       3       2
+## 231       3       9    5       6     4       9       6   3       3       1
+## 232       2       7    7       6     5       7       5   7       8       2
+## 233       1       6    3       8     5       3       2   7       8       3
+## 234       1       8    3       9     4       8       2   3       3       1
+## 235       4       8    2       4     6       8       5   3       6       4
+## 236       4       6    4       7     4       7       5   5       6       6
+## 237       2       7    4       6     4       7       2   4       7       3
+## 238       5       9    3       5     2       7       3   3       7       2
+## 239       3       6    1       6     5       7       5   2       5       3
+## 240       8       2    6       8     8       3       9   3       1       7
+##     givinup easygon
+## 1         5       8
+## 2         2       7
+## 3         2       8
+## 4         3       7
+## 5         5       5
+## 6         4       7
+## 7         3       8
+## 8         6       6
+## 9         1       7
+## 10        2       5
+## 11        2       7
+## 12        7       4
+## 13        4       4
+## 14        3       7
+## 15        4       6
+## 16        1       6
+## 17        1       6
+## 18        2       6
+## 19        2       7
+## 20        4       6
+## 21        6       5
+## 22        1       7
+## 23        4       4
+## 24        3       4
+## 25        5       7
+## 26        2       5
+## 27        2       5
+## 28        2       7
+## 29        2       7
+## 30        6       5
+## 31        3       3
+## 32        2       6
+## 33        3       4
+## 34        1       7
+## 35        2       8
+## 36        2       6
+## 37        2       7
+## 38        3       8
+## 39        1       8
+## 40        2       6
+## 41        1       6
+## 42        2       5
+## 43        7       8
+## 44        3       6
+## 45        2       7
+## 46        2       7
+## 47        2       6
+## 48        1       5
+## 49        3       4
+## 50        4       5
+## 51        3       3
+## 52        1       4
+## 53        1       2
+## 54        5       5
+## 55        1       8
+## 56        3       6
+## 57        3       8
+## 58        5       3
+## 59        6       8
+## 60        3       8
+## 61        2       6
+## 62        4       5
+## 63        1       7
+## 64        6       3
+## 65        4       5
+## 66        4       3
+## 67        1       6
+## 68        3       7
+## 69        2       6
+## 70        1       7
+## 71        1       6
+## 72        3       9
+## 73        4       9
+## 74        4       6
+## 75        4       6
+## 76        2       5
+## 77        2       6
+## 78        3       7
+## 79        1       8
+## 80        1       5
+## 81        1       8
+## 82        1       8
+## 83        2       7
+## 84        6       8
+## 85        5       4
+## 86        4       4
+## 87        2       6
+## 88        3       8
+## 89        2       7
+## 90        3       9
+## 91        2       4
+## 92        3       7
+## 93        4       8
+## 94        4       5
+## 95        2       8
+## 96        2       6
+## 97        5       4
+## 98        1       6
+## 99        1       6
+## 100       1       6
+## 101       2       6
+## 102       4       7
+## 103       1       4
+## 104       2       7
+## 105       1       9
+## 106       1       7
+## 107       2       5
+## 108       3       7
+## 109       3       3
+## 110       5       5
+## 111       2       6
+## 112       1       9
+## 113       4       5
+## 114       4       8
+## 115       3       8
+## 116       1       2
+## 117       2       5
+## 118       8       5
+## 119       1       4
+## 120       4       6
+## 121       4       7
+## 122       2       6
+## 123       2       7
+## 124       7       3
+## 125       6       6
+## 126       2       5
+## 127       3       5
+## 128       2       6
+## 129       5       7
+## 130       2       8
+## 131       3       7
+## 132       1       6
+## 133       1       6
+## 134       3       6
+## 135       3       7
+## 136       1       7
+## 137       1       5
+## 138       4       6
+## 139       3       6
+## 140       2       5
+## 141       2       6
+## 142       4       6
+## 143       2       4
+## 144       1       8
+## 145       1       8
+## 146       1       2
+## 147       5       5
+## 148       1       6
+## 149       2       4
+## 150       2       4
+## 151       3       8
+## 152       1       9
+## 153       3       6
+## 154       3       4
+## 155       1       4
+## 156       5       8
+## 157       4       8
+## 158       2       7
+## 159       5       5
+## 160       4       6
+## 161       5       6
+## 162       2       7
+## 163       4       6
+## 164       2       7
+## 165       1       8
+## 166       1       9
+## 167       2       5
+## 168       3       4
+## 169       2       4
+## 170       2       7
+## 171       2       6
+## 172       1       6
+## 173       3       7
+## 174       1       6
+## 175       1       6
+## 176       2       5
+## 177       5       5
+## 178       2       8
+## 179       2       8
+## 180       2       4
+## 181       2       8
+## 182       2       8
+## 183       2       6
+## 184       1       9
+## 185       1       6
+## 186       3       4
+## 187       4       7
+## 188       5       6
+## 189       1       4
+## 190       3       6
+## 191       2       6
+## 192       4       8
+## 193       3       5
+## 194       2       6
+## 195       5       6
+## 196       3       2
+## 197       1       3
+## 198       3       5
+## 199       1       7
+## 200       2       8
+## 201       1       5
+## 202       6       5
+## 203       1       3
+## 204       5       7
+## 205       6       6
+## 206       2       7
+## 207       1       7
+## 208       2       2
+## 209       2       6
+## 210       4       7
+## 211       2       7
+## 212       3       5
+## 213       2       7
+## 214       3       7
+## 215       6       6
+## 216       2       8
+## 217       3       8
+## 218       3       6
+## 219       1       7
+## 220       1       8
+## 221       3       7
+## 222       1       7
+## 223       2       5
+## 224       1       3
+## 225       1       7
+## 226       2       6
+## 227       8       9
+## 228       3       7
+## 229       2       5
+## 230       1       7
+## 231       1       3
+## 232       1       8
+## 233       5       8
+## 234       2       3
+## 235       2       5
+## 236       3       7
+## 237       2       7
+## 238       1       6
+## 239       2       7
+## 240       3       3
+## 
+## $subset
+## NULL
+## 
+## $outlierMethod
+## [1] "none"
+## 
+## attr(,"class")
+## [1] "mvn"
 ```
 
 ---
 ## Plot
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-7-1.png" width="400px" style="display: block; margin: auto;" /&gt;
-
-```
-## $multivariateNormality
-##            Test       HZ p value MVN
-## 1 Henze-Zirkler 1.000172       0  NO
-## 
-## $univariateNormality
-##                Test  Variable Statistic   p value Normality
-## 1  Anderson-Darling  distant     6.9751  &lt;0.001      NO    
-## 2  Anderson-Darling  talkatv     4.2917  &lt;0.001      NO    
-## 3  Anderson-Darling  carelss     6.8577  &lt;0.001      NO    
-## 4  Anderson-Darling  hardwrk     8.0398  &lt;0.001      NO    
-## 5  Anderson-Darling  anxious     4.0905  &lt;0.001      NO    
-## 6  Anderson-Darling  agreebl     7.0108  &lt;0.001      NO    
-## 7  Anderson-Darling   tense      4.3169  &lt;0.001      NO    
-## 8  Anderson-Darling   kind       7.7714  &lt;0.001      NO    
-## 9  Anderson-Darling  opposng     5.2942  &lt;0.001      NO    
-## 10 Anderson-Darling  relaxed     3.5136  &lt;0.001      NO    
-## 11 Anderson-Darling  disorgn     5.1948  &lt;0.001      NO    
-## 12 Anderson-Darling  outgoin     4.8684  &lt;0.001      NO    
-## 13 Anderson-Darling  approvn     5.6728  &lt;0.001      NO    
-## 14 Anderson-Darling    shy       3.7198  &lt;0.001      NO    
-## 15 Anderson-Darling  discipl     4.8654  &lt;0.001      NO    
-## 16 Anderson-Darling   harsh      6.7987  &lt;0.001      NO    
-## 17 Anderson-Darling  persevr     6.2778  &lt;0.001      NO    
-## 18 Anderson-Darling  friendl     8.4708  &lt;0.001      NO    
-## 19 Anderson-Darling  worryin     5.1901  &lt;0.001      NO    
-## 20 Anderson-Darling  respnsi     9.0694  &lt;0.001      NO    
-## 21 Anderson-Darling  contrar     4.7126  &lt;0.001      NO    
-## 22 Anderson-Darling  sociabl     6.3069  &lt;0.001      NO    
-## 23 Anderson-Darling   lazy       3.3986  &lt;0.001      NO    
-## 24 Anderson-Darling  coopera     7.6556  &lt;0.001      NO    
-## 25 Anderson-Darling   quiet      3.4238  &lt;0.001      NO    
-## 26 Anderson-Darling  organiz     3.9451  &lt;0.001      NO    
-## 27 Anderson-Darling  criticl     4.3845  &lt;0.001      NO    
-## 28 Anderson-Darling    lax       4.7180  &lt;0.001      NO    
-## 29 Anderson-Darling  laidbck     3.5410  &lt;0.001      NO    
-## 30 Anderson-Darling  withdrw     6.2122  &lt;0.001      NO    
-## 31 Anderson-Darling  givinup    10.0194  &lt;0.001      NO    
-## 32 Anderson-Darling  easygon     4.8535  &lt;0.001      NO    
-## 
-## $Descriptives
-##           n     Mean  Std.Dev Median Min Max 25th 75th        Skew     Kurtosis
-## distant 240 3.866667 1.794615      3   1   8 2.00    5  0.21660329 -1.115187889
-## talkatv 240 5.883333 1.677732      6   2   9 5.00    7 -0.18189899 -0.748747155
-## carelss 240 3.412500 1.811357      3   1   9 2.00    5  0.66867120 -0.309281507
-## hardwrk 240 6.925000 1.370108      7   2   9 6.00    8 -0.80831996  0.614831474
-## anxious 240 5.129167 1.880305      5   1   9 4.00    7 -0.09210485 -0.771926581
-## agreebl 240 6.629167 1.372162      7   1   9 6.00    8 -0.78725929  1.042140998
-## tense   240 4.616667 1.904337      5   1   9 3.00    6 -0.02518179 -0.925252081
-## kind    240 6.970833 1.262255      7   2   9 6.00    8 -0.70373663  0.767591124
-## opposng 240 3.858333 1.599141      4   1   8 3.00    5  0.46913404 -0.293884606
-## relaxed 240 5.475000 1.694009      5   1   9 4.00    7 -0.08833270 -0.507015321
-## disorgn 240 4.083333 2.126082      4   1   9 2.00    6  0.16985907 -1.065496081
-## outgoin 240 6.020833 1.809894      6   2   9 5.00    7 -0.34291775 -0.761161418
-## approvn 240 5.858333 1.367867      6   2   9 5.00    7 -0.13555584 -0.154427814
-## shy     240 4.558333 1.969626      5   1   9 3.00    6  0.06063502 -0.919119555
-## discipl 240 6.308333 1.725011      7   1   9 5.00    7 -0.56730380  0.145322024
-## harsh   240 3.600000 1.683789      3   1   8 2.00    5  0.45079493 -0.736948487
-## persevr 240 6.804167 1.405006      7   2   9 6.00    8 -0.62497986  0.642059811
-## friendl 240 7.250000 1.155304      7   2   9 7.00    8 -0.59175740  1.210961241
-## worryin 240 5.212500 2.108126      6   1   9 3.00    7 -0.07134918 -1.139934280
-## respnsi 240 7.291667 1.395725      8   1   9 7.00    8 -1.21576315  2.252882721
-## contrar 240 3.770833 1.500900      4   1   8 3.00    5  0.22186635 -0.472970716
-## sociabl 240 6.445833 1.567579      7   2   9 5.00    8 -0.64011468  0.061296675
-## lazy    240 4.179167 1.893941      4   1   9 3.00    5  0.20658153 -0.597716553
-## coopera 240 6.695833 1.197619      7   3   9 6.00    7 -0.37705887  0.004767416
-## quiet   240 4.604167 1.880750      5   1   9 3.00    6  0.15018658 -0.728162291
-## organiz 240 6.154167 1.963363      6   1   9 5.00    8 -0.45913660 -0.438841538
-## criticl 240 5.170833 1.745282      5   1   9 4.00    6 -0.21890441 -0.556012334
-## lax     240 4.083333 1.664713      4   1   9 3.00    5  0.41571022 -0.088209525
-## laidbck 240 5.245833 1.790837      5   1   9 4.00    7 -0.13048078 -0.522778720
-## withdrw 240 3.754167 1.769684      3   1   7 2.00    5  0.17034350 -1.142037389
-## givinup 240 2.675000 1.553307      2   1   8 1.75    4  1.00112342  0.564770534
-## easygon 240 6.066667 1.601429      6   2   9 5.00    7 -0.41865452 -0.324220228
-```
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-7-1.png" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Linearity
@@ -317,10 +1216,10 @@ You can do all pairwise scatterplots but with range 1-9 this is not wholly usefu
 ``` r
 require(ggplot2)
 require(GGally)
-ggpairs(f_data[,1:4]) # example
+ggpairs(f_data[, 1:4])  # example
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-8-1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-8-1.png" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Factorability.
@@ -403,18 +1302,20 @@ Read in the data, make a subset with items 13:24 (Hint: use the select function 
 
 
 ``` r
-# ggcorrplot, you can then further tweak this, as it is a ggplot.
+# ggcorrplot, you can then further tweak this, as
+# it is a ggplot.
 require(ggcorrplot)
 require(dplyr)
 # take the absolute, interested in strength.
-cormatrix&lt;-abs(cor(f_data[,1:20])) 
-corplot&lt;-ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", method = "circle") 
+cormatrix &lt;- abs(cor(f_data[, 1:20]))
+corplot &lt;- ggcorrplot(cormatrix, hc.order = TRUE, type = "lower",
+    method = "circle")
 ```
 
 ---
 ## Plot
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-12-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-12-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Some further terms.
@@ -440,7 +1341,7 @@ Varimax rotation. Let's start by getting 8 factors. (Request large number and th
 
 ``` r
 require(psych)
-fa &lt;- fa(f_data,8, fm = 'minres', rotate='varimax', fa = 'fa')
+fa &lt;- fa(f_data, 8, fm = "minres", rotate = "varimax", fa = "fa")
 ```
 
 ---
@@ -448,7 +1349,7 @@ fa &lt;- fa(f_data,8, fm = 'minres', rotate='varimax', fa = 'fa')
 
 
 ``` r
-sink('fa_output.text')
+sink("fa_output.text")
 fa
 sink()
 ```
@@ -488,7 +1389,7 @@ Each has advantages and disadvantages. 8) although common is probably the worst.
 
 Read more [here](http://personality-project.org/r/psych/HowTo/factor.pdf)
 
-&lt;img src="https://media.giphy.com/media/3o6gDSdED1B5wjC2Gc/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3o6gDSdED1B5wjC2Gc/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Parallel analysis.
@@ -498,10 +1399,10 @@ Also part of the output already. Here I used 'minres' as extraction method. Para
 
 ``` r
 require(psych)
-parallel &lt;- fa.parallel(f_data, fm = 'minres', fa = 'fa')
+parallel &lt;- fa.parallel(f_data, fm = "minres", fa = "fa")
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-16-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-16-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ```
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA
@@ -527,9 +1428,9 @@ parallel
 ## [25] -0.49 -0.52 -0.55 -0.58 -0.60 -0.62 -0.67 -0.70
 ## 
 ##  eigen values of simulated factors
-##  [1]  0.86  0.68  0.60  0.52  0.46  0.41  0.36  0.31  0.26  0.23  0.20  0.16
-## [13]  0.12  0.08  0.04  0.00 -0.04 -0.07 -0.10 -0.14 -0.17 -0.20 -0.23 -0.25
-## [25] -0.28 -0.32 -0.36 -0.39 -0.42 -0.45 -0.49 -0.53
+##  [1]  0.85  0.68  0.58  0.53  0.47  0.42  0.37  0.32  0.28  0.23  0.19  0.15
+## [13]  0.11  0.08  0.03  0.00 -0.04 -0.06 -0.10 -0.13 -0.17 -0.19 -0.22 -0.26
+## [25] -0.28 -0.31 -0.35 -0.38 -0.42 -0.46 -0.50 -0.55
 ## 
 ##  eigen values of components 
 ##  [1] 7.24 4.53 3.12 2.33 1.88 1.19 0.93 0.86 0.80 0.71 0.69 0.64 0.63 0.54 0.51
@@ -581,10 +1482,10 @@ The VSS plot suggests 3 factors. Very little improvement with 4. MAP suggests 6 
 
 ``` r
 require(psych)
-VSS(f_data, rotate= "varimax", n.obs= 240)# shows plot
+VSS(f_data, rotate = "varimax", n.obs = 240)  # shows plot
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-20-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-20-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ```
 ## 
@@ -633,12 +1534,12 @@ Let's extract one with three factors though 5 could also be workable.
 
 
 ``` r
-fa_3&lt;-fa(f_data,3, fm = 'minres', rotate='varimax', fa = 'fa')
-sink('fa_3_output.txt')
+fa_3 &lt;- fa(f_data, 3, fm = "minres", rotate = "varimax", fa = "fa")
+sink("fa_3_output.txt")
 fa_3
 sink()
-fa_5&lt;-fa(f_data,5, fm = 'minres', rotate='varimax', fa = 'fa')
-sink('fa_5_output.txt')
+fa_5 &lt;- fa(f_data, 5, fm = "minres", rotate = "varimax", fa = "fa")
+sink("fa_5_output.txt")
 fa_5
 sink()
 ```
@@ -648,10 +1549,10 @@ sink()
 
 
 ``` r
-fa.diagram(fa_5, marg=c(.01,.01,1,.01))
+fa.diagram(fa_5, marg = c(0.01, 0.01, 1, 0.01))
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-22-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-22-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Factors.
@@ -661,18 +1562,18 @@ How would you label those 5 factors?
 
 ``` r
 require(semPlot)
-semplot1&lt;-semPlotModel(fa_5$loadings)
-semPaths(semplot1, what="std", layout="circle", nCharNodes = 6)
+semplot1 &lt;- semPlotModel(fa_5$loadings)
+semPaths(semplot1, what = "std", layout = "circle", nCharNodes = 6)
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-23-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-23-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Try it yourself.
 
 Make a plot for your item scores.
 
-&lt;img src="https://media.giphy.com/media/hTTnsRaU1geWuvUUjB/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/hTTnsRaU1geWuvUUjB/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Fit indices.
@@ -705,10 +1606,10 @@ There are many methods. Most of the time you'll get [similar results](https://st
 
 ``` r
 require(psych)
-parallel &lt;- fa.parallel(f_data, fm = 'pa', fa = 'fa')
+parallel &lt;- fa.parallel(f_data, fm = "pa", fa = "fa")
 ```
 
-&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-25-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture7_xaringan_files/figure-html/unnamed-chunk-25-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ```
 ## Parallel analysis suggests that the number of factors =  5  and the number of components =  NA
@@ -723,9 +1624,11 @@ You can further beautify this by generating labels for those 32 items.
 ``` r
 require(stargazer)
 require(plyr)
-factor_loadings&lt;-as.data.frame(as.matrix.data.frame(fa_5$loadings))
-factor_loadings&lt;-plyr::rename(factor_loadings, c("V1"="Factor 1","V2"="Factor 2", "V3"="Factor 3", "V4"="Factor 4", "V5"="Factor 5"))
-stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=FALSE, type="html")
+factor_loadings &lt;- as.data.frame(as.matrix.data.frame(fa_5$loadings))
+factor_loadings &lt;- plyr::rename(factor_loadings, c(V1 = "Factor 1",
+    V2 = "Factor 2", V3 = "Factor 3", V4 = "Factor 4", V5 = "Factor 5"))
+stargazer(factor_loadings, summary = FALSE, out = "results_loadings.html",
+    header = FALSE, type = "html")
 ```
 
 
@@ -770,7 +1673,8 @@ stargazer(factor_loadings, summary = FALSE,out= "results_loadings.html", header=
 
 ``` r
 require(GPArotation)
-plot(fa_5,labels=names(f_data),cex=.7, ylim=c(-.1,1)) 
+plot(fa_5, labels = names(f_data), cex = 0.7, ylim = c(-0.1,
+    1))
 ```
 
 ![](Lecture7_xaringan_files/figure-html/unnamed-chunk-26-1.png)&lt;!-- --&gt;
@@ -782,7 +1686,7 @@ Just plot the first two factors, and those with loadings above .5. Label it.
 
 
 ``` r
-factor.plot(fa_5, choose=c(1,2), cut=0.5, labels=colnames(f_data))
+factor.plot(fa_5, choose = c(1, 2), cut = 0.5, labels = colnames(f_data))
 ```
 
 ![](Lecture7_xaringan_files/figure-html/unnamed-chunk-27-1.png)&lt;!-- --&gt;
@@ -804,7 +1708,7 @@ Find out how to do it [here](https://personality-project.org/r/html/alpha.html)
 
 Perhaps you should [not](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2792363/) rely on it too much?
 
-&lt;img src="https://media.giphy.com/media/1zSz5MVw4zKg0/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/1zSz5MVw4zKg0/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Exercise
@@ -836,9 +1740,9 @@ Also check the reading list! (many more than listed here)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));

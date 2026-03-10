@@ -1,0 +1,119 @@
+---
+title: "Solution Lecture 7"
+author: "Prof. Thomas Pollet, Northumbria University, UK (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](https://tvpollet.github.io/disclaimer/)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Exercise 7 instructions.
+
+
+Load the BFI data from the 'psych' package (??bfi). This contains data on 2800 participants completing items relating to the 'big five' from the IPIP pool. You'll have to subset the variables for your factor analysis.
+
+Conduct a Bartlett's test & KMO test.
+
+Conduct an exploratory factor analysis (using 'minres' as method), using parallel analysis, discuss the scree plot, Very Simple Structure and Velicer map test.
+
+Extract a five factor model (use varimax rotation), export the factor loadings of these five factors. Discuss the RMSEA and TLI for that five factor model.
+
+Make a plot for the factors. 
+
+## Load the data and subset all personality items.
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture7")
+require(psych)
+Data<-psych::bfi 
+big_5<-Data[,c(1:25)]
+```
+
+## Bartlett's test and KMO test
+
+Bartlett's test for sphericity was significant suggesting that factor analysis is appropriate ($\chi^2$(24) = 1744.7, _p_ < .0001).
+
+```{r}
+bartlett.test(big_5)
+```
+
+All 25 items showed middling to meritorious adequacy for factor analysis (all MSA$\geq$.73).
+
+```{r}
+require(psych)
+KMO(big_5)
+```
+
+## Parallel analysis
+
+Extract a large number of factors and examine
+
+```{r}
+require(psych)
+fa <- fa(big_5,8, fm = 'minres', rotate='varimax', fa = 'fa')
+fa
+```
+
+The 'elbow' in the graph (scree test) suggests five factors. Parallel analysis suggests 6 factor solution (!). The Kaiser criterion suggests a 3 factor solution. The Velicer Map test suggests 5 factors. The very simple structure test suggests 3-4 factors. Note that you have two 'vss' complexity values, the second suggests 4-5 factors. 
+
+```{r}
+parallel <- fa.parallel(big_5, fm = 'minres', fa = 'fa')
+parallel
+VSS(big_5, rotate= "varimax", n.obs= 2800, n=8)
+```
+
+## Extract a five factor solution.
+
+```{r}
+fa_5<-fa(big_5,5, fm = 'minres', rotate='varimax', fa = 'fa')
+fa_5
+```
+
+## Export loadings.
+
+It should be clear what they map on to... .
+
+```{r}
+require(stargazer)
+require(plyr)
+factor_loadings<-as.data.frame(as.matrix.data.frame(fa_5$loadings))
+factor_loadings<-plyr::rename(factor_loadings, c("V1"="Neuroticism","V2"="Extraversion", "V3"="Conscientiousness", "V4"="Agreeableness", "V5"="Openness"))
+stargazer(factor_loadings, summary = FALSE,out= "results_loadings_exercise.html", header=FALSE)
+```
+
+
+## TLI and RMSEA.
+
+While the five factor model could be considered a close fit in RMSEA (.056), it was not in terms of TLI (.867).
+
+## Plots.
+
+Hurray, this sort of looks like the 'big 5'!
+
+```{r, message=F, warning=F}
+require(GPArotation)
+fa.diagram(fa_5, marg=c(.01,.01,1,.01))
+require(semPlot)
+semplot1<-semPlotModel(fa_5$loadings)
+semPaths(semplot1, what="std", layout="circle", nCharNodes = 6)
+plot(fa_5,labels=names(big_5),cex=.7, ylim=c(-.1,1)) 
+```
+
+
+**The end!**
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/eORvoGISNKOOY/giphy.gif")
+```
