@@ -19,6 +19,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 *Cite at your own risk, feedback welcome*
 
+* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2026, March 12th). How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fdkj5_v3](https://doi.org/10.31234/osf.io/fdkj5_v3)
+
 * Grugan, M., & **Pollet, T.V.** (2026, February 5). Optimising Cross-Institutional Comparisons in Large-Scale Student Surveys: An Illustration with the National Student Survey (NSS) in Russell Group Institutions. _PsyArxiv_ [https://osf.io/preprints/psyarxiv/yxkur_v1](https://osf.io/preprints/psyarxiv/yxkur_v1)
 
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, November 12). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _OSF preprints_ [https://doi.org/10.31219/osf.io/fpej9_v2](https://doi.org/10.31219/osf.io/fpej9_v2)
@@ -26,8 +28,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 * Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (2025, November 5). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3dcth_v1](https://doi.org/10.31234/osf.io/3dcth_v1)
 
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
-
-* **Pollet, T.V.**, Bilalić, M., & Shepherd, L. (2025, Jan. 6th). How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method. _PsyArxiv_ [https://doi.org/10.31234/osf.io/fdkj5_v2](https://doi.org/10.31234/osf.io/fdkj5_v2)
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
 
