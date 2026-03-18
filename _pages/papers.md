@@ -25,8 +25,6 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, November 12). An exploratory psychometric network analysis of the college adaptation questionnaire in a sample of first year students. _OSF preprints_ [https://doi.org/10.31219/osf.io/fpej9_v2](https://doi.org/10.31219/osf.io/fpej9_v2)
 
-* Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (2025, November 5). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _PsyArxiv_ [https://doi.org/10.31234/osf.io/3dcth_v1](https://doi.org/10.31234/osf.io/3dcth_v1)
-
 * **Pollet, T.V.**, Adomaviciute, G., Haggag, N., Dodd, A., & Roberts, S.G.B. (2025, July 4). First-generation students’ adaptation to university: The role of student social networks. _PsyArxiv_ [https://doi.org/10.31234/osf.io/d4y7g_v1](https://doi.org/10.31234/osf.io/d4y7g_v1)
 
 * Brown, G., Curtis, V., & **Pollet, T.V.** (2022, January 25th). Gender, self-disclosure and emotional closeness in friendships: an egocentric social network study. _PsyArxiv_ [https://doi.org/10.31234/osf.io/wexn9](https://doi.org/10.31234/osf.io/wexn9)
@@ -37,6 +35,8 @@ Click the number for the corresponding paper to download a copy (it will open in
 
 
 ## **2026/Accepted/in Press**
+
+[145.](https://doi.org/10.31234/osf.io/3dcth_v3) Shiramizu, V.K.M., Bartoš, F., Jones, B.C., & **Pollet, T.V.** (accepted). Little evidence for group differences in 2D:4D ratios based on sexual orientation after adjusting for publication bias. _Hormones and Behavior_
 
 [144.](https://doi.org/10.1016/j.paid.2026.113638) **Pollet, T.V.**, Fitzpatrick, B., Meziani, S., Pashley, E.M., & Sefcikova, E. (2026). Revisiting the Relationship between Birth Order and Romantic Jealousy: No Support for an Effect in Four Samples. _Personality and Individual Differences, 255_ 113638. [https://doi.org/10.1016/j.paid.2026.113638](https://doi.org/10.1016/j.paid.2026.113638)
 
