@@ -64,7 +64,7 @@ There are some missings. You'll get an error. Here I have _listwise_ removed the
 ```{r, warning=F, message=F}
 require(MVN)
 big_5_no_miss<-na.omit(big_5)
-mvn(big_5_no_miss, multivariatePlot=T)
+plot(mvn(big_5_no_miss))
 ```
 
 We should bear in mind that the assumption of multivariate normality is violated.

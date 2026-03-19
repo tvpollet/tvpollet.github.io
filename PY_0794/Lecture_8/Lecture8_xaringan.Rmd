@@ -208,7 +208,7 @@ Caution, not multivariate normal. One solution is robust estimation... . Maximum
 
 ```{r, warning=F, message=F, fig.align="center",fig.height=3.5, fig.width=8}
 require(MVN)
-mvn(f_data, multivariatePlot = "qq")
+plot(mvn(f_data))
 ```
 
 ---

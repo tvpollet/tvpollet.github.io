@@ -1,6 +1,16 @@
 ---
 title: "Solution Lecture 8"
-output: html_document
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
 author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
 date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
 ---
@@ -54,7 +64,7 @@ There are some missings. You'll get an error. Here I have _listwise_ removed the
 ```{r, warning=F, message=F}
 require(MVN)
 big_5_no_miss<-na.omit(big_5)
-mvn(big_5_no_miss, multivariatePlot=T)
+plot(mvn(big_5_no_miss))
 ```
 
 We should bear in mind that the assumption of multivariate normality is violated.
@@ -237,10 +247,16 @@ colnames(tab.1) <-  c("$\\chi^2$",	"df",	"$\\Delta\\chi^2$", "df",	"p", "CFI",	"
 kable(tab.1)
 ```
 
-
 **THE END!**
 
 
 ```{r, out.width = "300px", echo=FALSE, fig.align='center'}
 knitr::include_graphics("https://media.giphy.com/media/3o7TKtsBMu4xzIV808/giphy.gif")
 ```
+
+## Session Info.
+
+```{r}
+sessionInfo()
+```
+
