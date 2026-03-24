@@ -26,7 +26,7 @@ class: center, middle, inverse, title-slide
 ### Dr. Thomas Pollet, Northumbria University (<a href="mailto:thomas.pollet@northumbria.ac.uk" class="email">thomas.pollet@northumbria.ac.uk</a>)
 ]
 .date[
-### 2025-04-01 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
+### 2026-03-24 | <a href="http://tvpollet.github.io/disclaimer">disclaimer</a>
 ]
 
 ---
@@ -57,12 +57,12 @@ After today you should be able to complete the following sections for Assignment
 
 Sequence of regressions.
 
-&lt;img src="http://journals.plos.org/plosone/article/figure/image?size=medium&amp;id=info:doi/10.1371/journal.pone.0008775.g009" width="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="http://journals.plos.org/plosone/article/figure/image?size=medium&amp;id=info:doi/10.1371/journal.pone.0008775.g009" alt="" width="450px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Why is this useful again?
 
-&lt;img src="https://memegenerator.net/img/images/600x600/12294978/afraid-to-ask-andy.jpg" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://memegenerator.net/img/images/600x600/12294978/afraid-to-ask-andy.jpg" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Back to our hypothetical example.
@@ -71,7 +71,7 @@ We already did mediations in week 6 with a hypothetical dataset (and with body i
 
 Do you remember the methods you used?
 
-&lt;img src="https://media.giphy.com/media/3o6ZtmNGebTwduYJH2/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3o6ZtmNGebTwduYJH2/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Dataset.
@@ -87,8 +87,8 @@ Proposed mediator (M): self-esteem.
 
 ``` r
 # Long string.
-D&lt;- read.csv('mediationData.csv') # redundant
-Data_med&lt;-D
+D &lt;- read.csv("mediationData.csv")  # redundant
+Data_med &lt;- D
 ```
 
 ---
@@ -98,7 +98,7 @@ Data_med&lt;-D
 ``` r
 setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture9")
 require(lavaan)
-mediationmodelSEM &lt;- ' # direct effect
+mediationmodelSEM &lt;- " # direct effect
              Y ~ c*X
            # mediator
              M ~ a*X
@@ -107,7 +107,7 @@ mediationmodelSEM &lt;- ' # direct effect
              ab := a*b
            # total effect
              total := c + (a*b)
-         '
+         "
 ```
 
 ---
@@ -115,9 +115,10 @@ mediationmodelSEM &lt;- ' # direct effect
 
 
 ``` r
-fit_mediationSEM &lt;- sem(mediationmodelSEM, se="bootstrap", data = Data_med)
-sink(file="SEM-mediation.txt")
-summary(fit_mediationSEM, standardized=TRUE, fit.measures=T)
+fit_mediationSEM &lt;- sem(mediationmodelSEM, se = "bootstrap",
+    data = Data_med)
+sink(file = "SEM-mediation.txt")
+summary(fit_mediationSEM, standardized = TRUE, fit.measures = T)
 sink()
 ```
 
@@ -129,11 +130,20 @@ How does that compare to the other method?
 
 ``` r
 require(mediation)
-med.fit&lt;-lm(M~X, data=Data_med)
-out.fit&lt;-lm(Y~X+M, data=Data_med)
-# Robust SE is ignored for Bootstrap. Otherwise omit boot=TRUE.
+med.fit &lt;- lm(M ~ X,
+    data = Data_med)
+out.fit &lt;- lm(Y ~ X +
+    M, data = Data_med)
+# Robust SE is
+# ignored for
+# Bootstrap.
+# Otherwise omit
+# boot=TRUE.
 set.seed(1984)
-med.out &lt;- mediate(med.fit, out.fit, treat = "X", mediator = "M", boot=TRUE, sims = 10000)
+med.out &lt;- mediate(med.fit,
+    out.fit, treat = "X",
+    mediator = "M", boot = TRUE,
+    sims = 10000)
 ```
 
 ---
@@ -150,11 +160,11 @@ summary(med.out)
 ## 
 ## Nonparametric Bootstrap Confidence Intervals with the Percentile Method
 ## 
-##                Estimate 95% CI Lower 95% CI Upper p-value    
-## ACME             0.3565       0.2145         0.53  &lt;2e-16 ***
-## ADE              0.0396      -0.2027         0.29   0.748    
-## Total Effect     0.3961       0.1589         0.64   0.001 ***
-## Prop. Mediated   0.9000       0.4900         2.08   0.001 ***
+##                 Estimate 95% CI Lower 95% CI Upper p-value    
+## ACME            0.356522     0.214536     0.527061  &lt;2e-16 ***
+## ADE             0.039604    -0.202650     0.292390  0.7478    
+## Total Effect    0.396126     0.158900     0.640099  0.0010 ***
+## Prop. Mediated  0.900022     0.489992     2.081820  0.0010 ***
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## 
@@ -179,8 +189,8 @@ Also, easier if we have multiple mediators and even latent constructs.
 
 ``` r
 require(lavaan)
-directmodelSEM &lt;- ' # just direct effects
-                    Y ~ c*X+b*M '
+directmodelSEM &lt;- " # just direct effects
+                    Y ~ c*X+b*M "
 ```
 
 ---
@@ -188,9 +198,9 @@ directmodelSEM &lt;- ' # just direct effects
 
 
 ``` r
-fit_directSEM &lt;- sem(directmodelSEM, se="bootstrap", data = Data_med)
-sink(file="SEM-direct.txt")
-summary(fit_directSEM, standardized=TRUE, fit.measures=T)
+fit_directSEM &lt;- sem(directmodelSEM, se = "bootstrap", data = Data_med)
+sink(file = "SEM-direct.txt")
+summary(fit_directSEM, standardized = TRUE, fit.measures = T)
 sink()
 ```
 
@@ -212,7 +222,7 @@ Ignoring warnings - some are safe to ignore but often they tell you something me
 
 Ignoring practical significance. One can build a model that fits the data closely, but does not explain a whole lot of variance (also note: statistical significance is not the same as clinical or biological significance!).
 
-&lt;img src="https://media.giphy.com/media/12dA9Gei6U4in6/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/12dA9Gei6U4in6/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Visualisations: Make a nice diagram...
@@ -222,11 +232,14 @@ LavaanPlot relies on diagrammer.
 
 ``` r
 require(lavaanPlot)
-lavaanPlot(model = fit_mediationSEM, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+lavaanPlot(model = fit_mediationSEM,
+    node_options = list(shape = "box",
+        fontname = "Helvetica"),
+    edge_options = list(color = "grey"))
 ```
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-f1e873222e8070aeac37" style="width:576px;height:252px;"></div>
-<script type="application/json" data-for="htmlwidget-f1e873222e8070aeac37">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-73222e8070aeac3729dc" style="width:576px;height:252px;"></div>
+<script type="application/json" data-for="htmlwidget-73222e8070aeac3729dc">{"x":{"diagram":" digraph plot { \n graph [ overlap = true, fontsize = 10 ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## But it is not the way we want.
@@ -236,12 +249,18 @@ You can further improve on this. Check diagrammer.
 
 ``` r
 require(lavaanPlot)
-labels&lt;- list(X="independent", M="mediator", Y="dependent")
-lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), labels=labels, node_options = list(shape = "box", fontname = "Helvetica"), edge_options = list(color = "grey"))
+labels &lt;- list(X = "independent",
+    M = "mediator", Y = "dependent")
+lavaanPlot(model = fit_mediationSEM,
+    graph_options = list(rankdir = "LR"),
+    labels = labels,
+    node_options = list(shape = "box",
+        fontname = "Helvetica"),
+    edge_options = list(color = "grey"))
 ```
 
-<div class="grViz html-widget html-fill-item" id="htmlwidget-29dcf9877f49d71b7214" style="width:576px;height:252px;"></div>
-<script type="application/json" data-for="htmlwidget-29dcf9877f49d71b7214">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-f9877f49d71b72148edd" style="width:576px;height:252px;"></div>
+<script type="application/json" data-for="htmlwidget-f9877f49d71b72148edd">{"x":{"diagram":" digraph plot { \n graph [ rankdir = LR ] \n node [ shape = box, fontname = Helvetica ] \n node [shape = box] \n X; M; Y \n node [shape = oval] \n  \n X [label = \"independent\"]\nM [label = \"mediator\"]\nY [label = \"dependent\"] \n edge [ color = grey ] \n X->Y X->M M->Y  \n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 
 ---
 ## Make a plot with the estimates.
@@ -249,11 +268,12 @@ lavaanPlot(model = fit_mediationSEM, graph_options = list(rankdir = "LR"), label
 
 ``` r
 require(semPlot)
-labels2&lt;- list("Dependent", "Mediator", "Independent") # need to reorganize.
-semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "ram", nodeLabels = labels2)
+labels2 &lt;- list("Dependent", "Mediator", "Independent")  # need to reorganize.
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
+    whatLabels = "std", intercepts = FALSE, style = "ram", nodeLabels = labels2)
 ```
 
-&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" width="400px" /&gt;
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-15-1.png" alt="" width="400px" /&gt;
 
 ---
 ## Make the line visible... .
@@ -262,17 +282,19 @@ semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatL
 ``` r
 # Lisrel.
 require(semPlot)
-semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring", whatLabels = "std", intercepts = FALSE,style = "lisrel", curvePivot = TRUE, fade=FALSE, nodeLabels = labels2)
+semPaths(fit_mediationSEM, "std", edge.label.cex = 0.5, layout = "spring",
+    whatLabels = "std", intercepts = FALSE, style = "lisrel",
+    curvePivot = TRUE, fade = FALSE, nodeLabels = labels2)
 ```
 
-&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-16-1.png" width="400px" /&gt;
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-16-1.png" alt="" width="400px" /&gt;
 
 ---
 ## alternative route.
 
 Check [this package](http://rstudio-pubs-static.s3.amazonaws.com/200846_3a7fb7a163314ccd94c3e0a93e46b71b.html) but requires rJava (which does not always play nice with a Mac).
 
-&lt;img src="https://media.giphy.com/media/U3z5fUwWra3EA/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/U3z5fUwWra3EA/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -283,7 +305,7 @@ Data wrangling might still be hard for some of you.
 --&gt; Back to dplyr?
 
 
-&lt;img src="https://media.giphy.com/media/HlxtTSOAD2Kc0/giphy.gif" width="400px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/HlxtTSOAD2Kc0/giphy.gif" alt="" width="400px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Some further 'dplyr' exercises and useful functions... .
@@ -333,30 +355,30 @@ First make your covariance matrix.
 
 
 ``` r
-lower &lt;- '
+lower &lt;- "
  11.834,
   6.947,    9.364,
   6.819,    5.091,   12.532,
   4.783,    5.028,    7.495,    9.986,
  -3.839,   -3.889,   -3.841,   -3.625,   9.610,
--21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 '
+-21.899,  -18.831,  -21.748,  -18.775,  35.522,  450.288 "
 
 # convert to a full symmetric covariance matrix with names
-wheaton.cov &lt;- getCov(lower, names=c("anomia67","powerless67", "anomia71",
-                                     "powerless71","education","sei"))
+wheaton.cov &lt;- getCov(lower, names = c("anomia67", "powerless67",
+    "anomia71", "powerless71", "education", "sei"))
 ```
 
 ---
 ## The model we are trying to build.
 
-&lt;img src="https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png" width="500px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png" alt="" width="500px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Question?
 
 This model brings which 2 aspects of SEM together?
 
-&lt;img src="https://media.giphy.com/media/3oEv4NalYUxl6/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/3oEv4NalYUxl6/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -366,7 +388,7 @@ This model brings which 2 aspects of SEM together?
 ``` r
 require(lavaan)
 # the model
-wheaton.model = '
+wheaton.model = "
   # measurement model
     ses     =~ education + sei
     alien67 =~ anomia67 + powerless67
@@ -382,15 +404,15 @@ wheaton.model = '
 
   # Indirect effect
     IndirectEffect := sa*aa
-'
+"
 ```
 
 ---
 ## What is missing in the diagram?
 
-&lt;img src="https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://i0.wp.com/www.stata.com/stata12/structural-equation-modeling/i/web_ex1.png" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif" width="300px" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.giphy.com/media/l2JehQ2GitHGdVG9y/giphy.gif" alt="" width="300px" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Fit the model.
@@ -399,9 +421,9 @@ wheaton.model = '
 
 ``` r
 require(lavaan)
-alienation &lt;- sem(wheaton.model, sample.cov=wheaton.cov, sample.nobs=932)
-sink(file='summary_alienation.txt')
-summary(alienation, fit.measures=T)
+alienation &lt;- sem(wheaton.model, sample.cov = wheaton.cov, sample.nobs = 932)
+sink(file = "summary_alienation.txt")
+summary(alienation, fit.measures = T)
 sink()
 ```
 
@@ -412,10 +434,10 @@ sink()
 ``` r
 require(semPlot)
 require(qgraph)
-semPaths(alienation,style = "lisrel",what="std",  curvePivot = TRUE)
+semPaths(alienation, style = "lisrel", what = "std", curvePivot = TRUE)
 ```
 
-&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-26-1.png" style="display: block; margin: auto;" /&gt;
+&lt;img src="Lecture9_xaringan_files/figure-html/unnamed-chunk-26-1.png" alt="" style="display: block; margin: auto;" /&gt;
 
 ---
 ## Try it yourself.
@@ -434,8 +456,10 @@ The data comes from this [paper](https://web.archive.org/web/20221027140554/http
 
 ``` r
 require(lavaan)
-data&lt;-lav_matrix_lower2full(c(1,.47,1,.66,.50,1,.77,.41,.46,1,.52,.38,.50,.50,1))
-rownames(data)&lt;-colnames(data)&lt;-c("att",'sn','pbc','int','beh') # a matrix.
+data &lt;- lav_matrix_lower2full(c(1, 0.47, 1, 0.66, 0.5, 1, 0.77,
+    0.41, 0.46, 1, 0.52, 0.38, 0.5, 0.5, 1))
+rownames(data) &lt;- colnames(data) &lt;- c("att", "sn", "pbc", "int",
+    "beh")  # a matrix.
 ```
 
 ---
@@ -466,9 +490,9 @@ Also check the reading list! (many more than listed here)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"highlightStyle": "github",
-"highlightLines": true,
-"countIncrementalSlides": false
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
