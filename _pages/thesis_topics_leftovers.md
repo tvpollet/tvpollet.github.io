@@ -1,5 +1,13 @@
 # Thesis topics leftovers
 
+### The 'Prometheus effect' in psychology: Are initial effect sizes exaggerated?
+
+The first time an effect is published, its effect size tends to be exaggerated (e.g., Jennions & Moller, 2002). This is known as the Prometheus effect or Winner's curse. Via collating data from meta-analyses, you will examine whether an original effect is exaggerated when compared to its meta-analytic estimate and whether this exaggeration is larger for some fields than for others.
+
+
+Jennions, M. D., & Møller, A. P. (2002). Relationships fade with time: A meta-analysis of temporal trends in publication in ecology and evolution. _Proceedings of the Royal Society of London. Series B: Biological Sciences, 269(1486),_ 43–48. [https://doi.org/10.1098/rspb.2001.1832](https://doi.org/10.1098/rspb.2001.1832)
+
+
 ### Visualisations in standard psychology text books.
 
 Bar charts can hide a lot of information. Yet, they are often the default (and while I am hopefully improving, they are also common in my papers). In this project, you will explore and examine the type of figures used in psychology text books. We will focus on a subdiscipline such as evolutionary psychology or consumer psychology, for example.

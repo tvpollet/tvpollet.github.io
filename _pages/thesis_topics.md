@@ -60,6 +60,10 @@ These could be good candidates or starting points:
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540) -- Requires married couples.
 * The Big 5 and relationship maintenance on Facebook. [https://doi.org/10.1177/0265407518772089](https://doi.org/10.1177/0265407518772089)
 
+### Body Image
+
+[Does this book make me look fat? The effect of protagonist body weight and body esteem on female readers’ body esteem](https://doi.org/10.1016/j.bodyim.2012.10.009). Requires a sizable sample.
+
 ### Prosocial behaviour / altruism
 
 * [Private wishes: Gender similarities and differences](https://link.springer.com/article/10.1007/BF00291551). Study 2 is a good candidate. You will require a sizable sample.
@@ -147,9 +151,6 @@ Alternatively, you can pick a group of interest (e.g., a support group for paren
 
 There are a range of projects to be conducted which deal with the methods used in different fields in psychology. The benefits of these types of projects are that in most cases the data are already there (or you have control over the data collection).
 
-### The 'Prometheus effect' in psychology: Are initial effect sizes exaggerated?
-
-The first time an effect is published, its effect size tends to be exaggerated (e.g., Jennions & Moller, 2002). This is known as the Prometheus effect or Winner's curse. Via collating data from meta-analyses, you will examine whether an original effect is exaggerated when compared to its meta-analytic estimate and whether this exaggeration is larger for some fields than for others.
 
 ### How diverse are the samples used in cross-cultural psychology?
 
@@ -373,13 +374,13 @@ In this project, you will find out whether gender influences programme leadershi
 There could be exceptions to the rule but below you'll find a list of topics which I will for various reasons (prefer to) not supervise. Exceptions exist, for example, if you have an **extremely good idea for a replication project**. I also list some topics here not because of some dislike, but rather because there are others, much better placed, in our department to work with you on these topics. You can reach out to me if you want more information.
 
 * Projects using a Qualitative methodology. I have very, very limited experience with Qualitative methods.
-* Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements (saliva). I have no experience with these methods and I feel I cannot adequately supervise projects using these methods.
+* Projects involving eye tracking, reaction time measurement, EEG, NIRS, Body Scanning, Virtual reality, hormone measurements (saliva). I have no experience with these methods and I feel I cannot adequately supervise projects using these methods. Projects using these teachniques also typically will not be possible within the time frame of your thesis.
 * Projects involving 'special populations'. I do not have access to 'special populations', so I cannot supervise projects involving children, vulnerable adults, service users, people with (mental) health diagnoses, teachers, prisoners, or whichever special population you have in mind. However, if you have strong ties with these communities, then perhaps projects on social networks are still viable.
 * Projects in Cognitive Psychology. (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Consumer Psychology / Marketing (unless they deal with colour and/or are well thought out replication projects).
 * Projects in Positive Psychology / Happiness studies.
-* Projects in Sport Psychology (unless they are dealing with social network analysis or listed above)
-* Projects in Organisational Psychology (unless they are dealing with social network analysis or listed above)
+* Projects in Sport Psychology (unless they are dealing with social network analysis or are topics listed above)
+* Projects in Organisational Psychology (unless they are dealing with social network analysis or are topics listed above)
 * Projects in Parapsychology.
 * Projects in Forensic Psychology (e.g., rape acceptance myths) or on eye-witness testimony.
 * Projects on generative AI (unless these are replications).
@@ -389,15 +390,14 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 * Projects on the 'Dark Triad' of personality (Narcissism, Machiavellianism, Psychopathy - unless they are dealing with well thought out replications).
 * Projects on attachment theory and/or psychological trauma.
 * Projects on sleep.
-* Projects on autism.
+* Projects on autism or neurodivergence.
 * Projects on body attractiveness, face perception, etc. 
 * Projects on birth order (unless they would be replication style projects, especially relating to family relationships or jealousy).
-* Projects on social media addiction (but see the example of meta-analysing the reliability of one of these scales).
 * Projects on aggression, violence, rape, sexual violence.
 * Projects on human-animal relationships.
 * Projects on stress and mental health (unless they are dealing with social network analysis).
 * Projects on Instagram/Facebook/TikTok (unless they are dealing with social network analysis, or exceptions listed above).
-* Projects on addiction, smoking, alcohol, drug consumption (unless they are dealing with social network analysis).
+* Projects on addiction, smoking, alcohol, drug consumption (unless they are dealing with social network analysis). This includes projects on social media addiction (but see the example of meta-analysing the reliability of one of these scales).
 * Projects on social identity, ethnicity, and/or intergroup behaviour (unless these are related to social network analysis or well thought out replication projects).
 * Projects on sexual orientation, gender identity, masculinity/femininity, 2D:4D ratios (unless these are related to social network analysis or well thought out replication projects).
 
@@ -407,8 +407,6 @@ There could be exceptions to the rule but below you'll find a list of topics whi
 Arnett, J. J. (2008). The Neglected 95%: Why American Psychology Needs to Become Less American. _American Psychologist, 63(7),_ 602–614. [https://doi.org/10.1037/0003-066X.63.7.602](https://doi.org/10.1037/0003-066X.63.7.602)
 
 Gelman, A., Hill, J., & Vehtari, A. (2020). _Regression and other stories_. Cambridge University Press.
-
-Jennions, M. D., & Møller, A. P. (2002). Relationships fade with time: A meta-analysis of temporal trends in publication in ecology and evolution. _Proceedings of the Royal Society of London. Series B: Biological Sciences, 269(1486),_ 43–48. [https://doi.org/10.1098/rspb.2001.1832](https://doi.org/10.1098/rspb.2001.1832)
 
 Ritchie, S. (2020). _Science fictions: Exposing fraud, bias, negligence and hype in science_. Random House.
 
