@@ -62,7 +62,7 @@ These could be good candidates or starting points:
 
 ### Body Image
 
-[Does this book make me look fat? The effect of protagonist body weight and body esteem on female readers’ body esteem](https://doi.org/10.1016/j.bodyim.2012.10.009). Requires a sizable sample.
+* [Does this book make me look fat? The effect of protagonist body weight and body esteem on female readers’ body esteem](https://doi.org/10.1016/j.bodyim.2012.10.009). Requires a sizable sample.
 
 ### Prosocial behaviour / altruism
 
