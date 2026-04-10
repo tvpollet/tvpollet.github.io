@@ -281,6 +281,7 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Health and clinical psychology
 
+* [CAST-6 - short-form of the children of alcoholics screening test](https://doi.org/10.1016/0306-4603(93)90035-8){:target="_blank"}
 * [The Birth Satisfaction Scale Revised](https://www.sciencedirect.com/science/article/pii/S0266613813002982){:target="_blank"}
 * [Social Anhedonia](https://psycnet.apa.org/buy/1986-00149-001){:target="_blank"}
 * [The Fear of being scale](https://www.researchgate.net/publication/257837688_Settling_for_Less_Out_of_Fear_of_Being_Single){:target="_blank"}
