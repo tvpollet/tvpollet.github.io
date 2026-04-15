@@ -37,9 +37,11 @@ This message is intended solely for the addressee and may contain confidential a
 
 I work flexibly, I am emailing you when as it works for me. I respect your working arrangements may be different so please respond whenever is convenient for you.    
 
-#### With regard to AI use in my academic work
+#### With regard to Large Language Model use in my academic work
 
-I use AI tools for my work (mostly locally Ollama with Mistral large). This is mostly for coding, writing (I am a non-native speaker). Occasionally, I also seek feedback on ideas or criticism (as I would do with a colleague). In all instances, I review its work. Where relevant, I will disclose this. Should you have queries about my use of these tools, please do contact me.
+I use AI tools for my work (locally: Ollama / LM studio with Mistral Large / Gemma 4; but also Claude Opus). This is mostly for coding, code checking, editing, and writing (I am a non-native speaker). Occasionally, I also seek feedback on ideas or criticism (as I would do with a colleague). I view my use as legitimate use in academic context, trying to better my work. In all instances, I review the large language model's work. Where relevant, I will disclose this (e.g., in analysis documents). I also use these tools for managing my email responses	. 
+
+Should you have queries about my use of these Large Language Model tools, please do contact me. We are all learning in this new context.
 
 #### With regard to copyright of Northumbria University teaching materials hosted here (PY0794/PY0554).:
 
@@ -54,11 +56,11 @@ Equality, diversity, and inclusion matter to me. Discrimination in any form is n
 ### On a lighter note... .
 
 By visiting this site you concur that:    
-- Belgian beer and chocolate are the best in the world
-- That Cobra is superior to G.I. Joe
-- Sega is better than Nintendo
-- That Antwerp is the by far nicer than Liverpool, Newcastle, Bruges, Louvain, Brussels (oh yes, Jolein), Ghent and obviously the entire of Germany.
--  Mia by Gorki is the best song in Dutch ever. (Yet, followed closely by the oeuvre of André Hazes).
+- Belgian beer and chocolate are the best in the world.
+- That Cobra is superior to G.I. Joe. COBRA! 
+- Sega is better than Nintendo.
+- That Antwerp is the by far nicer than Liverpool, Newcastle, Groningen, Amsterdam,Bruges, Louvain, Brussels (oh yes, Jolein), Ghent and obviously the whole of Germany.
+-  Mia by Gorki is the best song in Dutch ever. (Yet, followed closely by the oeuvre of Donnie).
 -  If you are an academic: that I am right and you are wrong... .
 
 ![taunt](img/taunt.gif){: .center-image }
