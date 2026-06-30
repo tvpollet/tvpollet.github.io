@@ -5,51 +5,23 @@ github_users:
 shiny_apps:
   - tvpollet/shiny_live_neurodefence
   - tvpollet/2048_shiny_live_neuro
-  - tvpollet/shiny_live_timer
   - tvpollet/shiny_live_open_science_escape_room
   - tvpollet/shiny_review_app
+  - tvpollet/shiny_live_timer
 
-# --- Talks & Presentations (newest first) ---
+# --- Talks & Presentations (selected, newest first) ---
 talks:
   - tvpollet/Hoarding_NSUM_talk
   - tvpollet/PEBL_preference_graph
-  - tvpollet/Guest_lecture_open_research_BSc_thesis
   - tvpollet/Open_research_gender_violence_IDRT_25
   - tvpollet/EHBEA_2025_opening
-  - tvpollet/social_group_grant_talk_25
   - tvpollet/BA_conference_sampling
-  - tvpollet/University_rankings
-  - tvpollet/Technician_event_24
-  - tvpollet/Bee_Awesome_IDRT
-  - tvpollet/pebl_monkey_me_talk
-  - tvpollet/open_res_11_23
-  - tvpollet/BPS_Cyberpsychology_23
-  - tvpollet/ukrn_institution_lead2023
-  - tvpollet/faculty_ukrn_talk
-  - tvpollet/Talk_appearance_Durham_22
-  - tvpollet/open_research_northumbria
-  - tvpollet/ehbea_2021_jealousy
-  - tvpollet/open_day_lecture_jealousy
-  - tvpollet/jealousy_lecture
   - tvpollet/developing_a_scientific_rationale
-  - tvpollet/open_day_talk
-  - tvpollet/open_science_talk
-  - tvpollet/NorthlabJuly2018
-  - tvpollet/HBES2018
-  - tvpollet/Javea2018
-  - tvpollet/PACT-Lecture
 
 # --- Course Materials ---
 courses:
   - tvpollet/Meta-Analysis_course
   - tvpollet/Meta-analysis_1
-  - tvpollet/Meta-analysis_2
-  - tvpollet/Meta-analysis_3
-  - tvpollet/Meta-analysis_4
-  - tvpollet/Meta-analysis_5
-  - tvpollet/Meta-analysis_6
-  - tvpollet/Quiz
-  - tvpollet/Quiz-Solution
 
 # --- Conference Organisation ---
 other:
