@@ -228,6 +228,7 @@ exclude:
   - readme_preview/
   - gems/
   - migrations/
+  - pdfs/
   - vendor
 keep_files:
   - CNAME
@@ -331,8 +332,8 @@ display_categories: ["external-services"] # these categories will be displayed o
 # -----------------------------------------------------------------------------
 
 scholar:
-  last_name: [Einstein]
-  first_name: [Albert, A.]
+  last_name: [Pollet]
+  first_name: [Thomas, T., Thomas V.]
 
   style: apa
   locale: en
