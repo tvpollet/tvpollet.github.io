@@ -1,15 +1,18 @@
 ---
 layout: page
-permalink: /teaching/
-title: teaching
-description: Course materials, schedules, and resources for classes taught.
+title: Teaching
 nav: true
-nav_order: 6
-calendar: true
+nav_order: 3
+dropdown: true
+children:
+    - title: Courses Taught
+      permalink: /courses_taught/
+    - title: PY0794
+      permalink: /PY0794/
+    - title: Meta-analysis Course
+      permalink: /meta_analysis_course/
+    - title: Thesis Projects
+      permalink: /thesis_projects/
+    - title: Calendar
+      permalink: /calendar/
 ---
-
-This page displays a collection of courses with detailed schedules, materials, and resources. You can organize your courses by years, terms, or topics.
-
-{% include calendar.liquid calendar_id='test@gmail.com' timezone='Asia/Shanghai' %}
-
-{% include courses.liquid %}
