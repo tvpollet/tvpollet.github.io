@@ -1,189 +1,373 @@
 cv:
-  name: Albert Einstein
-  label: Scientist
-  email: einstein@example.com
-  location: Princeton, NJ
+  name: Thomas V. Pollet
+  label: Professor of Psychology
+  email: thomas.pollet@northumbria.ac.uk
+  phone: "+44 78 57 38 60 90"
+  url: https://tvpollet.github.io
+  location: Newcastle upon Tyne, UK
   image: ""
-  summary: A German-born theoretical physicist, widely ranked among the greatest and most influential scientists of all time
-
+  summary: >-
+    My research focuses on understanding the wealth of social relationships people have
+    (e.g., romantic relationships, friendships, family relationships) and understanding the role
+    of individual differences (e.g., personality, height, hormones) for these social relationships
+    from an interdisciplinary framework. I conduct survey, observational, and experimental studies,
+    next to analysing secondary datasets. I am also interested in improving methodology and statistics
+    and frequently collaborate with others on diverse topics.
   social_networks:
-    - network: X
-      username: AlbertEinstein
+    - network: Google Scholar
+      username: T2fYknYAAAAJ
     - network: GitHub
-      username: example
-    - network: LinkedIn
-      username: example
-
+      username: tvpollet
+    - network: ORCID
+      username: "0000-0002-4210-6588"
   address:
-    street: 2712 Broadway St
-    city: San Francisco
-    region: California
-    postalCode: CA 94115
-    countryCode: US
+    street: Northumberland Building (NB165), College Lane
+    city: Newcastle upon Tyne
+    region: Tyne and Wear
+    postalCode: NE1 8ST
+    countryCode: GB
 
   sections:
+    Employment:
+      - company: "[Northumbria University](https://www.northumbria.ac.uk), Dept. of Psychology"
+        position: Professor in Psychology
+        location: Newcastle upon Tyne, UK
+        start_date: 2020
+        end_date: present
+
+      - company: "[Northumbria University](https://www.northumbria.ac.uk), Dept. of Psychology"
+        position: Associate Professor in Psychology
+        location: Newcastle upon Tyne, UK
+        start_date: 2017
+        end_date: 2020
+
+      - company: "[Leiden University](https://www.universiteitleiden.nl), Dept. of Social Psychology"
+        position: Asst. Professor in Social and Organizational Psychology
+        location: Leiden, Netherlands
+        start_date: 2016
+        end_date: 2017
+
+      - company: "[Netherlands Institute for Advanced Study (N.I.A.S.)](https://nias.knaw.nl)"
+        position: Research Fellow
+        location: Wassenaar, Netherlands
+        start_date: 2015
+        end_date: 2016
+
+      - company: "[VU University Amsterdam](https://www.vu.nl), Dept. of Experimental and Applied Psychology"
+        position: Asst. Professor in Social and Organizational Psychology
+        location: Amsterdam, Netherlands
+        start_date: 2011
+        end_date: 2016
+
+      - company: "[University of Groningen](https://www.rug.nl), Dept. of Social Psychology"
+        position: Asst. Professor in Social Psychology
+        location: Groningen, Netherlands
+        start_date: 2008
+        end_date: 2011
+
     Education:
-      - institution: University of Zurich
-        location: Zurich, Switzerland
-        url: https://www.uzh.ch/
-        area: Physics
-        studyType: PhD
-        start_date: 1900
-        end_date: 1905
-        score: ""
-        courses: "Theory of Relativity"
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: "[Northumbria University](https://www.northumbria.ac.uk)"
+        area: ""
+        studyType: HEA Fellowship
+        start_date: 2018
+        end_date: 2018
 
-      - institution: Eidgenössische Technische Hochschule
-        location: Zurich, Switzerland
-        area: Physics
-        studyType: Federal teaching diploma
-        start_date: 1896
-        end_date: 1900
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: "[VU University Amsterdam](https://www.vu.nl)"
+        area: ""
+        studyType: University Teaching Qualification (BKO)
+        start_date: 2012
+        end_date: 2012
 
-    Experience:
-      - company: Institute for Advanced Study, Princeton University
-        position: Professor of Theoretical Physics
-        location: Princeton University, NJ
-        start_date: 1933
-        end_date: 1955
-        summary: Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.
-        highlights:
-          - Relativity
-          - Description 2.
+      - institution: "[Newcastle University](https://www.ncl.ac.uk)"
+        area: Psychology
+        studyType: Ph.D.
+        start_date: 2005
+        end_date: 2008
 
-      - company: California Institute of Technology
-        position: Visiting Professor
-        location: Pasadena, California, US
-        start_date: 1933
-        end_date: 1933
-        highlights:
-          - Description 1.
-          - Description 2.
+      - institution: "[University of Liverpool](https://www.liv.ac.uk)"
+        area: Evolutionary Psychology
+        studyType: MSc. (Distinction)
+        start_date: 2004
+        end_date: 2005
 
-      - company: Kaiser Wilhelm Institute for Physics
-        position: Director
-        location: Berlin, Germany
-        start_date: 1917
-        end_date: 1933
+      - institution: "[Ghent University](https://www.ugent.be)"
+        area: Sociology
+        studyType: Licentiate (Great Distinction)
+        start_date: 2002
+        end_date: 2004
 
-      - company: Karl-Ferdinand University
-        position: Professor of Theoretical Physics
-        location: Prague, Czechoslovakia
-        start_date: 1911
-        end_date: 1917
+      - institution: "[University of Antwerp](https://www.uantwerpen.be)"
+        area: Sociology
+        studyType: Candidature (Distinction)
+        start_date: 2000
+        end_date: 2002
 
-      - company: University of Zurich
-        position: Associate Professor of Theoretical Physics
-        location: Zurich, Switzerland
-        start_date: 1909
-        end_date: 1911
+    Selected Publications:
+      - title: "Meta-analysis of the red advantage in combat sports"
+        authors:
+          - Peperkoorn, L.S.
+          - Hill, R.A.
+          - Barton, R.A.
+          - Pollet, T.V.
+        publisher: "*Scientific Reports, 14,* 30822"
+        releaseDate: 2024
+        url: https://doi.org/10.1038/s41598-024-81373-3
+        summary: ""
 
-    Volunteer:
-      - company: People's Climate March
-        position: Lead Organizer
-        location: Zurich, Switzerland
-        start_date: 2014-04-01
-        end_date: 2015-07-01
-        summary: Lead organizer for the New York City branch of the People's Climate March, the largest climate march in history.
-        highlights:
-          - "Awarded 'Climate Hero' award by Greenpeace for my efforts organizing the march."
-          - "Men of the year 2014 by Time magazine"
+      - title: "Height Is Positively Related to Interpersonal Dominance in Dyadic Interactions"
+        authors:
+          - Stulp, G.
+          - Buunk, A.P.
+          - Verhulst, S.
+          - Pollet, T.V.
+        publisher: "*PLoS ONE, 10,* e0117860"
+        releaseDate: 2015
+        url: https://doi.org/10.1371/journal.pone.0117860
+        summary: ""
+
+      - title: "What can cross-cultural correlations teach us about human nature?"
+        authors:
+          - Pollet, T.V.
+          - Tybur, J.M.
+          - Frankenhuis, W.E.F.
+          - Rickard, I.J.
+        publisher: "*Human Nature, 25,* 419-429"
+        releaseDate: 2014
+        url: https://doi.org/10.1007/s12110-014-9206-8
+        summary: ""
+
+      - title: "Market forces affect patterns of polygyny in Uganda"
+        authors:
+          - Pollet, T.V.
+          - Nettle, D.
+        publisher: "*Proceedings of the National Academy of Sciences – USA, 106,* 2114-2117"
+        releaseDate: 2009
+        url: https://doi.org/10.1073/pnas.0810016106
+        summary: ""
+
+      - title: "Genetic relatedness and sibling relationship characteristics in a modern society"
+        authors:
+          - Pollet, T.V.
+        publisher: "*Evolution and Human Behavior, 28,* 176-185"
+        releaseDate: 2007
+        url: https://doi.org/10.1016/j.evolhumbehav.2006.10.001
+        summary: ""
+
+    Research Statement:
+      - "My research focuses on **social relationships** (romantic relationships, friendships, family relationships) and the role of **individual differences** (personality, height, hormones) from an **interdisciplinary framework**. I also work on improving **methodology and statistics**. The full publication list (146+ papers, preprints, and book chapters) is available on the [publications page](/new_website/publications/). ResearcherID: [H-3397-2012](http://www.researcherid.com/rid/H-3397-2012)."
+
+    Research Funding:
+      - company: "[Instagram Research Award](https://research.fb.com/blog/2018/12/announcing-the-winners-of-the-instagram-research-awards-for-social-technologies/)"
+        position: Research on loneliness ($50,000)
+        location: ""
+        start_date: 2019
+        end_date: 2020
+
+      - company: "[BA Leverhulme Small Grant](https://www.thebritishacademy.ac.uk/funding/ba-leverhulme-small-research-grants/)"
+        position: "Tokenism in evolutionary psychology textbooks? (with Jeanne Bovet, £8,956)"
+        location: ""
+        start_date: 2022
+        end_date: 2023
+
+      - company: "[Peace Grant: Samuel B. Hanser Visionary Grant](https://www.mindandlife.org/grant/gratitude-interventions-well-being-and-social-networks-a-16-month-longitudinal-study/)"
+        position: "Social networks for decision making (consultant, led by Sam Roberts and Peter Malinowski, $25,000)"
+        location: ""
+        start_date: 2022
+        end_date: 2023
+
+      - company: "[Sir Halley Stewart Trust](http://www.sirhalleystewart.org.uk/)"
+        position: "Social networks for decision making (with Nick Neave and Catherine Bailey, £31,757)"
+        location: ""
+        start_date: 2021
+        end_date: 2022
+
+      - company: "[Templeton Grant](https://www.templeton.org)"
+        position: "Prosocial behavior (with Paul van Lange and Zoi Manesi, $195,000)"
+        location: ""
+        start_date: 2013
+        end_date: 2016
+
+      - company: "[NWO](https://www.nwo.nl) - VENI"
+        position: "The Napoleon Complex: Fact or Fiction (€250,000)"
+        location: ""
+        start_date: 2011
+        end_date: 2014
+
+      - company: "[French-Dutch Academy](https://nl.ambafrance.org/Frans-Nederlandse-Academie,19323)"
+        position: "Van Gogh grant (with Bram Buunk and ISEM, up to €10,000)"
+        location: ""
+        start_date: 2010
+        end_date: 2011
+
+      - company: "[FWO](https://www.fwo.be)"
+        position: "International research network grant (€62,500, 6 partners)"
+        location: ""
+        start_date: 2009
+        end_date: 2014
+
+      - company: "[University of Groningen](https://www.rug.nl)"
+        position: "Ubbo Emmius (with Bram Buunk, €120,000)"
+        location: ""
+        start_date: 2009
+        end_date: 2013
+
+      - company: "[Newcastle University](https://www.ncl.ac.uk)"
+        position: "PhD Scholarship (>£80,000)"
+        location: ""
+        start_date: 2005
+        end_date: 2008
+
+      - company: "[Lazard Foundation](http://fernandlazard.be/nl.htm)"
+        position: "Career development loan for MSc. (up to €25,000)"
+        location: ""
+        start_date: 2004
+        end_date: 2005
+
+    Professional Service:
+      - company: "Dept. of Psychology, Northumbria University"
+        position: Reproducible Research Lead
+        location: ""
+        start_date: 2021
+        end_date: present
+
+      - company: "[UKRN](https://www.ukrn.org)"
+        position: Institution Lead
+        location: ""
+        start_date: 2021
+        end_date: 2024
+
+      - company: "[UKRN](https://www.ukrn.org)"
+        position: Local Network Lead
+        location: ""
+        start_date: 2019
+        end_date: 2021
+
+      - company: "[Evolution and Social Interaction cluster](https://www.northumbria.ac.uk/research/ref-2021/uoa/psychology-psychiatry-and-neuroscience/research-groups/evolution-and-social-interaction/), Northumbria University"
+        position: Research and Knowledge Exchange Cluster Lead
+        location: ""
+        start_date: 2021
+        end_date: 2023
+
+      - company: "Dept. of Psychology, Northumbria University"
+        position: Director of Learning and Teaching (Experience)
+        location: ""
+        start_date: 2017
+        end_date: 2019
+
+      - company: "[International Review of Social Psychology](https://www.rips-irsp.com/about/who-we-are/)"
+        position: Editorial Board Member
+        location: ""
+        start_date: 2019
+        end_date: present
+
+      - company: "Frontiers in Psychology (Evolutionary Psychology and Neuroscience)"
+        position: Editorial Board Member
+        location: ""
+        start_date: 2014
+        end_date: 2016
+
+      - company: "[FWO](https://www.fwo.be)"
+        position: Council Member
+        location: ""
+        start_date: 2012
+        end_date: 2015
+
+    Teaching:
+      - company: "Northumbria University"
+        position: "[Advanced Quantitative and Qualitative Research Methods](https://tvpollet.github.io/PY0794/) (lecturer/coordinator, Research Masters)"
+        location: ""
+        start_date: 2019
+        end_date: present
+
+      - company: "Northumbria University"
+        position: "[Advanced Quantitative Research Methods](https://tvpollet.github.io/PY0782/) (lecturer, Research Masters)"
+        location: ""
+        start_date: 2017
+        end_date: 2019
+
+      - company: "Northumbria University"
+        position: "Research on Human Nature (lecturer, BSc. Psychology, year 2)"
+        location: ""
+        start_date: 2018
+        end_date: 2020
+
+      - company: "Leiden University"
+        position: "Intergroup Relations; Economic and Consumer Psychology; Introduction into Social Psychology (contributor, MSc./BSc.)"
+        location: ""
+        start_date: 2016
+        end_date: 2017
+
+      - company: "VU University Amsterdam"
+        position: "Evolution and Social Behavior (lecturer/coordinator, Research Masters); Group Dynamics; Methods III (BSc.)"
+        location: ""
+        start_date: 2012
+        end_date: 2015
+
+      - company: "University of Groningen"
+        position: "Evolutionary Psychology of Interpersonal Processes; Capita Selecta in Evolutionary Psychology; Methods II (BSc./Ma.)"
+        location: ""
+        start_date: 2008
+        end_date: 2011
+
+      - company: "Various"
+        position: "Theses supervision: BSc. (>80 completed) and Ma. (>35 completed)"
+        location: ""
+        start_date: 2008
+        end_date: present
+
+    PhD Supervision:
+      - "I have also served as an internal examiner and on external PhD committees for the University of Antwerp, University of Essex, University of Groningen, University of Helsinki, University of Stirling, University of Vienna (x2), and the University of Wolverhampton."
+      - "**Current:** Lorna Govan (Northumbria University)"
+      - "**Current:** [Amy Sorrell](https://researchportal.northumbria.ac.uk/en/persons/amy-sorrell) (Northumbria University)"
+      - "**Current:** [Aashira Sial](https://researchportal.northumbria.ac.uk/en/persons/aashira-sial) (Northumbria University)"
+      - "**Current:** [Connor Malcolm](https://www.researchgate.net/scientific-contributions/Connor-Malcolm-2174624920) (Northumbria University)"
+      - "**Graduated 2023:** [Alexandra Thompson](https://researchportal.northumbria.ac.uk/en/researchers/alexandra-thompson(e8a59656-a0a0-4bbc-8b77-f7bb3e77a99b).html) (Northumbria University)"
+      - "**Graduated 2017:** [Zoi Manesi](https://www.researchgate.net/profile/Zoi_Manesi) (VU University Amsterdam)"
+      - "**Graduated 2017:** [Jill Knapen](https://research.ou.nl/en/persons/jill-knapen/) (VU University Amsterdam)"
+      - "**Graduated 2017:** [Nancy Blaker](https://atlasresearch.nl/over-ons/team/nancy-blaker/) (VU University Amsterdam)"
+      - "**Graduated 2013:** [Kelly Cobey](https://www.researchgate.net/profile/Kelly_Cobey) (University of Groningen)"
+      - "**Graduated 2013:** [Gert Stulp](https://gertstulp.github.io/) (University of Groningen)"
+      - "**Graduated 2012:** [Liga Klavina](http://www.rug.nl/staff/l.klavina/research) (University of Groningen)"
 
     Awards:
-      - title: Nobel Prize in Physics
-        authors:
-          - "Royal Swedish Academy of Sciences"
-        date: 1921-11-01
-        awarder: Royal Swedish Academy of Sciences
-        url: https://www.nobelprize.org/prizes/physics/1921/einstein/biographical/
-        summary: The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'
+      - title: "EHBEA Community Service Award"
+        date: 2025
+        awarder: "European Human Behaviour and Evolution Association"
+        summary: ""
 
-      - title: Max Planck Medal
-        authors:
-          - "German Physical Society"
-        date: 2029
-        awarder: German Physical Society
-        summary: Awarded for outstanding scientific achievement
+      - title: "Faculty1000 recognition"
+        date: ""
+        awarder: "Faculty1000"
+        summary: "Paper on intralocus sexual conflict with G. Stulp as lead author included in Faculty1000."
 
-    Publications:
-      - title: Zur Elektrodynamik bewegter Körper
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-06-30
-        url: https://en.wikisource.org/wiki/Translation:On_the_Electrodynamics_of_Moving_Bodies
-        summary: It concerned an interpretation of the Michelson–Morley experiment and the properties of light and time. Special relativity incorporates the principle that the speed of light is the same for all inertial observers regardless of the state of motion of the source.
+      - title: "IPUMS Paper Finalist"
+        date: 2009
+        awarder: "IPUMS"
+        summary: "Top 10 paper in 2009 based on IPUMS data."
 
-      - title: Über einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1905-03-18
-        url: https://de.wikisource.org/wiki/Über_einen_die_Erzeugung_und_Verwandlung_des_Lichtes_betreffenden_heuristischen_Gesichtspunkt
-        summary: In the second paper, he applied the quantum theory to light to explain the photoelectric effect. In particular, he used the idea of light quanta (photons) to explain experimental results, but stressed the importance of the experimental results. The importance of his work on the photoelectric effect earned him the Nobel Prize in Physics in 1921.
+      - title: "Honorary BAEF Fellow Nomination"
+        date: 2008
+        awarder: "Belgian American Exchange Foundation"
+        summary: ""
 
-      - title: Die Grundlage der allgemeinen Relativitätstheorie
-        authors:
-          - Albert Einstein
-        publisher: Annalen der Physik
-        releaseDate: 1916-03-20
-        url: https://de.wikisource.org/wiki/Die_Grundlage_der_allgemeinen_Relativitätstheorie
-        summary: The publication of the theory of general relativity made him internationally famous. He was professor of physics at the universities of Zurich (1909–1911) and Prague (1911–1912), before he returned to ETH Zurich (1912–1914).
+    Conference Organisation:
+      - company: "[EHBEA 2025](https://tvpollet.github.io/ehbea_2025_schedule/EHBEA_2025_Schedule_html)"
+        position: Organiser
+        location: Northumbria University
+        start_date: 2025
+        end_date: 2025
 
-    Skills:
-      - name: Physics
-        level: Master
-        icon: fa-solid fa-hashtag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
+      - company: "[EHBEA 2013](http://www.ehbea2013.com)"
+        position: Organiser (>200 attendees)
+        location: VU University Amsterdam
+        start_date: 2013
+        end_date: 2013
 
-    Languages:
-      - name: German
-        summary: "Native speaker"
+      - company: "[ASAB Conference](https://www.asab.org)"
+        position: Administration
+        location: Newcastle University
+        start_date: 2007
+        end_date: 2007
 
-      - name: English
-        summary: "Fluent"
-
-    Interests:
-      - name: Physics
-        icon: fa-solid fa-tag
-        keywords: "Quantum Mechanics, Quantum Computing, Quantum Information, Quantum Cryptography, Quantum Communication, Quantum Teleportation"
-
-    Certificates:
-      - name: Machine Learning
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-location-dot
-
-      - name: Quantum Computing
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-tag
-
-      - name: Quantum Information
-        date: 2018-01-01
-        issuer: Stanford University
-        icon: fa-solid fa-envelope
-
-    Projects:
-      - name: Quantum Computing
-        summary: Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. Computers that perform quantum computations are known as quantum computers.
-        highlights:
-          - Quantum Teleportation
-          - Quantum Cryptography
-        start_date: 2018-01-01
-        end_date: 2018-01-01
-
-    References:
-      - name: Professor John Doe
-        icon: fa-solid fa-laptop
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
-
-      - name: Professor Jane Smith
-        icon: fa-solid fa-thumbtack
-        reference: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam condimentum, diam quis convallis euismod, arcu mi ullamcorper lorem, a vestibulum nunc magna at sem. Sed in risus ac felis varius blandit.
+    Media Coverage:
+      - "Research covered extensively in the British press (The Daily Telegraph, The Financial Times, The Daily Mail, BBC News Online, The Scotsman, The Sunday Times, New Scientist, Times Higher Education, The Guardian) and international press (The Economist, Corriere della Sera, Der Spiegel, The Times of India, The Australian, De Standaard, De Telegraaf, Het Laatste Nieuws, Psychologie Magazine). Over 100 popular press articles about my/our work. Multiple radio appearances (BBC Radio Tyneside, FunXfm)."
