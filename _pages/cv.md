@@ -55,7 +55,7 @@ My research focuses on understanding the wealth of **social relationships** peop
 
 ## Selected Publications
 
-Here are what I personally consider to be my five best publications. The full publication list (146+ papers, preprints, and book chapters) is available on the [publications page](/new_website/publications/). My ResearcherID is [H-3397-2012](http://www.researcherid.com/rid/H-3397-2012) and my Google Scholar profile is [here](https://scholar.google.nl/citations?user=T2fYknYAAAAJ&hl=nl).
+Here are what I personally consider to be my five best publications. The full publication list (140+ papers, preprints, and book chapters) is available on the [publications page](/publications/). My ResearcherID is [H-3397-2012](http://www.researcherid.com/rid/H-3397-2012) and my Google Scholar profile is [here](https://scholar.google.nl/citations?user=T2fYknYAAAAJ&hl=nl).
 
 1. Peperkoorn, L.S., Hill, R.A., Barton, R.A. & **Pollet, T.V.** (2024). Meta-analysis of the red advantage in combat sports. *Scientific Reports, 14,* 30822. [doi:10.1038/s41598-024-81373-3](https://doi.org/10.1038/s41598-024-81373-3)
 
@@ -178,9 +178,9 @@ I am/was involved in the external supervision of other students; here I list the
 
 ## Awards and Nominations
 
-- Awarded [EHBEA Community Service Award]() (2025)
-- Paper on intralocus sexual conflict with G. Stulp as lead author included in [Faculty1000](https://f1000.com/)
-- [IPUMS](https://www.ipums.org) paper finalist in 2009 (Top 10 paper based on IPUMS data)
+- Awarded [EHBEA Community Service Award](https://www.ehbea.org/pages/services-to-the-ehbea-community) (2026)
+- Paper on intralocus sexual conflict with G. Stulp as lead author included in [Faculty1000](https://f1000.com/) (2012)
+- [IPUMS](https://www.ipums.org) paper finalist (2009) - Top 10 paper based on IPUMS data.
 - Nominated as Honorary [Belgian American Exchange Foundation (BAEF)](https://www.baef.be) Fellow (2008)
 
 ---
