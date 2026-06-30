@@ -2,14 +2,14 @@
 layout: about
 title: about
 permalink: /
-subtitle: Professor in psychology at <a href='#'>Northumbria.ac.uk</a>.
+subtitle: Professor in psychology at <a href='https://www.northumbria.ac.uk'>Northumbria University</a>. <em>Barba tenus sapientes.</em>
 
 profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>NB165, Northumberland Buiding</p>
+    <p>NB165, Northumberland Building</p>
     <p>College lane</p>
     <p>Newcastle upon Tyne (UK), NE1 8SG</p>
 
@@ -27,29 +27,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am Prof. Dr. Thomas V. Pollet. I study a broad range of topics in the behavioural sciencs at Northumbria University. You can find out more about me on this site and on bluesky <a href="https://bsky.app/profile/tvpollet.bsky.social" class="bluesky-follow-button"><i class="fab fa-bluesky"></i> Follow me on Bluesky</a>
+I am Prof. Dr. Thomas V. Pollet. My research focuses on understanding the wealth of **social relationships** people have (e.g., romantic relationships, friendships, family relationships) and the role of **individual differences** (e.g., personality, height, hormones) for these social relationships, approached from an **interdisciplinary framework**. To this end, I conduct survey, observational, and experimental studies, alongside analysing secondary datasets. I am also interested in improving **methodology and statistics** and frequently collaborate with others on diverse topics.
 
-<style>
-    .bluesky-follow-button {
-        background-color: #1DA1F2;
-        color: white;
-        padding: 5px 10px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 10px;
-        border-radius: 5px;
-        border: none;
-        cursor: pointer;
-        line-height: 20px;
-    }
-    .bluesky-follow-button:hover {
-        background-color: #0d8bf2;
-    }
-    .bluesky-follow-button i {
-        margin-right: 5px;
-    }
-</style>
+I obtained my Ph.D. at [Newcastle University](https://www.ncl.ac.uk) and subsequently held positions at the [University of Groningen](https://www.rug.nl), [VU University Amsterdam](https://www.vu.nl/en), and [Universiteit Leiden](https://www.universiteitleiden.nl/en). In July 2017, I joined [Northumbria University](https://www.northumbria.ac.uk) as Associate Professor (Reader) and was promoted to Professor in September 2020.
 
-
+On a personal note: I rock a great beard, enjoy hiking holidays, and like nature documentaries. I live and work in Newcastle (UK) and am the father of an amazing little girl, Minna. I also have a soft spot for gibbons and cats.
 
