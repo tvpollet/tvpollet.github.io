@@ -1,0 +1,577 @@
+---
+title: 'Lecture 5: PY 0782 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+  ioslides_presentation: default
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## PY0782: Advanced Quantitative research methods.
+* Last week: Correlation, OLS Regression, Logistic regression
+* Today: Moderation effects. 2 x 2 ANOVA
+
+## Goals (today) {.build}
+ ANOVA (again... .)
+
+ Assumptions underpinning ANOVA
+
+ two-way ANOVA + plot.
+
+## Assignment {.build}
+After today you should be able to complete the following sections:
+
+ Two-way ANOVA
+
+ Plots (you could already do this!)
+
+
+## After today.
+
+You can complete the entire assignment I !! Easy marks to gain, if you can't figure something out, move on to the next bit. Three different datasets, so you can really chunk it.
+
+Work through the exercises first, if you have not done so! It will give you insight in how to tackle the assignment.
+
+Questions in discussion board on Blackboard. 
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/VMFLO3cVYqru0/giphy.gif")
+```
+ 
+
+## Types of errors (I,II,III). {.build}
+
+Before we move on:
+
+Initially ANOVA was designed for **balanced** designs: equal N for each factor.
+
+When unbalanced: different ways for calculating Sums of Squares.
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("http://cdn.app.compendium.com/uploads/user/458939f4-fe08-4dbc-b271-efca0f5a2682/f6d0da32-ba1d-41d4-ace1-af34dcb51351/Image/11acae6b1240abc7bc47f09fd5d2470f/capture.PNG")
+```
+
+## Type of errors {.build}
+
+If everything is uncorrelated as in A below then it does not matter at all. However, if the predictors correlate then there are several options. More info [here](https://egret.psychol.cam.ac.uk/statistics/R/anova.html) and [here](https://mcfromnz.wordpress.com/2011/03/02/anova-type-iiiiii-ss-explained/).
+
+```{r, fig.align="center", out.width = "275px", echo=FALSE}
+knitr::include_graphics("https://egret.psychol.cam.ac.uk/statistics/R/correlatedpredictors.png")
+```
+
+## Terminology {.build}
+
+**Type I SS ("sequential")**: Order-dependent. (Assuming we put A first in the order, then SS[A] = t + u + v + w; SS[B] = x + y; SS[A*B] = z)
+
+**Type II SS ("hierarchical")**: SS[A] = t + w; SS[B] = x + y; SS[A*B] = z. Adjusts terms for all other terms _except_ higher-order terms including the same predictors.
+
+**Type III SS ("marginal", "orthogonal")**: SS[A] = t; SS[B] = x; SS[A*B] = z. This assesses the contribution of each predictor over and above all others. 
+
+```{r, fig.align="center", out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://egret.psychol.cam.ac.uk/statistics/R/correlatedpredictors.png")
+```
+
+## Which one to use? {.build} 
+
+Pick the type corresponding to your hypothesis! If you have strong theoretical predictions for A and want to control for things then perhaps type I is your choice. (But most of the time the choice is between II and III.).
+
+For the highest order interaction all will give the same answer.
+
+Type II: most powerful when no interaction present. (note different interpretation of main effects when interaction is present.)
+
+Type III: conservative (with regards to main effects).
+
+## Interaction effects? {.build}
+
+Can anybody explain what an interaction effect is?
+
+What is an example? And why should we particularly care in psychology?
+
+## Synonyms {.build}
+
+Moderation = Interaction. 
+
+Moderation is not the same as mediation. (More about that soon.)
+
+Multiplying of terms.
+
+```{r, fig.align="center", out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/982lslKcbbiZq/giphy.gif")
+```
+
+## Two-way ANOVA (2x2 or 2x3 for example)
+
+Check the relevant assumptions first.
+
+Do you recall what these are? (look back to slides from week 3 if you do not remember)
+
+
+## Graphical example.
+
+Often you see these types of plots... .
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/c/c1/Two-way_interaction_effect_example.png") # Jfdarmo, Wikimedia commons.
+```
+
+## Talk to your neighbour.
+
+Have you come across an interaction design in your internship or Ba.-Thesis. 
+
+What shape was it?
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://i.pinimg.com/736x/7e/14/65/7e1465dd3f7a064f0eb4d13731e1af96--anxiety-cat-social-anxiety.jpg") 
+```
+
+
+## Other forms? {.build}
+
+What other forms can interactions take? 
+
+Two-way / Three-way.
+
+```{r, fig.align="center", out.width = "300px", echo=FALSE}
+knitr::include_graphics("GSS_sealevel_interaction.png") # Ichiloe, Wikimedia commons. https://commons.wikimedia.org/wiki/File:GSS_sealevel_interaction.png
+```
+
+
+## ToothGrowth dataset. 
+
+From datasets package. (ToothGrowth).  
+
+**From vignette**:
+The response is the length of odontoblasts (cells responsible for tooth growth) in 60 guinea pigs. Each animal received one of three dose levels of vitamin C (0.5, 1, and 2 mg/day) by one of two delivery methods, (orange juice or ascorbic acid (a form of vitamin C and coded as VC).
+
+## Assumption checks.
+
+Load the data (ToothGrowth) and test the assumptions for a 2 x 3  ANOVA. Go back to your notes from lecture 3 if you need to. (hint: visual checks / homogeneity of variance). You'll need to convert dose to a factor (as.factor)
+
+What are the solutions, in case of violations?
+
+Check your solution [here](http://www.sthda.com/english/wiki/two-way-anova-test-in-r#check-anova-assumptions-test-validity)
+
+```{r, fig.align="center", out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/IgnStOJbnpXzi/giphy.gif")
+```
+
+## Notations. (Crawley, 2013:396)
+
+**Expressions** :
+
+\+ indicates inclusion of an explanatory variable in the model (not addition);
+
+\- indicates deletion of an explanatory variable from the model (not subtraction);
+
+\* indicates inclusion of explanatory variables and interactions (not multiplication);
+
+\/ indicates nesting of explanatory variables in the model (not division);
+
+\| indicates conditioning (not ‘or’), so that y~x | z is read as ‘y as a function of x given z’.
+
+## More Notations.
+
+**Factorial ANOVA**: y~N\*P\*K 
+
+N, P and K are two-level factors to be fitted along with all their interactions
+
+**Three-way ANOVA**: y~N\*P\*K - N:P:K 
+
+As above, but do not fit the three-way interaction, fit all two-way interactions.
+
+## Interactions require lower order effects.
+
+If you are testing a higher order interaction, you need all the lower level effects. 
+
+So when testing a three-way interaction, you would include all two-way interactions and all main defects.
+
+## Interaction Anova. {.build .smaller}
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture5")
+require(car)
+ToothGrowth2<-ToothGrowth
+ToothGrowth2$dose<-as.factor(ToothGrowth$dose)
+# This ensures you get the same results as beloved SPSS.
+options(contrasts = c("contr.helmert", "contr.poly")) # change options. 
+ # need this for correct SS. - type command
+ANOVAtwobythree<-Anova(lm(len~supp*dose, data=ToothGrowth2), type = 3)
+```
+
+## Results.
+
+```{r}
+ANOVAtwobythree
+```
+
+
+## Alternative route. {.smaller}
+
+```{r}
+# alternative route. Notice that the options are different here!
+options(contrasts = c("contr.sum","contr.poly"))
+ANOVAtwobythree_alt<-lm(len~supp*dose, data=ToothGrowth2) 
+summary(ANOVAtwobythree_alt)
+```
+
+## Alternative route: F-test
+
+```{r}
+drop1(ANOVAtwobythree_alt, .~., test="F")
+```
+
+
+## Ez.{.smaller}
+return_aov will return an ANOVA list from which we can then call objects
+
+```{r, warning=F, message=F, tidy.opts=list(width.cutoff=50), tidy=T}
+# make an ID variable
+ToothGrowth2$id<- seq(1:60)
+require(ez)
+ez<-ezANOVA(data=ToothGrowth2, dv=.(len), wid=.(id), between = .(supp, dose), return_aov=T, detailed=TRUE, type=3)
+```
+
+## Ez output {.smaller}
+```{r}
+ez
+```
+
+
+## Export. {.build .smaller}
+If you want exports you'll need the 'car' or 'ez' objects route.
+
+If you want to make it prettier, you would change the labels in the dataframe (and consider dropping certain columns (e.g., the star notation)).
+
+```{r, results='hide', message=F, warning=F}
+require(stargazer)
+stargazer(ANOVAtwobythree, summary = F, type="html", out="ANOVA_2_3.html")
+stargazer(ez$ANOVA, summary = F, type="html", out="ez_2_3.html")
+```
+
+## Sample write up. {.build}
+
+A two-way ANOVA was conducted to examine the effect of supplement and dose on growth of odontoblasts. There was a significant interaction effect between supplement and dose, _F_(2,54)= 4.11, _p_= .022, $\eta^2_g$= .13. 
+
+You would then further explore the contrasts or plot the results.
+
+## Post-hoc tests.
+```{r}
+TukeyHSD(ez$aov, which="dose")
+```
+
+## alternative
+```{r, message=F, warning=F}
+library(multcomp)
+summary(glht(ez$aov, linfct = mcp(dose = "Tukey")))
+```
+
+## Plot to show the interaction? {.smaller}
+
+ggpubr makes ggplot2 even easier, and churns out some beautiful graphs.
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=3, fig.width=8}
+require(ggpubr)
+plot_moderation <- ggviolin(ToothGrowth2, x = "dose", y = "len",
+                color = "dose", palette =c("black", "darkblue", "darkred"),
+                add = c("jitter","boxplot"), shape = "dose") + labs(x="Condition", y= "Length", color="Dose", shape= "Dose")
+plot_moderation  + facet_wrap(~supp)
+# Jitter could be omitted
+```
+
+
+## Export Means and SD. {.smaller}
+
+```{r, message=F, warning=F,tidy.opts=list(width.cutoff=50), tidy=T}
+require(apaTables)
+apa.2way.table(supp, dose,  len, ToothGrowth2, filename = 'toothgrowth ANOVA', table.number = 1,show.conf.interval = T, show.marginal.means = T, landscape = TRUE)
+```
+
+## Bootstrap! {.smaller .build}
+Note the singular.ok = T statement.
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T}
+# Bootstrap CI for ANOVA 
+library(boot)
+# function to obtain p.values from F-test from the data 
+p_value_twowayaov <- function(data, indices) {
+  data_boot <- data[indices,] # allows boot to select sample 
+  ANOVAtwobytwo_boot<-Anova(lm(len~supp*dose, data=data_boot), contrasts = c("contr.sum", "contr.poly"), type = 3, singular.ok = TRUE)
+  return(ANOVAtwobytwo_boot$`Pr(>F)`[4])
+} 
+# bootstrapping with 1000 replications 
+set.seed(1234)
+results_twowayaov <- boot(data=ToothGrowth2,statistic=p_value_twowayaov,R=1000)
+```
+
+## Bootstrap results
+
+```{r}
+# view results
+results_twowayaov
+```
+
+## Bootstrap plots
+89% CI - check [here](https://twitter.com/rlmcelreath/status/846637291661643776) why.
+```{r}
+plot(results_twowayaov)
+```
+
+## CI
+
+```{r}
+# get 89% confidence interval 
+boot.ci(results_twowayaov, conf = 0.89, type="bca")
+```
+
+
+## tree {.smaller}
+
+Three are ways to "automate" this search for interaction, and there are 'tree' based models which will uncover interactions.
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=3.3, fig.width=7}
+require(tree)
+tree<-tree(len~., ToothGrowth)
+plot(tree)
+text(tree)
+```
+
+## 'party'! {.smaller}
+
+Read about ??party. Amazing package to find patterns in your data. (It does so in a very clever way. )
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=3, fig.width=8}
+require(party)
+ctree<-ctree(len~., ToothGrowth)
+```
+
+Party= Recursive Partitioning of Variance. (underpinning it is permutation testing...)
+
+```{r, fig.align="center", out.width = "370px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/149EV8wlV75ZQc/giphy.gif")
+```
+
+
+## plot
+
+```{r}
+plot(ctree)
+```
+
+
+## Continuous variables and interactions {.smaller}
+
+Back to the Salaries dataset.
+
+```{r, message=F, warning=F}
+require(car)
+salaries<-carData::Salaries
+require(dplyr)
+salaries<- salaries %>% mutate(monthly_salary=salary/9)
+salaries<- salaries %>% mutate(yrs.since.phd_cent= yrs.since.phd -mean(yrs.since.phd))
+names(salaries)[5] <- "gender" # renamed
+```
+
+## Interaction between continuous and dichotomous. {.smaller}
+Regression model.
+
+```{r}
+interaction<-lm(monthly_salary~gender*yrs.since.phd_cent,data=salaries)
+summary(interaction)
+```
+
+## Post-hoc interactions.
+
+phia package (can do quick basic plots)
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=3, fig.width=8}
+require(phia)
+means_int <- interactionMeans(interaction)
+plot(means_int)
+```
+
+## Test interactions (phia)
+
+Not useful here as only 2 levels, but for model with 3 this is how you would get the post-hoc tests.
+
+```{r}
+testInteractions(interaction)
+```
+
+## Basic plot. {.smaller}
+You can modify this. Alternatively look to ggplot2 (Basically a scatterplot with grouping).
+
+```{r, message=F, warning=F}
+library(effects)
+plot(allEffects(interaction), multiline=TRUE, ci.style="bands")
+```
+
+## Try it yourself
+
+Conduct a  2 x 2 ANOVA with gender (or sex if you don't want to rename...) and yrs.service (center it first).
+
+Make a plot.
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/tZpGRRMUoXgeQ/giphy.gif")
+```
+
+## Permutation tests. {.smaller}
+We can again do something clever, permutations! More [here](http://avesbiodiv.mncn.csic.es/estadistica/permut1.pdf) and the 'vegan' manual.
+```{r, warning=F, message=F}
+library(vegan)
+ToothGrowth2<-ToothGrowth
+attach(ToothGrowth2) # need to attach data
+# margin corresponds to type III error.
+adonis2(len~ supp*dose, data = ToothGrowth2, by='margin', method='euclidean') 
+```
+
+
+## continuous x continuous interaction
+The following example data (epi.bfi) comes from the psych package
+(Revelle, 2012), 231 undergraduate students. 
+
+bdi = Beck Depression Inventory
+
+epiNeur = Neuroticism from Eysenck Personality Inventory
+
+stateanx = state anxiety
+
+Does the relation between neuroticism (X) and depression (Y) depend on
+state-anxiety (Z)? (Basic example - consider **centering** when you run it yourself - easier to interpret reduces [multicollinearity issues](https://link.springer.com/article/10.3758/s13428-015-0624-x)).
+
+## Model {.smaller}
+```{r, message=F, warning=F}
+require(psych)
+interaction2<-lm(bdi ~ stateanx*epiNeur, data=epi.bfi)
+summary(interaction2)
+```
+
+## Plot. {.smaller}
+Usually we are interested in shifts of one SD.
+
+```{r,message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=4, fig.width=8}
+library(rockchalk)
+plotCurves(interaction2, plotx="epiNeur",
+modx="stateanx", modxVals="std.dev.", interval='confidence')
+```
+
+## Simple slopes method.
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=2.5, fig.width=8}
+require(jtools)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx, johnson_neyman = FALSE)
+```
+
+## Johnson-Neyman interval method.
+The benefit of the J-N interval: it tells you exactly where the predictor’s slope becomes significant/insignificant. No arbitrary cut-offs.
+
+
+## How to do it. (jtools) {.smaller}
+
+```{r, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=3, fig.width=8}
+johnson_neyman(interaction2, pred = epiNeur, modx = stateanx)
+```
+
+## Problems with heteroscedasticity? {.smaller}
+
+```{r, message=F, warning=F, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=2.5, fig.width=8}
+require(sandwich) # Robust estimation.
+require(lmtest)
+sim_slopes(interaction2, pred = epiNeur, modx = stateanx, robust=T)
+```
+
+## Different Plot {.smaller}
+90% CI - tweak everything ??interact_plot. Again, ggplot2 can also do this. Also check ??interplot.
+```{r, tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=4, fig.width=8}
+interact_plot(interaction2, pred = "epiNeur", modx = "stateanx", interval = TRUE, int.width = 0.9)
+```
+
+## RM-ANOVA: Talk to your neighbour. {.build}
+
+Have you ever conducted a RM-ANOVA design with between-within? What were the within- and between-subject factors?
+
+Did it have an interaction? 
+
+If you haven't conducted one, what would be a scenario where you would test one?
+
+## Repeated Measures ANOVA example? ("Between-Within design") {.smaller}
+
+**Example**:  Hypothetical language acquisition study from [here](). We are interested in children who are raised bilingually, where one of the languages they speak is ‘home only’ and the other language is also used in their school. MLU is mean length of utterance.
+
+```{r,tidy.opts=list(width.cutoff=50), tidy=T, fig.align="center",fig.height=4, fig.width=8}
+library(ez) 
+bilingual<-read.delim("http://coltekin.net/cagri/R/data/bilingual.txt")
+rm_anov<-ezANOVA(data=bilingual, dv=mlu, wid=.(subj), within=.(language, age), between=gender, type = 3) 
+```
+
+## Remember!
+
+Different types of error (I,II,III). 
+
+Specify errors **always** to be on safe side.
+
+
+```{r, fig.align="center", out.width = "400px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/fNlRJ7Gwr4Lba/giphy.gif")
+```
+
+
+## Work through the output. {.smaller}
+
+It is a list, you can call parts with the $ sign.
+
+```{r}
+rm_anov$ANOVA
+```
+
+## Sphericity test. {.smaller}
+
+```{r}
+rm_anov$`Mauchly's Test for Sphericity`
+```
+
+
+## Sphericity corrections. {.build .smaller}
+
+If significant, then you would opt for sphericity corrected measures.
+
+Greenhouse-Geiser correction / Huyn-Feldt corrections for sphericity.
+
+```{r}
+rm_anov$`Sphericity Corrections`
+```
+
+## Exercise
+
+Download the data thechase_R.xlsx . This file contains coding for 50 episodes from [ITV's The Chase](https://en.wikipedia.org/wiki/The_Chase_(UK_game_show)) (coded by yours Truly). Read the data (use the 'readxl' package for example). The codes are largely self-explanatory.
+
+Test the assumptions for a 2 (gender_contestant) x 5 (Opponent) ANOVA on 'High' (this is the highest offer made by the chaser). 
+
+Conduct the 2 x 5 ANOVA. Calculate the post-hoc contrasts. Report as you would do in a paper.
+
+Make a (beautiful) violin plot.
+
+
+## Exercise (cont'd) {.smaller}
+
+Conduct a 2 (gender_contestant) x 2 (age) ANOVA on 'chosen' (the amount chosen by the contestant.).
+
+Make a plot showing the interaction (see the examples from the slides or check ggplot2).
+
+BONUS: Load the salaries dataset, test the interaction effect for yrs.service x yrs.since.Ph.D. on monthly salary.  
+Calculate Johnson-Neyman interval range.
+
+BONUS: use vegan to conduct a permutation analysis. for the 2 x 5 ANOVA you conducted above.
+
+BONUS: use the party package to model 'high'. (Reduce the dataset via 'dplyr', keep a sensible number of variables).
+
+## References (and further reading.) 
+Also check the reading list! (many more than listed here)
+
+* Crawley, M. J. (2013). _The R book: Second edition._ New York, NY: John Wiley & Sons.
+* Dept. of Statistics, Cambridge University (n.d.). _[R: Analysis of variance (ANOVA)](https://egret.psychol.cam.ac.uk/statistics/R/anova.html#references)_
+* Kassambara, A. (2017). _[STHDA: Two way Anova](http://www.sthda.com/english/wiki/two-way-anova-test-in-r)_
+* Wickham, H., & Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
+
+

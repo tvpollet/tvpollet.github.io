@@ -1,0 +1,216 @@
+---
+title: "Solution Lecture 10"
+output: html_document
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 10 instructions.
+
+Download the data from [here](http://www.bodowinter.com/tutorial/politeness_data.csv)
+
+Build a model: model 1: pitch ~ politeness + sex + (1|subject) + $\epsilon$ . $\epsilon$ does not have to be modeled explicitly, those are the residuals. politeness is called attitude in the dataset and pitch is called frequency. Sex is labelled gender.
+
+Test this against a null model: pitch ~ (1|subject) + $\epsilon$ . Which one is the better fit?
+
+Bootstrap the politeness effect from model 1.
+
+Compare model 1 to this model pitch ~ politeness + sex + (1|subject) + (1|item) + $\epsilon$ . Note that items are called scenarios.
+
+Make a model with random slopes for politeness for both subjects and items, have it include a fixed effect as well.
+
+Compare this model with random slopes to a model with just random intercepts (but with the fixed effect).
+
+Bootstrap the fixed effect.
+
+## Load the data.
+
+```{r}
+politeness<-read.csv("http://www.bodowinter.com/tutorial/politeness_data.csv")
+```
+
+## Compare fixed effect to a null model.
+
+```{r}
+require(lme4)
+# We don't explicitly fit ML because anova will refit. The warning tells us this.
+fixed_effect <- lmer(frequency ~ attitude + gender + (1|subject), data=politeness)
+null_model<- lmer(frequency ~ 1 + (1|subject), data=politeness)
+anova(null_model,fixed_effect)
+```
+
+A likelihood ratio test demonstrated that a model with a fixed effect for gender and politeness was a better fit, as compared to a null model ($\chi^2$= 20.91, _p_ < .0001).
+
+## Diagnostics 
+
+You were not asked to do this but we can check the diagnostics.
+
+```{r}
+require(DHARMa)
+# 250 is the default.
+simulationOutput <- simulateResiduals(fittedModel = fixed_effect, n = 250)
+plotSimulatedResiduals(simulationOutput = simulationOutput)
+```
+
+This looks fairly OK, we do have some gap in 'the middle' for the second plot. To some degree that is to be expected as we have _categorical_ predictors.
+
+Unsurprisingly, the K-S test allows us to maintain the assumption of normality.
+
+```{r}
+testUniformity(simulationOutput = simulationOutput)
+```
+
+We can also plot what is going on. Blue line suggests some non-linearity but close to the line.
+
+```{r, warning=F, message=F}
+require(sjPlot)
+plot_model(fixed_effect, type = "slope")
+```
+
+Plot of residuals.
+
+```{r, warning=F, message=F}
+require(sjPlot)
+plot_model(fixed_effect, type = "resid")
+```
+
+Diagnostics. Note that the 4th plot only looks at _fixed_ effects.
+
+```{r, warning=F, message=F}
+require(sjPlot)
+plot_model(fixed_effect, type = "diag")
+```
+
+## Bootstrap the politeness effect.
+
+The below previously did not work well with "case" as we will draw samples which will only have one category in the predictors. So we switched to "parametric" (which is also faster, so we'll up the numbers). However, in a more recent version we can (you might need to download the newest version via 'remotes').
+
+Note that for some of you a couple of these models will have convergence errors but that's to be expected with 10,000 bootstraps. We will treat these as noise. One would typically report how many failed to converge (if it is a large number). In my case 9,633 were returned from the 10,000 requested.
+
+Note that this will take some time.
+
+```{r, message=FALSE, warning=FALSE}
+require(lmeresampler)
+set.seed(1984)
+b<-bootstrap(model = fixed_effect, .f = fixef, type="case", resample = c(TRUE,TRUE), B=10000)
+boot_data<-as.data.frame(b$replicates)
+```
+
+
+A case bootstrap approach showed that the effect of politeness was robust (95%CI [-33.08, -4.14]).
+
+
+```{r}
+require(skimr)
+skim(boot_data)
+quantile(na.omit(boot_data$attitudepol), prob = c(0.025, 0.975))
+```
+
+An alternative via 'bootmlm'. You will need to install it first:
+`remotes::install_github("marklhc/bootmlm")` . This assumes you have the `remotes` package already installed
+
+We use a helper function to get the fixed effects:
+
+```{r}
+require(bootmlm)
+```
+
+
+```{r}
+mySumm <- function(x) {
+  c(getME(x, "beta"))
+}
+```
+
+
+Note that this overrides! (also note some warning messages!)
+
+```{r}
+set.seed(1234)
+boot_data <- bootstrap_mer(fixed_effect, mySumm, type = "case", nsim = 10000)
+```
+
+There are 320 missing.
+
+```{r}
+require(skimr)
+skim(as.data.frame(boot_data$t)) 
+```
+
+```{r}
+boot_result<-as.data.frame(boot_data$t)
+quantile(na.omit(boot_result$V2), prob = c(0.025, 0.975))
+```
+
+A sample write-up:
+
+Using the 'bootmlm' package, we followed a case bootstrap approach with 10,000 samples, of which 9,680 converged. This showed that the effect of politeness was robust (95%CI [-25.95, -12.00]).
+
+
+
+## Report the models.
+
+```{r, message=F, results='hide'}
+require(stargazer)
+star.1<-stargazer(null_model,fixed_effect, type="html", dep.var.labels = c("Frequency"), covariate.labels=c("Politeness", "Gender"), style= "asr", align = T, title="Amazing table", out= "amazing.html")
+```
+
+## model with scenarios.
+
+```{r}
+require(lme4)
+fixed_effect <- lmer(frequency ~ attitude + gender + (1|subject), data=politeness)
+two_rand_intercept <- lmer(frequency ~ attitude + gender + (1|subject) + (1|scenario), data=politeness)
+anova(fixed_effect,two_rand_intercept, refit=F)
+```
+
+The model with two random intercepts is a superior fit.
+
+## Random slopes.
+
+We can now also compare all models if we'd like.
+
+The model with two random slopes is not a superior fit to the two random intercept model in terms of fit. 
+
+```{r}
+two_rand_slopes<- lmer(frequency ~ attitude + gender + (attitude|subject) + (attitude|scenario), data=politeness)
+anova(null_model,fixed_effect,two_rand_intercept,two_rand_slopes, refit=F)
+```
+
+## Bootstrap the fixed effect.
+
+Again we opt for a case bootstrap. This will generate lots of errors (for some of you). One of the downsides of keeping it 'maximal' is that you will run into lots of convergence errors... . Anyway, this is to be expected when bootstrapping.
+
+```{r, message=F, warning=F}
+require(lmeresampler)
+set.seed(1987)
+b<-bootstrap(model = two_rand_slopes, .f = fixef, type="case", resample = c(TRUE,TRUE,TRUE), B=10000)
+boot_data<-as.data.frame(b$replicates)
+```
+
+```{r}
+require(skimr)
+skim(boot_data)
+quantile(na.omit(boot_data$attitudepol), prob = c(0.025, 0.975))
+```
+
+A case bootstrap approach with 9677 samples, out of 10,000 requested, showed that the effect of politeness was robust (95%CI [-36.97, -0.26]).
+
+In conclusion, across a range of models we consistently find evidence for the fixed effect of politeness. 
+
+## References
+
+Winter, B. (2013). Linear models and linear mixed effects models in R with linguistic applications.
+arXiv:1308.5499. [http://arxiv.org/pdf/1308.5499.pdf](http://arxiv.org/pdf/1308.5499.pdf)
+
+**THE END!**
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/9wcu6Tr1ecmxa/giphy.gif")
+```
+
+

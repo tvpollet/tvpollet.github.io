@@ -1,0 +1,656 @@
+---
+title: 'Lecture 4: PY 0782 - Advanced Quantitative Research Methods'
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+  ioslides_presentation: default
+  widescreen: yes
+---
+## PY0782: Advanced Quantitative research methods.
+* Last week: ANOVA and its associated nightmares.
+* Today all correlation and regression.
+
+## Goals (today) {.build}
+ Correlation and ordinary least squares (OLS) regression
+
+ Assumptions underpinning regression
+
+ Logistic regression.
+
+## Assignment {.build}
+After today you should be able to complete the following sections:
+
+ Correlation
+
+ OLS Regression / assumptions.
+
+ Plots.
+
+ Logistic regression
+ 
+## (Pearson) Correlation 
+ A correlation is mostly the first step. You want to find out the strength of an association
+
+## Formula (for your reference)
+
+Sample correlation coefficient. These are the formulae.
+
+$r = \frac{\Sigma(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\Sigma(x_i - \bar{x})^2\Sigma(y_i - \bar{y})^2}}$
+
+is equivalent to
+
+$r = \frac{cov (x,y)}{\sqrt{var(x)*var(y)}}$
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/ne3xrYlWtQFtC/giphy.gif")
+```
+
+## Correlation.
+
+Covariance divided by the geometric mean of variances.
+
+Read back your notes or check [here](https://www.sheffield.ac.uk/polopoly_fs/1.43991!/file/Tutorial-14-correlation.pdf)
+
+## Assumptions. {.build}
+
+levels of measurement: continuous. (Alternative: ordinal correlations)
+
+normality (outliers)
+
+homoscedasticity
+
+linearity (Think back of [Anscombe's quartet](https://www.r-bloggers.com/using-and-abusing-data-visualization-anscombes-quartet-and-cheating-bonferroni/))
+
+## Population versus sample. {.build}
+
+Note that if you have sampled the entire population, then there is no probability!
+
+Particular pet peeve of [mine](https://www.frontiersin.org/articles/10.3389/fpsyg.2013.00734/full).
+
+## Remember.
+
+ Correlation is not causation (but some work in computing science, can infer this in basic associations!)
+ 
+ Check [this](http://www.tylervigen.com/spurious-correlations)
+ 
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/Kx0YtQsusXfvq/giphy.gif")
+```
+
+## Correlation. {.build .smaller}
+
+```{r}
+setwd("~/Dropbox/Teaching_MRes_Northumbria/Lecture4")
+require(datasets)
+iris<-iris # not really necessary but typically good to store away
+cor(iris[1],iris[2]) # Correlation.
+cor(iris$Sepal.Length, iris$Sepal.Width)
+# also change methods Kendall / Spearman. 
+cor(iris[1],iris[2], method='kendall')
+```
+
+## Significance test.
+
+```{r}
+# custom confidence interval 90%
+cor.test(iris$Sepal.Length, iris$Sepal.Width, conf.level = .90)
+```
+
+## Sample write up
+
+The Pearson correlation between sepal length and sepal width was not significant (_r_(148)= -.12, _p_=.15).
+
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/CQDF0q4pffDW0/giphy.gif")
+```
+
+## Make a pretty chart. {.build .smaller}
+
+```{r, warning=F, message=F, tidy.opts=list(width.cutoff=2), tidy=T, fig.align="center",fig.height=3, fig.width=8, size = "small"}
+require(ggplot2) # note geom_jitter
+require(ggthemes)
+require(RColorBrewer)
+gg<-ggplot(data = iris,aes(Sepal.Width, Sepal.Length, color=Species)) + geom_jitter()
+gg<- gg + facet_grid(. ~ Species) + geom_smooth(method='lm') 
+gg<- gg + scale_colour_brewer(palette = "Dark2")
+gg <- gg + labs(x="Sepal Width", y="Sepal Length", title="Sepals") + theme_tufte(12) 
+gg
+```
+
+
+## Correlation matrix {.build .smaller}
+
+```{r, warning=F, message=F}
+require(apaTables)
+require(dplyr)
+cor_table<-dplyr::select(iris,-Species)
+apa.cor.table(cor_table, filename = "correlations-iris.doc")
+```
+
+## ggcorrplot. {.smaller}
+
+```{r, warning=F, message=F, tidy.opts=list(width.cutoff=20), tidy=T, fig.align="center",fig.height=3.5, fig.width=8}
+# ggcorrplot, you can then further tweak this, as it is a ggplot.
+require(ggcorrplot)
+cormatrix<-cor(cor_table)
+ggcorrplot(cormatrix, hc.order = TRUE, type = "lower", lab = TRUE) 
+```
+
+## Other packages exist.
+
+For further info. see the tutorial referenced at the end by Willems.
+
+??corrplot 
+
+## New data: Prestige dataset
+This is based on Fox (2015) and Fox (2002)
+
+```{r}
+library(carData)
+prestige<-carData::Prestige
+```
+
+## What is it about?
+
+education: The average number of years of education for occupational incumbents.
+
+income: The average income of occupational incumbents, in dollars.
+
+women: The percentage of women in the occupation.
+
+prestige:The average prestige rating for the occupation.
+
+census: The code of the occupation used in the survey.
+
+type: Professional and managerial(prof), white collar(wc), blue collar(bc), or missing(NA)
+
+## Try it yourself.
+
+Load the Prestige dataset
+
+Make a correlation matrix with all the continuous variables. (use filter from dplyr to remove strings)
+
+And: _either_ export a .docx _or_ make a correlation plot.
+
+```{r, out.width = "400px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3qQ329Rgle89i/giphy.gif")
+```
+
+## Partial correlations. {.smaller}
+
+Partial correlations, when you want to control for a continuous variable (z)
+```{r, message=F, warning=F}
+require(ppcor)
+pcor.test(x = prestige$education, y= prestige$prestige , z=prestige$income)
+```
+
+
+## Linear regression.
+
+When would you use linear regression?
+
+## Run a basic one.
+
+```{r}
+model_education<-lm(prestige~education, data=prestige)
+summary(model_education)
+```
+
+## Assumptions. {.build}
+
+**Linearity**: Think back to the datasaurus! (This also relates to multicollinearity, measurement error).
+
+**Normality**: All errors normally distributed around 0.
+
+**Homoscedasticity**: The variance of the errors should be constant for the (combination) (as with ANOVA)
+
+**Independence**: Errors should be independent.
+
+More [here](https://peerj.com/articles/3323/).
+
+## How to check? {.build}
+
+**Linearity**: Scatterplot between X & Y
+
+**Normality**: Plot of error terms
+
+**Homoscedasticity**: Many options (Breusch-Pagan test). Visual check: Is there a larger spread of measurements around the regression line at one side of the scatterplot than at the other
+
+**Independence**: Durbin-Watson test / Check for autocorrelation (Ljung-Box test)
+
+## Solutions: linearity. {.smaller}
+
+Good idea to plot before you start.
+
+```{r, opts_chunk$set(out.width = 5), tidy=T, fig.height=2.15, fig.width=7, warning=F, message=F}
+require(ggplot2)
+require(scales)
+require(ggthemes) 
+plot_edu<-ggplot(prestige, aes(education,prestige)) + geom_jitter() 
+plot_edu<- plot_edu + scale_y_continuous(limits=c(0,100),breaks = pretty_breaks(6)) + scale_x_continuous(limits=c(6,18), breaks = pretty_breaks(6)) + ylab("Prestige") + xlab("Education") + geom_smooth(method='loess') + theme_tufte(12)
+```
+##Plot: By and large linear?
+
+```{r}
+plot_edu
+```
+
+
+
+## plot() {.smaller .build}
+
+**4** diagnostic models (but still have to check independence of error). More [here](http://data.library.virginia.edu/diagnostic-plots/). 
+[Here](https://rpubs.com/therimalaya/43190) is how you do it in ggplot2!
+
+```{r, fig.height=4, fig.width=7}
+plot(model_education, which = 1)
+```
+
+## Q-Q plot.
+```{r, fig.height=4, fig.width=7}
+plot(model_education, which = 2)
+```
+
+## Scale location plot.
+
+```{r, fig.height=4, fig.width=7}
+plot(model_education, which = 3)
+```
+
+## Outliers
+
+```{r, fig.height=4, fig.width=7}
+plot(model_education, which = 4)
+```
+
+## Can't we just use scatter plots?
+
+Perhaps for basic models but it will quickly become complex.
+
+Some of these plots give you information which you could not get from just scatter plots.
+
+```{r, out.width = "300px", echo=FALSE}
+knitr::include_graphics("https://media.giphy.com/media/5T8tEJtCgvDuo/giphy.gif")
+```
+
+## Homoscedasticity: Breusch-Pagan test.
+
+```{r, warning=F, message=F}
+require(lmtest)
+bptest(model_education)
+```
+
+## Durbin-Watson test (lmtest).
+
+```{r}
+dwtest(model_education) #Durbin-Watson test.
+```
+
+## Box test.
+
+Also note that there is one other alternative typically used in econometrics (Breusch-Godfroy). Check [here](https://stats.stackexchange.com/questions/148004/testing-for-autocorrelation-ljung-box-versus-breusch-godfrey).
+
+```{r}
+Box.test(residuals(model_education), type="Ljung-Box") #Box test
+```
+
+## Write up.
+Visual inspection suggested that a linear fit was appropriate. Visual inspection also suggested that the errors from the OLS regression model were approximately normally distributed. A Breusch-Pagan test showed that the assumption of homoscedasticity could be upheld ($\chi^2$(1)= 0.71, _p_=.40). However, a Durbin-Watson test indicated that the assumption of independence of errors was violated (Durbin-Watson test= 1.44, _p_=.002).
+
+## Problems... . {.build}
+
+**Linearity**: Transform data (e.g., log-transform) / fit curve
+
+**Normality**: Transform data / fit curve
+
+**Heteroscedasticity**: sandwich package can calculate errors adjusting for this.
+
+**Autocorrelation**: sandwich package can calculate (e.g., Newey-West errors), alternatively look into panel model packages (??plm)
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/3oEduRCITWQ5BruE8g/giphy.gif")
+```
+
+
+## Hierarchical regression. {.build .smaller}
+
+Usually we run more than one! And we build a table. (Normally you would check the assumptions of every model!)
+
+```{r}
+lm_education_women<-lm(prestige~education+women, data=prestige)
+summary(lm_education_women)
+```
+
+## Stargazer! {.smaller}
+
+```{r, results = 'asis', warning=F, message=F, tidy.opts=list(width.cutoff=5), tidy=T}
+require(stargazer)
+stargazer(model_education,lm_education_women,  dep.var.labels=c("Prestige"),covariate.labels=c("Education (years)","Women (%)"), style="demography", out="hierarchical.htm", header=F)
+```
+
+## Sample write up.
+
+Table X describes a hierarchical regression on prestige. The first model showed a statistically significant, positive, effect of years of education on prestige. In the second model, the effect of  education was upheld, while controlling for the % of women. The effect of % women was also statistically significant.
+
+## Interpreting B coefficients. {.smaller}
+
+Centering (week 2). We can use our model to make predictions... .
+
+```{r, tidy.opts=list(width.cutoff=15), tidy=T}
+require(dplyr)
+# use :: just in case of conflicts.
+prestige<-dplyr::mutate(prestige, women_cent= women-mean(women), education_cent= education-mean(education), prestige_cent= prestige-mean(prestige))
+centered_model<-lm(prestige_cent~education_cent+women_cent, data=prestige)
+```
+
+## Centered model.{.smaller}
+
+2 years of extra education --> increase of 10.86 in prestige scores (all else being equal!)
+
+a 10% shift in the number of women --> decrease of around 1 point (0.93) in terms of prestige.
+
+```{r}
+summary(centered_model)
+2*5.428
+#alternatively
+2*coefficients(centered_model)[2]
+# Shift of 10%
+10*coefficients(centered_model)[3]
+```
+
+## from B to Beta...{.smaller .build}
+
+Remember scale() - $\beta$'s are nothing more than standardized B's! (but beware scale() takes matrices as input - look at _z_-score functions).
+
+Interpreted in shifts of standard deviations. A $\beta$ of 1 implies that a shift of 1SD in X leads to a shift of 1SD in Y.
+
+```{r}
+# -1 so we can drop the intercept -- standardized regression has no intercept.
+model_education_stand<-lm(scale(prestige)~scale(education)-1, data=prestige)
+summary(model_education_stand)
+```
+
+## Alternative. QuantPsyc package.
+
+Note be wary with interaction terms! (center them beforehand - values might not be correct from QuantPsyc). Alternative function: lm.beta.
+
+```{r, warning=F, message=F}
+require(QuantPsyc)
+lm.beta(model_education)
+```
+
+## Bootstrapping a B coefficient. {.smaller}
+
+Again note that you can do this for _any_ statistic.
+
+```{r}
+# Bootstrap 95% CI for B coefficient.
+library(boot)
+# function which does bootstrapping.
+coeff_B <- function(data, indices) {
+data_boot <- data[indices, ] # allows boot to select sample
+B_boot <- lm(prestige_cent ~ education_cent + women_cent, data = data_boot)
+return(B_boot$coeff[2]) # education in position 2 / alter for different variables.
+}
+# bootstrapping with 10000 replications
+set.seed(666)
+results_coeff_B <- boot(data = prestige, statistic = coeff_B, R = 10000)
+```
+
+## view results
+
+```{r}
+# view results
+results_coeff_B
+```
+
+## 95% BCa (bias-corrected accelerated) confidence interval. {.smaller}
+
+```{r}
+# get 95% confidence interval 
+boot.ci(results_coeff_B, type="bca")
+```
+
+The 95% BCA confidence interval (with 10,000 bootstraps) for the (centered) coefficient of education is [4.85, 5.97].
+
+## Logistic Regression. {.build}
+
+Sometimes we have a dichotomous outcome (for example: Yes/No, Alive/Dead)
+
+We cannot use OLS regression as it violates the assumptions of normality.
+
+## Clever trick... {.smaller .build}
+
+We can take proportions and turn them into Odds Ratios and then turn those into LogOdds which then conform to linearity.
+
+Read the references for full explanation and underpinning.
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/12NUbkX6p4xOO4/giphy.gif")
+```
+
+## Assumptions logistic regression.{.build .smaller}
+
+Some typical assumptions for OLS/MANOVA do not apply (homoscedasticity/normal distribution error terms/...) but:
+
+Correct coding of dependent variable (correctly measured).
+
+All relevant variables included. No over/underfitting.
+
+Independent observations (also relates to multicollinearity - independent variables should not be strongly related to one another).
+
+Linearity between _log-odds_ and independent variable.
+
+Sample size, required for estimation (according to some n=10 per IV ok, others n>30 per IV).
+
+## Assumption checks? {.build}
+
+[Some](https://stats.stackexchange.com/questions/45050/diagnostics-for-logistic-regression) argue that logistic regression does not require assumption checks, and thus we would not check these. 
+
+Long story but Maximum likelihood estimation has better properties than OLS in terms of estimation
+
+Instead, some argue that at the design stage think about sample size / distribution, et cetera before running the model.
+
+Again, you can always bootstrap, which might make some of your conclusions more robust!
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/nVV3Aodoc0KGs/giphy.gif")
+```
+
+## Pima Indian data. {.smaller}
+
+9 variables and 768 cases, women aged 21 or older.
+
+```{r, message=F, warning=F}
+require(mlbench) # contains the data
+require(skimr)
+# Pima data first needs data() command.
+data(PimaIndiansDiabetes2)
+pima_data<-PimaIndiansDiabetes2
+skim(pima_data)
+```
+
+## Logistic regression.
+
+```{r}
+log1<-glm(diabetes~mass, data=pima_data, family=binomial)
+log2<-glm(diabetes~mass+age, data=pima_data, family=binomial)
+summary(log1)
+```
+
+## summary of log2
+
+```{r}
+summary(log2)
+```
+
+
+## Likelihood ratio tests. {.build}
+
+summary() gives you parameter estimates and associated tests (Wald tests). 
+
+Likelihood ratio tests tend to perform better with [smaller samples](https://stats.stackexchange.com/questions/193643/likelihood-ratio-vs-wald-test).
+
+You should be concerned if the conclusions differ (likely suggests non-linearity).
+
+## Likelihood ratio tests. {.smaller}
+
+```{r}
+anova(log1, test="Chisq")
+```
+
+## Likelihood ratio tests, log2 {.smaller}
+
+```{r}
+anova(log2, test="Chisq")
+```
+
+
+## Odds ratios. {.build}
+
+The coefficients are not really interpretable given that they are a linear relationship between the independent variable and log-odds.
+
+We can take the exponential to interpret them!
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/JYTm7I9nMRlgk/giphy.gif")
+```
+
+
+## Odds ratios {.smaller}
+
+incr= custom increments (not useful/necessary if you have factors). Note that you might want to center your data beforehand! (ease of interpretation).
+
+```{r}
+require(oddsratio)
+# shift of 5 in BMI.
+or_glm(pima_data, incr= list(mass= 5), log1)
+or_glm(pima_data, incr= list(mass= 5, age=1), log2)
+```
+
+## Alternative way.{.build .smaller}
+
+```{r, message=F, warning=F}
+require(questionr)
+odds.ratio(log1)
+odds.ratio(log2)
+```
+
+
+## What does that mean? {.build}
+
+In model 2: The odds of having diabetes versus not having diabetes, is 1.11 times (95%CI [1.09,1.14]) higher when BMI increases with one unit (while controlling for age).
+
+You can then use this to calculate specific odds.
+
+## Where is my R squared?  {.build .smaller}
+
+Complex - you can get  Pseudo $R^2$ but perhaps you should [not](https://stats.stackexchange.com/questions/3559/which-pseudo-r2-measure-is-the-one-to-report-for-logistic-regression-cox-s). 
+
+```{r, message=F, warning=F}
+require(rcompanion)
+nagelkerke(log1, restrictNobs=T)
+nagelkerke(log2, restrictNobs=T)
+```
+
+## Stargazer! {.smaller}
+
+We can get a nice table with Odds Ratios and summaries. Or look into broom() and tidy() (see last week).
+
+```{r, opts_chunk$set(out.width = 30), tidy=T, results='hide'}
+require(stargazer)
+stargazer(log1,log2, covariate.labels=c("BMI","Age"), omit=c("Constant"), apply.coef=exp, t.auto=F, p.auto=F, report = "vc*", style="asr", out="logistic.htm", header=FALSE)
+```
+
+## Sample write up. {.smaller}
+
+Table X shows the key results for a hierarchical logistic regression analysis. In Model 1, there was a statistically significant effect of BMI on having diabetes, ($\chi^2(1)$=76.64, _p_<.0001). Moreover, in Model 2 there was a significant effect of age ($\chi^2(1)$=44.28, _p_<.0001), after accounting for BMI ($\chi^2(1)$=76.64, _p_<.0001).
+
+The $\chi^2$ values correspond to the likelihood ratio test (the Deviance value) for the variables (you also can calculate for the model - check the rcompanion output). 
+
+You might want to add a Pseudo-$R^2$.
+
+You would then describe the odds ratios or illustrate the effect.
+
+## vcd package {.build}
+
+Continuous --> You can plot the odds ratios. Look at how to do that in [ggplot2](https://blogs.uoregon.edu/rclub/2016/04/05/plotting-your-logistic-regression-models/)
+
+How to plot our results for categorical variables? Mosaic plots! Also look at alternatives
+
+Look into [ggmosaic()](https://cran.r-project.org/web/packages/ggmosaic/vignettes/ggmosaic.html) if you want it in ggplot2.
+
+## How to do it? {.build .smaller}
+
+First make some categorical variables.
+
+```{r, opts_chunk$set(out.width = 50), tidy=T, warning=F, message=F}
+require(dplyr) # make some categorical variables
+pima_data<- pima_data %>% mutate(obese=cut(mass, breaks=c(-Inf, 30, Inf), labels=c("No","Yes")))
+pima_data<- pima_data %>% mutate(nulligravada=cut(pregnant, breaks=c(-Inf, 0.99, Inf), labels=c("never pregnant","ever pregnant")))
+```
+
+## Vcd {.smaller}
+```{r, opts_chunk$set(out.width = 12), tidy=T, warning=F, message=F,fig.height=3.5, fig.width=7, fig.align='center'}
+require(RColorBrewer)
+# pick some colours.
+colours<-c(color = brewer.pal(2, "Set3"))
+fill_colours<-rep(colours, each=4) # 4 quadrants to fill
+require(vcd)
+mosaicplot1<-mosaic(~ diabetes + nulligravada + obese, zero_size = 0, data=pima_data, gp = gpar(fill = fill_colours, col = 0), legend=F, labeling = labeling_values)
+```
+
+## Exercise. 
+
+- Load last week's Salaries dataset. If necessary, calculate monthly_salary again.
+
+- calculate a Spearman and Pearson correlation between years since Ph.D. and monthly salary. Conduct a significance test for one of them. Pick one and discuss the outcome 
+
+- Build a hierarchical regression model, in step 1 use monthly salary as dependent and year since Ph.D. as independent, in step 2 add gender (keep all variables from step 1), in step 3 add rank (keep all variables from step 2). Export the hierarchical regression table.
+
+- Test the assumptions for the final model, how would you combat any issues that arise in terms of violations of these assumptions?
+
+
+## Exercise. (cont'd)
+
+- Calculate the standardized coefficients for model 1 ($\beta$). Interpret this coefficient. Bootstrap this coefficient and report as you would do in a paper.
+
+- What does the final model predict in terms of monthly salary shift, when there is a shift of being 3 years post-Ph.D.
+
+- Install and load the 'caret' package. load the GermanCredit dataset. ??GermanCredit to find out more also [here](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)). It contains data on credit scores for a 1,000 cases and has 62 variables.  As done before, you might want to explore the descriptive statistics.
+
+- Make a corrplot() for up to 10 continuous variables in the GermanCredit dataset. Export a correlation matrix (up to 10 variables). 
+
+
+## Exercise (cont'd)
+
+- Conduct a hierarchical logistic regression on 'Class' as dependent, in each step keeping the previous variables. In step 1 add Amount. In step 2 add CreditHistory.PaidDuly. In step 3 add Age. In step 4 add Telephone. Export a table with your key results.
+
+- Choose some categorical variables and make a (beautiful) mosaic plot with credit class as dependent.
+
+- Calculate all odds ratios for model 4. Calculate the odds ratio for a shift in 1,000 DM (Deutsche Mark - pre-euro era) in credit status for model 4. 
+
+- BONUS: Make a mosaic plot via ggmosaic()  with credit class as dependent.
+
+- BONUS: Have a look at [ROC curves](https://cran.r-project.org/web/packages/plotROC/vignettes/examples.html) and plot one for the credit data.
+ 
+
+## References (and further reading.) 
+Also check the reading list! (many more than listed here)
+
+* Crawley, M. J. (2013). _The R book: Second edition._ New York, NY: John Wiley & Sons.
+* Fox, J. (2015). _Applied regression analysis and generalized linear models_. London, UK: Sage.
+* Torres-Reyna, O. (2010). [Regression 101.](https://www.princeton.edu/~otorres/Regression101R.pdf)
+* Wickham, H., & Grolemund, G. (2017). _[R for data science](http://r4ds.had.co.nz/)_. Sebastopol, CA: O’Reilly.
+* Willems, K. (2017). [R correlation tutorial](https://www.datacamp.com/community/blog/r-correlation-tutorial#gs.I6sFjp8)
+* Zuur, A., Ieno, E.N., Walker, N., Saveliev, A.A., & Smith, G.M. (2009). _Mixed effects models and extensions in ecology with R_. New York, NY: Springer. 
+
+
+
+
+
+
+
+
+

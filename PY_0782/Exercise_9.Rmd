@@ -1,0 +1,156 @@
+---
+title: "Solution Lecture 9"
+author: "Dr. Thomas Pollet, Northumbria University (thomas.pollet@northumbria.ac.uk)"
+date: '`r format(Sys.Date())` | [disclaimer](http://tvpollet.github.io/disclaimer)'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 9 instructions.
+
+Use the following code below to generate a correlation matrix to use (you'll need to load lavaan).
+
+The data comes from this [paper](http://core.ecu.edu/psyc/wuenschk/Articles/JSB&P2000.pdf). A study testing the Theory of Planned Behaviour when applying to graduate school for 131 students.
+
+```{r}
+require(lavaan)
+data<-lav_matrix_lower2full(c(1,.47,1,.66,.50,1,.77,.41,.46,1,.52,.38,.50,.50,1))
+rownames(data)<-colnames(data)<-c("att",'sn','pbc','int','beh') # a matrix.
+```
+
+Reconstruct the model from the article. (Note that there are no (!) latent variables)
+
+Discuss the fit. Make a sem plot.
+
+What happens when you remove the indirect path?
+
+## Basic model from the article.
+
+This exercise is taken from [Huang 2016](http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html).
+
+Have a look at the article this is the basic model they propose. The equations are corresponding to Figure 1, they are all **manifest** variables, even though denoted with ellipses rather than rectangles in the original paper. 
+
+```{r}
+model<-'
+int~att+sn+pbc
+beh~int+pbc
+'
+```
+
+Note: We have a correlation matrix, but the command used refers to covariance matrix.
+
+```{r}
+path_model1<-sem(model,sample.cov=data,sample.nobs=131)
+```
+
+We can also directly request an $R^2$ measure for this model.
+
+```{r}
+summary(path_model1,standardized=T,fit=T,rsquare=T)
+```
+
+Let's make a plot... . Our plot looks different but the values pretty much map onto to those of the original article.
+
+```{r}
+require(semPlot)
+require(qgraph)
+semPaths(path_model1,style = "lisrel",what="std",  curvePivot = TRUE)
+```
+
+We could calculate the direct, indirect and total paths from this graph. But we could not formally test the mediation.
+
+```{r}
+direct_model<-'beh~int+pbc+att+sn'
+```
+
+This model actually explains more variance and is a better fit based on AIC and on BIC. Depending on your view, a model with just main effects would thus be parsimonious to one with the indirect pathway.
+
+```{r}
+direct_model1<-sem(direct_model,sample.cov=data,sample.nobs=131)
+summary(direct_model1,standardized=T,fit=T,rsquare=T)
+```
+
+```{r}
+anova(path_model1,direct_model1)
+```
+
+
+## Mediation tests.
+
+
+```{r}
+model2<-'
+int~att+sn+a*pbc 
+beh~b*int+c*pbc
+
+indirect := a*b # we care about this one most.
+direct := c
+total := c + a*b'
+```
+
+Unfortunately we cannot do the bootstrapping without the raw data. The indirect effect is not significant but we are basing this on the correlations... . As you might recall the product-moment approach is not very powerful and our sample is comparatively small.
+
+```{r}
+path_model2<-sem(model2, sample.cov=data, sample.nobs=131)
+summary(path_model2,standardized=T,fit=T,rsquare=T)
+```
+
+## Simulate the original data.
+
+We cannot use the more powerful bootstrapping approach based on the correlation matrix.
+
+We can use the 'gendata' package to simulate a raw dataset which would give the correlations below.
+
+```{r}
+library(gendata)
+raw<-genmvnorm(data,k=5,n=131,seed=666)
+cor(raw)
+```
+
+Add the labels.
+
+```{r}
+colnames(raw)<-c("att",'sn','pbc','int','beh')
+```
+
+Bootstrap. This will take a lot of time.
+
+Contrary, to [Huang](https://web.archive.org/web/20200716131821/http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html), we find no evidence for a significant mediation effect.
+
+```{r}
+results_raw<-sem(model2,data=raw,se="bootstrap",bootstrap=1000) 
+summary(results_raw,standardized=T,fit=T,rsquare=T)
+```
+
+
+### References.
+
+Huang, F. (2016). Path analysis with R. [http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html](http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html), archived here: [https://web.archive.org/web/20200716131821/http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html](https://web.archive.org/web/20200716131821/http://web.missouri.edu/~huangf/data/mvnotes/Using_R_for_path_analysis.html)
+
+
+**THE END!**
+
+```{r, out.width = "300px", echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://media.giphy.com/media/9wcu6Tr1ecmxa/giphy.gif")
+```
+
+## SessionInfo
+
+```{r}
+sessionInfo()
+```
+
+

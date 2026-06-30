@@ -1,0 +1,268 @@
+---
+title: "My PsyArxiv network"
+author: "Prof. Thomas Pollet, Northumbria University, UK"
+date: '`r format(Sys.Date())`'
+output:
+    html_document:
+     df_print: paged
+     theme: cerulean
+     highlight: haddock
+     toc: yes
+     toc_depth: 3
+     toc_float:
+      collapsed: false
+      smooth_scroll: true
+    code_fold: show
+editor_options: 
+  markdown: 
+    wrap: 72
+bibliography: r-analysis-references.bib
+---
+
+# Introduction
+
+In this document, I built my network to add to my website. It is a modified version of this [tutorial](https://vuorre.com/posts/psyarxiv-network/) by [Matti Vuorre](https://vuorre.com/).
+
+You will need the packages to be installed (though not all used) and the data to be downloaded in the same folder as this script. Pay attention to where it says **IMPORTANT**. 
+
+You also need to install `psyarxivr` as not on CRAN yet - but it might be by time this document is bouncing around the interwebs. Use: `pak::pkg_install("mvuorre/psyarxivr")`.
+
+The corresponding .rmd can be downloaded [here](https://tvpollet.github.io/Files_for_sharing/Psy_Arxiv_website.Rmd). With hindsight should have been PsyArxiv in the title.
+
+# Load packages
+
+```{r}
+library(pak)
+library(tidyverse)
+library(patchwork)
+library(jsonlite)
+library(psyarxivr)
+library(ggthemes)
+library(ggrepel)
+library(wesanderson)
+library(ggsci)
+library(RColorBrewer)
+library(scales)
+library(sysfonts)
+library(showtext)
+library(papaja)
+library(tidygraph)
+library(ggraph)
+library(Cairo)
+```
+
+# Fonts
+
+**IMPORTANT: This code will not run if you don't have the appropriate font installed**
+
+Ensure you have **Roboto** installed and available.
+
+On Mac add them to your fontbooks and make sure they are available to R.
+
+Some information here:
+
+https://www.listendata.com/2019/06/create-infographics-with-r.html
+https://stackoverflow.com/questions/49482512/waffle-font-family-not-found-in-windows-font-database
+https://community.rstudio.com/t/problem-with-fonts-in-mac/119124/4
+No warnings, no messages are displayed here. This might take some time.
+
+```{r}
+sysfonts::font_add_google("Roboto")
+```
+
+# PsyArxiv code
+
+Below takes Matti Vuorre's code,... .
+
+```{r}
+# Parse contributors JSON variable into its own table with preprint ids
+contributors <- preprints |>
+  # Remove preprints with no contributor data and non-latest versions
+  filter(contributors != "[]", is_latest_version == 1) |>
+  # Select required variables only
+  select(id, contributors) |>
+  # Convert JSON into data frames in a list-column
+  mutate(
+    contributors = map(
+      contributors,
+      fromJSON
+    )
+  )
+
+# Unnest into a table of contributors and clean
+contributors <- contributors |>
+  unnest(contributors) |>
+  # Only include bibliographic authors
+  filter(bibliographic) |>
+  # Remove some other contributor variables and rename
+  select(id, name = full_name) |>
+  # Take out unnamed contributors
+  filter(name != "")
+
+# Calculate total number of contributors
+contributors_total <- nrow(contributors)
+```
+
+So for some bizarre reason I have an additional space in my name. 
+
+But hey it's me! 
+
+```{r}
+my_coauthors <- contributors |>
+  # Retain all preprints where any of the authors was me
+  filter(any(name == "Thomas V.  Pollet"), .by = id)
+```
+
+This bit adds the collaborators of my collabs.
+
+```{r}
+my_coauthors_coauthors <- contributors |>
+  # Retain all preprints where any author was my coauthor
+  filter(any(name %in% unique(my_coauthors$name)), .by = id)
+
+nrow(my_coauthors_coauthors)
+head(my_coauthors_coauthors)
+```
+## Graph time
+
+```{r}
+# Get all pairs of co-authors for each paper and count collaborations
+edges <- my_coauthors_coauthors |>
+  group_by(id) |>
+  # Create all pairwise combinations within each paper
+  reframe(expand.grid(
+    author1 = name,
+    author2 = name,
+    stringsAsFactors = FALSE
+  )) |>
+  # Remove self-loops and order pairs for undirected edges
+  filter(author1 < author2) |>
+  rename(from = author1, to = author2)
+```
+
+
+```{r}
+head(edges)
+```
+```{r}
+# Create graph with key metrics
+graph <- edges |>
+  as_tbl_graph(directed = FALSE) |>
+  mutate(
+    distance = factor(node_distance_from(name == "Thomas V.  Pollet"))
+  )
+
+graph
+```
+Prefer 666 over 999... .
+
+```{r}
+set.seed(666)
+graph |>
+  # Create a ggplot with appropriate mappings for graph data
+  ggraph(layout = "fr") +
+  # Show edges
+  geom_edge_link() +
+  # Show nodes
+  geom_node_point() +
+  # A blank theme
+  theme_graph()
+```
+
+Slightly tweaked below... . Different font and colours.
+
+```{r}
+set.seed(666)
+ggraph(graph, layout = "fr") +
+  # Make edges less prominent
+  geom_edge_link(
+    linewidth = 0.2,
+    alpha = 0.4,
+    color = "gray70"
+  ) +
+  # Nodes further from me are smaller
+  geom_node_point(
+    aes(size = distance, color = distance)
+  ) +
+  # Add text to my (bold) & coauthors' (plain) nodes
+  geom_node_text(
+    data = . %>% filter(distance != 2),
+    aes(
+      label = name,
+      fontface = ifelse(name == "Thomas V.  Pollet", "bold", "plain")
+    ),
+    repel = TRUE,
+    size = 2.25,
+    family = "Roboto"  
+  ) +
+  # Specify sizes, colors, and theme options
+  scale_size_manual(values = c(2, 1, 0.5)) +
+  scale_color_manual(
+    values = wes_palette("GrandBudapest1", 3, type = "continuous") 
+  ) +
+  theme_graph() +
+  theme(
+    legend.position = "none",
+    text = element_text(family = "Roboto")  
+  )
+```
+
+
+Now export this via `Cairo` and then convert .eps into .pdf via Texshop or the like.
+
+```{r}
+cairo_ps("Psy_Arxiv_network.eps", height= 10, width= 10, family = "Roboto")
+set.seed(666)
+ggraph(graph, layout = "fr") +
+  # Make edges less prominent
+  geom_edge_link(
+    linewidth = 0.2,
+    alpha = 0.4,
+    color = "gray70"
+  ) +
+  # Nodes further from me are smaller
+  geom_node_point(
+    aes(size = distance, color = distance)
+  ) +
+  # Add text to my (bold) & coauthors' (plain) nodes
+  geom_node_text(
+    data = . %>% filter(distance != 2),
+    aes(
+      label = name,
+      fontface = ifelse(name == "Thomas V.  Pollet", "bold", "plain")
+    ),
+    repel = TRUE,
+    size = 3.2,
+    family = "Roboto"  
+  ) +
+  # Specify sizes, colors, and theme options
+  scale_size_manual(values = c(2, 1, 0.5)) +
+  scale_color_manual(
+    values = wes_palette("GrandBudapest1", 3, type = "continuous") 
+  ) +
+  theme_graph() +
+  theme(
+    legend.position = "none",
+    text = element_text(family = "Roboto")  
+  )
+dev.off()
+```
+
+# SessionInfo
+
+```{r}
+sessionInfo()
+```
+
+# Packages
+
+We are grateful to all authors.
+
+```{r}
+r_refs(file = "r-analysis-references.bib")
+my_citation <- cite_r(file = "r-analysis-references.bib")
+```
+
+`r my_citation`
+
+# References

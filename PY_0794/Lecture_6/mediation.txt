@@ -1,0 +1,14 @@
+
+Mediation/Moderation Analysis 
+Call: mediate(y = Y ~ X + (M), data = Data_med, n.iter = 10000, std = TRUE, 
+    plot = F)
+
+The DV (Y) was  Y . The IV (X) was  X . The mediating variable(s) =  M .
+
+Total effect(c) of  X  on  Y  =  0.34   S.E. =  0.1  t  =  3.56  df=  98   with p =  0.00057
+Direct effect (c') of  X  on  Y  removing  M  =  0.03   S.E. =  0.09  t  =  0.36  df=  97   with p =  0.72
+Indirect effect (ab) of  X  on  Y  through  M   =  0.3 
+Mean bootstrapped indirect effect =  0.3  with standard error =  0.06  Lower CI =  0.19    Upper CI =  0.43
+R = 0.61 R2 = 0.37   F = 28.85 on 2 and 97 DF   p-value:  2.02e-13 
+
+ To see the longer output, specify short = FALSE in the print statement or ask for the summary
