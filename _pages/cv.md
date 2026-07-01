@@ -9,7 +9,7 @@ toc:
   sidebar: left
 ---
 
-<a href="/new_website/assets/pdf/CV_Pollet.pdf" class="btn btn-sm z-depth-0" role="button" style="margin-bottom: 1em;"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+<a href="/assets/pdf/CV_Pollet.pdf" class="btn btn-sm z-depth-0" role="button" style="margin-bottom: 1em;"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
 
 ## Contact
 
