@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Induction materials PY0794.
-image: /img/introduction.gif
+thumbnail: /assets/img/introduction.gif
 tags:
   - teaching
   - research methods

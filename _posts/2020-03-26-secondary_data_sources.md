@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Secondary Data.
-image: /img/data_sleep.gif
+thumbnail: /assets/img/data_sleep.gif
 tags:
   - teaching
   - data resources

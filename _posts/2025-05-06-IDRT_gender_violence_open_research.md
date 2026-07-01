@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IDRT talk on UKRN and open research
-image: /img/open_up.gif
+thumbnail: /assets/img/open_up.gif
 tags:
   - Research
   - Reproducibility

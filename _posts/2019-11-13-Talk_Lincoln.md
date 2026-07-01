@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Talk at University of Lincoln.
-image: /img/lincoln.gif
+thumbnail: /assets/img/lincoln.gif
 tags:
   - Research
   - Personality

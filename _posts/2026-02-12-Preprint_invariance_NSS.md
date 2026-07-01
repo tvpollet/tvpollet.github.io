@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "New preprint on invariance of the National Student Survey (NSS)"
-image: /img/new_2.gif
+thumbnail: /assets/img/new_2.gif
 tags:
   - Student satisfaction
   - Research

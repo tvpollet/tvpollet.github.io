@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Markdown tutorial.
-image: /img/believe.gif
+thumbnail: /assets/img/believe.gif
 tags:
   - teaching
   - research methods

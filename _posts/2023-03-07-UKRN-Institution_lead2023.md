@@ -1,7 +1,7 @@
 ---
 layout: post
 title: UKRN Institution lead meeting
-image: /img/project_wow.gif
+thumbnail: /assets/img/project_wow.gif
 tags:
   - Research
   - Methodology

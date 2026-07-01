@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paper on National Student Survey published.
-image: /img/satisfied.gif
+thumbnail: /assets/img/satisfied.gif
 tags:
   - Research
   - Student satisfaction

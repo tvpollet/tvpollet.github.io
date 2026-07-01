@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Talk on body image (work in progress) at Durham University
-image: /img/wip.gif
+thumbnail: /assets/img/wip.gif
 tags:
   - Research
   - Methodology

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A short talk on a grant proposal to estimate the prevalence of hoarding"
-image: /img/hoarding_stan.gif
+thumbnail: /assets/img/hoarding_stan.gif
 tags:
   - Research
   - Hoarding

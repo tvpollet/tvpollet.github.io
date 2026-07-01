@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paper about sampling in Body Image published.
-image: /img/celebration.gif
+thumbnail: /assets/img/celebration.gif
 tags:
   - Research
   - Methodology

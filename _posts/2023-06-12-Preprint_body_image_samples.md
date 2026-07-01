@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New preprint on issues of generalisability in Body Image
-image: /img/worried.gif
+thumbnail: /assets/img/worried.gif
 tags:
   - Research
   - Body Image

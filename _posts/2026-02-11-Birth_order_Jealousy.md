@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Birth order and jealousy paper published... ."
-image: /img/we_did_it.gif
+thumbnail: /assets/img/we_did_it.gif
 tags:
   - Teaching
   - Research

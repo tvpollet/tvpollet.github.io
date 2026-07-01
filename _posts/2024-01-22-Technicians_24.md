@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Technicians talk
-image: /img/technician.gif
+thumbnail: /assets/img/technician.gif
 tags:
   - Research
   - Reproducibility

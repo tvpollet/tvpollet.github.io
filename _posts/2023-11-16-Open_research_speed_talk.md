@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Talk on open research projects.
-image: /img/we_are_open.gif
+thumbnail: /assets/img/we_are_open.gif
 tags:
   - Research
   - Open Research

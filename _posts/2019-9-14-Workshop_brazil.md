@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Workshop in Brazil.
-image: /img/brazil.gif
+thumbnail: /assets/img/brazil.gif
 tags:
   - Teaching
   - Statistics

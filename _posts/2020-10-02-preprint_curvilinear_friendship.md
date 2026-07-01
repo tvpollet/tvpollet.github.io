@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New preprint on friendships and psychological well-being
-image: /img/friend_annoying.gif
+thumbnail: /assets/img/friend_annoying.gif
 tags:
   - Research
   - Loneliness

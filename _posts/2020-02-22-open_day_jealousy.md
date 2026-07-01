@@ -1,7 +1,7 @@
 ---
 layout: post
 title: NU Experience day - talking about jealousy again
-image: /img/welcome.gif
+thumbnail: /assets/img/welcome.gif
 tags:
   - Teaching
   - Jealousy

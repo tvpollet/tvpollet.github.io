@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Some new preprints... .
-image: /img/new_logo.gif
+thumbnail: /assets/img/new_logo.gif
 tags:
   - Research
   - Gender Bias

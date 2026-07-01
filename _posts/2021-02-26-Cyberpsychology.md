@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preprint on loneliness and Facebook accepted (and preprint on Nerds as well!).
-image: /img/facebooklogo.gif
+thumbnail: /assets/img/facebooklogo.gif
 tags:
   - Research
   - loneliness

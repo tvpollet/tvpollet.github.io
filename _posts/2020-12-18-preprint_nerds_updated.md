@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preprint on a nerdy personality updated.
-image: /img/nerd_alert.gif
+thumbnail: /assets/img/nerd_alert.gif
 tags:
   - Research
   - Personality

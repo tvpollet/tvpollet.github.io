@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Some new preprints and preprint on fat talk published,... .
-image: /img/new.gif
+thumbnail: /assets/img/new.gif
 tags:
   - Research
   - Body Image

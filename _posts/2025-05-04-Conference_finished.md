@@ -1,7 +1,7 @@
 ---
 layout: post
 title: EHBEA 2025 finished!
-image: /img/finished.gif
+thumbnail: /assets/img/finished.gif
 tags:
   - Admin
   - EHBEA

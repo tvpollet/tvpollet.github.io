@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Talk on null findings at BPS Cyberpsychology conference.
-image: /img/instagram.gif
+thumbnail: /assets/img/instagram.gif
 tags:
   - Research
   - Instagram

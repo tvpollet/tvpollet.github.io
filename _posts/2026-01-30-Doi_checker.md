@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A tool to check Doi's for student work"
-image: /img/AI.gif
+thumbnail: /assets/img/AI.gif
 tags:
   - Teaching
   - Shiny
@@ -36,12 +36,12 @@ The documents to check should be in .pdf. (You can ask Turnitin to export as .pd
 Make a new folder where you will place this script as well as the documents you want to check. Open RStudio and drag and drop the script onto RStudio (or use file --> open file and then open the script). Press run app (see below). 
 
 
-![Run doi checker app](/img/Run_app_click.png "The App")
+![Run doi checker app](/assets/img/Run_app_click.png "The App")
 
 
 Now a window will open (see below). Scan for Pdfs will search the folder for .pdfs (1), check all doi's will check all doi's in said pdfs (2), Pdfs found (3) will report on pdfs found, Doi results (4) will give you the result for each doi found, summary will provide a brief summary. Using export you can save the results in .csv.
 
-![Layout app](/img/Info_doi_layout.png "The App")
+![Layout app](/assets/img/Info_doi_layout.png "The App")
 
 I recommend running only a couple of .pdfs at a time (Would not recommend running dozens of pdfs in one go - though it likely will work... .). I recommend exporting your results and removing the ones you checked from the folder and to batch your work if there are large amounts you intend to check.
  

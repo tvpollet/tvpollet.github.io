@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Talk about the good, bad, and ugly in Evolutionary Social Psychology.
-image: /img/good-bad-ugly.gif
+thumbnail: /assets/img/good-bad-ugly.gif
 tags:
   - Research
   - Social Psychology

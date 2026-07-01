@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paper on midpoint in student satisfaction survey accepted.
-image: /img/satisfaction.gif
+thumbnail: /assets/img/satisfaction.gif
 tags:
   - Research
   - Statistics

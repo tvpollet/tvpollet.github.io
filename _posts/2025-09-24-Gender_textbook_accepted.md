@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preprint on gender and evolutionary psychology indexes - accepted!
-image: /img/knope_celebration.gif
+thumbnail: /assets/img/knope_celebration.gif
 tags:
   - Research
   - Preprint

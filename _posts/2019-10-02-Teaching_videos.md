@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Youtube screencast online and exercise 5 meta-analysis online.
-image: /img/youtube.gif
+thumbnail: /assets/img/youtube.gif
 tags:
   - Teaching
   - Statistics

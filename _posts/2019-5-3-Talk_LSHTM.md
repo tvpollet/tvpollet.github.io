@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Talk at LSHTM
-image: /img/excited.gif
+thumbnail: /assets/img/excited.gif
 tags:
   - Research
   - Personality

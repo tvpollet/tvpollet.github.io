@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Potential thesis projects!
-image: /img/choices.gif
+thumbnail: /assets/img/choices.gif
 tags:
   - Teaching
   - Replication studies

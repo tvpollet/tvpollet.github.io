@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preprint on gender and evolutionary psychology indexes
-image: /img/kahlo.gif
+thumbnail: /assets/img/kahlo.gif
 tags:
   - Research
   - Preprint

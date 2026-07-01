@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Preprint on jealousy online!
-image: /img/jealousy.gif
+thumbnail: /assets/img/jealousy.gif
 tags:
   - Research
   - Jealousy

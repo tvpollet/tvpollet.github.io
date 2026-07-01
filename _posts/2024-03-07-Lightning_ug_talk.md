@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A lightning talk about sampling in Body Image
-image: /img/lightning.gif
+thumbnail: /assets/img/lightning.gif
 tags:
   - Research
   - Students

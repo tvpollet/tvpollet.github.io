@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A talk about judgments of similarity of other species to humans... .
-image: /img/baboon_phone.gif
+thumbnail: /assets/img/baboon_phone.gif
 tags:
   - Psychonetrics
   - Anthropomorphism

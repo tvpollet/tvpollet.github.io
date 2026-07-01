@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A very basic simulation for ELO ratings
-image: /img/simulation.gif
+thumbnail: /assets/img/simulation.gif
 tags:
   - Research
   - R coding

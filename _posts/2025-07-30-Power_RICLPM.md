@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Power analysis for a RI-CLPM
-image: /img/no_power.gif
+thumbnail: /assets/img/no_power.gif
 tags:
   - Research
   - R coding

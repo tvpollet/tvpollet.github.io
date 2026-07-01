@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Be(e) Awesome talk, update.
-image: /img/bees_homer.gif
+thumbnail: /assets/img/bees_homer.gif
 tags:
   - Research
   - Urban Futures

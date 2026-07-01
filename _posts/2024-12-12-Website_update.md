@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Website makeover... .
-image: /img/makeover.gif
+thumbnail: /assets/img/makeover.gif
 tags:
   - Website
   - Github

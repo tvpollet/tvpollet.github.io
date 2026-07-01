@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Teaching - Classics in Psychology... on jealousy (Buss et al. 1992).
-image: /img/jealousy_jealousy.gif
+thumbnail: /assets/img/jealousy_jealousy.gif
 tags:
   - Teaching
   - Jealousy

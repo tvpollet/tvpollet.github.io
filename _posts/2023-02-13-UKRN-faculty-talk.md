@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Talk on UKRN at Faculty meeting
-image: /img/duplicator.gif
+thumbnail: /assets/img/duplicator.gif
 tags:
   - Research
   - Methodology

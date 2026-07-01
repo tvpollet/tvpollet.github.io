@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Induction Quiz.
-image: /img/excited-baby.gif
+thumbnail: /assets/img/excited-baby.gif
 tags:
   - Teaching
   - Induction

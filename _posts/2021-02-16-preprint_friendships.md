@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Preprint on gender and friendships.
-image: /img/friendship_spice.gif
+thumbnail: /assets/img/friendship_spice.gif
 tags:
   - Research
   - Gender

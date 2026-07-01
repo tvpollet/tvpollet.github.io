@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Glossary.
-image: /img/yay-statistics.gif
+thumbnail: /assets/img/yay-statistics.gif
 tags:
   - teaching
   - exciting-stuff

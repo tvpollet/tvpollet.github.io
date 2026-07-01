@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A small pocket of research funding!
-image: /img/money.gif
+thumbnail: /assets/img/money.gif
 tags:
   - Research
   - Grant

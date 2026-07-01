@@ -1,7 +1,7 @@
 ---
 layout: post
 title: A new preprint on university rankings... .
-image: /img/I_am_a_four.gif
+thumbnail: /assets/img/I_am_a_four.gif
 tags:
   - Robust Ranking method
   - R 

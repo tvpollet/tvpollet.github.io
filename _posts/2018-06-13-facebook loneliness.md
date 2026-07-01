@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  New preprint on Facebook and loneliness!
-image: /img/fb-animal-gif.gif
+thumbnail: /assets/img/fb-animal-gif.gif
 tags:
   - Research
   - Loneliness

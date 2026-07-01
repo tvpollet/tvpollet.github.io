@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Talk at LECH, UFRN (Natal, Brazil)
-image: /img/social-network.gif
+thumbnail: /assets/img/social-network.gif
 tags:
   - Research
   - Personality

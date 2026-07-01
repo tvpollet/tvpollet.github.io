@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Teaching about developing a scientific rationale and preprint on sexual self-esteem published,... .
-image: /img/success.gif
+thumbnail: /assets/img/success.gif
 tags:
   - Research
   - Sexuality

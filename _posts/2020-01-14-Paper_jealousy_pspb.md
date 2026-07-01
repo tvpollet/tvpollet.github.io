@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paper on jealousy accepted for Personality and Social Psychology Bulletin!
-image: /img/jealousy_goldblum.gif
+thumbnail: /assets/img/jealousy_goldblum.gif
 tags:
   - Research
   - Jealousy

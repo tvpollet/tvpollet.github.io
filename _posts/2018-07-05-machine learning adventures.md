@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Talk about Machine learning to predict settlement patterns.
-image: /img/robot-fail.gif
+thumbnail: /assets/img/robot-fail.gif
 tags:
   - Research
   - NIAS

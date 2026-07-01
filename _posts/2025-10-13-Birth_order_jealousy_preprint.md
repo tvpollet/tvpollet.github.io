@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New preprint on birth order and romantic jealousy
-image: /img/firstborn.gif
+thumbnail: /assets/img/firstborn.gif
 tags:
   - Jealousy
   - Birth order

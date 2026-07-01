@@ -1,7 +1,7 @@
 ---
 layout: post
 title: New preprint on gender differences in mask wearing.
-image: /img/mask.gif
+thumbnail: /assets/img/mask.gif
 tags:
   - Research
   - Gender differences

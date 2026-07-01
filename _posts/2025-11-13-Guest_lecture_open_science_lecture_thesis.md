@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Guest lecture on open research for Bachelor thesis students (with escape room)
-image: /img/we_are_open.gif
+thumbnail: /assets/img/we_are_open.gif
 tags:
   - Teaching
   - Shiny
