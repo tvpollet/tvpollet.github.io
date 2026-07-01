@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2026-04-18 15:59:00
+date: 2026-07-01 22:00:00
 inline: true
 related_posts: false
 ---
 
-A [new preprint](https://osf.io/preprints/psyarxiv/kz9ad_v1) led by Merim Bilalić on selection bias in expertise research.
+A complete website overhaul! Look at the shiny-shiny.

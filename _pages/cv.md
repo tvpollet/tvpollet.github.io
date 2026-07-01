@@ -111,7 +111,7 @@ The most gratifying aspect of my teaching is that several of the students which 
 | Period | Course | Level |
 |--------|--------|-------|
 | 2019–present | [Advanced Quantitative and Qualitative Research Methods](https://tvpollet.github.io/PY0794/) | Research Masters (lecturer/coordinator) |
-| 2017–2019 | [Advanced Quantitative Research Methods](https://tvpollet.github.io/PY0782/) | Research Masters (lecturer) |
+| 2017–2019 | Advanced Quantitative Research Methods | Research Masters (lecturer) |
 | 2018–2020 | Research on Human Nature | BSc. Psychology, year 2 (lecturer) |
 | 2016–2017 | Intergroup Relations | MSc. Psychology (contributor) |
 | 2016–2017 | Economic and Consumer Psychology | BSc. Psychology, year 2 (contributor) |
