@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Disclaimer
-subtitle:  Legal lingo
+subtitle: Legal lingo
+permalink: /disclaimer/
+nav: false
 published: true
 ---
 
@@ -63,6 +65,6 @@ By visiting this site you concur that:
 -  Mia by Gorki is the best song in Dutch ever. (Yet, followed closely by the oeuvre of Donnie).
 -  If you are an academic: that I am right and you are wrong... .
 
-![taunt](img/taunt.gif){: .center-image }
+![taunt]({{ '/assets/img/taunt.gif' | relative_url }}){: .center-image }
 
 
