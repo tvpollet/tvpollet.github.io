@@ -6,6 +6,8 @@ dropdown: true
 children:
   - title: full list
     permalink: /publications/
+  - title: research themes
+    permalink: /research-themes/
   - title: sustainable development goals
     permalink: /sdg/
 ---
