@@ -11,7 +11,7 @@ No man is an island. I would not have made it this far were it not for my great 
 
 Here is a co-author figure of some people I have published preprints with. [Code](https://tvpollet.github.io/Files_for_sharing/Psy_Arxiv_website.html) can be found here.
 
-![co-author graph of Thomas V. Pollet](/assets/img/Psy_Arxiv_network.jpg)
+<img src="/assets/img/Psy_Arxiv_network.jpg" alt="co-author graph of Thomas V. Pollet" style="max-width: 75%; display: block; margin: 0 auto;">
 
 ### Northumbria
 
