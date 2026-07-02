@@ -6,6 +6,6 @@ isbn: 9780262048378
 categories: science nonfiction psychology history philosophy sociology economics
 date: 2025-06-07
 started: 2025-06-07
-status: Reading
+status: Paused
 ---
 
