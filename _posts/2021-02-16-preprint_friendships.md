@@ -5,9 +5,8 @@ thumbnail: /assets/img/friendship_spice.gif
 tags:
   - Research
   - Gender
-  - exciting-stuff
   - Friendships
-  - Egocentric Social Network analysis
+  - Social Network Analysis
 published: true
 ---
 

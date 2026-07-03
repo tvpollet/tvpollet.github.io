@@ -5,7 +5,6 @@ thumbnail: /assets/img/lonely.gif
 tags:
   - Research
   - Loneliness
-  - exciting-stuff
   - SEM
 published: true
 ---

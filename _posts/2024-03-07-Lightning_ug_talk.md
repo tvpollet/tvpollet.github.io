@@ -4,7 +4,7 @@ title: A lightning talk about sampling in Body Image
 thumbnail: /assets/img/lightning.gif
 tags:
   - Research
-  - Students
+  - Student
   - Methodology
   - Sampling
   - Body Image

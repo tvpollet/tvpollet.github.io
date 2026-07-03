@@ -5,7 +5,6 @@ thumbnail: /assets/img/social-network.gif
 tags:
   - Research
   - Personality
-  - exciting-stuff
   - Networks
   - GENSI
 published: true

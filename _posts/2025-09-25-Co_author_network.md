@@ -5,8 +5,8 @@ thumbnail: /assets/img/networking.gif
 tags:
   - Research
   - R
-  - Social network analysis
-  - Preprints
+  - Social Network Analysis
+  - Preprint
 published: true
 ---
 

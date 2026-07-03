@@ -3,9 +3,8 @@ layout: post
 title:  Glossary.
 thumbnail: /assets/img/yay-statistics.gif
 tags:
-  - teaching
-  - exciting-stuff
-  - glossary
+  - Teaching
+  - Glossary
 published: true
 ---
 

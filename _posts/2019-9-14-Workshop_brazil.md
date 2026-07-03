@@ -5,7 +5,6 @@ thumbnail: /assets/img/brazil.gif
 tags:
   - Teaching
   - Statistics
-  - exciting-stuff
   - Meta-analysis
 published: true
 ---

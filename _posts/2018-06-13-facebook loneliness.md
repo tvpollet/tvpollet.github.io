@@ -5,7 +5,6 @@ thumbnail: /assets/img/fb-animal-gif.gif
 tags:
   - Research
   - Loneliness
-  - exciting-stuff
   - Facebook
 published: true
 ---

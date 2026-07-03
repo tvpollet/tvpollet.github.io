@@ -5,8 +5,7 @@ thumbnail: /assets/img/good-bad-ugly.gif
 tags:
   - Research
   - Social Psychology
-  - dull-stuff
-  - replications
+  - Replication
 published: true
 ---
 

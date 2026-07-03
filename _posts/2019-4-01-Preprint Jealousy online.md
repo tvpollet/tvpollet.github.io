@@ -5,7 +5,6 @@ thumbnail: /assets/img/jealousy.gif
 tags:
   - Research
   - Jealousy
-  - exciting-stuff
   - Replication
   - Student project
 published: true

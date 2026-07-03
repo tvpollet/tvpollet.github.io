@@ -4,8 +4,8 @@ title: Potential thesis projects!
 thumbnail: /assets/img/choices.gif
 tags:
   - Teaching
-  - Replication studies
-  - Social network analysis
+  - Replication
+  - Social Network Analysis
   - Meta-science
 published: true
 ---

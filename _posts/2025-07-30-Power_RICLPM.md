@@ -4,9 +4,9 @@ title: Power analysis for a RI-CLPM
 thumbnail: /assets/img/no_power.gif
 tags:
   - Research
-  - R coding
-  - Methods
-  - Open research
+  - R
+  - Methodology
+  - Open Research
 published: true
 ---
 

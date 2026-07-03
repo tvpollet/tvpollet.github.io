@@ -3,7 +3,7 @@ layout: post
 title: A talk about judgments of similarity of other species to humans... .
 thumbnail: /assets/img/baboon_phone.gif
 tags:
-  - Psychonetrics
+  - Psychometrics
   - Anthropomorphism
   - Evolutionary Psychology
 published: true

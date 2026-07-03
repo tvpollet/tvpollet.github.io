@@ -5,7 +5,6 @@ thumbnail: /assets/img/jealousy_goldblum.gif
 tags:
   - Research
   - Jealousy
-  - exciting-stuff
   - Replication
   - Meta-analysis
 published: true

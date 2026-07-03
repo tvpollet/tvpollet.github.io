@@ -3,9 +3,9 @@ layout: post
 title:  Secondary Data.
 thumbnail: /assets/img/data_sleep.gif
 tags:
-  - teaching
-  - data resources
-  - thesis projects
+  - Teaching
+  - Data Resources
+  - Thesis Projects
 published: true
 ---
 

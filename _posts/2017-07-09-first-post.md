@@ -2,9 +2,7 @@
 layout: post
 title: First post!
 thumbnail: /assets/img/hello_world.jpeg
-tags:
-  - random
-  - exciting-stuff
+tags: []
 published: true
 ---
 

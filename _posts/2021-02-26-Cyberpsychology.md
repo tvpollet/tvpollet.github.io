@@ -4,9 +4,8 @@ title: Preprint on loneliness and Facebook accepted (and preprint on Nerds as we
 thumbnail: /assets/img/facebooklogo.gif
 tags:
   - Research
-  - loneliness
-  - exciting-stuff
-  - Facebook research
+  - Loneliness
+  - Facebook
 published: true
 ---
 

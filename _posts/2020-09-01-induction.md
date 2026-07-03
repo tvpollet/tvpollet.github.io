@@ -3,8 +3,8 @@ layout: post
 title:  Induction materials PY0794.
 thumbnail: /assets/img/introduction.gif
 tags:
-  - teaching
-  - research methods
+  - Teaching
+  - Methodology
 published: true
 ---
 

@@ -3,7 +3,7 @@ layout: post
 title: After the talk, a poster about judgments of similarity of other species to humans... .
 thumbnail: /assets/img/baboon_laptop.gif
 tags:
-  - Psychonetrics
+  - Psychometrics
   - Anthropomorphism
   - Evolutionary Psychology
 published: true

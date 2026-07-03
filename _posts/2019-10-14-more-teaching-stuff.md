@@ -5,7 +5,7 @@ thumbnail: /assets/img/teaching.gif
 tags:
   - Teaching
   - Research project
-  - Open Science
+  - Open Research
   - Thesis
 published: true
 ---

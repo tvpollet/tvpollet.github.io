@@ -3,10 +3,10 @@ layout: post
 title:  Preprint on social support networks of persons with Type 1 Diabetes, emanating from a student's BSc. thesis.
 thumbnail: /assets/img/support.gif
 tags:
-  - teaching
-  - thesis projects
-  - research
-  - social networks
+  - Teaching
+  - Thesis Projects
+  - Research
+  - Social Network Analysis
   - diabetes
 published: true
 ---

@@ -6,7 +6,7 @@ tags:
   - Research
   - Reproducibility
   - UKRN
-  - Open research
+  - Open Research
 published: true
 ---
 

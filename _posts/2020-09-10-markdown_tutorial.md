@@ -3,8 +3,8 @@ layout: post
 title:  Markdown tutorial.
 thumbnail: /assets/img/believe.gif
 tags:
-  - teaching
-  - research methods
+  - Teaching
+  - Methodology
   - RMarkdown
   - Coding
   - R

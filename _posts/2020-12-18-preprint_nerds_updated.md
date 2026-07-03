@@ -5,7 +5,6 @@ thumbnail: /assets/img/nerd_alert.gif
 tags:
   - Research
   - Personality
-  - exciting-stuff
   - NERDS!
   - Factor analysis
 published: true

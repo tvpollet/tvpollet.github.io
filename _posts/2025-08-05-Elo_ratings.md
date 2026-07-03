@@ -4,8 +4,8 @@ title: A very basic simulation for ELO ratings
 thumbnail: /assets/img/simulation.gif
 tags:
   - Research
-  - R coding
-  - Methods
+  - R
+  - Methodology
   - Simulation
 published: true
 ---
