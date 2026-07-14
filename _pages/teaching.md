@@ -4,6 +4,7 @@ title: teaching
 nav: true
 nav_order: 3
 dropdown: true
+sitemap: false
 children:
     - title: Courses Taught
       permalink: /courses_taught/

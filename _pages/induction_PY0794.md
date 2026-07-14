@@ -2,6 +2,7 @@
 layout: page
 title: Induction PY0794
 subtitle:  Advanced Quantitative and Qualitative Research Methods
+permalink: /induction_PY0794/
 published: true
 ---
 

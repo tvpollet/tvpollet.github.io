@@ -3,6 +3,7 @@ title: publications
 nav: true
 nav_order: 3
 dropdown: true
+sitemap: false
 children:
   - title: full list
     permalink: /publications/

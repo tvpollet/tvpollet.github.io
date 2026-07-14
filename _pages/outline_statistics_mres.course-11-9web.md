@@ -2,6 +2,7 @@
 layout: page
 title: Outline PY0794: Quant. Component
 subtitle:  Advanced Quantitative Research Methods manual
+permalink: /outline_PY0794/
 published: true
 ---
 
