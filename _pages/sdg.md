@@ -6,6 +6,12 @@ description: Research papers contributing to the UN Sustainable Development Goal
 nav: false
 ---
 
+<style>
+.publications ol.bibliography li .hidden {
+  display: block !important;
+}
+</style>
+
 <img src="{{ '/assets/img/the-global-goals-grid-color.png' | relative_url }}" alt="UN Sustainable Development Goals" class="img-fluid" style="max-width:500px; display:block; margin-bottom:1.5rem;">
 
 My work contributes to the following [United Nations Sustainable Development Goals](https://sdgs.un.org/goals) (in particular: 3, 4, 5, 10, 16). This is not an exhaustive list.

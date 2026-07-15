@@ -6,6 +6,12 @@ description: An overview of the main research themes in my work.
 nav: false
 ---
 
+<style>
+.publications ol.bibliography li .hidden {
+  display: block !important;
+}
+</style>
+
 My work is interdisciplinary, drawing on evolutionary psychology, social network analysis, health psychology, and quantitative methodology. The themes below capture the main strands — papers can appear under more than one theme, reflecting how these areas intersect. For the complete list, see the [full publications page]({{ '/publications/' | relative_url }}).
 
 ---

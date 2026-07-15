@@ -7,6 +7,12 @@ nav: false
 nav_order: 3
 ---
 
+<style>
+.publications ol.bibliography li .hidden {
+  display: block !important;
+}
+</style>
+
 {% include bib_search.liquid %}
 
 {% bibliography %}
