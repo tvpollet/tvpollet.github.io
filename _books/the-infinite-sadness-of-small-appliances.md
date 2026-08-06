@@ -7,6 +7,7 @@ cover: assets/img/book_covers/infinite_sadness.png
 categories: fiction  science-fiction family-fiction audiobook
 date: 2026-07-28
 started: 2026-07-28
-status: Reading
+finished: 2026-08-05
+status: Finished
 ---
 
