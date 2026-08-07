@@ -1,12 +1,12 @@
 metadata:
-  last_updated: '2026-07-17'
+  last_updated: '2026-08-07'
 papers:
   T2fYknYAAAAJ:-FonjvnnhkoC:
     citations: 12
     title: 'Methodological issues when using face prototypes: A case study on the Faceaurus dataset'
     year: '2022'
   T2fYknYAAAAJ:08ZZubdj9fEC:
-    citations: 32
+    citations: 34
     title: The potential pitfalls of studying adult sex ratios at aggregate levels in humans
     year: '2017'
   T2fYknYAAAAJ:0EnyYjriUFMC:
@@ -26,11 +26,11 @@ papers:
     title: 'Hungry people prefer larger bodies and objects: The importance of testing boundary effects'
     year: '2020'
   T2fYknYAAAAJ:2P1L_qKh6hAC:
-    citations: 170
+    citations: 175
     title: What can cross-cultural correlations teach us about human nature?
     year: '2014'
   T2fYknYAAAAJ:2osOgNQ5qMEC:
-    citations: 65
+    citations: 68
     title: Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women
     year: '2009'
   T2fYknYAAAAJ:2tRrZ1ZAMYUC:
@@ -38,7 +38,7 @@ papers:
     title: 'Testing the congruency hypothesis using meta-analysis: Are changes in oral contraceptive use correlated with partnered women''s sexual satisfaction?'
     year: '2025'
   T2fYknYAAAAJ:35N4QoGY0k4C:
-    citations: 115
+    citations: 116
     title: 'Behavioral immune system methods: Surveying the present to shape the future.'
     year: '2014'
   T2fYknYAAAAJ:35r97b3x0nAC:
@@ -50,7 +50,7 @@ papers:
     title: Intrasexual competition within organizations
     year: '2011'
   T2fYknYAAAAJ:3s1wT3WcHBgC:
-    citations: 203
+    citations: 205
     title: Human height is positively related to interpersonal dominance in dyadic interactions
     year: '2015'
   T2fYknYAAAAJ:43bX7VzcjpAC:
@@ -62,11 +62,11 @@ papers:
     title: Thesis topics
     year: Unknown Year
   T2fYknYAAAAJ:4JMBOYKVnBMC:
-    citations: 91
+    citations: 93
     title: Visual diet versus associative learning as mechanisms of change in body size preferences
     year: '2012'
   T2fYknYAAAAJ:4OULZ7Gr8RgC:
-    citations: 113
+    citations: 114
     title: "Taking the aggravation out of data aggregation: A conceptual guide to dealing with statistical issues related to the pooling of individual\u2010level observational data"
     year: '2015'
   T2fYknYAAAAJ:4TOpqqG69KYC:
@@ -78,11 +78,11 @@ papers:
     title: Applying social network analysis to visualize and understand micro-level behavioral dynamics in teams
     year: '2015'
   T2fYknYAAAAJ:5nxA0vEk-isC:
-    citations: 101
+    citations: 104
     title: Testosterone levels and their associations with lifetime number of opposite sex partners and remarriage in a large sample of American elderly men and women
     year: '2011'
   T2fYknYAAAAJ:5ugPr518TE4C:
-    citations: 14
+    citations: 13
     title: A preliminary investigation into the relationship between empathy, autistic like traits and emotion recognition
     year: '2019'
   T2fYknYAAAAJ:6yz0xqPARnAC:
@@ -90,15 +90,23 @@ papers:
     title: 'Going That Extra Mile: Individuals Travel Further to Maintain Face-to-Face Contact with Highly Related Kin'
     year: '2013'
   T2fYknYAAAAJ:70eg2SAEIzsC:
-    citations: 103
-    title: 'From computers to cultivation: reconceptualizing evolutionary psychology'
+    citations: 105
+    title: 'From computers to cultivation: Reconceptualizing evolutionary psychology'
     year: '2014'
+  T2fYknYAAAAJ:7BrZ7Jt4UNcC:
+    citations: 0
+    title: Age differences between US
+    year: '2015'
+  T2fYknYAAAAJ:7Hz3ACDFbsoC:
+    citations: 0
+    title: 'published: 12 August 2014'
+    year: Unknown Year
   T2fYknYAAAAJ:7PzlFSSx8tAC:
-    citations: 72
+    citations: 71
     title: "The effect of female height on reproductive success is negative in western populations, but more variable in non\u2010western populations"
     year: '2012'
   T2fYknYAAAAJ:86PQX7AUzd4C:
-    citations: 92
+    citations: 91
     title: The role of self-efficacy and self-esteem in mediating positive associations between functional social support and psychological wellbeing in people with a mental health diagnosis
     year: '2024'
   T2fYknYAAAAJ:8AbLer7MMksC:
@@ -114,16 +122,16 @@ papers:
     title: "\u201CMaking It Easier to Live, You Know?\u201D A Qualitative Study of the Impact of Hoarding Behaviours and Social Networks on Older People\u2019s Supported Housing Decisions"
     year: '2024'
   T2fYknYAAAAJ:9pM33mqn1YgC:
-    citations: 12
+    citations: 11
     title: "When (deliberate) practice is not enough\u2013the role of intelligence, practice, and knowledge in academic performance"
     year: '2023'
   T2fYknYAAAAJ:9yKSN-GCB0IC:
-    citations: 75
+    citations: 76
     title: 'Taller women do better in a stressed environment: height and reproductive success in rural Guatemalan women'
     year: '2008'
   T2fYknYAAAAJ:AXPGKjj_ei8C:
-    citations: 43
-    title: Emotion recognition from body movement and gesture in children with Autism Spectrum Disorder is improved by situational cues
+    citations: 44
+    title: Emotion recognition from body movement and gesture in children with autism spectrum disorder is improved by situational cues
     year: '2019'
   T2fYknYAAAAJ:Ak0FvsSvgGUC:
     citations: 0
@@ -138,7 +146,7 @@ papers:
     title: VU Research Portal
     year: '2012'
   T2fYknYAAAAJ:BqipwSGYUEgC:
-    citations: 56
+    citations: 57
     title: Men perceive their female partners, and themselves, as more attractive around ovulation
     year: '2013'
   T2fYknYAAAAJ:BwyfMAYsbu0C:
@@ -162,7 +170,7 @@ papers:
     title: 'Butterfly eyespots: Their potential influence on aesthetic preferences and conservation attitudes'
     year: '2015'
   T2fYknYAAAAJ:GnPB-g6toBAC:
-    citations: 23
+    citations: 24
     title: Perceptions of female body size and shape in China, Hong Kong, and the United Kingdom
     year: '2014'
   T2fYknYAAAAJ:HeT0ZceujKMC:
@@ -186,27 +194,27 @@ papers:
     title: 'Birth order and face-to-face contact with a sibling: Firstborns have more contact than laterborns'
     year: '2007'
   T2fYknYAAAAJ:J-pR_7NvFogC:
-    citations: 13
-    title: Measurement equivalence between men and women in the abbreviated Social and Emotional Loneliness Scale for Adults (SELSA)
+    citations: 14
+    title: Measurement Equivalence Between Men and Women in the Abbreviated Social and Emotional Loneliness Scale for Adults:(SELSA)
     year: '2018'
   T2fYknYAAAAJ:J_g5lzvAfSwC:
-    citations: 7
+    citations: 8
     title: Opponent left-handedness does not affect fight outcomes for Ultimate Fighting Championship hall of famers
     year: '2014'
   T2fYknYAAAAJ:K3LRdlH-MEoC:
-    citations: 149
+    citations: 154
     title: "The \u2018strength of weak ties\u2019 among female baboons: fitness-related benefits of social bonds"
     year: '2017'
   T2fYknYAAAAJ:KUbvn5osdkgC:
-    citations: 19
+    citations: 18
     title: Are we measuring loneliness in the same way in men and women in the general population and in the older population? Two studies of measurement equivalence
     year: '2022'
   T2fYknYAAAAJ:KlAtU1dfN6UC:
-    citations: 220
+    citations: 218
     title: Reproductive behavior and personality traits of the Five Factor Model
     year: '2011'
   T2fYknYAAAAJ:KxtntwgDAa4C:
-    citations: 20
+    citations: 21
     title: What predicts stroop performance? A conditional random forest approach
     year: '2016'
   T2fYknYAAAAJ:L8Ckcad2t8MC:
@@ -217,8 +225,12 @@ papers:
     citations: 15
     title: 'Size, skills, and suffrage: Motivated distortions in perceived formidability of political leaders'
     year: '2017'
+  T2fYknYAAAAJ:LdasjJ6CEcoC:
+    citations: 0
+    title: 'Darren Burke, University of Newcastle, Australia* Correspondence: Gert Stulp, gert. stulp@ lshtm. ac. uk'
+    year: Unknown Year
   T2fYknYAAAAJ:LjlpjdlvIbIC:
-    citations: 137
+    citations: 139
     title: "How Diverse Are the Samples Used in the Journals \u2018Evolution & Human Behavior\u2019 and \u2018Evolutionary Psychology\u2019?"
     year: '2019'
   T2fYknYAAAAJ:LkGwnXOMwfcC:
@@ -227,26 +239,30 @@ papers:
     year: '2010'
   T2fYknYAAAAJ:M05iB0D1s5AC:
     citations: 48
-    title: 'Mind the level: problems with two recent nation-level analyses in psychology'
+    title: 'Mind the level: Problems with two recent nation-level analyses in psychology'
     year: '2014'
   T2fYknYAAAAJ:M3NEmzRMIkIC:
-    citations: 24
+    citations: 22
     title: 'The Golden Years: Men From The Forbes 400 Have Much Younger Wives When Remarrying Than the General US Population.'
     year: '2013'
   T2fYknYAAAAJ:M3ejUd6NZC8C:
-    citations: 81
+    citations: 82
     title: Parental height differences predict the need for an emergency caesarean section
     year: '2011'
   T2fYknYAAAAJ:ML0RJ9NH7IQC:
-    citations: 18
+    citations: 13
     title: 'A tutorial for exploratory research: An eight-step approach'
     year: '2021'
+  T2fYknYAAAAJ:MpfHP-DdYjUC:
+    citations: 0
+    title: 'Michael Stirrat, University of Stirling, UK* Correspondence: Louise Barrett, louise. barrett@ uleth. ca'
+    year: Unknown Year
   T2fYknYAAAAJ:NXb4pA-qfm4C:
     citations: 1
     title: Consistency of Eye Coloration Across Different Relationship Partners
     year: '2023'
   T2fYknYAAAAJ:NaGl4SEjCO4C:
-    citations: 74
+    citations: 72
     title: 'Social capital across urban neighborhoods: A comparison of self-report and observational data.'
     year: '2014'
   T2fYknYAAAAJ:NhqRSupF_l8C:
@@ -258,7 +274,7 @@ papers:
     title: 'An index of her own: An investigation of the proportion of women indexed in evolutionary psychology textbooks'
     year: '2025'
   T2fYknYAAAAJ:O3NaXMp0MMsC:
-    citations: 15
+    citations: 16
     title: 'Disorder affects judgements about a neighbourhood: police presence does not'
     year: '2014'
   T2fYknYAAAAJ:OR75R8vi5nAC:
@@ -266,7 +282,7 @@ papers:
     title: Still no support for the win-win effect when controlling for non-independence between countries of the same region
     year: Unknown Year
   T2fYknYAAAAJ:OU6Ihb5iCvQC:
-    citations: 59
+    citations: 58
     title: 'Revisiting the red effect on attractiveness and sexual receptivity: No effect of the color red on human mate preferences'
     year: '2016'
   T2fYknYAAAAJ:P5F9QuxV20EC:
@@ -277,6 +293,10 @@ papers:
     citations: 11
     title: 'When better seems bigger: perceived performance of adult professional football players is positively associated with perceptions of their body size'
     year: '2019'
+  T2fYknYAAAAJ:PaBasH6fAo0C:
+    citations: 0
+    title: Does Sinit'cetss Blev... eie'Imply'lAl Scientists blev...'eie? Individual Differences in the Interpretation of Generic News Headlines
+    year: '2020'
   T2fYknYAAAAJ:QD3KBmkZPeQC:
     citations: 0
     title: "Kada (osmi\u0161ljena) vje\u017Eba nije dovoljna: uloga inteligencije, vje\u017Ebe i znanja u akademskom postignu\u0107u"
@@ -286,15 +306,15 @@ papers:
     title: 'Reported jealousy differs as a function of menstrual cycle stage and contraceptive pill use: A within-subjects investigation'
     year: '2012'
   T2fYknYAAAAJ:RHpTSmoSYBkC:
-    citations: 192
+    citations: 190
     title: Tall claims? Sense and nonsense about the importance of height of US presidents
     year: '2013'
   T2fYknYAAAAJ:RYcK_YlVTxYC:
-    citations: 32
+    citations: 31
     title: "Non\u2010linear associations between stature and mate choice characteristics for American men and their spouses"
     year: '2014'
   T2fYknYAAAAJ:SP6oXDckpogC:
-    citations: 156
+    citations: 154
     title: 'To remove or not to remove: the impact of outlier handling on significance testing in testosterone data'
     year: '2017'
   T2fYknYAAAAJ:Se3iqnhoufwC:
@@ -302,19 +322,19 @@ papers:
     title: 'Birth order and the dominance aspect of extraversion: Are firstborns more extraverted, in the sense of being dominant, than laterborns?'
     year: '2010'
   T2fYknYAAAAJ:TFP_iSt0sucC:
-    citations: 34
+    citations: 33
     title: Testosterone levels are negatively associated with childlessness in males, but positively related to offspring count in fathers
     year: '2013'
   T2fYknYAAAAJ:Tyk-4Ss8FVUC:
-    citations: 104
+    citations: 106
     title: 'Maternal grandmothers do go the extra mile: Factoring distance and lineage into differential contact with grandchildren'
     year: '2007'
   T2fYknYAAAAJ:U4n9YNQMCAIC:
     citations: 0
     title: 'Studying the Best Can Mislead: Selection Bias in Expertise Research'
-    year: Unknown Year
+    year: '2026'
   T2fYknYAAAAJ:ULOm3_A8WrAC:
-    citations: 25
+    citations: 26
     title: Out-group mating threat and disease threat increase implicit negative attitudes toward the out-group among men
     year: '2011'
   T2fYknYAAAAJ:UeHWp8X0CEIC:
@@ -322,11 +342,11 @@ papers:
     title: Genetic relatedness and sibling relationship characteristics in a modern society
     year: '2007'
   T2fYknYAAAAJ:UebtZRa9Y70C:
-    citations: 88
+    citations: 86
     title: 'Hormonal birth control use and relationship jealousy: Evidence for estrogen dosage effects'
     year: '2011'
   T2fYknYAAAAJ:V3AGJWp-ZtQC:
-    citations: 20
+    citations: 21
     title: Loneliness is negatively related to Facebook network size, but not related to Facebook network structure
     year: '2021'
   T2fYknYAAAAJ:VL0QpB8kHFEC:
@@ -334,7 +354,7 @@ papers:
     title: 'Jealousy as a function of rival characteristics: Two large replication studies and meta-analyses support gender differences in reactions to rival attractiveness but not dominance'
     year: '2020'
   T2fYknYAAAAJ:VOx2b1Wkg3QC:
-    citations: 34
+    citations: 36
     title: 'No evidence for a relationship between hair testosterone concentrations and 2D: 4D ratio or risk taking'
     year: '2018'
   T2fYknYAAAAJ:W5xh706n7nkC:
@@ -346,31 +366,27 @@ papers:
     title: Market forces affect patterns of polygyny in Uganda
     year: '2009'
   T2fYknYAAAAJ:WA5NYHcadZ8C:
-    citations: 144
+    citations: 140
     title: Distorted body image influences body schema in individuals with negative bodily attitudes
     year: '2019'
   T2fYknYAAAAJ:WF5omc3nYNoC:
-    citations: 73
+    citations: 69
     title: 'Birth order and adult family relationships: Firstborns have better sibling relationships than laterborns'
     year: '2009'
   T2fYknYAAAAJ:Wp0gIr-vW9MC:
-    citations: 41
+    citations: 42
     title: Height among women is curvilinearly related to life history strategy
     year: '2009'
   T2fYknYAAAAJ:WqliGbK-hY8C:
-    citations: 37
+    citations: 38
     title: 'The visual cues that drive the self-assessment of body size: dissociation between fixation patterns and the key areas of the body for accurate judgement'
     year: '2019'
-  T2fYknYAAAAJ:XiSMed-E-HIC:
-    citations: 0
-    title: Testosterone Levels Are Negatively Associated with Childlessness in Males, but Positively Related to Offspring Count in Fathers
-    year: '2013'
   T2fYknYAAAAJ:XiVPGOgt02cC:
     citations: 9
     title: HEXACO personality factors and their associations with Facebook use and Facebook network characteristics
     year: '2025'
   T2fYknYAAAAJ:Y0pCki6q_DkC:
-    citations: 116
+    citations: 118
     title: 'Lineage based differences in grandparental investment: evidence from a large British cohort study'
     year: '2009'
   T2fYknYAAAAJ:YFjsv_pBGBYC:
@@ -378,19 +394,19 @@ papers:
     title: Much ado about p. What does a p-value mean when testing hypotheses with aggregated cross-cultural data in the field of evolution and human behavior?
     year: '2013'
   T2fYknYAAAAJ:YOwf2qJgpHMC:
-    citations: 100
+    citations: 98
     title: 'An evolutionary perspective on siblings: Rivals and resources'
     year: '2011'
   T2fYknYAAAAJ:YsMSGLbcyi4C:
-    citations: 404
+    citations: 412
     title: Use of social network sites and instant messaging does not lead to increased offline social network size, or to emotionally closer relationships with offline network members
     year: '2011'
   T2fYknYAAAAJ:ZeXyd9-uunAC:
-    citations: 129
+    citations: 134
     title: 'Male facial width is associated with death by contact violence: narrow-faced males are more likely to die from contact violence'
     year: '2012'
   T2fYknYAAAAJ:ZfRJV9d4-WMC:
-    citations: 31
+    citations: 30
     title: Referee height influences decision making in British football leagues
     year: '2020'
   T2fYknYAAAAJ:Zph67rFs4hoC:
@@ -404,7 +420,7 @@ papers:
   T2fYknYAAAAJ:_5tno0g5mFcC:
     citations: 1
     title: "Acting gender: Actors\u2019 experiences of gender role conformity and hopes for their characters."
-    year: '2025'
+    year: '2023'
   T2fYknYAAAAJ:_kc_bZDykSQC:
     citations: 2
     title: SEXUAL SELECTION AS A MECHANISM FOR CONSPICUOUS CONSUMPTION YI
@@ -414,7 +430,7 @@ papers:
     title: 'Finding your soulmate: Homosexual and heterosexual age preferences in online dating'
     year: '2015'
   T2fYknYAAAAJ:a0OBvERweLwC:
-    citations: 15
+    citations: 17
     title: 'Gender equality probably does not affect performance at the Olympic games: A comment on Berdahl, Uhlmann, and Bai (2015)'
     year: '2015'
   T2fYknYAAAAJ:a3BOlSfXSfwC:
@@ -422,11 +438,11 @@ papers:
     title: 'Sample characteristics for quantitative analyses in Body Image: Issues of generalisability'
     year: '2024'
   T2fYknYAAAAJ:a9-T7VOCCH8C:
-    citations: 12
+    citations: 13
     title: "Gender (ed) performances: Women\u2019s impression management in stand-up comedy"
     year: '2024'
   T2fYknYAAAAJ:abG-DnoFyZgC:
-    citations: 62
+    citations: 63
     title: Birds of a feather locate together? Foursquare checkins and personality homophily
     year: '2016'
   T2fYknYAAAAJ:anf4URPfarAC:
@@ -454,19 +470,19 @@ papers:
     title: 'Little evidence for group differences in 2D: 4D ratios based on sexual orientation after adjusting for publication bias'
     year: '2026'
   T2fYknYAAAAJ:bz8QjSJIRt4C:
-    citations: 60
+    citations: 66
     title: 'Friendships, loneliness and psychological wellbeing in older adults: a limit to the benefit of the number of friends'
     year: '2024'
   T2fYknYAAAAJ:d1gkVwhDpl0C:
-    citations: 175
+    citations: 174
     title: 'Driving a hard bargain: Sex ratio and male marriage success in a historical US population'
     year: '2007'
   T2fYknYAAAAJ:dBIO0h50nwkC:
-    citations: 26
+    citations: 29
     title: The mental well-being of involuntary celibates
     year: '2024'
   T2fYknYAAAAJ:e5wmG9Sq2KIC:
-    citations: 85
+    citations: 84
     title: 'High and mighty: Height increases authority in professional refereeing'
     year: '2012'
   T2fYknYAAAAJ:eQOLeE2rZwMC:
@@ -491,7 +507,7 @@ papers:
     year: '2014'
   T2fYknYAAAAJ:gKiMpY-AVTkC:
     citations: 0
-    title: How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method 2
+    title: How consistent are UK university rankings of subjects and their shifts? An exploration using a robust ranking aggregation method
     year: '2025'
   T2fYknYAAAAJ:geHnlv5EZngC:
     citations: 0
@@ -502,19 +518,19 @@ papers:
     title: An exploration of the impact of contextual information on the emotion recognition ability of autistic adults
     year: '2022'
   T2fYknYAAAAJ:hFOr9nPyWt4C:
-    citations: 27
-    title: 'Parental control over mate choice to prevent marriages with out-group members: A study among Mestizos, Mixtecs, and blacks in Mexico'
+    citations: 30
+    title: 'Parental control over mate choice to prevent marriages with out-group members: A study among Mestizos, Mixtecs, and Blacks in Mexico'
     year: '2012'
   T2fYknYAAAAJ:hMod-77fHWUC:
-    citations: 58
+    citations: 59
     title: 'Born to win? Testing the fighting hypothesis in realistic fights: left-handedness in the Ultimate Fighting Championship'
     year: '2013'
   T2fYknYAAAAJ:hMsQuOkrut0C:
-    citations: 27
+    citations: 30
     title: An exploratory psychometric network analysis of loneliness scales in a sample of older adults
     year: '2024'
   T2fYknYAAAAJ:hkOj_22Ku90C:
-    citations: 14
+    citations: 13
     title: An exploratory factor analysis of the Nerdy Personality Attributes Scale in a sample of self-identified nerds/geeks
     year: '2024'
   T2fYknYAAAAJ:hqOjcs7Dif8C:
@@ -522,7 +538,7 @@ papers:
     title: "Correction:\u201CPartner wealth predicts self-reported orgasm frequency in a sample of Chinese women\u201D."
     year: '2010'
   T2fYknYAAAAJ:iH-uZ7U-co4C:
-    citations: 110
+    citations: 111
     title: Women want taller men more than men want shorter women
     year: '2013'
   T2fYknYAAAAJ:isC4tDSrTZIC:
@@ -530,11 +546,11 @@ papers:
     title: 'Body size and body esteem in women: The mediating role of possible self expectancy'
     year: '2013'
   T2fYknYAAAAJ:j3f4tGmQtD8C:
-    citations: 88
+    citations: 91
     title: Are human mating preferences with respect to height reflected in actual pairings?
     year: '2013'
   T2fYknYAAAAJ:j8SEvjWlNXcC:
-    citations: 30
+    citations: 31
     title: Extraversion is associated with advice network size, but not network density or emotional closeness to network members
     year: '2021'
   T2fYknYAAAAJ:jL-93Qbq4QoC:
@@ -561,10 +577,6 @@ papers:
     citations: 134
     title: Sex differences in risk taking behavior among Dutch cyclists
     year: '2013'
-  T2fYknYAAAAJ:kh2fBNsKQNwC:
-    citations: 0
-    title: 'Original Research Article Taller Women do Better in a Stressed Environment: Height and Reproductive Success in Rural Guatemalan Women'
-    year: '2007'
   T2fYknYAAAAJ:kzcrU_BdoSEC:
     citations: 45
     title: Are attitudinal and perceptual body image the same or different? Evidence from high-level adaptation
@@ -574,7 +586,7 @@ papers:
     title: No support for the watching eyes effect across three" lost letter" field experiments
     year: '2017'
   T2fYknYAAAAJ:lSLTfruPkqcC:
-    citations: 9
+    citations: 10
     title: "A re-analysis of the relationship between \u201Cparasite stress\u201D and authoritarianism"
     year: '2014'
   T2fYknYAAAAJ:lgwcVrK6X84C:
@@ -582,15 +594,15 @@ papers:
     title: "Correspondence concerning this article should be addressed to Thomas V. Pollet, NB 165, Northumberland Building, 2 Ellison Place, NE1 8ST, Newcastle Upon Tyne, UK. E-mail \u2026"
     year: Unknown Year
   T2fYknYAAAAJ:lvd772isFD0C:
-    citations: 6
-    title: 'Consequences of arbitrary binning the midpoint category in survey data: an illustration with student satisfaction in the National Student Survey'
+    citations: 7
+    title: 'Consequences of arbitrary binning the midpoint category in survey data: An illustration with student satisfaction in the National Student Survey'
     year: '2024'
   T2fYknYAAAAJ:mB3voiENLucC:
-    citations: 82
+    citations: 81
     title: Intralocus sexual conflict over human height
     year: '2012'
   T2fYknYAAAAJ:mVmsd5A6BfQC:
-    citations: 20
+    citations: 21
     title: 'Emotions in context: Anger causes ethnic bias but not gender bias in men but not women'
     year: '2012'
   T2fYknYAAAAJ:maZDTaKrznsC:
@@ -598,27 +610,31 @@ papers:
     title: Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women (vol 30, pg 146, 2009)
     year: '2010'
   T2fYknYAAAAJ:mvPsJ3kp5DgC:
-    citations: 77
+    citations: 73
     title: 'Perceived group cohesion versus actual social structure: A study using social network analysis of egocentric Facebook networks'
     year: '2018'
+  T2fYknYAAAAJ:nRpfm8aw39MC:
+    citations: 0
+    title: Eyes Wide Open
+    year: '2016'
   T2fYknYAAAAJ:nVrZBo8bIpAC:
     citations: 2
     title: Meta-analysis of the red advantage in combat sports
     year: '2024'
   T2fYknYAAAAJ:nb7KW1ujOQ8C:
-    citations: 352
+    citations: 351
     title: 'Interventions for children and adolescents with posttraumatic stress disorder: A meta-analysis of comparative outcome studies'
     year: '2016'
   T2fYknYAAAAJ:olpn-zPbct0C:
-    citations: 6
+    citations: 7
     title: Adaptation-like effects in body weight attractiveness are not simply norm based
     year: '2018'
   T2fYknYAAAAJ:p__nRnzSRKYC:
-    citations: 14
+    citations: 12
     title: 'Fat talk is predicted by body dissatisfaction and social comparison with no interaction effect: Evidence from two replication studies'
     year: '2021'
   T2fYknYAAAAJ:pqnbT2bcN3wC:
-    citations: 928
+    citations: 930
     title: Political extremism predicts belief in conspiracy theories
     year: '2015'
   T2fYknYAAAAJ:pyW8ca7W8N0C:
@@ -626,7 +642,7 @@ papers:
     title: Evolved biocultural beings (who invented computers)
     year: '2015'
   T2fYknYAAAAJ:qUcmZB5y_30C:
-    citations: 47
+    citations: 48
     title: 'Dietary restraint in college women: Fear of an imperfect fat self is stronger than hope of a perfect thin self'
     year: '2012'
   T2fYknYAAAAJ:qjMakFHDy7sC:
@@ -634,11 +650,11 @@ papers:
     title: 'Contact frequencies between grandparents and grandchildren in a modern society: Estimates of the impact of paternity uncertainty'
     year: '2006'
   T2fYknYAAAAJ:qxL8FJ1GzNcC:
-    citations: 92
+    citations: 90
     title: A curvilinear effect of height on reproductive success in human males
     year: '2012'
   T2fYknYAAAAJ:r0BpntZqJG4C:
-    citations: 69
+    citations: 67
     title: 'Going that extra mile: individuals travel further to maintain face-to-face contact with highly related kin than with less related kin'
     year: '2013'
   T2fYknYAAAAJ:rmuvC79q63oC:
@@ -646,7 +662,7 @@ papers:
     title: 'Gender differences and mask wearing: an observational study on a University campus and a mini-meta-analysis'
     year: '2022'
   T2fYknYAAAAJ:roLk4NBRz8UC:
-    citations: 8
+    citations: 9
     title: 'Childlessness and genetic relatedness: their influence on sibling ties in a Post-Industrial society'
     year: '2005'
   T2fYknYAAAAJ:sJsF-0ZLhtgC:
@@ -654,7 +670,7 @@ papers:
     title: authortitive version can be found at
     year: Unknown Year
   T2fYknYAAAAJ:t7zJ5fGR-2UC:
-    citations: 11
+    citations: 9
     title: Egocentric network characteristics of persons with Type 1 diabetes and their relationships to perceived social support and well-being
     year: '2021'
   T2fYknYAAAAJ:tS2w5q8j5-wC:
@@ -662,11 +678,11 @@ papers:
     title: Evolutionaire Sociale Psychologie
     year: '2009'
   T2fYknYAAAAJ:u-x6o8ySG0sC:
-    citations: 582
+    citations: 580
     title: 'Exploring variation in active network size: Constraints and ego characteristics'
     year: '2009'
   T2fYknYAAAAJ:u5HHmVD_uO8C:
-    citations: 335
+    citations: 336
     title: Natural selection on male wealth in humans
     year: '2008'
   T2fYknYAAAAJ:uDGL6kOW6j0C:
@@ -698,11 +714,11 @@ papers:
     title: 'In Search of a Professional Image: How Women Comedians Engage Gender in Their Work'
     year: '2026'
   T2fYknYAAAAJ:wbdj-CoPYUoC:
-    citations: 249
+    citations: 248
     title: "Prevalence of depression and posttraumatic stress disorder in adult civilian survivors of war who stay in war-afflicted regions. A systematic review and meta-analysis of \u2026"
     year: '2018'
   T2fYknYAAAAJ:xtRiw3GOFMkC:
-    citations: 218
+    citations: 219
     title: Evolution, situational affordances, and the HEXACO model of personality
     year: '2016'
   T2fYknYAAAAJ:yB1At4FlUx8C:
@@ -710,7 +726,7 @@ papers:
     title: "Does \u2018scientists believe\u2026\u2019Imply \u2018all scientists believe\u2026\u2019? Individual differences in the interpretation of generic news headlines"
     year: '2020'
   T2fYknYAAAAJ:ye4kPcJQO24C:
-    citations: 10
+    citations: 11
     title: Do red objects enhance sexual attractiveness? No evidence from two large replications
     year: '2019'
   T2fYknYAAAAJ:zA6iFVUQeVQC:
