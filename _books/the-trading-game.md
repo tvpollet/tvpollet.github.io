@@ -1,6 +1,6 @@
 ---
 layout: book-review
-title: "The Trading Game
+title: "The Trading Game"
 author: "Gary Stevenson"
 olid: OL40510344M
 categories: non-fiction economics trading finance biography
