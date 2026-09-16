@@ -7,6 +7,7 @@ cover: "assets/img/book_covers/audition.jpg"
 categories: fiction psychological-fiction audiobook actress theatre
 date: 2026-09-03
 started: 2026-09-03
-status: Reading
+finished: 2026-09-16
+status: Finished
 ---
 
