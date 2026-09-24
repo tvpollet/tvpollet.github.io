@@ -108,7 +108,7 @@ These could be good candidates or starting points:
 
 Game shows and structured reality formats are, in effect, naturally occurring experiments: contestants make high-stakes decisions (who to vote off, how much risk to take, what something is worth, whether to lie) under fixed rules, and the whole thing is recorded for you. This makes them a rich, freely available data source for projects on social decision-making, gender, and strategic behaviour. Data collection is via coding broadcast episodes, so there is no participant recruitment -- but you will need a clear coding protocol, a realistic plan for how many episodes you can code, and a second coder for an inter-rater reliability check.
 
-**An umbrella ethics application is already in place for these topics**, which should speed up your ethics process considerably (see the timeline on the [supervision page](/thesis_projects/){:target="_blank"}).
+**An umbrella ethics application is already in place for these topics**, which should speed up your ethics process considerably.
 
 As with the replication projects above, these can be done solo but work especially well as group projects: each person codes a batch of episodes using a shared protocol, and each writes up a different research question from the same dataset.
 
@@ -137,7 +137,10 @@ As with the replication projects above, these can be done solo but work especial
 
 * **Deception detection in _The Circle_.** Contestants interact only via text-based profiles; some play as themselves, others as 'catfish' with a fabricated identity. How accurately do genuine players spot catfish? Do catfish get rated differently? Do gender, age, or similarity predict who gets blocked? Because there are no nonverbal cues, this is a naturally occurring test of text-only deception detection. 
   * DePaulo, B. M., Lindsay, J. J., Malone, B. E., Muhlenbruck, L., Charlton, K., & Cooper, H. (2003). Cues to deception. _Psychological Bulletin, 129(1),_ 74–118. [view paper](https://doi.org/10.1037/0033-2909.129.1.74){:target="_blank"}
-
+  
+ * **Lie detection in _Would I Lie to You?_.** Celebrities read out claims about themselves, often from cards they have not seen before, and the opposing team has to decide whether each claim is true or a lie. The answer is then revealed, so every judgement can be checked against the truth. This makes the show a large natural dataset for testing well-established findings from lie-detection research: that people are only slightly better than chance at detecting lies, that they tend to believe what they are told (the "truth bias"), and that whether someone is believed depends more on the person telling the story than on the skill of the people judging it. Regular panellists appear across many series, so you can separate how believable individual storytellers are from how good the teams are at spotting lies. Because verdicts are reached through team discussion, you can also look at how group decisions compare with individual ones.
+  * Bond, C. F., Jr., & DePaulo, B. M. (2006). Accuracy of deception judgments. _Personality and Social Psychology Review, 10(3),_ 214–234. [view paper](https://doi.org/10.1207/s15327957pspr1003_2){:target="_blank"}
+ 
 ### Risk-taking and overconfidence
 
 * **Gender and overconfidence on _The Chase_.** After the cash builder, each contestant chooses between a lower offer (safer), the amount they earned, or a higher offer (riskier). Their cash builder score gives a measure of ability. The key question is whether men take the higher offer more often than women **with the same cash builder score**. That pattern would indicate overconfidence rather than a simple difference in risk preference. I have coded episodes of The Chase in the past, so the feasibility is proven. A recent study of the Australian version found that higher-ability contestants were more likely to choose riskier options, and that gender differences were limited; the UK version, and the ability-by-gender test specifically, remain open.
@@ -157,6 +160,9 @@ As with the replication projects above, these can be done solo but work especial
 
 * **Certain offer versus gamble in _Dickinson's Real Deal_.** Sellers choose between a dealer's cash offer (certain) and sending the item to auction (uncertain), with an independent valuation as a reference point. This is a naturalistic test of risk preferences and reference dependence, and would pair nicely with the Bargain Hunt project. 
 
+ * **Anchoring in negotiation: _Dragons' Den_.** Entrepreneurs open with an explicit offer, for example £50,000 for 10% of their business, which implies a valuation of the company. The pitch ends with an on-screen deal or no deal. This lets you test whether the entrepreneur's opening valuation anchors the final deal, how much ground entrepreneurs give up, and whether competition between several interested Dragons pushes valuations up. It also lets you ask whether outcomes differ by the entrepreneur's gender or the type of business. Laboratory studies show that first offers strongly predict final settlements, and _Dragons' Den_ lets you test this with real money at stake. The show has run on the BBC since 2005, and there is an American equivalent, _Shark Tank_.
+  * Galinsky, A. D., & Mussweiler, T. (2001). First offers as anchors: The role of perspective-taking and negotiator focus. _Journal of Personality and Social Psychology, 81(4),_ 657–669. [view paper](https://doi.org/10.1037/0022-3514.81.4.657){:target="_blank"}
+  * Northcraft, G. B., & Neale, M. A. (1987). Experts, amateurs, and real estate: An anchoring-and-adjustment perspective on property pricing decisions. _Organizational Behavior and Human Decision Processes, 39(1),_ 84–97. [view paper](https://doi.org/10.1016/0749-5978%2887%2990046-X){:target="_blank"}
 
 ## Social networks.
 <a href="#thesis-introduction">back to top</a>
