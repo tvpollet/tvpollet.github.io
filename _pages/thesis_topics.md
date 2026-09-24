@@ -50,12 +50,10 @@ These could be good candidates or starting points:
 
 ### Relationships / Jealousy.
 
-* Does height predict jealousy differently for men and women? [https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf](https://www.academia.edu/download/40133822/Height_predicts_jealousy_differently_for20151118-6483-1mji4n2.pdf). Study 1 seems a good candidate, but a reasonable sample size is needed.
-* Women's sexual strategies: the hidden dimension of extra-pair mating. [https://doi.org/10.1016/S0191-8869(99)00151-8](https://doi.org/10.1016/S0191-8869(99)00151-8)
+
+* Forgiveness or breakup: Sex differences in responses to a partner's infidelity [https://doi.org/10.1080/02699930143000202](https://doi.org/10.1080/02699930143000202)
+* Women's sexual strategies: the hidden dimension of extra-pair mating. [https://doi.org/10.1016/S0191-8869(99)00151-8](https://doi.org/10.1016/S0191-8869(99)00151-8) -- Particularly Study 4.
 * Does height relate to Relationship Satisfaction, Jealousy, and Mate Retention in men [https://doi.org/10.1177/147470490900700310](https://doi.org/10.1177/147470490900700310). Only sampled men.
-* [Do men say I love you sooner than women do?](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.261.3856&rep=rep1&type=pdf). Study 1 and Study 2 are likely good candidates. 
-* [Predictors of How often and When People Fall in Love](https://doi.org/10.1177/147470491000800102). You will require a sizeable sample.
-* [Can men and women be just friends?](https://doi.org/10.1111/j.1475-6811.2000.tb00008.x). Study 2 is a good candidate, you will require a sizeable sample.
 * The Role of Social Network Sites in Romantic Relationships: Effects on Jealousy and Relationship Happiness. [https://doi.org/10.1111/j.1083-6101.2011.01552.x]( https://doi.org/10.1111/j.1083-6101.2011.01552.x). (note that this is a large study)
 * Relational satisfaction and jealousy across marital types. [https://doi.org/10.1080/08934219209367540](https://doi.org/10.1080/08934219209367540) -- Requires married couples.
 * The Big 5 and relationship maintenance on Facebook. [https://doi.org/10.1177/0265407518772089](https://doi.org/10.1177/0265407518772089)
@@ -66,17 +64,15 @@ These could be good candidates or starting points:
 
 ### Prosocial behaviour / altruism
 
-* [Private wishes: Gender similarities and differences](https://link.springer.com/article/10.1007/BF00291551). Study 2 is a good candidate. You will require a sizable sample.
 * [Sex Differences in Violent versus Non-Violent Life-Threatening Altruism](https://journals.sagepub.com/doi/full/10.1177/147470490900700309). You will require a sizable sample.
 * [Altruism between Romantic Partners: Biological Offspring as a Genetic Bridge between Altruist and Recipient](https://doi.org/10.1177/147470491000800312). You will require a sizable sample.
 
 ### Colour
 
+* Dressed for Sex: Red as a Female Sexual Signal in Humans. [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2) Experiment 1 seems a good candidate.
 * Was she wearing red? The function of victim-blaming in women’s intrasexual competition. [https://doi.org/10.1111/sjop.12870](https://doi.org/10.1111/sjop.12870). You will require quite a sizable sample.
 * Does the receptacle influence the perceived flavour of a drink? [https://link.springer.com/article/10.1186/2044-7248-3-3](https://link.springer.com/article/10.1186/2044-7248-3-3). We would only aim to replicate the US sample in the UK. This study can be run online.
 * Does the colour of the mug influence the taste of the coffee? [https://link.springer.com/article/10.1186/2044-7248-3-10](https://link.springer.com/article/10.1186/2044-7248-3-10). Study 2 seems a good candidate. You will require a sizable sample.
-* Dressed for Sex: Red as a Female Sexual Signal in Humans. [https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0034607#s2) Experiment 1 seems a good candidate.
-
 
 ### Consumer Psychology
 
@@ -199,25 +195,9 @@ Alternatively, you can pick a group of interest (e.g., a support group for paren
 There are a range of projects to be conducted which deal with the methods used in different fields in psychology. The benefits of these types of projects are that in most cases the data are already there (or you have control over the data collection).
 
 
-### How diverse are the samples used in cross-cultural psychology?
+### Which countries are included in meta-analyses in psychology?
 
-A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code articles from journals in cross-cultural psychology to find out which samples they use. I am open to including other journals or disciplines. Alternatively, you can explore standard textbooks on cross-cultural psychology to find out which cultures are covered in textbooks.
-
-This project works best if there is more than one student.
-
-Here is a paper relating to this project:
-
-**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
-
-### How diverse are the samples used in journals covering psychopathology?
-
-A recurrent criticism of psychology is that samples largely are non-representative, and mostly consist of students (e.g., Arnett, 2008). In this project you will code articles from journals such as _Schizophrenia Research_ to find out which samples they use. How many of these are clinical samples? How many are from non-Western societies? I am open to suggestions of other journals. 
-
-This project works best if there is more than one student.
-
-Here is a paper relating to this project, following a similar approach:
-
-**Pollet, T.V.**, & Saxton, T.K. (2019). How diverse are the samples used in the journals ‘Evolution & Human Behavior’ and ‘Evolutionary Psychology’?. *Evolutionary Psychological Science, 5,* 357–368. [open access](https://link.springer.com/article/10.1007%2Fs40806-019-00192-2)
+A recurrent criticism of psychology is that our samples are largely non-representative (e.g., Arnett, 2008). In this project you will code articles from meta-analyses to find out which samples they use. 
 
 ### Are the samples in journals on Obesity representative of the general population.
 
@@ -267,7 +247,6 @@ Here is a paper relating to this project, following a similar approach:
 Psychologists have been studying personality for a very long time. The most dominant classification is a five factor model but researchers have more recently argued for a six factor model (HEXACO), as well as focussing on the 'Dark Triad' of personality. In this project you would survey leading personality journals and find out which models researchers are using for personality.
 
 Ashton, M. C., & Lee, K. (2009). The HEXACO–60: A Short Measure of the Major Dimensions of Personality. Journal of Personality Assessment, 91(4), 340–345. [https://doi.org/10.1080/00223890902935878](https://doi.org/10.1080/00223890902935878)
-
 
 ### Evolutionary psychology textbooks and use of animal examples.
 
@@ -322,7 +301,6 @@ Some candidate measures to explore (others to be added soon). You might need to 
 
 #### Jealousy / Envy / rivalry
 
-* [The Intrasexual Competition Scale](https://www.researchgate.net/profile/Maryanne_Fisher/publication/247850197_Individual_differences_in_intrasexual_competition/links/55083bdf0cf27e990e09676a/Individual-differences-in-intrasexual-competition.pdf){:target="_blank"}
 * [Benign and malicious envy](https://doi.org/10.1177/0146167214564959){:target="_blank"} - large project.
 * [The Facebook Jealousy Scale](https://www.academia.edu/download/40220462/More_information_than_you_ever_wanted_do20151120-17771-2oikmy.pdf){:target="_blank"} - large project
 
@@ -380,7 +358,6 @@ Some candidate measures to explore (others to be added soon). You might need to 
 * [Animal Empathy Scale](https://doi.org/10.2752/089279300786999699){:target="_blank"}
 * [Utrecht Homesickness Questionnaire]( https://doi.org/10.1348/000712602162508){:target="_blank"}
 * [Food Disgust scale](https://doi.org/10.1016/j.foodqual.2017.07.013){:target="_blank"}
-
 
 ## Traffic behaviour: Gender differences in risk taking.
 <a href="#thesis-introduction">back to top</a>
