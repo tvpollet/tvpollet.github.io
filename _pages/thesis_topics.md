@@ -107,7 +107,54 @@ These could be good candidates or starting points:
 ### Celebrities / Miscellaneous
 * The Psychological well-being of Celebrity Worshippers. [check here](https://www.researchgate.net/profile/Lynn-Mccutcheon/publication/233858367_The_Self-Reported_Psychological_Well-Being_of_Celebrity_Worshippers/links/5a0b0a970f7e9b0cc0251ca7/The-Self-Reported-Psychological-Well-Being-of-Celebrity-Worshippers.pdf){:target="_blank"}
 
-There is an opportunity to also replicate [our work on hunger and preferences for larger bodies/objects](https://tvpollet.github.io/pdfs/Saxton_et_al_2020_BJP.pdf){:target="_blank"}. This would be a project which involves face-to-face data collection.
+## Reality TV and game shows: Strategic decisions on camera
+<a href="#thesis-introduction">back to top</a>
+
+Game shows and structured reality formats are, in effect, naturally occurring experiments: contestants make high-stakes decisions (who to vote off, how much risk to take, what something is worth, whether to lie) under fixed rules, and the whole thing is recorded for you. This makes them a rich, freely available data source for projects on social decision-making, gender, and strategic behaviour. Data collection is via coding broadcast episodes, so there is no participant recruitment -- but you will need a clear coding protocol, a realistic plan for how many episodes you can code, and a second coder for an inter-rater reliability check.
+
+**An umbrella ethics application is already in place for these topics**, which should speed up your ethics process considerably (see the timeline on the [supervision page](/thesis_projects/){:target="_blank"}).
+
+As with the replication projects above, these can be done solo but work especially well as group projects: each person codes a batch of episodes using a shared protocol, and each writes up a different research question from the same dataset.
+
+### Voting behaviour
+
+* **Gender and voting in _The Traitors_ (non-celebrity UK series).** Who gets banished at the round table, who gets 'murdered', and who gets recruited as a traitor -- and do gender and age predict these, over and above game performance? Work on _Survivor_ provides a ready-made template. For example, one study found that in early episodes women, minorities, and older contestants received more elimination votes, with the pattern reversing later in the game.
+  * Dilks, L. M., Thye, S. R., & Taylor, P. A. (2010). Socializing economic theories of discrimination: Lessons from Survivor. _Social Science Research, 39(6),_ 1164–1180. [view paper](https://doi.org/10.1016/j.ssresearch.2010.06.006){:target="_blank"}
+  * O'Mara Kunz, E. M., Howell, J. L., & Beasley, N. (2023). Surviving racism and sexism: What votes in the television program Survivor reveal about discrimination. _Psychological Science._ [view paper](https://doi.org/10.1177/09567976231165665){:target="_blank"}
+
+* **Proximity and gender in voting on _The Weakest Link_.** Researchers at Lincoln found that contestants avoided voting off the person standing directly next to them (a 'neighbour avoidance' effect), and that this effect was stronger when there was less consensus about who the weakest player was. The revived BBC series (hosted by Romesh Ranganathan) offers a fresh dataset for a replication. On its own, this effect is a fairly thin project, so the stronger design replicates it **alongside** the published work on gender and strategic voting in the same show. Note that the findings on gender are mixed, which makes this a good test case.
+  * Goddard, P., Ashley, R., Fuller, G., & Hudson, I. (2011). Love thy neighbour: Proxemic bias in the voting strategy of contestants in the TV quiz-show "The Weakest Link". _Proceedings of the 2011 IAREP/SABE/ICABEEP Conference._ [view paper](https://eprints.lincoln.ac.uk/id/eprint/4581/){:target="_blank"}
+  * Levitt, S. D. (2004). Testing theories of discrimination: Evidence from Weakest Link. _Journal of Law and Economics, 47(2),_ 431–452. [view paper](https://doi.org/10.1086/425591){:target="_blank"}
+  * Antonovics, K., Arcidiacono, P., & Walsh, R. (2005). Games and discrimination: Lessons from the Weakest Link. _Journal of Human Resources, 40(4),_ 918–947. [view paper](https://doi.org/10.3368/jhr.xl.4.918){:target="_blank"}
+
+* **Strategic under-scoring in _Come Dine with Me_.** Contestants privately score each other's dinner parties, and the highest scorer wins a cash prize, which creates an incentive to under-score rivals. German and Swedish versions of the show have already been studied, so a UK replication and extension is a good candidate project.
+  * Schüller, D., Tauchmann, H., Upmann, T., & Weimar, D. (2014). Pro-social behavior in the TV show "Come Dine With Me": An empirical investigation. _Journal of Economic Psychology, 45,_ 44–55. [view paper](https://doi.org/10.1016/j.joep.2014.07.005){:target="_blank"}
+  * Ahmed, A. (2013). Co-ethnic preferences in a cooking game: A study based on Come Dine With Me in Sweden. _Ethnic and Racial Studies, 36(12),_ 2220–2236. [view paper](https://doi.org/10.1080/01419870.2012.729671){:target="_blank"}
+
+### Deception
+
+* **Deception detection in _The Circle_.** Contestants interact only via text-based profiles; some play as themselves, others as 'catfish' with a fabricated identity. How accurately do genuine players spot catfish? Do catfish get rated differently? Do gender, age, or similarity predict who gets blocked? Because there are no nonverbal cues, this is a naturally occurring test of text-only deception detection. I am not aware of any published academic work on this show.
+  * DePaulo, B. M., Lindsay, J. J., Malone, B. E., Muhlenbruck, L., Charlton, K., & Cooper, H. (2003). Cues to deception. _Psychological Bulletin, 129(1),_ 74–118. [view paper](https://doi.org/10.1037/0033-2909.129.1.74){:target="_blank"}
+
+### Risk-taking and overconfidence
+
+* **Gender and overconfidence on _The Chase_.** After the cash builder, each contestant chooses between a lower offer (safer), the amount they earned, or a higher offer (riskier). Their cash builder score gives a measure of ability. The key question is whether men take the higher offer more often than women **with the same cash builder score**. That pattern would indicate overconfidence rather than a simple difference in risk preference. I have coded episodes of The Chase in the past, so the feasibility is proven. A recent study of the Australian version found that higher-ability contestants were more likely to choose riskier options, and that gender differences were limited; the UK version, and the ability-by-gender test specifically, remain open.
+  * Neumann, P. (2026). Who deviates from the compromise option? The role of ability and risk-taking in the quiz show The Chase. _Applied Economics Letters._ [view paper](https://doi.org/10.1080/13504851.2026.2665776){:target="_blank"}
+  * Niederle, M., & Vesterlund, L. (2007). Do women shy away from competition? Do men compete too much? _Quarterly Journal of Economics, 122(3),_ 1067–1101. [view paper](https://doi.org/10.1162/qjec.122.3.1067){:target="_blank"}
+  * Barber, B. M., & Odean, T. (2001). Boys will be boys: Gender, overconfidence, and common stock investment. _Quarterly Journal of Economics, 116(1),_ 261–292. [view paper](https://doi.org/10.1162/003355301556400){:target="_blank"}
+
+* **Confidence and buzzing on _University Challenge_.** Do men and women differ in how often, or how early, they buzz in, relative to how often they get the answer right? This would pair well with The Chase project, as two naturalistic tests of gender and confidence. (I originally considered team diversity in academic subjects here, but that design is hard to separate from confounds such as university and team strength.)
+
+### Estimation, anchoring, and valuation
+
+* **Anchoring in _Escape to the Country_ / _A Place in the Sun_.** Buyers state a budget up front, which is a natural anchor, and prices are revealed as the episode unfolds. Do buyers' price guesses (e.g., for the 'mystery house') drift towards their stated budget or towards previously revealed prices? This works best framed as a calibration and anchoring study, with gender as a possible moderator rather than the main question.
+  * Northcraft, G. B., & Neale, M. A. (1987). Experts, amateurs, and real estate: An anchoring-and-adjustment perspective on property pricing decisions. _Organizational Behavior and Human Decision Processes, 39(1),_ 84–97. [view paper](https://doi.org/10.1016/0749-5978%2887%2990046-X){:target="_blank"}
+
+* **Estimation and the 'winner's curse' in _Bargain Hunt_.** Teams buy antiques at a fair with expert guidance, then sell them at auction. For each item you can code the purchase price, the expert's estimate, and the hammer price. Do teams systematically overpay? Do items bought on the expert's advice do better than items the team chose against it? Does this vary by item type or by team gender composition?
+  * Thaler, R. H. (1988). Anomalies: The winner's curse. _Journal of Economic Perspectives, 2(1),_ 191–202. [view paper](https://doi.org/10.1257/jep.2.1.191){:target="_blank"}
+
+* **Certain offer versus gamble in _Dickinson's Real Deal_.** Sellers choose between a dealer's cash offer (certain) and sending the item to auction (uncertain), with an independent valuation as a reference point. This is a naturalistic test of risk preferences and reference dependence, and would pair nicely with the Bargain Hunt project. I am not aware of existing academic work on either show.
+
 
 ## Social networks.
 <a href="#thesis-introduction">back to top</a>
