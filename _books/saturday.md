@@ -7,6 +7,7 @@ cover: assets/img/book_covers/saturday.png
 categories: fiction literary-fiction  fiction audiobook  literature
 date: 2026-09-22
 started: 2026-09-22
-status: Reading
+finished: 2026-10-11
+status:  finished
 ---
 
